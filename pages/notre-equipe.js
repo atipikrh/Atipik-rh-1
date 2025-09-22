@@ -167,9 +167,15 @@ export default function NotreEquipe() {
                               className="w-full h-full rounded-full object-cover cursor-pointer"
                             />
                           </div>
-                          {/* Face arrière - Icône temporaire */}
-                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
-                            <User className="w-16 h-16 text-white" />
+                          {/* Face arrière - Photo d'enfance */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full">
+                            <Image
+                              src="/images/equipe/stephanie-enfant.jpg"
+                              alt="Stéphanie BRETON enfant"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
                           </div>
                         </div>
                       </div>
@@ -341,21 +347,87 @@ export default function NotreEquipe() {
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
                             <Image
                               src="/images/equipe/anne-lise.jpeg"
-                              alt="Anne-Lise COATRINE"
+                              alt="Anne-Lise COATRINNÉ"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
+                          </div>
+                          {/* Face arrière - Photo d'enfance */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full">
+                            <Image
+                              src="/images/equipe/Anne-lise-enfant.png"
+                              alt="Anne-Lise COATRINNÉ enfant"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                    <h3 className="text-base text-[#013F63] mb-2">
+                      <span className="text-base">Anne-Lise</span> <span className="font-semibold">COATRINNÉ</span>
+                    </h3>
+                  </div>
+
+                  {/* Corinne */}
+                  <div className="text-center">
+                    <Link href="/equipe/corinne-bienvenu" className="inline-block mb-4">
+                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                        <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                          {/* Face avant - Photo */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
+                            <Image
+                              src="/images/equipe/Corinne.jpg?v=2"
+                              alt="Corinne BIENVENU"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
+                          </div>
+                          {/* Face arrière - Photo d'enfance */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full">
+                            <Image
+                              src="/images/equipe/Corinne-enfant.png"
+                              alt="Corinne BIENVENU enfant"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                    <h3 className="text-base text-[#013F63] mb-2">
+                      <span className="text-base">Corinne</span> <span className="font-semibold">BIENVENU</span>
+                    </h3>
+                  </div>
+
+                  {/* Martine */}
+                  <div className="text-center">
+                    <Link href="/equipe/martine-beaudon" className="inline-block mb-4">
+                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                        <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                          {/* Face avant - Photo */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
+                            <Image
+                              src="/images/equipe/Martine.jpeg"
+                              alt="Martine BEAUDON"
                               width={160}
                               height={160}
                               className="w-full h-full rounded-full object-cover cursor-pointer"
                             />
                           </div>
                           {/* Face arrière - Icône temporaire */}
-                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
                             <User className="w-16 h-16 text-white" />
                           </div>
                         </div>
                       </div>
                     </Link>
                     <h3 className="text-base text-[#013F63] mb-2">
-                      <span className="text-base">Anne-Lise</span> <span className="font-semibold">COATRINE</span>
+                      <span className="text-base">Martine</span> <span className="font-semibold">BEAUDON</span>
                     </h3>
                   </div>
                 </div>

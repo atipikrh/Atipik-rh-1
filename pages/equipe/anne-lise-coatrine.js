@@ -11,9 +11,9 @@ export default function AnneLiseCoatrine() {
   return (
     <>
       <Head>
-        <title>Anne-Lise COATRINE | Formatrice - Atipik RH</title>
-        <meta name="description" content="Découvrez le profil de Anne-Lise COATRINE, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
-        <meta name="keywords" content="Anne-Lise COATRINE, formatrice Atipik RH, formation professionnelle, Lormont" />
+        <title>Anne-Lise COATRINNÉ | Formatrice - Atipik RH</title>
+        <meta name="description" content="Découvrez le profil de Anne-Lise COATRINNÉ, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
+        <meta name="keywords" content="Anne-Lise COATRINNÉ, formatrice Atipik RH, formation professionnelle, Lormont" />
         <link rel="canonical" href="https://atipikrh.fr/equipe/anne-lise-coatrine" />
       </Head>
 
@@ -47,15 +47,15 @@ export default function AnneLiseCoatrine() {
                       {showChildPhoto ? (
                         <Image
                           src="/images/equipe/anne-lise.jpeg"
-                          alt="Anne-Lise COATRINE"
+                          alt="Anne-Lise COATRINNÉ"
                           width={350}
                           height={400}
                           className="w-full h-full object-cover rounded-2xl"
                         />
                       ) : (
                         <Image
-                          src="/images/equipe/anne-lise-enfant.jpeg"
-                          alt="Anne-Lise COATRINE enfant"
+                          src="/images/equipe/Anne-lise-enfant.png"
+                          alt="Anne-Lise COATRINNÉ enfant"
                           width={350}
                           height={400}
                           className="w-full h-full object-cover rounded-2xl"
@@ -68,8 +68,8 @@ export default function AnneLiseCoatrine() {
                       onClick={() => setShowChildPhoto(!showChildPhoto)}
                     >
                       <Image
-                        src={showChildPhoto ? "/images/equipe/anne-lise-enfant.jpeg" : "/images/equipe/anne-lise.jpeg"}
-                        alt={showChildPhoto ? "Anne-Lise COATRINE enfant" : "Anne-Lise COATRINE"}
+                        src={showChildPhoto ? "/images/equipe/Anne-lise-enfant.png" : "/images/equipe/anne-lise.jpeg"}
+                        alt={showChildPhoto ? "Anne-Lise COATRINNÉ enfant" : "Anne-Lise COATRINNÉ"}
                         width={350}
                         height={400}
                         className="w-full h-full object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
@@ -84,7 +84,7 @@ export default function AnneLiseCoatrine() {
                     Formatrice
                   </div>
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] leading-tight">
-                    <span className="font-brittany text-3xl lg:text-4xl">Anne-Lise</span> <span className="font-semibold">COATRINE</span>
+                    <span className="font-brittany text-3xl lg:text-4xl">Anne-Lise</span> <span className="font-semibold">COATRINNÉ</span>
                   </h1>
                   <p className="text-[#013F63] leading-relaxed">
                     Accompagnement à distance sur toute la France ou en présentiel à <span className="text-orange-500 font-semibold">Lormont</span>
@@ -106,7 +106,7 @@ export default function AnneLiseCoatrine() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        À venir
+                        Après une carrière dans l'éducation spécialisée et l'animation socio-culturelle auprès de jeunes enfants et de leurs familles, je décide de franchir le pas et de faire de ma passion mon métier. Je suis aujourd'hui comédienne. Au delà des spectacles dans lesquels je peux jouer, j'anime également des ateliers de médiations artistique auprès de publics éloignés de la culture et des formations pour les professionnels qui les accompagnent. J'aime partager les outils de l'improvisation et du théâtre pour laisser la place aux expressions individuelles et collectives.
                       </p>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export default function AnneLiseCoatrine() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        À venir
+                        Un pas de côté car je suis la seule à ne pas venir des métiers de l'insertion professionnelle. Passer par le jeu permet de se décaler du quotidien et de porter un autre regard sur sa pratique.
                       </p>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ export default function AnneLiseCoatrine() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        À venir
+                        Je suis une catastrophe pour retenir les prénoms! je reconnais les visages mais je ne retiens jamais les prénoms qui y sont associés.
                       </p>
                     </div>
                   </div>
@@ -157,7 +157,7 @@ export default function AnneLiseCoatrine() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        À venir
+                        Déjà comédienne
                       </p>
                     </div>
                   </div>
@@ -174,7 +174,7 @@ export default function AnneLiseCoatrine() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        À venir
+                        L'adaptation au moment présent
                       </p>
                     </div>
                   </div>
@@ -190,8 +190,8 @@ export default function AnneLiseCoatrine() {
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-[#013F63] text-sm leading-relaxed">
-                        À venir
+                      <p className="text-[#013F63] text-sm leading-relaxed font-medium italic">
+                        "Essayer c'est déjà gagner"
                       </p>
                     </div>
                   </div>

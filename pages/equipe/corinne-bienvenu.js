@@ -6,15 +6,15 @@ import Footer from '../../components/Footer';
 import { ArrowLeft } from 'lucide-react';
 import { useState } from 'react';
 
-export default function StephanieBreton() {
+export default function CorinneBienvenu() {
   const [showChildPhoto, setShowChildPhoto] = useState(false);
   return (
     <>
       <Head>
-        <title>Stéphanie BRETON | Formatrice - Atipik RH</title>
-        <meta name="description" content="Découvrez le profil de Stéphanie BRETON, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
-        <meta name="keywords" content="Stéphanie BRETON, formatrice Atipik RH, formation professionnelle, Lormont" />
-        <link rel="canonical" href="https://atipikrh.fr/equipe/stephanie-breton" />
+        <title>Corinne BIENVENU | Formatrice - Atipik RH</title>
+        <meta name="description" content="Découvrez le profil de Corinne BIENVENU, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
+        <meta name="keywords" content="Corinne BIENVENU, formatrice Atipik RH, formation professionnelle, Lormont" />
+        <link rel="canonical" href="https://atipikrh.fr/equipe/corinne-bienvenu" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
@@ -46,16 +46,16 @@ export default function StephanieBreton() {
                     <div className="absolute inset-0 rounded-2xl rotate-6 group-hover:rotate-3 transition-transform duration-300 overflow-hidden">
                       {showChildPhoto ? (
                         <Image
-                          src="/images/equipe/stephanie.jpeg"
-                          alt="Stéphanie BRETON"
+                          src="/images/equipe/Corinne.jpg?v=2"
+                          alt="Corinne BIENVENU"
                           width={350}
                           height={400}
                           className="w-full h-full object-cover rounded-2xl"
                         />
                       ) : (
                         <Image
-                          src="/images/equipe/stephanie-enfant.jpg"
-                          alt="Stéphanie BRETON enfant"
+                          src="/images/equipe/Corinne-enfant.png"
+                          alt="Corinne BIENVENU enfant"
                           width={350}
                           height={400}
                           className="w-full h-full object-cover rounded-2xl"
@@ -68,8 +68,8 @@ export default function StephanieBreton() {
                       onClick={() => setShowChildPhoto(!showChildPhoto)}
                     >
                       <Image
-                        src={showChildPhoto ? "/images/equipe/stephanie-enfant.jpg" : "/images/equipe/stephanie.jpeg"}
-                        alt={showChildPhoto ? "Stéphanie BRETON enfant" : "Stéphanie BRETON"}
+                        src={showChildPhoto ? "/images/equipe/Corinne-enfant.png" : "/images/equipe/Corinne.jpg?v=2"}
+                        alt={showChildPhoto ? "Corinne BIENVENU enfant" : "Corinne BIENVENU"}
                         width={350}
                         height={400}
                         className="w-full h-full object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
@@ -84,7 +84,7 @@ export default function StephanieBreton() {
                     Formatrice
                   </div>
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] leading-tight">
-                    <span className="font-brittany text-3xl lg:text-4xl">Stéphanie</span> <span className="font-semibold">BRETON</span>
+                    <span className="font-brittany text-3xl lg:text-4xl">Corinne</span> <span className="font-semibold">BIENVENU</span>
                   </h1>
                   <p className="text-[#013F63] leading-relaxed">
                     Accompagnement à distance sur toute la France ou en présentiel à <span className="text-orange-500 font-semibold">Lormont</span>
@@ -106,7 +106,7 @@ export default function StephanieBreton() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Après la validation d'un Master 2 en Psychologie, me voilà partie pour 3 ans à enchaîner saisons, jobs alimentaires et expérience richissime en bénévolat en Amérique du Sud. Le retour à la réalité est un peu piquant et j'enchaîne de nouveau les jobs alimentaires, dans la douleur parfois, parce que dans ma représentation à ce moment-là, ne pas travailler, c'est s'exposer à trop de risques. Par chance, je croise sur mon chemin une super conseillère à l'ANPE (oui oui c'était bien ce nom là à l'époque) qui m'invite à prendre le temps de réfléchir à mon avenir professionnel. 3 mois plus tard, grâce à un accompagnement intensif en groupe, me voilà propulsée dans le secteur de l'insertion professionnelle. J'y reste près de 15 années, toutes plus riches les unes que les autres, au sein de la même association, avec une grande variété de missions auprès d'un public très divers. Puis l'envie d'être indépendante pointe le bout de son nez. C'est dans ce cadre que je rencontre Vanessa et que l'envie de partager mon expérience prend vie ! En parallèle de mes interventions chez ATIPIK RH, je suis installée en tant que psychologue en libéral.
+                        Formatrice/Cheffe de service Educatif/Coordinatrice dispositif emploi/Thérapeute et sexothérapeute.
                       </p>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export default function StephanieBreton() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Mon joie de partager et de travailler en équipe avec collègues et stagiaires
+                        La possibilité de transmettre des connaissances, une posture professionnelle, des valeurs où l'humain est au centre.
                       </p>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ export default function StephanieBreton() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Un jour de formation sur la première session de CIP avec ATIPIK RH me prend l'envie d'amener un gâteau à partager avec les stagiaires. Je prends donc le temps, la veille de mon intervention, de préparer un gâteau au yaourt (que je fais depuis ma plus tendre enfance) dont je double les doses pour que nous puissions tous en avoir un part. Sauf que c'est le flop... erreur de dosage de levure probablement, le gâteau toujours réussi ne l'est pas cette fois ! Les premières bouchées avalées, les réflexions (je l'accorde, toutes plus drôles les unes que les autres) fusent ! Fou rire général dans la salle, les stagiaires s'en donnent à cœur joie pour se moquer de mes talents de pâtissière et imaginer à quoi se gâteau pourrait servir : à reboucher un mur, à remplacer une brique etc. Quelle bande d'ingrats ! Le gâteau sera quand même terminé à ce qu'on me dit, par la pauvre famille de Vanessa qui en héritera !!
+                        J'ai été professeure de karaté
                       </p>
                     </div>
                   </div>
@@ -157,7 +157,7 @@ export default function StephanieBreton() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Maîtresse d'école
+                        "DAKTARI" Vétérinaire de brousse
                       </p>
                     </div>
                   </div>
@@ -174,7 +174,7 @@ export default function StephanieBreton() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Mon énergie !
+                        Je ne me prends pas au sérieux mais vous si !
                       </p>
                     </div>
                   </div>
@@ -191,7 +191,7 @@ export default function StephanieBreton() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed font-medium italic">
-                        "Tomber ce n'est pas grave, ce qui compte, même si c'est dur et que ça prend parfois du temps, c'est de se relever"
+                        "Regardons le verre à moitié plein !"
                       </p>
                     </div>
                   </div>
@@ -207,4 +207,4 @@ export default function StephanieBreton() {
       </div>
     </>
   );
-} 
+}
