@@ -138,7 +138,7 @@ export default function NotreHistoire() {
           </section>
 
           {/* Mars 2019 - Création d'Atipik RH */}
-          <section className="py-32 opacity-0 translate-y-8 transition-all duration-700" ref={el => sectionsRef.current[0] = el}>
+          <section className="py-20 opacity-0 translate-y-8 transition-all duration-700" ref={el => sectionsRef.current[0] = el}>
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -169,7 +169,7 @@ export default function NotreHistoire() {
           </section>
 
           {/* Avril 2021 - Obtention de Qualiopi */}
-          <section className="py-32 opacity-0 translate-y-8 transition-all duration-700" ref={el => sectionsRef.current[1] = el}>
+          <section className="py-20 opacity-0 translate-y-8 transition-all duration-700" ref={el => sectionsRef.current[1] = el}>
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -198,7 +198,7 @@ export default function NotreHistoire() {
           </section>
 
           {/* Juillet 2022 - Agrément formation CIP */}
-          <section className="py-32 opacity-0 translate-y-8 transition-all duration-700" ref={el => sectionsRef.current[2] = el}>
+          <section className="py-20 opacity-0 translate-y-8 transition-all duration-700" ref={el => sectionsRef.current[2] = el}>
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -227,7 +227,7 @@ export default function NotreHistoire() {
           </section>
 
           {/* Septembre 2023 - 1ère session CIP réussie */}
-          <section className="py-32 opacity-0 translate-y-8 transition-all duration-700" ref={el => sectionsRef.current[3] = el}>
+          <section className="py-20 opacity-0 translate-y-8 transition-all duration-700" ref={el => sectionsRef.current[3] = el}>
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -256,7 +256,7 @@ export default function NotreHistoire() {
           </section>
 
           {/* Mars 2024 - Démarche Handiaccueillante */}
-          <section className="py-32 opacity-0 translate-y-8 transition-all duration-700" ref={el => sectionsRef.current[4] = el}>
+          <section className="py-20 opacity-0 translate-y-8 transition-all duration-700" ref={el => sectionsRef.current[4] = el}>
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -285,7 +285,7 @@ export default function NotreHistoire() {
           </section>
 
           {/* 2026 - Nouveaux horizons FPA */}
-          <section className="py-32 opacity-0 translate-y-8 transition-all duration-700" ref={el => sectionsRef.current[5] = el}>
+          <section className="py-20 opacity-0 translate-y-8 transition-all duration-700" ref={el => sectionsRef.current[5] = el}>
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">

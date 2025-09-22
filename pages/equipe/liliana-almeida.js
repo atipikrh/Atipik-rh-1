@@ -106,7 +106,7 @@ export default function LilianaDelmas() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        12 ans d'expérience en coordination et gestion de projets pédagogiques. Spécialisée dans l'organisation des parcours de formation et la coordination entre formateurs, stagiaires et partenaires.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export default function LilianaDelmas() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Mon sens de l'organisation et ma capacité à orchestrer les parcours de formation. J'assure la fluidité des processus et la coordination entre tous les acteurs pour une expérience optimale.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ export default function LilianaDelmas() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Passionnée de voyages, j'ai visité plus de 25 pays. Cette ouverture sur le monde enrichit ma façon de coordonner les équipes multiculturelles et d'adapter les parcours aux profils très variés.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -157,7 +157,7 @@ export default function LilianaDelmas() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Chef d'orchestre ! J'étais fascinée par leur capacité à harmoniser tous les instruments pour créer une symphonie parfaite. Aujourd'hui, je coordonne les parcours avec la même passion.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -174,7 +174,7 @@ export default function LilianaDelmas() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Anticiper et fluidifier tous les processus. Je vois les problèmes avant qu'ils n'arrivent et mets en place des solutions pour que tout se déroule sans accroc, dans la bienveillance.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -190,8 +190,8 @@ export default function LilianaDelmas() {
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-[#013F63] text-sm leading-relaxed font-medium italic">
-                        "L'harmonie naît de la coordination parfaite des talents."
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        À venir
                       </p>
                     </div>
                   </div>

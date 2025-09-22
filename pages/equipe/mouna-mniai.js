@@ -106,7 +106,7 @@ export default function MounaMniai() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        7 ans d'expérience en formation professionnelle et accompagnement vers l'emploi. Spécialisée dans l'insertion des publics en difficultés et l'accompagnement multiculturel.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export default function MounaMniai() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Ma sensibilité interculturelle et ma capacité à connecter avec tous les publics. J'apporte une approche inclusive qui valorise la diversité comme une richesse.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ export default function MounaMniai() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Polyglotte passionnée, je parle 5 langues ! Cette richesse linguistique me permet de créer des ponts entre les cultures et d'accompagner des profils très variés.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -157,7 +157,7 @@ export default function MounaMniai() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Interprète aux Nations Unies ! Je rêvais de faciliter la communication entre les peuples. Cette vision guide encore aujourd'hui ma mission d'accompagnement.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -174,7 +174,7 @@ export default function MounaMniai() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Créer des liens authentiques avec chaque personne, quelle que soit son origine. Je transforme les différences culturelles en atouts pour la recherche d'emploi.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -190,8 +190,8 @@ export default function MounaMniai() {
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-[#013F63] text-sm leading-relaxed font-medium italic">
-                        "La diversité est une force, l'inclusion une nécessité."
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        À venir
                       </p>
                     </div>
                   </div>

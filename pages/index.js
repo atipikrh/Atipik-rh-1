@@ -23,15 +23,24 @@ export default function HomePage() {
     },
     {
       id: 2,
-      title: "Prochaines Réunions d'Information Collective",
-      subtitle: "Découvrez nos services en personne",
-      description: "Participez à nos réunions d'information pour en savoir plus sur nos formations, CIP et FPA. Rencontrez notre équipe et posez toutes vos questions.",
+      title: "Réunions d'Information CIP",
+      subtitle: "Conseiller en Insertion Professionnelle",
+      description: "Participez à nos réunions d'information pour découvrir la formation CIP (Conseiller en Insertion Professionnelle).",
       buttonText: "Voir les dates",
       buttonLink: "#reunions",
       image: "/images/hero/reunion-info.jpg"
     },
     {
       id: 3,
+      title: "Réunions d'Information FPA",
+      subtitle: "Formateur Professionnel d'Adultes",
+      description: "Découvrez la formation FPA (Formateur Professionnel d'Adultes) lors de nos réunions d'information dédiées.",
+      buttonText: "Voir les dates",
+      buttonLink: "#reunions",
+      image: "/images/hero/reunion-info.jpg"
+    },
+    {
+      id: 4,
       title: "Découvrez nos salles en location",
       subtitle: "Espaces modernes à Lormont",
       description: "Louez nos salles équipées pour vos formations, réunions et séminaires. 5 espaces disponibles allant du bureau individuel jusqu'aux salles d'une capacité de 20 personnes.",
@@ -117,10 +126,10 @@ export default function HomePage() {
                       </p>
                       {!slide.isQuiz && (
                         <a
-                          href={slide.id === 2 ? '/s-inscrire' : slide.buttonLink}
+                          href={slide.id === 2 || slide.id === 3 ? '/s-inscrire' : slide.buttonLink}
                           className="inline-flex items-center px-6 py-3 bg-white text-orange-500 font-semibold rounded-lg hover:bg-orange-50 transition-all duration-300 shadow-lg text-sm lg:text-base mt-4"
                         >
-                          {slide.id === 2 ? "S'inscrire" : slide.buttonText}
+                          {slide.id === 2 || slide.id === 3 ? "S'inscrire" : slide.buttonText}
                         </a>
                       )}
                     </div>
@@ -144,9 +153,9 @@ export default function HomePage() {
                           </div>
                         </div>
                       ) : slide.id === 2 ? (
-                        /* Fenêtre pour les réunions informatives */
+                        /* Fenêtre pour les réunions CIP */
                         <div className="bg-white/90 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-gray-800 max-w-sm">
-                          <h3 className="text-lg font-bold mb-3 text-orange-500">Prochaines dates</h3>
+                          <h3 className="text-lg font-bold mb-3 text-orange-500">Prochaines dates CIP</h3>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
                               <span className="text-[#013F63]">Samedi 27/09</span>
@@ -159,6 +168,28 @@ export default function HomePage() {
                             <div className="flex justify-between">
                               <span className="text-[#013F63]">Samedi 25/10</span>
                               <span className="font-medium text-[#013F63]">10h30</span>
+                            </div>
+                          </div>
+                          <div className="mt-4 text-xs text-[#013F63]">
+                            Atipik RH - Lormont
+                          </div>
+                        </div>
+                      ) : slide.id === 3 ? (
+                        /* Fenêtre pour les réunions FPA */
+                        <div className="bg-white/90 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-gray-800 max-w-sm">
+                          <h3 className="text-lg font-bold mb-3 text-orange-500">Prochaines dates FPA</h3>
+                          <div className="space-y-2 text-sm">
+                            <div className="flex justify-between">
+                              <span className="text-[#013F63]">Mardi 01/10</span>
+                              <span className="font-medium text-[#013F63]">14h00</span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span className="text-[#013F63]">Vendredi 18/10</span>
+                              <span className="font-medium text-[#013F63]">09h30</span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span className="text-[#013F63]">Mardi 29/10</span>
+                              <span className="font-medium text-[#013F63]">14h00</span>
                             </div>
                           </div>
                           <div className="mt-4 text-xs text-[#013F63]">
@@ -219,41 +250,6 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {/* Carte Bilan de Compétences */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col h-full">
-                <div className="relative h-48">
-                  <Image 
-                    src="/images/hero/bilan-competences.jpg" 
-                    alt="Bilan de compétences"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/20"></div>
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-xl font-bold">Bilan de Compétences</h3>
-                  </div>
-                </div>
-                <div className="p-6 flex flex-col flex-1">
-                  <p className="text-[#013F63] leading-relaxed flex-1 mb-6">
-                    Faites le point sur vos compétences, vos motivations et définissez votre projet professionnel avec un accompagnement personnalisé.
-                  </p>
-                  <div className="mt-auto">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-sm text-orange-500 font-medium">Finançable CPF</span>
-                    </div>
-                    <Link
-                      href="/bilan-de-competences"
-                      className="inline-flex items-center w-full justify-center px-4 py-3 bg-[#013F63] text-white font-semibold rounded-lg hover:bg-[#012a4a] transition-colors duration-300"
-                    >
-                      En savoir plus
-                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
               {/* Carte Formations */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col h-full">
                 <div className="relative h-48">
@@ -281,6 +277,41 @@ export default function HomePage() {
                       className="inline-flex items-center w-full justify-center px-4 py-3 bg-[#013F63] text-white font-semibold rounded-lg hover:bg-[#012a4a] transition-colors duration-300"
                     >
                       Voir nos formations
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Carte Bilan de Compétences */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col h-full">
+                <div className="relative h-48">
+                  <Image 
+                    src="/images/hero/bilan-competences.jpg" 
+                    alt="Bilan de compétences"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl font-bold">Bilan de Compétences</h3>
+                  </div>
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <p className="text-[#013F63] leading-relaxed flex-1 mb-6">
+                    Faites le point sur vos compétences, vos motivations et définissez votre projet professionnel avec un accompagnement personnalisé.
+                  </p>
+                  <div className="mt-auto">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-sm text-orange-500 font-medium">Finançable CPF</span>
+                    </div>
+                    <Link
+                      href="/bilan-de-competences"
+                      className="inline-flex items-center w-full justify-center px-4 py-3 bg-[#013F63] text-white font-semibold rounded-lg hover:bg-[#012a4a] transition-colors duration-300"
+                    >
+                      En savoir plus
                       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>

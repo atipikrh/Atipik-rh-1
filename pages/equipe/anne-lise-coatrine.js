@@ -106,7 +106,7 @@ export default function AnneLiseCoatrine() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        8 ans d'expérience en formation et accompagnement à l'insertion professionnelle. Spécialisée dans l'accompagnement des publics fragiles et l'adaptation des méthodes pédagogiques.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export default function AnneLiseCoatrine() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Ma patience et ma capacité d'adaptation à tous les profils. J'apporte une approche inclusive qui permet à chacun d'avancer à son rythme, dans le respect et la bienveillance.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ export default function AnneLiseCoatrine() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Bénévole dans une association d'aide aux réfugiés, j'enseigne le français et accompagne l'insertion. Cette expérience enrichit ma pratique professionnelle et nourrit mon approche humaine.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -157,7 +157,7 @@ export default function AnneLiseCoatrine() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Assistante sociale ! Je voulais aider les personnes en difficulté à retrouver leur dignité et leur place dans la société. Cette vocation guide encore mes choix professionnels.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -174,7 +174,7 @@ export default function AnneLiseCoatrine() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Créer un climat de confiance totale avec les personnes les plus en difficulté. J'arrive à libérer la parole et à accompagner des transformations profondes, étape par étape.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -190,8 +190,8 @@ export default function AnneLiseCoatrine() {
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-[#013F63] text-sm leading-relaxed font-medium italic">
-                        "Chaque personne mérite une chance de se reconstruire."
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        À venir
                       </p>
                     </div>
                   </div>

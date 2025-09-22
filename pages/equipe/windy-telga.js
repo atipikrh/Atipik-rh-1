@@ -106,7 +106,7 @@ export default function WindyTelga() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        5 ans d'expérience en formation et accompagnement professionnel. Spécialisée dans l'innovation pédagogique et l'utilisation des nouvelles technologies en formation.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export default function WindyTelga() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Mon approche innovante et ma maîtrise des outils digitaux. J'apporte une dimension moderne à nos formations et développe de nouvelles méthodes pédagogiques interactives.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ export default function WindyTelga() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Créatrice de contenus pédagogiques en réalité virtuelle ! J'ai développé une formation immersive pour préparer aux entretiens d'embauche. L'innovation au service de l'apprentissage.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -157,7 +157,7 @@ export default function WindyTelga() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Inventrice ! Je voulais créer des machines qui faciliteraient la vie des gens. Aujourd'hui, j'invente de nouvelles façons d'apprendre et de se former.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -174,7 +174,7 @@ export default function WindyTelga() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Transformer les concepts complexes en expériences simples et engageantes. Je rends l'apprentissage ludique et mémorable grâce aux outils numériques.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -190,8 +190,8 @@ export default function WindyTelga() {
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-[#013F63] text-sm leading-relaxed font-medium italic">
-                        "L'innovation transforme l'apprentissage en aventure."
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        À venir
                       </p>
                     </div>
                   </div>

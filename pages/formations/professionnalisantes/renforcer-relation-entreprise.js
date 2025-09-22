@@ -461,7 +461,7 @@ export default function RenforcerRelationEntreprise() {
                         <span className="text-orange-500 font-brittany text-3xl">Investissez</span> en vous-même
                       </h4>
                       <p className="text-base text-[#013F63] font-medium leading-relaxed">
-                        Paiement en <span className="text-6xl font-light text-orange-500 font-brittany leading-none mx-4">x3</span> sans frais pour faciliter votre investissement dans votre développement professionnel.
+                        Paiement en <span className="text-6xl font-light text-orange-500 font-brittany leading-none mx-4">x3</span> sans frais grâce à notre partenaire financier.
                       </p>
                     </div>
                   </div>

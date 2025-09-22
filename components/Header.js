@@ -68,13 +68,6 @@ export default function Header({ isFixed = false, isHomePage = false }) {
 
           {/* Navigation centrale */}
           <div className="hidden lg:flex items-center space-x-8 mt-1">
-            <Link href="/bilan-de-competences" className="text-[#013F63] hover:text-[#012a4a] font-medium text-base transition-colors">
-              Bilan de compétences
-            </Link>
-            <Link href="/vae" className="text-[#013F63] hover:text-[#012a4a] font-medium text-base transition-colors">
-              VAE
-            </Link>
-            
             {/* Menu déroulant Formations */}
             <div 
               className="relative group"
@@ -117,6 +110,13 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                 </div>
               </div>
             </div>
+            
+            <Link href="/bilan-de-competences" className="text-[#013F63] hover:text-[#012a4a] font-medium text-base transition-colors">
+              Bilan de compétences
+            </Link>
+            <Link href="/vae" className="text-[#013F63] hover:text-[#012a4a] font-medium text-base transition-colors">
+              VAE
+            </Link>
             
             {/* Menu déroulant Qui sommes-nous */}
             <div 

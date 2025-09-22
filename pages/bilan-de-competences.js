@@ -296,7 +296,7 @@ export default function BilanCompetences() {
                   {/* Bouton */}
                   <div className="text-center">
                     <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/formation/recherche/84890745700024_BCESSENTIELPRESENTIEL/84890745700024_BCESSENTIELDISTANCIEL" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-semibold transition-colors">
-                      Me renseigner
+                      Je choisis cette formule
                     </a>
                   </div>
                 </div>
@@ -348,7 +348,7 @@ export default function BilanCompetences() {
                   {/* Bouton */}
                   <div className="text-center">
                     <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/formation/recherche/84890745700024_BCPANORAMAPRESENTIEL/84890745700024_BCPANORAMAPRESENTIEL" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-colors">
-                      Me renseigner
+                      Je choisis cette formule
                     </a>
                   </div>
                 </div>
@@ -435,9 +435,21 @@ export default function BilanCompetences() {
               </div>
             </div>
             
-            <div className="text-center mb-8">
+            {/* Autofinancement - Section Investissez en vous-même */}
+            <div className="mt-8">
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
+                <h4 className="text-2xl font-bold text-[#013F63] mb-6">
+                  <span className="text-orange-500 font-brittany text-3xl">Investissez</span> en vous-même
+                </h4>
+                <p className="text-base text-[#013F63] font-medium leading-relaxed">
+                  Paiement en <span className="text-6xl font-light text-orange-500 font-brittany leading-none mx-4">x3</span> sans frais grâce à notre partenaire financier.
+                </p>
+              </div>
+            </div>
+            
+            <div className="text-center mb-8 mt-8">
               <Link href="/financement" className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
-                En savoir plus
+                En savoir plus sur les financements
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -455,11 +467,8 @@ export default function BilanCompetences() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
-                Ils ont transformé leur <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">vie professionnelle</span>
+                Découvrez <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">les témoignages</span> de ceux qui ont franchi le pas
               </h2>
-              <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
-                Découvrez les témoignages de ceux qui ont franchi le pas
-              </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
@@ -483,7 +492,6 @@ export default function BilanCompetences() {
                     </div>
                     <div className="ml-3">
                       <div className="font-semibold text-[#013F63] text-sm">Anissa Bouderbal</div>
-                      <div className="text-xs text-[#013F63]">il y a un an</div>
                     </div>
                   </div>
                 </div>
@@ -509,7 +517,6 @@ export default function BilanCompetences() {
                     </div>
                     <div className="ml-3">
                       <div className="font-semibold text-[#013F63] text-sm">Anastasia Roch</div>
-                      <div className="text-xs text-[#013F63]">il y a un an</div>
                     </div>
                   </div>
                 </div>
@@ -535,7 +542,6 @@ export default function BilanCompetences() {
                     </div>
                     <div className="ml-3">
                       <div className="font-semibold text-[#013F63] text-sm">Mathilde Mahé</div>
-                      <div className="text-xs text-[#013F63]">il y a 4 ans</div>
                     </div>
                   </div>
                 </div>
@@ -552,9 +558,6 @@ export default function BilanCompetences() {
             <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
               Questions <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">fréquentes</span>
             </h2>
-            <p className="text-lg text-[#013F63] leading-relaxed font-light">
-              Tout ce que vous devez savoir sur le bilan de compétences
-            </p>
           </div>
           
           <div className="space-y-4">

@@ -106,7 +106,7 @@ export default function StephanieBreton() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        10 ans d'expérience en formation d'adultes et en accompagnement professionnel. Spécialisée dans les transitions de carrière et l'insertion professionnelle, avec une approche multiculturelle enrichie par mes voyages.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export default function StephanieBreton() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Mon adaptabilité, ma vision internationale et ma capacité à connecter avec des profils très divers. J'apporte une approche pédagogique innovante nourrie par mes expériences à l'étranger.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ export default function StephanieBreton() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Grande voyageuse, j'ai vécu 3 ans en Australie où j'ai découvert une approche différente de l'accompagnement professionnel. Cette expérience internationale enrichit aujourd'hui ma pratique de formatrice.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -157,7 +157,7 @@ export default function StephanieBreton() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Exploratrice ! Je rêvais de parcourir le monde et de découvrir d'autres cultures. Ce rêve s'est réalisé et continue d'inspirer ma façon d'accompagner les personnes vers de nouveaux horizons professionnels.
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -174,7 +174,7 @@ export default function StephanieBreton() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        M'adapter instantanément à tout type de personnalité et créer un climat de confiance, peu importe les différences culturelles ou générationnelles. Une vraie caméléon bienveillante !
+                        À venir
                       </p>
                     </div>
                   </div>
@@ -190,8 +190,8 @@ export default function StephanieBreton() {
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-[#013F63] text-sm leading-relaxed font-medium italic">
-                        "L'adaptabilité, c'est transformer chaque différence en richesse."
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        À venir
                       </p>
                     </div>
                   </div>

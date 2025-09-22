@@ -108,7 +108,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/location-salles-lormont" className="hover:text-white transition-colors cursor-pointer">
-                  Location de salle
+                  Location de salles et bureaux
                 </Link>
               </li>
               <li>
