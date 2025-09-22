@@ -29,13 +29,13 @@ export default function Partenariat() {
           <div className="h-20"></div>
 
           {/* Introduction */}
-          <section className="relative py-16 overflow-hidden">
-            <div className="relative z-10 container mx-auto px-4 pt-8 pb-8">
+          <section className="relative py-12 overflow-hidden">
+            <div className="relative z-10 container mx-auto px-4 pt-4 pb-6">
               <div className="max-w-4xl mx-auto text-center">
-                <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
-                  Nos <span className="text-orange-500 font-brittany font-black">Partenariats</span>
+                <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
+                  Nos <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Partenariats</span>
                 </h1>
-                <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-light">
+                <p className="text-lg text-[#013F63] leading-relaxed font-light">
                   Un écosystème d'entreprises engagées<br className="hidden lg:block"/>
                   <span className="text-orange-500 font-medium">pour votre réussite professionnelle</span>
                 </p>
@@ -44,18 +44,18 @@ export default function Partenariat() {
           </section>
 
           {/* Nos entreprises s'engagent */}
-          <section className="py-24">
+          <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
-                <div className="grid lg:grid-cols-2 gap-16 items-start">
+                <div className="grid lg:grid-cols-2 gap-12 items-start">
                   <div className="text-center lg:text-left lg:pl-12">
                     <div className="text-center lg:text-left mb-8">
-                      <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">
+                      <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
                         Partenariats <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">d'excellence</span>
                       </h2>
                     </div>
 
-                    <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                    <p className="text-lg text-[#013F63] leading-relaxed font-light mb-6">
                       Nos entreprises partenaires s'engagent à nos côtés pour promouvoir la formation professionnelle 
                       et l'accompagnement des talents. Ensemble, nous construisons un écosystème local dynamique 
                       et inclusif.
@@ -64,22 +64,22 @@ export default function Partenariat() {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-4">
                         <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-gray-700">Réseau d'entreprises engagées</span>
+                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-[#013F63]">Réseau d'entreprises engagées</span>
                         </div>
                         <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-gray-700">Soutien aux formations qualifiantes</span>
+                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-[#013F63]">Soutien aux formations qualifiantes</span>
                         </div>
                       </div>
                       <div className="space-y-4">
                         <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-gray-700">Accompagnement personnalisé</span>
+                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-[#013F63]">Accompagnement personnalisé</span>
                         </div>
                         <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-gray-700">Développement des compétences</span>
+                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-[#013F63]">Développement des compétences</span>
                         </div>
                       </div>
                     </div>
@@ -102,10 +102,10 @@ export default function Partenariat() {
           </section>
 
           {/* Club d'entreprise Bassens */}
-          <section className="py-24">
+          <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
                   <div className="text-center">
                     <div className="rounded-2xl p-12 shadow-lg">
                       <Image
@@ -119,15 +119,15 @@ export default function Partenariat() {
                   </div>
 
                   <div className="text-center lg:text-left">
-                    <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">
+                    <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
                       Club d'entreprise <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Bassens</span>
                     </h2>
-                    <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                    <p className="text-lg text-[#013F63] leading-relaxed font-light mb-6">
                       Atipik RH est fière de faire partie du Club d'Entreprise de Bassens, 
                       un réseau dynamique qui favorise les échanges et les collaborations 
                       entre les entreprises locales.
                     </p>
-                    <div className="space-y-4 text-gray-700">
+                    <div className="space-y-4 text-[#013F63]">
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         <span>Réseau d'entrepreneurs engagés</span>
@@ -148,14 +148,14 @@ export default function Partenariat() {
           </section>
 
           {/* Avantages des partenariats */}
-          <section className="py-24">
+          <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-16">
-                  <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
-                    Pourquoi ces <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">partenariats ?</span>
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
+                    Pourquoi ces <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">partenariats ?</span>
                   </h2>
-                  <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                  <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
                     Des opportunités concrètes pour votre développement professionnel
                   </p>
                 </div>
@@ -165,7 +165,7 @@ export default function Partenariat() {
                   {/* Réseau */}
                   <div className="text-center group flex flex-col justify-center pt-8">
                     <h3 className="text-xl font-bold text-[#013F63] mb-4">Réseau étendu</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-[#013F63] leading-relaxed">
                       Accès à un large réseau d'entreprises locales et nationales
                     </p>
                   </div>
@@ -173,7 +173,7 @@ export default function Partenariat() {
                   {/* Opportunités */}
                   <div className="text-center group flex flex-col justify-center pt-8">
                     <h3 className="text-xl font-bold text-[#013F63] mb-4">Opportunités d'emploi</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-[#013F63] leading-relaxed">
                       Connexions directes avec les employeurs du territoire
                     </p>
                   </div>
@@ -181,7 +181,7 @@ export default function Partenariat() {
                   {/* Innovation */}
                   <div className="text-center group flex flex-col justify-center pt-8">
                     <h3 className="text-xl font-bold text-[#013F63] mb-4">Innovation</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-[#013F63] leading-relaxed">
                       Méthodes de formation adaptées aux besoins du marché
                     </p>
                   </div>
@@ -189,7 +189,7 @@ export default function Partenariat() {
                   {/* Engagement */}
                   <div className="text-center group flex flex-col justify-center pt-8">
                     <h3 className="text-xl font-bold text-[#013F63] mb-4">Engagement social</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-[#013F63] leading-relaxed">
                       Participation active au développement économique local
                     </p>
                   </div>
@@ -199,15 +199,15 @@ export default function Partenariat() {
           </section>
 
           {/* CTA Section */}
-          <section className="py-24">
+          <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 
-                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
-                  Rejoignez notre <span className="text-orange-500 font-brittany text-5xl lg:text-6xl whitespace-nowrap">écosystème ?</span>
+                <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
+                  Rejoignez notre <span className="text-orange-500 font-brittany text-4xl lg:text-5xl whitespace-nowrap">écosystème ?</span>
                 </h2>
                 
-                <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+                <p className="text-lg text-[#013F63] leading-relaxed font-light mb-8 max-w-2xl mx-auto">
                   Profitez de notre réseau d'entreprises partenaires pour développer votre carrière
                 </p>
 

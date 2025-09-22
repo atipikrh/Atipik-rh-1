@@ -27,6 +27,8 @@ module.exports = {
       fontFamily: {
         brand: ['Wonderful Branding', 'cursive'],
         brittany: ['Brittany', 'cursive'],
+        dancing: ['Dancing Script', 'cursive'],
+        signatura: ['Signatura Monoline', 'cursive'],
         sans: ['Montserrat', 'sans-serif'],
       },
       spacing: {

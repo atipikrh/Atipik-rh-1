@@ -4,13 +4,15 @@ import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { ArrowLeft } from 'lucide-react';
+import { useState } from 'react';
 
 export default function CoralineAbadie() {
+  const [showChildPhoto, setShowChildPhoto] = useState(false);
   return (
     <>
       <Head>
-        <title>Coraline ABADIE | Formatrice - Atipik RH</title>
-        <meta name="description" content="Découvrez le profil de Coraline ABADIE, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
+        <title>Coraline ABADIE | Formatrice par le théâtre et l'impro - Atipik RH</title>
+        <meta name="description" content="Découvrez le profil de Coraline ABADIE, Formatrice par le théâtre et l'impro chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
         <meta name="keywords" content="Coraline ABADIE, formatrice Atipik RH, formation professionnelle, Lormont" />
         <link rel="canonical" href="https://atipikrh.fr/equipe/coraline-abadie" />
       </Head>
@@ -28,7 +30,7 @@ export default function CoralineAbadie() {
               
               {/* Navigation compacte */}
               <div className="mb-6">
-                <Link href="/notre-equipe" className="inline-flex items-center text-gray-600 hover:text-[#013F63] transition-colors group">
+                <Link href="/notre-equipe" className="inline-flex items-center text-[#013F63] hover:text-[#013F63] transition-colors group">
                   <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
                   Retour à l'équipe
                 </Link>
@@ -37,29 +39,54 @@ export default function CoralineAbadie() {
               {/* Header compact avec photo et nom */}
               <div className="grid lg:grid-cols-12 gap-8 items-center mb-8">
                 
-                {/* Photo plus petite */}
+                {/* Photo avec arrière-plan interchangeable */}
                 <div className="lg:col-span-4">
                   <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#013F63] to-orange-500 rounded-2xl rotate-6 group-hover:rotate-3 transition-transform duration-300"></div>
-                    <Image
-                      src="/images/equipe/coraline.jpeg"
-                      alt="Coraline ABADIE"
-                      width={350}
-                      height={400}
-                      className="relative z-10 w-full h-72 object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-                    />
+                    {/* Arrière-plan - Photo opposée à celle affichée */}
+                    <div className="absolute inset-0 rounded-2xl rotate-6 group-hover:rotate-3 transition-transform duration-300 overflow-hidden">
+                      {showChildPhoto ? (
+                        <Image
+                          src="/images/equipe/coraline.jpeg"
+                          alt="Coraline ABADIE"
+                          width={350}
+                          height={400}
+                          className="w-full h-full object-cover rounded-2xl"
+                        />
+                      ) : (
+                        <Image
+                          src="/images/equipe/coraline-enfant.jpeg"
+                          alt="Coraline ABADIE enfant"
+                          width={350}
+                          height={400}
+                          className="w-full h-full object-cover rounded-2xl"
+                        />
+                      )}
+                    </div>
+                    {/* Photo principale cliquable */}
+                    <div 
+                      className="relative z-10 w-full h-72 cursor-pointer"
+                      onClick={() => setShowChildPhoto(!showChildPhoto)}
+                    >
+                      <Image
+                        src={showChildPhoto ? "/images/equipe/coraline-enfant.jpeg" : "/images/equipe/coraline.jpeg"}
+                        alt={showChildPhoto ? "Coraline ABADIE enfant" : "Coraline ABADIE"}
+                        width={350}
+                        height={400}
+                        className="w-full h-full object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
+                      />
+                    </div>
                   </div>
                 </div>
 
                 {/* Content à droite */}
                 <div className="lg:col-span-8 space-y-4">
                   <div className="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">
-                    Formatrice
+                    Formatrice par le théâtre et l'impro
                   </div>
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] leading-tight">
                     <span className="font-brittany text-3xl lg:text-4xl">Coraline</span> <span className="font-semibold">ABADIE</span>
                   </h1>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-[#013F63] leading-relaxed">
                     Accompagnement à distance sur toute la France ou en présentiel à <span className="text-orange-500 font-semibold">Lormont</span>
                   </p>
                 </div>
@@ -72,14 +99,14 @@ export default function CoralineAbadie() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ton parcours professionnel
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        6 ans d'expérience en formation professionnelle et insertion. Spécialisée dans l'accompagnement des jeunes publics et les dispositifs d'insertion sociale et professionnelle.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Commerciale 15 ans, reconversion titre de CIP et création de mon activité indépendante.
                       </p>
                     </div>
                   </div>
@@ -89,14 +116,14 @@ export default function CoralineAbadie() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ce que t'apportes à ATIPIK RH
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Mon énergie positive et ma capacité à motiver les jeunes. J'apporte une approche dynamique et moderne qui facilite l'engagement des nouvelles générations.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Atipik RH me permet de transmettre les techniques que j'utilise dans la formation à des professionnels. Mon souhait est que chacun ose utiliser le jeu ou les outils qu'il aime et maîtrise pour l'appliquer à son métier. Atipik m'apporte cette faisabilité avec confiance et professionnalisme 😊
                       </p>
                     </div>
                   </div>
@@ -106,14 +133,14 @@ export default function CoralineAbadie() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Une anecdote sur toi
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Passionnée de escalade, j'organise des sorties avec mes stagiaires. Cette activité développe la confiance en soi et l'esprit d'équipe, des atouts précieux pour l'insertion professionnelle.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Mon faire-part de naissance 😊 Comme une prédilection...
                       </p>
                     </div>
                   </div>
@@ -123,14 +150,14 @@ export default function CoralineAbadie() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ton métier d'enfance
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Coach sportive ! Je voulais aider les gens à se dépasser et atteindre leurs objectifs. Aujourd'hui, j'accompagne les jeunes vers leur épanouissement professionnel.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Photographe
                       </p>
                     </div>
                   </div>
@@ -140,14 +167,14 @@ export default function CoralineAbadie() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ton super-pouvoir au travail
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Réveiller la motivation chez les jeunes démotivés. Je trouve toujours le déclic qui permet de retrouver l'envie d'avancer et de construire son avenir professionnel.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Être dans l'instant
                       </p>
                     </div>
                   </div>
@@ -157,14 +184,14 @@ export default function CoralineAbadie() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ta devise
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed font-medium italic">
-                        "Chaque sommet atteint ouvre la vue sur de nouveaux horizons."
+                      <p className="text-[#013F63] text-sm leading-relaxed font-medium italic">
+                        "I believe I can fly"
                       </p>
                     </div>
                   </div>

@@ -4,8 +4,10 @@ import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { ArrowLeft } from 'lucide-react';
+import { useState } from 'react';
 
 export default function VanessaNoahEwodo() {
+  const [showChildPhoto, setShowChildPhoto] = useState(false);
   return (
     <>
       <Head>
@@ -28,7 +30,7 @@ export default function VanessaNoahEwodo() {
               
               {/* Navigation compacte */}
               <div className="mb-6">
-                <Link href="/notre-equipe" className="inline-flex items-center text-gray-600 hover:text-[#013F63] transition-colors group">
+                <Link href="/notre-equipe" className="inline-flex items-center text-[#013F63] hover:text-[#013F63] transition-colors group">
                   <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
                   Retour à l'équipe
                 </Link>
@@ -37,17 +39,42 @@ export default function VanessaNoahEwodo() {
               {/* Header compact avec photo et nom */}
               <div className="grid lg:grid-cols-12 gap-8 items-center mb-8">
                 
-                {/* Photo plus petite */}
+                {/* Photo avec arrière-plan interchangeable */}
                 <div className="lg:col-span-4">
                   <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#013F63] to-orange-500 rounded-2xl rotate-6 group-hover:rotate-3 transition-transform duration-300"></div>
-                    <Image
-                      src="/images/equipe/Vanessa.jpeg"
-                      alt="Vanessa NOAH EWODO"
-                      width={350}
-                      height={400}
-                      className="relative z-10 w-full h-72 object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-                    />
+                    {/* Arrière-plan - Photo opposée à celle affichée */}
+                    <div className="absolute inset-0 rounded-2xl rotate-6 group-hover:rotate-3 transition-transform duration-300 overflow-hidden">
+                      {showChildPhoto ? (
+                        <Image
+                          src="/images/equipe/Vanessa.jpeg"
+                          alt="Vanessa NOAH EWODO"
+                          width={350}
+                          height={400}
+                          className="w-full h-full object-cover rounded-2xl"
+                        />
+                      ) : (
+                        <Image
+                          src="/images/equipe/vanessa-enfant.png"
+                          alt="Vanessa NOAH EWODO enfant"
+                          width={350}
+                          height={400}
+                          className="w-full h-full object-cover rounded-2xl"
+                        />
+                      )}
+                    </div>
+                    {/* Photo principale cliquable */}
+                    <div 
+                      className="relative z-10 w-full h-72 cursor-pointer"
+                      onClick={() => setShowChildPhoto(!showChildPhoto)}
+                    >
+                      <Image
+                        src={showChildPhoto ? "/images/equipe/vanessa-enfant.png" : "/images/equipe/Vanessa.jpeg"}
+                        alt={showChildPhoto ? "Vanessa NOAH EWODO enfant" : "Vanessa NOAH EWODO"}
+                        width={350}
+                        height={400}
+                        className="w-full h-full object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -59,7 +86,7 @@ export default function VanessaNoahEwodo() {
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] leading-tight">
                     <span className="font-brittany text-4xl lg:text-5xl">Vanessa</span> <span className="font-semibold">NOAH EWODO</span>
                   </h1>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-[#013F63] leading-relaxed">
                     Accompagnement à distance sur toute la France ou en présentiel à <span className="text-orange-500 font-semibold">Lormont</span>
                   </p>
                 </div>
@@ -72,15 +99,37 @@ export default function VanessaNoahEwodo() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ton parcours professionnel
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        15 ans d'expérience dans la formation et l'accompagnement professionnel. Directrice et fondatrice d'Atipik RH, j'ai développé une expertise unique dans le bilan de compétences et la VAE.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Vanessa Noah Ewodo est diplômée en psychologie, en formation pour adultes et en ressources humaines. Ces compétences pluridisciplinaires forment une solide base pour son rôle dans l'accompagnement professionnel.
                       </p>
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Elle débute sa carrière dans le secteur associatif, où elle accompagne notamment des publics migrants sur des questions d'alphabétisation et d'accès au droit. Cette expérience lui permet de développer une expertise en accompagnement polyvalent et interculturel.
+                      </p>
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Avant de créer sa structure, elle cumule les rôles :
+                      </p>
+                      <ul className="text-[#013F63] text-sm leading-relaxed list-disc list-inside space-y-1">
+                        <li>Conjointe associée dans une entreprise de menuiserie.</li>
+                        <li>Fondatrice d'une start-up dans l'économie sociale et solidaire dédiée aux diasporas africaines.<br/>Ces activités lui offrent des compétences en gestion de projet, stratégie commerciale et recrutement.</li>
+                      </ul>
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Elle intègre ensuite un cabinet conseil en RH où elle intervient comme consultante en évolution de carrière, menant des bilans de compétences auprès de publics issus de secteurs variés.
+                      </p>
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Forte de ce parcours, Vanessa Noah Ewodo fonde ATIPIK RH, un organisme de formation et d'accompagnement spécialisé dans :
+                      </p>
+                      <ul className="text-[#013F63] text-sm leading-relaxed list-disc list-inside space-y-1">
+                        <li>Les bilans de compétences</li>
+                        <li>La validation des acquis de l'expérience (VAE)</li>
+                        <li>La formation de futurs conseillers en insertion professionnelle et formateurs pour adultes.</li>
+                        <li>Et la professionnalisation des acteurs de l'accompagnement social dans leur connaissance de l'entreprise</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -89,14 +138,17 @@ export default function VanessaNoahEwodo() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ce que t'apportes à ATIPIK RH
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Ma vision stratégique, mon approche innovante de l'accompagnement et ma capacité à créer un environnement bienveillant où chaque collaborateur peut s'épanouir et révéler son potentiel.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        ATIPIK RH est le moyen pour moi d'avoir un impact positif et durable sur mon territoire.
+                      </p>
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Chaque projet est une opportunité de créer des parcours professionnels épanouissants, en partenariat avec des acteurs qui partagent mes valeurs : inclusion, solidarité et innovation sociale.
                       </p>
                     </div>
                   </div>
@@ -106,14 +158,31 @@ export default function VanessaNoahEwodo() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Une anecdote sur toi
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Ancienne danseuse classique, j'ai retrouvé la scène après 37 ans d'absence. Cette renaissance artistique nourrit aujourd'hui ma vision de l'accompagnement professionnel : il n'est jamais trop tard pour se réinventer.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Quand j'ai créé ATIPIK RH, je n'avais pas de plan figé, pas de financement garanti, pas de certitudes. Ce que j'avais, c'était :
+                      </p>
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        – <strong>mon expérience</strong>,<br/>
+                        – <strong>mon réseau de terrain</strong>,<br/>
+                        – <strong>mes convictions profondes</strong> sur l'insertion, l'inclusion et l'humain.
+                      </p>
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Et surtout, <strong>j'avais envie d'agir, ici et maintenant, avec ce que j'avais sous la main</strong>.
+                      </p>
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        C'est exactement le principe de <strong>l'effectuation</strong> : on ne part pas d'un objectif théorique, mais <strong>de soi, de ses ressources actuelles</strong>, et on avance <strong>par expérimentations, par partenariats, par apprentissages</strong>.
+                      </p>
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Ce n'est pas une trajectoire linéaire, mais une trajectoire vivante.
+                      </p>
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Aujourd'hui, ATIPIK RH existe parce qu'à chaque étape, j'ai fait avec ce que j'avais, et surtout <strong>avec ceux et celles qui étaient là, prêts à construire avec moi</strong>.
                       </p>
                     </div>
                   </div>
@@ -123,14 +192,14 @@ export default function VanessaNoahEwodo() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ton métier d'enfance
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Professeure de danse. Je voulais transmettre la beauté du mouvement et aider les autres à s'exprimer à travers l'art. Cette passion pour la transmission guide encore aujourd'hui ma mission chez Atipik RH.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Maîtresse d'école
                       </p>
                     </div>
                   </div>
@@ -140,14 +209,14 @@ export default function VanessaNoahEwodo() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ton super-pouvoir au travail
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Révéler le potentiel caché des personnes. J'ai cette capacité intuitive à percevoir les talents inexploités et à créer les conditions pour qu'ils s'épanouissent pleinement.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Une mémoire d'exception
                       </p>
                     </div>
                   </div>
@@ -157,14 +226,14 @@ export default function VanessaNoahEwodo() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ta devise
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed font-medium italic">
-                        "Chaque défi est une danse avec l'opportunité."
+                      <p className="text-[#013F63] text-sm leading-relaxed font-medium italic">
+                        "Impose ta chance, serre ton bonheur et va vers ton risque. À te regarder, ils s'habitueront." <br/>De René Char
                       </p>
                     </div>
                   </div>

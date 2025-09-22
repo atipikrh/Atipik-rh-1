@@ -29,13 +29,13 @@ export default function Certification() {
           <div className="h-20"></div>
 
           {/* Introduction */}
-          <section className="relative py-16 overflow-hidden">
-            <div className="relative z-10 container mx-auto px-4 pt-8 pb-8">
+          <section className="relative py-6 overflow-hidden">
+            <div className="relative z-10 container mx-auto px-4 pt-4 pb-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
                   Nos <span className="text-orange-500 font-brittany font-black">Certifications</span>
                 </h1>
-                <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-light">
+                <p className="text-lg lg:text-xl text-[#013F63] leading-relaxed font-light">
                   La qualité et la reconnaissance officielle<br className="hidden lg:block"/>
                   <span className="text-orange-500 font-medium">au service de votre formation</span>
                 </p>
@@ -44,18 +44,18 @@ export default function Certification() {
           </section>
 
           {/* Certification Qualiopi */}
-          <section className="py-24">
+          <section className="py-8">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
-                <div className="grid lg:grid-cols-2 gap-16 items-start">
+                <div className="grid lg:grid-cols-2 gap-8 items-start">
                   <div className="text-center lg:text-left lg:pl-12">
                     <div className="text-center lg:text-left mb-8">
-                      <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">
-                        Certification <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">qualité</span>
+                      <h2 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-6">
+                        Certification <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">qualité</span>
                       </h2>
                     </div>
                     
-                    <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                    <p className="text-lg text-[#013F63] leading-relaxed mb-8">
                       La certification Qualiopi atteste de la qualité de nos processus de formation selon un référentiel national unique. 
                       Elle garantit notre engagement dans l'amélioration continue de nos services et notre conformité aux exigences 
                       les plus strictes en matière de formation professionnelle.
@@ -64,39 +64,47 @@ export default function Certification() {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-4">
                         <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-gray-700">Gage de qualité reconnu par l'État</span>
+                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-[#013F63]">Gage de qualité reconnu par l'État</span>
                         </div>
                         <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-gray-700">Processus d'amélioration continue</span>
+                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-[#013F63]">Processus d'amélioration continue</span>
                         </div>
                       </div>
                       <div className="space-y-4">
                         <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-gray-700">Suivi et évaluation des formations</span>
+                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-[#013F63]">Suivi et évaluation des formations</span>
                         </div>
                         <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-gray-700">Satisfaction des apprenants contrôlée</span>
+                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-[#013F63]">Satisfaction des apprenants contrôlée</span>
                         </div>
                       </div>
                     </div>
                   </div>
                   
                   <div className="text-center">
-                    <div className="w-full h-60 flex items-center justify-center">
-                      <Image 
-                        src="/images/certifications/qualiopi.png" 
-                        alt="Logo Qualiopi"
-                        width={300}
-                        height={300}
-                        className="object-contain w-full h-full"
-                      />
+                    <div className="w-full h-52 flex items-center justify-center">
+                      <a 
+                        href="/documents/certifications/certificat-qualiopi.pdf" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="block hover:scale-105 transition-transform duration-300 cursor-pointer"
+                        title="Voir le certificat Qualiopi (PDF)"
+                      >
+                        <Image 
+                          src="/images/certifications/qualiopi.png" 
+                          alt="Logo Qualiopi - Cliquez pour voir le certificat"
+                          width={250}
+                          height={250}
+                          className="object-contain w-full h-full max-w-[250px] hover:opacity-90 transition-opacity"
+                        />
+                      </a>
                     </div>
                     <div className="mt-6 flex justify-center">
-                      <ul className="text-gray-700 text-sm space-y-2 text-left">
+                      <ul className="text-[#013F63] text-sm space-y-2 text-left">
                         <li>- ACTIONS DE FORMATIONS</li>
                         <li>- BILAN DE COMPÉTENCES</li>
                         <li>- ACTIONS PERMETTANT DE VALIDER LES ACQUIS D'EXPERIENCE</li>
@@ -109,54 +117,49 @@ export default function Certification() {
           </section>
 
           {/* Formation & Handicap */}
-          <section className="py-24">
+          <section className="py-8">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-8 items-center">
                   <div className="text-center order-2 lg:order-1">
-                    <div className="w-full h-60 flex items-center justify-center">
+                    <div className="w-full h-48 flex items-center justify-center">
                       <Image 
                         src="/images/certifications/formation-handicap.png" 
                         alt="Logo Formation & Handicap"
-                        width={300}
-                        height={300}
-                        className="object-contain w-full h-full"
+                        width={220}
+                        height={220}
+                        className="object-contain w-full h-full max-w-[220px]"
                       />
                     </div>
                   </div>
                   
                   <div className="text-center lg:text-left order-1 lg:order-2">
                     <div className="text-center lg:text-left mb-8">
-                      <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">
-                        Handi<span className="text-orange-500 font-brittany text-4xl lg:text-5xl">accueillant</span>
+                      <h2 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-6">
+                        Handi<span className="text-orange-500 font-brittany text-3xl lg:text-4xl">accueillant</span>
                       </h2>
                     </div>
                     
-                    <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                    <p className="text-lg text-[#013F63] leading-relaxed mb-8">
                       Notre engagement pour l'accessibilité va au-delà des obligations légales. Nous mettons tout en œuvre 
-                      pour adapter nos formations aux personnes en situation de handicap, avec des méthodes pédagogiques 
-                      flexibles et un accompagnement individualisé.
+                      pour adapter nos formations aux personnes en situation de handicap.
                     </p>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-4">
                         <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-gray-700">Formations adaptées aux besoins spécifiques</span>
+                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-[#013F63]">Formations adaptées aux besoins spécifiques</span>
                         </div>
                         <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-gray-700">Accompagnement personnalisé</span>
+                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-[#013F63]">Accompagnement personnalisé</span>
                         </div>
                       </div>
                       <div className="space-y-4">
                         <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-gray-700">Locaux et méthodes accessibles</span>
-                        </div>
-                        <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-gray-700">Partenariat avec Cap Emploi</span>
+                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-[#013F63]">Locaux et méthodes accessibles</span>
                         </div>
                       </div>
                     </div>
@@ -166,15 +169,24 @@ export default function Certification() {
             </div>
           </section>
 
+          {/* Ligne de séparation */}
+          <div className="py-12">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <hr className="border-t-2 border-gray-300" />
+              </div>
+            </div>
+          </div>
+
           {/* Avantages des certifications */}
-          <section className="py-24">
+          <section className="py-6">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-16">
-                  <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
-                    Pourquoi ces <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">certifications ?</span>
+                <div className="text-center mb-8">
+                  <h2 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-2">
+                    Pourquoi ces <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">certifications ?</span>
                   </h2>
-                  <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                  <p className="text-base text-[#013F63] leading-relaxed max-w-3xl mx-auto">
                     Des garanties concrètes pour votre parcours de formation
                   </p>
                 </div>
@@ -182,33 +194,33 @@ export default function Certification() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
                   
                   {/* Qualité */}
-                  <div className="text-center group flex flex-col justify-center pt-8">
+                  <div className="text-center group flex flex-col justify-center pt-4">
                     <h3 className="text-xl font-bold text-[#013F63] mb-4">Qualité garantie</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Des standards élevés contrôlés et audités régulièrement
+                    <p className="text-[#013F63] leading-relaxed">
+                      Des standards contrôlés et audités régulièrement
                     </p>
                   </div>
 
                   {/* Financement */}
-                  <div className="text-center group flex flex-col justify-center pt-8">
+                  <div className="text-center group flex flex-col justify-center pt-4">
                     <h3 className="text-xl font-bold text-[#013F63] mb-4">Financements possibles</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-[#013F63] leading-relaxed">
                       Mobilisation de vos droits CPF, OPCO et autres dispositifs
                     </p>
                   </div>
 
                   {/* Reconnaissance */}
-                  <div className="text-center group flex flex-col justify-center pt-8">
+                  <div className="text-center group flex flex-col justify-center pt-4">
                     <h3 className="text-xl font-bold text-[#013F63] mb-4">Reconnaissance officielle</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-[#013F63] leading-relaxed">
                       Des certifications reconnues par les employeurs et l'État
                     </p>
                   </div>
 
                   {/* Accessibilité */}
-                  <div className="text-center group flex flex-col justify-center pt-8">
+                  <div className="text-center group flex flex-col justify-center pt-4">
                     <h3 className="text-xl font-bold text-[#013F63] mb-4">Accessibilité</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-[#013F63] leading-relaxed">
                       Formations ouvertes à tous, avec adaptations si nécessaire
                     </p>
                   </div>
@@ -218,18 +230,9 @@ export default function Certification() {
           </section>
 
           {/* CTA Section */}
-          <section className="py-24">
+          <section className="py-12">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                
-                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
-                  Prêt à bénéficier d'une <span className="text-orange-500 font-brittany text-5xl lg:text-6xl whitespace-nowrap">formation certifiée ?</span>
-                </h2>
-                
-                <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-                  Nos certifications vous garantissent une formation de qualité et des possibilités de financement
-                </p>
-
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact" className="inline-flex px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-base hover:scale-105">
                     Démarrer ma formation

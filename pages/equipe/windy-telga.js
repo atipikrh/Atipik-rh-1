@@ -4,8 +4,10 @@ import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { ArrowLeft } from 'lucide-react';
+import { useState } from 'react';
 
 export default function WindyTelga() {
+  const [showChildPhoto, setShowChildPhoto] = useState(false);
   return (
     <>
       <Head>
@@ -28,7 +30,7 @@ export default function WindyTelga() {
               
               {/* Navigation compacte */}
               <div className="mb-6">
-                <Link href="/notre-equipe" className="inline-flex items-center text-gray-600 hover:text-[#013F63] transition-colors group">
+                <Link href="/notre-equipe" className="inline-flex items-center text-[#013F63] hover:text-[#013F63] transition-colors group">
                   <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
                   Retour à l'équipe
                 </Link>
@@ -37,17 +39,42 @@ export default function WindyTelga() {
               {/* Header compact avec photo et nom */}
               <div className="grid lg:grid-cols-12 gap-8 items-center mb-8">
                 
-                {/* Photo plus petite */}
+                {/* Photo avec arrière-plan interchangeable */}
                 <div className="lg:col-span-4">
                   <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#013F63] to-orange-500 rounded-2xl rotate-6 group-hover:rotate-3 transition-transform duration-300"></div>
-                    <Image
-                      src="/images/equipe/windy.jpeg"
-                      alt="Windy TELGA"
-                      width={350}
-                      height={400}
-                      className="relative z-10 w-full h-72 object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-                    />
+                    {/* Arrière-plan - Photo opposée à celle affichée */}
+                    <div className="absolute inset-0 rounded-2xl rotate-6 group-hover:rotate-3 transition-transform duration-300 overflow-hidden">
+                      {showChildPhoto ? (
+                        <Image
+                          src="/images/equipe/windy.jpeg"
+                          alt="Windy TELGA"
+                          width={350}
+                          height={400}
+                          className="w-full h-full object-cover rounded-2xl"
+                        />
+                      ) : (
+                        <Image
+                          src="/images/equipe/windy-enfant.jpeg"
+                          alt="Windy TELGA enfant"
+                          width={350}
+                          height={400}
+                          className="w-full h-full object-cover rounded-2xl"
+                        />
+                      )}
+                    </div>
+                    {/* Photo principale cliquable */}
+                    <div 
+                      className="relative z-10 w-full h-72 cursor-pointer"
+                      onClick={() => setShowChildPhoto(!showChildPhoto)}
+                    >
+                      <Image
+                        src={showChildPhoto ? "/images/equipe/windy-enfant.jpeg" : "/images/equipe/windy.jpeg"}
+                        alt={showChildPhoto ? "Windy TELGA enfant" : "Windy TELGA"}
+                        width={350}
+                        height={400}
+                        className="w-full h-full object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -59,7 +86,7 @@ export default function WindyTelga() {
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] leading-tight">
                     <span className="font-brittany text-3xl lg:text-4xl">Windy</span> <span className="font-semibold">TELGA</span>
                   </h1>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-[#013F63] leading-relaxed">
                     Accompagnement à distance sur toute la France ou en présentiel à <span className="text-orange-500 font-semibold">Lormont</span>
                   </p>
                 </div>
@@ -72,13 +99,13 @@ export default function WindyTelga() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ton parcours professionnel
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-[#013F63] text-sm leading-relaxed">
                         5 ans d'expérience en formation et accompagnement professionnel. Spécialisée dans l'innovation pédagogique et l'utilisation des nouvelles technologies en formation.
                       </p>
                     </div>
@@ -89,13 +116,13 @@ export default function WindyTelga() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ce que t'apportes à ATIPIK RH
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-[#013F63] text-sm leading-relaxed">
                         Mon approche innovante et ma maîtrise des outils digitaux. J'apporte une dimension moderne à nos formations et développe de nouvelles méthodes pédagogiques interactives.
                       </p>
                     </div>
@@ -106,13 +133,13 @@ export default function WindyTelga() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Une anecdote sur toi
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-[#013F63] text-sm leading-relaxed">
                         Créatrice de contenus pédagogiques en réalité virtuelle ! J'ai développé une formation immersive pour préparer aux entretiens d'embauche. L'innovation au service de l'apprentissage.
                       </p>
                     </div>
@@ -123,13 +150,13 @@ export default function WindyTelga() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ton métier d'enfance
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-[#013F63] text-sm leading-relaxed">
                         Inventrice ! Je voulais créer des machines qui faciliteraient la vie des gens. Aujourd'hui, j'invente de nouvelles façons d'apprendre et de se former.
                       </p>
                     </div>
@@ -140,13 +167,13 @@ export default function WindyTelga() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ton super-pouvoir au travail
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-[#013F63] text-sm leading-relaxed">
                         Transformer les concepts complexes en expériences simples et engageantes. Je rends l'apprentissage ludique et mémorable grâce aux outils numériques.
                       </p>
                     </div>
@@ -157,13 +184,13 @@ export default function WindyTelga() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ta devise
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed font-medium italic">
+                      <p className="text-[#013F63] text-sm leading-relaxed font-medium italic">
                         "L'innovation transforme l'apprentissage en aventure."
                       </p>
                     </div>

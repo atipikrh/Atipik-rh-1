@@ -3,7 +3,16 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method not allowed' })
   }
 
-  const { userInfo, quizResult, answers, questions } = req.body
+  const { userInfo, answers, questions } = req.body
+
+  // Validation des données requises
+  if (!userInfo || !userInfo.name || !userInfo.email) {
+    return res.status(400).json({ error: 'Informations utilisateur manquantes' })
+  }
+
+  if (!answers || !questions) {
+    return res.status(400).json({ error: 'Données du quiz manquantes' })
+  }
 
   try {
     // Configuration Brevo depuis les variables d'environnement
@@ -33,15 +42,6 @@ INFORMATIONS CONTACT :
 - Prénom : ${userInfo.name}
 - Email : ${userInfo.email}
 - Téléphone : ${userInfo.phone || 'Non renseigné'}
-
-DIAGNOSTIC :
-- Type de profil : ${quizResult.type}
-- Titre : ${quizResult.title}
-- Niveau d'urgence : ${quizResult.urgency}
-- Recommandation : ${quizResult.recommendation}
-
-DESCRIPTION :
-${quizResult.description}
 
 SYNTHÈSE DES RÉPONSES :
 ${reponsesSynthese}

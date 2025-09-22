@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev-no-hmr": "node dev-no-hmr.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

@@ -32,17 +32,17 @@ export default function NotreEquipe() {
         <div className="h-20"></div>
 
         {/* Équipe d'Atipik RH */}
-        <section className="py-24">
+        <section className="pt-16 pb-24">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
               
               {/* Section Équipe d'ATIPIK RH */}
               <div className="mb-24">
                 <div className="text-center mb-16">
-                  <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
-                    Au coeur du <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">projet</span>
+                  <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
+                    Au coeur du <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">projet</span>
                   </h1>
-                  <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                  <p className="text-xl text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
                     L'équipe qui pilote et organise vos parcours de formation
                   </p>
                 </div>
@@ -70,10 +70,10 @@ export default function NotreEquipe() {
                         </div>
                       </div>
                     </Link>
-                    <h3 className="text-lg text-[#013F63] mb-3">
+                    <h3 className="text-lg text-[#013F63] mb-1">
                       <span className="text-lg">Brunilda</span> <span className="font-semibold">RAFAEL</span>
                     </h3>
-                    <p className="text-orange-500 text-lg mb-3">Chargée de Formation</p>
+                    <p className="text-orange-500 text-base mb-3">CHARGÉE DE FORMATION</p>
                   </div>
 
                   {/* Vanessa - Directrice */}
@@ -91,22 +91,28 @@ export default function NotreEquipe() {
                               className="w-full h-full rounded-full object-cover cursor-pointer"
                             />
                           </div>
-                          {/* Face arrière - Icône temporaire */}
-                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
-                            <User className="w-16 h-16 text-white" />
+                          {/* Face arrière - Photo d'enfance */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full">
+                            <Image
+                              src="/images/equipe/vanessa-enfant.png"
+                              alt="Vanessa NOAH EWODO enfant"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
                           </div>
                         </div>
                       </div>
                     </Link>
-                    <h3 className="text-lg text-[#013F63] mb-3">
+                    <h3 className="text-lg text-[#013F63] mb-1">
                       <span className="text-lg">Vanessa</span> <span className="font-semibold">NOAH EWODO</span>
                     </h3>
-                    <p className="text-orange-500 text-lg mb-3">Fondatrice et Directrice</p>
+                    <p className="text-orange-500 text-base mb-3">FONDATRICE ET DIRECTRICE</p>
                   </div>
 
                   {/* Liliana - Communication */}
                   <div className="text-center">
-                    <Link href="/equipe/liliana-delmas" className="inline-block mb-4">
+                    <Link href="/equipe/liliana-almeida" className="inline-block mb-4">
                       <div className="w-40 h-40 mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
@@ -126,10 +132,10 @@ export default function NotreEquipe() {
                         </div>
                       </div>
                     </Link>
-                    <h3 className="text-lg text-[#013F63] mb-3">
+                    <h3 className="text-lg text-[#013F63] mb-1">
                       <span className="text-lg">Liliana</span> <span className="font-semibold">ALMEIDA</span>
                     </h3>
-                    <p className="text-orange-500 text-lg mb-3">Chargée de Communication</p>
+                    <p className="text-orange-500 text-base mb-3">CHARGÉE DE COMMUNICATION</p>
                   </div>
                 </div>
               </div>
@@ -137,10 +143,10 @@ export default function NotreEquipe() {
               {/* Section Nos Formatrices */}
               <div className="mb-8">
                 <div className="text-center mb-16">
-                  <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
-                    Notre équipe <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">pédagogique</span>
+                  <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3">
+                    Notre équipe <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">pédagogique</span>
                   </h2>
-                  <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                  <p className="text-xl text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
                     Des expertes passionnées qui vous transmettent leur savoir-faire
                   </p>
                 </div>
@@ -188,9 +194,15 @@ export default function NotreEquipe() {
                               className="w-full h-full rounded-full object-cover cursor-pointer"
                             />
                           </div>
-                          {/* Face arrière - Icône temporaire */}
-                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
-                            <User className="w-16 h-16 text-white" />
+                          {/* Face arrière - Photo d'enfance */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full">
+                            <Image
+                              src="/images/equipe/nathalie-enfant.jpeg"
+                              alt="Nathalie BIOTTI enfant"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
                           </div>
                         </div>
                       </div>
@@ -242,9 +254,15 @@ export default function NotreEquipe() {
                               className="w-full h-full rounded-full object-cover cursor-pointer"
                             />
                           </div>
-                          {/* Face arrière - Icône temporaire */}
-                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center">
-                            <User className="w-16 h-16 text-white" />
+                          {/* Face arrière - Photo d'enfance */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full">
+                            <Image
+                              src="/images/equipe/cecile-enfant.jpeg"
+                              alt="Cécile BERNAT enfant"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
                           </div>
                         </div>
                       </div>
@@ -269,9 +287,15 @@ export default function NotreEquipe() {
                               className="w-full h-full rounded-full object-cover cursor-pointer"
                             />
                           </div>
-                          {/* Face arrière - Icône temporaire */}
-                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
-                            <User className="w-16 h-16 text-white" />
+                          {/* Face arrière - Photo d'enfance */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full">
+                            <Image
+                              src="/images/equipe/coraline-enfant.jpeg"
+                              alt="Coraline ABADIE enfant"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
                           </div>
                         </div>
                       </div>
@@ -346,11 +370,11 @@ export default function NotreEquipe() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               
-              <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
-                Rencontrons-<span className="text-orange-500 font-brittany text-5xl lg:text-6xl">nous</span>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3">
+                Rencontrons-<span className="text-orange-500 font-brittany text-4xl lg:text-5xl">nous</span>
               </h2>
               
-              <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+              <p className="text-xl text-[#013F63] leading-relaxed font-light mb-12 max-w-2xl mx-auto">
                 Notre équipe est à votre disposition pour répondre à vos questions 
                 et vous accompagner dans votre projet professionnel
               </p>

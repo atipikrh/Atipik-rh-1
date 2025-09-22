@@ -32,8 +32,8 @@ export default function FormationsCourtesProfessionnalisantes() {
   const formations = [
     {
       id: 1,
-      titre: "Développer la relation entreprise: de l'accompagnement à la relation entreprise",
-      sousTitre: "De l'accompagnement à la relation entreprise",
+      titre: "Développer la relation entreprise",
+      sousTitre: "de l'accompagnement à la relation entreprise",
       public: "Professionnels sans expérience en relation entreprises (CIP débutants, travailleurs sociaux…)",
       objectifs: [
         "Comprendre le fonctionnement des entreprises",
@@ -57,10 +57,18 @@ export default function FormationsCourtesProfessionnalisantes() {
             "Techniques de négociation adaptées", 
             "Construction d'un plan d'action personnalisé"
           ]
+        },
+        {
+          jour: "Jour 3 (à distance) : Coopérer durablement",
+          contenu: [
+            "Enjeux de la relation tripartite",
+            "Techniques de médiation",
+            "Posture de coopération dans la durée"
+          ]
         }
       ],
       details: [
-        "Durée : 2 jours (14h)",
+        "Durée : 3 jours (21h)",
         "Prérequis : Aucun",
         "Public : 10 personnes maximum",
         "Méthodes : Alternance théorie/pratique, jeux de rôles, études de cas"
@@ -68,8 +76,8 @@ export default function FormationsCourtesProfessionnalisantes() {
     },
     {
       id: 2,
-      titre: "Renforcer la relation avec l'entreprise : de la prospection à la valorisation de votre offre", 
-      sousTitre: "Accompagner les entreprises vers plus d'inclusion",
+      titre: "Renforcer la relation avec l'entreprise", 
+      sousTitre: "de la prospection à la valorisation de votre offre",
       public: "Professionnels souhaitant développer une approche inclusive du recrutement",
       objectifs: [
         "Maîtriser les enjeux de l'inclusion en entreprise",
@@ -79,24 +87,33 @@ export default function FormationsCourtesProfessionnalisantes() {
       ],
       programme: [
         {
-          jour: "Jour 1 : Comprendre les enjeux",
+          jour: "Jour 1 : Les bases de l'inclusion RH",
           contenu: [
-            "Panorama de l'inclusion et de la diversité",
-            "Identification des freins et leviers", 
-            "Cadre légal et réglementaire"
+            "Définitions et enjeux de la diversité",
+            "Identification des biais cognitifs",
+            "Étude de cas et auto-analyse des pratiques"
           ]
         },
         {
-          jour: "Jour 2 : Outils et méthodes",
+          jour: "Jour 2 : Recruter sans discriminer",
           contenu: [
-            "Techniques de recrutement inclusif",
-            "Construction d'argumentaires", 
-            "Accompagnement post-recrutement"
+            "Recruter sur les compétences",
+            "Simulations d'entretiens",
+            "Rédaction d'offres inclusives",
+            "Élaboration d'un plan d'action individuel"
+          ]
+        },
+        {
+          jour: "Jour 3 (à distance) : Mise en situation et ajustements d'outils",
+          contenu: [
+            "Retours d'expérience et partages de pratiques",
+            "Diagnostic collectif d'un processus de recrutement",
+            "Évaluation et engagements"
           ]
         }
       ],
       details: [
-        "Durée : 2 jours (14h)",
+        "Durée : 3 jours (21h)",
         "Prérequis : Expérience en accompagnement",
         "Public : 10 personnes maximum", 
         "Méthodes : Études de cas, ateliers pratiques, mise en situation"
@@ -104,8 +121,8 @@ export default function FormationsCourtesProfessionnalisantes() {
     },
     {
       id: 3,
-      titre: "Recruter en insertion avec les entreprises : De la co-construction à l'accompagnement stratégique RH",
-      sousTitre: "Révéler et valoriser le potentiel",
+      titre: "Recruter en insertion avec les entreprises",
+      sousTitre: "de la co-construction à l'accompagnement stratégique RH",
       public: "Professionnels de l'accompagnement, conseillers emploi, formateurs",
       objectifs: [
         "Identifier les compétences transférables",
@@ -115,24 +132,33 @@ export default function FormationsCourtesProfessionnalisantes() {
       ],
       programme: [
         {
-          jour: "Jour 1 : Identifier les compétences",
+          jour: "Jour 1 : Recrutement collaboratif",
           contenu: [
-            "Cartographie des compétences transférables",
-            "Outils d'identification et d'évaluation",
-            "Méthodologie d'entretien exploratoire"
+            "Analyse de ses pratiques et définition d'objectifs",
+            "Spécificités du recrutement inclusif",
+            "Identification des freins et leviers à l'embauche",
+            "Construction d'un processus de recrutement adapté"
           ]
         },
         {
-          jour: "Jour 2 : Valoriser et transférer",
+          jour: "Jour 2 : Analyse de profils et orientation",
           contenu: [
-            "Techniques de valorisation",
-            "Construction de parcours de transition",
-            "Accompagnement à la verbalisation"
+            "Co-construction d'un parcours d'intégration",
+            "Simulation d'entretien tripartite",
+            "Élaboration d'un plan d'action transférable"
+          ]
+        },
+        {
+          jour: "Jour 3 (à distance) : Appui aux entretiens & suivi post-embauche",
+          contenu: [
+            "Étude de cas \"Parcours de recrutement\"",
+            "Retour terrain et outils d'évaluation",
+            "Bilan final et valorisation des acquis"
           ]
         }
       ],
       details: [
-        "Durée : 2 jours (14h)", 
+        "Durée : 3 jours (21h)", 
         "Prérequis : Expérience en accompagnement",
         "Public : 12 personnes maximum",
         "Méthodes : Ateliers pratiques, autodiagnostic, études de cas"
@@ -140,8 +166,8 @@ export default function FormationsCourtesProfessionnalisantes() {
     },
     {
       id: 4,
-      titre: "Renforcer sa pratique des recrutement inclusif : de la diversité à la performance RH",
-      sousTitre: "Optimiser sa pratique professionnelle",
+      titre: "Renforcer sa pratique des recrutement inclusif",
+      sousTitre: "de la diversité à la performance RH",
       public: "Tous professionnels de l'accompagnement social et professionnel",
       objectifs: [
         "Développer une posture professionnelle adaptée",
@@ -151,24 +177,32 @@ export default function FormationsCourtesProfessionnalisantes() {
       ],
       programme: [
         {
-          jour: "Jour 1 : Posture professionnelle",
+          jour: "Jour 1 : Structurer l'offre",
           contenu: [
-            "Analyse des pratiques professionnelles",
-            "Techniques d'entretien d'aide",
-            "Gestion de la relation d'aide"
+            "Clarifier missions, publics et services",
+            "Construire une offre lisible",
+            "Benchmark d'offres existantes"
           ]
         },
         {
-          jour: "Jour 2 : Situations complexes",
+          jour: "Jour 2 : Organiser la prospection",
           contenu: [
-            "Gestion des situations difficiles", 
-            "Prévention de l'épuisement",
-            "Construction d'un plan de développement personnel"
+            "Identifier les cibles prioritaires",
+            "Créer outils (trame d'appel, mails, fiches)",
+            "Jeux de rôle de prise de contact"
+          ]
+        },
+        {
+          jour: "Jour 3 (à distance) : Valoriser son action",
+          contenu: [
+            "Argumenter l'impact RH / social",
+            "Construire un discours partenariat",
+            "Simulations d'entretiens avec entreprises"
           ]
         }
       ],
       details: [
-        "Durée : 2 jours (14h)",
+        "Durée : 3 jours (21h)",
         "Prérequis : Exercer dans l'accompagnement",
         "Public : 10 personnes maximum",
         "Méthodes : Analyse de pratiques, jeux de rôles, supervision"
@@ -424,7 +458,7 @@ export default function FormationsCourtesProfessionnalisantes() {
                     <Euro className="w-12 h-12 text-[#013F63] mx-auto mb-4" />
                     <h3 className="font-bold text-gray-800 mb-2">Tarif</h3>
                     <p className="text-2xl font-bold text-[#013F63] mb-1">1150€</p>
-                    <p className="text-sm text-gray-600">par formation (2 jours)</p>
+                    <p className="text-sm text-gray-600">par formation (3 jours)</p>
                   </div>
 
                   {/* Lieu */}
@@ -438,8 +472,8 @@ export default function FormationsCourtesProfessionnalisantes() {
                   <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
                     <Clock className="w-12 h-12 text-[#013F63] mx-auto mb-4" />
                     <h3 className="font-bold text-gray-800 mb-2">Durée</h3>
-                    <p className="text-2xl font-bold text-[#013F63] mb-1">14h</p>
-                    <p className="text-sm text-gray-600">2 jours consécutifs<br/>9h-17h</p>
+                    <p className="text-2xl font-bold text-[#013F63] mb-1">21h</p>
+                    <p className="text-sm text-gray-600">3 jours<br/>2 présentiel + 1 distanciel</p>
                   </div>
 
                   {/* Certification */}
@@ -485,28 +519,65 @@ export default function FormationsCourtesProfessionnalisantes() {
           <section className="py-8">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <div className="flex items-center justify-center gap-6">
-                  <Image 
-                    src="/images/certifications/formation-handicap.png" 
-                    alt="Formation accessible aux personnes en situation de handicap" 
-                    width={80} 
-                    height={80}
-                    className="object-contain flex-shrink-0"
-                  />
-                  <div className="text-sm text-gray-600 text-left">
-                    <p className="mb-2">
-                      <strong>Accessibilité Handicap :</strong> Nos formations sont accessibles aux personnes en situation de handicap.
-                    </p>
-                    <p className="mb-3">
-                      Contactez-nous pour étudier ensemble les modalités d'accès qui conviennent le mieux à votre situation.
-                    </p>
-                    <p>
-                      <strong>Responsable :</strong> Vanessa NOAH EWODO - Directrice<br/>
-                      <a href="mailto:contact@atipikrh.com" className="text-orange-500 hover:text-orange-600 transition-colors">contact@atipikrh.com</a> | 
-                      <a href="tel:0783019955" className="text-orange-500 hover:text-orange-600 transition-colors ml-1">07 83 01 99 55</a>
-                    </p>
+                
+                <div className="grid lg:grid-cols-3 gap-6 items-center">
+                  
+                  {/* Section gauche - Logo */}
+                  <div className="flex flex-col justify-center items-center text-center">
+                    <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-4 shadow-lg">
+                      <Image 
+                        src="/images/certifications/formation-handicap.png" 
+                        alt="Formation & Handicap" 
+                        width={50} 
+                        height={50}
+                        className="object-contain"
+                      />
+                    </div>
+                    <h3 className="text-lg font-bold mb-2 text-[#013F63]">Formation accessible</h3>
+                  </div>
+
+                  {/* Section droite - Contact et informations */}
+                  <div className="lg:col-span-2">
+                    <div className="mb-4">
+                      <p className="text-[#013F63] leading-relaxed mb-4">
+                        <strong>Accessibilité Handicap :</strong> Nos formations sont accessibles aux personnes en situation de handicap. 
+                        Contactez-nous pour étudier ensemble les modalités d'accès adaptées à votre situation.
+                      </p>
+                    </div>
+
+                    {/* Contact responsable */}
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden">
+                        <Image 
+                          src="/images/equipe/Vanessa.jpeg" 
+                          alt="Vanessa Noah-Ewodo" 
+                          width={40} 
+                          height={40}
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-bold text-[#013F63] text-sm">Vanessa NOAH EWODO - Fondatrice et Directrice</p>
+                        <div className="flex items-center gap-4 mt-1">
+                          <a 
+                            href="mailto:contact@atipikrh.com" 
+                            className="text-orange-500 hover:text-orange-600 transition-colors text-sm font-medium"
+                          >
+                            contact@atipikrh.com
+                          </a>
+                          <a 
+                            href="tel:0783019955" 
+                            className="text-orange-500 hover:text-orange-600 transition-colors text-sm font-medium"
+                          >
+                            07 83 01 99 55
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
+
               </div>
             </div>
           </section>

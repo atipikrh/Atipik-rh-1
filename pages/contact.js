@@ -1,11 +1,61 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Facebook, Instagram, Linkedin } from 'lucide-react'
 
 export default function Contact() {
+  const router = useRouter()
+  const [formData, setFormData] = useState({
+    prenom: '',
+    nom: '',
+    email: '',
+    telephone: '',
+    sujet: '',
+    message: ''
+  })
+
+  useEffect(() => {
+    // Pré-remplir le formulaire en fonction des paramètres d'URL
+    if (router.isReady) {
+      const { sujet, formule, message } = router.query
+      
+      console.log('Paramètres d\'URL reçus:', { sujet, formule, message })
+      
+      if (sujet) {
+        setFormData(prev => ({ ...prev, sujet: sujet }))
+      }
+      
+      if (formule) {
+        const formuleMessage = `Formule : ${formule}\n\n`
+        setFormData(prev => ({ 
+          ...prev, 
+          message: formuleMessage + (message || '') 
+        }))
+      }
+      
+      if (message && !formule) {
+        setFormData(prev => ({ ...prev, message: message }))
+      }
+    }
+  }, [router.isReady, router.query])
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // Logique d'envoi du formulaire
+    console.log('Données du formulaire:', formData)
+  }
 
     return (
     <>
@@ -30,16 +80,16 @@ export default function Contact() {
           {/* Background animé existant */}
           <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
           <div className="absolute top-40 right-1/4 w-96 h-96 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
-          <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+          <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
           
           <div className="relative z-10 container mx-auto px-4 pt-8 pb-8">
             
             {/* Titre principal */}
             <div className="text-center mb-8 max-w-4xl mx-auto">
-                          <h1 className="text-3xl lg:text-5xl font-bold mb-8 leading-tight tracking-tight">
-              <span className="text-[#013F63]">Parlons de votre</span> <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">projet</span>
+                          <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight tracking-tight">
+              <span className="text-[#013F63]">Parlons de votre</span> <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">projet</span>
             </h1>
-              <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light">
+              <p className="text-lg text-[#013F63] leading-normal font-light max-w-2xl mx-auto">
                 Un premier échange pour clarifier vos objectifs<br className="hidden lg:block"/>
                 <span className="text-orange-500 font-medium">et découvrir les solutions qui vous correspondent.</span>
               </p>
@@ -52,50 +102,55 @@ export default function Contact() {
               <div className="space-y-8">
                 {/* Formulaire de contact */}
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                  <div className="flex items-center mb-6">
-                    <MessageCircle className="w-8 h-8 text-accent-500 mr-3" />
+                  <div className="mb-6">
                     <h2 className="text-2xl font-bold text-[#013F63]">Envoyez-nous un message</h2>
                   </div>
                   
-                  <form>
+                  <form onSubmit={handleSubmit}>
                   <div className="space-y-5">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="prenom" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="prenom" className="block text-sm font-medium text-[#013F63] mb-2">
                           Prénom *
                         </label>
                         <input
                           type="text"
                           id="prenom"
                           name="prenom"
+                          value={formData.prenom}
+                          onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors text-[#013F63]"
                           placeholder="Votre prénom"
                         />
                       </div>
                       <div>
-                        <label htmlFor="nom" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="nom" className="block text-sm font-medium text-[#013F63] mb-2">
                           Nom *
                         </label>
                         <input
                           type="text"
                           id="nom"
                           name="nom"
+                          value={formData.nom}
+                          onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors text-[#013F63]"
                           placeholder="Votre nom"
                         />
                       </div>
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-[#013F63] mb-2">
                         Email *
                       </label>
                       <input
                         type="email"
                         id="email"
                         name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors"
                         placeholder="votre.email@exemple.fr"
@@ -103,48 +158,56 @@ export default function Contact() {
                     </div>
                     
                     <div>
-                      <label htmlFor="telephone" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="telephone" className="block text-sm font-medium text-[#013F63] mb-2">
                         Téléphone
                       </label>
                       <input
                         type="tel"
                         id="telephone"
                         name="telephone"
+                        value={formData.telephone}
+                        onChange={handleInputChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors"
                         placeholder="07 83 01 99 55"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="sujet" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="sujet" className="block text-sm font-medium text-[#013F63] mb-2">
                         Sujet de votre demande *
                       </label>
                       <select
                         id="sujet"
                         name="sujet"
+                        value={formData.sujet}
+                        onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors text-[#013F63]"
                       >
                         <option value="">Sélectionnez un sujet</option>
                         <option value="bilan-competences">Bilan de compétences</option>
                         <option value="vae">VAE (Validation des acquis)</option>
                         <option value="formation-cip">Formation CIP</option>
+                        <option value="formation-fpa">Formation FPA</option>
                         <option value="formation-courte">Formation courte</option>
+                        <option value="location-salle">Location de salle</option>
                         <option value="information">Demande d'information</option>
                         <option value="autre">Autre</option>
                       </select>
                     </div>
                     
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="message" className="block text-sm font-medium text-[#013F63] mb-2">
                         Votre message *
                       </label>
                       <textarea
                         id="message"
                         name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
                         required
                         rows="5"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors resize-y"
+                        className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors resize-y"
                         placeholder="Décrivez-nous votre projet, vos objectifs ou vos questions..."
                       ></textarea>
                     </div>
@@ -162,12 +225,11 @@ export default function Contact() {
 
                 {/* Horaires */}
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                  <div className="flex items-center mb-6">
-                    <Clock className="w-8 h-8 text-accent-500 mr-3" />
+                  <div className="mb-6">
                     <h2 className="text-2xl font-bold text-[#013F63]">Horaires d'ouverture</h2>
                   </div>
                   
-                  <div className="space-y-3 text-gray-600">
+                  <div className="space-y-3 text-[#013F63]">
                     <div className="flex justify-between">
                       <span>Lundi - Vendredi</span>
                       <span className="font-medium">9h00 - 18h00</span>
@@ -189,8 +251,7 @@ export default function Contact() {
                 
                 {/* Coordonnées */}
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                  <div className="flex items-center mb-6">
-                    <MapPin className="w-8 h-8 text-accent-500 mr-3" />
+                  <div className="mb-6">
                     <h2 className="text-2xl font-bold text-[#013F63]">Nos coordonnées</h2>
                   </div>
                   
@@ -199,7 +260,7 @@ export default function Contact() {
                       <MapPin className="w-6 h-6 text-gray-400 mr-4 mt-1 flex-shrink-0" />
                       <div>
                         <p className="font-semibold text-[#013F63]">Adresse</p>
-                        <p className="text-gray-600">
+                        <p className="text-[#013F63]">
                           8 Rue du Courant<br />
                           33310 Lormont<br />
                           France
@@ -231,8 +292,7 @@ export default function Contact() {
 
                 {/* Où nous trouver */}
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                  <div className="flex items-center mb-6">
-                    <MapPin className="w-8 h-8 text-accent-500 mr-3" />
+                  <div className="mb-6">
                     <h2 className="text-2xl font-bold text-[#013F63]">Où nous trouver ?</h2>
                   </div>
                   
@@ -242,13 +302,13 @@ export default function Contact() {
                       <div className="space-y-3">
                         <div className="flex items-center">
                           <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
-                          <p className="text-gray-600">
+                          <p className="text-[#013F63]">
                             <span className="font-medium">Tram A - LA GARDETTE</span> - arrêt « Lauriers » (350 mètres)
                           </p>
                         </div>
                         <div className="flex items-center">
-                          <div className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
-                          <p className="text-gray-600">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 flex-shrink-0"></div>
+                          <p className="text-[#013F63]">
                             <span className="font-medium">Bus 66</span> - arrêt « Mendès » (350 mètres)
                           </p>
                         </div>

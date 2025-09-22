@@ -168,21 +168,21 @@ export default function QuizBilanCompetences() {
                 <>
                   {/* Header du quiz */}
                   <div className="text-center mb-12">
-                    <h1 className="text-3xl lg:text-4xl font-bold mb-4">
-                      <span className="text-[#013F63]">Avez-vous besoin d'un</span> <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">bilan de compétences</span> ?
+                    <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
+                      Avez-vous besoin d'un <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">bilan de compétences</span> ?
                     </h1>
-                    <p className="text-xl text-gray-600 mb-8">
+                    <p className="text-lg text-[#013F63] leading-relaxed font-light mb-8">
                       Découvrez en 8 questions si un bilan peut vous aider dans votre évolution professionnelle
                     </p>
                     
                     {/* Barre de progression */}
                     <div className="w-full bg-gray-200 rounded-full h-3 mb-8">
                       <div 
-                        className="bg-gradient-to-r from-blue-500 to-orange-500 h-3 rounded-full transition-all duration-500 ease-out"
-                        style={{ width: `${progress}%` }}
+                        className="h-3 rounded-full transition-all duration-500 ease-out"
+                        style={{ width: `${progress}%`, backgroundColor: '#8CACD3' }}
                       ></div>
                     </div>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-[#013F63]">
                       Question {Math.min(currentStep + 1, questions.length)} sur {questions.length}
                     </p>
                   </div>
@@ -202,7 +202,7 @@ export default function QuizBilanCompetences() {
                             className="w-full p-4 text-left rounded-xl border-2 border-gray-200 hover:border-orange-300 hover:bg-orange-50 transition-all duration-200 group"
                           >
                             <div className="flex items-center justify-between">
-                              <span className="text-gray-800 group-hover:text-orange-700 font-medium">
+                              <span className="text-[#013F63] group-hover:text-orange-700 font-medium">
                                 {option.text}
                               </span>
                               <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-500 transition-colors" />
@@ -216,7 +216,7 @@ export default function QuizBilanCompetences() {
                         <div className="mt-8 text-center">
                           <button
                             onClick={() => setCurrentStep(currentStep - 1)}
-                            className="inline-flex text-gray-600 hover:text-gray-800 transition-colors"
+                            className="inline-flex items-center gap-2 text-[#013F63] hover:text-[#012a4a] transition-colors"
                           >
                             <ArrowLeft className="w-4 h-4" />
                             Question précédente
@@ -230,18 +230,14 @@ export default function QuizBilanCompetences() {
                   {currentStep === questions.length && !showResults && (
                     <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                       <div className="text-center mb-8">
-                        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                        <h2 className="text-2xl font-bold text-[#013F63] mb-4">
-                          Quiz terminé ! 🎉
-                        </h2>
-                        <p className="text-lg text-gray-600 mb-6">
+                        <p className="text-lg text-[#013F63] leading-relaxed font-medium mb-6">
                           Nous analysons vos réponses... Laissez-nous vos coordonnées pour recevoir votre diagnostic personnalisé !
                         </p>
                       </div>
 
                       <form onSubmit={handleUserInfoSubmit} className="max-w-md mx-auto space-y-6">
                         <div>
-                          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                          <label htmlFor="name" className="block text-sm font-medium text-[#013F63] mb-2">
                             Votre prénom *
                           </label>
                           <input
@@ -256,7 +252,7 @@ export default function QuizBilanCompetences() {
                         </div>
                         
                         <div>
-                          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                          <label htmlFor="email" className="block text-sm font-medium text-[#013F63] mb-2">
                             Votre email *
                           </label>
                           <input
@@ -271,7 +267,7 @@ export default function QuizBilanCompetences() {
                         </div>
                         
                         <div>
-                          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                          <label htmlFor="phone" className="block text-sm font-medium text-[#013F63] mb-2">
                             Votre téléphone
                           </label>
                           <input
@@ -288,10 +284,10 @@ export default function QuizBilanCompetences() {
                           type="submit"
                           className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-6 rounded-xl transition-colors shadow-lg"
                         >
-                          Découvrir mon diagnostic 🎯
+                          Découvrir mon diagnostic
                         </button>
                         
-                        <p className="text-xs text-gray-500 text-center">
+                        <p className="text-xs text-[#013F63] text-center">
                           Vos données sont protégées et ne seront jamais partagées
                         </p>
                       </form>
@@ -307,39 +303,45 @@ export default function QuizBilanCompetences() {
                     
                     {/* Confirmation */}
                     <div className="mb-8">
-                      <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
-                      <h2 className="text-3xl font-bold text-[#013F63] mb-4">
-                        Quiz envoyé avec succès !
+                      <CheckCircle className="w-16 h-16 text-orange-500 mx-auto mb-4" />
+                      <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
+                        Merci {userInfo.name} !
                       </h2>
-                      <p className="text-lg text-gray-600">
-                        Merci {userInfo.name}, nous avons bien reçu vos réponses.
+                      <p className="text-lg text-[#013F63] leading-relaxed font-light">
+                        Nous avons bien reçu vos réponses.
                       </p>
                     </div>
 
                     {/* Contact */}
-                    <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-6 mb-6">
-                      <h3 className="text-xl font-bold text-[#013F63] mb-4">
-                        Nous vous recontacterons rapidement
+                    <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 mb-6">
+                      <h3 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-4 leading-tight">
+                        Nous vous recontacterons <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">rapidement</span>
                       </h3>
                       
-                      <div className="space-y-3">
-                        <div className="flex items-center justify-center gap-3">
-                          <Phone className="w-5 h-5 text-blue-600" />
-                          <a href="tel:0783019955" className="text-lg font-medium text-blue-600 hover:text-blue-800 transition-colors">
-                            07 83 01 99 55
-                          </a>
-                        </div>
+                      <div className="grid md:grid-cols-2 gap-4 mt-6">
+                        <a href="tel:0783019955" className="flex items-center justify-center gap-3 bg-white rounded-xl p-4 shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all duration-300 group">
+                          <Phone className="w-5 h-5 text-[#013F63] group-hover:text-orange-500 transition-colors" />
+                          <div className="text-center">
+                            <div className="text-sm text-gray-600">Téléphone</div>
+                            <div className="text-lg font-semibold text-[#013F63] group-hover:text-orange-500 transition-colors">
+                              07 83 01 99 55
+                            </div>
+                          </div>
+                        </a>
                         
-                        <div className="flex items-center justify-center gap-3">
-                          <Mail className="w-5 h-5 text-blue-600" />
-                          <a href="mailto:contact@atipikrh.fr" className="text-lg font-medium text-blue-600 hover:text-blue-800 transition-colors">
-                            contact@atipikrh.fr
-                          </a>
-                        </div>
+                        <a href="mailto:contact@atipikrh.fr" className="flex items-center justify-center gap-3 bg-white rounded-xl p-4 shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all duration-300 group">
+                          <Mail className="w-5 h-5 text-[#013F63] group-hover:text-orange-500 transition-colors" />
+                          <div className="text-center">
+                            <div className="text-sm text-gray-600">Email</div>
+                            <div className="text-lg font-semibold text-[#013F63] group-hover:text-orange-500 transition-colors">
+                              contact@atipikrh.fr
+                            </div>
+                          </div>
+                        </a>
                       </div>
                     </div>
 
-                    {/* Retour au quiz */}
+                    {/* Bouton retour */}
                     <button
                       onClick={() => {
                         setCurrentStep(0)
@@ -347,9 +349,10 @@ export default function QuizBilanCompetences() {
                         setUserInfo({ name: '', email: '', phone: '' })
                         setShowResults(false)
                       }}
-                      className="text-gray-600 hover:text-gray-800 font-medium"
+                      className="inline-flex items-center gap-2 text-gray-600 hover:text-[#013F63] transition-colors font-medium"
                     >
-                      ← Refaire le quiz
+                      <ArrowLeft className="w-4 h-4" />
+                      Refaire le quiz
                     </button>
                   </div>
                 </div>

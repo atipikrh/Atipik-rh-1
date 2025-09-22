@@ -4,8 +4,10 @@ import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { ArrowLeft } from 'lucide-react';
+import { useState } from 'react';
 
 export default function BrunildaRafael() {
+  const [showChildPhoto, setShowChildPhoto] = useState(false);
   return (
     <>
       <Head>
@@ -28,7 +30,7 @@ export default function BrunildaRafael() {
               
               {/* Navigation compacte */}
               <div className="mb-6">
-                <Link href="/notre-equipe" className="inline-flex items-center text-gray-600 hover:text-[#013F63] transition-colors group">
+                <Link href="/notre-equipe" className="inline-flex items-center text-[#013F63] hover:text-[#013F63] transition-colors group">
                   <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
                   Retour à l'équipe
                 </Link>
@@ -37,17 +39,42 @@ export default function BrunildaRafael() {
               {/* Header compact avec photo et nom */}
               <div className="grid lg:grid-cols-12 gap-8 items-center mb-8">
                 
-                {/* Photo plus petite */}
+                {/* Photo avec arrière-plan interchangeable */}
                 <div className="lg:col-span-4">
                   <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#013F63] to-orange-500 rounded-2xl rotate-6 group-hover:rotate-3 transition-transform duration-300"></div>
-                    <Image
-                      src="/images/equipe/brunilda.jpeg"
-                      alt="Brunilda RAFAEL"
-                      width={350}
-                      height={400}
-                      className="relative z-10 w-full h-72 object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-                    />
+                    {/* Arrière-plan - Photo opposée à celle affichée */}
+                    <div className="absolute inset-0 rounded-2xl rotate-6 group-hover:rotate-3 transition-transform duration-300 overflow-hidden">
+                      {showChildPhoto ? (
+                        <Image
+                          src="/images/equipe/brunilda.jpeg"
+                          alt="Brunilda RAFAEL"
+                          width={350}
+                          height={400}
+                          className="w-full h-full object-cover rounded-2xl"
+                        />
+                      ) : (
+                        <Image
+                          src="/images/equipe/brunilda-enfant.jpeg"
+                          alt="Brunilda RAFAEL enfant"
+                          width={350}
+                          height={400}
+                          className="w-full h-full object-cover rounded-2xl"
+                        />
+                      )}
+                    </div>
+                    {/* Photo principale cliquable */}
+                    <div 
+                      className="relative z-10 w-full h-72 cursor-pointer"
+                      onClick={() => setShowChildPhoto(!showChildPhoto)}
+                    >
+                      <Image
+                        src={showChildPhoto ? "/images/equipe/brunilda-enfant.jpeg" : "/images/equipe/brunilda.jpeg"}
+                        alt={showChildPhoto ? "Brunilda RAFAEL enfant" : "Brunilda RAFAEL"}
+                        width={350}
+                        height={400}
+                        className="w-full h-full object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -59,7 +86,7 @@ export default function BrunildaRafael() {
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] leading-tight">
                     <span className="font-brittany text-4xl lg:text-5xl">Brunilda</span> <span className="font-semibold">RAFAEL</span>
                   </h1>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-[#013F63] leading-relaxed">
                     Accompagnement à distance sur toute la France ou en présentiel à <span className="text-orange-500 font-semibold">Lormont</span>
                   </p>
                 </div>
@@ -72,14 +99,14 @@ export default function BrunildaRafael() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ton parcours professionnel
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Plus de 8 ans d'expérience en formation et pédagogie pour adultes. Spécialisée dans l'accompagnement personnalisé et l'alphabétisation, j'ai développé une expertise unique dans l'adaptation pédagogique.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        J'ai travaillé plus de 25 ans comme ingénieur agronome dans des ONG, aux côtés de producteurs d'Amérique latine et d'Afrique. Ce parcours a été extrêmement enrichissant, tant sur le plan humain que professionnel. Il y a trois ans, j'ai choisi de prendre un nouveau virage et de m'investir dans deux activités qui me tenaient à cœur. D'un côté, la formation d'adultes, qui m'a permis de mobiliser mes compétences de responsable pédagogique et de réinvestir mon expérience de formatrice. De l'autre, le développement d'une passion qui m'apporte beaucoup et que j'aime transmettre : les massages.
                       </p>
                     </div>
                   </div>
@@ -89,14 +116,14 @@ export default function BrunildaRafael() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ce que t'apportes à ATIPIK RH
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Ma passion pour la pédagogie et ma capacité à révéler le potentiel de chacun. J'apporte une approche humaine et personnalisée qui place l'empathie au cœur de l'apprentissage.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        J'apporte du dynamisme, de la rigueur organisationnelle et de la méthode ...des atouts complémentaires à ceux de notre magnifique équipe.
                       </p>
                     </div>
                   </div>
@@ -106,14 +133,14 @@ export default function BrunildaRafael() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Une anecdote sur toi
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Passionnée de pédagogie depuis toujours, j'ai commencé par enseigner bénévolement l'alphabétisation aux adultes. Cette expérience m'a révélé ma vocation : accompagner chaque personne vers sa réussite.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        J'ai toujours cru à la vie extraterrestre... et il y a quelques années, en retirant la tapisserie de ma chambre d'enfant, j'ai retrouvé un message de l'école primaire, entouré de petits bonhommes verts, destiné aux voyageurs interstellaires : "Bienvenue à la Terre, les Martiens!". Ma fascination pour l'espace est restée intacte 😊
                       </p>
                     </div>
                   </div>
@@ -123,14 +150,14 @@ export default function BrunildaRafael() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ton métier d'enfance
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Institutrice ! Je voulais aider les enfants à apprendre et grandir. Cette vocation précoce pour la transmission et l'accompagnement guide encore aujourd'hui ma mission chez Atipik RH.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Astronaute
                       </p>
                     </div>
                   </div>
@@ -140,14 +167,14 @@ export default function BrunildaRafael() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ton super-pouvoir au travail
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Adapter ma pédagogie à chaque profil pour révéler les talents cachés. Je crée un environnement d'apprentissage où chacun se sent valorisé et capable de progresser, quel que soit son point de départ.
+                      <p className="text-[#013F63] text-sm leading-relaxed">
+                        Mon super pouvoir : voir le verre à moitié plein.
                       </p>
                     </div>
                   </div>
@@ -157,14 +184,14 @@ export default function BrunildaRafael() {
                 <div className="group">
                   <div className="p-5 h-full">
                     <div className="mb-4">
-                      <h2 className="text-lg font-bold text-gray-800 mb-2">
+                      <h2 className="text-lg font-bold text-[#013F63] mb-2">
                         Ta devise
                       </h2>
                       <div className="w-8 h-0.5 bg-[#013F63] rounded-full"></div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-600 text-sm leading-relaxed font-medium italic">
-                        "Chacun a un potentiel unique à révéler."
+                      <p className="text-[#013F63] text-sm leading-relaxed font-medium italic">
+                        Faire confiance à la vie et aux opportunités qu'elle offre
                       </p>
                     </div>
                   </div>

@@ -4,7 +4,7 @@ import { Phone, Mail } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="text-white pt-8 pb-4" style={{backgroundColor: '#013F63'}}>
+    <footer className="text-white pt-8 pb-4 relative z-50" style={{backgroundColor: '#013F63'}}>
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           
@@ -18,7 +18,7 @@ export default function Footer() {
               className="h-12 w-auto mb-6 brightness-0 invert"
             />
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Votre centre de formation à Lormont depuis 15 ans. 
+              Votre centre de formation à Lormont. 
               Bilan de compétences, VAE et formations certifiantes.
             </p>
             <div className="flex items-center gap-6">
@@ -67,8 +67,8 @@ export default function Footer() {
                 <Image 
                   src="/images/certifications/qualiopi.png" 
                   alt="Certification Qualiopi - Atipik RH" 
-                  width={60} 
-                  height={60}
+                  width={80} 
+                  height={80}
                   className="object-contain"
                 />
                 <Image 
@@ -86,12 +86,36 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Nos Services</h3>
             <ul className="space-y-2 text-gray-300">
-              <li><Link href="/vae" className="hover:text-white transition-colors">VAE</Link></li>
-              <li><Link href="/bilan-de-competences" className="hover:text-white transition-colors">Bilan de compétences</Link></li>
-              <li><Link href="/formations" className="hover:text-white transition-colors">Formations</Link></li>
-              <li><Link href="/financement" className="hover:text-white transition-colors">Financement</Link></li>
-              <li><Link href="/location-espaces-bordeaux" className="hover:text-white transition-colors">Location de salle</Link></li>
-              <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+              <li>
+                <a href="/vae" className="hover:text-white transition-colors cursor-pointer">
+                  VAE
+                </a>
+              </li>
+              <li>
+                <a href="/bilan-de-competences" className="hover:text-white transition-colors cursor-pointer">
+                  Bilan de compétences
+                </a>
+              </li>
+              <li>
+                <a href="/formations" className="hover:text-white transition-colors cursor-pointer">
+                  Formations
+                </a>
+              </li>
+              <li>
+                <a href="/financement" className="hover:text-white transition-colors cursor-pointer">
+                  Financement
+                </a>
+              </li>
+              <li>
+                <a href="/location-salles-lormont" className="hover:text-white transition-colors cursor-pointer">
+                  Location de salle
+                </a>
+              </li>
+              <li>
+                <a href="/blog" className="hover:text-white transition-colors cursor-pointer">
+                  Blog
+                </a>
+              </li>
             </ul>
           </div>
           

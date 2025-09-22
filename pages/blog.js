@@ -180,7 +180,7 @@ export default function Blog() {
                   className="absolute top-1/2 -translate-y-1/2 -right-12 lg:-right-16"
                 />
               </div>
-              <p className="text-xl text-gray-700 font-medium">
+              <p className="text-xl text-[#013F63] font-medium">
                 Conseils, actualités et témoignages pour réussir votre parcours professionnel
               </p>
             </div>

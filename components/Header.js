@@ -32,9 +32,9 @@ export default function Header({ isFixed = false, isHomePage = false }) {
   }, [isHomePage])
 
   const headerClasses = isFixed 
-    ? "fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50 transition-all duration-500"
+    ? "fixed top-0 left-0 right-0 z-[9998] bg-white/95 backdrop-blur-md border-b border-gray-200/50 transition-all duration-500"
     : isHomePage 
-    ? "fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50 transform -translate-y-full opacity-0 transition-all duration-500"
+    ? "fixed top-0 left-0 right-0 z-[9998] bg-white/95 backdrop-blur-md border-b border-gray-200/50 transform -translate-y-full opacity-0 transition-all duration-500"
     : "bg-stone-50/80 backdrop-blur-sm"
 
   return (
@@ -42,16 +42,29 @@ export default function Header({ isFixed = false, isHomePage = false }) {
       <div className="max-w-7xl mx-auto px-6">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image 
-              src="/images/logos/atipik-logo.png" 
-              alt="Atipik RH"
-              width={150}
-              height={50}
-              className="h-10 w-auto"
-              priority
-            />
-          </Link>
+          {isHomePage ? (
+            <div className="flex items-center">
+              <Image 
+                src="/images/logos/atipik-logo.png" 
+                alt="Atipik RH"
+                width={150}
+                height={50}
+                className="h-10 w-auto"
+                priority
+              />
+            </div>
+          ) : (
+            <Link href="/" className="flex items-center">
+              <Image 
+                src="/images/logos/atipik-logo.png" 
+                alt="Atipik RH"
+                width={150}
+                height={50}
+                className="h-10 w-auto"
+                priority
+              />
+            </Link>
+          )}
 
           {/* Navigation centrale */}
           <div className="hidden lg:flex items-center space-x-8 mt-1">
@@ -76,7 +89,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
               </Link>
               
               {/* Menu déroulant */}
-              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 ${
+              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-[9999] ${
                 isFormationsOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
               }`}>
                 <div className="py-2">
@@ -95,7 +108,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                     <div className="text-xs text-blue-400">Formateur Professionnel d'Adultes</div>
                   </Link>
                   <Link
-                    href="/formations/courtes-professionnalisantes"
+                    href="/formations#formations-professionnalisantes"
                     className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
                   >
                     <div className="font-medium">Formations courtes professionnalisantes</div>
@@ -119,7 +132,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
               </button>
               
               {/* Menu déroulant */}
-              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 ${
+              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-[9999] ${
                 isQuiSommesNousOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
               }`}>
                 <div className="py-2">
