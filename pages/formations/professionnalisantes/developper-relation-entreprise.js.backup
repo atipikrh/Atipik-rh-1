@@ -26,7 +26,7 @@ import {
   Settings
 } from 'lucide-react'
 
-export default function RenforcerPratiqueRecrutementInclusif() {
+export default function DevelopperRelationEntreprise() {
   const [openSections, setOpenSections] = useState({})
   const [cardsVisible, setCardsVisible] = useState(false)
   const programmeRef = useRef(null)
@@ -64,58 +64,57 @@ export default function RenforcerPratiqueRecrutementInclusif() {
       }
     }
   }, [cardsVisible])
-
   const formation = {
-    titre: "Renforcer sa pratique du recrutement inclusif",
-    sousTitre: "De la diversité à la performance RH",
-    public: "Professionnels impliqués dans le recrutement ou la gestion des ressources humaines, sans prérequis spécifique. Formation particulièrement adaptée aux chargé·es de mission emploi, conseiller·ères en insertion professionnelle, managers, ou toute personne souhaitant rendre ses pratiques de recrutement plus inclusives.",
+    titre: "Développer la relation entreprise",
+    sousTitre: "De l'accompagnement à la relation entreprise",
+    public: "Professionnels sans expérience en relation entreprises (CIP débutants, travailleurs sociaux…)",
     objectifs: [
-      "Sensibiliser aux enjeux d'inclusion et de non-discrimination",
-      "Identifier les leviers d'un recrutement inclusif",
-      "Adapter ses outils et postures pour élargir la diversité des recrutements"
+      "Comprendre le fonctionnement des entreprises",
+      "Identifier les besoins du tissu économique local", 
+      "Construire une posture orientée coopération",
+      "Initier et valoriser une relation entreprise efficace"
     ],
     programme: [
       {
-        jour: "Jour 1 : Les bases de l'inclusion RH",
+        jour: "Jour 1 : Comprendre l'entreprise",
         contenu: [
-          "Définitions et enjeux de la diversité",
-          "Identification des biais cognitifs",
-          "Étude de cas et auto-analyse des pratiques"
+          "Cartographie des dynamiques économiques locales",
+          "Analyse des représentations de l'entreprise", 
+          "Décodage des attentes employeurs"
         ]
       },
       {
-        jour: "Jour 2 : Recruter sans discriminer",
+        jour: "Jour 2 : Construire la relation",
         contenu: [
-          "Recruter sur les compétences",
-          "Simulations d'entretiens",
-          "Rédaction d'offres inclusives",
-          "Élaboration d'un plan d'action individuel"
+          "Outils et méthodes de prospection",
+          "Techniques de négociation adaptées", 
+          "Construction d'un plan d'action personnalisé"
         ]
       },
       {
-        jour: "Jour 3 : Mise en situation et ajustements d'outils",
+        jour: "Jour 3 : Coopérer durablement",
         contenu: [
-          "Retours d'expérience et partages de pratiques",
-          "Diagnostic collectif d'un processus de recrutement",
-          "Évaluation et engagements"
+          "Enjeux de la relation tripartite",
+          "Techniques de médiation",
+          "Posture de coopération dans la durée"
         ]
       }
     ],
     details: [
       "Durée : 3 jours (21h)",
       "Prérequis : Aucun",
-      "Public : 12 personnes maximum",
-      "Méthodes : Alternance théorie/pratique, jeux de rôles, études de cas, auto-analyse"
+      "Public : 10 personnes maximum",
+      "Méthodes : Alternance théorie/pratique, jeux de rôles, études de cas"
     ]
   }
 
   return (
     <>
       <Head>
-        <title>Formation Renforcer sa pratique du recrutement inclusif | Atipik RH - Lormont Bordeaux</title>
-        <meta name="description" content="Formation professionnalisante pour renforcer sa pratique du recrutement inclusif : De la diversité à la performance RH. 3 jours, Bordeaux - Lormont." />
-        <meta name="keywords" content="formation recrutement inclusif, diversité, non-discrimination, RH, inclusion, recrutement, Bordeaux, Lormont, Atipik RH" />
-        <link rel="canonical" href="https://atipikrh.fr/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" />
+        <title>Formation Développer la relation entreprise | Atipik RH - Lormont Bordeaux</title>
+        <meta name="description" content="Formation professionnalisante pour développer la relation entreprise : De l'accompagnement à la relation entreprise. 3 jours, 1150€. Bordeaux - Lormont." />
+        <meta name="keywords" content="formation relation entreprise, accompagnement, CIP, insertion professionnelle, Bordeaux, Lormont, Atipik RH" />
+        <link rel="canonical" href="https://atipikrh.fr/formations/professionnalisantes/developper-relation-entreprise" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -151,7 +150,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight tracking-tight">
-                  Renforcer sa pratique du <span className="font-brittany text-3xl lg:text-5xl text-orange-500">recrutement inclusif</span>
+                  Développer la <span className="font-brittany text-3xl lg:text-5xl text-orange-500">relation entreprise</span>
                 </h1>
                 <p className="text-lg lg:text-xl text-[#013F63] mb-4 font-medium">
                   {formation.sousTitre}
@@ -166,12 +165,12 @@ export default function RenforcerPratiqueRecrutementInclusif() {
               <div className="max-w-6xl mx-auto">
                 
                 {/* Section Contexte - Style carte */}
-                <section className="py-4 my-4 mb-12">
+                <section className="py-2 my-2 mb-12">
                   <div className="max-w-4xl mx-auto">
                     <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#013F63]">
                       <div className="space-y-4 text-[#013F63] italic text-lg leading-relaxed text-center">
                         <p>
-                          Dans un contexte où la diversité et l'inclusion deviennent des enjeux majeurs pour les entreprises, renforcer sa pratique du recrutement inclusif permet de créer des équipes plus performantes et représentatives. Cette formation vous donne les outils pour identifier et lever les biais inconscients dans vos processus de recrutement.
+                          Dans un contexte où la relation entreprise devient un enjeu stratégique pour l'insertion professionnelle, développer ses compétences en relation entreprise permet de créer des partenariats durables et efficaces. Cette formation vous donne les clés pour comprendre les attentes des employeurs et construire une collaboration mutuellement bénéfique.
                         </p>
                       </div>
                       
@@ -182,7 +181,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                       
                       <div className="text-orange-500 font-bold text-xl leading-relaxed text-center">
                         <p>
-                          Un recrutement inclusif, c'est la clé du succès pour des équipes diversifiées !
+                          Une relation entreprise solide, c'est la clé du succès pour l'insertion professionnelle !
                         </p>
                       </div>
                     </div>
@@ -214,7 +213,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         <Target className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Niveau de sortie :</p>
-                          <p className="text-blue-100 text-xs">Compétences en recrutement inclusif et non-discriminant</p>
+                          <p className="text-blue-100 text-xs">Compétences opérationnelles en relation entreprise</p>
                         </div>
                       </div>
 
@@ -258,9 +257,9 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                           <h3 className="text-base font-bold text-[#013F63]">OBJECTIFS PÉDAGOGIQUES</h3>
                         </div>
                         {openSections.objectif ? (
-                          <ChevronUp className="w-5 h-5 text-[#013F63]" />
+                          <ChevronUp className="w-5 h-5 text-gray-600" />
                         ) : (
-                          <ChevronDown className="w-5 h-5 text-[#013F63]" />
+                          <ChevronDown className="w-5 h-5 text-gray-600" />
                         )}
                       </button>
                       {openSections.objectif && (
@@ -287,9 +286,9 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                           <h3 className="text-base font-bold text-[#013F63]">PUBLIC VISÉ</h3>
                         </div>
                         {openSections.public ? (
-                          <ChevronUp className="w-5 h-5 text-[#013F63]" />
+                          <ChevronUp className="w-5 h-5 text-gray-600" />
                         ) : (
-                          <ChevronDown className="w-5 h-5 text-[#013F63]" />
+                          <ChevronDown className="w-5 h-5 text-gray-600" />
                         )}
                       </button>
                       {openSections.public && (
@@ -309,9 +308,9 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                           <h3 className="text-base font-bold text-[#013F63]">PRÉREQUIS</h3>
                         </div>
                         {openSections.prerequis ? (
-                          <ChevronUp className="w-5 h-5 text-[#013F63]" />
+                          <ChevronUp className="w-5 h-5 text-gray-600" />
                         ) : (
-                          <ChevronDown className="w-5 h-5 text-[#013F63]" />
+                          <ChevronDown className="w-5 h-5 text-gray-600" />
                         )}
                       </button>
                       {openSections.prerequis && (
@@ -331,9 +330,9 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                           <h3 className="text-base font-bold text-[#013F63]">MODALITÉS D'ADMISSION</h3>
                         </div>
                         {openSections.modalites ? (
-                          <ChevronUp className="w-5 h-5 text-[#013F63]" />
+                          <ChevronUp className="w-5 h-5 text-gray-600" />
                         ) : (
-                          <ChevronDown className="w-5 h-5 text-[#013F63]" />
+                          <ChevronDown className="w-5 h-5 text-gray-600" />
                         )}
                       </button>
                       {openSections.modalites && (
@@ -365,7 +364,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                     Programme <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">détaillé</span>
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed max-w-3xl mx-auto">
-                    Un parcours complet sur 3 jours pour maîtriser le recrutement inclusif
+                    Un parcours complet sur 3 jours pour maîtriser la relation entreprise
                   </p>
                 </div>
 
@@ -404,7 +403,6 @@ export default function RenforcerPratiqueRecrutementInclusif() {
               </div>
             </div>
           </section>
-
 
           {/* Solutions de financement */}
           <section className="py-16">
@@ -454,8 +452,8 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                   </div>
                 </div>
                   
-                {/* Autofinancement */}
-                <div className="mt-8">
+                  {/* Autofinancement */}
+                  <div className="mt-8">
                     <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
                       <h4 className="text-2xl font-bold text-[#013F63] mb-6">
                         <span className="text-orange-500 font-brittany text-3xl">Investissez</span> en vous-même
@@ -466,7 +464,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                     </div>
                   </div>
 
-                <div className="text-center mt-8">
+                  <div className="text-center mt-8">
                     <Link href="/financement" className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
                       En savoir plus
                       <ArrowRight className="w-4 h-4" />
@@ -474,6 +472,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                   </div>
                 </div>
               </div>
+            </div>
           </section>
 
           {/* Prochaines sessions */}
@@ -486,7 +485,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                     Prochaines <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">sessions</span>
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed max-w-2xl mx-auto">
-                    Réservez dès maintenant votre place pour cette formation spécialisée
+                    Réservez dès maintenant votre place pour cette formation très demandée
                   </p>
                 </div>
 
@@ -504,22 +503,22 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">9 au 10 octobre 2025</span>
+                        <span className="text-[#013F63] font-medium">7 au 8 octobre 2025</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">16 octobre 2025</span>
+                        <span className="text-[#013F63] font-medium">24 octobre 2025</span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Session Mars 2026 */}
+                  {/* Session Janvier 2026 */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 text-center">
                     <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Session de Printemps</h3>
-                      <p className="text-orange-600">Mars 2026</p>
+                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Session d'Hiver</h3>
+                      <p className="text-orange-600">Janvier 2026</p>
                     </div>
                     
                     <div className="mb-6">
@@ -527,13 +526,13 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">12 au 13 mars 2026</span>
+                        <span className="text-[#013F63] font-medium">12 au 13 janvier 2026</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">19 mars 2026</span>
+                        <span className="text-[#013F63] font-medium">23 janvier 2026</span>
                       </div>
                     </div>
                   </div>

@@ -87,34 +87,34 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Nos Services</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <a href="/vae" className="hover:text-white transition-colors cursor-pointer">
+                <Link href="/vae" className="hover:text-white transition-colors cursor-pointer">
                   VAE
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/bilan-de-competences" className="hover:text-white transition-colors cursor-pointer">
+                <Link href="/bilan-de-competences" className="hover:text-white transition-colors cursor-pointer">
                   Bilan de compétences
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/formations" className="hover:text-white transition-colors cursor-pointer">
+                <Link href="/formations" className="hover:text-white transition-colors cursor-pointer">
                   Formations
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/financement" className="hover:text-white transition-colors cursor-pointer">
+                <Link href="/financement" className="hover:text-white transition-colors cursor-pointer">
                   Financement
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/location-salles-lormont" className="hover:text-white transition-colors cursor-pointer">
+                <Link href="/location-salles-lormont" className="hover:text-white transition-colors cursor-pointer">
                   Location de salle
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/blog" className="hover:text-white transition-colors cursor-pointer">
+                <Link href="/blog" className="hover:text-white transition-colors cursor-pointer">
                   Blog
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

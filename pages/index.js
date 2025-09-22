@@ -135,12 +135,12 @@ export default function HomePage() {
                               <Clock className="w-6 h-6 text-orange-500" />
                               <span className="text-4xl font-brittany text-orange-500">3 min</span>
                             </div>
-                            <a
+                            <Link
                               href="/bilan-de-competences/quiz"
                               className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg"
                             >
                               Commencer le quiz
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       ) : slide.id === 2 ? (

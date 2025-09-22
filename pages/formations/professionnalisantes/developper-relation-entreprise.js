@@ -452,8 +452,8 @@ export default function DevelopperRelationEntreprise() {
                   </div>
                 </div>
                   
-                  {/* Autofinancement */}
-                  <div className="mt-8">
+                {/* Autofinancement */}
+                <div className="mt-8">
                     <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
                       <h4 className="text-2xl font-bold text-[#013F63] mb-6">
                         <span className="text-orange-500 font-brittany text-3xl">Investissez</span> en vous-même
@@ -464,7 +464,7 @@ export default function DevelopperRelationEntreprise() {
                     </div>
                   </div>
 
-                  <div className="text-center mt-8">
+                <div className="text-center mt-8">
                     <Link href="/financement" className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
                       En savoir plus
                       <ArrowRight className="w-4 h-4" />
@@ -472,7 +472,6 @@ export default function DevelopperRelationEntreprise() {
                   </div>
                 </div>
               </div>
-            </div>
           </section>
 
           {/* Prochaines sessions */}
