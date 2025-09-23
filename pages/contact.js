@@ -51,10 +51,105 @@ export default function Contact() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Logique d'envoi du formulaire
-    console.log('Données du formulaire:', formData)
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (response.ok && data.success) {
+        setIsSubmitted(true)
+      } else {
+        throw new Error(data.message || 'Erreur lors de l\'envoi du message')
+      }
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi:', error)
+      alert(`Erreur lors de l'envoi du message: ${error.message}. Veuillez réessayer ou nous contacter directement.`)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  // Page de confirmation après envoi
+  if (isSubmitted) {
+    return (
+      <>
+        <Head>
+          <title>Message envoyé - Contact Atipik RH</title>
+          <meta name="description" content="Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais." />
+        </Head>
+
+        <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
+          <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+          <div className="absolute top-40 right-1/4 w-96 h-96 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+          
+          <div className="relative z-10">
+            <Header />
+            
+            <section className="py-16 lg:py-24">
+              <div className="container mx-auto px-4">
+                <div className="max-w-2xl mx-auto text-center">
+                  <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12 border border-gray-100">
+                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    
+                    <h1 className="text-3xl font-bold text-[#013F63] mb-4">
+                      Message envoyé !
+                    </h1>
+                    
+                    <p className="text-[#013F63] mb-6 leading-relaxed">
+                      Merci pour votre message. Nous avons bien reçu votre demande 
+                      et nous vous répondrons dans les plus brefs délais (généralement sous 24h ouvrées).
+                    </p>
+                    
+                    <div className="bg-blue-50 rounded-lg p-6 mb-6">
+                      <h3 className="font-semibold text-[#013F63] mb-2">Prochaines étapes :</h3>
+                      <ul className="text-sm text-[#013F63] space-y-1">
+                        <li>• Analyse de votre demande par notre équipe</li>
+                        <li>• Réponse personnalisée sous 24h ouvrées</li>
+                        <li>• Si urgence : appelez le 07 83 01 99 55</li>
+                      </ul>
+                    </div>
+                    
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Link
+                        href="/"
+                        className="inline-flex items-center justify-center px-6 py-3 bg-[#013F63] text-white font-semibold rounded-lg hover:bg-[#012a4a] transition-colors duration-300"
+                      >
+                        Retour à l'accueil
+                      </Link>
+                      <a
+                        href="tel:0783019955"
+                        className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#013F63] text-[#013F63] font-semibold rounded-lg hover:bg-[#013F63] hover:text-white transition-colors duration-300"
+                      >
+                        Nous appeler
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <Footer />
+          </div>
+        </div>
+      </>
+    )
   }
 
     return (
@@ -215,10 +310,23 @@ export default function Contact() {
                   
                   <button
                     type="submit"
-                    className="w-full bg-accent-500 hover:bg-accent-600 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 hover:scale-105 shadow-lg flex items-center justify-center mt-6"
+                    disabled={isSubmitting}
+                    className="w-full bg-accent-500 hover:bg-accent-600 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 hover:scale-105 shadow-lg flex items-center justify-center mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <Send className="w-5 h-5 mr-2" />
-                    Envoyer le message
+                    {isSubmitting ? (
+                      <>
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Envoi en cours...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5 mr-2" />
+                        Envoyer le message
+                      </>
+                    )}
                   </button>
                 </form>
                 </div>
