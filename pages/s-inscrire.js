@@ -103,7 +103,10 @@ export default function SInscrire() {
       }
     } catch (error) {
       console.error('Erreur lors de l\'envoi:', error)
-      alert('Erreur lors de l\'inscription. Veuillez réessayer ou nous contacter directement.')
+      console.error('Données envoyées:', dataToSend)
+      console.error('Response status:', response?.status)
+      console.error('Response data:', data)
+      alert(`Erreur lors de l'inscription: ${error.message}. Veuillez réessayer ou nous contacter directement.`)
     } finally {
       setIsSubmitting(false)
     }

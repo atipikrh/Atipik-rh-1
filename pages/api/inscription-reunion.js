@@ -13,8 +13,8 @@ export default async function handler(req, res) {
   try {
     // Configuration Brevo depuis les variables d'environnement
     const BREVO_API_KEY = process.env.BREVO_API_KEY
-    const BREVO_SENDER_EMAIL = process.env.BREVO_SENDER_EMAIL || 'contact@atipikrh.com'
-    const BREVO_RECIPIENT_EMAIL = process.env.BREVO_RECIPIENT_EMAIL || 'contact@atipikrh.com'
+    const BREVO_SENDER_EMAIL = process.env.BREVO_SENDER_EMAIL || 'contact@atipikrh.fr'
+    const BREVO_RECIPIENT_EMAIL = process.env.BREVO_RECIPIENT_EMAIL || 'contact@atipikrh.fr'
 
     if (!BREVO_API_KEY) {
       console.error('BREVO_API_KEY n\'est pas configurée')
@@ -167,10 +167,14 @@ L'équipe Atipik RH`
 
   } catch (error) {
     console.error('Erreur lors de l\'envoi de l\'email:', error)
+    console.error('Stack trace:', error.stack)
+    console.error('BREVO_API_KEY présente:', !!process.env.BREVO_API_KEY)
+    console.error('Données reçues:', { formation, modalite, nom, prenom, email, telephone, dateReunion })
     res.status(500).json({ 
       message: 'Erreur lors de l\'enregistrement de l\'inscription',
       success: false,
-      details: error.message
+      details: error.message,
+      error: error.toString()
     })
   }
 }
