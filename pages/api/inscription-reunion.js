@@ -169,6 +169,7 @@ L'équipe Atipik RH`
     console.error('Erreur lors de l\'envoi de l\'email:', error)
     console.error('Stack trace:', error.stack)
     console.error('BREVO_API_KEY présente:', !!process.env.BREVO_API_KEY)
+    console.error('IP du serveur:', req.headers['x-forwarded-for'] || req.connection.remoteAddress)
     console.error('Données reçues:', { formation, modalite, nom, prenom, email, telephone, dateReunion })
     res.status(500).json({ 
       message: 'Erreur lors de l\'enregistrement de l\'inscription',
