@@ -9,17 +9,6 @@ const nextConfig = {
     forceSwcTransforms: false,
   },
   
-  // Redirections pour les anciens liens WordPress
-  async redirects() {
-    return [
-      {
-        source: '/wp-content/uploads/2025/09/Plaquette-location-de-salles.pdf',
-        destination: '/location-salles-lormont',
-        permanent: true, // Code 301 (redirection permanente)
-      },
-    ]
-  },
-  
   // Headers basiques
   async headers() {
     return [
@@ -36,4 +25,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig 
