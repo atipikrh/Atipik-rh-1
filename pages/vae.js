@@ -270,7 +270,7 @@ export default function VAE() {
     },
     {
       id: 2,
-      titre: "Exploration du parcours des expériences du candidat",
+      titre: "Élaboration du dossier de faisabilité",
       sousTitre: "Identifier vos compétences acquises",
       duree: "Phase d'analyse",
       objectifs: [
@@ -664,8 +664,11 @@ export default function VAE() {
                         className={`w-full bg-gradient-to-r ${gradientFrom} ${gradientTo} text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity`}
                       >
                         <div className="flex items-center gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                            <span className="text-white font-bold text-sm">{etape.id}</span>
+                          </div>
                           <div className="text-left">
-                            <h3 className="text-base lg:text-lg font-bold">{etape.titre}</h3>
+                            <h3 className="text-base lg:text-lg font-bold">Étape {etape.id} - {etape.titre}</h3>
                             <p className="text-white/90 text-sm">{etape.sousTitre}</p>
                           </div>
                         </div>

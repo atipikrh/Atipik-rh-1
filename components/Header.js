@@ -141,7 +141,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                     className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors"
                   >
                     <div className="font-medium">Notre histoire</div>
-                    <div className="text-xs text-blue-400">15 ans d'expertise et de passion</div>
+                    <div className="text-xs text-blue-400">Depuis 2019, une aventure humaine</div>
                   </Link>
                   <Link 
                     href="/notre-equipe" 
