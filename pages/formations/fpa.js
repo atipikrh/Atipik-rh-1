@@ -719,7 +719,7 @@ export default function FormationFPA() {
                       <span className="text-orange-500 font-brittany text-3xl">Investissez</span> en vous-même
                     </h4>
                     <p className="text-base text-[#013F63] font-medium leading-relaxed">
-                      Paiement en <span className="text-6xl font-light text-orange-500 font-brittany leading-none mx-4">x3</span> sans frais grâce à notre partenaire financier.
+                      Paiement en <span className="text-4xl font-light text-orange-500 font-brittany leading-none mx-2">x3</span>, <span className="text-4xl font-light text-orange-500 font-brittany leading-none mx-2">x6</span> ou <span className="text-4xl font-light text-orange-500 font-brittany leading-none mx-2">x9</span> sans frais grâce à notre partenaire financier.
                     </p>
                   </div>
                 </div>
