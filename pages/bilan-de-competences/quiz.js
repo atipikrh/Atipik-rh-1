@@ -329,12 +329,12 @@ export default function QuizBilanCompetences() {
                           </div>
                         </a>
                         
-                        <a href="mailto:contact@atipikrh.fr" className="flex items-center justify-center gap-3 bg-white rounded-xl p-4 shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all duration-300 group">
+                        <a href="mailto:contact@atipikrh.com" className="flex items-center justify-center gap-3 bg-white rounded-xl p-4 shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all duration-300 group">
                           <Mail className="w-5 h-5 text-[#013F63] group-hover:text-orange-500 transition-colors" />
                           <div className="text-center">
                             <div className="text-sm text-gray-600">Email</div>
                             <div className="text-lg font-semibold text-[#013F63] group-hover:text-orange-500 transition-colors">
-                              contact@atipikrh.fr
+                              contact@atipikrh.com
                             </div>
                           </div>
                         </a>

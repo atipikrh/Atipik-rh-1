@@ -1236,7 +1236,7 @@ export default function BlogArticle() {
         <p>Contactez notre équipe pour obtenir un accompagnement personnalisé dans votre recherche de financement :</p>
 
         <ul>
-          <li><strong>Par e-mail :</strong> <a href="mailto:contact@atipikrh.fr">contact@atipikrh.fr</a></li>
+          <li><strong>Par e-mail :</strong> <a href="mailto:contact@atipikrh.com">contact@atipikrh.com</a></li>
           <li><strong>Par téléphone :</strong> <a href="tel:0783019955">07 83 01 99 55</a></li>
           <li><strong>À notre bureau :</strong> 8 Rue du Courant, 33310 Lormont</li>
           <li><strong>Via notre <a href="/contact">formulaire de contact en ligne</a></strong></li>

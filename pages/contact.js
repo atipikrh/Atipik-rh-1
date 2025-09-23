@@ -282,8 +282,8 @@ export default function Contact() {
                       <Mail className="w-6 h-6 text-gray-400 mr-4 flex-shrink-0" />
                       <div>
                         <p className="font-semibold text-[#013F63]">Email</p>
-                        <a href="mailto:contact@atipikrh.fr" className="text-accent-500 hover:text-accent-600 transition-colors">
-                          contact@atipikrh.fr
+                        <a href="mailto:contact@atipikrh.com" className="text-accent-500 hover:text-accent-600 transition-colors">
+                          contact@atipikrh.com
                         </a>
                       </div>
                     </div>

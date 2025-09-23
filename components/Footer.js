@@ -131,8 +131,8 @@ export default function Footer() {
               </p>
               <p className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                <a href="mailto:contact@atipikrh.fr" className="hover:text-white transition-colors">
-                  contact@atipikrh.fr
+                <a href="mailto:contact@atipikrh.com" className="hover:text-white transition-colors">
+                  contact@atipikrh.com
                 </a>
               </p>
               <p>8 Rue du Courant, 33310 Lormont</p>

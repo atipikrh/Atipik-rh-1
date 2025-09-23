@@ -48,7 +48,7 @@ export default function Layout({ children, title, description, canonical }) {
                 </div>
                 <div className="flex items-center gap-2 mb-4">
                   <Mail className="w-4 h-4" />
-                  <span className="text-sm">contact@atipikrh.fr</span>
+                  <span className="text-sm">contact@atipikrh.com</span>
                 </div>
                 <div className="flex space-x-4">
                   <a 
