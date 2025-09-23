@@ -13,8 +13,8 @@ export default async function handler(req, res) {
   try {
     // Configuration Brevo depuis les variables d'environnement
     const BREVO_API_KEY = process.env.BREVO_API_KEY
-    const BREVO_SENDER_EMAIL = process.env.BREVO_SENDER_EMAIL || 'contact@atipikrh.fr'
-    const BREVO_RECIPIENT_EMAIL = process.env.BREVO_RECIPIENT_EMAIL || 'contact@atipikrh.fr'
+    const BREVO_SENDER_EMAIL = process.env.BREVO_SENDER_EMAIL || 'contact@atipikrh.com'
+    const BREVO_RECIPIENT_EMAIL = process.env.BREVO_RECIPIENT_EMAIL || 'contact@atipikrh.com'
 
     if (!BREVO_API_KEY) {
       console.error('BREVO_API_KEY n\'est pas configurée')
