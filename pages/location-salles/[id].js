@@ -111,9 +111,7 @@ export default function SalleDetail() {
       ],
       amenagements: [
         'Configuration ronde (10 personnes)',
-        'Espace cocooning',
-        'Coin café privé',
-        'Setup entretien'
+        'Espace cocooning'
       ],
     },
     'bureau-individuel-1': {
@@ -133,7 +131,6 @@ export default function SalleDetail() {
         'Accès imprimante',
         'Thé et café',
         'Parking privé gratuit',
-        'Éclairage optimal',
         'Prises électriques multiples'
       ],
       amenagements: [
@@ -159,7 +156,6 @@ export default function SalleDetail() {
         'Accès imprimante',
         'Thé et café',
         'Parking privé gratuit',
-        'Éclairage optimal',
         'Prises électriques multiples'
       ],
       amenagements: [

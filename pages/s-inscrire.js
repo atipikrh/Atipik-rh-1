@@ -21,11 +21,11 @@ export default function SInscrire() {
 
   // Prochaines dates de réunions par formation
   const datesFPA = [
-    { date: '2024-09-25', jour: 'Jeudi 25 Septembre 2024', heure: '12h30 - 14h30', modalite: 'distanciel' },
-    { date: '2024-10-11', jour: 'Samedi 11 Octobre 2024', heure: '10h30 - 12h30', modalite: 'présentiel' },
-    { date: '2024-10-23', jour: 'Jeudi 23 Octobre 2024', heure: '12h30 - 14h30', modalite: 'distanciel' },
-    { date: '2024-11-06', jour: 'Jeudi 6 Novembre 2024', heure: '12h30 - 14h30', modalite: 'distanciel' },
-    { date: '2024-11-22', jour: 'Samedi 22 Novembre 2024', heure: '10h30 - 12h30', modalite: 'présentiel' }
+    { date: '2025-09-25', jour: 'Jeudi 25 Septembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2025-10-11', jour: 'Samedi 11 Octobre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2025-10-23', jour: 'Jeudi 23 Octobre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2025-11-06', jour: 'Jeudi 6 Novembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2025-11-22', jour: 'Samedi 22 Novembre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' }
   ]
 
   const datesCIP = [

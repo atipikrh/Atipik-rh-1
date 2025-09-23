@@ -259,7 +259,7 @@ export default function VAE() {
         "Présenter la procédure de validation de la certification visée",
         "Faire une présentation commentée du référentiel professionnel de la certification visée",
         "Contractualiser le travail coopératif avec le candidat dans une convention ou contrat d'accompagnement",
-        "Concevoir un rétroplanning jusqu'à l'envoi du dossier finalisé"
+        "Concevoir un rétroplanning jusqu'à l'envoi du dossier finalisé aux certificateurs"
       ],
       contenu: [
         "Analyse des motivations et du projet professionnel",
@@ -1081,7 +1081,7 @@ export default function VAE() {
               
               <div className="text-center mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
-                  Données <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Atipik RH</span>
+                  Données <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">ATIPIK RH</span>
                 </h2>
                 <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
                   Les chiffres de nos accompagnements VAE témoignent de notre engagement qualité

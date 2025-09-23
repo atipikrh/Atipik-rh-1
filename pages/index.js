@@ -180,16 +180,16 @@ export default function HomePage() {
                           <h3 className="text-lg font-bold mb-3 text-orange-500">Prochaines dates FPA</h3>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-[#013F63]">Mardi 01/10</span>
-                              <span className="font-medium text-[#013F63]">14h00</span>
+                              <span className="text-[#013F63]">Jeudi 25/09</span>
+                              <span className="font-medium text-[#013F63]">12h30</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-[#013F63]">Vendredi 18/10</span>
-                              <span className="font-medium text-[#013F63]">09h30</span>
+                              <span className="text-[#013F63]">Sam 11/10</span>
+                              <span className="font-medium text-[#013F63]">10h30</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-[#013F63]">Mardi 29/10</span>
-                              <span className="font-medium text-[#013F63]">14h00</span>
+                              <span className="text-[#013F63]">Jeudi 23/10</span>
+                              <span className="font-medium text-[#013F63]">12h30</span>
                             </div>
                           </div>
                           <div className="mt-4 text-xs text-[#013F63]">
