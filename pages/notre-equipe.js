@@ -406,14 +406,14 @@ export default function NotreEquipe() {
 
                   {/* Martine */}
                   <div className="text-center">
-                    <Link href="/equipe/martine-beaudon" className="inline-block mb-4">
+                    <Link href="/equipe/martine-baudon" className="inline-block mb-4">
                       <div className="w-40 h-40 mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
                             <Image
                               src="/images/equipe/Martine.jpeg"
-                              alt="Martine BEAUDON"
+                              alt="Martine BAUDON"
                               width={160}
                               height={160}
                               className="w-full h-full rounded-full object-cover cursor-pointer"
@@ -427,7 +427,7 @@ export default function NotreEquipe() {
                       </div>
                     </Link>
                     <h3 className="text-base text-[#013F63] mb-2">
-                      <span className="text-base">Martine</span> <span className="font-semibold">BEAUDON</span>
+                      <span className="text-base">Martine</span> <span className="font-semibold">BAUDON</span>
                     </h3>
                   </div>
                 </div>

@@ -11,10 +11,10 @@ export default function MartineBeaudon() {
   return (
     <>
       <Head>
-        <title>Martine BEAUDON | Formatrice - Atipik RH</title>
-        <meta name="description" content="Découvrez le profil de Martine BEAUDON, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
-        <meta name="keywords" content="Martine BEAUDON, formatrice Atipik RH, formation professionnelle, Lormont" />
-        <link rel="canonical" href="https://atipikrh.fr/equipe/martine-beaudon" />
+        <title>Martine BAUDON | Formatrice - Atipik RH</title>
+        <meta name="description" content="Découvrez le profil de Martine BAUDON, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
+        <meta name="keywords" content="Martine BAUDON, formatrice Atipik RH, formation professionnelle, Lormont" />
+        <link rel="canonical" href="https://atipikrh.fr/equipe/martine-baudon" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
@@ -47,7 +47,7 @@ export default function MartineBeaudon() {
                       {showChildPhoto ? (
                         <Image
                           src="/images/equipe/Martine.jpeg"
-                          alt="Martine BEAUDON"
+                          alt="Martine BAUDON"
                           width={350}
                           height={400}
                           className="w-full h-full object-cover rounded-2xl"
@@ -55,7 +55,7 @@ export default function MartineBeaudon() {
                       ) : (
                         <Image
                           src="/images/equipe/martine-enfant.jpeg"
-                          alt="Martine BEAUDON enfant"
+                          alt="Martine BAUDON enfant"
                           width={350}
                           height={400}
                           className="w-full h-full object-cover rounded-2xl"
@@ -69,7 +69,7 @@ export default function MartineBeaudon() {
                     >
                       <Image
                         src={showChildPhoto ? "/images/equipe/martine-enfant.jpeg" : "/images/equipe/Martine.jpeg"}
-                        alt={showChildPhoto ? "Martine BEAUDON enfant" : "Martine BEAUDON"}
+                        alt={showChildPhoto ? "Martine BAUDON enfant" : "Martine BAUDON"}
                         width={350}
                         height={400}
                         className="w-full h-full object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
@@ -84,7 +84,7 @@ export default function MartineBeaudon() {
                     Formatrice
                   </div>
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] leading-tight">
-                    <span className="font-brittany text-3xl lg:text-4xl">Martine</span> <span className="font-semibold">BEAUDON</span>
+                    <span className="font-brittany text-3xl lg:text-4xl">Martine</span> <span className="font-semibold">BAUDON</span>
                   </h1>
                   <p className="text-[#013F63] leading-relaxed">
                     Accompagnement à distance sur toute la France ou en présentiel à <span className="text-orange-500 font-semibold">Lormont</span>
