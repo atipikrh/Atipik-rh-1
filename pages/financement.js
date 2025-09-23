@@ -265,7 +265,7 @@ export default function Financement() {
                               </div>
                               <div className="space-y-3 mb-6 flex-grow">
                                 {card.details.map((detail, detailIndex) => (
-                                  <p key={detailIndex} className="text-gray-700 text-sm">
+                                  <p key={detailIndex} className="text-[#013F63] text-sm">
                                     <strong>{detail.label} :</strong> {detail.value}
                                   </p>
                                 ))}
@@ -331,10 +331,10 @@ export default function Financement() {
                         <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">AIF (Aide Individuelle à la Formation)</h3>
                       </div>
                       <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-gray-700 text-sm"><strong>Financement :</strong> Complète le CPF ou finance totalement</p>
-                        <p className="text-gray-700 text-sm"><strong>Conditions :</strong> Formation en lien avec projet professionnel</p>
-                        <p className="text-gray-700 text-sm"><strong>Démarches :</strong> Via votre conseiller Pôle Emploi</p>
-                        <p className="text-gray-700 text-sm"><strong>Délai :</strong> 15-30 jours après validation</p>
+                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Complète le CPF ou finance totalement</p>
+                        <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Formation en lien avec projet professionnel</p>
+                        <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Via votre conseiller Pôle Emploi</p>
+                        <p className="text-[#013F63] text-sm"><strong>Délai :</strong> 15-30 jours après validation</p>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
                         <p className="text-xs text-orange-700 font-medium text-center">
@@ -363,10 +363,10 @@ export default function Financement() {
                         <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">CPF</h3>
                       </div>
                       <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-gray-700 text-sm"><strong>Vos droits :</strong> Conservés pendant le chômage</p>
-                        <p className="text-gray-700 text-sm"><strong>Utilisation :</strong> Libre et immédiate</p>
-                        <p className="text-gray-700 text-sm"><strong>Complément :</strong> Souvent complété par l'AIF</p>
-                        <p className="text-gray-700 text-sm"><strong>Avantage :</strong> Démarches 100% en ligne</p>
+                        <p className="text-[#013F63] text-sm"><strong>Vos droits :</strong> Conservés pendant le chômage</p>
+                        <p className="text-[#013F63] text-sm"><strong>Utilisation :</strong> Libre et immédiate</p>
+                        <p className="text-[#013F63] text-sm"><strong>Complément :</strong> Souvent complété par l'AIF</p>
+                        <p className="text-[#013F63] text-sm"><strong>Avantage :</strong> Démarches 100% en ligne</p>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
                         <p className="text-xs text-orange-700 font-medium text-center">
@@ -395,10 +395,10 @@ export default function Financement() {
                         <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Auto-financement</h3>
                       </div>
                       <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-gray-700 text-sm"><strong>Facilités :</strong> Paiement en 3x, 6x ou 9x avec notre partenaire financier</p>
-                        <p className="text-gray-700 text-sm"><strong>Réduction :</strong> Tarifs préférentiels possibles</p>
-                        <p className="text-gray-700 text-sm"><strong>Rapidité :</strong> Démarrage immédiat</p>
-                        <p className="text-gray-700 text-sm"><strong>ROI :</strong> Investissement pour retour à l'emploi</p>
+                        <p className="text-[#013F63] text-sm"><strong>Facilités :</strong> Paiement en 3x, 6x ou 9x avec notre partenaire financier</p>
+                        <p className="text-[#013F63] text-sm"><strong>Réduction :</strong> Tarifs préférentiels possibles</p>
+                        <p className="text-[#013F63] text-sm"><strong>Rapidité :</strong> Démarrage immédiat</p>
+                        <p className="text-[#013F63] text-sm"><strong>ROI :</strong> Investissement pour retour à l'emploi</p>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
                         <p className="text-xs text-orange-700 font-medium text-center">
@@ -427,10 +427,10 @@ export default function Financement() {
                         <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">AGEFIPH</h3>
                       </div>
                       <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-gray-700 text-sm"><strong>Public :</strong> Personnes en situation de handicap</p>
-                        <p className="text-gray-700 text-sm"><strong>Financement :</strong> Prise en charge totale ou partielle</p>
-                        <p className="text-gray-700 text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
-                        <p className="text-gray-700 text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
+                        <p className="text-[#013F63] text-sm"><strong>Public :</strong> Personnes en situation de handicap</p>
+                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Prise en charge totale ou partielle</p>
+                        <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
+                        <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
                         <p className="text-xs text-orange-700 font-medium text-center">
@@ -459,10 +459,10 @@ export default function Financement() {
                         <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Aide individuelle Nouvelle-Aquitaine</h3>
                       </div>
                       <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-gray-700 text-sm"><strong>Montant :</strong> 5 000€ maximum par année de formation</p>
-                        <p className="text-gray-700 text-sm"><strong>Public :</strong> Demandeurs d'emploi résidant en Nouvelle-Aquitaine</p>
-                        <p className="text-gray-700 text-sm"><strong>Formations :</strong> Inscrites au RNCP, organismes certifiés Qualiopi</p>
-                        <p className="text-gray-700 text-sm"><strong>Délai :</strong> Dépôt 5 semaines avant l'entrée en formation</p>
+                        <p className="text-[#013F63] text-sm"><strong>Montant :</strong> 5 000€ maximum par année de formation</p>
+                        <p className="text-[#013F63] text-sm"><strong>Public :</strong> Demandeurs d'emploi résidant en Nouvelle-Aquitaine</p>
+                        <p className="text-[#013F63] text-sm"><strong>Formations :</strong> Inscrites au RNCP, organismes certifiés Qualiopi</p>
+                        <p className="text-[#013F63] text-sm"><strong>Délai :</strong> Dépôt 5 semaines avant l'entrée en formation</p>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
                         <p className="text-xs text-orange-700 font-medium text-center">
@@ -491,10 +491,10 @@ export default function Financement() {
                         <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">FSE (Fonds Social Européen)</h3>
                       </div>
                       <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-gray-700 text-sm"><strong>Financement :</strong> Cofinancement européen des formations</p>
-                        <p className="text-gray-700 text-sm"><strong>Public :</strong> Demandeurs d'emploi peu qualifiés</p>
-                        <p className="text-gray-700 text-sm"><strong>Objectif :</strong> Insertion professionnelle et montée en compétences</p>
-                        <p className="text-gray-700 text-sm"><strong>Démarches :</strong> Via organismes de formation partenaires</p>
+                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Cofinancement européen des formations</p>
+                        <p className="text-[#013F63] text-sm"><strong>Public :</strong> Demandeurs d'emploi peu qualifiés</p>
+                        <p className="text-[#013F63] text-sm"><strong>Objectif :</strong> Insertion professionnelle et montée en compétences</p>
+                        <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Via organismes de formation partenaires</p>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
                         <p className="text-xs text-orange-700 font-medium text-center">
@@ -533,10 +533,10 @@ export default function Financement() {
                         <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">FAF (Fonds d'Assurance Formation)</h3>
                       </div>
                       <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-gray-700 text-sm"><strong>FIFPL :</strong> Professions libérales</p>
-                        <p className="text-gray-700 text-sm"><strong>AGEFICE :</strong> Commerçants et dirigeants</p>
-                        <p className="text-gray-700 text-sm"><strong>FAFCEA :</strong> Artisans</p>
-                        <p className="text-gray-700 text-sm"><strong>Conditions :</strong> Être à jour des cotisations</p>
+                        <p className="text-[#013F63] text-sm"><strong>FIFPL :</strong> Professions libérales</p>
+                        <p className="text-[#013F63] text-sm"><strong>AGEFICE :</strong> Commerçants et dirigeants</p>
+                        <p className="text-[#013F63] text-sm"><strong>FAFCEA :</strong> Artisans</p>
+                        <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Être à jour des cotisations</p>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
                         <p className="text-xs text-orange-700 font-medium text-center">
@@ -565,10 +565,10 @@ export default function Financement() {
                         <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">CPF</h3>
                       </div>
                       <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-gray-700 text-sm"><strong>Alimentation :</strong> 500€/an si vous cotisez</p>
-                        <p className="text-gray-700 text-sm"><strong>Utilisation :</strong> Libre choix des formations</p>
-                        <p className="text-gray-700 text-sm"><strong>Cumul :</strong> Possible avec financement FAF</p>
-                        <p className="text-gray-700 text-sm"><strong>Démarches :</strong> 100% en ligne</p>
+                        <p className="text-[#013F63] text-sm"><strong>Alimentation :</strong> 500€/an si vous cotisez</p>
+                        <p className="text-[#013F63] text-sm"><strong>Utilisation :</strong> Libre choix des formations</p>
+                        <p className="text-[#013F63] text-sm"><strong>Cumul :</strong> Possible avec financement FAF</p>
+                        <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> 100% en ligne</p>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
                         <p className="text-xs text-orange-700 font-medium text-center">
@@ -597,10 +597,10 @@ export default function Financement() {
                         <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Auto-financement</h3>
                       </div>
                       <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-gray-700 text-sm"><strong>Déduction fiscale :</strong> Charge déductible de votre activité</p>
-                        <p className="text-gray-700 text-sm"><strong>Facilités :</strong> Paiement en 3x, 6x ou 9x avec notre partenaire financier</p>
-                        <p className="text-gray-700 text-sm"><strong>ROI :</strong> Développement de votre activité</p>
-                        <p className="text-gray-700 text-sm"><strong>Flexibilité :</strong> Démarrage immédiat</p>
+                        <p className="text-[#013F63] text-sm"><strong>Déduction fiscale :</strong> Charge déductible de votre activité</p>
+                        <p className="text-[#013F63] text-sm"><strong>Facilités :</strong> Paiement en 3x, 6x ou 9x avec notre partenaire financier</p>
+                        <p className="text-[#013F63] text-sm"><strong>ROI :</strong> Développement de votre activité</p>
+                        <p className="text-[#013F63] text-sm"><strong>Flexibilité :</strong> Démarrage immédiat</p>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
                         <p className="text-xs text-orange-700 font-medium text-center">
@@ -629,10 +629,10 @@ export default function Financement() {
                         <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">AGEFIPH</h3>
                       </div>
                       <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-gray-700 text-sm"><strong>Public :</strong> Personnes en situation de handicap</p>
-                        <p className="text-gray-700 text-sm"><strong>Financement :</strong> Prise en charge totale ou partielle</p>
-                        <p className="text-gray-700 text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
-                        <p className="text-gray-700 text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
+                        <p className="text-[#013F63] text-sm"><strong>Public :</strong> Personnes en situation de handicap</p>
+                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Prise en charge totale ou partielle</p>
+                        <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
+                        <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
                         <p className="text-xs text-orange-700 font-medium text-center">
@@ -671,10 +671,10 @@ export default function Financement() {
                         <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">OPCO</h3>
                       </div>
                       <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-gray-700 text-sm"><strong>Financement :</strong> Prise en charge partielle ou totale</p>
-                        <p className="text-gray-700 text-sm"><strong>Conditions :</strong> Formation en lien avec l'activité</p>
-                        <p className="text-gray-700 text-sm"><strong>Démarches :</strong> Convention de formation</p>
-                        <p className="text-gray-700 text-sm"><strong>Avantage :</strong> Développement des compétences</p>
+                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Prise en charge partielle ou totale</p>
+                        <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Formation en lien avec l'activité</p>
+                        <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Convention de formation</p>
+                        <p className="text-[#013F63] text-sm"><strong>Avantage :</strong> Développement des compétences</p>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
                         <p className="text-xs text-orange-700 font-medium text-center">
@@ -703,10 +703,10 @@ export default function Financement() {
                         <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Plan de développement des compétences</h3>
                       </div>
                       <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-gray-700 text-sm"><strong>Financement :</strong> 100% pris en charge par l'employeur</p>
-                        <p className="text-gray-700 text-sm"><strong>Avantages :</strong> Formation sur temps de travail</p>
-                        <p className="text-gray-700 text-sm"><strong>Conditions :</strong> Intégration dans le plan annuel</p>
-                        <p className="text-gray-700 text-sm"><strong>Bénéfice :</strong> Montée en compétences des équipes</p>
+                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> 100% pris en charge par l'employeur</p>
+                        <p className="text-[#013F63] text-sm"><strong>Avantages :</strong> Formation sur temps de travail</p>
+                        <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Intégration dans le plan annuel</p>
+                        <p className="text-[#013F63] text-sm"><strong>Bénéfice :</strong> Montée en compétences des équipes</p>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
                         <p className="text-xs text-orange-700 font-medium text-center">
@@ -735,10 +735,10 @@ export default function Financement() {
                         <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">FNE-Formation</h3>
                       </div>
                       <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-gray-700 text-sm"><strong>Contexte :</strong> Difficultés économiques temporaires</p>
-                        <p className="text-gray-700 text-sm"><strong>Financement :</strong> Prise en charge par France Travail</p>
-                        <p className="text-gray-700 text-sm"><strong>Objectif :</strong> Maintenir l'emploi et les compétences</p>
-                        <p className="text-gray-700 text-sm"><strong>Conditions :</strong> Accord de branche ou d'entreprise</p>
+                        <p className="text-[#013F63] text-sm"><strong>Contexte :</strong> Difficultés économiques temporaires</p>
+                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Prise en charge par France Travail</p>
+                        <p className="text-[#013F63] text-sm"><strong>Objectif :</strong> Maintenir l'emploi et les compétences</p>
+                        <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Accord de branche ou d'entreprise</p>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
                         <p className="text-xs text-orange-700 font-medium text-center">
@@ -767,10 +767,10 @@ export default function Financement() {
                         <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Pro-A</h3>
                       </div>
                       <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-gray-700 text-sm"><strong>Principe :</strong> Formation pendant l'activité partielle</p>
-                        <p className="text-gray-700 text-sm"><strong>Financement :</strong> Prise en charge par France Travail</p>
-                        <p className="text-gray-700 text-sm"><strong>Durée :</strong> Jusqu'à 2 ans maximum</p>
-                        <p className="text-gray-700 text-sm"><strong>Avantage :</strong> Maintien des compétences</p>
+                        <p className="text-[#013F63] text-sm"><strong>Principe :</strong> Formation pendant l'activité partielle</p>
+                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Prise en charge par France Travail</p>
+                        <p className="text-[#013F63] text-sm"><strong>Durée :</strong> Jusqu'à 2 ans maximum</p>
+                        <p className="text-[#013F63] text-sm"><strong>Avantage :</strong> Maintien des compétences</p>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
                         <p className="text-xs text-orange-700 font-medium text-center">
