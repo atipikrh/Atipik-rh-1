@@ -43,8 +43,6 @@ export default function Financement() {
         { label: "Démarches", value: "100% en ligne sur MonCompteFormation" },
         { label: "Délai", value: "11 jours maximum" }
       ],
-      badge: "Solution recommandée - Prise en charge totale fréquente",
-      badgeColor: "green",
       buttonText: "Vérifier mes droits CPF",
       buttonStyle: "primary",
       buttonLink: "https://www.moncompteformation.gouv.fr",
@@ -60,8 +58,6 @@ export default function Financement() {
         { label: "Conditions", value: "Accord de l'employeur nécessaire" },
         { label: "Délai", value: "Variable selon l'entreprise" }
       ],
-      badge: "Idéal si la formation correspond aux besoins de l'entreprise",
-      badgeColor: "blue",
       buttonText: "Étudier cette option",
       buttonStyle: "secondary",
       buttonLink: "/contact",
@@ -77,8 +73,6 @@ export default function Financement() {
         { label: "Accompagnement", value: "Reclassement accéléré personnalisé" },
         { label: "Indemnisation", value: "Allocation de sécurisation professionnelle" }
       ],
-      badge: "Dispositif spécifique en cas de licenciement économique",
-      badgeColor: "purple",
       buttonText: "En savoir plus sur le CSP",
       buttonStyle: "primary",
       buttonLink: "https://www.service-public.fr/particuliers/vosdroits/F13819",
@@ -94,8 +88,6 @@ export default function Financement() {
         { label: "Co-financement", value: "CPF + plan de formation" },
         { label: "Avantage", value: "Démarrage immédiat" }
       ],
-      badge: "Solutions sur mesure selon votre situation",
-      badgeColor: "gray",
       buttonText: "Étudier cette option",
       buttonStyle: "secondary",
       buttonLink: "/contact",
@@ -111,8 +103,6 @@ export default function Financement() {
         { label: "Conditions", value: "Reconnaissance de handicap RQTH" },
         { label: "Démarches", value: "Dossier à constituer avec justificatifs" }
       ],
-      badge: "Financement spécifique handicap - Accompagnement personnalisé",
-      badgeColor: "purple",
       buttonText: "En savoir plus AGEFIPH",
       buttonStyle: "primary",
       buttonLink: "https://www.agefiph.fr/aides-handicap/aide-individuelle-formation",
@@ -120,16 +110,6 @@ export default function Financement() {
     }
   ];
 
-  const getBadgeColorClasses = (color) => {
-    switch (color) {
-      case 'green': return 'bg-orange-50 text-orange-700';
-      case 'blue': return 'bg-orange-50 text-orange-700';
-      case 'orange': return 'bg-orange-50 text-orange-700';
-      case 'purple': return 'bg-orange-50 text-orange-700';
-      case 'gray': return 'bg-orange-50 text-orange-700';
-      default: return 'bg-orange-50 text-orange-700';
-    }
-  };
 
   return (
     <>
@@ -178,63 +158,64 @@ export default function Financement() {
               {/* Onglets de navigation avec nouveau design */}
               <div className="mb-8">
                 <div className="flex justify-center">
-                  <div className="flex bg-white p-2 rounded-2xl shadow-lg border border-gray-200 gap-1">
+                  <div className="flex flex-wrap lg:flex-nowrap bg-white p-2 rounded-2xl shadow-lg border border-gray-200 gap-1">
                     <button 
                       onClick={() => setActiveTab('salaries')}
-                      className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                      className={`px-3 py-3 lg:px-8 lg:py-4 rounded-xl font-semibold transition-all duration-300 text-sm lg:text-base ${
                         activeTab === 'salaries' 
                           ? 'bg-[#013F63] text-white shadow-lg transform scale-105' 
                           : 'text-gray-600 hover:text-[#013F63] hover:bg-gray-50'
                       }`}
                     >
-                      <div className="flex items-center gap-2">
-                        <Users className="w-5 h-5" />
-                        <span>Salariés</span>
+                      <div className="flex items-center gap-1 lg:gap-2">
+                        <Users className="w-4 h-4 lg:w-5 lg:h-5" />
+                        <span className="hidden sm:inline lg:inline">Salariés</span>
+                        <span className="sm:hidden">👥</span>
                       </div>
                     </button>
                     
                     <button 
                       onClick={() => setActiveTab('demandeurs-emploi')}
-                      className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                      className={`px-3 py-3 lg:px-8 lg:py-4 rounded-xl font-semibold transition-all duration-300 text-sm lg:text-base ${
                         activeTab === 'demandeurs-emploi' 
                           ? 'bg-[#013F63] text-white shadow-lg transform scale-105' 
                           : 'text-gray-600 hover:text-[#013F63] hover:bg-gray-50'
                       }`}
                     >
-                      <div className="flex items-center gap-2">
-                        <CreditCard className="w-5 h-5" />
-                        <span className="hidden sm:inline">Demandeurs d'emploi</span>
-                        <span className="sm:hidden">Demandeurs</span>
+                      <div className="flex items-center gap-1 lg:gap-2">
+                        <CreditCard className="w-4 h-4 lg:w-5 lg:h-5" />
+                        <span className="hidden sm:inline lg:inline">Demandeurs d'emploi</span>
+                        <span className="sm:hidden">📋</span>
                       </div>
                     </button>
                     
                     <button 
                       onClick={() => setActiveTab('independants')}
-                      className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                      className={`px-3 py-3 lg:px-8 lg:py-4 rounded-xl font-semibold transition-all duration-300 text-sm lg:text-base ${
                         activeTab === 'independants' 
                           ? 'bg-[#013F63] text-white shadow-lg transform scale-105' 
                           : 'text-gray-600 hover:text-[#013F63] hover:bg-gray-50'
                       }`}
                     >
-                      <div className="flex items-center gap-2">
-                        <FileText className="w-5 h-5" />
-                        <span className="hidden sm:inline">Travailleurs indépendants</span>
-                        <span className="sm:hidden">Indépendants</span>
+                      <div className="flex items-center gap-1 lg:gap-2">
+                        <FileText className="w-4 h-4 lg:w-5 lg:h-5" />
+                        <span className="hidden sm:inline lg:inline">Travailleurs indépendants</span>
+                        <span className="sm:hidden">💼</span>
                       </div>
                     </button>
                     
                     <button 
                       onClick={() => setActiveTab('employeurs')}
-                      className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                      className={`px-3 py-3 lg:px-8 lg:py-4 rounded-xl font-semibold transition-all duration-300 text-sm lg:text-base ${
                         activeTab === 'employeurs' 
                           ? 'bg-[#013F63] text-white shadow-lg transform scale-105' 
                           : 'text-gray-600 hover:text-[#013F63] hover:bg-gray-50'
                       }`}
                     >
-                      <div className="flex items-center gap-2">
-                        <UserCheck className="w-5 h-5" />
-                        <span className="hidden sm:inline">Employeurs</span>
-                        <span className="sm:hidden">Employeurs</span>
+                      <div className="flex items-center gap-1 lg:gap-2">
+                        <UserCheck className="w-4 h-4 lg:w-5 lg:h-5" />
+                        <span className="hidden sm:inline lg:inline">Employeurs</span>
+                        <span className="sm:hidden">🏢</span>
                       </div>
                     </button>
                   </div>
@@ -244,43 +225,38 @@ export default function Financement() {
               {/* Contenu conditionnel basé sur l'onglet actif */}
               {activeTab === 'salaries' && (
                 <>
-                  {/* Options de financement pour salariés avec défilement horizontal */}
-                  <div className="overflow-x-auto px-4 py-8">
-                    <div className="flex gap-6 w-max pl-4 pr-4">
+                  {/* Options de financement pour salariés */}
+                  <div className="px-4 py-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {salariesCards.map((card, index) => {
                         return (
-                          <div key={index} className="flex-shrink-0 w-80">
-                            <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                              <div className="flex items-center gap-4 mb-6 h-20">
-                                <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                          <div key={index} className="w-full">
+                            <div className="bg-white rounded-3xl p-4 md:p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col min-h-[450px] md:min-h-[500px] lg:h-[550px]">
+                              <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                                <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                                   <Image
                                     src={card.logoSrc}
                                     alt={card.logoAlt}
-                                    width={48}
-                                    height={48}
-                                    className="object-contain"
+                                    width={32}
+                                    height={32}
+                                    className="object-contain w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12"
                                   />
                                 </div>
-                                <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">{card.title}</h3>
+                                <h3 className="text-sm md:text-base lg:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">{card.title}</h3>
                               </div>
-                              <div className="space-y-3 mb-6 flex-grow">
+                              <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
                                 {card.details.map((detail, detailIndex) => (
-                                  <p key={detailIndex} className="text-[#013F63] text-sm">
+                                  <p key={detailIndex} className="text-[#013F63] text-xs md:text-sm">
                                     <strong>{detail.label} :</strong> {detail.value}
                                   </p>
                                 ))}
-                              </div>
-                              <div className={`${getBadgeColorClasses(card.badgeColor)} rounded-lg p-3 mb-6 h-16 flex items-center justify-center`}>
-                                <p className="text-xs font-medium text-center">
-                                  {card.badge}
-                                </p>
                               </div>
                               {card.external ? (
                                 <a 
                                   href={card.buttonLink} 
                                   target="_blank" 
                                   rel="noopener noreferrer" 
-                                  className={`block w-full text-center px-6 py-3 rounded-full font-semibold transition mt-auto ${
+                                  className={`block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold transition mt-auto text-sm md:text-base ${
                                     card.buttonStyle === 'primary' 
                                       ? 'bg-[#013F63] hover:bg-[#012a4a] text-white' 
                                       : 'border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white'
@@ -291,7 +267,7 @@ export default function Financement() {
                               ) : (
                                 <Link 
                                   href={card.buttonLink} 
-                                  className={`block w-full text-center px-6 py-3 rounded-full font-semibold transition mt-auto ${
+                                  className={`block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold transition mt-auto text-sm md:text-base ${
                                     card.buttonStyle === 'primary' 
                                       ? 'bg-[#013F63] hover:bg-[#012a4a] text-white' 
                                       : 'border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white'
@@ -311,14 +287,14 @@ export default function Financement() {
 
               {activeTab === 'demandeurs-emploi' && (
                 <>
-                  {/* Options de financement pour demandeurs d'emploi avec défilement horizontal */}
-                  <div className="overflow-x-auto px-4 py-8">
-                    <div className="flex gap-6 w-max pl-4 pr-4">
+                  {/* Options de financement pour demandeurs d'emploi */}
+                  <div className="px-4 py-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     
                     {/* AIF */}
-                    <div className="flex-shrink-0 w-80">
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                      <div className="flex items-center gap-4 mb-6 h-20">
+                    <div className="w-full">
+                      <div className="bg-white rounded-3xl p-4 md:p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col min-h-[450px] md:min-h-[500px] lg:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
                         <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg"
@@ -335,11 +311,6 @@ export default function Financement() {
                         <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Formation en lien avec projet professionnel</p>
                         <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Via votre conseiller Pôle Emploi</p>
                         <p className="text-[#013F63] text-sm"><strong>Délai :</strong> 15-30 jours après validation</p>
-                      </div>
-                      <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
-                        <p className="text-xs text-orange-700 font-medium text-center">
-                          Solution privilégiée pour les demandeurs d'emploi
-                        </p>
                       </div>
                       <a href="https://www.francetravail.fr/candidat/en-formation/mes-aides-financieres/laide-individuelle-a-la-formatio.html" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         En savoir plus sur l'AIF
@@ -368,11 +339,6 @@ export default function Financement() {
                         <p className="text-[#013F63] text-sm"><strong>Complément :</strong> Souvent complété par l'AIF</p>
                         <p className="text-[#013F63] text-sm"><strong>Avantage :</strong> Démarches 100% en ligne</p>
                       </div>
-                      <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
-                        <p className="text-xs text-orange-700 font-medium text-center">
-                          Base de financement à utiliser en premier
-                        </p>
-                      </div>
                       <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         Consulter mon CPF
                       </a>
@@ -399,11 +365,6 @@ export default function Financement() {
                         <p className="text-[#013F63] text-sm"><strong>Réduction :</strong> Tarifs préférentiels possibles</p>
                         <p className="text-[#013F63] text-sm"><strong>Rapidité :</strong> Démarrage immédiat</p>
                         <p className="text-[#013F63] text-sm"><strong>ROI :</strong> Investissement pour retour à l'emploi</p>
-                      </div>
-                      <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
-                        <p className="text-xs text-orange-700 font-medium text-center">
-                          Solutions de paiement flexibles avec partenaire financier
-                        </p>
                       </div>
                       <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
                         Étudier cette option
@@ -432,11 +393,6 @@ export default function Financement() {
                         <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
                         <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
                       </div>
-                      <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
-                        <p className="text-xs text-orange-700 font-medium text-center">
-                          Financement spécifique handicap - Accompagnement personnalisé
-                        </p>
-                      </div>
                       <a href="https://www.agefiph.fr/aides-handicap/aide-individuelle-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         En savoir plus AGEFIPH
                       </a>
@@ -464,11 +420,6 @@ export default function Financement() {
                         <p className="text-[#013F63] text-sm"><strong>Formations :</strong> Inscrites au RNCP, organismes certifiés Qualiopi</p>
                         <p className="text-[#013F63] text-sm"><strong>Délai :</strong> Dépôt 5 semaines avant l'entrée en formation</p>
                       </div>
-                      <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
-                        <p className="text-xs text-orange-700 font-medium text-center">
-                          Aide régionale pour formations qualifiantes non proposées en collectif
-                        </p>
-                      </div>
                       <a href="https://les-aides.nouvelle-aquitaine.fr/economie-et-emploi/aide-individuelle-regionale-la-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         Faire ma demande
                       </a>
@@ -495,11 +446,6 @@ export default function Financement() {
                         <p className="text-[#013F63] text-sm"><strong>Public :</strong> Demandeurs d'emploi peu qualifiés</p>
                         <p className="text-[#013F63] text-sm"><strong>Objectif :</strong> Insertion professionnelle et montée en compétences</p>
                         <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Via organismes de formation partenaires</p>
-                      </div>
-                      <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
-                        <p className="text-xs text-orange-700 font-medium text-center">
-                          Financement européen pour l'insertion professionnelle
-                        </p>
                       </div>
                       <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         Étudier cette option
@@ -538,11 +484,6 @@ export default function Financement() {
                         <p className="text-[#013F63] text-sm"><strong>FAFCEA :</strong> Artisans</p>
                         <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Être à jour des cotisations</p>
                       </div>
-                      <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
-                        <p className="text-xs text-orange-700 font-medium text-center">
-                          Financement selon votre activité et organisme
-                        </p>
-                      </div>
                       <a href="https://entreprendre.service-public.fr/vosdroits/F31148" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         Identifier mon FAF
                       </a>
@@ -569,11 +510,6 @@ export default function Financement() {
                         <p className="text-[#013F63] text-sm"><strong>Utilisation :</strong> Libre choix des formations</p>
                         <p className="text-[#013F63] text-sm"><strong>Cumul :</strong> Possible avec financement FAF</p>
                         <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> 100% en ligne</p>
-                      </div>
-                      <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
-                        <p className="text-xs text-orange-700 font-medium text-center">
-                          Vérifiez vos droits acquis
-                        </p>
                       </div>
                       <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         Vérifier mes droits CPF
@@ -602,11 +538,6 @@ export default function Financement() {
                         <p className="text-[#013F63] text-sm"><strong>ROI :</strong> Développement de votre activité</p>
                         <p className="text-[#013F63] text-sm"><strong>Flexibilité :</strong> Démarrage immédiat</p>
                       </div>
-                      <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
-                        <p className="text-xs text-orange-700 font-medium text-center">
-                          Investissement professionnel déductible avec facilités de paiement
-                        </p>
-                      </div>
                       <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
                         Étudier cette option
                       </Link>
@@ -633,11 +564,6 @@ export default function Financement() {
                         <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Prise en charge totale ou partielle</p>
                         <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
                         <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
-                      </div>
-                      <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
-                        <p className="text-xs text-orange-700 font-medium text-center">
-                          Financement spécifique handicap - Accompagnement personnalisé
-                        </p>
                       </div>
                       <a href="https://www.agefiph.fr/aides-handicap/aide-individuelle-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         En savoir plus AGEFIPH
@@ -676,11 +602,6 @@ export default function Financement() {
                         <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Convention de formation</p>
                         <p className="text-[#013F63] text-sm"><strong>Avantage :</strong> Développement des compétences</p>
                       </div>
-                      <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
-                        <p className="text-xs text-orange-700 font-medium text-center">
-                          Financement selon votre secteur d'activité
-                        </p>
-                      </div>
                       <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
                         Étudier cette option
                       </Link>
@@ -707,11 +628,6 @@ export default function Financement() {
                         <p className="text-[#013F63] text-sm"><strong>Avantages :</strong> Formation sur temps de travail</p>
                         <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Intégration dans le plan annuel</p>
                         <p className="text-[#013F63] text-sm"><strong>Bénéfice :</strong> Montée en compétences des équipes</p>
-                      </div>
-                      <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
-                        <p className="text-xs text-orange-700 font-medium text-center">
-                          Solution idéale pour la formation continue
-                        </p>
                       </div>
                       <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
                         Étudier cette option
@@ -740,11 +656,6 @@ export default function Financement() {
                         <p className="text-[#013F63] text-sm"><strong>Objectif :</strong> Maintenir l'emploi et les compétences</p>
                         <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Accord de branche ou d'entreprise</p>
                       </div>
-                      <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
-                        <p className="text-xs text-orange-700 font-medium text-center">
-                          Dispositif de crise pour préserver l'emploi
-                        </p>
-                      </div>
                       <a href="https://www.francetravail.fr/employeur/recruter-et-former/former-ses-salaries/fne-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         En savoir plus FNE-Formation
                       </a>
@@ -771,11 +682,6 @@ export default function Financement() {
                         <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Prise en charge par France Travail</p>
                         <p className="text-[#013F63] text-sm"><strong>Durée :</strong> Jusqu'à 2 ans maximum</p>
                         <p className="text-[#013F63] text-sm"><strong>Avantage :</strong> Maintien des compétences</p>
-                      </div>
-                      <div className="bg-orange-50 rounded-lg p-3 mb-6 h-16 flex items-center justify-center">
-                        <p className="text-xs text-orange-700 font-medium text-center">
-                          Formation pendant l'activité partielle
-                        </p>
                       </div>
                       <a href="https://www.francetravail.fr/employeur/recruter-et-former/former-ses-salaries/pro-a" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         En savoir plus Pro-A
