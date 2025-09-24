@@ -158,7 +158,7 @@ export default function Financement() {
               {/* Onglets de navigation avec nouveau design */}
               <div className="mb-8">
                 <div className="flex justify-center">
-                  <div className="flex flex-wrap lg:flex-nowrap bg-white p-2 rounded-2xl shadow-lg border border-gray-200 gap-1">
+                  <div className="flex flex-wrap justify-center bg-white p-2 rounded-2xl shadow-lg border border-gray-200 gap-1">
                     <button 
                       onClick={() => setActiveTab('salaries')}
                       className={`px-3 py-3 lg:px-8 lg:py-4 rounded-xl font-semibold transition-all duration-300 text-sm lg:text-base ${
@@ -169,8 +169,7 @@ export default function Financement() {
                     >
                       <div className="flex items-center gap-1 lg:gap-2">
                         <Users className="w-4 h-4 lg:w-5 lg:h-5" />
-                        <span className="hidden sm:inline lg:inline">Salariés</span>
-                        <span className="sm:hidden">👥</span>
+                        <span className={activeTab === 'salaries' ? 'inline' : 'hidden sm:inline'}>Salariés</span>
                       </div>
                     </button>
                     
@@ -184,8 +183,7 @@ export default function Financement() {
                     >
                       <div className="flex items-center gap-1 lg:gap-2">
                         <CreditCard className="w-4 h-4 lg:w-5 lg:h-5" />
-                        <span className="hidden sm:inline lg:inline">Demandeurs d'emploi</span>
-                        <span className="sm:hidden">📋</span>
+                        <span className={activeTab === 'demandeurs-emploi' ? 'inline' : 'hidden sm:inline'}>Demandeurs d'emploi</span>
                       </div>
                     </button>
                     
@@ -199,8 +197,7 @@ export default function Financement() {
                     >
                       <div className="flex items-center gap-1 lg:gap-2">
                         <FileText className="w-4 h-4 lg:w-5 lg:h-5" />
-                        <span className="hidden sm:inline lg:inline">Travailleurs indépendants</span>
-                        <span className="sm:hidden">💼</span>
+                        <span className={activeTab === 'independants' ? 'inline' : 'hidden sm:inline'}>Travailleurs indépendants</span>
                       </div>
                     </button>
                     
@@ -214,8 +211,7 @@ export default function Financement() {
                     >
                       <div className="flex items-center gap-1 lg:gap-2">
                         <UserCheck className="w-4 h-4 lg:w-5 lg:h-5" />
-                        <span className="hidden sm:inline lg:inline">Employeurs</span>
-                        <span className="sm:hidden">🏢</span>
+                        <span className={activeTab === 'employeurs' ? 'inline' : 'hidden sm:inline'}>Employeurs</span>
                       </div>
                     </button>
                   </div>
@@ -225,28 +221,28 @@ export default function Financement() {
               {/* Contenu conditionnel basé sur l'onglet actif */}
               {activeTab === 'salaries' && (
                 <>
-                  {/* Options de financement pour salariés */}
-                  <div className="px-4 py-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {/* Options de financement pour salariés avec défilement horizontal */}
+                  <div className="overflow-x-auto px-4 py-8">
+                    <div className="flex gap-4 md:gap-6 w-max pl-4 pr-4">
                       {salariesCards.map((card, index) => {
                         return (
-                          <div key={index} className="w-full">
-                            <div className="bg-white rounded-3xl p-4 md:p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col min-h-[450px] md:min-h-[500px] lg:h-[550px]">
-                              <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
-                                <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                          <div key={index} className="flex-shrink-0 w-80">
+                            <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
+                              <div className="flex items-center gap-4 mb-6 h-20">
+                                <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                                   <Image
                                     src={card.logoSrc}
                                     alt={card.logoAlt}
-                                    width={32}
-                                    height={32}
-                                    className="object-contain w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12"
+                                    width={48}
+                                    height={48}
+                                    className="object-contain"
                                   />
                                 </div>
-                                <h3 className="text-sm md:text-base lg:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">{card.title}</h3>
+                                <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">{card.title}</h3>
                               </div>
                               <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
                                 {card.details.map((detail, detailIndex) => (
-                                  <p key={detailIndex} className="text-[#013F63] text-xs md:text-sm">
+                                  <p key={detailIndex} className="text-[#013F63] text-sm">
                                     <strong>{detail.label} :</strong> {detail.value}
                                   </p>
                                 ))}
@@ -287,167 +283,167 @@ export default function Financement() {
 
               {activeTab === 'demandeurs-emploi' && (
                 <>
-                  {/* Options de financement pour demandeurs d'emploi */}
-                  <div className="px-4 py-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {/* Options de financement pour demandeurs d'emploi avec défilement horizontal */}
+                  <div className="overflow-x-auto px-4 py-8">
+                    <div className="flex gap-4 md:gap-6 w-max pl-4 pr-4">
                     
                     {/* AIF */}
-                    <div className="w-full">
-                      <div className="bg-white rounded-3xl p-4 md:p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col min-h-[450px] md:min-h-[500px] lg:h-[550px]">
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
                       <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
-                        <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg"
                             alt="Logo France Travail"
                             width={48}
                             height={48}
-                            className="object-contain"
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
                           />
                         </div>
-                        <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">AIF (Aide Individuelle à la Formation)</h3>
+                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">AIF (Aide Individuelle à la Formation)</h3>
                       </div>
-                      <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Complète le CPF ou finance totalement</p>
-                        <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Formation en lien avec projet professionnel</p>
-                        <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Via votre conseiller Pôle Emploi</p>
-                        <p className="text-[#013F63] text-sm"><strong>Délai :</strong> 15-30 jours après validation</p>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Complète le CPF ou finance totalement</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Formation en lien avec projet professionnel</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> Via votre conseiller Pôle Emploi</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Délai :</strong> 15-30 jours après validation</p>
                       </div>
-                      <a href="https://www.francetravail.fr/candidat/en-formation/mes-aides-financieres/laide-individuelle-a-la-formatio.html" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                      <a href="https://www.francetravail.fr/candidat/en-formation/mes-aides-financieres/laide-individuelle-a-la-formatio.html" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         En savoir plus sur l'AIF
                       </a>
                       </div>
                     </div>
 
                     {/* CPF */}
-                    <div className="flex-shrink-0 w-80">
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                      <div className="flex items-center gap-4 mb-6 h-20">
-                        <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/cpf.jpg"
                             alt="Logo CPF"
                             width={48}
                             height={48}
-                            className="object-contain"
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
                           />
                         </div>
-                        <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">CPF</h3>
+                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">CPF</h3>
                       </div>
-                      <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-[#013F63] text-sm"><strong>Vos droits :</strong> Conservés pendant le chômage</p>
-                        <p className="text-[#013F63] text-sm"><strong>Utilisation :</strong> Libre et immédiate</p>
-                        <p className="text-[#013F63] text-sm"><strong>Complément :</strong> Souvent complété par l'AIF</p>
-                        <p className="text-[#013F63] text-sm"><strong>Avantage :</strong> Démarches 100% en ligne</p>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Vos droits :</strong> Conservés pendant le chômage</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Utilisation :</strong> Libre et immédiate</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Complément :</strong> Souvent complété par l'AIF</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Avantage :</strong> Démarches 100% en ligne</p>
                       </div>
-                      <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                      <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         Consulter mon CPF
                       </a>
                       </div>
                     </div>
 
                     {/* Auto-financement */}
-                    <div className="flex-shrink-0 w-80">
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                      <div className="flex items-center gap-4 mb-6 h-20">
-                        <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/Logo-Financement-Personnel.webp"
                             alt="Logo Financement Personnel"
                             width={48}
                             height={48}
-                            className="object-contain"
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
                           />
                         </div>
-                        <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Auto-financement</h3>
+                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Auto-financement</h3>
                       </div>
-                      <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-[#013F63] text-sm"><strong>Facilités :</strong> Paiement en 3x, 6x ou 9x avec notre partenaire financier</p>
-                        <p className="text-[#013F63] text-sm"><strong>Réduction :</strong> Tarifs préférentiels possibles</p>
-                        <p className="text-[#013F63] text-sm"><strong>Rapidité :</strong> Démarrage immédiat</p>
-                        <p className="text-[#013F63] text-sm"><strong>ROI :</strong> Investissement pour retour à l'emploi</p>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Facilités :</strong> Paiement en 3x, 6x ou 9x avec notre partenaire financier</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Réduction :</strong> Tarifs préférentiels possibles</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Rapidité :</strong> Démarrage immédiat</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>ROI :</strong> Investissement pour retour à l'emploi</p>
                       </div>
-                      <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
+                      <Link href="/contact" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
                         Étudier cette option
                       </Link>
                       </div>
                     </div>
 
                     {/* AGEFIPH */}
-                    <div className="flex-shrink-0 w-80">
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                      <div className="flex items-center gap-4 mb-6 h-20">
-                        <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/logo-agefiph.png"
                             alt="Logo AGEFIPH"
                             width={48}
                             height={48}
-                            className="object-contain"
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
                           />
                         </div>
-                        <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">AGEFIPH</h3>
+                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">AGEFIPH</h3>
                       </div>
-                      <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-[#013F63] text-sm"><strong>Public :</strong> Personnes en situation de handicap</p>
-                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Prise en charge totale ou partielle</p>
-                        <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
-                        <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Public :</strong> Personnes en situation de handicap</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Prise en charge totale ou partielle</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
                       </div>
-                      <a href="https://www.agefiph.fr/aides-handicap/aide-individuelle-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                      <a href="https://www.agefiph.fr/aides-handicap/aide-individuelle-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         En savoir plus AGEFIPH
                       </a>
                       </div>
                     </div>
 
                     {/* Aide Nouvelle-Aquitaine */}
-                    <div className="flex-shrink-0 w-80">
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                      <div className="flex items-center gap-4 mb-6 h-20">
-                        <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/logo-region-nouvelle-aquitaine.svg"
                             alt="Logo Région Nouvelle-Aquitaine"
                             width={48}
                             height={48}
-                            className="object-contain"
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
                           />
                         </div>
-                        <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Aide individuelle Nouvelle-Aquitaine</h3>
+                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Aide individuelle Nouvelle-Aquitaine</h3>
                       </div>
-                      <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-[#013F63] text-sm"><strong>Montant :</strong> 5 000€ maximum par année de formation</p>
-                        <p className="text-[#013F63] text-sm"><strong>Public :</strong> Demandeurs d'emploi résidant en Nouvelle-Aquitaine</p>
-                        <p className="text-[#013F63] text-sm"><strong>Formations :</strong> Inscrites au RNCP, organismes certifiés Qualiopi</p>
-                        <p className="text-[#013F63] text-sm"><strong>Délai :</strong> Dépôt 5 semaines avant l'entrée en formation</p>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Montant :</strong> 5 000€ maximum par année de formation</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Public :</strong> Demandeurs d'emploi résidant en Nouvelle-Aquitaine</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Formations :</strong> Inscrites au RNCP, organismes certifiés Qualiopi</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Délai :</strong> Dépôt 5 semaines avant l'entrée en formation</p>
                       </div>
-                      <a href="https://les-aides.nouvelle-aquitaine.fr/economie-et-emploi/aide-individuelle-regionale-la-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                      <a href="https://les-aides.nouvelle-aquitaine.fr/economie-et-emploi/aide-individuelle-regionale-la-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         Faire ma demande
                       </a>
                       </div>
                     </div>
 
                     {/* FSE */}
-                    <div className="flex-shrink-0 w-80">
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                      <div className="flex items-center gap-4 mb-6 h-20">
-                        <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/logo-fse.png"
                             alt="Logo FSE - Fonds Social Européen"
                             width={48}
                             height={48}
-                            className="object-contain"
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
                           />
                         </div>
-                        <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">FSE (Fonds Social Européen)</h3>
+                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">FSE (Fonds Social Européen)</h3>
                       </div>
-                      <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Cofinancement européen des formations</p>
-                        <p className="text-[#013F63] text-sm"><strong>Public :</strong> Demandeurs d'emploi peu qualifiés</p>
-                        <p className="text-[#013F63] text-sm"><strong>Objectif :</strong> Insertion professionnelle et montée en compétences</p>
-                        <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Via organismes de formation partenaires</p>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Cofinancement européen des formations</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Public :</strong> Demandeurs d'emploi peu qualifiés</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Objectif :</strong> Insertion professionnelle et montée en compétences</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> Via organismes de formation partenaires</p>
                       </div>
-                      <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                      <Link href="/contact" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         Étudier cette option
                       </Link>
                       </div>
@@ -461,111 +457,111 @@ export default function Financement() {
                 <>
                   {/* Options de financement pour indépendants avec défilement horizontal */}
                   <div className="overflow-x-auto px-4 py-8">
-                    <div className="flex gap-6 w-max pl-4 pr-4">
+                    <div className="flex gap-4 md:gap-6 w-max pl-4 pr-4">
                     
                     {/* FAF */}
-                    <div className="flex-shrink-0 w-80">
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                      <div className="flex items-center gap-4 mb-6 h-20">
-                        <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/logo-faf.jpeg"
                             alt="Logo FAF"
                             width={48}
                             height={48}
-                            className="object-contain"
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
                           />
                         </div>
-                        <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">FAF (Fonds d'Assurance Formation)</h3>
+                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">FAF (Fonds d'Assurance Formation)</h3>
                       </div>
-                      <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-[#013F63] text-sm"><strong>FIFPL :</strong> Professions libérales</p>
-                        <p className="text-[#013F63] text-sm"><strong>AGEFICE :</strong> Commerçants et dirigeants</p>
-                        <p className="text-[#013F63] text-sm"><strong>FAFCEA :</strong> Artisans</p>
-                        <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Être à jour des cotisations</p>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>FIFPL :</strong> Professions libérales</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>AGEFICE :</strong> Commerçants et dirigeants</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>FAFCEA :</strong> Artisans</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Être à jour des cotisations</p>
                       </div>
-                      <a href="https://entreprendre.service-public.fr/vosdroits/F31148" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                      <a href="https://entreprendre.service-public.fr/vosdroits/F31148" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         Identifier mon FAF
                       </a>
                       </div>
                     </div>
 
                     {/* CPF */}
-                    <div className="flex-shrink-0 w-80">
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                      <div className="flex items-center gap-4 mb-6 h-20">
-                        <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/cpf.jpg"
                             alt="Logo CPF"
                             width={48}
                             height={48}
-                            className="object-contain"
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
                           />
                         </div>
-                        <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">CPF</h3>
+                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">CPF</h3>
                       </div>
-                      <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-[#013F63] text-sm"><strong>Alimentation :</strong> 500€/an si vous cotisez</p>
-                        <p className="text-[#013F63] text-sm"><strong>Utilisation :</strong> Libre choix des formations</p>
-                        <p className="text-[#013F63] text-sm"><strong>Cumul :</strong> Possible avec financement FAF</p>
-                        <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> 100% en ligne</p>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Alimentation :</strong> 500€/an si vous cotisez</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Utilisation :</strong> Libre choix des formations</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Cumul :</strong> Possible avec financement FAF</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> 100% en ligne</p>
                       </div>
-                      <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                      <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         Vérifier mes droits CPF
                       </a>
                       </div>
                     </div>
 
                     {/* Auto-financement */}
-                    <div className="flex-shrink-0 w-80">
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                      <div className="flex items-center gap-4 mb-6 h-20">
-                        <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/Logo-Financement-Personnel.webp"
                             alt="Logo Financement Personnel"
                             width={48}
                             height={48}
-                            className="object-contain"
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
                           />
                         </div>
-                        <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Auto-financement</h3>
+                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Auto-financement</h3>
                       </div>
-                      <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-[#013F63] text-sm"><strong>Déduction fiscale :</strong> Charge déductible de votre activité</p>
-                        <p className="text-[#013F63] text-sm"><strong>Facilités :</strong> Paiement en 3x, 6x ou 9x avec notre partenaire financier</p>
-                        <p className="text-[#013F63] text-sm"><strong>ROI :</strong> Développement de votre activité</p>
-                        <p className="text-[#013F63] text-sm"><strong>Flexibilité :</strong> Démarrage immédiat</p>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Déduction fiscale :</strong> Charge déductible de votre activité</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Facilités :</strong> Paiement en 3x, 6x ou 9x avec notre partenaire financier</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>ROI :</strong> Développement de votre activité</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Flexibilité :</strong> Démarrage immédiat</p>
                       </div>
-                      <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
+                      <Link href="/contact" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
                         Étudier cette option
                       </Link>
                       </div>
                     </div>
 
                     {/* AGEFIPH */}
-                    <div className="flex-shrink-0 w-80">
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                      <div className="flex items-center gap-4 mb-6 h-20">
-                        <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/logo-agefiph.png"
                             alt="Logo AGEFIPH"
                             width={48}
                             height={48}
-                            className="object-contain"
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
                           />
                         </div>
-                        <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">AGEFIPH</h3>
+                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">AGEFIPH</h3>
                       </div>
-                      <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-[#013F63] text-sm"><strong>Public :</strong> Personnes en situation de handicap</p>
-                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Prise en charge totale ou partielle</p>
-                        <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
-                        <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Public :</strong> Personnes en situation de handicap</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Prise en charge totale ou partielle</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
                       </div>
-                      <a href="https://www.agefiph.fr/aides-handicap/aide-individuelle-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                      <a href="https://www.agefiph.fr/aides-handicap/aide-individuelle-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         En savoir plus AGEFIPH
                       </a>
                       </div>
@@ -579,111 +575,111 @@ export default function Financement() {
                 <>
                   {/* Options de financement pour employeurs avec défilement horizontal */}
                   <div className="overflow-x-auto px-4 py-8">
-                    <div className="flex gap-6 w-max pl-4 pr-4">
+                    <div className="flex gap-4 md:gap-6 w-max pl-4 pr-4">
                     
                     {/* OPCO */}
-                    <div className="flex-shrink-0 w-80">
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                      <div className="flex items-center gap-4 mb-6 h-20">
-                        <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/logo-opco.webp"
                             alt="Logo OPCO"
                             width={48}
                             height={48}
-                            className="object-contain"
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
                           />
                         </div>
-                        <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">OPCO</h3>
+                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">OPCO</h3>
                       </div>
-                      <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Prise en charge partielle ou totale</p>
-                        <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Formation en lien avec l'activité</p>
-                        <p className="text-[#013F63] text-sm"><strong>Démarches :</strong> Convention de formation</p>
-                        <p className="text-[#013F63] text-sm"><strong>Avantage :</strong> Développement des compétences</p>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Prise en charge partielle ou totale</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Formation en lien avec l'activité</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> Convention de formation</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Avantage :</strong> Développement des compétences</p>
                       </div>
-                      <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
+                      <Link href="/contact" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
                         Étudier cette option
                       </Link>
                       </div>
                     </div>
 
                     {/* Plan de développement des compétences */}
-                    <div className="flex-shrink-0 w-80">
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                      <div className="flex items-center gap-4 mb-6 h-20">
-                        <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/logo entreprise.jpg"
                             alt="Logo Plan de développement des compétences"
                             width={48}
                             height={48}
-                            className="object-contain"
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
                           />
                         </div>
-                        <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Plan de développement des compétences</h3>
+                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Plan de développement des compétences</h3>
                       </div>
-                      <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> 100% pris en charge par l'employeur</p>
-                        <p className="text-[#013F63] text-sm"><strong>Avantages :</strong> Formation sur temps de travail</p>
-                        <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Intégration dans le plan annuel</p>
-                        <p className="text-[#013F63] text-sm"><strong>Bénéfice :</strong> Montée en compétences des équipes</p>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> 100% pris en charge par l'employeur</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Avantages :</strong> Formation sur temps de travail</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Intégration dans le plan annuel</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Bénéfice :</strong> Montée en compétences des équipes</p>
                       </div>
-                      <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
+                      <Link href="/contact" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
                         Étudier cette option
                       </Link>
                       </div>
                     </div>
 
                     {/* FNE-Formation */}
-                    <div className="flex-shrink-0 w-80">
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                      <div className="flex items-center gap-4 mb-6 h-20">
-                        <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg"
                             alt="Logo FNE-Formation"
                             width={48}
                             height={48}
-                            className="object-contain"
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
                           />
                         </div>
-                        <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">FNE-Formation</h3>
+                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">FNE-Formation</h3>
                       </div>
-                      <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-[#013F63] text-sm"><strong>Contexte :</strong> Difficultés économiques temporaires</p>
-                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Prise en charge par France Travail</p>
-                        <p className="text-[#013F63] text-sm"><strong>Objectif :</strong> Maintenir l'emploi et les compétences</p>
-                        <p className="text-[#013F63] text-sm"><strong>Conditions :</strong> Accord de branche ou d'entreprise</p>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Contexte :</strong> Difficultés économiques temporaires</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Prise en charge par France Travail</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Objectif :</strong> Maintenir l'emploi et les compétences</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Accord de branche ou d'entreprise</p>
                       </div>
-                      <a href="https://www.francetravail.fr/employeur/recruter-et-former/former-ses-salaries/fne-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                      <a href="https://www.francetravail.fr/employeur/recruter-et-former/former-ses-salaries/fne-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         En savoir plus FNE-Formation
                       </a>
                       </div>
                     </div>
 
                     {/* Pro-A */}
-                    <div className="flex-shrink-0 w-80">
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
-                      <div className="flex items-center gap-4 mb-6 h-20">
-                        <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
                             src="/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg"
                             alt="Logo Pro-A"
                             width={48}
                             height={48}
-                            className="object-contain"
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
                           />
                         </div>
-                        <h3 className="text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Pro-A</h3>
+                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Pro-A</h3>
                       </div>
-                      <div className="space-y-3 mb-6 flex-grow">
-                        <p className="text-[#013F63] text-sm"><strong>Principe :</strong> Formation pendant l'activité partielle</p>
-                        <p className="text-[#013F63] text-sm"><strong>Financement :</strong> Prise en charge par France Travail</p>
-                        <p className="text-[#013F63] text-sm"><strong>Durée :</strong> Jusqu'à 2 ans maximum</p>
-                        <p className="text-[#013F63] text-sm"><strong>Avantage :</strong> Maintien des compétences</p>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Principe :</strong> Formation pendant l'activité partielle</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Prise en charge par France Travail</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Durée :</strong> Jusqu'à 2 ans maximum</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Avantage :</strong> Maintien des compétences</p>
                       </div>
-                      <a href="https://www.francetravail.fr/employeur/recruter-et-former/former-ses-salaries/pro-a" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                      <a href="https://www.francetravail.fr/employeur/recruter-et-former/former-ses-salaries/pro-a" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         En savoir plus Pro-A
                       </a>
                       </div>
