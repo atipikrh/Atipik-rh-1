@@ -560,9 +560,14 @@ export default function FormationFPA() {
                     {openModules['evaluation'] && (
                       <div className="p-3 border-t border-gray-100">
                         <div className="space-y-3 text-[#013F63] text-sm">
-                          <p>• Des évaluations formatives sont réalisées tout au long de la formation</p>
-                          <p>• L'examen de certification du Titre professionnel de Formateur Professionnel d'Adultes (FPA) comprend une mise en situation professionnelle, un dossier professionnel et un entretien avec le jury</p>
-                          <p>• Possibilité de validation par blocs de compétences professionnelles (CCP)</p>
+                          <p>Des évaluations formatives sont réalisées tout au long de la formation. Pour obtenir votre titre professionnel de Formateur professionnel d'adultes, vous devrez réaliser 4 épreuves. Elles ont pour but de prouver au jury que vous avez acquis les compétences nécessaires pour devenir formateur.</p>
+                          <p className="font-semibold">La durée totale de l'épreuve est de 3h :</p>
+                          <div className="ml-4 space-y-1">
+                            <p>• 55 minutes de mise en situation professionnelle</p>
+                            <p>• 20 minutes d'entretien technique</p>
+                            <p>• 1h35 de questionnement à partir de productions : présentation orale par le candidat et questionnement par le jury. Le questionnement est organisé en 4 parties correspondant aux quatre activités types.</p>
+                            <p>• 10 minutes d'entretien final</p>
+                          </div>
                         </div>
                       </div>
                     )}
