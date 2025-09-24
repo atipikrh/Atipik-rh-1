@@ -217,7 +217,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mobile-menu-container">
+          <div className="lg:hidden mobile-menu-container z-[9999] relative">
             <div className="bg-white border-t border-gray-200 shadow-lg">
               <div className="px-4 py-6 space-y-4">
                 {/* Formations */}
