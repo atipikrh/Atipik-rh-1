@@ -238,7 +238,7 @@ export default function FormationFPA() {
     {
       id: 1,
       titre: "Concevoir et préparer",
-      sousTitre: "Analyse des besoins et conception pédagogique",
+      sousTitre: "C.C.P 1",
       contenu: [
         "Analyse des besoins de formation",
         "Conception de séquences pédagogiques", 
@@ -248,7 +248,7 @@ export default function FormationFPA() {
     {
       id: 2,
       titre: "Animer et évaluer",
-      sousTitre: "Animation de formation et évaluation des acquis",
+      sousTitre: "C.C.P 2",
       contenu: [
         "Animation de séances de formation",
         "Adaptation aux publics",
@@ -258,11 +258,22 @@ export default function FormationFPA() {
     {
       id: 3,
       titre: "Accompagner et orienter",
-      sousTitre: "Accompagnement individuel et orientation",
+      sousTitre: "C.C.P 3",
       contenu: [
         "Accompagnement individuel",
         "Conseil en évolution professionnelle",
         "Orientation et parcours"
+      ]
+    },
+    {
+      id: 4,
+      titre: "Accompagner les apprenants en formation",
+      sousTitre: "C.C.P 4",
+      contenu: [
+        "Accompagner les apprenants dans leur parcours de formation",
+        "Accueillir un apprenant en formation et co-construire son parcours",
+        "Tutorer les apprenants à distance",
+        "Accompagner le développement professionnel des apprenants"
       ]
     }
   ]
@@ -312,7 +323,7 @@ export default function FormationFPA() {
               
               {/* Titre principal */}
               <div className="text-center max-w-4xl mx-auto">
-                <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
+                <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
                   Formation<br/>
                   <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Formateur Professionnel d'Adultes</span>
                 </h1>
@@ -569,10 +580,10 @@ export default function FormationFPA() {
               <div className="max-w-7xl mx-auto">
                 
                 <div className="text-center mb-12">
-                  <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    Les <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">3 modules</span>
+                  <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
+                    Les <span className="text-[#013F63]">4</span> <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">C.C.P</span>
                   </h2>
-                  <p className="text-lg text-[#013F63] leading-relaxed max-w-3xl mx-auto">
+                  <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
                     Un parcours complet pour maîtriser tous les aspects du métier de formateur
                   </p>
                 </div>

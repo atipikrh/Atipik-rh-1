@@ -311,7 +311,8 @@ export default function FormationCIP() {
       icon: "Play",
       items: [
         "Ecoles de la « Nouvelle chance », un espoir pour la jeunesse méditerranéenne, Les Hauts Parleurs",
-        "Projets d'insertion, David Desramé"
+        "Projets d.insertion, David Desramé",
+        "Compétences comportementales : quels profils s.épanouissent dans le métier de CIP ? - Webinar Monkey tie"
       ]
     }
   ]
@@ -362,7 +363,7 @@ export default function FormationCIP() {
                 <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#013F63]">
                   <div className="space-y-4 text-[#013F63] italic text-lg leading-relaxed text-center">
                     <p>
-                      Dans un contexte économique en mutation, le conseiller en insertion professionnelle agit comme un véritable médiateur entre candidats et entreprises. Il accompagne les personnes dans la levée des freins et la construction de parcours vers un emploi durable. Il soutient les entreprises dans leurs besoins de recrutement et de fidélisation des talents. Son rôle d'interface favorise la mise en relation, le dialogue et la coopération entre acteurs du territoire. Le CIP est avant tout un métier de lien, de contact et de territoire.
+                      Dans un contexte économique en mutation, le conseiller en insertion professionnelle accompagne à la fois les personnes dans la levée des freins, la construction de parcours vers un emploie durable et il soutient également les entreprises dans leurs besoins de recrutement et de fidélisation des talents.<br/><br/>Le CIP est avant tout un métier de lien, de contact et de territoire.
                     </p>
                   </div>
                   
@@ -1409,9 +1410,23 @@ export default function FormationCIP() {
                               {doc.items.map((item, itemIndex) => (
                                 <div key={itemIndex} className="flex items-start gap-3">
                                   <div className="w-1.5 h-1.5 bg-[#013F63] rounded-full mt-2 flex-shrink-0"></div>
-                                  <p className="text-[#013F63] text-sm leading-relaxed">
-                                    {item}
-                                  </p>
+                                  <div className="text-[#013F63] text-sm leading-relaxed">
+                                    {item.includes("Webinar Monkey tie") ? (
+                                      <>
+                                        {item.replace(" - Webinar Monkey tie", "")}{" - "}
+                                        <a 
+                                          href="https://webikeo.fr/webinar/competences-comportementales-quels-profils-s-epanouissent-dans-le-metier-de-conseiller-en-insertion-professionnelle"
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="text-orange-500 hover:text-orange-600 underline transition-colors"
+                                        >
+                                          Webinar Monkey tie
+                                        </a>
+                                      </>
+                                    ) : (
+                                      item
+                                    )}
+                                  </div>
                                 </div>
                               ))}
                             </div>

@@ -91,7 +91,7 @@ export default function Certification() {
                         href="/documents/certifications/certificat-qualiopi.pdf" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="block hover:scale-105 transition-transform duration-300 cursor-pointer"
+                        className="relative block hover:scale-105 transition-transform duration-300 cursor-pointer group"
                         title="Voir le certificat Qualiopi (PDF)"
                       >
                         <Image 
@@ -101,6 +101,11 @@ export default function Certification() {
                           height={250}
                           className="object-contain w-full h-full max-w-[250px] hover:opacity-90 transition-opacity"
                         />
+                        {/* Tooltip au survol */}
+                        <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none z-10">
+                          Voir le certificat
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
+                        </div>
                       </a>
                     </div>
                     <div className="mt-6 flex justify-center">
