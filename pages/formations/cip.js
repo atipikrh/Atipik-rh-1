@@ -1039,16 +1039,10 @@ export default function FormationCIP() {
 
                   <div className="relative">
                     
-                    {/* Cartes de financement - Responsive */}
-                    <div className="overflow-hidden pb-4">
-                      {/* Version Mobile - Une carte à la fois */}
-                      <div 
-                        className="flex transition-transform duration-300 ease-in-out md:hidden"
-                        style={{ transform: `translateX(-${currentFinancementIndex * 100}%)` }}
-                      >
-                        {financements.map((financement, index) => (
-                          <div key={financement.id} className="w-full flex-shrink-0 px-2">
-                            <div className="text-center p-6 bg-white rounded-xl border border-gray-200 shadow-lg h-48 flex flex-col justify-center">
+                    {/* Cartes de financement */}
+                    <div className="grid md:grid-cols-3 gap-6 px-12">
+                      {getVisibleFinancements().map((financement) => (
+                        <div key={financement.id} className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
                           <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
                             {financement.logo ? (
                               <Image
@@ -1070,39 +1064,8 @@ export default function FormationCIP() {
                           </div>
                           <h5 className="font-bold text-[#013F63] text-sm mb-2 flex-grow">{financement.titre}</h5>
                           <p className="text-xs text-[#013F63]">{financement.description}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                      
-                      {/* Version Desktop - Trois cartes à la fois */}
-                      <div className="hidden md:grid md:grid-cols-3 gap-6 px-12">
-                        {getVisibleFinancements().map((financement) => (
-                          <div key={financement.id} className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
-                            <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
-                              {financement.logo ? (
-                                <Image
-                                  src={financement.logo}
-                                  alt={`Logo ${financement.titre}`}
-                                  width={financement.logoWidth}
-                                  height={financement.logoHeight}
-                                  className="object-contain"
-                                />
-                              ) : (
-                                <div className={`${financement.bgColor} rounded-lg p-2 w-full h-full flex items-center justify-center`}>
-                                  <span className={`${financement.textColor} font-bold text-xs text-center leading-tight`}>
-                                    {financement.text.split('\n').map((line, i) => (
-                                      <div key={i}>{line}</div>
-                                    ))}
-                                  </span>
-                                </div>
-                              )}
-                            </div>
-                            <h5 className="font-bold text-[#013F63] text-sm mb-2 flex-grow">{financement.titre}</h5>
-                            <p className="text-xs text-[#013F63]">{financement.description}</p>
-                          </div>
-                        ))}
-                      </div>
+                        </div>
+                      ))}
                     </div>
 
                     {/* Flèches de navigation */}
@@ -1490,7 +1453,7 @@ export default function FormationCIP() {
                     >
                       {documentationItems.map((doc, index) => (
                         <div key={index} className="w-full flex-shrink-0 px-2">
-                          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 min-h-[300px]">
+                          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 min-h-[250px]">
                           <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 h-full">
                             <div className="flex items-center gap-3 mb-6">
                               <div className={`w-12 h-12 ${index % 2 === 0 ? 'bg-blue-100' : 'bg-orange-100'} rounded-full flex items-center justify-center`}>
