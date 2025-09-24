@@ -19,6 +19,8 @@ export default function FormationCIP() {
   const [currentFranceStatIndex, setCurrentFranceStatIndex] = useState(0)
   const [currentDocIndex, setCurrentDocIndex] = useState(0)
   const [currentFinancementIndex, setCurrentFinancementIndex] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
+  const [isClient, setIsClient] = useState(false)
 
   // Données des financements
   const financements = [
@@ -113,6 +115,19 @@ export default function FormationCIP() {
       [sectionId]: !prev[sectionId]
     }))
   }
+
+  // Détecter la taille d'écran après l'hydratation pour éviter les erreurs SSR
+  useEffect(() => {
+    setIsClient(true)
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    checkIsMobile()
+    window.addEventListener('resize', checkIsMobile)
+    
+    return () => window.removeEventListener('resize', checkIsMobile)
+  }, [])
 
 
   // Fonction pour animer les compteurs
@@ -1040,7 +1055,7 @@ export default function FormationCIP() {
                   <div className="relative">
                     
                     {/* Cartes de financement */}
-                    <div className="grid md:grid-cols-3 gap-6 px-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-12">
                       {getVisibleFinancements().map((financement) => (
                         <div key={financement.id} className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
                           <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
@@ -1192,7 +1207,7 @@ export default function FormationCIP() {
                   {/* Flèche gauche */}
                   <button
                     onClick={() => {
-                      const maxIndex = typeof window !== 'undefined' && window.innerWidth < 768 
+                      const maxIndex = isClient && isMobile 
                         ? stats.length - 1 
                         : Math.max(0, stats.length - 3);
                       const newIndex = currentStatIndex > 0 ? currentStatIndex - 1 : maxIndex;
@@ -1207,7 +1222,7 @@ export default function FormationCIP() {
                   {/* Flèche droite */}
                   <button
                     onClick={() => {
-                      const maxIndex = typeof window !== 'undefined' && window.innerWidth < 768 
+                      const maxIndex = isClient && isMobile 
                         ? stats.length - 1 
                         : stats.length - 3;
                       const newIndex = currentStatIndex < maxIndex ? currentStatIndex + 1 : 0;
@@ -1223,7 +1238,7 @@ export default function FormationCIP() {
                   <div className="overflow-hidden pb-4">
                     <div 
                       className="flex transition-transform duration-300 ease-in-out"
-                      style={{ transform: `translateX(-${currentStatIndex * (typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 33.333)}%)` }}
+                      style={{ transform: `translateX(-${currentStatIndex * (isClient && isMobile ? 100 : 33.333)}%)` }}
                     >
                       {stats.map((stat, index) => (
                         <div key={index} className="w-full md:w-1/3 flex-shrink-0 px-3">
@@ -1278,7 +1293,7 @@ export default function FormationCIP() {
                   {/* Flèche gauche */}
                   <button
                     onClick={() => {
-                      const maxIndex = typeof window !== 'undefined' && window.innerWidth < 768 
+                      const maxIndex = isClient && isMobile 
                         ? franceCompetencesStats.length - 1 
                         : Math.max(0, franceCompetencesStats.length - 3);
                       const newIndex = currentFranceStatIndex > 0 ? currentFranceStatIndex - 1 : maxIndex;
@@ -1293,7 +1308,7 @@ export default function FormationCIP() {
                   {/* Flèche droite */}
                   <button
                     onClick={() => {
-                      const maxIndex = typeof window !== 'undefined' && window.innerWidth < 768 
+                      const maxIndex = isClient && isMobile 
                         ? franceCompetencesStats.length - 1 
                         : franceCompetencesStats.length - 3;
                       const newIndex = currentFranceStatIndex < maxIndex ? currentFranceStatIndex + 1 : 0;
@@ -1348,7 +1363,7 @@ export default function FormationCIP() {
                   {/* Indicateurs de position */}
                   <div className="flex justify-center mt-6 space-x-2">
                     {Array.from({ 
-                      length: typeof window !== 'undefined' && window.innerWidth < 768 
+                      length: isClient && isMobile 
                         ? franceCompetencesStats.length 
                         : Math.max(1, franceCompetencesStats.length - 2) 
                     }).map((_, index) => (
@@ -1418,10 +1433,10 @@ export default function FormationCIP() {
                   <div className="overflow-hidden pb-4">
                     <div 
                       className="flex transition-transform duration-300 ease-in-out"
-                      style={{ transform: `translateX(-${currentDocIndex * 50}%)` }}
+                      style={{ transform: `translateX(-${currentDocIndex * (isClient && isMobile ? 100 : 50)}%)` }}
                     >
                       {documentationItems.map((doc, index) => (
-                        <div key={index} className="w-1/2 flex-shrink-0 px-3">
+                        <div key={index} className="w-full md:w-1/2 flex-shrink-0 px-3">
                           <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 h-full">
                             <div className="flex items-center gap-3 mb-6">
                               <div className={`w-12 h-12 ${index % 2 === 0 ? 'bg-blue-100' : 'bg-orange-100'} rounded-full flex items-center justify-center`}>
