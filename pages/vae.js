@@ -660,7 +660,7 @@ export default function VAE() {
                             <span className="text-white font-bold text-sm">{etape.id}</span>
                           </div>
                           <div className="text-left">
-                            <h3 className="text-base lg:text-lg font-bold">Étape {etape.id} - {etape.titre}</h3>
+                            <h3 className="text-base lg:text-lg font-bold">{etape.titre}</h3>
                             <p className="text-white/90 text-sm">{etape.sousTitre}</p>
                           </div>
                         </div>
