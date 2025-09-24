@@ -217,7 +217,8 @@ export default function Header({ isFixed = false, isHomePage = false }) {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mobile-menu-container z-[9999] relative">
+          <div className="lg:hidden mobile-menu-container fixed top-0 left-0 w-full h-full z-[10000] bg-black/20 backdrop-blur-sm">
+            <div className="absolute top-20 left-0 w-full">
             <div className="bg-white border-t border-gray-200 shadow-lg">
               <div className="px-4 py-6 space-y-4">
                 {/* Formations */}
@@ -319,6 +320,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                   Contact
                 </Link>
               </div>
+            </div>
             </div>
           </div>
         )}
