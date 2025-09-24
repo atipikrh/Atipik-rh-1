@@ -395,32 +395,6 @@ export default function Financement() {
                       </div>
                     </div>
 
-                    {/* Aide Nouvelle-Aquitaine */}
-                    <div className="flex-shrink-0 w-72 md:w-80">
-                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
-                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
-                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
-                          <Image
-                            src="/images/financements/logo-region-nouvelle-aquitaine.svg"
-                            alt="Logo Région Nouvelle-Aquitaine"
-                            width={48}
-                            height={48}
-                            className="object-contain w-6 h-6 md:w-12 md:h-12"
-                          />
-                        </div>
-                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Aide individuelle Nouvelle-Aquitaine</h3>
-                      </div>
-                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Montant :</strong> 5 000€ maximum par année de formation</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Public :</strong> Demandeurs d'emploi résidant en Nouvelle-Aquitaine</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Formations :</strong> Inscrites au RNCP, organismes certifiés Qualiopi</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Délai :</strong> Dépôt 5 semaines avant l'entrée en formation</p>
-                      </div>
-                      <a href="https://les-aides.nouvelle-aquitaine.fr/economie-et-emploi/aide-individuelle-regionale-la-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
-                        Faire ma demande
-                      </a>
-                      </div>
-                    </div>
 
                     {/* FSE */}
                     <div className="flex-shrink-0 w-72 md:w-80">

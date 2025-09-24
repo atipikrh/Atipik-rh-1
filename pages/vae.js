@@ -56,14 +56,6 @@ export default function VAE() {
       logoHeight: 60
     },
     {
-      id: 'region',
-      logo: '/images/financements/logo-region-nouvelle-aquitaine.svg',
-      titre: 'Aide individuelle de la Région Nouvelle Aquitaine',
-      description: 'Demandeurs d\'emploi',
-      logoWidth: 60,
-      logoHeight: 60
-    },
-    {
       id: 'franceTravail',
       logo: '/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg',
       titre: 'France Travail',
