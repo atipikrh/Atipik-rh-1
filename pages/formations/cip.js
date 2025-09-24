@@ -1039,10 +1039,16 @@ export default function FormationCIP() {
 
                   <div className="relative">
                     
-                    {/* Cartes de financement */}
-                    <div className="grid md:grid-cols-3 gap-6 px-12">
-                      {getVisibleFinancements().map((financement) => (
-                        <div key={financement.id} className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+                    {/* Cartes de financement - Responsive */}
+                    <div className="overflow-hidden pb-4">
+                      {/* Version Mobile - Une carte à la fois */}
+                      <div 
+                        className="flex transition-transform duration-300 ease-in-out md:hidden"
+                        style={{ transform: `translateX(-${currentFinancementIndex * 100}%)` }}
+                      >
+                        {financements.map((financement, index) => (
+                          <div key={financement.id} className="w-full flex-shrink-0 px-2">
+                            <div className="text-center p-6 bg-white rounded-xl border border-gray-200 shadow-lg h-48 flex flex-col justify-center">
                           <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
                             {financement.logo ? (
                               <Image
@@ -1064,8 +1070,39 @@ export default function FormationCIP() {
                           </div>
                           <h5 className="font-bold text-[#013F63] text-sm mb-2 flex-grow">{financement.titre}</h5>
                           <p className="text-xs text-[#013F63]">{financement.description}</p>
-                        </div>
-                      ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      
+                      {/* Version Desktop - Trois cartes à la fois */}
+                      <div className="hidden md:grid md:grid-cols-3 gap-6 px-12">
+                        {getVisibleFinancements().map((financement) => (
+                          <div key={financement.id} className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+                            <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
+                              {financement.logo ? (
+                                <Image
+                                  src={financement.logo}
+                                  alt={`Logo ${financement.titre}`}
+                                  width={financement.logoWidth}
+                                  height={financement.logoHeight}
+                                  className="object-contain"
+                                />
+                              ) : (
+                                <div className={`${financement.bgColor} rounded-lg p-2 w-full h-full flex items-center justify-center`}>
+                                  <span className={`${financement.textColor} font-bold text-xs text-center leading-tight`}>
+                                    {financement.text.split('\n').map((line, i) => (
+                                      <div key={i}>{line}</div>
+                                    ))}
+                                  </span>
+                                </div>
+                              )}
+                            </div>
+                            <h5 className="font-bold text-[#013F63] text-sm mb-2 flex-grow">{financement.titre}</h5>
+                            <p className="text-xs text-[#013F63]">{financement.description}</p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
 
                     {/* Flèches de navigation */}
@@ -1192,7 +1229,10 @@ export default function FormationCIP() {
                   {/* Flèche gauche */}
                   <button
                     onClick={() => {
-                      const newIndex = currentStatIndex > 0 ? currentStatIndex - 1 : Math.max(0, stats.length - 3);
+                      const maxIndex = typeof window !== 'undefined' && window.innerWidth < 768 
+                        ? stats.length - 1 
+                        : Math.max(0, stats.length - 3);
+                      const newIndex = currentStatIndex > 0 ? currentStatIndex - 1 : maxIndex;
                       setCurrentStatIndex(newIndex);
                     }}
                     className="absolute left-0 -translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
@@ -1204,7 +1244,10 @@ export default function FormationCIP() {
                   {/* Flèche droite */}
                   <button
                     onClick={() => {
-                      const newIndex = currentStatIndex < stats.length - 3 ? currentStatIndex + 1 : 0;
+                      const maxIndex = typeof window !== 'undefined' && window.innerWidth < 768 
+                        ? stats.length - 1 
+                        : stats.length - 3;
+                      const newIndex = currentStatIndex < maxIndex ? currentStatIndex + 1 : 0;
                       setCurrentStatIndex(newIndex);
                     }}
                     className="absolute right-0 translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
@@ -1213,10 +1256,30 @@ export default function FormationCIP() {
                     <ChevronRight className="w-6 h-6 text-[#013F63]" />
                   </button>
 
-                  {/* Conteneur du carousel */}
+                  {/* Conteneur du carousel - Responsive */}
                   <div className="overflow-hidden pb-4">
+                    {/* Version Mobile - Une carte à la fois */}
                     <div 
-                      className="flex transition-transform duration-300 ease-in-out"
+                      className="flex transition-transform duration-300 ease-in-out md:hidden"
+                      style={{ transform: `translateX(-${currentStatIndex * 100}%)` }}
+                    >
+                      {stats.map((stat, index) => (
+                        <div key={index} className="w-full flex-shrink-0 px-2">
+                          <div className="bg-white rounded-2xl p-6 text-center shadow-lg border border-gray-100 h-32 flex flex-col justify-center">
+                            <div className="text-3xl font-bold text-[#013F63] mb-2">
+                              {animatedStats[index] || '0'}
+                            </div>
+                            <p className="text-[#013F63] text-sm font-medium">
+                              {stat.label}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Version Desktop - Trois cartes à la fois */}
+                    <div 
+                      className="hidden md:flex transition-transform duration-300 ease-in-out"
                       style={{ transform: `translateX(-${currentStatIndex * 33.333}%)` }}
                     >
                       {stats.map((stat, index) => (
@@ -1236,7 +1299,11 @@ export default function FormationCIP() {
 
                   {/* Indicateurs de position */}
                   <div className="flex justify-center mt-6 space-x-2">
-                    {Array.from({ length: Math.max(1, stats.length - 2) }).map((_, index) => (
+                    {Array.from({ 
+                      length: typeof window !== 'undefined' && window.innerWidth < 768 
+                        ? stats.length 
+                        : Math.max(1, stats.length - 2) 
+                    }).map((_, index) => (
                       <button
                         key={index}
                         onClick={() => setCurrentStatIndex(index)}
@@ -1387,7 +1454,10 @@ export default function FormationCIP() {
                   {/* Flèche gauche */}
                   <button
                     onClick={() => {
-                      const newIndex = currentDocIndex > 0 ? currentDocIndex - 1 : Math.max(0, documentationItems.length - 2);
+                      const maxIndex = typeof window !== 'undefined' && window.innerWidth < 768 
+                        ? documentationItems.length - 1 
+                        : Math.max(0, documentationItems.length - 2);
+                      const newIndex = currentDocIndex > 0 ? currentDocIndex - 1 : maxIndex;
                       setCurrentDocIndex(newIndex);
                     }}
                     className="absolute left-0 -translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
@@ -1399,7 +1469,10 @@ export default function FormationCIP() {
                   {/* Flèche droite */}
                   <button
                     onClick={() => {
-                      const newIndex = currentDocIndex < documentationItems.length - 2 ? currentDocIndex + 1 : 0;
+                      const maxIndex = typeof window !== 'undefined' && window.innerWidth < 768 
+                        ? documentationItems.length - 1 
+                        : documentationItems.length - 2;
+                      const newIndex = currentDocIndex < maxIndex ? currentDocIndex + 1 : 0;
                       setCurrentDocIndex(newIndex);
                     }}
                     className="absolute right-0 translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
@@ -1408,14 +1481,16 @@ export default function FormationCIP() {
                     <ChevronRight className="w-6 h-6 text-[#013F63]" />
                   </button>
 
-                  {/* Conteneur du carousel */}
+                  {/* Conteneur du carousel - Responsive */}
                   <div className="overflow-hidden pb-4">
+                    {/* Version Mobile - Une carte à la fois */}
                     <div 
-                      className="flex transition-transform duration-300 ease-in-out"
-                      style={{ transform: `translateX(-${currentDocIndex * 50}%)` }}
+                      className="flex transition-transform duration-300 ease-in-out md:hidden"
+                      style={{ transform: `translateX(-${currentDocIndex * 100}%)` }}
                     >
                       {documentationItems.map((doc, index) => (
-                        <div key={index} className="w-1/2 flex-shrink-0 px-3">
+                        <div key={index} className="w-full flex-shrink-0 px-2">
+                          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 min-h-[300px]">
                           <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 h-full">
                             <div className="flex items-center gap-3 mb-6">
                               <div className={`w-12 h-12 ${index % 2 === 0 ? 'bg-blue-100' : 'bg-orange-100'} rounded-full flex items-center justify-center`}>
