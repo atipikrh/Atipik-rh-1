@@ -19,6 +19,7 @@ export default function FormationCIP() {
   const [currentFranceStatIndex, setCurrentFranceStatIndex] = useState(0)
   const [currentDocIndex, setCurrentDocIndex] = useState(0)
   const [currentFinancementIndex, setCurrentFinancementIndex] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
 
   // Données des financements
   const financements = [
@@ -113,6 +114,18 @@ export default function FormationCIP() {
       [sectionId]: !prev[sectionId]
     }))
   }
+
+  // Détecter la taille d'écran pour mobile
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    checkIsMobile()
+    window.addEventListener('resize', checkIsMobile)
+    
+    return () => window.removeEventListener('resize', checkIsMobile)
+  }, [])
 
   // Fonction pour animer les compteurs
   const animateCounter = (start, end, duration, callback) => {
@@ -1271,7 +1284,8 @@ export default function FormationCIP() {
                   {/* Flèche gauche */}
                   <button
                     onClick={() => {
-                      const newIndex = currentFranceStatIndex > 0 ? currentFranceStatIndex - 1 : Math.max(0, franceCompetencesStats.length - 3);
+                      const maxIndex = isMobile ? franceCompetencesStats.length - 1 : Math.max(0, franceCompetencesStats.length - 3);
+                      const newIndex = currentFranceStatIndex > 0 ? currentFranceStatIndex - 1 : maxIndex;
                       setCurrentFranceStatIndex(newIndex);
                     }}
                     className="absolute left-0 -translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
@@ -1283,7 +1297,8 @@ export default function FormationCIP() {
                   {/* Flèche droite */}
                   <button
                     onClick={() => {
-                      const newIndex = currentFranceStatIndex < franceCompetencesStats.length - 3 ? currentFranceStatIndex + 1 : 0;
+                      const maxIndex = isMobile ? franceCompetencesStats.length - 1 : franceCompetencesStats.length - 3;
+                      const newIndex = currentFranceStatIndex < maxIndex ? currentFranceStatIndex + 1 : 0;
                       setCurrentFranceStatIndex(newIndex);
                     }}
                     className="absolute right-0 translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
@@ -1296,10 +1311,10 @@ export default function FormationCIP() {
                   <div className="overflow-hidden pb-4">
                     <div 
                       className="flex transition-transform duration-300 ease-in-out"
-                      style={{ transform: `translateX(-${currentFranceStatIndex * 33.333}%)` }}
+                      style={{ transform: `translateX(-${currentFranceStatIndex * (isMobile ? 100 : 33.333)}%)` }}
                     >
                       {franceCompetencesStats.map((stat, index) => (
-                        <div key={index} className="w-1/3 flex-shrink-0 px-3">
+                        <div key={index} className="w-full md:w-1/3 flex-shrink-0 px-3">
                           <div className="bg-white rounded-2xl p-4 text-center shadow-lg border border-gray-100 h-28 flex flex-col justify-center">
                             <div className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-2">
                         {animatedFranceStats[index] || '0'}
@@ -1315,7 +1330,7 @@ export default function FormationCIP() {
 
                   {/* Indicateurs de position */}
                   <div className="flex justify-center mt-6 space-x-2">
-                    {Array.from({ length: Math.max(1, franceCompetencesStats.length - 2) }).map((_, index) => (
+                    {Array.from({ length: isMobile ? franceCompetencesStats.length : Math.max(1, franceCompetencesStats.length - 2) }).map((_, index) => (
                       <button
                         key={index}
                         onClick={() => setCurrentFranceStatIndex(index)}
