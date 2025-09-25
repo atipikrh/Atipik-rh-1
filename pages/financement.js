@@ -107,6 +107,21 @@ export default function Financement() {
       buttonStyle: "primary",
       buttonLink: "https://www.agefiph.fr/aides-handicap/aide-individuelle-formation",
       external: true
+    },
+    {
+      logoSrc: "/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg",
+      logoAlt: "Logo Transition Pro",
+      title: "Transition Pro",
+      details: [
+        { label: "Contexte", value: "Projet de reconversion professionnelle" },
+        { label: "Financement", value: "Prise en charge totale par France Travail" },
+        { label: "Conditions", value: "Salarié en CDI depuis au moins 2 ans" },
+        { label: "Avantage", value: "Maintien du salaire pendant la formation" }
+      ],
+      buttonText: "En savoir plus Transition Pro",
+      buttonStyle: "primary",
+      buttonLink: "https://www.francetravail.fr/candidat/en-formation/transition-pro",
+      external: true
     }
   ];
 
