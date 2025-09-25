@@ -145,6 +145,15 @@ export default function CoralineAbadie() {
                       <p className="text-[#013F63] text-sm leading-relaxed">
                         Mon faire-part de naissance 😊 Comme une prédilection...
                       </p>
+                      <div className="mt-3">
+                        <Image
+                          src="/images/equipe/faire-part-coraline.jpg"
+                          alt="Faire-part de naissance de Coraline"
+                          width={200}
+                          height={150}
+                          className="rounded-lg shadow-md object-cover w-full h-auto"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
