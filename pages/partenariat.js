@@ -166,7 +166,7 @@ export default function Partenariat() {
                   <div className="text-center group flex flex-col justify-center pt-8">
                     <h3 className="text-xl font-bold text-[#013F63] mb-4">Réseau étendu</h3>
                     <p className="text-[#013F63] leading-relaxed">
-                      Accès à un large réseau d'entreprises locales et nationales
+                      Accès à un large réseau d'entreprises locales
                     </p>
                   </div>
 

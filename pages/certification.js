@@ -43,12 +43,97 @@ export default function Certification() {
             </div>
           </section>
 
+          {/* Formation & Handicap */}
+          <section className="py-8">
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <div className="grid lg:grid-cols-2 gap-8 items-center">
+                  <div className="text-center lg:text-left">
+                    <div className="text-center lg:text-left mb-8">
+                      <h2 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-6">
+                        Handi<span className="text-orange-500 font-brittany text-3xl lg:text-4xl">accueillant</span>
+                      </h2>
+                    </div>
+                    
+                    <p className="text-lg text-[#013F63] leading-relaxed mb-8">
+                      Notre engagement pour l'accessibilité va au-delà des obligations légales. Nous mettons tout en œuvre 
+                      pour adapter nos formations aux personnes en situation de handicap.
+                    </p>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="space-y-4">
+                        <div className="flex items-start">
+                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-[#013F63]">Formations adaptées aux besoins spécifiques</span>
+                        </div>
+                        <div className="flex items-start">
+                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-[#013F63]">Accompagnement personnalisé</span>
+                        </div>
+                      </div>
+                      <div className="space-y-4">
+                        <div className="flex items-start">
+                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-[#013F63]">Locaux et méthodes accessibles</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-full h-48 flex items-center justify-center">
+                      <Image 
+                        src="/images/certifications/formation-handicap.png" 
+                        alt="Logo Formation & Handicap"
+                        width={220}
+                        height={220}
+                        className="object-contain w-full h-full max-w-[220px]"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Certification Qualiopi */}
           <section className="py-8">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-8 items-start">
-                  <div className="text-center lg:text-left lg:pl-12">
+                  <div className="text-center order-2 lg:order-1">
+                    <div className="w-full h-52 flex items-center justify-center">
+                      <a 
+                        href="/documents/certifications/certificat-qualiopi.pdf" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="relative block hover:scale-105 transition-transform duration-300 cursor-pointer group"
+                        title="Voir le certificat Qualiopi (PDF)"
+                      >
+                        <Image 
+                          src="/images/certifications/qualiopi.png" 
+                          alt="Logo Qualiopi - Cliquez pour voir le certificat"
+                          width={250}
+                          height={250}
+                          className="object-contain w-full h-full max-w-[250px] hover:opacity-90 transition-opacity"
+                        />
+                        {/* Tooltip au survol */}
+                        <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none z-10">
+                          Voir le certificat
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
+                        </div>
+                      </a>
+                    </div>
+                    <div className="mt-6 flex justify-center">
+                      <ul className="text-[#013F63] text-sm space-y-2 text-left">
+                        <li>- ACTIONS DE FORMATIONS</li>
+                        <li>- BILAN DE COMPÉTENCES</li>
+                        <li>- ACTIONS PERMETTANT DE VALIDER LES ACQUIS D'EXPERIENCE</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center lg:text-left order-1 lg:order-2">
                     <div className="text-center lg:text-left mb-8">
                       <h2 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-6">
                         Certification <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">qualité</span>
@@ -80,91 +165,6 @@ export default function Certification() {
                         <div className="flex items-start">
                           <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
                           <span className="text-[#013F63]">Satisfaction des apprenants contrôlée</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-full h-52 flex items-center justify-center">
-                      <a 
-                        href="/documents/certifications/certificat-qualiopi.pdf" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="relative block hover:scale-105 transition-transform duration-300 cursor-pointer group"
-                        title="Voir le certificat Qualiopi (PDF)"
-                      >
-                        <Image 
-                          src="/images/certifications/qualiopi.png" 
-                          alt="Logo Qualiopi - Cliquez pour voir le certificat"
-                          width={250}
-                          height={250}
-                          className="object-contain w-full h-full max-w-[250px] hover:opacity-90 transition-opacity"
-                        />
-                        {/* Tooltip au survol */}
-                        <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none z-10">
-                          Voir le certificat
-                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
-                        </div>
-                      </a>
-                    </div>
-                    <div className="mt-6 flex justify-center">
-                      <ul className="text-[#013F63] text-sm space-y-2 text-left">
-                        <li>- ACTIONS DE FORMATIONS</li>
-                        <li>- BILAN DE COMPÉTENCES</li>
-                        <li>- ACTIONS PERMETTANT DE VALIDER LES ACQUIS D'EXPERIENCE</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Formation & Handicap */}
-          <section className="py-8">
-            <div className="container mx-auto px-4">
-              <div className="max-w-6xl mx-auto">
-                <div className="grid lg:grid-cols-2 gap-8 items-center">
-                  <div className="text-center order-2 lg:order-1">
-                    <div className="w-full h-48 flex items-center justify-center">
-                      <Image 
-                        src="/images/certifications/formation-handicap.png" 
-                        alt="Logo Formation & Handicap"
-                        width={220}
-                        height={220}
-                        className="object-contain w-full h-full max-w-[220px]"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="text-center lg:text-left order-1 lg:order-2">
-                    <div className="text-center lg:text-left mb-8">
-                      <h2 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-6">
-                        Handi<span className="text-orange-500 font-brittany text-3xl lg:text-4xl">accueillant</span>
-                      </h2>
-                    </div>
-                    
-                    <p className="text-lg text-[#013F63] leading-relaxed mb-8">
-                      Notre engagement pour l'accessibilité va au-delà des obligations légales. Nous mettons tout en œuvre 
-                      pour adapter nos formations aux personnes en situation de handicap.
-                    </p>
-
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-4">
-                        <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-[#013F63]">Formations adaptées aux besoins spécifiques</span>
-                        </div>
-                        <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-[#013F63]">Accompagnement personnalisé</span>
-                        </div>
-                      </div>
-                      <div className="space-y-4">
-                        <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-[#013F63]">Locaux et méthodes accessibles</span>
                         </div>
                       </div>
                     </div>
