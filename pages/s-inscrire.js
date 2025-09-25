@@ -310,7 +310,7 @@ export default function SInscrire() {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div>
                         <label htmlFor="formation" className="block text-sm font-medium text-[#013F63] mb-2">
-                          Formation qui vous intéresse *
+                          Formation qui vous intéresse <span className="text-red-500">*</span>
                         </label>
                         <select
                           id="formation"
@@ -333,7 +333,7 @@ export default function SInscrire() {
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                           <label htmlFor="nom" className="block text-sm font-medium text-[#013F63] mb-2">
-                            Nom *
+                            Nom <span className="text-red-500">*</span>
                           </label>
                           <input
                             type="text"
@@ -349,7 +349,7 @@ export default function SInscrire() {
                         
                         <div>
                           <label htmlFor="prenom" className="block text-sm font-medium text-[#013F63] mb-2">
-                            Prénom *
+                            Prénom <span className="text-red-500">*</span>
                           </label>
                           <input
                             type="text"
@@ -366,7 +366,7 @@ export default function SInscrire() {
 
                       <div>
                         <label htmlFor="email" className="block text-sm font-medium text-[#013F63] mb-2">
-                          Email *
+                          Email <span className="text-red-500">*</span>
                         </label>
                         <input
                           type="email"
@@ -397,7 +397,7 @@ export default function SInscrire() {
 
                       <div>
                         <label htmlFor="dateReunion" className="block text-sm font-medium text-[#013F63] mb-2">
-                          Date de réunion souhaitée *
+                          Date de réunion souhaitée <span className="text-red-500">*</span>
                         </label>
                         {formData.formation ? (
                           <select
