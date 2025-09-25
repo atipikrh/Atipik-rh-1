@@ -288,12 +288,12 @@ export default function SInscrire() {
                         </div>
                         <div>
                           <h3 className="font-semibold text-[#013F63] mb-1">Au programme</h3>
-                          <ul className="text-[#013F63] space-y-1">
-                            <li>• Présentation des formations FPA ou CIP</li>
-                            <li>• Détails sur les contenus et débouchés</li>
-                            <li>• Questions / Réponses personnalisées</li>
-                            <li>• Informations sur les financements</li>
-                          </ul>
+                          <div className="text-[#013F63] space-y-1">
+                            <div>Présentation des formations FPA ou CIP</div>
+                            <div>Détails sur les contenus et débouchés</div>
+                            <div>Questions / Réponses personnalisées</div>
+                            <div>Informations sur les financements</div>
+                          </div>
                         </div>
                       </div>
                     </div>
