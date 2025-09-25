@@ -143,7 +143,7 @@ export default function CoralineAbadie() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Mon faire-part de naissance 😊 Comme une prédilection...
+                        Mon faire-part de naissance 😊 Comme une prédiction...
                       </p>
                       <div className="mt-3">
                         <Image
