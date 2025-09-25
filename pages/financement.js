@@ -682,27 +682,20 @@ export default function Financement() {
         </section>
 
           {/* Section Autofinancement - Investissez en vous-même */}
-          <section className="py-16">
+          <section className="py-8">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 
                 {/* Autofinancement */}
-                <div className="mt-8">
+                <div className="mt-4">
                   <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
                     <h4 className="text-2xl font-bold text-[#013F63] mb-6">
                       <span className="text-orange-500 font-brittany text-3xl">Investissez</span> en vous-même
                     </h4>
                     <p className="text-base text-[#013F63] font-medium leading-relaxed">
-                      Paiement en <span className="text-6xl font-light text-orange-500 font-brittany leading-none mx-4">x3</span> sans frais grâce à notre partenaire financier.
+                      Paiement en <span className="text-4xl font-light text-orange-500 font-brittany leading-none mx-2">x3</span>, <span className="text-4xl font-light text-orange-500 font-brittany leading-none mx-2">x6</span> ou <span className="text-4xl font-light text-orange-500 font-brittany leading-none mx-2">x9</span> sans frais grâce à notre partenaire financier.
                     </p>
                   </div>
-                </div>
-
-                <div className="text-center mt-8">
-                  <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
-                    Étudier cette option
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
                 </div>
               </div>
             </div>
