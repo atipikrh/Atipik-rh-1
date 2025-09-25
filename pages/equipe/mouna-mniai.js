@@ -87,7 +87,7 @@ export default function MounaMniai() {
                     <span className="font-brittany text-3xl lg:text-4xl">Mouna</span> <span className="font-semibold">MNIAI</span>
                   </h1>
                   <p className="text-[#013F63] leading-relaxed">
-                    Accompagnement à distance sur toute la France ou en présentiel à <span className="text-orange-500 font-semibold">Lormont</span>
+                    Consultante en insertion socioprofessionnelle
                   </p>
                 </div>
               </div>
