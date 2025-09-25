@@ -9,6 +9,39 @@ import Footer from '../components/Footer'
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
+  // Dates des réunions (synchronisées avec s-inscrire.js)
+  const datesFPA = [
+    { date: '2025-09-25', jour: 'Jeudi 25 Septembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2025-10-11', jour: 'Samedi 11 Octobre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2025-10-23', jour: 'Jeudi 23 Octobre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2025-11-06', jour: 'Jeudi 6 Novembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2025-11-22', jour: 'Samedi 22 Novembre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' }
+  ]
+
+  const datesCIP = [
+    { date: '2024-09-27', jour: 'Samedi 27 Septembre 2024', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2024-10-09', jour: 'Jeudi 9 Octobre 2024', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2024-10-25', jour: 'Samedi 25 Octobre 2024', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2024-11-08', jour: 'Samedi 8 Novembre 2024', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2024-11-20', jour: 'Jeudi 20 Novembre 2024', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2024-12-06', jour: 'Samedi 6 Décembre 2024', heure: '10h30 - 12h30', modalite: 'présentiel' }
+  ]
+
+  // Fonction pour obtenir les prochaines dates (filtrées automatiquement)
+  const getProchainesDates = (dates) => {
+    const aujourdhui = new Date()
+    aujourdhui.setHours(0, 0, 0, 0)
+    
+    return dates.filter(reunion => {
+      const dateReunion = new Date(reunion.date)
+      return dateReunion >= aujourdhui
+    }).slice(0, 3) // Prendre les 3 premières dates futures
+  }
+
+  // Obtenir les prochaines dates pour chaque formation
+  const prochainesDatesCIP = getProchainesDates(datesCIP)
+  const prochainesDatesFPA = getProchainesDates(datesFPA)
+
   // Données du carousel - annonces et réunions informatives
   const slides = [
     {
@@ -157,18 +190,16 @@ export default function HomePage() {
                         <div className="bg-white/90 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-gray-800 max-w-sm">
                           <h3 className="text-lg font-bold mb-3 text-orange-500">Prochaines dates CIP</h3>
                           <div className="space-y-2 text-sm">
-                            <div className="flex justify-between">
-                              <span className="text-[#013F63]">Samedi 27/09</span>
-                              <span className="font-medium text-[#013F63]">10h30</span>
-                            </div>
-                            <div className="flex justify-between">
-                              <span className="text-[#013F63]">Jeudi 09/10</span>
-                              <span className="font-medium text-[#013F63]">12h30</span>
-                            </div>
-                            <div className="flex justify-between">
-                              <span className="text-[#013F63]">Samedi 25/10</span>
-                              <span className="font-medium text-[#013F63]">10h30</span>
-                            </div>
+                            {prochainesDatesCIP.map((reunion, index) => (
+                              <div key={index} className="flex justify-between">
+                                <span className="text-[#013F63]">
+                                  {reunion.jour.split(' ')[0]} {reunion.jour.split(' ')[1].slice(0, 3)}/{reunion.jour.split(' ')[2].slice(0, 2)}
+                                </span>
+                                <span className="font-medium text-[#013F63]">
+                                  {reunion.heure.split(' - ')[0]}
+                                </span>
+                              </div>
+                            ))}
                           </div>
                           <div className="mt-4 text-xs text-[#013F63]">
                             Atipik RH - Lormont
@@ -179,18 +210,16 @@ export default function HomePage() {
                         <div className="bg-white/90 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-gray-800 max-w-sm">
                           <h3 className="text-lg font-bold mb-3 text-orange-500">Prochaines dates FPA</h3>
                           <div className="space-y-2 text-sm">
-                            <div className="flex justify-between">
-                              <span className="text-[#013F63]">Jeudi 25/09</span>
-                              <span className="font-medium text-[#013F63]">12h30</span>
-                            </div>
-                            <div className="flex justify-between">
-                              <span className="text-[#013F63]">Sam 11/10</span>
-                              <span className="font-medium text-[#013F63]">10h30</span>
-                            </div>
-                            <div className="flex justify-between">
-                              <span className="text-[#013F63]">Jeudi 23/10</span>
-                              <span className="font-medium text-[#013F63]">12h30</span>
-                            </div>
+                            {prochainesDatesFPA.map((reunion, index) => (
+                              <div key={index} className="flex justify-between">
+                                <span className="text-[#013F63]">
+                                  {reunion.jour.split(' ')[0]} {reunion.jour.split(' ')[1].slice(0, 3)}/{reunion.jour.split(' ')[2].slice(0, 2)}
+                                </span>
+                                <span className="font-medium text-[#013F63]">
+                                  {reunion.heure.split(' - ')[0]}
+                                </span>
+                              </div>
+                            ))}
                           </div>
                           <div className="mt-4 text-xs text-[#013F63]">
                             Atipik RH - Lormont
