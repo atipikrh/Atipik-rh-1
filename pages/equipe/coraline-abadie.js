@@ -126,7 +126,7 @@ export default function CoralineAbadie() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Atipik RH me permet de transmettre les techniques que j'utilise dans la formation à des professionnels. Mon souhait est que chacun ose utiliser le jeu ou les outils qu'il aime et maîtrise pour l'appliquer à son métier. Atipik m'apporte cette faisabilité avec confiance et professionnalisme 😊
+                        Atipik RH me permet de transmettre les techniques que j'utilise dans la formation à des professionnels. Mon souhait est que chacun ose utiliser le jeu ou les outils qu'il aime et maîtrise pour les appliquer à son métier. Atipik m'apporte cette faisabilité avec confiance et professionnalisme 😊
                       </p>
                     </div>
                   </div>
