@@ -39,6 +39,16 @@ export default function HomePage() {
     }).slice(0, 3) // Prendre les 3 premières dates futures
   }
 
+  // Fonction pour convertir le mois en nombre
+  const getMonthNumber = (monthName) => {
+    const months = {
+      'Janvier': '01', 'Février': '02', 'Mars': '03', 'Avril': '04',
+      'Mai': '05', 'Juin': '06', 'Juillet': '07', 'Août': '08',
+      'Septembre': '09', 'Octobre': '10', 'Novembre': '11', 'Décembre': '12'
+    }
+    return months[monthName] || monthName
+  }
+
   // Obtenir les prochaines dates pour chaque formation
   const prochainesDatesCIP = getProchainesDates(datesCIP)
   const prochainesDatesFPA = getProchainesDates(datesFPA)
@@ -194,7 +204,7 @@ export default function HomePage() {
                             {prochainesDatesCIP.map((reunion, index) => (
                               <div key={index} className="flex justify-between">
                                 <span className="text-[#013F63]">
-                                  {reunion.jour.split(' ')[0]} {reunion.jour.split(' ')[1].slice(0, 3)}/{reunion.jour.split(' ')[2].slice(0, 2)}
+                                  {reunion.jour.split(' ')[0]} {getMonthNumber(reunion.jour.split(' ')[1])}/{reunion.jour.split(' ')[2].slice(0, 2)}
                                 </span>
                                 <span className="font-medium text-[#013F63]">
                                   {reunion.heure.split(' - ')[0]}
@@ -214,7 +224,7 @@ export default function HomePage() {
                             {prochainesDatesFPA.map((reunion, index) => (
                               <div key={index} className="flex justify-between">
                                 <span className="text-[#013F63]">
-                                  {reunion.jour.split(' ')[0]} {reunion.jour.split(' ')[1].slice(0, 3)}/{reunion.jour.split(' ')[2].slice(0, 2)}
+                                  {reunion.jour.split(' ')[0]} {getMonthNumber(reunion.jour.split(' ')[1])}/{reunion.jour.split(' ')[2].slice(0, 2)}
                                 </span>
                                 <span className="font-medium text-[#013F63]">
                                   {reunion.heure.split(' - ')[0]}
