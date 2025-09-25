@@ -682,7 +682,7 @@ export default function Financement() {
         </section>
 
           {/* Section Autofinancement - Investissez en vous-même */}
-          <section className="py-8">
+          <section className="pt-4 pb-8">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 
