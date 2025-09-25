@@ -105,7 +105,7 @@ export default function Financement() {
       ],
       buttonText: "En savoir plus AGEFIPH",
       buttonStyle: "primary",
-      buttonLink: "https://www.agefiph.fr/aides-handicap/aide-individuelle-formation",
+      buttonLink: "https://www.agefiph.fr/aides-financieres/aide-ladaptation-des-situations-de-formation",
       external: true
     },
     {
@@ -404,7 +404,7 @@ export default function Financement() {
                         <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
                         <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
                       </div>
-                      <a href="https://www.agefiph.fr/aides-handicap/aide-individuelle-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                      <a href="https://www.agefiph.fr/aides-financieres/aide-ladaptation-des-situations-de-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         En savoir plus AGEFIPH
                       </a>
                       </div>
@@ -550,7 +550,7 @@ export default function Financement() {
                         <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
                         <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
                       </div>
-                      <a href="https://www.agefiph.fr/aides-handicap/aide-individuelle-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                      <a href="https://www.agefiph.fr/aides-financieres/aide-ladaptation-des-situations-de-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         En savoir plus AGEFIPH
                       </a>
                       </div>
