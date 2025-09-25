@@ -12,7 +12,11 @@ export default function SInscrire() {
     email: '',
     telephone: '',
     dateReunion: '',
-    motivations: ''
+    motivations: '',
+    statut: '',
+    statutAutre: '',
+    commentConnu: '',
+    commentConnuAutre: ''
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -431,6 +435,152 @@ export default function SInscrire() {
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#013F63] focus:border-transparent transition-colors"
                           placeholder="Parlez-nous de votre projet professionnel..."
                         />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-[#013F63] mb-3">
+                          Votre statut <span className="text-red-500">*</span>
+                        </label>
+                        <div className="space-y-2">
+                          <label className="flex items-center">
+                            <input
+                              type="radio"
+                              name="statut"
+                              value="salarie"
+                              checked={formData.statut === 'salarie'}
+                              onChange={handleInputChange}
+                              className="mr-3 text-[#013F63] focus:ring-[#013F63]"
+                            />
+                            <span className="text-[#013F63]">Salarié(e) en poste</span>
+                          </label>
+                          <label className="flex items-center">
+                            <input
+                              type="radio"
+                              name="statut"
+                              value="demandeur"
+                              checked={formData.statut === 'demandeur'}
+                              onChange={handleInputChange}
+                              className="mr-3 text-[#013F63] focus:ring-[#013F63]"
+                            />
+                            <span className="text-[#013F63]">Demandeur(se) d'emploi</span>
+                          </label>
+                          <label className="flex items-center">
+                            <input
+                              type="radio"
+                              name="statut"
+                              value="autre"
+                              checked={formData.statut === 'autre'}
+                              onChange={handleInputChange}
+                              className="mr-3 text-[#013F63] focus:ring-[#013F63]"
+                            />
+                            <span className="text-[#013F63]">Autre :</span>
+                          </label>
+                          {formData.statut === 'autre' && (
+                            <input
+                              type="text"
+                              name="statutAutre"
+                              value={formData.statutAutre}
+                              onChange={handleInputChange}
+                              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#013F63] focus:border-transparent transition-colors ml-6"
+                              placeholder="Précisez votre statut"
+                            />
+                          )}
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-[#013F63] mb-3">
+                          <em>Comment avez-vous connu notre centre ?</em> <span className="text-red-500">*</span>
+                        </label>
+                        <div className="space-y-2">
+                          <label className="flex items-center">
+                            <input
+                              type="radio"
+                              name="commentConnu"
+                              value="instagram"
+                              checked={formData.commentConnu === 'instagram'}
+                              onChange={handleInputChange}
+                              className="mr-3 text-[#013F63] focus:ring-[#013F63]"
+                            />
+                            <span className="text-[#013F63]">Instagram</span>
+                          </label>
+                          <label className="flex items-center">
+                            <input
+                              type="radio"
+                              name="commentConnu"
+                              value="linkedin"
+                              checked={formData.commentConnu === 'linkedin'}
+                              onChange={handleInputChange}
+                              className="mr-3 text-[#013F63] focus:ring-[#013F63]"
+                            />
+                            <span className="text-[#013F63]">Linkedin</span>
+                          </label>
+                          <label className="flex items-center">
+                            <input
+                              type="radio"
+                              name="commentConnu"
+                              value="facebook"
+                              checked={formData.commentConnu === 'facebook'}
+                              onChange={handleInputChange}
+                              className="mr-3 text-[#013F63] focus:ring-[#013F63]"
+                            />
+                            <span className="text-[#013F63]">Facebook</span>
+                          </label>
+                          <label className="flex items-center">
+                            <input
+                              type="radio"
+                              name="commentConnu"
+                              value="google"
+                              checked={formData.commentConnu === 'google'}
+                              onChange={handleInputChange}
+                              className="mr-3 text-[#013F63] focus:ring-[#013F63]"
+                            />
+                            <span className="text-[#013F63]">Google</span>
+                          </label>
+                          <label className="flex items-center">
+                            <input
+                              type="radio"
+                              name="commentConnu"
+                              value="site"
+                              checked={formData.commentConnu === 'site'}
+                              onChange={handleInputChange}
+                              className="mr-3 text-[#013F63] focus:ring-[#013F63]"
+                            />
+                            <span className="text-[#013F63]">Site internet</span>
+                          </label>
+                          <label className="flex items-center">
+                            <input
+                              type="radio"
+                              name="commentConnu"
+                              value="mail"
+                              checked={formData.commentConnu === 'mail'}
+                              onChange={handleInputChange}
+                              className="mr-3 text-[#013F63] focus:ring-[#013F63]"
+                            />
+                            <span className="text-[#013F63]">Mail</span>
+                          </label>
+                          <label className="flex items-center">
+                            <input
+                              type="radio"
+                              name="commentConnu"
+                              value="autre"
+                              checked={formData.commentConnu === 'autre'}
+                              onChange={handleInputChange}
+                              className="mr-3 text-[#013F63] focus:ring-[#013F63]"
+                            />
+                            <span className="text-[#013F63]">Autre :</span>
+                          </label>
+                          {formData.commentConnu === 'autre' && (
+                            <input
+                              type="text"
+                              name="commentConnuAutre"
+                              value={formData.commentConnuAutre}
+                              onChange={handleInputChange}
+                              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#013F63] focus:border-transparent transition-colors ml-6"
+                              placeholder="Précisez comment vous nous avez connus"
+                            />
+                          )}
+                        </div>
                       </div>
 
 
