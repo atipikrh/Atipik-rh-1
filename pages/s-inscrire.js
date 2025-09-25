@@ -41,11 +41,20 @@ export default function SInscrire() {
     { date: '2024-12-06', jour: 'Samedi 6 Décembre 2024', heure: '10h30 - 12h30', modalite: 'présentiel' }
   ]
 
-  // Dates à afficher selon la formation sélectionnée
+  // Dates à afficher selon la formation sélectionnée (filtrées automatiquement)
   const getDatesParFormation = () => {
-    if (formData.formation === 'FPA') return datesFPA
-    if (formData.formation === 'CIP') return datesCIP
-    return []
+    let dates = []
+    if (formData.formation === 'FPA') dates = datesFPA
+    if (formData.formation === 'CIP') dates = datesCIP
+    
+    // Filtrer automatiquement les dates passées
+    const aujourdhui = new Date()
+    aujourdhui.setHours(0, 0, 0, 0) // Remettre à minuit pour comparaison
+    
+    return dates.filter(reunion => {
+      const dateReunion = new Date(reunion.date)
+      return dateReunion >= aujourdhui
+    })
   }
 
   const prochainesdates = getDatesParFormation()
