@@ -687,7 +687,7 @@ export default function Financement() {
               <div className="max-w-4xl mx-auto">
                 
                 {/* Autofinancement */}
-                <div className="mt-2">
+                <div className="mt-0">
                   <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
                     <h4 className="text-2xl font-bold text-[#013F63] mb-6">
                       <span className="text-orange-500 font-brittany text-3xl">Investissez</span> en vous-même
@@ -702,7 +702,7 @@ export default function Financement() {
           </section>
 
           {/* FAQ rapide */}
-          <section className="pt-12 pb-24">
+          <section className="pt-16 pb-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               
