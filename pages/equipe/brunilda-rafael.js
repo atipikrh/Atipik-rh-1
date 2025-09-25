@@ -83,9 +83,9 @@ export default function BrunildaRafael() {
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] leading-tight">
                     <span className="font-brittany text-4xl lg:text-5xl">Brunilda</span> <span className="font-semibold">RAFAEL</span>
                   </h1>
-                  <p className="text-[#013F63] leading-relaxed">
+                  <div className="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">
                     Chargée de Formation
-                  </p>
+                  </div>
                 </div>
               </div>
 

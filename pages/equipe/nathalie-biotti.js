@@ -83,9 +83,9 @@ export default function NathalieBiotti() {
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] leading-tight">
                     <span className="font-brittany text-3xl lg:text-4xl">Nathalie</span> <span className="font-semibold">BIOTTI</span>
                   </h1>
-                  <p className="text-[#013F63] leading-relaxed">
+                  <div className="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">
                     Formatrice et intervenante en analyse des pratiques professionnelles
-                  </p>
+                  </div>
                 </div>
               </div>
 
