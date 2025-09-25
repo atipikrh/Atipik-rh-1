@@ -382,12 +382,13 @@ export default function SInscrire() {
 
                       <div>
                         <label htmlFor="telephone" className="block text-sm font-medium text-[#013F63] mb-2">
-                          Téléphone
+                          Téléphone <span className="text-red-500">*</span>
                         </label>
                         <input
                           type="tel"
                           id="telephone"
                           name="telephone"
+                          required
                           value={formData.telephone}
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#013F63] focus:border-transparent transition-colors"
