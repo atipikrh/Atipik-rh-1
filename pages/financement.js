@@ -686,104 +686,23 @@ export default function Financement() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 
-                {/* Titre de section */}
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Investissez</span> en vous-même
-                  </h2>
-                  <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
-                    L'autofinancement : une solution flexible et immédiate pour votre formation
-                  </p>
+                {/* Autofinancement */}
+                <div className="mt-8">
+                  <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
+                    <h4 className="text-2xl font-bold text-[#013F63] mb-6">
+                      <span className="text-orange-500 font-brittany text-3xl">Investissez</span> en vous-même
+                    </h4>
+                    <p className="text-base text-[#013F63] font-medium leading-relaxed">
+                      Paiement en <span className="text-6xl font-light text-orange-500 font-brittany leading-none mx-4">x3</span> sans frais grâce à notre partenaire financier.
+                    </p>
+                  </div>
                 </div>
 
-                {/* Contenu principal */}
-                <div className="bg-gradient-to-r from-orange-50 to-blue-50 rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-                  <div className="grid lg:grid-cols-2 gap-0">
-                    
-                    {/* Section gauche - Logo et titre */}
-                    <div className="bg-[#013F63] text-white p-8 flex flex-col justify-center items-center text-center">
-                      <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg">
-                        <Image 
-                          src="/images/financements/Logo-Financement-Personnel.webp" 
-                          alt="Autofinancement" 
-                          width={60} 
-                          height={60}
-                          className="object-contain"
-                        />
-                      </div>
-                      <h3 className="text-2xl font-bold mb-4">Autofinancement</h3>
-                      <p className="text-blue-100 text-sm leading-relaxed">
-                        Une solution simple et efficace pour financer votre formation
-                      </p>
-                    </div>
-
-                    {/* Section droite - Avantages et informations */}
-                    <div className="p-8 flex flex-col justify-center">
-                      <div className="space-y-6">
-                        
-                        {/* Avantages principaux */}
-                        <div className="grid md:grid-cols-2 gap-4">
-                          <div className="flex items-start gap-3">
-                            <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <span className="text-white text-xs font-bold">✓</span>
-                            </div>
-                            <div>
-                              <h4 className="font-bold text-[#013F63] text-sm mb-1">Démarrage immédiat</h4>
-                              <p className="text-[#013F63] text-xs">Aucune attente de validation</p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start gap-3">
-                            <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <span className="text-white text-xs font-bold">✓</span>
-                            </div>
-                            <div>
-                              <h4 className="font-bold text-[#013F63] text-sm mb-1">Paiement facilité</h4>
-                              <p className="text-[#013F63] text-xs">En 3x, 6x ou 9x sans frais</p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start gap-3">
-                            <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <span className="text-white text-xs font-bold">✓</span>
-                            </div>
-                            <div>
-                              <h4 className="font-bold text-[#013F63] text-sm mb-1">Déduction fiscale</h4>
-                              <p className="text-[#013F63] text-xs">Charge déductible pour les indépendants</p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start gap-3">
-                            <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <span className="text-white text-xs font-bold">✓</span>
-                            </div>
-                            <div>
-                              <h4 className="font-bold text-[#013F63] text-sm mb-1">ROI garanti</h4>
-                              <p className="text-[#013F63] text-xs">Investissement pour votre avenir</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Message principal */}
-                        <div className="bg-white rounded-xl p-6 border border-orange-200">
-                          <p className="text-[#013F63] text-center font-medium leading-relaxed">
-                            Paiement en <span className="text-4xl font-light text-orange-500 font-brittany leading-none mx-2">x3</span> sans frais grâce à notre partenaire financier.
-                          </p>
-                        </div>
-
-                        {/* Call to action */}
-                        <div className="text-center">
-                          <Link 
-                            href="/contact" 
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105"
-                          >
-                            <ArrowRight className="w-4 h-4" />
-                            Étudier cette option
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div className="text-center mt-8">
+                  <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
+                    Étudier cette option
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
               </div>
             </div>
