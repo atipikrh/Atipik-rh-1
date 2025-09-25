@@ -242,7 +242,7 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4">
-                Nos <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Services</span>
+                Nos <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Accompagnements</span>
               </h2>
               <p className="text-lg text-[#013F63] max-w-2xl mx-auto">
                 Découvrez nos trois domaines d'expertise pour votre développement professionnel
