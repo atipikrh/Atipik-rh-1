@@ -33,12 +33,13 @@ export default function SInscrire() {
   ]
 
   const datesCIP = [
-    { date: '2024-09-27', jour: 'Samedi 27 Septembre 2024', heure: '10h30 - 12h30', modalite: 'présentiel' },
-    { date: '2024-10-09', jour: 'Jeudi 9 Octobre 2024', heure: '12h30 - 14h30', modalite: 'distanciel' },
-    { date: '2024-10-25', jour: 'Samedi 25 Octobre 2024', heure: '10h30 - 12h30', modalite: 'présentiel' },
-    { date: '2024-11-08', jour: 'Samedi 8 Novembre 2024', heure: '10h30 - 12h30', modalite: 'présentiel' },
-    { date: '2024-11-20', jour: 'Jeudi 20 Novembre 2024', heure: '12h30 - 14h30', modalite: 'distanciel' },
-    { date: '2024-12-06', jour: 'Samedi 6 Décembre 2024', heure: '10h30 - 12h30', modalite: 'présentiel' }
+    { date: '2025-09-08', jour: 'Lundi 8 Septembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2025-09-27', jour: 'Samedi 27 Septembre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2025-10-09', jour: 'Jeudi 9 Octobre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2025-10-25', jour: 'Samedi 25 Octobre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2025-11-08', jour: 'Samedi 8 Novembre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2025-11-20', jour: 'Jeudi 20 Novembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2025-12-06', jour: 'Samedi 6 Décembre 2025', heure: '10h00 - 12h00', modalite: 'présentiel' }
   ]
 
   // Dates à afficher selon la formation sélectionnée (filtrées automatiquement)
