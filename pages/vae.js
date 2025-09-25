@@ -94,6 +94,8 @@ export default function VAE() {
   const [animatedStats, setAnimatedStats] = useState({})
   const [hasAnimatedStats, setHasAnimatedStats] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const [isClient, setIsClient] = useState(false)
   const statsRef = useRef(null)
 
   const toggleEtape = (etapeId) => {
@@ -102,6 +104,19 @@ export default function VAE() {
       [etapeId]: !prev[etapeId]
     }))
   }
+
+  // Détecter la taille d'écran après l'hydratation pour éviter les erreurs SSR
+  useEffect(() => {
+    setIsClient(true)
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    checkIsMobile()
+    window.addEventListener('resize', checkIsMobile)
+    
+    return () => window.removeEventListener('resize', checkIsMobile)
+  }, [])
 
   // Fonction pour animer les compteurs
   const animateCounter = (start, end, duration, callback) => {
@@ -195,7 +210,10 @@ export default function VAE() {
   }
 
   const nextStat = () => {
-    setCurrentStatIndex((prev) => Math.min(prev + 1, 4)) // Max 4 pour afficher les 3 dernières cartes
+    const maxIndex = isClient && isMobile 
+      ? statistiques.length - 1 
+      : Math.max(0, statistiques.length - 3);
+    setCurrentStatIndex((prev) => Math.min(prev + 1, maxIndex))
   }
 
   const prevStat = () => {
@@ -799,10 +817,16 @@ export default function VAE() {
 
               <div className="relative">
                 
-                {/* Cartes de financement */}
-                <div className="grid md:grid-cols-3 gap-6 px-12">
-                  {getVisibleFinancements().map((financement) => (
-                    <div key={financement.id} className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+                {/* Cartes de financement - Responsive */}
+                <div className="overflow-hidden pb-4">
+                  {/* Version Mobile - Une carte à la fois */}
+                  <div 
+                    className="flex transition-transform duration-300 ease-in-out md:hidden"
+                    style={{ transform: `translateX(-${currentFinancementIndex * 100}%)` }}
+                  >
+                    {financements.map((financement) => (
+                      <div key={financement.id} className="w-full flex-shrink-0 px-2">
+                        <div className="text-center p-6 bg-white rounded-xl border border-gray-200 shadow-lg h-48 flex flex-col justify-center">
                       <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
                         {financement.logo ? (
                           <Image
@@ -824,8 +848,39 @@ export default function VAE() {
                       </div>
                       <h5 className="font-bold text-[#013F63] text-sm mb-2 flex-grow">{financement.titre}</h5>
                       <p className="text-xs text-[#013F63]">{financement.description}</p>
-                    </div>
-                  ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Version Desktop - Trois cartes à la fois */}
+                  <div className="hidden md:grid md:grid-cols-3 gap-6 px-12">
+                    {getVisibleFinancements().map((financement) => (
+                      <div key={financement.id} className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+                        <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
+                          {financement.logo ? (
+                            <Image
+                              src={financement.logo}
+                              alt={`Logo ${financement.titre}`}
+                              width={financement.logoWidth}
+                              height={financement.logoHeight}
+                              className="object-contain"
+                            />
+                          ) : (
+                            <div className={`${financement.bgColor} rounded-lg p-2 w-full h-full flex items-center justify-center`}>
+                              <span className={`${financement.textColor} font-bold text-xs text-center leading-tight`}>
+                                {financement.text.split('\n').map((line, i) => (
+                                  <div key={i}>{line}</div>
+                                ))}
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                        <h5 className="font-bold text-[#013F63] text-sm mb-2 flex-grow">{financement.titre}</h5>
+                        <p className="text-xs text-[#013F63]">{financement.description}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Flèches de navigation */}
@@ -1104,10 +1159,10 @@ export default function VAE() {
                 <div className="overflow-hidden pb-4">
                   <div 
                     className="flex transition-transform duration-300 ease-in-out"
-                    style={{ transform: `translateX(-${currentStatIndex * 33.333}%)` }}
+                    style={{ transform: `translateX(-${currentStatIndex * (isClient && isMobile ? 100 : 33.333)}%)` }}
                   >
                     {statistiques.map((stat) => (
-                      <div key={stat.id} className="w-1/3 flex-shrink-0 px-3">
+                      <div key={stat.id} className="w-full md:w-1/3 flex-shrink-0 px-3">
                         <div className="bg-white rounded-2xl p-4 text-center shadow-lg border border-gray-100 h-28 flex flex-col justify-center">
                           <div className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-2">
                             {animatedStats[statistiques.findIndex(s => s.id === stat.id)] || '0'}
@@ -1123,7 +1178,11 @@ export default function VAE() {
 
                 {/* Indicateurs de position */}
                 <div className="flex justify-center mt-6 space-x-2">
-                  {[0, 1, 2, 3, 4].map((index) => (
+                  {Array.from({ 
+                    length: isClient && isMobile 
+                      ? statistiques.length 
+                      : Math.max(1, statistiques.length - 2) 
+                  }).map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentStatIndex(index)}
