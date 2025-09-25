@@ -669,6 +669,221 @@ export default function FormationFPA() {
             </div>
           </section>
 
+          {/* Suite du parcours et débouchés */}
+          <section className="py-12">
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
+                    Vos <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">opportunités</span> professionnelles
+                  </h2>
+                  <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
+                    Découvrez les secteurs et métiers accessibles après votre certification FPA
+                  </p>
+                </div>
+
+                <div className="grid lg:grid-cols-2 gap-12 lg:items-stretch">
+                  
+                  {/* Secteurs d'activités - Accordéons cliquables */}
+                  <div className="relative">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-100 to-blue-200 rounded-2xl blur opacity-20"></div>
+                    <div className="relative bg-white rounded-2xl p-6 shadow-xl border border-blue-100 h-full flex flex-col">
+                      <div className="text-center mb-6">
+                        <h3 className="text-2xl font-bold text-[#013F63]">Secteurs d'activités</h3>
+                      </div>
+                      
+                      <div className="space-y-3 flex-grow">
+                        
+                        {/* Organismes de formation */}
+                        <div className="bg-blue-50 rounded-lg border border-blue-200 overflow-hidden">
+                          <button
+                            onClick={() => toggleSection('organismes-formation')}
+                            className="w-full p-3 text-left flex items-center justify-between hover:bg-blue-100 transition-colors"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
+                              <span className="text-[#013F63] font-medium text-sm">Organismes de formation</span>
+                            </div>
+                            {openSections['organismes-formation'] ? (
+                              <ChevronUp className="w-4 h-4 text-blue-600" />
+                            ) : (
+                              <ChevronDown className="w-4 h-4 text-blue-600" />
+                            )}
+                          </button>
+                          {openSections['organismes-formation'] && (
+                            <div className="px-3 pb-3 border-t border-blue-200 bg-white">
+                              <p className="text-xs text-[#013F63] leading-relaxed mt-2">
+                                Centres de formation professionnelle, organismes de formation continue, centres de formation d'apprentis (CFA), organismes de formation à distance, centres de formation spécialisés par secteur d'activité
+                              </p>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Entreprises */}
+                        <div className="bg-blue-50 rounded-lg border border-blue-200 overflow-hidden">
+                          <button
+                            onClick={() => toggleSection('entreprises')}
+                            className="w-full p-3 text-left flex items-center justify-between hover:bg-blue-100 transition-colors"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
+                              <span className="text-[#013F63] font-medium text-sm">Entreprises</span>
+                            </div>
+                            {openSections['entreprises'] ? (
+                              <ChevronUp className="w-4 h-4 text-blue-600" />
+                            ) : (
+                              <ChevronDown className="w-4 h-4 text-blue-600" />
+                            )}
+                          </button>
+                          {openSections['entreprises'] && (
+                            <div className="px-3 pb-3 border-t border-blue-200 bg-white">
+                              <p className="text-xs text-[#013F63] leading-relaxed mt-2">
+                                Services formation internes, départements RH, cabinets de conseil en formation, entreprises de tous secteurs ayant des besoins en formation de leurs salariés
+                              </p>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Secteur public */}
+                        <div className="bg-blue-50 rounded-lg border border-blue-200 overflow-hidden">
+                          <button
+                            onClick={() => toggleSection('secteur-public')}
+                            className="w-full p-3 text-left flex items-center justify-between hover:bg-blue-100 transition-colors"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
+                              <span className="text-[#013F63] font-medium text-sm">Secteur public</span>
+                            </div>
+                            {openSections['secteur-public'] ? (
+                              <ChevronUp className="w-4 h-4 text-blue-600" />
+                            ) : (
+                              <ChevronDown className="w-4 h-4 text-blue-600" />
+                            )}
+                          </button>
+                          {openSections['secteur-public'] && (
+                            <div className="px-3 pb-3 border-t border-blue-200 bg-white">
+                              <p className="text-xs text-[#013F63] leading-relaxed mt-2">
+                                Collectivités territoriales, administrations publiques, établissements publics, services de formation des agents publics, centres de formation de la fonction publique
+                              </p>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Associations et ONG */}
+                        <div className="bg-blue-50 rounded-lg border border-blue-200 overflow-hidden">
+                          <button
+                            onClick={() => toggleSection('associations')}
+                            className="w-full p-3 text-left flex items-center justify-between hover:bg-blue-100 transition-colors"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
+                              <span className="text-[#013F63] font-medium text-sm">Associations et ONG</span>
+                            </div>
+                            {openSections['associations'] ? (
+                              <ChevronUp className="w-4 h-4 text-blue-600" />
+                            ) : (
+                              <ChevronDown className="w-4 h-4 text-blue-600" />
+                            )}
+                          </button>
+                          {openSections['associations'] && (
+                            <div className="px-3 pb-3 border-t border-blue-200 bg-white">
+                              <p className="text-xs text-[#013F63] leading-relaxed mt-2">
+                                Associations de formation, organisations non gouvernementales, structures d'insertion, associations d'éducation populaire, centres sociaux
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Emplois accessibles - Design moderne */}
+                  <div className="relative">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-orange-100 to-orange-200 rounded-2xl blur opacity-20"></div>
+                    <div className="relative bg-white rounded-2xl p-6 shadow-xl border border-orange-100 h-full flex flex-col">
+                      <div className="text-center mb-4">
+                        <h3 className="text-2xl font-bold text-[#013F63]">Métiers accessibles</h3>
+                      </div>
+                      
+                      <div className="space-y-4 flex-grow">
+                        {/* 6 premiers métiers toujours visibles */}
+                        <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
+                          <span className="text-[#013F63] font-medium text-sm">formateur professionnel d'adultes</span>
+                        </div>
+                        <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
+                          <span className="text-[#013F63] font-medium text-sm">concepteur de formation</span>
+                        </div>
+                        <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
+                          <span className="text-[#013F63] font-medium text-sm">animateur de formation</span>
+                        </div>
+                        <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
+                          <span className="text-[#013F63] font-medium text-sm">coordinateur pédagogique</span>
+                        </div>
+                        <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
+                          <span className="text-[#013F63] font-medium text-sm">responsable formation</span>
+                        </div>
+                        <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
+                          <span className="text-[#013F63] font-medium text-sm">consultant en formation</span>
+                        </div>
+                        
+                        {/* Métiers supplémentaires avec état déroulé */}
+                        {openSections['metiers'] && (
+                          <div className="space-y-4">
+                            <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
+                              <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
+                              <span className="text-[#013F63] font-medium text-sm">ingénieur pédagogique</span>
+                            </div>
+                            <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
+                              <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
+                              <span className="text-[#013F63] font-medium text-sm">formateur digital</span>
+                            </div>
+                            <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
+                              <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
+                              <span className="text-[#013F63] font-medium text-sm">expert en e-learning</span>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      
+                      <div className="text-center mt-auto pt-4">
+                        <button
+                          onClick={() => toggleSection('metiers')}
+                          className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 text-xs font-medium transition-colors group"
+                        >
+                          {openSections['metiers'] ? (
+                            <>
+                              <ChevronUp className="w-3 h-3 group-hover:transform group-hover:-translate-y-0.5 transition-transform" />
+                              Voir moins
+                            </>
+                          ) : (
+                            <>
+                              <ChevronDown className="w-3 h-3 group-hover:transform group-hover:translate-y-0.5 transition-transform" />
+                              + 3 autres métiers
+                            </>
+                          )}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Source */}
+                <div className="text-center mt-12">
+                  <p className="text-gray-500 text-sm italic">
+                    Source : France Compétences
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Section Tarifs */}
           <section className="py-12">
             <div className="container mx-auto px-4">
