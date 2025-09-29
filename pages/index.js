@@ -68,8 +68,8 @@ export default function HomePage() {
     {
       id: 2,
       title: "Réunions d'Information CIP",
-      subtitle: "Conseiller en Insertion Professionnelle",
-      description: "Participez à nos réunions d'information pour découvrir la formation CIP (Conseiller en Insertion Professionnelle).",
+      subtitle: "Conseiller en Insertion Professionnelle (CIP)",
+      description: "Participez à nos réunions d'information pour découvrir la formation Conseiller en Insertion Professionnelle (CIP).",
       buttonText: "Voir les dates",
       buttonLink: "#reunions",
       image: "/images/hero/reunion-info.jpg"
@@ -77,8 +77,8 @@ export default function HomePage() {
     {
       id: 3,
       title: "Réunions d'Information FPA",
-      subtitle: "Formateur Professionnel d'Adultes",
-      description: "Découvrez la formation FPA (Formateur Professionnel d'Adultes) lors de nos réunions d'information dédiées.",
+      subtitle: "Formateur Professionnel d'Adultes (FPA)",
+      description: "Découvrez la formation Formateur Professionnel d'Adultes (FPA) lors de nos réunions d'information dédiées.",
       buttonText: "Voir les dates",
       buttonLink: "#reunions",
       image: "/images/hero/reunion-info.jpg"
