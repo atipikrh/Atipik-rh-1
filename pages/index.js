@@ -49,6 +49,16 @@ export default function HomePage() {
     return months[monthName] || monthName
   }
 
+  // Fonction pour formater la date avec mois en chiffres
+  const formatDateForDisplay = (jour) => {
+    const parts = jour.split(' ')
+    const jourSemaine = parts[0]
+    const jourNum = parts[1]
+    const mois = getMonthNumber(parts[2])
+    const annee = parts[3].slice(-2) // Prendre les 2 derniers chiffres de l'année
+    return `${jourSemaine} ${jourNum}/${mois}/${annee}`
+  }
+
   // Obtenir les prochaines dates pour chaque formation
   const prochainesDatesCIP = getProchainesDates(datesCIP)
   const prochainesDatesFPA = getProchainesDates(datesFPA)
@@ -204,7 +214,7 @@ export default function HomePage() {
                             {prochainesDatesCIP.map((reunion, index) => (
                               <div key={index} className="flex justify-between">
                                 <span className="text-[#013F63]">
-                                  {reunion.jour.split(' ')[0]} {getMonthNumber(reunion.jour.split(' ')[1])}/{reunion.jour.split(' ')[2].slice(0, 2)}
+                                  {formatDateForDisplay(reunion.jour)}
                                 </span>
                                 <span className="font-medium text-[#013F63]">
                                   {reunion.heure.split(' - ')[0]}
@@ -224,7 +234,7 @@ export default function HomePage() {
                             {prochainesDatesFPA.map((reunion, index) => (
                               <div key={index} className="flex justify-between">
                                 <span className="text-[#013F63]">
-                                  {reunion.jour.split(' ')[0]} {getMonthNumber(reunion.jour.split(' ')[1])}/{reunion.jour.split(' ')[2].slice(0, 2)}
+                                  {formatDateForDisplay(reunion.jour)}
                                 </span>
                                 <span className="font-medium text-[#013F63]">
                                   {reunion.heure.split(' - ')[0]}
