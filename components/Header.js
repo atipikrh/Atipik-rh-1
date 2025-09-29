@@ -166,7 +166,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                     className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
                   >
                     <div className="font-medium">Notre équipe</div>
-                    <div className="text-xs text-blue-400">Les experts qui vous accompagnent</div>
+                    <div className="text-xs text-blue-400">Les expertes qui vous accompagnent</div>
                   </Link>
                   <Link 
                     href="/certification" 

@@ -75,7 +75,7 @@ export default function MentionsLegales() {
                     </h3>
                     <div className="space-y-2 text-gray-700">
                       <p><strong>Propriétaire :</strong> ATIPIK RH – SARL ATIPIK RH au Capital de 2000 €</p>
-                      <p><strong>RCS :</strong> Bordeaux N°84890745700016</p>
+                      <p><strong>RCS :</strong> Bordeaux N°84890745700024</p>
                       <p><strong>Adresse :</strong> 8 Rue du Courant, 33310 LORMONT</p>
                       <p><strong>Créateur :</strong> Léo SIMON</p>
                       <p><strong>Responsable publication :</strong> Vanessa NOAH EWODO – vanessa@atipikrh.com</p>

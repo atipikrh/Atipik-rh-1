@@ -12,7 +12,7 @@ export default function NotreEquipe() {
   return (
     <>
       <Head>
-        <title>Notre équipe | Atipik RH - Les experts qui vous accompagnent</title>
+        <title>Notre équipe | Atipik RH - Les expertes qui vous accompagnent</title>
         <meta name="description" content="Découvrez l'équipe d'Atipik RH : formatrices expertes, consultantes insertion professionnelle qui vous accompagnent dans votre projet." />
         <meta name="keywords" content="équipe Atipik RH, formatrices expertes, consultantes emploi, formation professionnelle Lormont" />
         <link rel="canonical" href="https://atipikrh.fr/notre-equipe" />

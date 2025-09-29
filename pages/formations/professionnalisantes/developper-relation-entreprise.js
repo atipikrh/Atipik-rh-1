@@ -168,7 +168,7 @@ export default function DevelopperRelationEntreprise() {
                 <section className="py-2 my-2 mb-12">
                   <div className="max-w-4xl mx-auto">
                     <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#013F63]">
-                      <div className="space-y-4 text-[#013F63] italic text-lg leading-relaxed text-center">
+                      <div className="space-y-4 text-[#013F63] text-lg leading-relaxed text-center">
                         <p>
                           Dans un contexte où la relation entreprise devient un enjeu stratégique pour l'insertion professionnelle, développer ses compétences en relation entreprise permet de créer des partenariats durables et efficaces. Cette formation vous donne les clés pour comprendre les attentes des employeurs et construire une collaboration mutuellement bénéfique.
                         </p>

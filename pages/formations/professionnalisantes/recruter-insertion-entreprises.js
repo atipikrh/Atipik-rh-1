@@ -169,7 +169,7 @@ export default function RecruterInsertionEntreprises() {
                 <section className="py-4 my-4 mb-12">
                   <div className="max-w-4xl mx-auto">
                     <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#013F63]">
-                      <div className="space-y-4 text-[#013F63] italic text-lg leading-relaxed text-center">
+                      <div className="space-y-4 text-[#013F63] text-lg leading-relaxed text-center">
                         <p>
                           Dans un contexte où le recrutement en insertion devient un enjeu stratégique pour les entreprises, développer ses compétences en recrutement inclusif permet de créer des équipes diversifiées et performantes. Cette formation vous donne les clés pour identifier et valoriser les talents issus de l'insertion.
                         </p>

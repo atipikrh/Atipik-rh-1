@@ -169,7 +169,7 @@ export default function RenforcerRelationEntreprise() {
                 <section className="py-4 my-4 mb-12">
                   <div className="max-w-4xl mx-auto">
                     <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#013F63]">
-                      <div className="space-y-4 text-[#013F63] italic text-lg leading-relaxed text-center">
+                      <div className="space-y-4 text-[#013F63] text-lg leading-relaxed text-center">
                         <p>
                           Dans un contexte où la relation entreprise devient un enjeu stratégique pour l'insertion professionnelle, renforcer ses compétences en relation entreprise permet de créer des partenariats durables et efficaces. Cette formation vous donne les clés pour optimiser vos relations existantes et développer de nouveaux partenariats.
                         </p>

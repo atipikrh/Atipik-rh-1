@@ -169,7 +169,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                 <section className="py-4 my-4 mb-12">
                   <div className="max-w-4xl mx-auto">
                     <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#013F63]">
-                      <div className="space-y-4 text-[#013F63] italic text-lg leading-relaxed text-center">
+                      <div className="space-y-4 text-[#013F63] text-lg leading-relaxed text-center">
                         <p>
                           Dans un contexte où la diversité et l'inclusion deviennent des enjeux majeurs pour les entreprises, renforcer sa pratique du recrutement inclusif permet de créer des équipes plus performantes et représentatives. Cette formation vous donne les outils pour identifier et lever les biais inconscients dans vos processus de recrutement.
                         </p>
