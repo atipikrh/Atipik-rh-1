@@ -47,52 +47,44 @@ export default function Partenariat() {
           <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
-                  <div className="text-center lg:text-left lg:pl-12">
-                    <div className="text-center lg:text-left mb-8">
-                      <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
-                        Partenariats <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">d'excellence</span>
-                      </h2>
-                    </div>
-
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  <div className="text-center lg:text-left">
+                    <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
+                      Les Entreprises <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">s'Engagent</span>
+                    </h2>
                     <p className="text-lg text-[#013F63] leading-relaxed font-light mb-6">
                       Nos entreprises partenaires s'engagent à nos côtés pour promouvoir la formation professionnelle 
                       et l'accompagnement des talents. Ensemble, nous construisons un écosystème local dynamique 
                       et inclusif.
                     </p>
-
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-4">
-                        <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-[#013F63]">Réseau d'entreprises engagées</span>
-                        </div>
-                        <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-[#013F63]">Soutien aux formations qualifiantes</span>
-                        </div>
+                    <div className="space-y-4 text-[#013F63]">
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <span>Réseau d'entreprises engagées</span>
                       </div>
-                      <div className="space-y-4">
-                        <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-[#013F63]">Accompagnement personnalisé</span>
-                        </div>
-                        <div className="flex items-start">
-                          <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
-                          <span className="text-[#013F63]">Développement des compétences</span>
-                        </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <span>Soutien aux formations qualifiantes</span>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <span>Accompagnement personnalisé</span>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <span>Développement des compétences</span>
                       </div>
                     </div>
                   </div>
 
                   <div className="text-center">
-                    <div className="w-full h-60 flex items-center justify-center">
+                    <div className="rounded-2xl p-12 shadow-lg">
                       <Image
                         src="/images/certifications/les-entreprises-engagent.png"
-                        alt="Nos entreprises s'engagent"
+                        alt="Logo Les Entreprises s'Engagent"
                         width={300}
-                        height={300}
-                        className="object-contain w-full h-full"
+                        height={200}
+                        className="object-contain w-full h-40 mx-auto"
                       />
                     </div>
                   </div>
@@ -140,6 +132,57 @@ export default function Partenariat() {
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         <span>Partenariats et collaborations</span>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Partenariat avec les acteurs de la compétence */}
+          <section className="py-16">
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  <div className="text-center lg:text-left">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-4 leading-tight">
+                      Les <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">Acteurs de la Compétence</span>
+                    </h3>
+                    <p className="text-lg text-[#013F63] leading-relaxed font-light mb-6">
+                      Nos partenariats avec les acteurs de la compétence nous permettent 
+                      d'offrir des formations de qualité, certifiantes et adaptées aux 
+                      besoins du marché du travail.
+                    </p>
+                    <div className="space-y-4 text-[#013F63]">
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <span>Certifications professionnelles reconnues</span>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <span>Formations adaptées aux besoins du marché</span>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <span>Accompagnement vers l'emploi</span>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <span>Réseau d'entreprises partenaires</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="text-center">
+                    <div className="rounded-2xl p-12 shadow-lg">
+                      <Image
+                        src="/images/certifications/les-acteurs-de-la-competence.png"
+                        alt="Logo Les Acteurs de la Compétence"
+                        width={300}
+                        height={200}
+                        className="object-contain w-full h-40 mx-auto"
+                      />
                     </div>
                   </div>
                 </div>
