@@ -1223,7 +1223,7 @@ export default function FormationCIP() {
                     href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/droits" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-[#013F63] text-[#013F63] hover:text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105 border-2 border-[#013F63]"
                   >
                     J'utilise mon CPF
                     <ArrowRight className="w-4 h-4" />
