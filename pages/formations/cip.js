@@ -621,13 +621,13 @@ export default function FormationCIP() {
           </section>
 
           {/* Méthodologie d'intervention */}
-          <section className="py-8">
+          <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 
                 {/* Titre de section */}
-                <div className="text-center mb-8">
-                  <h2 className="text-lg lg:text-xl font-bold text-[#013F63] mb-6">
+                <div className="text-center mb-4">
+                  <h2 className="text-lg lg:text-xl font-bold text-[#013F63] mb-3">
                     UNE MÉTHODOLOGIE D'INTERVENTION AU PLUS PRÈS DU RÉEL
                   </h2>
                 </div>
@@ -638,76 +638,81 @@ export default function FormationCIP() {
                     
                     {/* Carte 1: Équipe de formateurs */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px]">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="w-12 h-12 bg-[#013F63] rounded-lg flex items-center justify-center flex-shrink-0">
-                            <Users className="w-6 h-6 text-white" />
-                          </div>
-                          <h3 className="text-base font-bold text-[#013F63] leading-tight flex-1 text-center">ÉQUIPE DE FORMATEURS</h3>
+                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                        {/* Section titre avec fond bleu clair */}
+                        <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
+                          <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">ÉQUIPE DE FORMATEURS</h3>
                         </div>
-                        <p className="text-[#013F63] text-sm leading-relaxed flex-grow">
-                          Une équipe de formateurs issue du terrain, avec une expertise reconnue dans l'accompagnement professionnel et l'insertion.
-                        </p>
+                        {/* Section contenu avec fond blanc */}
+                        <div className="bg-white px-6 py-1 flex-grow flex items-center">
+                          <p className="text-[#013F63] text-sm leading-relaxed">
+                            Une équipe de formateurs issue du terrain, avec une expertise reconnue dans l'accompagnement professionnel et l'insertion.
+                          </p>
+                        </div>
                       </div>
                     </div>
 
                     {/* Carte 2: Intervenants théâtre */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px]">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <GraduationCap className="w-6 h-6 text-white" />
-                          </div>
-                          <h3 className="text-base font-bold text-[#013F63] leading-tight flex-1 text-center">INTERVENANTS THÉÂTRE</h3>
+                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                        {/* Section titre avec fond bleu clair */}
+                        <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
+                          <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">INTERVENANTS THÉÂTRE</h3>
                         </div>
-                        <p className="text-[#013F63] text-sm leading-relaxed flex-grow">
-                          Des intervenants théâtre spécialisés dans l'insertion professionnelle et dans le handicap pour des mises en situation innovantes.
-                        </p>
+                        {/* Section contenu avec fond blanc */}
+                        <div className="bg-white px-6 py-1 flex-grow flex items-center">
+                          <p className="text-[#013F63] text-sm leading-relaxed">
+                            Des intervenants théâtre spécialisés dans l'insertion professionnelle et dans le handicap pour des mises en situation innovantes.
+                          </p>
+                        </div>
                       </div>
                     </div>
 
                     {/* Carte 3: Projets collaboratifs */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px]">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <Target className="w-6 h-6 text-white" />
-                          </div>
-                          <h3 className="text-base font-bold text-[#013F63] leading-tight flex-1 text-center">PROJETS COLLABORATIFS</h3>
+                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                        {/* Section titre avec fond bleu clair */}
+                        <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
+                          <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">PROJETS COLLABORATIFS</h3>
                         </div>
-                        <p className="text-[#013F63] text-sm leading-relaxed flex-grow">
-                          Des projets collaboratifs et des mises en situation auprès des publics accompagnés par les structures de l'emploi et de l'insertion du territoire.
-                        </p>
+                        {/* Section contenu avec fond blanc */}
+                        <div className="bg-white px-6 py-1 flex-grow flex items-center">
+                          <p className="text-[#013F63] text-sm leading-relaxed">
+                            Des projets collaboratifs et des mises en situation auprès des publics accompagnés par les structures de l'emploi et de l'insertion du territoire.
+                          </p>
+                        </div>
                       </div>
                     </div>
 
                     {/* Carte 4: Rencontres professionnelles */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px]">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <Award className="w-6 h-6 text-white" />
-                          </div>
-                          <h3 className="text-base font-bold text-[#013F63] leading-tight flex-1 text-center">RENCONTRES PROFESSIONNELLES</h3>
+                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                        {/* Section titre avec fond bleu clair */}
+                        <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
+                          <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">RENCONTRES PROFESSIONNELLES</h3>
                         </div>
-                        <p className="text-[#013F63] text-sm leading-relaxed flex-grow">
-                          Des rencontres avec des professionnels du secteur pour enrichir la formation et créer un réseau professionnel.
-                        </p>
+                        {/* Section contenu avec fond blanc */}
+                        <div className="bg-white px-6 py-1 flex-grow flex items-center">
+                          <p className="text-[#013F63] text-sm leading-relaxed">
+                            Des rencontres avec des professionnels du secteur pour enrichir la formation et créer un réseau professionnel.
+                          </p>
+                        </div>
                       </div>
                     </div>
 
                     {/* Carte 5: Thématiques actuelles */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px]">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <BookOpen className="w-6 h-6 text-white" />
-                          </div>
-                          <h3 className="text-base font-bold text-[#013F63] leading-tight flex-1 text-center">THÉMATIQUES ACTUELLES</h3>
+                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                        {/* Section titre avec fond bleu clair */}
+                        <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
+                          <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">THÉMATIQUES ACTUELLES</h3>
                         </div>
-                        <p className="text-[#013F63] text-sm leading-relaxed flex-grow">
-                          Des thématiques adaptées aux enjeux actuels de la profession : Risque psycho-socio, droit des étrangers, inclusion numérique...
-                        </p>
+                        {/* Section contenu avec fond blanc */}
+                        <div className="bg-white px-6 py-1 flex-grow flex items-center">
+                          <p className="text-[#013F63] text-sm leading-relaxed">
+                            Des thématiques adaptées aux enjeux actuels de la profession : Risque psycho-socio, droit des étrangers, inclusion numérique...
+                          </p>
+                        </div>
                       </div>
                     </div>
 
@@ -1209,11 +1214,20 @@ export default function FormationCIP() {
                   </div>
                 </div>
 
-                <div className="text-center mt-8">
+                <div className="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/financement" className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
                     En savoir plus sur les financements
                     <ArrowRight className="w-4 h-4" />
                   </Link>
+                  <a 
+                    href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/droits" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105"
+                  >
+                    J'utilise mon CPF
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
                 </div>
 
               </div>
