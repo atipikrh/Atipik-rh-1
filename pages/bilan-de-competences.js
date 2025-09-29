@@ -100,13 +100,13 @@ export default function BilanCompetences() {
               {/* Contenu principal */}
               <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 rounded-3xl p-8 shadow-lg border-2 border-[#013F63] relative z-10">
                 <div className="space-y-4 text-center">
-                  <p className="text-lg text-[#013F63] leading-relaxed italic">
+                  <p className="text-lg text-[#013F63] leading-relaxed">
                     À l'heure où les carrières linéaires n'existent plus ou de moins en moins...
                   </p>
-                  <p className="text-lg text-[#013F63] leading-relaxed italic">
+                  <p className="text-lg text-[#013F63] leading-relaxed">
                     À l'heure où la digitalisation amène la disparition et la transformation des métiers,
                   </p>
-                  <p className="text-lg text-[#013F63] leading-relaxed italic">
+                  <p className="text-lg text-[#013F63] leading-relaxed">
                     À l'heure où les questions de qualité de vie au travail, d'équilibre Vie professionnelle / Vie personnelle sont plus que jamais d'actualité.
                   </p>
                   

@@ -451,7 +451,7 @@ export default function VAE() {
             <div className="max-w-4xl mx-auto">
 
               <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#013F63]">
-                <div className="space-y-4 text-[#013F63] italic text-lg leading-relaxed text-center">
+                <div className="space-y-4 text-[#013F63] text-lg leading-relaxed text-center">
                   <p>
                     Dans un contexte de valorisation de l'expérience professionnelle et de reconnaissance des compétences, la VAE (Validation des Acquis de l'Expérience) représente une opportunité unique pour transformer votre parcours en certification officielle. Un accompagnement structuré maximise vos chances de réussite et vous guide dans cette démarche administrative et personnelle complexe.
                   </p>
