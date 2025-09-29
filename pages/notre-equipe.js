@@ -63,9 +63,15 @@ export default function NotreEquipe() {
                               className="w-full h-full rounded-full object-cover cursor-pointer"
                             />
                           </div>
-                          {/* Face arrière - Icône temporaire */}
-                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-                            <User className="w-16 h-16 text-white" />
+                          {/* Face arrière - Photo d'enfance */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full">
+                            <Image
+                              src="/images/equipe/brunilda-enfant.jpg"
+                              alt="Brunilda RAFAEL enfant"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
                           </div>
                         </div>
                       </div>

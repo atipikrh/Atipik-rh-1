@@ -116,6 +116,7 @@ export default function FormationCIP() {
     }))
   }
 
+
   // Détecter la taille d'écran après l'hydratation pour éviter les erreurs SSR
   useEffect(() => {
     setIsClient(true)
@@ -622,51 +623,97 @@ export default function FormationCIP() {
           {/* Méthodologie d'intervention */}
           <section className="py-8">
             <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <div className="bg-white rounded-3xl shadow-xl border-2 border-[#013F63] p-8">
-                  <div className="text-center mb-6">
-                    <h2 className="text-xl lg:text-2xl font-bold text-[#013F63] mb-4">
-                      Une méthodologie d'intervention au plus près du réel
-                    </h2>
-                  </div>
+              <div className="max-w-6xl mx-auto">
+                
+                {/* Titre de section */}
+                <div className="text-center mb-8">
+                  <h2 className="text-lg lg:text-xl font-bold text-[#013F63] mb-6">
+                    UNE MÉTHODOLOGIE D'INTERVENTION AU PLUS PRÈS DU RÉEL
+                  </h2>
+                </div>
 
-                  <div className="space-y-3 max-w-3xl mx-auto">
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#013F63] rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-[#013F63] text-base leading-relaxed">
-                        Une équipe de formateurs issue du terrain
-                      </p>
+                {/* Carrousel horizontal style financement */}
+                <div className="overflow-x-auto px-4 py-8">
+                  <div className="flex gap-4 md:gap-6 w-max pl-4 pr-4">
+                    
+                    {/* Carte 1: Équipe de formateurs */}
+                    <div className="flex-shrink-0 w-72">
+                      <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px]">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 bg-[#013F63] rounded-lg flex items-center justify-center flex-shrink-0">
+                            <Users className="w-6 h-6 text-white" />
+                          </div>
+                          <h3 className="text-base font-bold text-[#013F63] leading-tight flex-1 text-center">ÉQUIPE DE FORMATEURS</h3>
+                        </div>
+                        <p className="text-[#013F63] text-sm leading-relaxed flex-grow">
+                          Une équipe de formateurs issue du terrain, avec une expertise reconnue dans l'accompagnement professionnel et l'insertion.
+                        </p>
+                      </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#013F63] rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-[#013F63] text-base leading-relaxed">
-                        Des intervenants théâtre spécialisés dans l'insertion professionnelle et dans le handicap.
-                      </p>
+                    {/* Carte 2: Intervenants théâtre */}
+                    <div className="flex-shrink-0 w-72">
+                      <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px]">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <GraduationCap className="w-6 h-6 text-white" />
+                          </div>
+                          <h3 className="text-base font-bold text-[#013F63] leading-tight flex-1 text-center">INTERVENANTS THÉÂTRE</h3>
+                        </div>
+                        <p className="text-[#013F63] text-sm leading-relaxed flex-grow">
+                          Des intervenants théâtre spécialisés dans l'insertion professionnelle et dans le handicap pour des mises en situation innovantes.
+                        </p>
+                      </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#013F63] rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-[#013F63] text-base leading-relaxed">
-                        Des projets collaboratifs et des mises en situation auprès des publics accompagnés par les structures de l'emploi et de l'insertion du territoire.
-                      </p>
+                    {/* Carte 3: Projets collaboratifs */}
+                    <div className="flex-shrink-0 w-72">
+                      <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px]">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <Target className="w-6 h-6 text-white" />
+                          </div>
+                          <h3 className="text-base font-bold text-[#013F63] leading-tight flex-1 text-center">PROJETS COLLABORATIFS</h3>
+                        </div>
+                        <p className="text-[#013F63] text-sm leading-relaxed flex-grow">
+                          Des projets collaboratifs et des mises en situation auprès des publics accompagnés par les structures de l'emploi et de l'insertion du territoire.
+                        </p>
+                      </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#013F63] rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-[#013F63] text-base leading-relaxed">
-                        Des rencontres avec des professionnels
-                      </p>
+                    {/* Carte 4: Rencontres professionnelles */}
+                    <div className="flex-shrink-0 w-72">
+                      <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px]">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <Award className="w-6 h-6 text-white" />
+                          </div>
+                          <h3 className="text-base font-bold text-[#013F63] leading-tight flex-1 text-center">RENCONTRES PROFESSIONNELLES</h3>
+                        </div>
+                        <p className="text-[#013F63] text-sm leading-relaxed flex-grow">
+                          Des rencontres avec des professionnels du secteur pour enrichir la formation et créer un réseau professionnel.
+                        </p>
+                      </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#013F63] rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-[#013F63] text-base leading-relaxed">
-                        Des thématiques adaptées aux enjeux actuels de la profession : Risque psycho-socio, du droit des étrangers, l'inclusion numérique...
-                      </p>
+                    {/* Carte 5: Thématiques actuelles */}
+                    <div className="flex-shrink-0 w-72">
+                      <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px]">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <BookOpen className="w-6 h-6 text-white" />
+                          </div>
+                          <h3 className="text-base font-bold text-[#013F63] leading-tight flex-1 text-center">THÉMATIQUES ACTUELLES</h3>
+                        </div>
+                        <p className="text-[#013F63] text-sm leading-relaxed flex-grow">
+                          Des thématiques adaptées aux enjeux actuels de la profession : Risque psycho-socio, droit des étrangers, inclusion numérique...
+                        </p>
+                      </div>
                     </div>
+
                   </div>
                 </div>
+
               </div>
             </div>
           </section>

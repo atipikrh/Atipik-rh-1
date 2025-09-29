@@ -54,7 +54,7 @@ export default function BrunildaRafael() {
                         />
                       ) : (
                         <Image
-                          src="/images/equipe/brunilda-enfant.jpeg"
+                          src="/images/equipe/brunilda-enfant.jpg"
                           alt="Brunilda RAFAEL enfant"
                           width={350}
                           height={400}
@@ -68,7 +68,7 @@ export default function BrunildaRafael() {
                       onClick={() => setShowChildPhoto(!showChildPhoto)}
                     >
                       <Image
-                        src={showChildPhoto ? "/images/equipe/brunilda-enfant.jpeg" : "/images/equipe/brunilda.jpeg"}
+                        src={showChildPhoto ? "/images/equipe/brunilda-enfant.jpg" : "/images/equipe/brunilda.jpeg"}
                         alt={showChildPhoto ? "Brunilda RAFAEL enfant" : "Brunilda RAFAEL"}
                         width={350}
                         height={400}

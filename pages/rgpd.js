@@ -246,31 +246,6 @@ export default function RGPD() {
 
               </div>
 
-              {/* Contact rapide */}
-              <div className="mt-16 bg-gradient-to-r from-[#013F63] to-blue-700 rounded-3xl p-8 text-white text-center">
-                <Lock className="w-12 h-12 mx-auto mb-4 text-blue-200" />
-                <h3 className="text-2xl font-bold mb-4">
-                  Questions sur vos données ?
-                </h3>
-                <p className="text-blue-100 mb-6">
-                  Pour toute question concernant le traitement de vos données personnelles, 
-                  n'hésitez pas à nous contacter.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a 
-                    href="mailto:contact@atipikrh.com" 
-                    className="inline-flex px-6 py-3 rounded-full bg-white text-[#013F63] font-semibold hover:bg-blue-50 transition"
-                  >
-                    Nous contacter
-                  </a>
-                  <a 
-                    href="tel:0970976320" 
-                    className="inline-flex px-6 py-3 rounded-full border-2 border-white text-white hover:bg-white hover:text-[#013F63] font-semibold transition"
-                  >
-                    09 70 97 63 20
-                  </a>
-                </div>
-              </div>
 
             </div>
           </div>

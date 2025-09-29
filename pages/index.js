@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Clock } from 'lucide-react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import CookieBanner from '../components/CookieBanner'
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -411,6 +412,9 @@ export default function HomePage() {
           </div>
 
         <Footer />
+        
+        {/* Cookie Banner */}
+        <CookieBanner />
       </div>
     </>
   )
