@@ -83,7 +83,7 @@ export default function HomePage() {
       description: "Participez à nos réunions d'information pour découvrir la formation Conseiller en Insertion Professionnelle (CIP).",
       buttonText: "Voir les dates",
       buttonLink: "#reunions",
-      image: "/images/hero/reunion-info.jpg"
+      image: "/images/hero/reunion-info-2.jpeg"
     },
     {
       id: 3,
@@ -101,7 +101,7 @@ export default function HomePage() {
       description: "Louez nos salles équipées pour vos formations, réunions et séminaires. 5 espaces disponibles allant du bureau individuel jusqu'aux salles d'une capacité de 20 personnes.",
       buttonText: "Voir nos salles",
       buttonLink: "/location-salles-lormont",
-      image: "/images/hero/reunion-info.jpg"
+      image: "/images/hero/reunion-info-2.jpeg"
     }
   ]
 
@@ -182,7 +182,11 @@ export default function HomePage() {
                       {!slide.isQuiz && (
                         <a
                           href={slide.id === 2 || slide.id === 3 ? '/s-inscrire' : slide.buttonLink}
-                          className="inline-flex items-center px-6 py-3 bg-white text-orange-500 font-semibold rounded-lg hover:bg-orange-50 transition-all duration-300 shadow-lg text-sm lg:text-base mt-4"
+                          className={`inline-flex items-center px-6 py-3 bg-white font-semibold rounded-lg transition-all duration-300 shadow-lg text-sm lg:text-base mt-4 ${
+                            slide.id === 2 || slide.id === 4 
+                              ? 'text-[#013F63] hover:bg-blue-50' 
+                              : 'text-orange-500 hover:bg-orange-50'
+                          }`}
                         >
                           {slide.id === 2 || slide.id === 3 ? "S'inscrire" : slide.buttonText}
                         </a>
@@ -210,7 +214,7 @@ export default function HomePage() {
                       ) : slide.id === 2 ? (
                         /* Fenêtre pour les réunions CIP */
                         <div className="bg-white/90 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-gray-800 max-w-sm">
-                          <h3 className="text-lg font-bold mb-3 text-orange-500">Prochaines dates CIP</h3>
+                          <h3 className="text-lg font-bold mb-3 text-[#013F63]">Prochaines dates CIP</h3>
                           <div className="space-y-2 text-sm">
                             {prochainesDatesCIP.map((reunion, index) => (
                               <div key={index} className="flex justify-between">
