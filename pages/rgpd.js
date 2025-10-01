@@ -219,7 +219,7 @@ export default function RGPD() {
                   <div className="bg-gray-50 rounded-lg p-6">
                     <h3 className="text-lg font-semibold text-[#013F63] mb-4">ATIPIK RH</h3>
                     <div className="space-y-2 text-gray-700">
-                      <p><strong>SIRET :</strong> 84890745700016</p>
+                      <p><strong>SIRET :</strong> 84890745700024</p>
                       <div className="flex items-center gap-3">
                         <Phone className="w-4 h-4 text-gray-600" />
                         <span>09 70 97 63 20</span>

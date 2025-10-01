@@ -55,7 +55,7 @@ export default function CGV() {
                     </h2>
                     <p className="text-gray-700 leading-relaxed">
                       Les présentes conditions générales de vente s'appliquent aux prestations de formation professionnelle proposées par la société 
-                      <strong> ATIPIK RH</strong>, enregistrée sous le SIRET n° <strong>84890745700016</strong>, dont le siège social est situé au 
+                      <strong> ATIPIK RH</strong>, enregistrée sous le SIRET n° <strong>84890745700024</strong>, dont le siège social est situé au 
                       <strong> 8 Rue du Courant, 33310 Lormont</strong>.
                     </p>
                   </div>
@@ -88,7 +88,7 @@ export default function CGV() {
                   <ul className="list-disc pl-6 mb-4 text-gray-700">
                     <li>L'acceptation d'un devis ou d'une convention de formation,</li>
                     <li>L'envoi du formulaire d'inscription complété, ou d'un accord écrit,</li>
-                    <li>Et, si applicable, la transmission d'un accord de financement (CPF, Pôle emploi, OPCO…).</li>
+                    <li>Et, si applicable, la transmission d'un accord de financement (CPF, France Travail, OPCO…).</li>
                   </ul>
                   <p className="text-gray-700">
                     Les inscriptions sont validées dans la limite des places disponibles.
