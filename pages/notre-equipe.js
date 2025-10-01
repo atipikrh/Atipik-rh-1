@@ -373,7 +373,7 @@ export default function NotreEquipe() {
                       </div>
                     </Link>
                     <h3 className="text-base text-[#013F63] mb-2">
-                      <span className="text-base">Anne-Lise</span> <span className="font-semibold">COATRINNÉ</span>
+                      <span className="text-base">Anne-Lise</span> <span className="font-semibold">COATRINÉ</span>
                     </h3>
                   </div>
 

@@ -11,9 +11,9 @@ export default function AnneLiseCoatrine() {
   return (
     <>
       <Head>
-        <title>Anne-Lise COATRINNÉ | Formatrice - Atipik RH</title>
-        <meta name="description" content="Découvrez le profil de Anne-Lise COATRINNÉ, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
-        <meta name="keywords" content="Anne-Lise COATRINNÉ, formatrice Atipik RH, formation professionnelle, Lormont" />
+        <title>Anne-Lise COATRINÉ | Formatrice - Atipik RH</title>
+        <meta name="description" content="Découvrez le profil de Anne-Lise COATRINÉ, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
+        <meta name="keywords" content="Anne-Lise COATRINÉ, formatrice Atipik RH, formation professionnelle, Lormont" />
         <link rel="canonical" href="https://atipikrh.fr/equipe/anne-lise-coatrine" />
       </Head>
 
@@ -47,7 +47,7 @@ export default function AnneLiseCoatrine() {
                       {showChildPhoto ? (
                         <Image
                           src="/images/equipe/anne-lise.jpeg"
-                          alt="Anne-Lise COATRINNÉ"
+                          alt="Anne-Lise COATRINÉ"
                           width={350}
                           height={400}
                           className="w-full h-full object-cover rounded-2xl"
@@ -55,7 +55,7 @@ export default function AnneLiseCoatrine() {
                       ) : (
                         <Image
                           src="/images/equipe/Anne-lise-enfant.png"
-                          alt="Anne-Lise COATRINNÉ enfant"
+                          alt="Anne-Lise COATRINÉ enfant"
                           width={350}
                           height={400}
                           className="w-full h-full object-cover rounded-2xl"
@@ -81,7 +81,7 @@ export default function AnneLiseCoatrine() {
                 {/* Content à droite */}
                 <div className="lg:col-span-8 space-y-4">
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] leading-tight">
-                    <span className="font-brittany text-3xl lg:text-4xl">Anne-Lise</span> <span className="font-semibold">COATRINNÉ</span>
+                    <span className="font-brittany text-3xl lg:text-4xl">Anne-Lise</span> <span className="font-semibold">COATRINÉ</span>
                   </h1>
                   <div className="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">
                     Formatrice

@@ -102,7 +102,7 @@ export default function DevelopperRelationEntreprise() {
     ],
     details: [
       "Durée : 3 jours (21h)",
-      "Prérequis : Aucun",
+      "Prérequis : Avoir de l'expérience dans l'accompagnement social et/ou d'insertion professionnelle",
       "Public : 10 personnes maximum",
       "Méthodes : Alternance théorie/pratique, jeux de rôles, études de cas"
     ]
@@ -205,7 +205,7 @@ export default function DevelopperRelationEntreprise() {
                         <GraduationCap className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Niveau d'entrée :</p>
-                          <p className="text-blue-100 text-xs">Aucun prérequis spécifique</p>
+                          <p className="text-blue-100 text-xs">Avoir de l'expérience dans l'accompagnement social et/ou d'insertion professionnelle</p>
                         </div>
                       </div>
 
@@ -315,7 +315,7 @@ export default function DevelopperRelationEntreprise() {
                       </button>
                       {openSections.prerequis && (
                         <div className="p-4 border-t border-gray-100">
-                          <p className="text-[#013F63] text-sm">Aucun</p>
+                          <p className="text-[#013F63] text-sm">Avoir de l'expérience dans l'accompagnement social et/ou d'insertion professionnelle</p>
                         </div>
                       )}
                     </div>
@@ -339,7 +339,7 @@ export default function DevelopperRelationEntreprise() {
                         <div className="p-4 border-t border-gray-100">
                           <p className="text-[#013F63] text-sm">
                             Nous sommes à votre disposition, par téléphone ou par mail, afin d'analyser et d'évaluer vos besoins.<br/>
-                            Dans le cadre de nos actions de formation, un programme est construit et personnalisé est élaboré, en cohérence avec vos objectifs et les spécificités de votre structure.
+                            Dans le cadre de nos actions de formation, un programme est construit, personnalisé et élaboré, en cohérence avec vos objectifs et les spécificités de votre structure.
                           </p>
                         </div>
                       )}
@@ -595,6 +595,9 @@ export default function DevelopperRelationEntreprise() {
                     {/* Section droite - Contact et informations */}
                     <div className="lg:col-span-2 p-6 flex flex-col justify-center">
                       <div className="mb-4">
+                        <p className="text-[#013F63] leading-relaxed mb-4">
+                          Nous mettons tout en œuvre pour rendre nos formations accessibles au plus grand nombre.
+                        </p>
                         <p className="text-[#013F63] leading-relaxed mb-4">
                           <strong>Accessibilité Handicap :</strong> Nos formations sont accessibles aux personnes en situation de handicap. 
                           Contactez-nous pour étudier ensemble les modalités d'accès adaptées à votre situation.

@@ -84,7 +84,7 @@ export default function Footer() {
           
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Nos Services</h3>
+            <h3 className="text-lg font-semibold mb-4">Nos accompagnements</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
                 <Link href="/vae" className="hover:text-white transition-colors cursor-pointer">
@@ -139,7 +139,7 @@ export default function Footer() {
               <div className="mt-3 pt-2 border-t border-gray-700">
                 <p className="text-sm font-medium">Horaires :</p>
                 <p className="text-sm">Lun-Ven : 9h-18h</p>
-                <p className="text-sm">Sam : sur rendez-vous</p>
+                <p className="text-sm">Sam : 09h00 à 12h00 (sur rendez-vous)</p>
               </div>
             </div>
           </div>

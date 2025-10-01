@@ -380,7 +380,7 @@ export default function FormationCIP() {
                 <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#013F63]">
                   <div className="space-y-4 text-[#013F63] text-lg leading-relaxed text-center">
                     <p>
-                      Dans un contexte économique en mutation, le conseiller en insertion professionnelle accompagne à la fois les personnes dans la levée des freins, la construction de parcours vers un emploie durable et il soutient également les entreprises dans leurs besoins de recrutement et de fidélisation des talents.<br/><br/>Le CIP est avant tout un métier de lien, de contact et de territoire.
+                      Dans un contexte économique en mutation, le conseiller en insertion professionnelle accompagne à la fois les personnes dans la levée des freins, la construction de parcours vers un emploi durable et il soutient également les entreprises dans leurs besoins de recrutement et de fidélisation des talents.<br/><br/>Le CIP est avant tout un métier de lien, de contact et de territoire.
                     </p>
                   </div>
                   
@@ -575,12 +575,6 @@ export default function FormationCIP() {
                           <p>• <strong>Durée : 1102 heures</strong></p>
                           <div className="ml-4 space-y-1">
                             <p>◦ <strong>693 heures en centre</strong></p>
-                            <p className="ml-4">dont :</p>
-                            <div className="ml-8 space-y-1">
-                              <p>▪ 7 journées théâtre</p>
-                              <p>▪ 10 journées au plus près du réel</p>
-                              <p>▪ 1 journée droit des étrangers</p>
-                            </div>
                             <p>◦ <strong>385 heures en entreprise</strong></p>
                             <p>◦ <strong>3 heures de session de certification</strong></p>
                           </div>
@@ -646,7 +640,7 @@ export default function FormationCIP() {
                         {/* Section contenu avec fond blanc */}
                         <div className="bg-white px-6 py-1 flex-grow flex items-center">
                           <p className="text-[#013F63] text-sm leading-relaxed">
-                            Une équipe de formateurs issue du terrain, avec une expertise reconnue dans l'accompagnement professionnel et l'insertion.
+                            Une équipe de formateurs issue du terrain du milieu de la formation et de la transmission, avec une expertise reconnue dans l'accompagnement professionnel et l'insertion.
                           </p>
                         </div>
                       </div>
@@ -710,7 +704,7 @@ export default function FormationCIP() {
                         {/* Section contenu avec fond blanc */}
                         <div className="bg-white px-6 py-1 flex-grow flex items-center">
                           <p className="text-[#013F63] text-sm leading-relaxed">
-                            Des thématiques adaptées aux enjeux actuels de la profession : Risque psycho-socio, droit des étrangers, inclusion numérique...
+                            Des thématiques adaptées aux enjeux actuels de la profession : Risques psychosociaux, handicap, le droit des étrangers, inclusion numérique...
                           </p>
                         </div>
                       </div>
@@ -792,7 +786,7 @@ export default function FormationCIP() {
                               {module.id === 3 && (
                                 <div className="mt-4 p-3 bg-orange-50 border-l-4 border-orange-400 rounded-r-lg">
                                   <p className="text-sm text-orange-700 font-medium">
-                                    <strong>Formation disponible individuellement</strong>
+                                    <strong>Formation disponible séparément</strong>
                                   </p>
                                 </div>
                               )}
@@ -1629,6 +1623,9 @@ export default function FormationCIP() {
                     {/* Section droite - Contact et informations */}
                     <div className="lg:col-span-2 p-6 flex flex-col justify-center">
                       <div className="mb-4">
+                        <p className="text-[#013F63] leading-relaxed mb-4">
+                          Nous mettons tout en œuvre pour rendre nos formations accessibles au plus grand nombre.
+                        </p>
                         <p className="text-[#013F63] leading-relaxed mb-4">
                           <strong>Accessibilité Handicap :</strong> Nos formations sont accessibles aux personnes en situation de handicap. 
                           Contactez-nous pour étudier ensemble les modalités d'accès adaptées à votre situation.

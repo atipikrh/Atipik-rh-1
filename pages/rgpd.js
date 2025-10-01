@@ -222,7 +222,7 @@ export default function RGPD() {
                       <p><strong>SIRET :</strong> 84890745700024</p>
                       <div className="flex items-center gap-3">
                         <Phone className="w-4 h-4 text-gray-600" />
-                        <span>09 70 97 63 20</span>
+                        <span>07 83 01 99 55</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <Mail className="w-4 h-4 text-gray-600" />

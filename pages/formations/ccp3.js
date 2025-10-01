@@ -646,7 +646,7 @@ export default function FormationCCP3() {
                         {/* Section contenu avec fond blanc */}
                         <div className="bg-white px-6 py-1 flex-grow flex items-center">
                           <p className="text-[#013F63] text-sm leading-relaxed">
-                            Une équipe de formateurs issue du terrain, avec une expertise reconnue dans l'accompagnement professionnel et l'insertion.
+                            Une équipe de formateurs issue du terrain du milieu de la formation et de la transmission, avec une expertise reconnue dans l'accompagnement professionnel et l'insertion.
                           </p>
                         </div>
                       </div>
@@ -710,7 +710,7 @@ export default function FormationCCP3() {
                         {/* Section contenu avec fond blanc */}
                         <div className="bg-white px-6 py-1 flex-grow flex items-center">
                           <p className="text-[#013F63] text-sm leading-relaxed">
-                            Des thématiques adaptées aux enjeux actuels de la profession : Risque psycho-socio, droit des étrangers, inclusion numérique...
+                            Des thématiques adaptées aux enjeux actuels de la profession : Risques psychosociaux, handicap, le droit des étrangers, inclusion numérique...
                           </p>
                         </div>
                       </div>
@@ -1629,6 +1629,9 @@ export default function FormationCCP3() {
                     {/* Section droite - Contact et informations */}
                     <div className="lg:col-span-2 p-6 flex flex-col justify-center">
                       <div className="mb-4">
+                        <p className="text-[#013F63] leading-relaxed mb-4">
+                          Nous mettons tout en œuvre pour rendre nos formations accessibles au plus grand nombre.
+                        </p>
                         <p className="text-[#013F63] leading-relaxed mb-4">
                           <strong>Accessibilité Handicap :</strong> Nos formations sont accessibles aux personnes en situation de handicap. 
                           Contactez-nous pour étudier ensemble les modalités d'accès adaptées à votre situation.

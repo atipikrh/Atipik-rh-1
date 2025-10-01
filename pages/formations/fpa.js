@@ -619,7 +619,7 @@ export default function FormationFPA() {
                         {/* Section contenu avec fond blanc */}
                         <div className="bg-white px-6 py-1 flex-grow flex items-center">
                           <p className="text-[#013F63] text-sm leading-relaxed">
-                            Une équipe de formateurs issue du terrain, avec une expertise reconnue dans l'accompagnement professionnel et l'insertion.
+                            Une équipe de formateurs issue du terrain du milieu de la formation et de la transmission, avec une expertise reconnue dans l'accompagnement professionnel et l'insertion.
                           </p>
                         </div>
                       </div>
@@ -683,7 +683,7 @@ export default function FormationFPA() {
                         {/* Section contenu avec fond blanc */}
                         <div className="bg-white px-6 py-1 flex-grow flex items-center">
                           <p className="text-[#013F63] text-sm leading-relaxed">
-                            Des thématiques adaptées aux enjeux actuels de la profession : Risque psycho-socio, droit des étrangers, inclusion numérique...
+                            Des thématiques adaptées aux enjeux actuels de la profession : Risques psychosociaux, handicap, le droit des étrangers, inclusion numérique...
                           </p>
                         </div>
                       </div>
@@ -1001,15 +1001,15 @@ export default function FormationFPA() {
                 {/* Section Tarifs */}
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                   
-                  {/* Tarif Demandeurs emploi */}
+                  {/* Tarif normal */}
                   <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
                     <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Demandeurs emploi</h3>
+                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Tarif normal</h3>
                       <p className="text-orange-600">Financement spécialisé</p>
                     </div>
                     
                     <div className="mb-6">
-                      <div className="text-4xl font-bold text-orange-500 mb-2">6 500<span className="text-2xl">€</span></div>
+                      <div className="text-4xl font-bold text-orange-500 mb-2">8 950<span className="text-2xl">€</span></div>
                       <p className="text-sm text-[#013F63]">TTC</p>
                     </div>
                     
@@ -1021,15 +1021,15 @@ export default function FormationFPA() {
                     </Link>
                   </div>
 
-                  {/* Tarif Transition Pro */}
+                  {/* Tarif réduit */}
                   <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
                     <div className="bg-blue-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                      <h3 className="text-2xl font-bold mb-2 text-blue-600">Transition Pro</h3>
-                      <p className="text-blue-600">Salariés en reconversion</p>
+                      <h3 className="text-2xl font-bold mb-2 text-blue-600">Tarif réduit</h3>
+                      <p className="text-blue-600">CPF, OPCO, entreprise...</p>
                     </div>
                     
                     <div className="mb-6">
-                      <div className="text-4xl font-bold text-blue-600 mb-2">8 950<span className="text-2xl">€</span></div>
+                      <div className="text-4xl font-bold text-blue-600 mb-2">6 500<span className="text-2xl">€</span></div>
                       <p className="text-sm text-[#013F63]">TTC</p>
                     </div>
                     
@@ -1186,6 +1186,58 @@ export default function FormationFPA() {
                   </a>
                 </div>
 
+              </div>
+            </div>
+          </section>
+
+          {/* Section Prochaine session et Réunions d'information */}
+          <section className="py-16">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+
+                <div className="max-w-md mx-auto mb-12">
+                  {/* Session FPA 2026 */}
+                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
+                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
+                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Prochaine session</h3>
+                      <p className="text-orange-600">Du 13 avril au 19 novembre 2026</p>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <p className="text-lg font-bold text-[#013F63]">Ouverture des candidatures</p>
+                      <p className="text-2xl font-bold text-orange-500 mt-2">13 septembre 2025</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Réunions d'information */}
+                <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl p-8 shadow-lg border-2 border-gray-300">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold text-[#013F63] mb-4">
+                      Réunions d'information <span className="text-orange-500 font-brittany text-3xl">collectives</span>
+                    </h3>
+                    <p className="text-[#013F63] leading-relaxed mb-6 max-w-2xl mx-auto">
+                      Participez à une réunion d'information pour découvrir la formation et poser toutes vos questions.
+                    </p>
+                    
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Link
+                        href="/s-inscrire"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-colors text-lg hover:scale-105 transform"
+                      >
+                        <Users className="w-5 h-5" />
+                        S'inscrire à une réunion
+                      </Link>
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold rounded-full transition-colors text-lg"
+                      >
+                        <Phone className="w-5 h-5" />
+                        Nous contacter
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -1449,6 +1501,9 @@ export default function FormationFPA() {
                     {/* Section droite - Contact et informations */}
                     <div className="lg:col-span-2 p-6 flex flex-col justify-center">
                       <div className="mb-4">
+                        <p className="text-[#013F63] leading-relaxed mb-4">
+                          Nous mettons tout en œuvre pour rendre nos formations accessibles au plus grand nombre.
+                        </p>
                         <p className="text-[#013F63] leading-relaxed mb-4">
                           <strong>Accessibilité Handicap :</strong> Nos formations sont accessibles aux personnes en situation de handicap. 
                           Contactez-nous pour étudier ensemble les modalités d'accès adaptées à votre situation.

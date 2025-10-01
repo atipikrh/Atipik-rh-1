@@ -340,7 +340,7 @@ export default function RecruterInsertionEntreprises() {
                         <div className="p-4 border-t border-gray-100">
                           <p className="text-[#013F63] text-sm">
                             Nous sommes à votre disposition, par téléphone ou par mail, afin d'analyser et d'évaluer vos besoins.<br/>
-                            Dans le cadre de nos actions de formation, un programme est construit et personnalisé est élaboré, en cohérence avec vos objectifs et les spécificités de votre structure.
+                            Dans le cadre de nos actions de formation, un programme est construit, personnalisé et élaboré, en cohérence avec vos objectifs et les spécificités de votre structure.
                           </p>
                         </div>
                       )}
@@ -598,6 +598,9 @@ export default function RecruterInsertionEntreprises() {
                     {/* Section droite - Contact et informations */}
                     <div className="lg:col-span-2 p-6 flex flex-col justify-center">
                       <div className="mb-4">
+                        <p className="text-[#013F63] leading-relaxed mb-4">
+                          Nous mettons tout en œuvre pour rendre nos formations accessibles au plus grand nombre.
+                        </p>
                         <p className="text-[#013F63] leading-relaxed mb-4">
                           <strong>Accessibilité Handicap :</strong> Nos formations sont accessibles aux personnes en situation de handicap. 
                           Contactez-nous pour étudier ensemble les modalités d'accès adaptées à votre situation.

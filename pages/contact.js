@@ -344,7 +344,7 @@ export default function Contact() {
                     </div>
                     <div className="flex justify-between">
                       <span>Samedi</span>
-                      <span className="font-medium">sur rendez-vous</span>
+                      <span className="font-medium">09h00 à 12h00 (sur rendez-vous)</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Dimanche</span>

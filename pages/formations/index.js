@@ -92,7 +92,7 @@ export default function FormationsIndex() {
                       <div className="space-y-3 mb-8 text-sm text-[#013F63]">
                         <div className="flex items-center justify-center gap-2">
                           <Clock className="w-4 h-4" />
-                          <span>6 mois</span>
+                          <span>7 mois</span>
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Users className="w-4 h-4" />
@@ -312,6 +312,9 @@ export default function FormationsIndex() {
                     {/* Section droite - Contact et informations */}
                     <div className="lg:col-span-2 p-6 flex flex-col justify-center">
                       <div className="mb-4">
+                        <p className="text-[#013F63] leading-relaxed mb-4">
+                          Nous mettons tout en œuvre pour rendre nos formations accessibles au plus grand nombre.
+                        </p>
                         <p className="text-[#013F63] leading-relaxed mb-4">
                           <strong>Accessibilité Handicap :</strong> Nos formations sont accessibles aux personnes en situation de handicap. 
                           Contactez-nous pour étudier ensemble les modalités d'accès adaptées à votre situation.
