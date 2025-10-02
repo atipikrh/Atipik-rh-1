@@ -771,6 +771,30 @@ export default function FormationFPA() {
             </div>
           </section>
 
+          {/* Bouton Plaquette Informative */}
+          <section className="py-8">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <div className="text-center">
+                  <a 
+                    href="/documents/plaquettes/plaquette-fpa.pdf" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-8 py-4 bg-white border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
+                  >
+                    <svg className="w-5 h-5 mr-3 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Télécharger la plaquette informative
+                  </a>
+                  <p className="text-sm text-gray-500 mt-2">
+                    Format PDF - Toutes les informations détaillées sur la formation FPA
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Suite du parcours et débouchés */}
           <section className="py-12">
             <div className="container mx-auto px-4">
@@ -1471,6 +1495,7 @@ export default function FormationFPA() {
                     07 83 01 99 55
                   </a>
                 </div>
+
               </div>
             </div>
           </section>
