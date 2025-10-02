@@ -64,21 +64,6 @@ export default function Financement() {
       external: false
     },
     {
-      logoSrc: "/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg",
-      logoAlt: "Logo France Travail - CSP - Contrat de Sécurisation Professionnelle",
-      title: "CSP (Contrat de Sécurisation Professionnelle)",
-      details: [
-        { label: "Contexte", value: "Licenciement économique envisagé" },
-        { label: "Financement", value: "Prise en charge totale par France Travail" },
-        { label: "Accompagnement", value: "Reclassement accéléré personnalisé" },
-        { label: "Indemnisation", value: "Allocation de sécurisation professionnelle" }
-      ],
-      buttonText: "En savoir plus sur le CSP",
-      buttonStyle: "primary",
-      buttonLink: "https://www.service-public.fr/particuliers/vosdroits/F13819",
-      external: true
-    },
-    {
       logoSrc: "/images/financements/Logo-Financement-Personnel.webp",
       logoAlt: "Logo Autres financements",
       title: "Autres financements",
@@ -109,12 +94,12 @@ export default function Financement() {
       external: true
     },
     {
-      logoSrc: "/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg",
+      logoSrc: "/images/financements/logo-transition-pro.png",
       logoAlt: "Logo Transition Pro",
       title: "Transition Pro",
       details: [
         { label: "Contexte", value: "Projet de reconversion professionnelle" },
-        { label: "Financement", value: "Prise en charge totale par France Travail" },
+        { label: "Financement", value: "Prise en charge totale par l'État" },
         { label: "Conditions", value: "Salarié en CDI depuis au moins 2 ans" },
         { label: "Avantage", value: "Maintien du salaire pendant la formation" }
       ],
@@ -411,32 +396,6 @@ export default function Financement() {
                     </div>
 
 
-                    {/* FSE */}
-                    <div className="flex-shrink-0 w-72 md:w-80">
-                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
-                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
-                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
-                          <Image
-                            src="/images/financements/logo-fse.png"
-                            alt="Logo FSE - Fonds Social Européen"
-                            width={48}
-                            height={48}
-                            className="object-contain w-6 h-6 md:w-12 md:h-12"
-                          />
-                        </div>
-                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">FSE (Fonds Social Européen)</h3>
-                      </div>
-                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Cofinancement européen des formations</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Public :</strong> Demandeurs d'emploi peu qualifiés</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Objectif :</strong> Insertion professionnelle et montée en compétences</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> Via organismes de formation partenaires</p>
-                      </div>
-                      <Link href="/contact" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
-                        Étudier cette option
-                      </Link>
-                      </div>
-                    </div>
                   </div>
                   </div>
                 </>
