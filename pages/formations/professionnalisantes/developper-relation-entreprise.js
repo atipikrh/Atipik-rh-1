@@ -596,10 +596,7 @@ export default function DevelopperRelationEntreprise() {
                     <div className="lg:col-span-2 p-6 flex flex-col justify-center">
                       <div className="mb-4">
                         <p className="text-[#013F63] leading-relaxed mb-4">
-                          Nous mettons tout en œuvre pour rendre nos formations accessibles au plus grand nombre.
-                        </p>
-                        <p className="text-[#013F63] leading-relaxed mb-4">
-                          <strong>Accessibilité Handicap :</strong> Nos formations sont accessibles aux personnes en situation de handicap. 
+                          <strong>Accessibilité Handicap :</strong> Nous mettons tout en œuvre pour rendre nos formations accessibles au plus grand nombre. 
                           Contactez-nous pour étudier ensemble les modalités d'accès adaptées à votre situation.
                         </p>
                       </div>

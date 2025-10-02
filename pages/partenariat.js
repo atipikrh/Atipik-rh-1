@@ -9,9 +9,9 @@ export default function Partenariat() {
   return (
     <>
       <Head>
-        <title>Partenariat | Atipik RH - Réseau d'entreprises engagées</title>
+        <title>Partenariat | ATIPIK RH - Réseau d'entreprises engagées</title>
         <meta name="description" content="Découvrez nos partenariats : Les Entreprises s'Engagent et Club d'Entreprise Bassens. Un réseau d'entreprises dynamique et inclusif." />
-        <meta name="keywords" content="partenariat Atipik RH, les entreprises engagent, club entreprise bassens, réseau entreprises" />
+        <meta name="keywords" content="partenariat ATIPIK RH, les entreprises engagent, club entreprise bassens, réseau entreprises" />
         <link rel="canonical" href="https://atipikrh.fr/partenariat" />
       </Head>
 
@@ -53,9 +53,8 @@ export default function Partenariat() {
                       Les Entreprises <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">s'Engagent</span>
                     </h2>
                     <p className="text-lg text-[#013F63] leading-relaxed font-light mb-6">
-                      Nos entreprises partenaires s'engagent à nos côtés pour promouvoir la formation professionnelle 
-                      et l'accompagnement des talents. Ensemble, nous construisons un écosystème local dynamique 
-                      et inclusif.
+                      ATIPIK RH est fier d'être adhérent de l'organisme "Les Entreprises s'Engagent", 
+                      un réseau qui promeut l'engagement des entreprises en faveur de l'emploi et de la formation.
                     </p>
                     <div className="space-y-4 text-[#013F63]">
                       <div className="flex items-start">
@@ -115,7 +114,7 @@ export default function Partenariat() {
                       Club d'entreprise <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Bassens</span>
                     </h2>
                     <p className="text-lg text-[#013F63] leading-relaxed font-light mb-6">
-                      Atipik RH est fière de faire partie du Club d'Entreprise de Bassens, 
+                      ATIPIK RH est fier de faire partie du Club d'Entreprise de Bassens, 
                       un réseau dynamique qui favorise les échanges et les collaborations 
                       entre les entreprises locales.
                     </p>

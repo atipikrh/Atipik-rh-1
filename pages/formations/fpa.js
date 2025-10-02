@@ -252,43 +252,43 @@ export default function FormationFPA() {
   const modules = [
     {
       id: 1,
-      titre: "Concevoir et préparer",
+      titre: "Concevoir et préparer la formation",
       sousTitre: "C.C.P 1",
       contenu: [
-        "Analyse des besoins de formation",
-        "Conception de séquences pédagogiques", 
-        "Élaboration d'outils d'évaluation"
+        "Élaborer la progression pédagogique d'une formation multimodale à partir d'une demande",
+        "Concevoir un scénario pédagogique et d'accompagnement en intégrant la multimodalité",
+        "Concevoir des activités d'apprentissage et d'évaluation en intégrant la multimodalité"
       ]
     },
     {
       id: 2,
-      titre: "Animer et évaluer",
+      titre: "Animer une formation et évaluer les acquis des apprenants",
       sousTitre: "C.C.P 2",
       contenu: [
-        "Animation de séances de formation",
-        "Adaptation aux publics",
-        "Évaluation des apprentissages"
+        "Animer une formation et faciliter les apprentissages selon différentes modalités",
+        "Évaluer les acquis de formation des apprenants",
+        "Remédier aux difficultés individuelles d'apprentissage"
       ]
     },
     {
       id: 3,
-      titre: "Accompagner et orienter",
-      sousTitre: "C.C.P 3",
-      contenu: [
-        "Accompagnement individuel",
-        "Conseil en évolution professionnelle",
-        "Orientation et parcours"
-      ]
-    },
-    {
-      id: 4,
       titre: "Accompagner les apprenants en formation",
-      sousTitre: "C.C.P 4",
+      sousTitre: "C.C.P 3",
       contenu: [
         "Accompagner les apprenants dans leur parcours de formation",
         "Accueillir un apprenant en formation et co-construire son parcours",
         "Tutorer les apprenants à distance",
         "Accompagner le développement professionnel des apprenants"
+      ]
+    },
+    {
+      id: 4,
+      titre: "Inscrire sa pratique professionnelle dans une démarche de qualité et de responsabilité sociale des entreprises",
+      sousTitre: "C.C.P 4",
+      contenu: [
+        "Respecter et faire respecter la règlementation en vigueur en formation et dans sa spécialité",
+        "Réaliser une veille pour maintenir son expertise de formateur et de professionnel dans sa spécialité",
+        "Analyser ses pratiques professionnelles"
       ]
     }
   ]
@@ -1502,10 +1502,7 @@ export default function FormationFPA() {
                     <div className="lg:col-span-2 p-6 flex flex-col justify-center">
                       <div className="mb-4">
                         <p className="text-[#013F63] leading-relaxed mb-4">
-                          Nous mettons tout en œuvre pour rendre nos formations accessibles au plus grand nombre.
-                        </p>
-                        <p className="text-[#013F63] leading-relaxed mb-4">
-                          <strong>Accessibilité Handicap :</strong> Nos formations sont accessibles aux personnes en situation de handicap. 
+                          <strong>Accessibilité Handicap :</strong> Nous mettons tout en œuvre pour rendre nos formations accessibles au plus grand nombre. 
                           Contactez-nous pour étudier ensemble les modalités d'accès adaptées à votre situation.
                         </p>
                       </div>
