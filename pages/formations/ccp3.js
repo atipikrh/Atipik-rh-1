@@ -519,7 +519,11 @@ export default function FormationCCP3() {
                     {openModules['modalites'] && (
                       <div className="p-3 border-t border-gray-100">
                         <div className="space-y-2 text-[#013F63] text-sm">
-                          <p>Pour accéder uniquement au CCP3, il est nécessaire d'avoir validé préalablement le CCP1 et le CCP2.</p>
+                          <p>• Une lettre motivant votre projet professionnel</p>
+                          <p>• Des enquêtes métiers réalisées auprès de professionnels en poste (au minimum 2)<br/>et/ou une journée d'immersion en entreprise</p>
+                          <p>• Envoie du dossier de candidature</p>
+                          <p>• Un entretien de motivation</p>
+                          <p>• Une évaluation des connaissances rédactionnelles</p>
                           <p className="mt-3 text-orange-500 font-medium">Il est fortement recommandé de participer à une réunion d'information collective.</p>
                         </div>
                       </div>
