@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 
 export default function Header({ isFixed = false, isHomePage = false }) {
   const [isFormationsOpen, setIsFormationsOpen] = useState(false)
+  const [isCIPSubMenuOpen, setIsCIPSubMenuOpen] = useState(false)
+  const [isCourtesSubMenuOpen, setIsCourtesSubMenuOpen] = useState(false)
   const [isQuiSommesNousOpen, setIsQuiSommesNousOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   
@@ -104,13 +106,46 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                 isFormationsOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
               }`}>
                 <div className="py-2">
-                  <Link 
-                    href="/formations/cip" 
-                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors"
+                  {/* Formation CIP avec sous-menu à droite */}
+                  <div 
+                    className="relative group/cip"
+                    onMouseEnter={() => setIsCIPSubMenuOpen(true)}
+                    onMouseLeave={() => setIsCIPSubMenuOpen(false)}
                   >
-                    <div className="font-medium">Formation CIP</div>
-                    <div className="text-xs text-blue-400">Conseiller en Insertion Professionnelle</div>
-                  </Link>
+                    <Link 
+                      href="/formations"
+                      className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors"
+                    >
+                      <div className="font-medium flex items-center justify-between">
+                        Formation CIP
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                      <div className="text-xs text-blue-400">Conseiller en Insertion Professionnelle</div>
+                    </Link>
+                    
+                    {/* Sous-menu à droite */}
+                    <div className={`absolute left-full top-0 ml-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-[10000] ${
+                      isCIPSubMenuOpen ? 'opacity-100 visible transform translate-x-0' : 'opacity-0 invisible transform -translate-x-2'
+                    }`}>
+                      <div className="py-2">
+                        <Link 
+                          href="/formations/cip" 
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors font-medium"
+                        >
+                          Formation complète
+                        </Link>
+                        <Link 
+                          href="/formations/ccp3" 
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100 font-medium"
+                        >
+                          CCP3 uniquement
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                  
                   <Link 
                     href="/formations/fpa" 
                     className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
@@ -118,13 +153,58 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                     <div className="font-medium">Formation FPA</div>
                     <div className="text-xs text-blue-400">Formateur Professionnel d'Adultes</div>
                   </Link>
-                  <Link
-                    href="/formations#formations-professionnalisantes"
-                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
+                  
+                  {/* Formations courtes professionnalisantes avec sous-menu à droite */}
+                  <div 
+                    className="relative group/courtes border-t border-gray-100"
+                    onMouseEnter={() => setIsCourtesSubMenuOpen(true)}
+                    onMouseLeave={() => setIsCourtesSubMenuOpen(false)}
                   >
-                    <div className="font-medium">Formations courtes professionnalisantes</div>
-                    <div className="text-xs text-blue-400">Montée en compétences rapide</div>
-                  </Link>
+                    <Link 
+                      href="/formations#formations-professionnalisantes"
+                      className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors"
+                    >
+                      <div className="font-medium flex items-center justify-between">
+                        Formations courtes professionnalisantes
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                      <div className="text-xs text-blue-400">Montée en compétences rapide</div>
+                    </Link>
+                    
+                    {/* Sous-menu à droite */}
+                    <div className={`absolute left-full top-0 ml-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-[10000] ${
+                      isCourtesSubMenuOpen ? 'opacity-100 visible transform translate-x-0' : 'opacity-0 invisible transform -translate-x-2'
+                    }`}>
+                      <div className="py-2">
+                        <Link 
+                          href="/formations/professionnalisantes/developper-relation-entreprise" 
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors font-medium"
+                        >
+                          Développer la relation entreprise
+                        </Link>
+                        <Link 
+                          href="/formations/professionnalisantes/renforcer-relation-entreprise" 
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100 font-medium"
+                        >
+                          Renforcer la relation entreprise
+                        </Link>
+                        <Link 
+                          href="/formations/professionnalisantes/recruter-insertion-entreprises" 
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100 font-medium"
+                        >
+                          Recruter en insertion avec les entreprises
+                        </Link>
+                        <Link 
+                          href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" 
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100 font-medium"
+                        >
+                          Renforcer sa pratique du recrutement inclusif
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -225,12 +305,29 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                   <div className="text-[#013F63] font-medium text-base mb-3">Formations</div>
                   <div className="space-y-2 ml-4">
                     <Link 
-                      href="/formations/cip" 
-                      className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
+                      href="/formations"
+                      className="text-sm text-[#013F63] hover:text-[#012a4a] font-medium py-2 block"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Formation CIP
                     </Link>
+                    <div className="ml-4 space-y-1">
+                      <Link 
+                        href="/formations/cip" 
+                        className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Formation complète
+                      </Link>
+                      <Link 
+                        href="/formations/ccp3" 
+                        className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        CCP3 uniquement
+                      </Link>
+                    </div>
+                    
                     <Link 
                       href="/formations/fpa" 
                       className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
@@ -238,13 +335,44 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                     >
                       Formation FPA
                     </Link>
+                    
                     <Link
                       href="/formations#formations-professionnalisantes"
-                      className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
+                      className="text-sm text-[#013F63] hover:text-[#012a4a] font-medium py-2 block"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Formations courtes professionnalisantes
                     </Link>
+                    <div className="ml-4 space-y-1">
+                      <Link 
+                        href="/formations/professionnalisantes/developper-relation-entreprise" 
+                        className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Développer la relation entreprise
+                      </Link>
+                      <Link 
+                        href="/formations/professionnalisantes/renforcer-relation-entreprise" 
+                        className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Renforcer la relation entreprise
+                      </Link>
+                      <Link 
+                        href="/formations/professionnalisantes/recruter-insertion-entreprises" 
+                        className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Recruter en insertion avec les entreprises
+                      </Link>
+                      <Link 
+                        href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" 
+                        className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Renforcer sa pratique du recrutement inclusif
+                      </Link>
+                    </div>
                   </div>
                 </div>
 

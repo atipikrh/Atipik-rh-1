@@ -205,7 +205,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                       <div className="flex items-start gap-2">
                         <GraduationCap className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold mb-0.5 text-sm">Niveau d'entrée :</p>
+                          <p className="font-semibold mb-0.5 text-sm">Prérequis :</p>
                           <p className="text-blue-100 text-xs">Aucun prérequis spécifique</p>
                         </div>
                       </div>

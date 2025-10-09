@@ -137,7 +137,7 @@ export default function Footer() {
               </p>
               <p>8 Rue du Courant, 33310 Lormont</p>
               <div className="mt-3 pt-2 border-t border-gray-700">
-                <p className="text-sm font-medium">Horaires :</p>
+                <h3 className="text-lg font-semibold mb-4 text-white">Horaires</h3>
                 <p className="text-sm">Lun-Ven : 9h-18h</p>
                 <p className="text-sm">Sam : 09h00 à 12h00 (sur rendez-vous)</p>
               </div>

@@ -13,14 +13,26 @@ import {
   ArrowRight,
   Star,
   ChevronDown,
+  ChevronUp,
   MapPin,
   Heart,
   Lightbulb,
-  UserCheck
+  UserCheck,
+  Target,
+  Users,
+  BookOpen
 } from 'lucide-react';
 
 export default function BilanCompetences() {
   const [openFaq, setOpenFaq] = useState(null);
+  const [openModules, setOpenModules] = useState({});
+
+  const toggleModule = (moduleId) => {
+    setOpenModules(prev => ({
+      ...prev,
+      [moduleId]: !prev[moduleId]
+    }))
+  }
 
 
 
@@ -31,16 +43,8 @@ export default function BilanCompetences() {
 
   const faqData = [
     {
-      question: "Combien de temps dure un bilan de compétences ?",
-      answer: "Un bilan de compétences dure 24 heures au total, réparties sur 2 à 3 mois. Le rythme est flexible : généralement 1 à 2 séances par semaine de 2-3 heures, adaptées à vos disponibilités professionnelles et personnelles."
-    },
-    {
       question: "Est-ce que mon employeur sera au courant ?",
       answer: "Non, absolument pas ! Votre démarche de bilan de compétences est strictement confidentielle. Si vous utilisez votre CPF, votre employeur n'est pas informé. Même si vous réalisez votre bilan sur votre temps de travail, vous n'êtes pas obligé de révéler les résultats. La confidentialité est garantie par la loi."
-    },
-    {
-      question: "Le bilan de compétences est-il confidentiel ?",
-      answer: "Oui, totalement. Votre employeur n'est pas informé si vous utilisez votre CPF. Les résultats vous appartiennent exclusivement. Seul un document de synthèse vous est remis, que vous êtes libre de partager ou non."
     },
     {
       question: "Puis-je faire mon bilan en ligne ?",
@@ -124,6 +128,239 @@ export default function BilanCompetences() {
               </div>
             </div>
           </div>
+
+          {/* Section Programme de Formation */}
+          <section className="pt-12 pb-8">
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+              
+              {/* Titre de section */}
+              <div className="text-center mb-8">
+                <h2 className="text-lg lg:text-xl font-bold text-[#013F63] mb-6">
+                  LE PROGRAMME DE FORMATION
+                  </h2>
+                </div>
+
+              <div className={`flex flex-col lg:flex-row gap-8 justify-center ${
+                Object.values(openModules).some(isOpen => isOpen) 
+                  ? 'items-start' 
+                  : 'items-start lg:items-center'
+              }`}>
+                
+                {/* Carte bleue à gauche */}
+                <div className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white min-h-[320px] flex flex-col justify-center" style={{backgroundColor: '#013F63'}}>
+                  <div className="space-y-2">
+                    
+                    <div className="flex items-start gap-2">
+                      <UserCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold mb-0.5 text-sm">Niveau d'entrée :</p>
+                        <p className="text-blue-100 text-xs">Sans niveau spécifique</p>
+                    </div>
+                </div>
+
+                    <div className="flex items-start gap-2">
+                      <Target className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold mb-0.5 text-sm">Code Certifinfo :</p>
+                        <p className="text-blue-100 text-xs">n°93559</p>
+              </div>
+            </div>
+
+                    <div className="flex items-start gap-2">
+                      <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold mb-0.5 text-sm">Durée :</p>
+                        <p className="text-blue-100 text-xs">20 - 24 heures</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-2">
+                      <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold mb-0.5 text-sm">Lieu :</p>
+                        <p className="text-blue-100 text-xs">8 rue du Courant, 33310 Lormont</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-2">
+                      <Users className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold mb-0.5 text-sm">Modalité :</p>
+                        <p className="text-blue-100 text-xs">Individuelle et confidentielle</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-2">
+                      <BookOpen className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold mb-0.5 text-sm">Sélection :</p>
+                        <p className="text-blue-100 text-xs">Entretien préalable</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Accordéons à droite */}
+                <div className="w-full lg:w-96 flex-shrink-0 space-y-4">
+                  
+                  {/* Public visé */}
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                    <button
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      onClick={() => toggleModule('public')}
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">PUBLIC VISÉ</h3>
+                          </div>
+                      {openModules['public'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openModules['public'] && (
+                      <div className="p-3 border-t border-gray-100">
+                        <div className="space-y-2 text-[#013F63] text-sm">
+                          <p>• Demandeur d'emploi</p>
+                          <p>• Jeune de moins de 26 ans</p>
+                          <p>• Personne handicapée</p>
+                          <p>• Salarié(e)</p>
+                          <p>• Actif(ve) non salarié(e)</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Conditions d'accès */}
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                    <button
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      onClick={() => toggleModule('conditions')}
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">CONDITIONS D'ACCÈS</h3>
+                              </div>
+                      {openModules['conditions'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openModules['conditions'] && (
+                      <div className="p-3 border-t border-gray-100">
+                        <div className="space-y-2 text-[#013F63] text-sm">
+                          <p><strong>Réglementaires :</strong> Le bilan de compétences est une démarche volontaire et individuelle</p>
+                          <p><strong>Prérequis pédagogiques :</strong> Aucun</p>
+                          <p><strong>Type de parcours :</strong> Individualisé</p>
+                          <p><strong>Parcours personnalisable :</strong> Oui</p>
+                          <p className="mt-2 text-orange-500 font-medium">L'ensemble des séances est réalisé de manière confidentielle et individuelle.</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Programme */}
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                    <button
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      onClick={() => toggleModule('programme')}
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">PROGRAMME</h3>
+                      </div>
+                      {openModules['programme'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openModules['programme'] && (
+                      <div className="p-3 border-t border-gray-100">
+                        <div className="space-y-3 text-[#013F63] text-sm">
+                          <div>
+                            <p className="font-semibold text-[#013F63] mb-2">PHASE PRÉLIMINAIRE :</p>
+                            <p>• Analyser le contexte de la démarche personnelle de l'individu, les objectifs et les résultats attendus concernant le bilan de compétences</p>
+                            <p>• Explorer son parcours scolaire, extra-professionnel, et professionnel</p>
+                            <p>• Comprendre ses choix d'orientation de vie personnels et professionnels</p>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-[#013F63] mb-2">PHASE D'INVESTIGATION :</p>
+                            <p>• D'avoir une meilleure connaissance de soi, d'identifier ses atouts et ses axes d'améliorations</p>
+                            <p>• Prendre de la hauteur sur l'ensemble de ses expériences en élaborant son portefeuille de compétences</p>
+                            <p>• Identifier ses compétences transversales et transférables</p>
+                            <p>• Comprendre ses motivations, ses besoins et ses valeurs au travail</p>
+                            <p>• Élaborer ses hypothèses de projets professionnels</p>
+                            <p>• Valider les pistes professionnelles en vérifiant l'adéquation Individu/projet & projet/Marché</p>
+                            <p>• Déterminer les étapes et les différentes actions menant à la réalisation effective du projet</p>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-[#013F63] mb-2">PHASE DE CONCLUSION :</p>
+                            <p>• Finaliser le document de synthèse et corédiger la conclusion et les apports du bilan de compétences</p>
+                            <p>• <strong>QUESTIONNAIRE TRANSMIS À 6 MOIS POUR SUIVI</strong></p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Résultats attendus */}
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                    <button
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      onClick={() => toggleModule('resultats')}
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">RÉSULTATS ATTENDUS</h3>
+                      </div>
+                      {openModules['resultats'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openModules['resultats'] && (
+                      <div className="p-3 border-t border-gray-100">
+                        <div className="space-y-3 text-[#013F63] text-sm">
+                          <p>1. Acquérir une meilleure connaissance de soi (traits de personnalité, compétences, valeurs, centres intérêts,...)</p>
+                          <p>2. Élargir sa connaissance des outils de gestion de carrière et des dispositifs d'accompagnements et d'aides financières à l'emploi</p>
+                          <p>3. Mieux appréhender le marché de l'emploi</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Suite de parcours possible */}
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                    <button
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      onClick={() => toggleModule('suite')}
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">SUITE DE PARCOURS POSSIBLE</h3>
+                      </div>
+                      {openModules['suite'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openModules['suite'] && (
+                      <div className="p-3 border-t border-gray-100">
+                        <div className="space-y-3 text-[#013F63] text-sm">
+                          <p>• Questionnaire de suivi à 6 mois</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Espacement entre les sections */}
+          <div className="py-8"></div>
           
           {/* Section Quiz d'éligibilité - Version simple */}
           <div className="max-w-6xl mx-auto mb-8">
@@ -353,6 +590,18 @@ export default function BilanCompetences() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Information sur l'entretien gratuit */}
+            <div className="text-center mb-8">
+              <Link href="/contact">
+                <p className="text-xl text-[#013F63] font-medium inline-flex items-center gap-2 hover:text-orange-500 transition-colors cursor-pointer">
+                  💡 Le premier entretien est gratuit et sans engagement
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </p>
+              </Link>
             </div>
 
             {/* Espacement entre les formules et le financement */}

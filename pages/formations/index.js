@@ -75,10 +75,16 @@ export default function FormationsIndex() {
                         </div>
                       </div>
                       
-                      <Link href="/formations/cip" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group">
-                        Découvrir
-                        <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
-                      </Link>
+                      <div className="flex gap-3">
+                        <Link href="/formations/cip" className="flex-1 text-center px-4 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group text-sm">
+                          Formation complète CIP
+                          <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                        <Link href="/formations/ccp3" className="flex-1 text-center px-4 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition group text-sm">
+                          Module CCP3 uniquement
+                          <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                      </div>
                     </div>
                   </div>
 

@@ -337,7 +337,7 @@ export default function FormationCCP3() {
   return (
     <>
       <Head>
-        <title>Formation CCP3 - Conseiller en Insertion Professionnelle | Atipik RH</title>
+        <title>Formation CCP3 - Conseiller en Insertion Professionnelle (C.C.P 3) | Atipik RH</title>
         <meta name="description" content="Formation certifiante CCP3 - Conseiller en Insertion Professionnelle niveau 5. Titre professionnel RNCP, financement CPF possible. Durée 1186h dont 385h en entreprise." />
         <meta name="keywords" content="formation CCP3, conseiller insertion professionnelle, formation certifiante, CPF, Bordeaux, Lormont" />
         <link rel="canonical" href="https://atipikrh.fr/formations/ccp3" />
@@ -363,7 +363,7 @@ export default function FormationCCP3() {
               {/* Titre principal */}
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
-                  Conseiller en <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Insertion Professionnelle</span>
+                  Conseiller en <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Insertion Professionnelle (C.C.P 3)</span>
                 </h1>
                 <p className="text-lg text-[#013F63] leading-relaxed font-light">
                   Devenez expert de l'<strong>accompagnement vers l'emploi</strong>
@@ -425,17 +425,25 @@ export default function FormationCCP3() {
                       <UserCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Niveau d'entrée :</p>
-                        <p className="text-blue-100 text-xs">Niveau terminal et/ou expérience professionnelle</p>
+                        <p className="text-blue-100 text-xs">Sans niveau spécifique</p>
                     </div>
                 </div>
 
                     <div className="flex items-start gap-2">
                       <Target className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Niveau de sortie :</p>
-                        <p className="text-blue-100 text-xs">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37274/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37274</a></p>
+                        <p className="font-semibold mb-0.5 text-sm">Prérequis pédagogiques :</p>
+                        <p className="text-blue-100 text-xs">Avoir de l'expérience professionnelle dans l'accompagnement social</p>
               </div>
             </div>
+
+                    <div className="flex items-start gap-2">
+                      <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold mb-0.5 text-sm">Durée :</p>
+                        <p className="text-blue-100 text-xs">371 heures</p>
+                      </div>
+                    </div>
 
                     <div className="flex items-start gap-2">
                       <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
@@ -474,6 +482,37 @@ export default function FormationCCP3() {
                 {/* Accordéons à droite */}
                 <div className="w-full lg:w-96 flex-shrink-0 space-y-4">
                   
+                  {/* Objectifs pédagogiques */}
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                    <button
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      onClick={() => toggleModule('objectifs')}
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">OBJECTIFS PÉDAGOGIQUES</h3>
+                      </div>
+                      {openModules['objectifs'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openModules['objectifs'] && (
+                      <div className="p-3 border-t border-gray-100">
+                        <div className="space-y-3 text-[#013F63] text-sm leading-relaxed">
+                          <p>Ce parcours de formation « CCP3 » repose sur le concept de formation-action. Il comprend des projets collaboratifs avec des missions concrètes auprès de structures d'insertion partenaires du territoire de la Rive droite de Bordeaux. Il met les stagiaires en situation de CIP au profit des publics accompagnés par les partenaires.</p>
+                          
+                          <p><strong>C.C.P 3 - METTRE EN OEUVRE UNE OFFRE DE SERVICES AUPRES DES EMPLOYEURS POUR FAVORISER L'INSERTION PROFESSIONNELLE</strong> composé des compétences suivantes :</p>
+                          
+                          <p>• Déployer des actions de prospection dans le cadre d'un projet avec les employeurs du territoire pour favoriser l'insertion professionnelle</p>
+                          <p>• Apporter un appui technique aux employeurs en matière de recrutement</p>
+                          <p>• Faciliter l'intégration et le maintien du salarié dans son environnement professionnel</p>
+                          <p>• Inscrire ses actes professionnels dans une démarche de développement durable et inclusive</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
                   {/* Public visé */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
@@ -491,9 +530,13 @@ export default function FormationCCP3() {
                     </button>
                     {openModules['public'] && (
                       <div className="p-3 border-t border-gray-100">
-                        <p className="text-[#013F63] text-sm leading-relaxed">
-                          Cette formation s'adresse aux personnes qui disposent d'un goût prononcé pour l'accompagnement, l'échange et un sens de l'écoute développé.
-                        </p>
+                        <div className="space-y-2 text-[#013F63] text-sm">
+                          <p>• Demandeur d'emploi</p>
+                          <p>• Jeune de moins de 26 ans</p>
+                          <p>• Personne handicapée</p>
+                          <p>• Salarié(e)</p>
+                          <p>• Actif(ve) non salarié(e)</p>
+                        </div>
                       </div>
                     )}
                   </div>
@@ -515,26 +558,21 @@ export default function FormationCCP3() {
                     </button>
                     {openModules['modalites'] && (
                       <div className="p-3 border-t border-gray-100">
-                        <div className="space-y-2 text-[#013F63] text-sm">
-                          <p>• Une lettre motivant votre projet professionnel</p>
-                          <p>• Des enquêtes métiers réalisées auprès de professionnels en poste (au minimum 2)<br/>et/ou une journée d'immersion en entreprise</p>
-                          <p>• Envoie du dossier de candidature</p>
-                          <p>• Un entretien de motivation</p>
-                          <p>• Une évaluation des connaissances rédactionnelles</p>
-                          <p className="mt-3 text-orange-500 font-medium">Il est fortement recommandé de participer à une réunion d'information collective.</p>
+                        <div className="space-y-2 text-[#013F63] text-sm leading-relaxed">
+                          <p>Admission sur dossier et sur entretien. Le candidat après avoir soumis son dossier de candidature est reçu par notre chargée de formation pour procéder à un entretien de motivation et vérifier que la formation correspond bien à ses objectifs de développement professionnel.</p>
                         </div>
                       </div>
                     )}
                   </div>
 
-                  {/* Méthodes pédagogiques */}
+                  {/* Contenu de la formation */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
                       className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
                       onClick={() => toggleModule('methodes')}
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">MÉTHODES PÉDAGOGIQUES</h3>
+                        <h3 className="text-base font-bold text-[#013F63]">CONTENU DE LA FORMATION</h3>
                       </div>
                       {openModules['methodes'] ? (
                         <ChevronUp className="w-5 h-5 text-gray-600" />
@@ -545,23 +583,24 @@ export default function FormationCCP3() {
                     {openModules['methodes'] && (
                       <div className="p-3 border-t border-gray-100">
                         <div className="space-y-3 text-[#013F63] text-sm">
-                          <p className="font-semibold text-[#013F63]">UNE FORMATION ACTION BASÉE SUR UNE PÉDAGOGIE INNOVANTE</p>
-                          <p>• Formation action basée sur des temps d'acquisition de connaissances, de cas pratique, et d'échanges d'expériences</p>
-                          <p>• Des projets collaboratifs et des mises en situation au plus près du réel avec les publics accompagnés par les structures de l'emploi et de l'insertion du territoire</p>
-                          <p>• Pédagogie active basée sur des outils du théâtre</p>
+                          <p><strong>Prospecter les employeurs et développer des modes de collaboration sur un territoire :</strong></p>
+                          <p>• Déployer des actions de prospection dans le cadre d'un projet avec les employeurs du territoire pour favoriser l'insertion professionnelle</p>
+                          <p>• Apporter un appui technique aux employeurs en matière de recrutement</p>
+                          <p>• Faciliter l'intégration et le maintien du salarié dans son environnement professionnel</p>
+                          <p>• Inscrire ses actes professionnels dans une démarche inclusive et de développement durable</p>
                         </div>
                       </div>
                     )}
                   </div>
 
-                  {/* Déroulement de la formation */}
+                  {/* Méthodes pédagogiques */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
                       className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
                       onClick={() => toggleModule('deroulement')}
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">DÉROULEMENT DE LA FORMATION</h3>
+                        <h3 className="text-base font-bold text-[#013F63]">MÉTHODES PÉDAGOGIQUES</h3>
                       </div>
                       {openModules['deroulement'] ? (
                         <ChevronUp className="w-5 h-5 text-gray-600" />
@@ -572,31 +611,20 @@ export default function FormationCCP3() {
                     {openModules['deroulement'] && (
                       <div className="p-3 border-t border-gray-100">
                         <div className="space-y-3 text-[#013F63] text-sm">
-                          <p>• <strong>Durée : 1102 heures</strong></p>
-                          <div className="ml-4 space-y-1">
-                            <p>◦ <strong>693 heures en centre</strong></p>
-                            <p className="ml-4">dont :</p>
-                            <div className="ml-8 space-y-1">
-                              <p>▪ 7 journées théâtre</p>
-                              <p>▪ 10 journées au plus près du réel</p>
-                              <p>▪ 1 journée droit des étrangers</p>
-                            </div>
-                            <p>◦ <strong>385 heures en entreprise</strong></p>
-                            <p>◦ <strong>3 heures de session de certification</strong></p>
-                          </div>
+                          <p>Bloc de compétences basé sur une pédagogie active, en lien avec le territoire. Il intègre un projet collaboratif avec employeurs, structures d'insertion et bénéficiaires, favorisant l'ancrage terrain et la mise en situation concrète.</p>
                         </div>
                       </div>
                     )}
                   </div>
 
-                  {/* Modalité d'évaluation */}
+                  {/* Suite de parcours possible */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
                       className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
                       onClick={() => toggleModule('evaluation')}
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">MODALITÉ D'ÉVALUATION</h3>
+                        <h3 className="text-base font-bold text-[#013F63]">SUITE DE PARCOURS POSSIBLE</h3>
                       </div>
                       {openModules['evaluation'] ? (
                         <ChevronUp className="w-5 h-5 text-gray-600" />
@@ -607,9 +635,7 @@ export default function FormationCCP3() {
                     {openModules['evaluation'] && (
                       <div className="p-3 border-t border-gray-100">
                         <div className="space-y-3 text-[#013F63] text-sm">
-                          <p>• Des évaluations formatives sont réalisées tout au long de la formation</p>
-                          <p>• L'examen de certification du Titre professionnel de Conseiller en Insertion Professionnelle (CIP) est composé d'une mise en situation, d'une présentation orale, de deux dossiers (professionnel et annexe) et d'entretiens avec le jury</p>
-                          <p>• Possibilité de validé le certificat de compétences professionnel 3 uniquement (CCP)</p>
+                          <p>• Chargé(e) de relations entreprises</p>
                         </div>
                       </div>
                     )}
@@ -628,7 +654,7 @@ export default function FormationCCP3() {
                 {/* Titre de section */}
                 <div className="text-center mb-4">
                   <h2 className="text-lg lg:text-xl font-bold text-[#013F63] mb-3">
-                    UNE MÉTHODOLOGIE D'INTERVENTION AU PLUS PRÈS DU RÉEL
+                    <span className="text-orange-500 font-brittany text-xl lg:text-2xl">Une méthodologie</span> D'INTERVENTION AU PLUS PRÈS DU RÉEL
                   </h2>
                 </div>
 
@@ -638,7 +664,8 @@ export default function FormationCCP3() {
                     
                     {/* Carte 1: Équipe de formateurs */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                      <a href="/notre-equipe" className="block">
+                        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden cursor-pointer">
                         {/* Section titre avec fond bleu clair */}
                         <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
                           <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">ÉQUIPE DE FORMATEURS</h3>
@@ -650,11 +677,13 @@ export default function FormationCCP3() {
                           </p>
                         </div>
                       </div>
+                      </a>
                     </div>
 
                     {/* Carte 2: Intervenants théâtre */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                      <a href="/notre-equipe" className="block">
+                        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden cursor-pointer">
                         {/* Section titre avec fond bleu clair */}
                         <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
                           <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">INTERVENANTS THÉÂTRE</h3>
@@ -666,11 +695,13 @@ export default function FormationCCP3() {
                           </p>
                         </div>
                       </div>
+                      </a>
                     </div>
 
                     {/* Carte 3: Projets collaboratifs */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                      <a href="/blog" className="block">
+                        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden cursor-pointer">
                         {/* Section titre avec fond bleu clair */}
                         <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
                           <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">PROJETS COLLABORATIFS</h3>
@@ -682,11 +713,13 @@ export default function FormationCCP3() {
                           </p>
                         </div>
                       </div>
+                      </a>
                     </div>
 
                     {/* Carte 4: Rencontres professionnelles */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                      <a href="/blog" className="block">
+                        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden cursor-pointer">
                         {/* Section titre avec fond bleu clair */}
                         <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
                           <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">RENCONTRES PROFESSIONNELLES</h3>
@@ -698,11 +731,13 @@ export default function FormationCCP3() {
                           </p>
                         </div>
                       </div>
+                      </a>
                     </div>
 
                     {/* Carte 5: Thématiques actuelles */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                      <a href="/blog" className="block">
+                        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden cursor-pointer">
                         {/* Section titre avec fond bleu clair */}
                         <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
                           <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">THÉMATIQUES ACTUELLES</h3>
@@ -714,6 +749,7 @@ export default function FormationCCP3() {
                           </p>
                         </div>
                       </div>
+                      </a>
                     </div>
 
                   </div>
@@ -730,7 +766,7 @@ export default function FormationCCP3() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
-                    Le <span className="text-[#013F63]">CCP3</span> <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">Conseiller en Insertion Professionnelle</span>
+                    Le <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">programme</span> du CCP 3
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
                     Formation certifiante pour devenir Conseiller en Insertion Professionnelle
@@ -738,70 +774,193 @@ export default function FormationCCP3() {
                 </div>
 
                 <div className="space-y-4 max-w-4xl mx-auto">
-                  {modules.map((module, index) => {
-                    const isOpen = openModules[module.id]
-                    const gradientFrom = "from-[#013F63]"
-                    const gradientTo = "to-[#012a4a]"
-                    
-                    return (
-                      <div key={module.id} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-                        
-                        {/* En-tête cliquable */}
+                  {/* CCP3 - Prospecter les employeurs */}
+                  <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
                         <button
-                          onClick={() => toggleModule(module.id)}
-                          className={`w-full bg-gradient-to-r ${gradientFrom} ${gradientTo} text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity`}
+                      onClick={() => toggleModule('ccp3_prospection')}
+                      className="w-full bg-gradient-to-r from-[#013F63] to-[#012a4a] text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity"
                         >
                           <div className="flex items-center gap-4">
                             <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                              <span className="text-white font-bold text-sm">{module.id}</span>
+                          <span className="text-white font-bold text-sm">1</span>
                             </div>
                             <div className="text-left">
-                              <h3 className="text-base lg:text-lg font-bold">{module.titre}</h3>
-                              <p className="text-white/90 text-sm">{module.sousTitre}</p>
+                          <h3 className="text-base lg:text-lg font-bold">Prospecter les employeurs et développer des modes de collaboration sur un territoire</h3>
                             </div>
                           </div>
                           <div className="flex-shrink-0">
-                            {isOpen ? (
+                        {openModules['ccp3_prospection'] ? (
                               <ChevronUp className="w-6 h-6 text-white" />
                             ) : (
                               <ChevronDown className="w-6 h-6 text-white" />
                             )}
                           </div>
                         </button>
+                    {openModules['ccp3_prospection'] && (
+                      <div className="p-6 border-t border-gray-200 animate-in slide-in-from-top-4 duration-300">
+                        <div className="grid md:grid-cols-2 gap-2">
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Les techniques de prospection</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Établir un plan de prospection</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Les techniques de négociation</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Construire un argumentaire de négociation téléphonique</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
 
-                        {/* Contenu déroulant */}
-                        {isOpen && (
+                  {/* CCP3 - Méthodologie de projet */}
+                  <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <button
+                      onClick={() => toggleModule('ccp3_projet')}
+                      className="w-full bg-gradient-to-r from-[#013F63] to-[#012a4a] text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold text-sm">2</span>
+                        </div>
+                        <div className="text-left">
+                          <h3 className="text-base lg:text-lg font-bold">La méthodologie de projet</h3>
+                        </div>
+                      </div>
+                      <div className="flex-shrink-0">
+                        {openModules['ccp3_projet'] ? (
+                          <ChevronUp className="w-6 h-6 text-white" />
+                        ) : (
+                          <ChevronDown className="w-6 h-6 text-white" />
+                        )}
+                      </div>
+                    </button>
+                    {openModules['ccp3_projet'] && (
                           <div className="p-6 border-t border-gray-200 animate-in slide-in-from-top-4 duration-300">
-                            
-                            {/* Contenu du module */}
-                            <div className="mb-6">
-                              <h4 className="text-sm font-bold text-[#013F63] mb-3 flex items-center gap-2">
-                                <Target className="w-4 h-4" />
-                                Compétences développées
-                              </h4>
+                        <div className="grid md:grid-cols-2 gap-2">
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Formaliser un projet</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Élaborer un cahier des charges</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Intégrer les concepts du développement durable au projet</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Élaborer un plan d'action et un prévisionnel</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Évaluer et rendre compte</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* CCP3 - Appui technique aux employeurs */}
+                  <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <button
+                      onClick={() => toggleModule('ccp3_recrutement')}
+                      className="w-full bg-gradient-to-r from-[#013F63] to-[#012a4a] text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold text-sm">3</span>
+                        </div>
+                        <div className="text-left">
+                          <h3 className="text-base lg:text-lg font-bold">Apporter un appui technique aux employeurs en matière de recrutement</h3>
+                        </div>
+                      </div>
+                      <div className="flex-shrink-0">
+                        {openModules['ccp3_recrutement'] ? (
+                          <ChevronUp className="w-6 h-6 text-white" />
+                        ) : (
+                          <ChevronDown className="w-6 h-6 text-white" />
+                        )}
+                      </div>
+                    </button>
+                    {openModules['ccp3_recrutement'] && (
+                      <div className="p-6 border-t border-gray-200 animate-in slide-in-from-top-4 duration-300">
                               <div className="grid md:grid-cols-2 gap-2">
-                                {module.contenu.map((item, i) => (
-                                  <div key={i} className="flex items-start gap-2 text-sm">
+                          <div className="flex items-start gap-2 text-sm">
                                     <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
-                                    <span className="text-gray-600">{item}</span>
+                            <span className="text-gray-600">Analyser les besoins</span>
                                   </div>
-                                ))}
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Connaître les procédures de recrutement</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Proposer les différentes aides financières relatives à l'emploi et à la formation</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                               </div>
                               
-                              {/* Note spéciale pour le CCP 3 */}
-                              {module.id === 3 && (
-                                <div className="mt-4 p-3 bg-orange-50 border-l-4 border-orange-400 rounded-r-lg">
-                                  <p className="text-sm text-orange-700 font-medium">
-                                    <strong>Formation disponible individuellement</strong>
-                                  </p>
+                  {/* CCP3 - Faciliter l'intégration */}
+                  <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <button
+                      onClick={() => toggleModule('ccp3_integration')}
+                      className="w-full bg-gradient-to-r from-[#013F63] to-[#012a4a] text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold text-sm">4</span>
                                 </div>
-                              )}
+                        <div className="text-left">
+                          <h3 className="text-base lg:text-lg font-bold">Faciliter l'intégration du salarié dans son nouvel environnement professionnel</h3>
+                        </div>
+                      </div>
+                      <div className="flex-shrink-0">
+                        {openModules['ccp3_integration'] ? (
+                          <ChevronUp className="w-6 h-6 text-white" />
+                        ) : (
+                          <ChevronDown className="w-6 h-6 text-white" />
+                        )}
+                      </div>
+                    </button>
+                    {openModules['ccp3_integration'] && (
+                      <div className="p-6 border-t border-gray-200 animate-in slide-in-from-top-4 duration-300">
+                        <div className="grid md:grid-cols-2 gap-2">
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Connaître le cadre légal de l'intégration en entreprise</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Adapter sa communication aux différents interlocuteurs</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Mettre en place un accompagnement efficace</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Utiliser les techniques de remédiation</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">Réaliser un bilan professionnel</span>
+                          </div>
                             </div>
                           </div>
                         )}
                       </div>
-                    )
-                  })}
                 </div>
 
                 {/* Bouton Plaquette Informative */}
@@ -1055,11 +1214,10 @@ export default function FormationCCP3() {
                 {/* Section Tarifs */}
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                   
-                  {/* Tarif normal */}
+                  {/* Financement Transition pro */}
                   <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Tarif normal</h3>
-                      <p className="text-orange-600">Financement spécialisé</p>
+                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
+                      <h3 className="text-2xl font-bold text-orange-500">Financement Transition pro</h3>
                     </div>
                     
                     <div className="mb-6">
@@ -1075,11 +1233,10 @@ export default function FormationCCP3() {
                     </Link>
                   </div>
 
-                  {/* Tarif réduit */}
+                  {/* Autres financements */}
                   <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-blue-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                      <h3 className="text-2xl font-bold mb-2 text-blue-600">Tarif réduit</h3>
-                      <p className="text-blue-600">CPF, OPCO, entreprise...</p>
+                    <div className="bg-blue-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
+                      <h3 className="text-2xl font-bold text-blue-600">Autres financements</h3>
                     </div>
                     
                     <div className="mb-6">

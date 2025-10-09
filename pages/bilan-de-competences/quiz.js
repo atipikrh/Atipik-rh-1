@@ -64,7 +64,7 @@ export default function QuizBilanCompetences() {
     },
     {
       id: 6,
-      question: "Avez-vous déjà envisagé une reconversion ou évolution professionnelle ?",
+      question: "Avez-vous déjà envisagé une reconversion ou évolution professionnelle\u00A0?",
       options: [
         { value: "non", text: "Non, pas du tout", score: 1 },
         { value: "vaguement", text: "Vaguement, sans rien de concret", score: 2 },
@@ -74,7 +74,7 @@ export default function QuizBilanCompetences() {
     },
     {
       id: 7,
-      question: "Quelle est votre plus grande préoccupation professionnelle actuellement ?",
+      question: "Quelle est votre plus grande pré\u00ADoccupation profession\u00ADnelle actuellement\u00A0?",
       options: [
         { value: "equilibre", text: "Maintenir un bon équilibre vie pro/perso", score: 1 },
         { value: "evolution", text: "Évoluer dans mon poste actuel", score: 2 },
@@ -84,7 +84,7 @@ export default function QuizBilanCompetences() {
     },
     {
       id: 8,
-      question: "Si vous pouviez avoir une baguette magique pour votre carrière, que feriez-vous ?",
+      question: "Si vous pouviez avoir une baguette magique pour votre carrière, que\u00A0feriez-vous\u00A0?",
       options: [
         { value: "ameliorer", text: "Améliorer ma situation actuelle", score: 1 },
         { value: "competences", text: "Découvrir toutes mes compétences cachées", score: 2 },
@@ -190,7 +190,7 @@ export default function QuizBilanCompetences() {
                   {/* Questions du quiz */}
                   {currentStep < questions.length && (
                     <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                      <h2 className="text-2xl font-bold text-[#013F63] mb-8 text-center">
+                      <h2 className="text-2xl font-bold text-[#013F63] mb-8 text-center break-words hyphens-auto">
                         {questions[currentStep].question}
                       </h2>
                       

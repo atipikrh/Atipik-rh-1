@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, User } from 'lucide-react';
 import { useState } from 'react';
 
 export default function LilianaDelmas() {
@@ -53,13 +53,9 @@ export default function LilianaDelmas() {
                           className="w-full h-full object-cover rounded-2xl"
                         />
                       ) : (
-                        <Image
-                          src="/images/equipe/liliana-enfant.jpeg"
-                          alt="Liliana ALMEIDA enfant"
-                          width={350}
-                          height={400}
-                          className="w-full h-full object-cover rounded-2xl"
-                        />
+                        <div className="w-full h-full rounded-2xl bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                          <User className="w-32 h-32 text-white" />
+                        </div>
                       )}
                     </div>
                     {/* Photo principale cliquable */}
@@ -67,13 +63,19 @@ export default function LilianaDelmas() {
                       className="relative z-10 w-full h-72 cursor-pointer"
                       onClick={() => setShowChildPhoto(!showChildPhoto)}
                     >
-                      <Image
-                        src={showChildPhoto ? "/images/equipe/liliana-enfant.jpeg" : "/images/equipe/liliana.jpeg"}
-                        alt={showChildPhoto ? "Liliana ALMEIDA enfant" : "Liliana ALMEIDA"}
-                        width={350}
-                        height={400}
-                        className="w-full h-full object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
-                      />
+                      {showChildPhoto ? (
+                        <div className="w-full h-full rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                          <User className="w-32 h-32 text-white" />
+                        </div>
+                      ) : (
+                        <Image
+                          src="/images/equipe/liliana.jpeg"
+                          alt="Liliana ALMEIDA"
+                          width={350}
+                          height={400}
+                          className="w-full h-full object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
+                        />
+                      )}
                     </div>
                   </div>
                 </div>

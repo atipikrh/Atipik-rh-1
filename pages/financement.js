@@ -24,7 +24,7 @@ export default function Financement() {
       answer: "Présentez votre projet de formation à votre conseiller Pôle Emploi. La formation doit être cohérente avec votre projet professionnel. Nous vous aidons à préparer le dossier."
     },
     {
-      question: "Comment connaître mon organisme de financement ?",
+      question: "Comment connaître mon organisme de financement en étant indépendant ?",
       answer: "Cela dépend de votre activité : FIFPL (professions libérales), AGEFICE (commerçants), FAFCEA (artisans). Nous vous aidons à identifier le bon organisme."
     },
     {
@@ -33,6 +33,21 @@ export default function Financement() {
     }
   ];
   const salariesCards = [
+    {
+      logoSrc: "/images/financements/logo-transition-pro.png",
+      logoAlt: "Logo Transition Pro",
+      title: "Transition Pro",
+      details: [
+        { label: "Contexte", value: "Projet de reconversion professionnelle" },
+        { label: "Financement", value: "Prise en charge totale par l'État" },
+        { label: "Conditions", value: "Salarié en CDI depuis au moins 2 ans" },
+        { label: "Avantage", value: "Maintien du salaire pendant la formation" }
+      ],
+      buttonText: "En savoir plus Transition Pro",
+      buttonStyle: "primary",
+      buttonLink: "https://www.transitionspro-na.fr/",
+      external: true
+    },
     {
       logoSrc: "/images/financements/cpf.jpg",
       logoAlt: "Logo CPF - Compte Personnel de Formation",
@@ -49,39 +64,10 @@ export default function Financement() {
       external: true
     },
     {
-      logoSrc: "/images/financements/logo entreprise.jpg",
-      logoAlt: "Logo Plan de développement des compétences",
-      title: "Plan de développement des compétences",
-      details: [
-        { label: "Financement", value: "100% pris en charge par l'employeur" },
-        { label: "Avantages", value: "Formation sur temps de travail possible" },
-        { label: "Conditions", value: "Accord de l'employeur nécessaire" },
-        { label: "Délai", value: "Variable selon l'entreprise" }
-      ],
-      buttonText: "Étudier cette option",
-      buttonStyle: "secondary",
-      buttonLink: "/contact",
-      external: false
-    },
-    {
-      logoSrc: "/images/financements/Logo-Financement-Personnel.webp",
-      logoAlt: "Logo Autres financements",
-      title: "Autres financements",
-      details: [
-        { label: "Financement personnel", value: "Paiement en 3x, 6x ou 9x avec notre partenaire financier" },
-        { label: "Abondement CPF", value: "Complément personnel ou employeur" },
-        { label: "Co-financement", value: "CPF + plan de formation" },
-        { label: "Avantage", value: "Démarrage immédiat" }
-      ],
-      buttonText: "Étudier cette option",
-      buttonStyle: "secondary",
-      buttonLink: "/contact",
-      external: false
-    },
-    {
       logoSrc: "/images/financements/logo-agefiph.png",
       logoAlt: "Logo AGEFIPH",
       title: "AGEFIPH",
+      subtitle: "En complément d'autres financements",
       details: [
         { label: "Public", value: "Personnes en situation de handicap" },
         { label: "Financement", value: "Prise en charge totale ou partielle" },
@@ -94,19 +80,19 @@ export default function Financement() {
       external: true
     },
     {
-      logoSrc: "/images/financements/logo-transition-pro.png",
-      logoAlt: "Logo Transition Pro",
-      title: "Transition Pro",
+      logoSrc: "/images/financements/Logo-Financement-Personnel.webp",
+      logoAlt: "Logo Financement Personnel",
+      title: "Auto-financement",
       details: [
-        { label: "Contexte", value: "Projet de reconversion professionnelle" },
-        { label: "Financement", value: "Prise en charge totale par l'État" },
-        { label: "Conditions", value: "Salarié en CDI depuis au moins 2 ans" },
-        { label: "Avantage", value: "Maintien du salaire pendant la formation" }
+        { label: "Facilités", value: "Paiement en 3x, 6x ou 9x avec notre partenaire financier" },
+        { label: "Réduction", value: "Tarifs préférentiels possibles" },
+        { label: "Rapidité", value: "Démarrage immédiat" },
+        { label: "ROI", value: "Investissement dans votre avenir professionnel" }
       ],
-      buttonText: "En savoir plus Transition Pro",
-      buttonStyle: "primary",
-      buttonLink: "https://www.francetravail.fr/candidat/en-formation/transition-pro",
-      external: true
+      buttonText: "Étudier cette option",
+      buttonStyle: "secondary",
+      buttonLink: "/contact",
+      external: false
     }
   ];
 
@@ -238,7 +224,12 @@ export default function Financement() {
                                     className="object-contain"
                                   />
                                 </div>
-                                <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">{card.title}</h3>
+                                <div className="flex-1 text-center">
+                                  <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight">{card.title}</h3>
+                                  {card.subtitle && (
+                                    <p className="text-xs text-gray-600 italic mt-1">{card.subtitle}</p>
+                                  )}
+                                </div>
                               </div>
                               <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
                                 {card.details.map((detail, detailIndex) => (
@@ -341,6 +332,36 @@ export default function Financement() {
                       </div>
                     </div>
 
+                    {/* AGEFIPH */}
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                          <Image
+                            src="/images/financements/logo-agefiph.png"
+                            alt="Logo AGEFIPH"
+                            width={48}
+                            height={48}
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
+                          />
+                        </div>
+                        <div className="flex-1 text-center">
+                          <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight">AGEFIPH</h3>
+                          <p className="text-xs text-gray-600 italic mt-1">En complément d'autres financements</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Public :</strong> Personnes en situation de handicap</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Prise en charge totale ou partielle</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
+                      </div>
+                      <a href="https://www.agefiph.fr/aides-financieres/aide-ladaptation-des-situations-de-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                        En savoir plus AGEFIPH
+                      </a>
+                      </div>
+                    </div>
+
                     {/* Auto-financement */}
                     <div className="flex-shrink-0 w-72 md:w-80">
                       <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
@@ -365,33 +386,6 @@ export default function Financement() {
                       <Link href="/contact" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
                         Étudier cette option
                       </Link>
-                      </div>
-                    </div>
-
-                    {/* AGEFIPH */}
-                    <div className="flex-shrink-0 w-72 md:w-80">
-                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
-                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
-                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
-                          <Image
-                            src="/images/financements/logo-agefiph.png"
-                            alt="Logo AGEFIPH"
-                            width={48}
-                            height={48}
-                            className="object-contain w-6 h-6 md:w-12 md:h-12"
-                          />
-                        </div>
-                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">AGEFIPH</h3>
-                      </div>
-                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Public :</strong> Personnes en situation de handicap</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Prise en charge totale ou partielle</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
-                      </div>
-                      <a href="https://www.agefiph.fr/aides-financieres/aide-ladaptation-des-situations-de-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
-                        En savoir plus AGEFIPH
-                      </a>
                       </div>
                     </div>
 
@@ -461,6 +455,36 @@ export default function Financement() {
                       </div>
                     </div>
 
+                    {/* AGEFIPH */}
+                    <div className="flex-shrink-0 w-72 md:w-80">
+                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
+                          <Image
+                            src="/images/financements/logo-agefiph.png"
+                            alt="Logo AGEFIPH"
+                            width={48}
+                            height={48}
+                            className="object-contain w-6 h-6 md:w-12 md:h-12"
+                          />
+                        </div>
+                        <div className="flex-1 text-center">
+                          <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight">AGEFIPH</h3>
+                          <p className="text-xs text-gray-600 italic mt-1">En complément d'autres financements</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Public :</strong> Personnes en situation de handicap</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Prise en charge totale ou partielle</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
+                      </div>
+                      <a href="https://www.agefiph.fr/aides-financieres/aide-ladaptation-des-situations-de-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                        En savoir plus AGEFIPH
+                      </a>
+                      </div>
+                    </div>
+
                     {/* Auto-financement */}
                     <div className="flex-shrink-0 w-72 md:w-80">
                       <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
@@ -485,33 +509,6 @@ export default function Financement() {
                       <Link href="/contact" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
                         Étudier cette option
                       </Link>
-                      </div>
-                    </div>
-
-                    {/* AGEFIPH */}
-                    <div className="flex-shrink-0 w-72 md:w-80">
-                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
-                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
-                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
-                          <Image
-                            src="/images/financements/logo-agefiph.png"
-                            alt="Logo AGEFIPH"
-                            width={48}
-                            height={48}
-                            className="object-contain w-6 h-6 md:w-12 md:h-12"
-                          />
-                        </div>
-                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">AGEFIPH</h3>
-                      </div>
-                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Public :</strong> Personnes en situation de handicap</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Prise en charge totale ou partielle</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Reconnaissance de handicap RQTH</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> Dossier à constituer avec justificatifs</p>
-                      </div>
-                      <a href="https://www.agefiph.fr/aides-financieres/aide-ladaptation-des-situations-de-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
-                        En savoir plus AGEFIPH
-                      </a>
                       </div>
                     </div>
                   </div>
@@ -552,33 +549,6 @@ export default function Financement() {
                       </div>
                     </div>
 
-                    {/* Plan de développement des compétences */}
-                    <div className="flex-shrink-0 w-72 md:w-80">
-                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
-                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
-                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
-                          <Image
-                            src="/images/financements/logo entreprise.jpg"
-                            alt="Logo Plan de développement des compétences"
-                            width={48}
-                            height={48}
-                            className="object-contain w-6 h-6 md:w-12 md:h-12"
-                          />
-                        </div>
-                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Plan de développement des compétences</h3>
-                      </div>
-                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> 100% pris en charge par l'employeur</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Avantages :</strong> Formation sur temps de travail</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Intégration dans le plan annuel</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Bénéfice :</strong> Montée en compétences des équipes</p>
-                      </div>
-                      <Link href="/contact" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
-                        Étudier cette option
-                      </Link>
-                      </div>
-                    </div>
-
                     {/* FNE-Formation */}
                     <div className="flex-shrink-0 w-72 md:w-80">
                       <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
@@ -600,35 +570,8 @@ export default function Financement() {
                         <p className="text-[#013F63] text-xs md:text-sm"><strong>Objectif :</strong> Maintenir l'emploi et les compétences</p>
                         <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Accord de branche ou d'entreprise</p>
                       </div>
-                      <a href="https://www.francetravail.fr/employeur/recruter-et-former/former-ses-salaries/fne-formation" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
+                      <a href="https://les-aides.fr/aide/V2Fv3w/dreets/fne-formation.html" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                         En savoir plus FNE-Formation
-                      </a>
-                      </div>
-                    </div>
-
-                    {/* Pro-A */}
-                    <div className="flex-shrink-0 w-72 md:w-80">
-                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
-                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
-                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
-                          <Image
-                            src="/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg"
-                            alt="Logo Pro-A"
-                            width={48}
-                            height={48}
-                            className="object-contain w-6 h-6 md:w-12 md:h-12"
-                          />
-                        </div>
-                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">Pro-A</h3>
-                      </div>
-                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Principe :</strong> Formation pendant l'activité partielle</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Prise en charge par France Travail</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Durée :</strong> Jusqu'à 2 ans maximum</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Avantage :</strong> Maintien des compétences</p>
-                      </div>
-                      <a href="https://www.francetravail.fr/employeur/recruter-et-former/former-ses-salaries/pro-a" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
-                        En savoir plus Pro-A
                       </a>
                       </div>
                     </div>

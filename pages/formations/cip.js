@@ -424,7 +424,7 @@ export default function FormationCIP() {
                     <div className="flex items-start gap-2">
                       <UserCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Niveau d'entrée :</p>
+                        <p className="font-semibold mb-0.5 text-sm">Prérequis :</p>
                         <p className="text-blue-100 text-xs">Niveau terminal et/ou expérience professionnelle</p>
                     </div>
                 </div>
@@ -622,7 +622,7 @@ export default function FormationCIP() {
                 {/* Titre de section */}
                 <div className="text-center mb-4">
                   <h2 className="text-lg lg:text-xl font-bold text-[#013F63] mb-3">
-                    UNE MÉTHODOLOGIE D'INTERVENTION AU PLUS PRÈS DU RÉEL
+                    <span className="text-orange-500 font-brittany text-xl lg:text-2xl">Une méthodologie</span> D'INTERVENTION AU PLUS PRÈS DU RÉEL
                   </h2>
                 </div>
 
@@ -632,7 +632,8 @@ export default function FormationCIP() {
                     
                     {/* Carte 1: Équipe de formateurs */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                      <a href="/notre-equipe" className="block">
+                        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden cursor-pointer">
                         {/* Section titre avec fond bleu clair */}
                         <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
                           <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">ÉQUIPE DE FORMATEURS</h3>
@@ -643,12 +644,14 @@ export default function FormationCIP() {
                             Une équipe de formateurs issue du terrain du milieu de la formation et de la transmission, avec une expertise reconnue dans l'accompagnement professionnel et l'insertion.
                           </p>
                         </div>
-                      </div>
+                        </div>
+                      </a>
                     </div>
 
                     {/* Carte 2: Intervenants théâtre */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                      <a href="/notre-equipe" className="block">
+                        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden cursor-pointer">
                         {/* Section titre avec fond bleu clair */}
                         <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
                           <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">INTERVENANTS THÉÂTRE</h3>
@@ -659,12 +662,14 @@ export default function FormationCIP() {
                             Des intervenants théâtre spécialisés dans l'insertion professionnelle et dans le handicap pour des mises en situation innovantes.
                           </p>
                         </div>
-                      </div>
+                        </div>
+                      </a>
                     </div>
 
                     {/* Carte 3: Projets collaboratifs */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                      <a href="/blog" className="block">
+                        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden cursor-pointer">
                         {/* Section titre avec fond bleu clair */}
                         <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
                           <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">PROJETS COLLABORATIFS</h3>
@@ -675,12 +680,14 @@ export default function FormationCIP() {
                             Des projets collaboratifs et des mises en situation auprès des publics accompagnés par les structures de l'emploi et de l'insertion du territoire.
                           </p>
                         </div>
-                      </div>
+                        </div>
+                      </a>
                     </div>
 
                     {/* Carte 4: Rencontres professionnelles */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                      <a href="/blog" className="block">
+                        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden cursor-pointer">
                         {/* Section titre avec fond bleu clair */}
                         <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
                           <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">RENCONTRES PROFESSIONNELLES</h3>
@@ -691,12 +698,14 @@ export default function FormationCIP() {
                             Des rencontres avec des professionnels du secteur pour enrichir la formation et créer un réseau professionnel.
                           </p>
                         </div>
-                      </div>
+                        </div>
+                      </a>
                     </div>
 
                     {/* Carte 5: Thématiques actuelles */}
                     <div className="flex-shrink-0 w-72">
-                      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden">
+                      <a href="/blog" className="block">
+                        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-[240px] overflow-hidden cursor-pointer">
                         {/* Section titre avec fond bleu clair */}
                         <div className="bg-blue-100 px-6 py-4 h-16 flex items-center justify-center">
                           <h3 className="text-base font-bold text-[#013F63] leading-tight text-center">THÉMATIQUES ACTUELLES</h3>
@@ -707,7 +716,8 @@ export default function FormationCIP() {
                             Des thématiques adaptées aux enjeux actuels de la profession : Risques psychosociaux, handicap, le droit des étrangers, inclusion numérique...
                           </p>
                         </div>
-                      </div>
+                        </div>
+                      </a>
                     </div>
 
                   </div>
@@ -1049,11 +1059,10 @@ export default function FormationCIP() {
                 {/* Section Tarifs */}
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                   
-                  {/* Tarif normal */}
+                  {/* Financement Transition pro */}
                   <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Tarif normal</h3>
-                      <p className="text-orange-600">Financement spécialisé</p>
+                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
+                      <h3 className="text-2xl font-bold text-orange-500">Financement Transition pro</h3>
                     </div>
                     
                     <div className="mb-6">
@@ -1069,11 +1078,10 @@ export default function FormationCIP() {
                     </Link>
                   </div>
 
-                  {/* Tarif réduit */}
+                  {/* Autres financements */}
                   <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-blue-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                      <h3 className="text-2xl font-bold mb-2 text-blue-600">Tarif réduit</h3>
-                      <p className="text-blue-600">CPF, OPCO, entreprise...</p>
+                    <div className="bg-blue-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
+                      <h3 className="text-2xl font-bold text-blue-600">Autres financements</h3>
                     </div>
                     
                     <div className="mb-6">
