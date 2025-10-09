@@ -428,7 +428,7 @@ export default function FormationCCP3() {
                       <UserCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Prérequis :</p>
-                        <p className="text-blue-100 text-xs">CCP1 et CCP2 validés</p>
+                        <p className="text-blue-100 text-xs">Niveau terminal et/ou expérience professionnelle</p>
                     </div>
                 </div>
 
