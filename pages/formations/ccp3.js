@@ -380,7 +380,10 @@ export default function FormationCCP3() {
                 <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#013F63]">
                   <div className="space-y-4 text-[#013F63] text-lg leading-relaxed text-center">
                     <p>
-                      Dans un contexte économique en mutation, le conseiller en insertion professionnelle accompagne à la fois les personnes dans la levée des freins, la construction de parcours vers un emploie durable et il soutient également les entreprises dans leurs besoins de recrutement et de fidélisation des talents.<br/><br/>Le CIP est avant tout un métier de lien, de contact et de territoire.
+                      Dans un marché du travail marqué par des difficultés de recrutement, le conseiller en insertion professionnelle apporte un soutien essentiel aux entreprises en les accompagnant dans la recherche, la sélection et l'intégration de leurs futurs collaborateurs.
+                    </p>
+                    <p>
+                      Le CIP est un métier d'appui au recrutement, de médiation et d'accompagnement durable.
                     </p>
                   </div>
                   
@@ -391,7 +394,7 @@ export default function FormationCCP3() {
                   
                   <div className="text-orange-500 font-bold text-xl leading-relaxed text-center">
                     <p>
-                      Devenez un expert de l'accompagnement vers l'emploi avec une certification reconnue !
+                      Devenez un partenaire incontournable des employeurs avec une certification reconnue !
                     </p>
                   </div>
                 </div>
