@@ -573,9 +573,9 @@ export default function FormationCCP3() {
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p>• <strong>Durée : 371 heures</strong></p>
                           <div className="ml-4 space-y-1">
-                            <p>◦ <strong>280 heures en centre</strong></p>
-                            <p>◦ <strong>70 heures en entreprise</strong></p>
-                            <p>◦ <strong>21 heures de session de certification</strong></p>
+                            <p>◦ <strong>231 heures de formation en centre</strong></p>
+                            <p>◦ <strong>140 heures de stage en entreprise</strong></p>
+                            <p>◦ <strong>1h de session d'examen</strong></p>
                           </div>
                         </div>
                       </div>
