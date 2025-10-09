@@ -603,7 +603,7 @@ export default function FormationCIP() {
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p>• Des évaluations formatives sont réalisées tout au long de la formation</p>
                           <p>• L'examen de certification du Titre professionnel de Conseiller en Insertion Professionnelle (CIP) est composé d'une mise en situation, d'une présentation orale, de deux dossiers (professionnel et annexe) et d'entretiens avec le jury</p>
-                          <p>• Possibilité de validé le certificat de compétences professionnel 3 uniquement (CCP)</p>
+                          <p>• Possibilité de valider le certificat de compétences professionnel 3 uniquement (CCP)</p>
                         </div>
                       </div>
                     )}
