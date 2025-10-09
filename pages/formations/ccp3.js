@@ -485,37 +485,6 @@ export default function FormationCCP3() {
                 {/* Accordéons à droite */}
                 <div className="w-full lg:w-96 flex-shrink-0 space-y-4">
                   
-                  {/* Objectifs pédagogiques */}
-                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
-                    <button
-                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
-                      onClick={() => toggleModule('objectifs')}
-                    >
-                      <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">OBJECTIFS PÉDAGOGIQUES</h3>
-                      </div>
-                      {openModules['objectifs'] ? (
-                        <ChevronUp className="w-5 h-5 text-gray-600" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-600" />
-                      )}
-                    </button>
-                    {openModules['objectifs'] && (
-                      <div className="p-3 border-t border-gray-100">
-                        <div className="space-y-3 text-[#013F63] text-sm leading-relaxed">
-                          <p>Ce parcours de formation « CCP3 » repose sur le concept de formation-action. Il comprend des projets collaboratifs avec des missions concrètes auprès de structures d'insertion partenaires du territoire de la Rive droite de Bordeaux. Il met les stagiaires en situation de CIP au profit des publics accompagnés par les partenaires.</p>
-                          
-                          <p><strong>C.C.P 3 - METTRE EN OEUVRE UNE OFFRE DE SERVICES AUPRES DES EMPLOYEURS POUR FAVORISER L'INSERTION PROFESSIONNELLE</strong> composé des compétences suivantes :</p>
-                          
-                          <p>• Déployer des actions de prospection dans le cadre d'un projet avec les employeurs du territoire pour favoriser l'insertion professionnelle</p>
-                          <p>• Apporter un appui technique aux employeurs en matière de recrutement</p>
-                          <p>• Faciliter l'intégration et le maintien du salarié dans son environnement professionnel</p>
-                          <p>• Inscrire ses actes professionnels dans une démarche de développement durable et inclusive</p>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
                   {/* Public visé */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
@@ -533,13 +502,9 @@ export default function FormationCCP3() {
                     </button>
                     {openModules['public'] && (
                       <div className="p-3 border-t border-gray-100">
-                        <div className="space-y-2 text-[#013F63] text-sm">
-                          <p>• Demandeur d'emploi</p>
-                          <p>• Jeune de moins de 26 ans</p>
-                          <p>• Personne handicapée</p>
-                          <p>• Salarié(e)</p>
-                          <p>• Actif(ve) non salarié(e)</p>
-                        </div>
+                        <p className="text-[#013F63] text-sm leading-relaxed">
+                          Cette formation s'adresse aux personnes qui disposent d'un goût prononcé pour l'accompagnement, l'échange et un sens de l'écoute développé, avec une expérience professionnelle dans l'accompagnement social.
+                        </p>
                       </div>
                     )}
                   </div>
@@ -561,21 +526,22 @@ export default function FormationCCP3() {
                     </button>
                     {openModules['modalites'] && (
                       <div className="p-3 border-t border-gray-100">
-                        <div className="space-y-2 text-[#013F63] text-sm leading-relaxed">
-                          <p>Admission sur dossier et sur entretien. Le candidat après avoir soumis son dossier de candidature est reçu par notre chargée de formation pour procéder à un entretien de motivation et vérifier que la formation correspond bien à ses objectifs de développement professionnel.</p>
+                        <div className="space-y-2 text-[#013F63] text-sm">
+                          <p>Pour accéder uniquement au CCP3, il est nécessaire d'avoir validé préalablement le CCP1 et le CCP2.</p>
+                          <p className="mt-3 text-orange-500 font-medium">Il est fortement recommandé de participer à une réunion d'information collective.</p>
                         </div>
                       </div>
                     )}
                   </div>
 
-                  {/* Contenu de la formation */}
+                  {/* Méthodes pédagogiques */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
                       className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
                       onClick={() => toggleModule('methodes')}
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">CONTENU DE LA FORMATION</h3>
+                        <h3 className="text-base font-bold text-[#013F63]">MÉTHODES PÉDAGOGIQUES</h3>
                       </div>
                       {openModules['methodes'] ? (
                         <ChevronUp className="w-5 h-5 text-gray-600" />
@@ -586,24 +552,23 @@ export default function FormationCCP3() {
                     {openModules['methodes'] && (
                       <div className="p-3 border-t border-gray-100">
                         <div className="space-y-3 text-[#013F63] text-sm">
-                          <p><strong>Prospecter les employeurs et développer des modes de collaboration sur un territoire :</strong></p>
-                          <p>• Déployer des actions de prospection dans le cadre d'un projet avec les employeurs du territoire pour favoriser l'insertion professionnelle</p>
-                          <p>• Apporter un appui technique aux employeurs en matière de recrutement</p>
-                          <p>• Faciliter l'intégration et le maintien du salarié dans son environnement professionnel</p>
-                          <p>• Inscrire ses actes professionnels dans une démarche inclusive et de développement durable</p>
+                          <p className="font-semibold text-[#013F63]">UNE FORMATION ACTION BASÉE SUR UNE PÉDAGOGIE INNOVANTE</p>
+                          <p>• Formation action basée sur des temps d'acquisition de connaissances, de cas pratique, et d'échanges d'expériences</p>
+                          <p>• Des projets collaboratifs et des mises en situation au plus près du réel avec les publics accompagnés par les structures de l'emploi et de l'insertion du territoire</p>
+                          <p>• Pédagogie active basée sur des outils du théâtre</p>
                         </div>
                       </div>
                     )}
                   </div>
 
-                  {/* Méthodes pédagogiques */}
+                  {/* Déroulement de la formation */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
                       className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
                       onClick={() => toggleModule('deroulement')}
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">MÉTHODES PÉDAGOGIQUES</h3>
+                        <h3 className="text-base font-bold text-[#013F63]">DÉROULEMENT DE LA FORMATION</h3>
                       </div>
                       {openModules['deroulement'] ? (
                         <ChevronUp className="w-5 h-5 text-gray-600" />
@@ -614,7 +579,38 @@ export default function FormationCCP3() {
                     {openModules['deroulement'] && (
                       <div className="p-3 border-t border-gray-100">
                         <div className="space-y-3 text-[#013F63] text-sm">
-                          <p>Bloc de compétences basé sur une pédagogie active, en lien avec le territoire. Il intègre un projet collaboratif avec employeurs, structures d'insertion et bénéficiaires, favorisant l'ancrage terrain et la mise en situation concrète.</p>
+                          <p>• <strong>Durée : 371 heures</strong></p>
+                          <div className="ml-4 space-y-1">
+                            <p>◦ <strong>280 heures en centre</strong></p>
+                            <p>◦ <strong>70 heures en entreprise</strong></p>
+                            <p>◦ <strong>21 heures de session de certification</strong></p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Modalité d'évaluation */}
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                    <button
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      onClick={() => toggleModule('evaluation')}
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">MODALITÉ D'ÉVALUATION</h3>
+                      </div>
+                      {openModules['evaluation'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openModules['evaluation'] && (
+                      <div className="p-3 border-t border-gray-100">
+                        <div className="space-y-3 text-[#013F63] text-sm">
+                          <p>• Des évaluations formatives sont réalisées tout au long de la formation</p>
+                          <p>• L'examen de certification du CCP3 est composé d'une mise en situation professionnelle et d'entretiens avec le jury</p>
+                          <p>• Certification partielle du Titre professionnel de Conseiller en Insertion Professionnelle</p>
                         </div>
                       </div>
                     )}
