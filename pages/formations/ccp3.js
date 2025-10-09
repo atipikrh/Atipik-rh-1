@@ -599,10 +599,11 @@ export default function FormationCCP3() {
                     </button>
                     {openModules['evaluation'] && (
                       <div className="p-3 border-t border-gray-100">
-                        <div className="space-y-3 text-[#013F63] text-sm">
-                          <p>• Des évaluations formatives sont réalisées tout au long de la formation</p>
-                          <p>• L'examen de certification du CCP3 est composé d'une mise en situation professionnelle et d'entretiens avec le jury</p>
-                          <p>• Certification partielle du Titre professionnel de Conseiller en Insertion Professionnelle</p>
+                        <div className="space-y-2 text-[#013F63] text-sm">
+                          <p>◦ Feuilles de présence.</p>
+                          <p>◦ Une évaluation en cours de formation</p>
+                          <p>◦ Bilan de stage à la fin du stage</p>
+                          <p>◦ Session de certification (durée 1 heure)</p>
                         </div>
                       </div>
                     )}
