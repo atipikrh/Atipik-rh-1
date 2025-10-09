@@ -1210,46 +1210,27 @@ export default function FormationCCP3() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-<span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Tarifs</span>
+<span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Tarif</span>
                   </h2>
                 </div>
 
-                {/* Section Tarifs */}
-                <div className="grid md:grid-cols-2 gap-8 mb-12">
+                {/* Section Tarif */}
+                <div className="flex justify-center mb-12">
                   
-                  {/* Financement Transition pro */}
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
+                  {/* Tarif unique */}
+                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center max-w-md w-full">
                     <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
-                      <h3 className="text-2xl font-bold text-orange-500">Financement Transition pro</h3>
+                      <h3 className="text-2xl font-bold text-orange-500">CCP3</h3>
                     </div>
                     
                     <div className="mb-6">
-                      <div className="text-4xl font-bold text-orange-500 mb-2">10 500<span className="text-2xl">€</span></div>
+                      <div className="text-4xl font-bold text-orange-500 mb-2">3 075<span className="text-2xl">€</span></div>
                       <p className="text-sm text-[#013F63]">TTC</p>
                     </div>
                     
                     <Link
                       href="/contact"
                       className="inline-block px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-colors"
-                    >
-                      En savoir plus
-                    </Link>
-                  </div>
-
-                  {/* Autres financements */}
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-blue-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
-                      <h3 className="text-2xl font-bold text-blue-600">Autres financements</h3>
-                    </div>
-                    
-                    <div className="mb-6">
-                      <div className="text-4xl font-bold text-blue-600 mb-2">6 500<span className="text-2xl">€</span></div>
-                      <p className="text-sm text-[#013F63]">TTC</p>
-                    </div>
-                    
-                    <Link
-                      href="/contact"
-                      className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-colors"
                     >
                       En savoir plus
                     </Link>
