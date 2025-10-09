@@ -427,26 +427,18 @@ export default function FormationCCP3() {
                     <div className="flex items-start gap-2">
                       <UserCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Niveau d'entrée :</p>
-                        <p className="text-blue-100 text-xs">Sans niveau spécifique</p>
+                        <p className="font-semibold mb-0.5 text-sm">Prérequis :</p>
+                        <p className="text-blue-100 text-xs">CCP1 et CCP2 validés</p>
                     </div>
                 </div>
 
                     <div className="flex items-start gap-2">
                       <Target className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Prérequis pédagogiques :</p>
-                        <p className="text-blue-100 text-xs">Avoir de l'expérience professionnelle dans l'accompagnement social</p>
+                        <p className="font-semibold mb-0.5 text-sm">Niveau de sortie :</p>
+                        <p className="text-blue-100 text-xs">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37274/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37274</a></p>
               </div>
             </div>
-
-                    <div className="flex items-start gap-2">
-                      <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-semibold mb-0.5 text-sm">Durée :</p>
-                        <p className="text-blue-100 text-xs">371 heures</p>
-                      </div>
-                    </div>
 
                     <div className="flex items-start gap-2">
                       <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
