@@ -620,29 +620,6 @@ export default function FormationCCP3() {
                     )}
                   </div>
 
-                  {/* Suite de parcours possible */}
-                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
-                    <button
-                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
-                      onClick={() => toggleModule('evaluation')}
-                    >
-                      <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">SUITE DE PARCOURS POSSIBLE</h3>
-                      </div>
-                      {openModules['evaluation'] ? (
-                        <ChevronUp className="w-5 h-5 text-gray-600" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-600" />
-                      )}
-                    </button>
-                    {openModules['evaluation'] && (
-                      <div className="p-3 border-t border-gray-100">
-                        <div className="space-y-3 text-[#013F63] text-sm">
-                          <p>• Chargé(e) de relations entreprises</p>
-                        </div>
-                      </div>
-                    )}
-                  </div>
                   </div>
                 </div>
               </div>
