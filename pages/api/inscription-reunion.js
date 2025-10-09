@@ -129,7 +129,7 @@ L'équipe ATIPIK RH`
       } else if (formation === 'FPA') {
         if (modalite === 'présentiel') {
           return {
-            subject: 'Découvrez tout sur la formation Formateur Professionnel d'Adultes (FPA) !',
+            subject: 'Découvrez tout sur la formation Formateur Professionnel d\'Adultes (FPA) !',
             content: `Bonjour ${prenom},
 
 Merci pour votre inscription à notre réunion d'information en présentiel !
@@ -161,7 +161,7 @@ L'équipe ATIPIK RH`
           }
         } else {
           return {
-            subject: 'Découvrez tout sur la formation Formateur Professionnel d'Adultes (FPA) !',
+            subject: 'Découvrez tout sur la formation Formateur Professionnel d\'Adultes (FPA) !',
             content: `Bonjour ${prenom},
 
 Merci pour votre inscription à notre réunion d'information à distance !
