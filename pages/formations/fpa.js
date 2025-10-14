@@ -1035,10 +1035,10 @@ export default function FormationFPA() {
                 {/* Section Tarifs */}
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                   
-                  {/* Financement Transition pro */}
+                  {/* Tarif */}
                   <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
                     <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
-                      <h3 className="text-2xl font-bold text-orange-500">Financement Transition pro</h3>
+                      <h3 className="text-2xl font-bold text-orange-500">Tarif</h3>
                     </div>
                     
                     <div className="mb-6">
@@ -1054,10 +1054,10 @@ export default function FormationFPA() {
                     </Link>
                   </div>
 
-                  {/* Autres financements */}
+                  {/* Tarif demandeur d'emploi */}
                   <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
                     <div className="bg-blue-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
-                      <h3 className="text-2xl font-bold text-blue-600">Autres financements</h3>
+                      <h3 className="text-2xl font-bold text-blue-600">Tarif demandeur d'emploi</h3>
                     </div>
                     
                     <div className="mb-6">
