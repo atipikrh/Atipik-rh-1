@@ -13,4 +13,4 @@ export default function App({ Component, pageProps }) {
       <Component {...pageProps} />
     </>
   )
-} 
+} // Force deployment Thu Oct 23 12:40:44 CEST 2025
