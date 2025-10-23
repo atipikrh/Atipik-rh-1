@@ -97,18 +97,30 @@ export default function Blog() {
        category: "Conseils",
        keywords: "soft skills, compétences comportementales, compétences transversales, évolution professionnelle"
      },
-         {
-       id: 13,
-       slug: "preparer-entretien-embauche-conseils-experts",
-       title: "Préparer son entretien d'embauche : nos conseils d'experts",
-       excerpt: "Les techniques et astuces pour réussir ses entretiens et convaincre les recruteurs.",
-       image: "/images/hero/vae.jpg",
-       date: "15 décembre 2024",
-       readTime: "8 min",
-       author: "Brunilda RAFAEL",
-       category: "Recherche d'emploi",
-       keywords: "entretien embauche, conseils recrutement, préparation entretien, techniques recruteurs"
-     }
+    {
+      id: 13,
+      slug: "preparer-entretien-embauche-conseils-experts",
+      title: "Préparer son entretien d'embauche : nos conseils d'experts",
+      excerpt: "Les techniques et astuces pour réussir ses entretiens et convaincre les recruteurs.",
+      image: "/images/hero/vae.jpg",
+      date: "15 décembre 2024",
+      readTime: "8 min",
+      author: "Brunilda RAFAEL",
+      category: "Recherche d'emploi",
+      keywords: "entretien embauche, conseils recrutement, préparation entretien, techniques recruteurs"
+    },
+    {
+      id: 14,
+      slug: "difficultes-recrutement-pratiques-marche",
+      title: "Et si vos difficultés de recrutement venaient de vos pratiques, pas du marché ?",
+      excerpt: "Vous publiez une offre. Une semaine passe. Puis deux. Puis trois. Les candidatures se comptent sur les doigts d'une main, et aucune ne correspond vraiment à ce que vous cherchez. Et si le problème n'était pas là où on le pense ?",
+      image: "/images/hero/formations.jpg",
+      date: "25 janvier 2025",
+      readTime: "10 min",
+      author: "ATIPIK RH",
+      category: "Tous",
+      keywords: "recrutement inclusif, difficultés recrutement, pratiques recrutement, diversité, inclusion, talents atypiques"
+    }
   ];
 
   const categories = ["Tous", "Formations", "Reconversion", "Financement", "VAE", "Bilan de compétences", "Conseils", "Recherche d'emploi"];

@@ -384,6 +384,115 @@ export default function BlogArticle() {
       `
     },
     {
+      id: 14,
+      slug: "difficultes-recrutement-pratiques-marche",
+      title: "Et si vos difficultés de recrutement venaient de vos pratiques, pas du marché ?",
+      excerpt: "Vous publiez une offre. Une semaine passe. Puis deux. Puis trois. Les candidatures se comptent sur les doigts d'une main, et aucune ne correspond vraiment à ce que vous cherchez. Et si le problème n'était pas là où on le pense ?",
+      image: "/images/hero/formations.jpg",
+      date: "25 janvier 2025",
+      readTime: "10 min",
+      author: "ATIPIK RH",
+      category: "Tous",
+      keywords: "recrutement inclusif, difficultés recrutement, pratiques recrutement, diversité, inclusion, talents atypiques",
+      content: `
+        <p>Vous publiez une offre. Une semaine passe. Puis deux. Puis trois. Les candidatures se comptent sur les doigts d'une main, et aucune ne correspond vraiment à ce que vous cherchez.</p>
+
+        <p>Bienvenue dans le quotidien de milliers de recruteurs en 2025.</p>
+
+        <p>Santé, hôtellerie, BTP, industrie, services… Peu de secteurs échappent à cette réalité : les talents se font rares, les postes restent vacants, et pendant ce temps, l'activité ralentit.</p>
+
+        <p>Face à cette situation, on entend souvent les mêmes explications :</p>
+
+        <ul>
+          <li>"Les jeunes ne veulent plus travailler"</li>
+          <li>"Il n'y a pas assez de candidats qualifiés sur le marché"</li>
+          <li>"Notre secteur n'attire pas"</li>
+        </ul>
+
+        <p><strong>Mais si le problème n'était pas là où on le pense ?</strong></p>
+
+        <h2>Le vrai sujet : nous cherchons tous le même profil</h2>
+
+        <p>Soyons honnêtes. Quand on rédige une offre d'emploi, on a souvent en tête un profil idéal :</p>
+
+        <ul>
+          <li>Diplôme précis ✓</li>
+          <li>X années d'expérience minimum ✓</li>
+          <li>Disponibilité immédiate ✓</li>
+          <li>Maîtrise parfaite de tel logiciel ✓</li>
+        </ul>
+
+        <p>Et inconsciemment, on ajoute d'autres filtres :</p>
+
+        <ul>
+          <li>Pas de trous dans le CV</li>
+          <li>Parcours linéaire et cohérent</li>
+          <li>Codes culturels qui correspondent aux nôtres</li>
+        </ul>
+
+        <p><strong>Résultat ?</strong> On pêche tous dans le même vivier, de plus en plus restreint. Et on s'étonne de ne rien attraper.</p>
+
+        <p><strong>La bonne nouvelle ?</strong> Des millions de talents sont disponibles. Ils ont juste des parcours différents.</p>
+
+        <h2>L'inclusion n'est pas qu'une question d'éthique, c'est un levier business</h2>
+
+        <p>Recruter de manière inclusive, ce n'est pas faire de la "discrimination positive" ou cocher des cases RSE.</p>
+
+        <p><strong>C'est élargir stratégiquement son vivier de talents pour recruter plus, mieux et plus vite.</strong></p>
+
+        <p>Concrètement, cela signifie :</p>
+
+        <h3>Regarder au-delà du diplôme</h3>
+        <p>Un autodidacte passionné peut surpasser un bac+5 démotivé. Une personne en reconversion apporte un regard neuf et une motivation décuplée.</p>
+
+        <h3>Valoriser les compétences transférables</h3>
+        <p>Cette commerciale qui postule en RH ? Elle maîtrise l'écoute, la négociation, la gestion de la relation. Des compétences précieuses.</p>
+
+        <h3>Adapter ses exigences à la réalité</h3>
+        <p>5 ans d'expérience sur un métier qui a évolué il y a 2 ans ? Un logiciel qu'on peut apprendre en une semaine ? Peut-être qu'on se tire une balle dans le pied.</p>
+
+        <h3>Questionner ses biais</h3>
+        <p>Pourquoi ce CV avec un trou de 2 ans vous refroidit ? Pourquoi ce prénom vous fait hésiter ? Pourquoi l'âge du candidat vous fait douter ?</p>
+
+        <h2>Ce qui change quand on recrute de manière inclusive</h2>
+
+        <h3>Votre vivier s'élargit instantanément</h3>
+        <p>Seniors expérimentés, personnes en situation de handicap, profils issus de quartiers prioritaires, reconversions professionnelles… Vous multipliez vos opportunités.</p>
+
+        <h3>Vos recrutements sont plus rapides</h3>
+        <p>Moins de concurrence sur des profils atypiques = plus de réactivité, moins de surenchères salariales.</p>
+
+        <h3>Votre marque employeur se renforce</h3>
+        <p>Les candidats parlent. Une entreprise inclusive attire naturellement plus de talents, de tous horizons.</p>
+
+        <h3>Vos équipes gagnent en performance</h3>
+        <p>La diversité de parcours enrichit la réflexion, stimule l'innovation et renforce la cohésion.</p>
+
+        <p><strong>Le recrutement inclusif n'est pas une révolution. C'est une adaptation de vos pratiques actuelles.</strong></p>
+
+        <h2>L'inclusion, c'est voir ce que les autres ne voient pas</h2>
+
+        <p>Dans un marché tendu, les entreprises qui performent sont celles qui osent sortir des sentiers battus.</p>
+
+        <p>Celles qui comprennent qu'un parcours atypique n'est pas un handicap, mais une richesse. Celles qui forment plutôt que d'attendre. Celles qui recrutent des humains, pas des fiches de poste.</p>
+
+        <p><strong>Le recrutement inclusif n'est pas une tendance. C'est une nécessité stratégique pour toute organisation qui veut rester compétitive.</strong></p>
+
+        <p>Alors, prêt·e à regarder votre vivier de talents autrement ?</p>
+
+        <p>Chez ATIPIK RH, nous accompagnons les professionnels RH et du recrutement à adopter des pratiques inclusives concrètes. Parce qu'on est convaincu que vos prochains talents sont déjà là, il suffit de savoir les voir.</p>
+
+        <p>Envie d'aller plus loin ? Téléchargez notre plaquette de formation "Recrutement Inclusif" pour découvrir le programme complet et repartir avec des solutions concrètes face à vos difficultés de recrutement.</p>
+
+        <div class="text-center mt-8 mb-8">
+          <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" 
+             class="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
+            En savoir + sur cette formation
+          </a>
+        </div>
+      `
+    },
+    {
       id: 2,
       slug: "centre-formation-lormont-rive-droite-bordeaux",
       title: "Centre de formation professionnelle à Lormont : pourquoi choisir la rive droite de Bordeaux ?",
