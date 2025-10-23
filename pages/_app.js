@@ -13,4 +13,5 @@ export default function App({ Component, pageProps }) {
       <Component {...pageProps} />
     </>
   )
-} 
+} // Force deployment Thu Oct 23 12:40:44 CEST 2025
+// Test reconnexion Vercel Thu Oct 23 12:47:00 CEST 2025
