@@ -9,6 +9,12 @@ export default function Header({ isFixed = false, isHomePage = false }) {
   const [isQuiSommesNousOpen, setIsQuiSommesNousOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   
+  // États pour le menu mobile
+  const [isMobileFormationsOpen, setIsMobileFormationsOpen] = useState(false)
+  const [isMobileCIPOpen, setIsMobileCIPOpen] = useState(false)
+  const [isMobileCourtesOpen, setIsMobileCourtesOpen] = useState(false)
+  const [isMobileQuiSommesNousOpen, setIsMobileQuiSommesNousOpen] = useState(false)
+  
   useEffect(() => {
     if (!isHomePage) return
     
@@ -302,78 +308,115 @@ export default function Header({ isFixed = false, isHomePage = false }) {
               <div className="px-4 py-6 space-y-4">
                 {/* Formations */}
                 <div>
-                  <div className="text-[#013F63] font-medium text-base mb-3">Formations</div>
-                  <div className="space-y-2 ml-4">
-                    <Link 
-                      href="/formations"
-                      className="text-sm text-[#013F63] hover:text-[#012a4a] font-medium py-2 block"
-                      onClick={() => setIsMobileMenuOpen(false)}
+                  <button 
+                    className="text-[#013F63] font-medium text-base mb-3 flex items-center justify-between w-full"
+                    onClick={() => setIsMobileFormationsOpen(!isMobileFormationsOpen)}
+                  >
+                    Formations
+                    <svg 
+                      className={`w-4 h-4 transition-transform ${isMobileFormationsOpen ? 'rotate-180' : ''}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
                     >
-                      Formation CIP
-                    </Link>
-                    <div className="ml-4 space-y-1">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {isMobileFormationsOpen && (
+                    <div className="space-y-2 ml-4">
+                      <div>
+                        <button
+                          className="text-sm text-[#013F63] hover:text-[#012a4a] font-medium py-2 flex items-center justify-between w-full"
+                          onClick={() => setIsMobileCIPOpen(!isMobileCIPOpen)}
+                        >
+                          Formation CIP
+                          <svg 
+                            className={`w-3 h-3 transition-transform ${isMobileCIPOpen ? 'rotate-180' : ''}`} 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        {isMobileCIPOpen && (
+                          <div className="ml-4 space-y-1">
+                            <Link 
+                              href="/formations/cip" 
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              Formation complète
+                            </Link>
+                            <Link 
+                              href="/formations/ccp3" 
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              CCP3 uniquement
+                            </Link>
+                          </div>
+                        )}
+                      </div>
+                      
                       <Link 
-                        href="/formations/cip" 
-                        className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                        href="/formations/fpa" 
+                        className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        Formation complète
+                        Formation FPA
                       </Link>
-                      <Link 
-                        href="/formations/ccp3" 
-                        className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        CCP3 uniquement
-                      </Link>
+                      
+                      <div>
+                        <button
+                          className="text-sm text-[#013F63] hover:text-[#012a4a] font-medium py-2 flex items-center justify-between w-full"
+                          onClick={() => setIsMobileCourtesOpen(!isMobileCourtesOpen)}
+                        >
+                          Formations courtes professionnalisantes
+                          <svg 
+                            className={`w-3 h-3 transition-transform ${isMobileCourtesOpen ? 'rotate-180' : ''}`} 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        {isMobileCourtesOpen && (
+                          <div className="ml-4 space-y-1">
+                            <Link 
+                              href="/formations/professionnalisantes/developper-relation-entreprise" 
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              Développer la relation entreprise
+                            </Link>
+                            <Link 
+                              href="/formations/professionnalisantes/renforcer-relation-entreprise" 
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              Renforcer la relation entreprise
+                            </Link>
+                            <Link 
+                              href="/formations/professionnalisantes/recruter-insertion-entreprises" 
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              Recruter en insertion avec les entreprises
+                            </Link>
+                            <Link 
+                              href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" 
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              Renforcer sa pratique du recrutement inclusif
+                            </Link>
+                          </div>
+                        )}
+                      </div>
                     </div>
-                    
-                    <Link 
-                      href="/formations/fpa" 
-                      className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Formation FPA
-                    </Link>
-                    
-                    <Link
-                      href="/formations#formations-professionnalisantes"
-                      className="text-sm text-[#013F63] hover:text-[#012a4a] font-medium py-2 block"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Formations courtes professionnalisantes
-                    </Link>
-                    <div className="ml-4 space-y-1">
-                      <Link 
-                        href="/formations/professionnalisantes/developper-relation-entreprise" 
-                        className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Développer la relation entreprise
-                      </Link>
-                      <Link 
-                        href="/formations/professionnalisantes/renforcer-relation-entreprise" 
-                        className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Renforcer la relation entreprise
-                      </Link>
-                      <Link 
-                        href="/formations/professionnalisantes/recruter-insertion-entreprises" 
-                        className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Recruter en insertion avec les entreprises
-                      </Link>
-                      <Link 
-                        href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" 
-                        className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Renforcer sa pratique du recrutement inclusif
-                      </Link>
-                    </div>
-                  </div>
+                  )}
                 </div>
 
                 {/* Bilan de compétences */}
@@ -396,37 +439,52 @@ export default function Header({ isFixed = false, isHomePage = false }) {
 
                 {/* Qui sommes-nous */}
                 <div>
-                  <div className="text-[#013F63] font-medium text-base mb-3">Qui sommes-nous</div>
-                  <div className="space-y-2 ml-4">
-                    <Link 
-                      href="/notre-histoire" 
-                      className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
-                      onClick={() => setIsMobileMenuOpen(false)}
+                  <button 
+                    className="text-[#013F63] font-medium text-base mb-3 flex items-center justify-between w-full"
+                    onClick={() => setIsMobileQuiSommesNousOpen(!isMobileQuiSommesNousOpen)}
+                  >
+                    Qui sommes-nous
+                    <svg 
+                      className={`w-4 h-4 transition-transform ${isMobileQuiSommesNousOpen ? 'rotate-180' : ''}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
                     >
-                      Notre histoire
-                    </Link>
-                    <Link 
-                      href="/notre-equipe" 
-                      className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Notre équipe
-                    </Link>
-                    <Link 
-                      href="/certification" 
-                      className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Certification
-                    </Link>
-                    <Link 
-                      href="/partenariat" 
-                      className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Partenariat
-                    </Link>
-                  </div>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {isMobileQuiSommesNousOpen && (
+                    <div className="space-y-2 ml-4">
+                      <Link 
+                        href="/notre-histoire" 
+                        className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Notre histoire
+                      </Link>
+                      <Link 
+                        href="/notre-equipe" 
+                        className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Notre équipe
+                      </Link>
+                      <Link 
+                        href="/certification" 
+                        className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Certification
+                      </Link>
+                      <Link 
+                        href="/partenariat" 
+                        className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Partenariat
+                      </Link>
+                    </div>
+                  )}
                 </div>
 
                 {/* Financement */}
