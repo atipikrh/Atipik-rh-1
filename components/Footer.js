@@ -10,13 +10,15 @@ export default function Footer() {
           
           {/* Logo et description */}
           <div className="md:col-span-2">
-            <Image 
-              src="/images/logos/atipik-logo.png" 
-              alt="Atipik RH" 
-              width={150} 
-              height={50}
-              className="h-12 w-auto mb-6 brightness-0 invert"
-            />
+            <Link href="/" className="inline-block">
+              <Image 
+                src="/images/logos/atipik-logo.png" 
+                alt="Atipik RH" 
+                width={150} 
+                height={50}
+                className="h-12 w-auto mb-6 brightness-0 invert hover:opacity-80 transition-opacity cursor-pointer"
+              />
+            </Link>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Votre centre de formation à Lormont. 
               Bilan de compétences, VAE et formations certifiantes.
