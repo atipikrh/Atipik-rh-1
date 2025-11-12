@@ -112,14 +112,14 @@ export default function Blog() {
     {
       id: 14,
       slug: "difficultes-recrutement-pratiques-marche",
-      title: "Et si vos difficultés de recrutement venaient de vos pratiques, pas du marché ?",
-      excerpt: "Vous publiez une offre. Une semaine passe. Puis deux. Puis trois. Les candidatures se comptent sur les doigts d'une main, et aucune ne correspond vraiment à ce que vous cherchez. Et si le problème n'était pas là où on le pense ?",
+      title: "Et si vos difficultés de recrutement venaient de vos pratiques, pas seulement du marché ?",
+      excerpt: "Les candidatures tardent à arriver, les profils ne correspondent pas et la pénurie de talents semble devenir la seule explication. Et si la solution se trouvait aussi dans vos pratiques de recrutement ?",
       image: "/images/hero/formations.jpg",
-      date: "25 janvier 2025",
-      readTime: "10 min",
-      author: "ATIPIK RH",
+      date: "23 octobre 2025",
+      readTime: "9 min",
+      author: "Liliana ALMEIDA",
       category: "Tous",
-      keywords: "recrutement inclusif, difficultés recrutement, pratiques recrutement, diversité, inclusion, talents atypiques"
+      keywords: "recrutement inclusif, pratiques de recrutement, pénurie de talents, diversité, inclusion, vivier de candidats"
     }
   ];
 
