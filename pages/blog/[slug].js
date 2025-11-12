@@ -476,7 +476,7 @@ export default function BlogArticle() {
 
         <div class="text-center mt-8 mb-8">
           <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif"
-             class="inline-flex items-center px-6 py-3 bg-orange-500 hover:bg-blue-500 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg no-underline hover:no-underline">
+             class="inline-flex items-center px-6 py-3 bg-orange-500 hover:bg-[#013F63] text-white hover:text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg no-underline hover:no-underline">
             Découvrir la formation de 3 jours
           </a>
         </div>

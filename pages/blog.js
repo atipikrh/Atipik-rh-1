@@ -123,12 +123,44 @@ export default function Blog() {
     }
   ];
 
+  const monthMap = {
+    janvier: 0,
+    fevrier: 1,
+    mars: 2,
+    avril: 3,
+    mai: 4,
+    juin: 5,
+    juillet: 6,
+    aout: 7,
+    septembre: 8,
+    octobre: 9,
+    novembre: 10,
+    decembre: 11
+  };
+
+  const normalizeMonth = (month) =>
+    month
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+
+  const parseDate = (dateStr) => {
+    const [day, month, year] = dateStr.split(' ');
+    const monthIndex = monthMap[normalizeMonth(month)] ?? 0;
+
+    return new Date(Number(year), monthIndex, Number(day));
+  };
+
+  const sortedArticles = [...articles].sort(
+    (a, b) => parseDate(b.date) - parseDate(a.date)
+  );
+
   const categories = ["Tous", "Formations", "Reconversion", "Financement", "VAE", "Bilan de compétences", "Conseils", "Recherche d'emploi"];
 
   // Filtrer les articles selon la catégorie sélectionnée
   const filteredArticles = selectedCategory === "Tous" 
-    ? articles 
-    : articles.filter(article => article.category === selectedCategory);
+    ? sortedArticles 
+    : sortedArticles.filter(article => article.category === selectedCategory);
 
   // Calculs pour la pagination
   const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
@@ -268,7 +300,7 @@ export default function Blog() {
                              </div>
  
                              {/* Titre */}
-                             <h2 className="text-xl font-bold text-[#013F63] mb-3 leading-tight group-hover:text-orange-500 transition-colors flex-shrink-0 line-clamp-2">
+                            <h2 className="text-xl font-bold text-[#013F63] mb-3 leading-tight group-hover:text-[#013F63] transition-colors flex-shrink-0 line-clamp-2">
                                {article.title}
                              </h2>
  
@@ -283,7 +315,7 @@ export default function Blog() {
                                  <User className="w-4 h-4" />
                                  <span>{article.author}</span>
                                </div>
-                               <div className="inline-flex items-center gap-1 text-orange-500 group-hover:text-orange-600 font-medium text-sm transition-colors">
+                               <div className="inline-flex items-center gap-1 text-orange-500 group-hover:text-[#013F63] font-medium text-sm transition-colors">
                                  Lire la suite
                                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                </div>
