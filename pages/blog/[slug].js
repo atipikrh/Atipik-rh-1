@@ -472,11 +472,11 @@ export default function BlogArticle() {
 
         <p>Chez ATIPIK RH, nous accompagnons les professionnel·les RH et du recrutement pour traduire ces intentions en pratiques concrètes. Parce que vos prochains talents sont déjà là : il suffit de savoir les voir.</p>
 
-        <p><strong>Envie d'aller plus loin ? Découvrez notre formation professionnalisante de 3 jours pour renforcer vos pratiques de recrutement inclusif et repartir avec des outils prêts à l'emploi.</strong></p>
+        <p><strong><span class="text-orange-500">Envie d'aller plus loin ? Découvrez notre formation professionnalisante de 3 jours pour renforcer vos pratiques de recrutement inclusif et repartir avec des outils prêts à l'emploi.</span></strong></p>
 
         <div class="text-center mt-8 mb-8">
           <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif"
-             class="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
+             class="inline-flex items-center px-6 py-3 bg-orange-500 hover:bg-blue-500 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg no-underline hover:no-underline">
             Découvrir la formation de 3 jours
           </a>
         </div>
