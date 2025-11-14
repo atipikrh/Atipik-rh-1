@@ -106,6 +106,7 @@ export default function FormationCIP() {
   const timelineRef = useRef(null)
   const circle3Ref = useRef(null)
   const [timelineHeight, setTimelineHeight] = useState('calc(100% - 72px)')
+  const [timelineBottom, setTimelineBottom] = useState('24px')
 
   const toggleModule = (moduleId) => {
     setOpenModules(prev => ({
@@ -184,23 +185,27 @@ export default function FormationCIP() {
         
         // Position du centre du cercle 3 par rapport au top du conteneur timeline
         const circle3CenterY = circle3Rect.top + (circle3Rect.height / 2) - timelineRect.top
+        const timelineHeight = timelineRect.height
         
-        // Le top de la ligne est à 24px (top-6), donc on soustrait cette valeur
-        // On soustrait aussi 1px pour être sûr que ça ne dépasse pas
-        const lineHeight = circle3CenterY - 24 - 1
+        // Distance depuis le bas du conteneur jusqu'au centre du cercle 3
+        const distanceFromBottom = timelineHeight - circle3CenterY
         
-        if (lineHeight > 0) {
+        // Le top de la ligne est à 24px (top-6)
+        const lineHeight = circle3CenterY - 24
+        
+        if (lineHeight > 0 && distanceFromBottom > 0) {
           setTimelineHeight(`${lineHeight}px`)
+          setTimelineBottom(`${distanceFromBottom}px`)
         }
       }
     }
 
     if (isClient) {
-      setTimeout(updateTimelineHeight, 200)
+      setTimeout(updateTimelineHeight, 300)
     }
     
     const handleResize = () => {
-      setTimeout(updateTimelineHeight, 200)
+      setTimeout(updateTimelineHeight, 300)
     }
     window.addEventListener('resize', handleResize)
 
@@ -614,8 +619,8 @@ export default function FormationCIP() {
                         {/* Timeline verticale */}
                         <div ref={timelineRef} className="relative pl-6">
                           {/* Ligne orange verticale avec effet de défilement - s'arrête au centre du cercle 3 */}
-                          <div className="absolute left-6 top-6 w-0.5 bg-gray-200" style={{height: timelineHeight}}></div>
-                          <div className="absolute left-6 top-6 w-0.5 bg-orange-500 timeline-scroll-line" style={{height: timelineHeight}}></div>
+                          <div className="absolute left-6 top-6 bottom-0 w-0.5 bg-gray-200" style={{bottom: timelineBottom}}></div>
+                          <div className="absolute left-6 top-6 bottom-0 w-0.5 bg-orange-500 timeline-scroll-line" style={{bottom: timelineBottom}}></div>
                           
                           {/* Étapes */}
                           <div className="space-y-10 relative">
