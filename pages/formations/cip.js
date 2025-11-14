@@ -618,9 +618,15 @@ export default function FormationCIP() {
                         
                         {/* Timeline verticale */}
                         <div ref={timelineRef} className="relative pl-6">
-                          {/* Ligne orange verticale avec effet de défilement - s'arrête au centre du cercle 3 */}
-                          <div className="absolute left-6 top-6 bottom-0 w-0.5 bg-gray-200" style={{bottom: timelineBottom}}></div>
-                          <div className="absolute left-6 top-6 bottom-0 w-0.5 bg-orange-500 timeline-scroll-line" style={{bottom: timelineBottom}}></div>
+                          {/* Conteneur pour limiter la hauteur de la ligne */}
+                          <div 
+                            className="absolute left-6 top-6 w-0.5 overflow-hidden"
+                            style={{height: timelineHeight, maxHeight: timelineHeight}}
+                          >
+                            {/* Ligne orange verticale avec effet de défilement - s'arrête au centre du cercle 3 */}
+                            <div className="w-full h-full bg-gray-200"></div>
+                            <div className="w-full h-full bg-orange-500 timeline-scroll-line"></div>
+                          </div>
                           
                           {/* Étapes */}
                           <div className="space-y-10 relative">
