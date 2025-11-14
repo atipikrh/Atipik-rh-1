@@ -527,7 +527,7 @@ export default function BilanCompetences() {
                     </div>
                     <div className="flex items-start gap-2">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-[#013F63] text-sm">Suivi à 6 mois</span>
+                      <span className="text-[#013F63] text-sm">Questionnaire de suivi à 6 mois</span>
                     </div>
                   </div>
                   
@@ -579,7 +579,7 @@ export default function BilanCompetences() {
                     </div>
                     <div className="flex items-start gap-2">
                       <div className="w-2 h-2 bg-[#013F63] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-[#013F63] text-sm">Suivi à 6 mois</span>
+                      <span className="text-[#013F63] text-sm">Questionnaire de suivi à 6 mois</span>
                     </div>
                   </div>
                   
