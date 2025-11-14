@@ -569,7 +569,7 @@ export default function FormationFPA() {
                                   <li>• ET/OU 1 journée d'immersion professionnelle</li>
                                 </ul>
                                 <a
-                                  href="/documents/dossier-candidature/dossier-candidature-CIP.pdf"
+                                  href="/documents/dossier-candidature/Dossier-candidature-FPA.pdf"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="inline-flex items-center px-3 py-1.5 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors text-xs mb-4"
