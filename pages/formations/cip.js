@@ -414,8 +414,8 @@ export default function FormationCIP() {
               <div className="flex flex-col lg:flex-row gap-8 justify-center items-start">
                 
                 {/* Carte bleue à gauche */}
-                <div className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white flex flex-col justify-center min-h-[330px]" style={{backgroundColor: '#013F63'}}>
-                  <div className="space-y-3">
+                <div className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white flex flex-col h-[304px]" style={{backgroundColor: '#013F63'}}>
+                  <div className="space-y-3 flex-grow flex flex-col justify-between">
                     
                     <div className="flex items-start gap-2">
                       <Target className="w-5 h-5 mt-0.5 flex-shrink-0" />
