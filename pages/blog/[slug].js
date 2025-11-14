@@ -170,7 +170,7 @@ export default function BlogArticle() {
 
         <p>Le stage se déroule obligatoirement dans une structure d'insertion professionnelle :</p>
         <ul>
-          <li>Pôle Emploi, Mission Locale, Cap Emploi</li>
+          <li>France Travail, Mission Locale, Cap Emploi</li>
           <li>Associations d'insertion (PLIE, centres sociaux)</li>
           <li>Structures d'insertion par l'activité économique</li>
           <li>Organismes de formation avec service insertion</li>
@@ -194,7 +194,7 @@ export default function BlogArticle() {
 
         <p><strong>Service public de l'emploi :</strong></p>
         <ul>
-          <li>Pôle Emploi (conseillers emploi, référents RSA)</li>
+          <li>France Travail (conseillers emploi, référents RSA)</li>
           <li>Missions Locales (conseillers jeunes)</li>
           <li>Cap Emploi (conseillers handicap)</li>
           <li>Conseils Départementaux (insertion RSA)</li>
@@ -277,7 +277,7 @@ export default function BlogArticle() {
           <li>Possibilité d'abondement employeur ou régional</li>
         </ul>
 
-        <p><strong>Financement Pôle Emploi :</strong></p>
+        <p><strong>Financement France Travail :</strong></p>
         <ul>
           <li>Aide Individuelle à la Formation (AIF)</li>
           <li>Action de Formation Conventionnée (AFC)</li>
@@ -902,7 +902,7 @@ export default function BlogArticle() {
         <ul>
           <li><strong>Le Compte Personnel de Formation (CPF)</strong> : Utilisez vos droits acquis pour financer tout ou partie de votre bilan</li>
           <li><strong>Le Plan de Développement des Compétences</strong> : Si vous êtes salarié, votre employeur peut prendre en charge votre bilan</li>
-          <li><strong>Pôle Emploi</strong> : Pour les demandeurs d'emploi, sous certaines conditions</li>
+          <li><strong>France Travail</strong> : Pour les demandeurs d'emploi, sous certaines conditions</li>
           <li><strong>L'OPCO de votre secteur</strong> : Pour les salariés en CDD ou intérimaires</li>
         </ul>
 
@@ -1187,13 +1187,13 @@ export default function BlogArticle() {
       id: 2,
       slug: "financer-bilan-vae-formation-atipik-rh",
       title: "Financer votre formation professionnelle avec Atipik RH",
-      excerpt: "Découvrez tous les dispositifs de financement pour vos projets de formation : CPF, Pôle emploi, OPCO, Transitions Pro. La majorité de nos accompagnements sont finançables à 100% grâce à différents dispositifs.",
+      excerpt: "Découvrez tous les dispositifs de financement pour vos projets de formation : CPF, France Travail, OPCO, Transitions Pro. La majorité de nos accompagnements sont finançables à 100% grâce à différents dispositifs.",
       image: "/images/hero/formations.jpg",
       date: "20 janvier 2025",
       readTime: "8 min",
       author: "Vanessa NOAH EWODO",
       category: "Financement",
-      keywords: "financement formation, CPF, bilan compétences, VAE, Pôle emploi, OPCO, Transitions Pro, AGEFIPH",
+      keywords: "financement formation, CPF, bilan compétences, VAE, France Travail, OPCO, Transitions Pro, AGEFIPH",
       content: `
         <p>Chez Atipik RH, nous pensons que chacun doit pouvoir évoluer professionnellement sans que le financement soit un obstacle. Bonne nouvelle : la majorité de nos accompagnements et formations sont finançables à 100% grâce à différents dispositifs.</p>
 
@@ -1228,18 +1228,18 @@ export default function BlogArticle() {
 
         <p>Pour connaître vos droits, connectez-vous sur <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer"><strong>moncompteformation.gouv.fr</strong></a> avec FranceConnect. Une fois votre compte CPF suffisamment approvisionné, l'inscription se fait en quelques clics et le démarrage est possible sous 15 jours.</p>
 
-        <p><strong>Bon à savoir :</strong> Si vos droits CPF sont insuffisants, nous vous aidons à compléter avec d'autres financements (abondement employeur, Pôle emploi, etc.).</p>
+        <p><strong>Bon à savoir :</strong> Si vos droits CPF sont insuffisants, nous vous aidons à compléter avec d'autres financements (abondement employeur, France Travail, etc.).</p>
 
-        <h3>Pôle emploi</h3>
-        <p>Si vous êtes demandeur d'emploi, Pôle emploi peut financer tout ou partie de votre projet grâce à plusieurs dispositifs :</p>
+        <h3>France Travail</h3>
+        <p>Si vous êtes demandeur d'emploi, France Travail peut financer tout ou partie de votre projet grâce à plusieurs dispositifs :</p>
 
         <ul>
           <li><strong>AIF (Aide Individuelle à la Formation)</strong> : Financement personnalisé selon votre projet</li>
-          <li><strong>RFPE (Rémunération Formation Pôle Emploi)</strong> : Maintien d'une rémunération pendant la formation</li>
+          <li><strong>RFPE (Rémunération Formation France Travail)</strong> : Maintien d'une rémunération pendant la formation</li>
           <li><strong>AFC (Action de Formation Conventionnée)</strong> : Formations prioritaires du marché du travail</li>
         </ul>
 
-        <p><strong>Démarches :</strong> Validez d'abord votre projet avec votre conseiller Pôle emploi, nous vous fournissons ensuite le devis et le programme détaillé, puis vous déposez la demande AIF (délai de réponse : 15 jours ouvrés).</p>
+        <p><strong>Démarches :</strong> Validez d'abord votre projet avec votre conseiller France Travail, nous vous fournissons ensuite le devis et le programme détaillé, puis vous déposez la demande AIF (délai de réponse : 15 jours ouvrés).</p>
 
         <h3>OPCO (Opérateurs de compétences)</h3>
         <p>Si vous êtes salarié en CDI, CDD ou intérimaire, votre employeur peut faire appel à son OPCO pour financer votre formation dans le cadre :</p>
@@ -1273,7 +1273,7 @@ export default function BlogArticle() {
           <li><strong>Aide technique</strong> pour du matériel spécialisé si nécessaire</li>
         </ul>
 
-        <p>Ces aides sont souvent cumulables avec d'autres financements (CPF, Pôle emploi...) pour une prise en charge totale.</p>
+        <p>Ces aides sont souvent cumulables avec d'autres financements (CPF, France Travail...) pour une prise en charge totale.</p>
 
         <h2>Notre accompagnement dans vos démarches</h2>
 
@@ -1291,7 +1291,7 @@ export default function BlogArticle() {
 
         <ul>
           <li><strong>CPF :</strong> Instantané si vos droits sont suffisants</li>
-          <li><strong>Pôle emploi :</strong> 15 jours ouvrés</li>
+          <li><strong>France Travail :</strong> 15 jours ouvrés</li>
           <li><strong>OPCO :</strong> 1 à 2 mois</li>
           <li><strong>Transitions Pro :</strong> 2 à 4 mois (il faut anticiper !)</li>
           <li><strong>AGEFIPH :</strong> 3 semaines environ</li>
@@ -1313,7 +1313,7 @@ export default function BlogArticle() {
             </tr>
             <tr>
               <td style="padding: 12px; border: 1px solid #ddd;"><strong>Demandeur d'emploi</strong></td>
-              <td style="padding: 12px; border: 1px solid #ddd;">CPF, Pôle emploi (AIF)</td>
+              <td style="padding: 12px; border: 1px solid #ddd;">CPF, France Travail (AIF)</td>
             </tr>
             <tr style="background: #f8fafc;">
               <td style="padding: 12px; border: 1px solid #ddd;"><strong>Indépendant</strong></td>

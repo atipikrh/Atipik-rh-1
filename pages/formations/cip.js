@@ -953,7 +953,7 @@ export default function FormationCIP() {
                           {openSections['secteur-public'] && (
                             <div className="px-3 pb-3 border-t border-blue-200 bg-white">
                               <p className="text-xs text-[#013F63] leading-relaxed mt-2">
-                                Pôle emploi, collectivités locales ou territoriales, Maisons de l'emploi, plans locaux pour l'insertion et l'emploi, Missions Locales, Cap Emploi, centres d'information sur les droits des femmes et des familles...
+                                France Travail, collectivités locales ou territoriales, Maisons de l'emploi, plans locaux pour l'insertion et l'emploi, Missions Locales, Cap Emploi, centres d'information sur les droits des femmes et des familles...
                               </p>
                             </div>
                           )}

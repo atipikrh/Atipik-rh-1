@@ -20,8 +20,8 @@ export default function Financement() {
       answer: "Non, l'utilisation de votre CPF est strictement confidentielle. Votre employeur n'a aucune visibilité sur vos démarches de formation."
     },
     {
-      question: "Comment obtenir l'AIF de Pôle Emploi ?",
-      answer: "Présentez votre projet de formation à votre conseiller Pôle Emploi. La formation doit être cohérente avec votre projet professionnel. Nous vous aidons à préparer le dossier."
+      question: "Comment obtenir l'AIF de France Travail ?",
+      answer: "Présentez votre projet de formation à votre conseiller France Travail. La formation doit être cohérente avec votre projet professionnel. Nous vous aidons à préparer le dossier."
     },
     {
       question: "Comment connaître mon organisme de financement en étant indépendant ?",
@@ -101,8 +101,8 @@ export default function Financement() {
     <>
       <Head>
         <title>Financement formations CPF, VAE, bilan de compétences | Atipik RH</title>
-        <meta name="description" content="Découvrez toutes les solutions de financement pour vos formations à Bordeaux : CPF, Pôle Emploi, employeur selon votre statut professionnel." />
-        <meta name="keywords" content="financement formation CPF, Mon Compte Formation, financement bilan compétences, financement VAE, Pôle Emploi AIF" />
+        <meta name="description" content="Découvrez toutes les solutions de financement pour vos formations à Bordeaux : CPF, France Travail, employeur selon votre statut professionnel." />
+        <meta name="keywords" content="financement formation CPF, Mon Compte Formation, financement bilan compétences, financement VAE, France Travail AIF" />
         <link rel="canonical" href="https://atipikrh.fr/financement" />
       </Head>
 
@@ -296,7 +296,7 @@ export default function Financement() {
                       <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
                         <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Complète le CPF ou finance totalement</p>
                         <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Formation en lien avec projet professionnel</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> Via votre conseiller Pôle Emploi</p>
+                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Démarches :</strong> Via votre conseiller France Travail</p>
                         <p className="text-[#013F63] text-xs md:text-sm"><strong>Délai :</strong> 15-30 jours après validation</p>
                       </div>
                       <a href="https://www.francetravail.fr/candidat/en-formation/mes-aides-financieres/laide-individuelle-a-la-formatio.html" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">

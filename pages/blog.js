@@ -29,13 +29,13 @@ export default function Blog() {
       id: 2,
       slug: "financer-bilan-vae-formation-atipik-rh",
       title: "Financer votre formation professionnelle avec Atipik RH",
-      excerpt: "Découvrez tous les dispositifs de financement pour vos projets de formation : CPF, Pôle emploi, OPCO, Transitions Pro. La majorité de nos accompagnements sont finançables à 100% grâce à différents dispositifs.",
+      excerpt: "Découvrez tous les dispositifs de financement pour vos projets de formation : CPF, France Travail, OPCO, Transitions Pro. La majorité de nos accompagnements sont finançables à 100% grâce à différents dispositifs.",
       image: "/images/hero/formations.jpg",
       date: "20 janvier 2025",
       readTime: "8 min",
       author: "Vanessa NOAH EWODO",
       category: "Financement",
-            keywords: "financement formation, CPF, bilan compétences, VAE, Pôle emploi, OPCO, Transitions Pro, AGEFIPH"
+            keywords: "financement formation, CPF, bilan compétences, VAE, France Travail, OPCO, Transitions Pro, AGEFIPH"
     },
     {
       id: 8,
