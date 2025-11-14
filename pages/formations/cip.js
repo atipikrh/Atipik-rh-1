@@ -463,16 +463,16 @@ export default function FormationCIP() {
                       <div>
                         <p className="font-semibold mb-0.5 text-base">Niveau de sortie :</p>
                         <p className="text-blue-100 text-sm">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37274/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37274</a></p>
-              </div>
-            </div>
+                    </div>
+                </div>
 
                     <div className="flex items-start gap-2">
                       <Clock className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-base">Horaire :</p>
                         <p className="text-blue-100 text-sm">Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00</p>
-                      </div>
-                    </div>
+              </div>
+            </div>
 
                     <div className="flex items-start gap-2">
                       <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
@@ -527,7 +527,7 @@ export default function FormationCIP() {
                       </div>
                     )}
                   </div>
-
+                  
                   {/* Public visé */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
@@ -583,11 +583,11 @@ export default function FormationCIP() {
                           <div className="space-y-10 relative">
                             
                             {/* Étape 1 */}
-                            <div className="flex items-center gap-5">
+                            <div className="flex items-start gap-5">
                               <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">1</span>
                               </div>
-                              <div className="flex-grow">
+                              <div className="flex-grow pt-0.5">
                                 <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
                                   Dossier de candidature
                                 </h4>
