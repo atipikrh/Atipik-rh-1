@@ -178,19 +178,19 @@ export default function FormationCIP() {
   useEffect(() => {
     const updateTimelineHeight = () => {
       if (timelineRef.current && circle3Ref.current) {
-        // Trouver le conteneur des étapes (parent avec space-y-10)
-        const stepsContainer = circle3Ref.current.closest('.space-y-10')
-        if (stepsContainer) {
-          const circle3OffsetTop = circle3Ref.current.offsetTop
-          const circle3Height = circle3Ref.current.offsetHeight
-          const circle3Center = circle3OffsetTop + (circle3Height / 2)
-          
-          // Le top de la ligne est à 24px (top-6), donc on soustrait cette valeur
-          const lineHeight = circle3Center - 24
-          
-          if (lineHeight > 0) {
-            setTimelineHeight(`${lineHeight}px`)
-          }
+        // Calculer la position du cercle 3 par rapport au conteneur timeline
+        const timelineRect = timelineRef.current.getBoundingClientRect()
+        const circle3Rect = circle3Ref.current.getBoundingClientRect()
+        
+        // Position du centre du cercle 3 par rapport au top du conteneur timeline
+        const circle3CenterY = circle3Rect.top + (circle3Rect.height / 2) - timelineRect.top
+        
+        // Le top de la ligne est à 24px (top-6), donc on soustrait cette valeur
+        // On soustrait aussi 1px pour être sûr que ça ne dépasse pas
+        const lineHeight = circle3CenterY - 24 - 1
+        
+        if (lineHeight > 0) {
+          setTimelineHeight(`${lineHeight}px`)
         }
       }
     }
