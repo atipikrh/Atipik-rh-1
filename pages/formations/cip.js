@@ -568,36 +568,36 @@ export default function FormationCIP() {
                       )}
                     </button>
                     {openModules['modalites'] && (
-                      <div className="p-8 border-t border-gray-100">
+                      <div className="p-6 border-t border-gray-100">
                         <h3 className="text-xl font-bold text-[#013F63] mb-8 text-center font-brittany">
                           Les étapes du processus de sélection :
                         </h3>
                         
                         {/* Timeline verticale */}
-                        <div className="relative pl-12">
+                        <div className="relative pl-10">
                           {/* Ligne orange verticale */}
-                          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-orange-500"></div>
+                          <div className="absolute left-5 top-8 bottom-8 w-1 bg-orange-500"></div>
                           
                           {/* Étapes */}
-                          <div className="space-y-12 relative">
+                          <div className="space-y-10 relative">
                             
                             {/* Étape 1 */}
-                            <div className="flex items-start gap-6">
-                              <div className="relative z-10 w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
-                                <span className="text-white text-xl font-bold">1</span>
+                            <div className="flex items-start gap-5">
+                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span className="text-white text-lg font-bold">1</span>
                               </div>
-                              <div className="flex-grow pt-1">
-                                <h4 className="text-[#013F63] font-bold text-base mb-4 uppercase tracking-wide">
+                              <div className="flex-grow">
+                                <h4 className="text-[#013F63] font-bold text-sm mb-3 uppercase">
                                   Dossier de candidature
                                 </h4>
-                                <ul className="text-[#013F63] text-sm space-y-2 mb-5 leading-relaxed">
+                                <ul className="text-[#013F63] text-sm space-y-1.5 mb-4">
                                   <li>• Formulaire de candidature</li>
                                   <li>• Curriculum Vitae</li>
                                   <li>• Lettre de motivation</li>
                                   <li>• 2 enquêtes métier</li>
                                   <li>• ET/OU 1 journée d'immersion professionnelle</li>
                                 </ul>
-                                <p className="text-orange-500 text-sm mb-4 leading-relaxed">
+                                <p className="text-orange-500 text-sm mb-4">
                                   La sélection des candidats s'effectue après l'étude du dossier d'inscription et l'émission d'un premier avis favorable.
                                 </p>
                                 <a
@@ -612,24 +612,24 @@ export default function FormationCIP() {
                             </div>
 
                             {/* Étape 2 */}
-                            <div className="flex items-start gap-6">
-                              <div className="relative z-10 w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
-                                <span className="text-white text-xl font-bold">2</span>
+                            <div className="flex items-start gap-5">
+                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span className="text-white text-lg font-bold">2</span>
                               </div>
-                              <div className="flex-grow pt-1">
-                                <h4 className="text-[#013F63] font-bold text-base mb-0 uppercase tracking-wide">
+                              <div className="flex-grow">
+                                <h4 className="text-[#013F63] font-bold text-sm mb-0 uppercase">
                                   Un entretien de motivation
                                 </h4>
                               </div>
                             </div>
 
                             {/* Étape 3 */}
-                            <div className="flex items-start gap-6">
-                              <div className="relative z-10 w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
-                                <span className="text-white text-xl font-bold">3</span>
+                            <div className="flex items-start gap-5">
+                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span className="text-white text-lg font-bold">3</span>
                               </div>
-                              <div className="flex-grow pt-1">
-                                <h4 className="text-[#013F63] font-bold text-base mb-0 uppercase tracking-wide">
+                              <div className="flex-grow">
+                                <h4 className="text-[#013F63] font-bold text-sm mb-0 uppercase">
                                   Un test d'évaluation des connaissances rédactionnelles
                                 </h4>
                               </div>
@@ -638,11 +638,11 @@ export default function FormationCIP() {
                           </div>
                         </div>
                         
-                        <p className="mt-10 text-[#013F63] text-sm leading-relaxed text-center">
+                        <p className="mt-8 text-[#013F63] text-sm text-center">
                           Le processus de sélection sera identique pour tous les candidats, quel que soit le mode de financement choisi.
                         </p>
                         
-                        <div className="mt-8 text-center">
+                        <div className="mt-6 text-center">
                           <p className="text-orange-500 font-medium text-sm mb-3">
                             Il est fortement recommandé de participer à une réunion d'information collective.
                           </p>
