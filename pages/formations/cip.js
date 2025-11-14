@@ -546,7 +546,7 @@ export default function FormationCIP() {
                     {openModules['public'] && (
                       <div className="p-3 border-t border-gray-100">
                         <p className="text-[#013F63] text-sm leading-relaxed">
-                          Niveau terminal et/ou expérience professionnelle
+                          Cette formation s'adresse aux personnes qui disposent d'un goût prononcé pour l'accompagnement, l'échange et un sens de l'écoute développé.
                         </p>
                       </div>
                     )}
