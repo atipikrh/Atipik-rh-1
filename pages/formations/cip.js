@@ -848,9 +848,16 @@ export default function FormationCIP() {
                               {/* Note spéciale pour le CCP 3 */}
                               {module.id === 3 && (
                                 <div className="mt-4 p-3 bg-orange-50 border-l-4 border-orange-400 rounded-r-lg">
-                                  <p className="text-sm text-orange-700 font-medium">
+                                  <p className="text-sm text-orange-700 font-medium mb-3">
                                     <strong>Formation disponible séparément</strong>
                                   </p>
+                                  <Link 
+                                    href="/formations/ccp3"
+                                    className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors text-sm"
+                                  >
+                                    En savoir plus
+                                    <ArrowRight className="w-4 h-4" />
+                                  </Link>
                                 </div>
                               )}
                             </div>
