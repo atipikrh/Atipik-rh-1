@@ -518,7 +518,7 @@ export default function VAE() {
                       <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
                     <div>
                         <p className="font-semibold mb-0.5 text-sm">Durée :</p>
-                        <p className="text-blue-100 text-xs">24h à 30h</p>
+                        <p className="text-blue-100 text-xs">24h à 30h hors dossier de faisabilité</p>
                     </div>
                     </div>
                     
