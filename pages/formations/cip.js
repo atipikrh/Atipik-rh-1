@@ -411,14 +411,10 @@ export default function FormationCIP() {
                   </h2>
                 </div>
 
-              <div className={`flex flex-col lg:flex-row gap-8 justify-center ${
-                Object.values(openModules).some(isOpen => isOpen) 
-                  ? 'items-stretch' 
-                  : 'items-stretch'
-              }`}>
+              <div className="flex flex-col lg:flex-row gap-8 justify-center items-stretch">
                 
                 {/* Carte bleue à gauche */}
-                <div className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white h-full flex flex-col" style={{backgroundColor: '#013F63'}}>
+                <div className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white flex flex-col self-stretch" style={{backgroundColor: '#013F63'}}>
                   <div className="space-y-3 flex-grow">
                     
                     <div className="flex items-start gap-2">
