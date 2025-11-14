@@ -250,11 +250,12 @@ export default function BilanCompetences() {
                     {openModules['conditions'] && (
                       <div className="p-3 border-t border-gray-100">
                         <div className="space-y-2 text-[#013F63] text-sm">
-                          <p><strong>Réglementaires :</strong> Le bilan de compétences est une démarche volontaire et individuelle</p>
+                          <p>Le bilan de compétences est une démarche volontaire et individuelle</p>
+                          <p><strong>Durée d'accès :</strong> Le délai d'accès peut aller jusqu'à 11 jours calendaires.</p>
                           <p><strong>Prérequis pédagogiques :</strong> Aucun</p>
                           <p><strong>Type de parcours :</strong> Individualisé</p>
                           <p><strong>Parcours personnalisable :</strong> Oui</p>
-                          <p className="mt-2 text-orange-500 font-medium">L'ensemble des séances est réalisé de manière confidentielle et individuelle.</p>
+                          <p className="mt-2">L'ensemble des séances est réalisé de manière confidentielle et individuelle.</p>
                         </div>
                       </div>
                     )}
