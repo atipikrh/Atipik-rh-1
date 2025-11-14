@@ -552,63 +552,101 @@ export default function FormationCIP() {
                     )}
                   </div>
 
-                  {/* Modalités d'admission - Timeline visuelle */}
-                  <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6">
-                    <h3 className="text-xl font-bold text-[#013F63] mb-6 text-center font-brittany">
-                      Les étapes du processus de sélection :
-                    </h3>
-                    
-                    {/* Timeline horizontale */}
-                    <div className="relative">
-                      {/* Ligne orange horizontale */}
-                      <div className="absolute top-8 left-0 right-0 h-1 bg-orange-500 hidden md:block"></div>
-                      
-                      {/* Étapes */}
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 relative">
+                  {/* Modalités d'admission */}
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                    <button
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      onClick={() => toggleModule('modalites')}
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">MODALITÉS D'ADMISSION</h3>
+                              </div>
+                      {openModules['modalites'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openModules['modalites'] && (
+                      <div className="p-6 border-t border-gray-100">
+                        <h3 className="text-xl font-bold text-[#013F63] mb-6 text-center font-brittany">
+                          Les étapes du processus de sélection :
+                        </h3>
                         
-                        {/* Étape 1 */}
-                        <div className="flex flex-col items-center text-center">
-                          <div className="relative z-10 w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-4 shadow-lg">
-                            <span className="text-white text-2xl font-bold">1</span>
-                          </div>
-                          <h4 className="text-orange-500 font-bold text-sm mb-3 uppercase">
-                            Dossier de candidature
-                          </h4>
-                          <ul className="text-[#013F63] text-xs space-y-1.5 text-left">
-                            <li>• Formulaire de candidature</li>
-                            <li>• Curriculum Vitae</li>
-                            <li>• Lettre de motivation</li>
-                            <li>• 2 enquêtes métier</li>
-                            <li>• ET/OU 1 journée d'immersion professionnelle</li>
-                          </ul>
-                        </div>
+                        {/* Timeline verticale */}
+                        <div className="relative pl-8">
+                          {/* Ligne orange verticale */}
+                          <div className="absolute left-4 top-0 bottom-0 w-1 bg-orange-500"></div>
+                          
+                          {/* Étapes */}
+                          <div className="space-y-8 relative">
+                            
+                            {/* Étape 1 */}
+                            <div className="flex items-start gap-4">
+                              <div className="relative z-10 w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                                <span className="text-white text-2xl font-bold">1</span>
+                              </div>
+                              <div className="flex-grow">
+                                <h4 className="text-orange-500 font-bold text-sm mb-3 uppercase">
+                                  Dossier de candidature
+                                </h4>
+                                <ul className="text-[#013F63] text-sm space-y-1.5 mb-4">
+                                  <li>• Formulaire de candidature</li>
+                                  <li>• Curriculum Vitae</li>
+                                  <li>• Lettre de motivation</li>
+                                  <li>• 2 enquêtes métier</li>
+                                  <li>• ET/OU 1 journée d'immersion professionnelle</li>
+                                </ul>
+                                <a
+                                  href="/documents/dossier-candidature/dossier-candidature-CIP.pdf"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors text-sm"
+                                >
+                                  Télécharger le dossier de candidature
+                                </a>
+                              </div>
+                            </div>
 
-                        {/* Étape 2 */}
-                        <div className="flex flex-col items-center text-center">
-                          <div className="relative z-10 w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-4 shadow-lg">
-                            <span className="text-white text-2xl font-bold">2</span>
-                          </div>
-                          <h4 className="text-orange-500 font-bold text-sm mb-3 uppercase">
-                            Un entretien de motivation
-                          </h4>
-                        </div>
+                            {/* Étape 2 */}
+                            <div className="flex items-start gap-4">
+                              <div className="relative z-10 w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                                <span className="text-white text-2xl font-bold">2</span>
+                              </div>
+                              <div className="flex-grow">
+                                <h4 className="text-orange-500 font-bold text-sm mb-3 uppercase">
+                                  Un entretien de motivation
+                                </h4>
+                              </div>
+                            </div>
 
-                        {/* Étape 3 */}
-                        <div className="flex flex-col items-center text-center">
-                          <div className="relative z-10 w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-4 shadow-lg">
-                            <span className="text-white text-2xl font-bold">3</span>
-                          </div>
-                          <h4 className="text-orange-500 font-bold text-sm mb-3 uppercase">
-                            Un test d'évaluation des connaissances rédactionnelles
-                          </h4>
-                        </div>
+                            {/* Étape 3 */}
+                            <div className="flex items-start gap-4">
+                              <div className="relative z-10 w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                                <span className="text-white text-2xl font-bold">3</span>
+                              </div>
+                              <div className="flex-grow">
+                                <h4 className="text-orange-500 font-bold text-sm mb-3 uppercase">
+                                  Un test d'évaluation des connaissances rédactionnelles
+                                </h4>
+                              </div>
+                            </div>
 
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 text-center">
+                          <p className="text-orange-500 font-medium text-sm mb-4">
+                            Il est fortement recommandé de participer à une réunion d'information collective.
+                          </p>
+                          <Link href="/s-inscrire">
+                            <button className="inline-flex items-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors">
+                              S'inscrire à une réunion d'information
+                            </button>
+                          </Link>
+                        </div>
                       </div>
-                    </div>
-                    
-                    <p className="mt-6 text-center text-orange-500 font-medium text-sm">
-                      Il est fortement recommandé de participer à une réunion d'information collective.
-                    </p>
+                    )}
                   </div>
 
                   {/* Méthodes pédagogiques */}
