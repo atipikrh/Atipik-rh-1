@@ -475,7 +475,7 @@ export default function FormationFPA() {
                       <Users className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Taille du groupe :</p>
-                        <p className="text-blue-100 text-xs">Entre 8 et 12 personnes</p>
+                        <p className="text-blue-100 text-xs">Entre 6 et 12 personnes</p>
                       </div>
                     </div>
 
