@@ -153,7 +153,7 @@ export default function NotreEquipe() {
                     Notre équipe <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">pédagogique</span>
                   </h2>
                   <p className="text-xl text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
-                    Des expertes passionnées qui vous transmettent leur savoir-faire
+                    Des spécialistes passionnées qui vous transmettent leur savoir-faire
                   </p>
                 </div>
 
