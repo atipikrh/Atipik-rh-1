@@ -426,8 +426,8 @@ export default function FormationCIP() {
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Prérequis :</p>
                         <ul className="text-blue-100 text-xs list-disc list-inside space-y-1">
-                          <li>Niveau terminal et/ou expérience professionnelle</li>
-                          <li>Connaissances rédactionnelles</li>
+                          <li>Un projet de formation validé par au minimum deux enquêtes métiers et/ou une immersion</li>
+                          <li>Des connaissances rédactionnelles</li>
                         </ul>
                     </div>
                 </div>
