@@ -178,31 +178,36 @@ export default function FormationCIP() {
   useEffect(() => {
     const updateTimelineHeight = () => {
       if (timelineRef.current && circle3Ref.current) {
-        const timelineTop = timelineRef.current.getBoundingClientRect().top
-        const circle3Top = circle3Ref.current.getBoundingClientRect().top
-        const circle3Height = circle3Ref.current.offsetHeight
-        const circle3Center = circle3Top + (circle3Height / 2) - timelineTop
-        
-        // Le top de la ligne est à 24px (top-6), donc on soustrait cette valeur
-        const lineHeight = circle3Center - 24
-        
-        setTimelineHeight(`${lineHeight}px`)
+        // Trouver le conteneur des étapes (parent avec space-y-10)
+        const stepsContainer = circle3Ref.current.closest('.space-y-10')
+        if (stepsContainer) {
+          const circle3OffsetTop = circle3Ref.current.offsetTop
+          const circle3Height = circle3Ref.current.offsetHeight
+          const circle3Center = circle3OffsetTop + (circle3Height / 2)
+          
+          // Le top de la ligne est à 24px (top-6), donc on soustrait cette valeur
+          const lineHeight = circle3Center - 24
+          
+          if (lineHeight > 0) {
+            setTimelineHeight(`${lineHeight}px`)
+          }
+        }
       }
     }
 
     if (isClient) {
-      setTimeout(updateTimelineHeight, 100)
+      setTimeout(updateTimelineHeight, 200)
     }
     
     const handleResize = () => {
-      setTimeout(updateTimelineHeight, 100)
+      setTimeout(updateTimelineHeight, 200)
     }
     window.addEventListener('resize', handleResize)
 
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  }, [isClient])
+  }, [isClient, openModules])
 
 
   // Fonction pour animer les compteurs
