@@ -97,6 +97,8 @@ export default function VAE() {
   const [isMobile, setIsMobile] = useState(false)
   const [isClient, setIsClient] = useState(false)
   const statsRef = useRef(null)
+  const accordeonsRef = useRef(null)
+  const carteBleueRef = useRef(null)
 
   const toggleEtape = (etapeId) => {
     setOpenEtapes(prev => ({
@@ -117,6 +119,45 @@ export default function VAE() {
     
     return () => window.removeEventListener('resize', checkIsMobile)
   }, [])
+
+  // Synchroniser la hauteur de la carte bleue avec les accordéons fermés
+  useEffect(() => {
+    const updateHeight = () => {
+      if (accordeonsRef.current && carteBleueRef.current) {
+        // Calculer la hauteur uniquement des boutons fermés (sans le contenu déroulé)
+        let totalHeight = 0
+        const accordeons = accordeonsRef.current.querySelectorAll('div.bg-white.rounded-xl')
+        
+        accordeons.forEach((accordeon) => {
+          const button = accordeon.querySelector('button')
+          if (button) {
+            totalHeight += button.offsetHeight
+          }
+        })
+        
+        // Ajouter les espaces entre les accordéons (space-y-4 = 16px)
+        const spaces = (accordeons.length - 1) * 16
+        totalHeight += spaces
+        
+        carteBleueRef.current.style.height = `${totalHeight}px`
+      }
+    }
+
+    // Mettre à jour au montage
+    if (isClient) {
+      setTimeout(updateHeight, 100)
+    }
+    
+    // Observer les changements de taille de la fenêtre
+    const handleResize = () => {
+      setTimeout(updateHeight, 100)
+    }
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [isClient])
 
   // Fonction pour animer les compteurs
   const animateCounter = (start, end, duration, callback) => {
@@ -487,53 +528,53 @@ export default function VAE() {
               <div className="flex flex-col lg:flex-row gap-8 items-start justify-center">
                 
                 {/* Carte bleue à gauche */}
-                <div className="w-full lg:w-96 flex-shrink-0 rounded-xl p-4 text-white" style={{backgroundColor: '#013F63'}}>
-                  <div className="space-y-3">
+                <div ref={carteBleueRef} className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white flex flex-col" style={{backgroundColor: '#013F63'}}>
+                  <div className="space-y-3 flex-grow flex flex-col justify-between">
                     
                     <div className="flex items-start gap-2">
-                      <UserCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <UserCheck className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Niveau d'entrée :</p>
-                        <p className="text-blue-100 text-xs">Aucun diplôme requis</p>
+                        <p className="font-semibold mb-0.5 text-base">Niveau d'entrée :</p>
+                        <p className="text-blue-100 text-sm">Aucun diplôme requis</p>
                     </div>
                 </div>
 
                     <div className="flex items-start gap-2">
-                      <Target className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <Target className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Niveau de sortie :</p>
-                        <p className="text-blue-100 text-xs">Dossier VAE finalisé et préparation jury</p>
+                        <p className="font-semibold mb-0.5 text-base">Niveau de sortie :</p>
+                        <p className="text-blue-100 text-sm">Dossier VAE finalisé et préparation jury</p>
               </div>
             </div>
 
                     <div className="flex items-start gap-2">
-                      <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                     <div>
-                        <p className="font-semibold mb-0.5 text-sm">Lieu :</p>
-                        <p className="text-blue-100 text-xs">8 Rue du Courant, 33310 Lormont</p>
+                        <p className="font-semibold mb-0.5 text-base">Lieu :</p>
+                        <p className="text-blue-100 text-sm">8 Rue du Courant, 33310 Lormont</p>
                       </div>
                   </div>
                   
                     <div className="flex items-start gap-2">
-                      <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <Clock className="w-5 h-5 mt-0.5 flex-shrink-0" />
                     <div>
-                        <p className="font-semibold mb-0.5 text-sm">Durée :</p>
-                        <p className="text-blue-100 text-xs">24h à 30h hors dossier de faisabilité</p>
+                        <p className="font-semibold mb-0.5 text-base">Durée :</p>
+                        <p className="text-blue-100 text-sm">24h à 30h hors dossier de faisabilité</p>
                     </div>
                     </div>
                     
                     <div className="flex items-start gap-2">
-                      <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                     <div>
-                        <p className="font-semibold mb-0.5 text-sm">Modalité :</p>
-                        <p className="text-blue-100 text-xs">Présentiel</p>
+                        <p className="font-semibold mb-0.5 text-base">Modalité :</p>
+                        <p className="text-blue-100 text-sm">Présentiel</p>
                   </div>
                       </div>
                     </div>
                   </div>
                   
                 {/* Accordéons à droite */}
-                <div className="w-full lg:w-96 flex-shrink-0 space-y-4">
+                <div ref={accordeonsRef} className="w-full lg:w-96 flex-shrink-0 space-y-4">
                   
                   {/* OBJECTIF */}
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
