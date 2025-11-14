@@ -574,12 +574,12 @@ export default function FormationCIP() {
                         </h3>
                         
                         {/* Timeline verticale */}
-                        <div className="relative">
+                        <div className="relative pl-6">
                           {/* Ligne orange verticale - centrée sur les cercles */}
-                          <div className="absolute left-6 top-6 bottom-6 w-1 bg-orange-500"></div>
+                          <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-orange-500"></div>
                           
                           {/* Étapes */}
-                          <div className="space-y-10 relative pl-12">
+                          <div className="space-y-10 relative">
                             
                             {/* Étape 1 */}
                             <div className="flex items-start gap-5">
