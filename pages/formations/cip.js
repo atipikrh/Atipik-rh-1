@@ -101,6 +101,8 @@ export default function FormationCIP() {
   }
   const statsRef = useRef(null)
   const franceStatsRef = useRef(null)
+  const accordeonsRef = useRef(null)
+  const carteBleueRef = useRef(null)
 
   const toggleModule = (moduleId) => {
     setOpenModules(prev => ({
@@ -129,6 +131,45 @@ export default function FormationCIP() {
     
     return () => window.removeEventListener('resize', checkIsMobile)
   }, [])
+
+  // Synchroniser la hauteur de la carte bleue avec les accordéons fermés
+  useEffect(() => {
+    const updateHeight = () => {
+      if (accordeonsRef.current && carteBleueRef.current) {
+        // Calculer la hauteur uniquement des boutons fermés (sans le contenu déroulé)
+        let totalHeight = 0
+        const accordeons = accordeonsRef.current.querySelectorAll('div.bg-white.rounded-xl')
+        
+        accordeons.forEach((accordeon) => {
+          const button = accordeon.querySelector('button')
+          if (button) {
+            totalHeight += button.offsetHeight
+          }
+        })
+        
+        // Ajouter les espaces entre les accordéons (space-y-4 = 16px)
+        const spaces = (accordeons.length - 1) * 16
+        totalHeight += spaces
+        
+        carteBleueRef.current.style.height = `${totalHeight}px`
+      }
+    }
+
+    // Mettre à jour au montage
+    if (isClient) {
+      setTimeout(updateHeight, 100)
+    }
+    
+    // Observer les changements de taille de la fenêtre
+    const handleResize = () => {
+      setTimeout(updateHeight, 100)
+    }
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [isClient])
 
 
   // Fonction pour animer les compteurs
@@ -414,7 +455,7 @@ export default function FormationCIP() {
               <div className="flex flex-col lg:flex-row gap-8 justify-center items-start">
                 
                 {/* Carte bleue à gauche */}
-                <div className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white flex flex-col h-[304px]" style={{backgroundColor: '#013F63'}}>
+                <div ref={carteBleueRef} className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white flex flex-col" style={{backgroundColor: '#013F63'}}>
                   <div className="space-y-3 flex-grow flex flex-col justify-between">
                     
                     <div className="flex items-start gap-2">
@@ -460,7 +501,7 @@ export default function FormationCIP() {
                 </div>
 
                 {/* Accordéons à droite */}
-                <div className="w-full lg:w-96 flex-shrink-0 space-y-4">
+                <div ref={accordeonsRef} className="w-full lg:w-96 flex-shrink-0 space-y-4">
                   
                   {/* Prérequis */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
