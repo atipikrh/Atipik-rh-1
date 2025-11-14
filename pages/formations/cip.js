@@ -486,7 +486,7 @@ export default function FormationCIP() {
                       <Users className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-base">Taille du groupe :</p>
-                        <p className="text-blue-100 text-sm">Entre 10 et 15 personnes</p>
+                        <p className="text-blue-100 text-sm">entre 8 et 15 personnes</p>
                       </div>
                     </div>
 
