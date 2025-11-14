@@ -101,6 +101,9 @@ export default function FormationCCP3() {
   }
   const statsRef = useRef(null)
   const franceStatsRef = useRef(null)
+  const timelineRef = useRef(null)
+  const circle3Ref = useRef(null)
+  const [timelineHeight, setTimelineHeight] = useState('calc(100% - 72px)')
 
   const toggleModule = (moduleId) => {
     setOpenModules(prev => ({
@@ -129,6 +132,44 @@ export default function FormationCCP3() {
     
     return () => window.removeEventListener('resize', checkIsMobile)
   }, [])
+
+  // Calculer la hauteur de la ligne de la timeline jusqu'au centre du cercle 3
+  useEffect(() => {
+    const updateTimelineHeight = () => {
+      if (timelineRef.current && circle3Ref.current) {
+        // Calculer la position du cercle 3 par rapport au conteneur timeline
+        const timelineRect = timelineRef.current.getBoundingClientRect()
+        const circle3Rect = circle3Ref.current.getBoundingClientRect()
+        
+        // Position du centre du cercle 3 par rapport au top du conteneur timeline
+        const circle3CenterY = circle3Rect.top + (circle3Rect.height / 2) - timelineRect.top
+        const timelineHeight = timelineRect.height
+        
+        // Distance depuis le bas du conteneur jusqu'au centre du cercle 3
+        const distanceFromBottom = timelineHeight - circle3CenterY
+        
+        // Le top de la ligne est à 24px (top-6)
+        const lineHeight = circle3CenterY - 24
+        
+        if (lineHeight > 0 && distanceFromBottom > 0) {
+          setTimelineHeight(`${lineHeight}px`)
+        }
+      }
+    }
+
+    if (isClient) {
+      setTimeout(updateTimelineHeight, 300)
+    }
+    
+    const handleResize = () => {
+      setTimeout(updateTimelineHeight, 300)
+    }
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [isClient, openModules])
 
 
   // Fonction pour animer les compteurs
@@ -517,14 +558,96 @@ export default function FormationCCP3() {
                       )}
                     </button>
                     {openModules['modalites'] && (
-                      <div className="p-3 border-t border-gray-100">
-                        <div className="space-y-2 text-[#013F63] text-sm">
-                          <p>• Une lettre motivant votre projet professionnel</p>
-                          <p>• Des enquêtes métiers réalisées auprès de professionnels en poste (au minimum 2)<br/>et/ou une journée d'immersion en entreprise</p>
-                          <p>• Envoie du dossier de candidature</p>
-                          <p>• Un entretien de motivation</p>
-                          <p>• Une évaluation des connaissances rédactionnelles</p>
-                          <p className="mt-3 text-orange-500 font-medium">Il est fortement recommandé de participer à une réunion d'information collective.</p>
+                      <div className="p-8 border-t border-gray-100 bg-white">
+                        <h3 className="text-xl font-bold text-[#013F63] mb-10 text-center font-brittany">
+                          Les étapes du processus de sélection :
+                        </h3>
+                        
+                        {/* Timeline verticale */}
+                        <div ref={timelineRef} className="relative pl-6">
+                          {/* Conteneur pour limiter la hauteur de la ligne */}
+                          <div 
+                            className="absolute left-6 top-6 w-0.5 overflow-hidden"
+                            style={{height: timelineHeight, maxHeight: timelineHeight}}
+                          >
+                            {/* Ligne orange verticale avec effet de défilement - s'arrête au centre du cercle 3 */}
+                            <div className="w-full h-full bg-gray-200"></div>
+                            <div className="w-full h-full bg-orange-500 timeline-scroll-line"></div>
+                          </div>
+                          
+                          {/* Étapes */}
+                          <div className="space-y-10 relative">
+                            
+                            {/* Étape 1 */}
+                            <div className="flex items-start gap-5">
+                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                                <span className="text-white text-base font-bold">1</span>
+                              </div>
+                              <div className="flex-grow pt-0.5">
+                                <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
+                                  Dossier de candidature
+                                </h4>
+                                <ul className="text-[#013F63] text-sm space-y-1.5 mb-4 leading-relaxed">
+                                  <li>• Formulaire de candidature</li>
+                                  <li>• Curriculum Vitae</li>
+                                  <li>• Lettre de motivation</li>
+                                  <li>• 2 enquêtes métier</li>
+                                  <li>• ET/OU 1 journée d'immersion professionnelle</li>
+                                </ul>
+                                <a
+                                  href="/documents/dossier-candidature/dossier-candidature-CIP.pdf"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center px-3 py-1.5 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors text-xs mb-4"
+                                >
+                                  Télécharger le dossier de candidature
+                                </a>
+                                <p className="text-orange-500 text-sm leading-relaxed">
+                                  La sélection des candidats s'effectue après l'étude du dossier d'inscription et l'émission d'un premier avis favorable.
+                                </p>
+                              </div>
+                            </div>
+
+                            {/* Étape 2 */}
+                            <div className="flex items-center gap-5">
+                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                                <span className="text-white text-base font-bold">2</span>
+                              </div>
+                              <div className="flex-grow">
+                                <h4 className="text-orange-500 font-bold text-base mb-0 uppercase tracking-tight">
+                                  Un entretien de motivation
+                                </h4>
+                              </div>
+                            </div>
+
+                            {/* Étape 3 */}
+                            <div className="flex items-center gap-5">
+                              <div ref={circle3Ref} className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                                <span className="text-white text-base font-bold">3</span>
+                              </div>
+                              <div className="flex-grow">
+                                <h4 className="text-orange-500 font-bold text-base mb-0 uppercase tracking-tight">
+                                  Un test d'évaluation des connaissances rédactionnelles
+                                </h4>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                        
+                        <p className="mt-10 text-[#013F63] text-xs font-bold leading-relaxed text-center">
+                          Le processus de sélection sera identique pour tous les candidats, quel que soit le mode de financement choisi.
+                        </p>
+                        
+                        <div className="mt-8 text-center">
+                          <p className="text-orange-500 font-bold text-sm mb-3">
+                            Il est fortement recommandé de participer à une réunion d'information collective.
+                          </p>
+                          <Link href="/s-inscrire">
+                            <button className="inline-flex items-center px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors text-xs">
+                              S'inscrire à une réunion d'information
+                            </button>
+                          </Link>
                         </div>
                       </div>
                     )}
