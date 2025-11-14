@@ -425,7 +425,10 @@ export default function FormationCIP() {
                       <UserCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Prérequis :</p>
-                        <p className="text-blue-100 text-xs">Niveau terminal et/ou expérience professionnelle</p>
+                        <ul className="text-blue-100 text-xs list-disc list-inside space-y-1">
+                          <li>Niveau terminal et/ou expérience professionnelle</li>
+                          <li>Connaissances rédactionnelles</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -492,7 +495,7 @@ export default function FormationCIP() {
                     {openModules['public'] && (
                       <div className="p-3 border-t border-gray-100">
                         <p className="text-[#013F63] text-sm leading-relaxed">
-                          Cette formation s'adresse aux personnes qui disposent d'un goût prononcé pour l'accompagnement, l'échange et un sens de l'écoute développé.
+                          Niveau terminal et/ou expérience professionnelle
                         </p>
                       </div>
                     )}
