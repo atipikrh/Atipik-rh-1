@@ -103,6 +103,9 @@ export default function FormationCIP() {
   const franceStatsRef = useRef(null)
   const accordeonsRef = useRef(null)
   const carteBleueRef = useRef(null)
+  const timelineRef = useRef(null)
+  const circle3Ref = useRef(null)
+  const [timelineHeight, setTimelineHeight] = useState('calc(100% - 72px)')
 
   const toggleModule = (moduleId) => {
     setOpenModules(prev => ({
@@ -163,6 +166,36 @@ export default function FormationCIP() {
     // Observer les changements de taille de la fenêtre
     const handleResize = () => {
       setTimeout(updateHeight, 100)
+    }
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [isClient])
+
+  // Calculer la hauteur de la ligne de la timeline jusqu'au centre du cercle 3
+  useEffect(() => {
+    const updateTimelineHeight = () => {
+      if (timelineRef.current && circle3Ref.current) {
+        const timelineTop = timelineRef.current.getBoundingClientRect().top
+        const circle3Top = circle3Ref.current.getBoundingClientRect().top
+        const circle3Height = circle3Ref.current.offsetHeight
+        const circle3Center = circle3Top + (circle3Height / 2) - timelineTop
+        
+        // Le top de la ligne est à 24px (top-6), donc on soustrait cette valeur
+        const lineHeight = circle3Center - 24
+        
+        setTimelineHeight(`${lineHeight}px`)
+      }
+    }
+
+    if (isClient) {
+      setTimeout(updateTimelineHeight, 100)
+    }
+    
+    const handleResize = () => {
+      setTimeout(updateTimelineHeight, 100)
     }
     window.addEventListener('resize', handleResize)
 
@@ -574,10 +607,10 @@ export default function FormationCIP() {
                         </h3>
                         
                         {/* Timeline verticale */}
-                        <div className="relative pl-6">
+                        <div ref={timelineRef} className="relative pl-6">
                           {/* Ligne orange verticale avec effet de défilement - s'arrête au centre du cercle 3 */}
-                          <div className="absolute left-6 top-6 w-0.5 bg-gray-200" style={{height: 'calc(100% - 72px)'}}></div>
-                          <div className="absolute left-6 top-6 w-0.5 bg-orange-500 timeline-scroll-line" style={{height: 'calc(100% - 72px)'}}></div>
+                          <div className="absolute left-6 top-6 w-0.5 bg-gray-200" style={{height: timelineHeight}}></div>
+                          <div className="absolute left-6 top-6 w-0.5 bg-orange-500 timeline-scroll-line" style={{height: timelineHeight}}></div>
                           
                           {/* Étapes */}
                           <div className="space-y-10 relative">
@@ -626,7 +659,7 @@ export default function FormationCIP() {
 
                             {/* Étape 3 */}
                             <div className="flex items-center gap-5">
-                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                              <div ref={circle3Ref} className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">3</span>
                               </div>
                               <div className="flex-grow">
