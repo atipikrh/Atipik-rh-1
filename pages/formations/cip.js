@@ -574,30 +574,30 @@ export default function FormationCIP() {
                         </h3>
                         
                         {/* Timeline verticale */}
-                        <div className="relative pl-10">
-                          {/* Ligne orange verticale */}
-                          <div className="absolute left-5 top-8 bottom-8 w-1 bg-orange-500"></div>
+                        <div className="relative pl-12">
+                          {/* Ligne orange verticale - commence au centre du cercle 1 et se termine au centre du cercle 3 */}
+                          <div className="absolute left-6 top-6 bottom-6 w-1 bg-orange-500"></div>
                           
                           {/* Étapes */}
-                          <div className="space-y-10 relative">
+                          <div className="space-y-8 relative">
                             
                             {/* Étape 1 */}
-                            <div className="flex items-start gap-5">
+                            <div className="flex items-start gap-4">
                               <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                                 <span className="text-white text-lg font-bold">1</span>
                               </div>
-                              <div className="flex-grow">
+                              <div className="flex-grow pt-0.5">
                                 <h4 className="text-[#013F63] font-bold text-sm mb-3 uppercase">
                                   Dossier de candidature
                                 </h4>
-                                <ul className="text-[#013F63] text-sm space-y-1.5 mb-4">
+                                <ul className="text-[#013F63] text-sm space-y-1 mb-3 leading-relaxed">
                                   <li>• Formulaire de candidature</li>
                                   <li>• Curriculum Vitae</li>
                                   <li>• Lettre de motivation</li>
                                   <li>• 2 enquêtes métier</li>
                                   <li>• ET/OU 1 journée d'immersion professionnelle</li>
                                 </ul>
-                                <p className="text-orange-500 text-sm mb-4">
+                                <p className="text-orange-500 text-sm mb-3 leading-relaxed">
                                   La sélection des candidats s'effectue après l'étude du dossier d'inscription et l'émission d'un premier avis favorable.
                                 </p>
                                 <a
@@ -612,11 +612,11 @@ export default function FormationCIP() {
                             </div>
 
                             {/* Étape 2 */}
-                            <div className="flex items-start gap-5">
+                            <div className="flex items-start gap-4">
                               <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                                 <span className="text-white text-lg font-bold">2</span>
                               </div>
-                              <div className="flex-grow">
+                              <div className="flex-grow pt-0.5">
                                 <h4 className="text-[#013F63] font-bold text-sm mb-0 uppercase">
                                   Un entretien de motivation
                                 </h4>
@@ -624,11 +624,11 @@ export default function FormationCIP() {
                             </div>
 
                             {/* Étape 3 */}
-                            <div className="flex items-start gap-5">
+                            <div className="flex items-start gap-4">
                               <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                                 <span className="text-white text-lg font-bold">3</span>
                               </div>
-                              <div className="flex-grow">
+                              <div className="flex-grow pt-0.5">
                                 <h4 className="text-[#013F63] font-bold text-sm mb-0 uppercase">
                                   Un test d'évaluation des connaissances rédactionnelles
                                 </h4>
@@ -638,7 +638,7 @@ export default function FormationCIP() {
                           </div>
                         </div>
                         
-                        <p className="mt-8 text-[#013F63] text-sm text-center">
+                        <p className="mt-8 text-[#013F63] text-sm leading-relaxed text-center">
                           Le processus de sélection sera identique pour tous les candidats, quel que soit le mode de financement choisi.
                         </p>
                         
