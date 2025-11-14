@@ -418,46 +418,46 @@ export default function FormationCIP() {
               }`}>
                 
                 {/* Carte bleue à gauche */}
-                <div className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white min-h-[320px] flex flex-col justify-center" style={{backgroundColor: '#013F63'}}>
-                  <div className="space-y-2">
+                <div className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white" style={{backgroundColor: '#013F63'}}>
+                  <div className="space-y-3">
                     
                     <div className="flex items-start gap-2">
-                      <Target className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <Target className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Niveau de sortie :</p>
-                        <p className="text-blue-100 text-xs">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37274/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37274</a></p>
+                        <p className="font-semibold mb-0.5 text-base">Niveau de sortie :</p>
+                        <p className="text-blue-100 text-sm">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37274/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37274</a></p>
               </div>
             </div>
 
                     <div className="flex items-start gap-2">
-                      <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <Clock className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Horaire :</p>
-                        <p className="text-blue-100 text-xs">Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00</p>
+                        <p className="font-semibold mb-0.5 text-base">Horaire :</p>
+                        <p className="text-blue-100 text-sm">Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2">
-                      <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Lieu :</p>
-                        <p className="text-blue-100 text-xs">8 rue du Courant, 33310 Lormont</p>
+                        <p className="font-semibold mb-0.5 text-base">Lieu :</p>
+                        <p className="text-blue-100 text-sm">8 rue du Courant, 33310 Lormont</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2">
-                      <Users className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <Users className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Taille du groupe :</p>
-                        <p className="text-blue-100 text-xs">Entre 10 et 15 personnes</p>
+                        <p className="font-semibold mb-0.5 text-base">Taille du groupe :</p>
+                        <p className="text-blue-100 text-sm">Entre 10 et 15 personnes</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2">
-                      <BookOpen className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <BookOpen className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Modalité :</p>
-                        <p className="text-blue-100 text-xs">En présentiel</p>
+                        <p className="font-semibold mb-0.5 text-base">Modalité :</p>
+                        <p className="text-blue-100 text-sm">En présentiel</p>
                       </div>
                     </div>
                   </div>
