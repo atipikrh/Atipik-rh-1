@@ -574,15 +574,16 @@ export default function FormationCIP() {
                         </h3>
                         
                         {/* Timeline verticale */}
-                        <div className="relative pl-6">
-                          {/* Ligne orange verticale - centrée sur les cercles */}
-                          <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-orange-500"></div>
+                        <div className="relative pl-6 overflow-hidden">
+                          {/* Ligne orange verticale avec effet de défilement */}
+                          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+                          <div className="absolute left-6 top-0 w-0.5 bg-orange-500 timeline-scroll-line"></div>
                           
                           {/* Étapes */}
                           <div className="space-y-10 relative">
                             
                             {/* Étape 1 */}
-                            <div className="flex items-start gap-5">
+                            <div className="flex items-center gap-5">
                               <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">1</span>
                               </div>
@@ -612,7 +613,7 @@ export default function FormationCIP() {
                             </div>
 
                             {/* Étape 2 */}
-                            <div className="flex items-start gap-5">
+                            <div className="flex items-center gap-5">
                               <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">2</span>
                               </div>
@@ -624,7 +625,7 @@ export default function FormationCIP() {
                             </div>
 
                             {/* Étape 3 */}
-                            <div className="flex items-start gap-5">
+                            <div className="flex items-center gap-5">
                               <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">3</span>
                               </div>
