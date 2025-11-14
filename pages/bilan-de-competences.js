@@ -596,8 +596,9 @@ export default function BilanCompetences() {
             {/* Information sur l'entretien gratuit - Bouton fixe */}
             <div className="fixed bottom-6 left-6 z-50">
               <Link href="/contact">
-                <button className="bg-orange-500 hover:bg-[#013F63] text-white font-medium px-3 py-2 rounded-full transition-all duration-300 text-xs shadow-xl hover:shadow-2xl max-w-[200px]">
-                  Premier entretien gratuit & sans engagement
+                <button className="bg-orange-500 hover:bg-[#013F63] text-white font-medium px-4 py-3 rounded-full transition-all duration-300 text-xs shadow-xl hover:shadow-2xl leading-tight text-center">
+                  <div>Premier entretien</div>
+                  <div>gratuit & sans engagement</div>
                 </button>
               </Link>
             </div>
