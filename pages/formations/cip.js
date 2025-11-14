@@ -418,8 +418,8 @@ export default function FormationCIP() {
               }`}>
                 
                 {/* Carte bleue à gauche */}
-                <div className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white h-full" style={{backgroundColor: '#013F63'}}>
-                  <div className="space-y-3">
+                <div className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white h-full flex flex-col" style={{backgroundColor: '#013F63'}}>
+                  <div className="space-y-3 flex-grow">
                     
                     <div className="flex items-start gap-2">
                       <Target className="w-5 h-5 mt-0.5 flex-shrink-0" />
