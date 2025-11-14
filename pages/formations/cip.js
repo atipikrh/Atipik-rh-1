@@ -422,17 +422,6 @@ export default function FormationCIP() {
                   <div className="space-y-2">
                     
                     <div className="flex items-start gap-2">
-                      <UserCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-semibold mb-0.5 text-sm">Prérequis :</p>
-                        <ul className="text-blue-100 text-xs list-disc list-inside space-y-1">
-                          <li>Un projet de formation validé par au minimum deux enquêtes métiers et/ou une immersion</li>
-                          <li>Des connaissances rédactionnelles</li>
-                        </ul>
-                    </div>
-                </div>
-
-                    <div className="flex items-start gap-2">
                       <Target className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Niveau de sortie :</p>
@@ -477,6 +466,31 @@ export default function FormationCIP() {
                 {/* Accordéons à droite */}
                 <div className="w-full lg:w-96 flex-shrink-0 space-y-4">
                   
+                  {/* Prérequis */}
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                    <button
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      onClick={() => toggleModule('prerequis')}
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">PRÉREQUIS</h3>
+                      </div>
+                      {openModules['prerequis'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openModules['prerequis'] && (
+                      <div className="p-3 border-t border-gray-100">
+                        <ul className="text-[#013F63] text-sm leading-relaxed space-y-2 list-disc list-inside">
+                          <li>Un projet de formation validé par au minimum deux enquêtes métiers et/ou une immersion</li>
+                          <li>Des connaissances rédactionnelles</li>
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+
                   {/* Public visé */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
