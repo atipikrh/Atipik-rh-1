@@ -464,16 +464,16 @@ export default function FormationCIP() {
                 </div>
 
                 {/* Accordéons à droite */}
-                <div className="w-full lg:w-96 flex-shrink-0 space-y-3">
+                <div className="w-full lg:w-96 flex-shrink-0 space-y-4">
                   
                   {/* Prérequis */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
-                      className="w-full py-2.5 px-3.5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
                       onClick={() => toggleModule('prerequis')}
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-sm font-bold text-[#013F63]">PRÉREQUIS</h3>
+                        <h3 className="text-base font-bold text-[#013F63]">PRÉREQUIS</h3>
                       </div>
                       {openModules['prerequis'] ? (
                         <ChevronUp className="w-5 h-5 text-gray-600" />
@@ -482,7 +482,7 @@ export default function FormationCIP() {
                       )}
                     </button>
                     {openModules['prerequis'] && (
-                      <div className="p-2.5 border-t border-gray-100">
+                      <div className="p-3 border-t border-gray-100">
                         <ul className="text-[#013F63] text-sm leading-relaxed space-y-2 list-disc list-inside">
                           <li>Un projet de formation validé par au minimum deux enquêtes métiers et/ou une immersion</li>
                           <li>Des connaissances rédactionnelles</li>
@@ -494,11 +494,11 @@ export default function FormationCIP() {
                   {/* Public visé */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
-                      className="w-full py-2.5 px-3.5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
                       onClick={() => toggleModule('public')}
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-sm font-bold text-[#013F63]">PUBLIC VISÉ</h3>
+                        <h3 className="text-base font-bold text-[#013F63]">PUBLIC VISÉ</h3>
                           </div>
                       {openModules['public'] ? (
                         <ChevronUp className="w-5 h-5 text-gray-600" />
@@ -507,7 +507,7 @@ export default function FormationCIP() {
                       )}
                     </button>
                     {openModules['public'] && (
-                      <div className="p-2.5 border-t border-gray-100">
+                      <div className="p-3 border-t border-gray-100">
                         <p className="text-[#013F63] text-sm leading-relaxed">
                           Niveau terminal et/ou expérience professionnelle
                         </p>
@@ -518,11 +518,11 @@ export default function FormationCIP() {
                   {/* Modalités d'admission */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
-                      className="w-full py-2.5 px-3.5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
                       onClick={() => toggleModule('modalites')}
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-sm font-bold text-[#013F63]">MODALITÉS D'ADMISSION</h3>
+                        <h3 className="text-base font-bold text-[#013F63]">MODALITÉS D'ADMISSION</h3>
                               </div>
                       {openModules['modalites'] ? (
                         <ChevronUp className="w-5 h-5 text-gray-600" />
@@ -531,7 +531,7 @@ export default function FormationCIP() {
                       )}
                     </button>
                     {openModules['modalites'] && (
-                      <div className="p-2.5 border-t border-gray-100">
+                      <div className="p-3 border-t border-gray-100">
                         <div className="space-y-2 text-[#013F63] text-sm">
                           <p>• Une lettre motivant votre projet professionnel</p>
                           <p>• Des enquêtes métiers réalisées auprès de professionnels en poste (au minimum 2)<br/>et/ou une journée d'immersion en entreprise</p>
@@ -547,11 +547,11 @@ export default function FormationCIP() {
                   {/* Méthodes pédagogiques */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
-                      className="w-full py-2.5 px-3.5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
                       onClick={() => toggleModule('methodes')}
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-sm font-bold text-[#013F63]">MÉTHODES PÉDAGOGIQUES</h3>
+                        <h3 className="text-base font-bold text-[#013F63]">MÉTHODES PÉDAGOGIQUES</h3>
                       </div>
                       {openModules['methodes'] ? (
                         <ChevronUp className="w-5 h-5 text-gray-600" />
@@ -560,7 +560,7 @@ export default function FormationCIP() {
                       )}
                     </button>
                     {openModules['methodes'] && (
-                      <div className="p-2.5 border-t border-gray-100">
+                      <div className="p-3 border-t border-gray-100">
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p className="font-semibold text-[#013F63]">UNE FORMATION ACTION BASÉE SUR UNE PÉDAGOGIE INNOVANTE</p>
                           <p>• Formation action basée sur des temps d'acquisition de connaissances, de cas pratique, et d'échanges d'expériences</p>
@@ -574,11 +574,11 @@ export default function FormationCIP() {
                   {/* Déroulement de la formation */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
-                      className="w-full py-2.5 px-3.5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
                       onClick={() => toggleModule('deroulement')}
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-sm font-bold text-[#013F63]">DÉROULEMENT DE LA FORMATION</h3>
+                        <h3 className="text-base font-bold text-[#013F63]">DÉROULEMENT DE LA FORMATION</h3>
                       </div>
                       {openModules['deroulement'] ? (
                         <ChevronUp className="w-5 h-5 text-gray-600" />
@@ -587,7 +587,7 @@ export default function FormationCIP() {
                       )}
                     </button>
                     {openModules['deroulement'] && (
-                      <div className="p-2.5 border-t border-gray-100">
+                      <div className="p-3 border-t border-gray-100">
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p>• <strong>Durée : 1102 heures</strong></p>
                           <div className="ml-4 space-y-1">
@@ -603,11 +603,11 @@ export default function FormationCIP() {
                   {/* Modalité d'évaluation */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
-                      className="w-full py-2.5 px-3.5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
                       onClick={() => toggleModule('evaluation')}
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-sm font-bold text-[#013F63]">MODALITÉ D'ÉVALUATION</h3>
+                        <h3 className="text-base font-bold text-[#013F63]">MODALITÉ D'ÉVALUATION</h3>
                       </div>
                       {openModules['evaluation'] ? (
                         <ChevronUp className="w-5 h-5 text-gray-600" />
@@ -616,7 +616,7 @@ export default function FormationCIP() {
                       )}
                     </button>
                     {openModules['evaluation'] && (
-                      <div className="p-2.5 border-t border-gray-100">
+                      <div className="p-3 border-t border-gray-100">
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p>• Des évaluations formatives sont réalisées tout au long de la formation</p>
                           <p>• L'examen de certification du Titre professionnel de Conseiller en Insertion Professionnelle (CIP) est composé d'une mise en situation, d'une présentation orale, de deux dossiers (professionnel et annexe) et d'entretiens avec le jury</p>
