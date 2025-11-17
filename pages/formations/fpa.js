@@ -45,6 +45,8 @@ export default function FormationFPA() {
   const [isClient, setIsClient] = useState(false)
   const statsRef = useRef(null)
   const franceStatsRef = useRef(null)
+  const accordeonsRef = useRef(null)
+  const carteBleueRef = useRef(null)
   const timelineRef = useRef(null)
   const circle3Ref = useRef(null)
   const [timelineHeight, setTimelineHeight] = useState('calc(100% - 72px)')
@@ -157,6 +159,45 @@ export default function FormationFPA() {
     
     return () => window.removeEventListener('resize', checkIsMobile)
   }, [])
+
+  // Synchroniser la hauteur de la carte bleue avec les accordéons fermés
+  useEffect(() => {
+    const updateHeight = () => {
+      if (accordeonsRef.current && carteBleueRef.current) {
+        // Calculer la hauteur uniquement des boutons fermés (sans le contenu déroulé)
+        let totalHeight = 0
+        const accordeons = accordeonsRef.current.querySelectorAll('div.bg-white.rounded-xl')
+        
+        accordeons.forEach((accordeon) => {
+          const button = accordeon.querySelector('button')
+          if (button) {
+            totalHeight += button.offsetHeight
+          }
+        })
+        
+        // Ajouter les espaces entre les accordéons (space-y-4 = 16px)
+        const spaces = (accordeons.length - 1) * 16
+        totalHeight += spaces
+        
+        carteBleueRef.current.style.height = `${totalHeight}px`
+      }
+    }
+
+    // Mettre à jour au montage
+    if (isClient) {
+      setTimeout(updateHeight, 100)
+    }
+    
+    // Observer les changements de taille de la fenêtre
+    const handleResize = () => {
+      setTimeout(updateHeight, 100)
+    }
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [isClient])
 
   // Calculer la hauteur de la ligne de la timeline jusqu'au centre du cercle 3
   useEffect(() => {
@@ -436,61 +477,77 @@ export default function FormationFPA() {
               }`}>
                 
                 {/* Carte bleue à gauche */}
-                <div className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white min-h-[320px] flex flex-col justify-center" style={{backgroundColor: '#013F63'}}>
-                  <div className="space-y-2">
+                <div ref={carteBleueRef} className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white flex flex-col" style={{backgroundColor: '#013F63'}}>
+                  <div className="space-y-3 flex-grow flex flex-col justify-between">
                     
                     <div className="flex items-start gap-2">
-                      <UserCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <Target className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Prérequis :</p>
-                        <p className="text-blue-100 text-xs">Niveau terminal et/ou expérience professionnelle</p>
+                        <p className="font-semibold mb-0.5 text-base">Niveau de sortie :</p>
+                        <p className="text-blue-100 text-sm">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37275/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37275</a></p>
                     </div>
                 </div>
 
                     <div className="flex items-start gap-2">
-                      <Target className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <Clock className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Niveau de sortie :</p>
-                        <p className="text-blue-100 text-xs">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37275/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37275</a></p>
-              </div>
-            </div>
-
-                    <div className="flex items-start gap-2">
-                      <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-semibold mb-0.5 text-sm">Horaire :</p>
-                        <p className="text-blue-100 text-xs">Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00</p>
+                        <p className="font-semibold mb-0.5 text-base">Horaire :</p>
+                        <p className="text-blue-100 text-sm">Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2">
-                      <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Lieu :</p>
-                        <p className="text-blue-100 text-xs">8 rue du Courant, 33310 Lormont</p>
+                        <p className="font-semibold mb-0.5 text-base">Lieu :</p>
+                        <p className="text-blue-100 text-sm">8 rue du Courant, 33310 Lormont</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2">
-                      <Users className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <Users className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Taille du groupe :</p>
-                        <p className="text-blue-100 text-xs">Entre 6 et 12 personnes</p>
+                        <p className="font-semibold mb-0.5 text-base">Taille du groupe :</p>
+                        <p className="text-blue-100 text-sm">Entre 6 et 12 personnes</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2">
-                      <BookOpen className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <BookOpen className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-sm">Modalité :</p>
-                        <p className="text-blue-100 text-xs">En présentiel</p>
+                        <p className="font-semibold mb-0.5 text-base">Modalité :</p>
+                        <p className="text-blue-100 text-sm">En présentiel</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Accordéons à droite */}
-                <div className="w-full lg:w-96 flex-shrink-0 space-y-4">
+                <div ref={accordeonsRef} className="w-full lg:w-96 flex-shrink-0 space-y-4">
+                  
+                  {/* Prérequis */}
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                    <button
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      onClick={() => toggleModule('prerequis')}
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">PRÉREQUIS</h3>
+                      </div>
+                      {openModules['prerequis'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openModules['prerequis'] && (
+                      <div className="p-3 border-t border-gray-100">
+                        <p className="text-[#013F63] text-sm leading-relaxed">
+                          Niveau terminal et/ou expérience professionnelle
+                        </p>
+                      </div>
+                    )}
+                  </div>
                   
                   {/* Public visé */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
