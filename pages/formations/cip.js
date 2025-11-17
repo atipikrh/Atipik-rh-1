@@ -779,78 +779,144 @@ export default function FormationCIP() {
                     </button>
                     {openModules['evaluation'] && (
                       <div className="p-6 border-t border-gray-100">
-                        <div className="space-y-4 text-[#013F63] text-sm">
-                          <p className="leading-relaxed">
-                            Des évaluations formatives sont réalisées tout au long de la formation.
-                          </p>
-                          <p className="font-semibold leading-relaxed">
-                            Pour obtenir votre titre professionnel de Conseiller en insertion professionnelle, vous devrez réaliser :
-                          </p>
+                        <div className="space-y-6 text-[#013F63] text-sm">
                           
-                          <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
-                            <p className="font-bold text-orange-600 mb-3 text-center">
-                              La durée totale de l'épreuve est de 2h55 :
+                          {/* Évaluation continue */}
+                          <div>
+                            <h4 className="font-bold text-base mb-2">Évaluation continue</h4>
+                            <p className="leading-relaxed">
+                              Des évaluations formatives sont réalisées tout au long de la formation pour préparer les candidats à l'examen final.
+                            </p>
+                          </div>
+
+                          {/* Composition de l'examen final */}
+                          <div>
+                            <h4 className="font-bold text-base mb-3">Composition de l'examen final</h4>
+                            <p className="leading-relaxed mb-4">
+                              L'examen de certification se déroule sur une durée totale de 2h55 et comprend quatre épreuves devant un jury professionnel :
                             </p>
                             
-                            <div className="space-y-4">
+                            <div className="space-y-3">
                               {/* Étape 1 */}
-                              <div className="bg-white rounded-lg p-3 border-l-4 border-orange-500">
+                              <div className="bg-orange-50 rounded-lg p-3 border-l-4 border-orange-500">
                                 <div className="flex items-start gap-3">
                                   <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
                                     1
                                   </div>
                                   <div className="flex-grow">
-                                    <h4 className="font-bold text-[#013F63] mb-2">Mise en situation pro – 45 min</h4>
+                                    <h5 className="font-bold text-[#013F63] mb-2">Mise en situation professionnelle – 45 minutes</h5>
                                     <ul className="space-y-1 text-xs text-gray-700">
-                                      <li>• 15 min de préparation</li>
-                                      <li>• 30 min d'entretien avec un comédien (jury observe)</li>
+                                      <li>• 15 minutes de préparation individuelle</li>
+                                      <li>• 30 minutes d'entretien avec un comédien simulant un bénéficiaire (le jury observe)</li>
                                     </ul>
                                   </div>
                                 </div>
                               </div>
 
                               {/* Étape 2 */}
-                              <div className="bg-white rounded-lg p-3 border-l-4 border-orange-500">
+                              <div className="bg-orange-50 rounded-lg p-3 border-l-4 border-orange-500">
                                 <div className="flex items-start gap-3">
                                   <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
                                     2
                                   </div>
                                   <div className="flex-grow">
-                                    <h4 className="font-bold text-[#013F63] mb-2">Entretien technique – 40 min</h4>
+                                    <h5 className="font-bold text-[#013F63] mb-2">Entretien technique – 40 minutes</h5>
                                     <ul className="space-y-1 text-xs text-gray-700">
-                                      <li>• 20 min : synthèse écrite et analyse</li>
-                                      <li>• 10 min : présentation orale</li>
-                                      <li>• 10 min : questions du jury</li>
+                                      <li>• 20 minutes de synthèse écrite et analyse</li>
+                                      <li>• 10 minutes de présentation orale de votre analyse</li>
+                                      <li>• 10 minutes de questionnement du jury</li>
                                     </ul>
                                   </div>
                                 </div>
                               </div>
 
                               {/* Étape 3 */}
-                              <div className="bg-white rounded-lg p-3 border-l-4 border-orange-500">
+                              <div className="bg-orange-50 rounded-lg p-3 border-l-4 border-orange-500">
                                 <div className="flex items-start gap-3">
                                   <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
                                     3
                                   </div>
                                   <div className="flex-grow">
-                                    <h4 className="font-bold text-[#013F63] mb-2">Questionnement sur productions – 1 h</h4>
+                                    <h5 className="font-bold text-[#013F63] mb-2">Questionnement sur les productions – 1 heure</h5>
                                     <ul className="space-y-1 text-xs text-gray-700">
-                                      <li>• 20 min : présentation orale du dossier</li>
-                                      <li>• 40 min : échanges avec le jury</li>
+                                      <li>• 20 minutes de présentation orale de votre dossier professionnel et de vos annexes</li>
+                                      <li>• 40 minutes d'échanges avec le jury sur vos réalisations et pratiques professionnelles</li>
                                     </ul>
                                   </div>
                                 </div>
                               </div>
 
                               {/* Étape 4 */}
-                              <div className="bg-white rounded-lg p-3 border-l-4 border-orange-500">
+                              <div className="bg-orange-50 rounded-lg p-3 border-l-4 border-orange-500">
                                 <div className="flex items-start gap-3">
                                   <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
                                     4
                                   </div>
                                   <div className="flex-grow">
-                                    <h4 className="font-bold text-[#013F63] mb-2">Entretien final – 30 min</h4>
-                                    <p className="text-xs text-gray-700">Discussion globale + dossier professionnel</p>
+                                    <h5 className="font-bold text-[#013F63] mb-2">Entretien final – 30 minutes</h5>
+                                    <ul className="space-y-1 text-xs text-gray-700">
+                                      <li>• Discussion globale sur votre parcours</li>
+                                      <li>• Approfondissement sur le dossier professionnel</li>
+                                      <li>• Questions complémentaires du jury</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Documents à préparer */}
+                          <div>
+                            <h4 className="font-bold text-base mb-2">Documents à préparer</h4>
+                            <ul className="space-y-2 leading-relaxed">
+                              <li>• <strong>Dossier professionnel</strong> : retraçant votre parcours et vos pratiques</li>
+                              <li>• <strong>Dossier d'annexes</strong> : preuves de vos réalisations professionnelles</li>
+                            </ul>
+                          </div>
+
+                          {/* Modalités de validation */}
+                          <div>
+                            <h4 className="font-bold text-base mb-3">Modalités de validation</h4>
+                            <p className="leading-relaxed mb-3">
+                              Le titre professionnel CIP est composé de plusieurs Certificats de Compétences Professionnelles (CCP). À l'issue de l'examen, trois résultats sont possibles :
+                            </p>
+                            
+                            <div className="space-y-3">
+                              {/* Validation totale */}
+                              <div className="bg-green-50 rounded-lg p-3 border-l-4 border-green-500">
+                                <div className="flex items-start gap-2">
+                                  <span className="text-green-600 font-bold text-lg">✅</span>
+                                  <div>
+                                    <h5 className="font-bold text-[#013F63] mb-1">Validation totale</h5>
+                                    <p className="text-xs text-gray-700">
+                                      Vous obtenez le titre professionnel complet si vous validez l'ensemble des CCP et des compétences évaluées.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Validation partielle */}
+                              <div className="bg-yellow-50 rounded-lg p-3 border-l-4 border-yellow-500">
+                                <div className="flex items-start gap-2">
+                                  <span className="text-yellow-600 font-bold text-lg">⚠️</span>
+                                  <div>
+                                    <h5 className="font-bold text-[#013F63] mb-1">Validation partielle</h5>
+                                    <p className="text-xs text-gray-700">
+                                      Vous obtenez un ou plusieurs CCP si vous validez uniquement certains blocs de compétences. Les CCP validés sont acquis définitivement et vous pourrez repasser l'examen ultérieurement pour valider les CCP manquants et obtenir le titre complet.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Non-validation */}
+                              <div className="bg-red-50 rounded-lg p-3 border-l-4 border-red-500">
+                                <div className="flex items-start gap-2">
+                                  <span className="text-red-600 font-bold text-lg">❌</span>
+                                  <div>
+                                    <h5 className="font-bold text-[#013F63] mb-1">Non-validation</h5>
+                                    <p className="text-xs text-gray-700">
+                                      Si aucun CCP n'est validé, vous devrez repasser l'intégralité de l'examen après une nouvelle période de formation ou d'expérience professionnelle.
+                                    </p>
                                   </div>
                                 </div>
                               </div>
