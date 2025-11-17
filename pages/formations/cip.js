@@ -782,9 +782,9 @@ export default function FormationCIP() {
                         <div className="space-y-8 text-[#013F63]">
                           
                           {/* Évaluation continue */}
-                          <div className="pb-4 border-b border-gray-200">
+                          <div className="pb-4 border-b border-blue-200">
                             <h4 className="font-bold text-lg mb-3 text-[#013F63]">Évaluation continue</h4>
-                            <p className="text-sm leading-relaxed text-gray-700">
+                            <p className="text-sm leading-relaxed text-[#013F63]">
                               Des évaluations formatives sont réalisées tout au long de la formation pour préparer les candidats à l'examen final.
                             </p>
                           </div>
@@ -793,7 +793,7 @@ export default function FormationCIP() {
                           <div>
                             <div className="mb-6">
                               <h4 className="font-bold text-lg mb-2 text-[#013F63]">Composition de l'examen final</h4>
-                              <p className="text-sm leading-relaxed text-gray-700 mb-1">
+                              <p className="text-sm leading-relaxed text-[#013F63] mb-1">
                                 L'examen de certification se déroule sur une durée totale de <span className="font-bold text-orange-500">2h55</span> et comprend quatre épreuves devant un jury professionnel :
                               </p>
                             </div>
@@ -807,7 +807,7 @@ export default function FormationCIP() {
                                 <div>
                                   <h5 className="font-bold text-[#013F63] mb-2 text-sm">Mise en situation professionnelle</h5>
                                   <p className="text-xs text-orange-500 font-medium mb-2">45 minutes</p>
-                                  <ul className="space-y-1.5 text-xs text-gray-600">
+                                  <ul className="space-y-1.5 text-xs text-[#013F63]">
                                     <li className="flex items-start gap-2">
                                       <span className="text-orange-500 mt-1">•</span>
                                       <span>15 minutes de préparation individuelle</span>
@@ -828,7 +828,7 @@ export default function FormationCIP() {
                                 <div>
                                   <h5 className="font-bold text-[#013F63] mb-2 text-sm">Entretien technique</h5>
                                   <p className="text-xs text-orange-500 font-medium mb-2">40 minutes</p>
-                                  <ul className="space-y-1.5 text-xs text-gray-600">
+                                  <ul className="space-y-1.5 text-xs text-[#013F63]">
                                     <li className="flex items-start gap-2">
                                       <span className="text-orange-500 mt-1">•</span>
                                       <span>20 minutes de synthèse écrite et analyse</span>
@@ -853,7 +853,7 @@ export default function FormationCIP() {
                                 <div>
                                   <h5 className="font-bold text-[#013F63] mb-2 text-sm">Questionnement sur les productions</h5>
                                   <p className="text-xs text-orange-500 font-medium mb-2">1 heure</p>
-                                  <ul className="space-y-1.5 text-xs text-gray-600">
+                                  <ul className="space-y-1.5 text-xs text-[#013F63]">
                                     <li className="flex items-start gap-2">
                                       <span className="text-orange-500 mt-1">•</span>
                                       <span>20 minutes de présentation orale de votre dossier professionnel et de vos annexes</span>
@@ -874,7 +874,7 @@ export default function FormationCIP() {
                                 <div>
                                   <h5 className="font-bold text-[#013F63] mb-2 text-sm">Entretien final</h5>
                                   <p className="text-xs text-orange-500 font-medium mb-2">30 minutes</p>
-                                  <ul className="space-y-1.5 text-xs text-gray-600">
+                                  <ul className="space-y-1.5 text-xs text-[#013F63]">
                                     <li className="flex items-start gap-2">
                                       <span className="text-orange-500 mt-1">•</span>
                                       <span>Discussion globale sur votre parcours</span>
@@ -894,30 +894,30 @@ export default function FormationCIP() {
                           </div>
 
                           {/* Documents à préparer */}
-                          <div className="pt-4 border-t border-gray-200">
+                          <div className="pt-4 border-t border-blue-200">
                             <h4 className="font-bold text-lg mb-3 text-[#013F63]">Documents à préparer</h4>
                             <div className="space-y-2">
                               <div className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                                 <div>
                                   <p className="text-sm font-semibold text-[#013F63]">Dossier professionnel</p>
-                                  <p className="text-xs text-gray-600">Retraçant votre parcours et vos pratiques</p>
+                                  <p className="text-xs text-[#013F63]">Retraçant votre parcours et vos pratiques</p>
                                 </div>
                               </div>
                               <div className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                                 <div>
                                   <p className="text-sm font-semibold text-[#013F63]">Dossier d'annexes</p>
-                                  <p className="text-xs text-gray-600">Preuves de vos réalisations professionnelles</p>
+                                  <p className="text-xs text-[#013F63]">Preuves de vos réalisations professionnelles</p>
                                 </div>
                               </div>
                             </div>
                           </div>
 
                           {/* Modalités de validation */}
-                          <div className="pt-4 border-t border-gray-200">
+                          <div className="pt-4 border-t border-blue-200">
                             <h4 className="font-bold text-lg mb-3 text-[#013F63]">Modalités de validation</h4>
-                            <p className="text-sm leading-relaxed text-gray-700 mb-4">
+                            <p className="text-sm leading-relaxed text-[#013F63] mb-4">
                               Le titre professionnel CIP est composé de plusieurs Certificats de Compétences Professionnelles (CCP). À l'issue de l'examen, trois résultats sont possibles :
                             </p>
                             
@@ -929,7 +929,7 @@ export default function FormationCIP() {
                                 </div>
                                 <div>
                                   <h5 className="font-bold text-[#013F63] mb-1 text-sm">Validation totale</h5>
-                                  <p className="text-xs text-gray-600 leading-relaxed">
+                                  <p className="text-xs text-[#013F63] leading-relaxed">
                                     Vous obtenez le titre professionnel complet si vous validez l'ensemble des CCP et des compétences évaluées.
                                   </p>
                                 </div>
@@ -942,20 +942,20 @@ export default function FormationCIP() {
                                 </div>
                                 <div>
                                   <h5 className="font-bold text-[#013F63] mb-1 text-sm">Validation partielle</h5>
-                                  <p className="text-xs text-gray-600 leading-relaxed">
+                                  <p className="text-xs text-[#013F63] leading-relaxed">
                                     Vous obtenez un ou plusieurs CCP si vous validez uniquement certains blocs de compétences. Les CCP validés sont acquis définitivement et vous pourrez repasser l'examen ultérieurement pour valider les CCP manquants et obtenir le titre complet.
                                   </p>
                                 </div>
                               </div>
 
                               {/* Non-validation */}
-                              <div className="flex items-start gap-3 p-3 border-l-2 border-gray-400 bg-gray-50/30">
-                                <div className="w-5 h-5 rounded-full bg-gray-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <div className="flex items-start gap-3 p-3 border-l-2 border-[#013F63] bg-blue-50/30">
+                                <div className="w-5 h-5 rounded-full bg-[#013F63] flex items-center justify-center flex-shrink-0 mt-0.5">
                                   <span className="text-white text-xs">×</span>
                                 </div>
                                 <div>
                                   <h5 className="font-bold text-[#013F63] mb-1 text-sm">Non-validation</h5>
-                                  <p className="text-xs text-gray-600 leading-relaxed">
+                                  <p className="text-xs text-[#013F63] leading-relaxed">
                                     Si aucun CCP n'est validé, vous devrez repasser l'intégralité de l'examen après une nouvelle période de formation ou d'expérience professionnelle.
                                   </p>
                                 </div>
