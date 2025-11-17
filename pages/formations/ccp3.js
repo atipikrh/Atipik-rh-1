@@ -1062,7 +1062,7 @@ export default function FormationCCP3() {
                 {/* Bouton Plaquette Informative */}
                 <div className="text-center mt-12">
                   <a 
-                    href="/documents/plaquettes/formation-cip-plaquette.pdf" 
+                    href="/documents/plaquettes/Formation-CIP-Plaquette.pdf" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-8 py-4 bg-white border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
