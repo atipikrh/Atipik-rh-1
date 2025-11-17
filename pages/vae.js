@@ -617,7 +617,7 @@ export default function VAE() {
                     {openEtapes['prerequis'] && (
                       <div className="p-4 border-t border-gray-100">
                         <p className="text-[#013F63] text-sm">
-                          Aucun : La VAE est accessible sans exigence de durée minimale d'expérience
+                          Justifier d'au moins une expérience significative (salariée, non salariée, bénévole, volontaire ou extra-professionnelle) en lien direct avec la certification visée.
                         </p>
                               </div>
                             )}
