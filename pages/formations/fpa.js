@@ -160,7 +160,7 @@ export default function FormationFPA() {
     return () => window.removeEventListener('resize', checkIsMobile)
   }, [])
 
-  // Synchroniser la hauteur de la carte bleue avec les accordéons fermés
+  // Synchroniser la hauteur de la carte bleue avec les accordéons fermés (structure identique à CIP)
   useEffect(() => {
     const updateHeight = () => {
       if (accordeonsRef.current && carteBleueRef.current) {
