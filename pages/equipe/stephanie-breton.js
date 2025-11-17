@@ -120,7 +120,7 @@ export default function StephanieBreton() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Mon joie de partager et de travailler en équipe avec collègues et stagiaires
+                        Ma joie de partager et de travailler en équipe avec collègues et stagiaires
                       </p>
                     </div>
                   </div>
@@ -137,7 +137,7 @@ export default function StephanieBreton() {
                     </div>
                     <div className="space-y-3">
                       <p className="text-[#013F63] text-sm leading-relaxed">
-                        Un jour de formation sur la première session de CIP avec ATIPIK RH me prend l'envie d'amener un gâteau à partager avec les stagiaires. Je prends donc le temps, la veille de mon intervention, de préparer un gâteau au yaourt (que je fais depuis ma plus tendre enfance) dont je double les doses pour que nous puissions tous en avoir un part. Sauf que c'est le flop... erreur de dosage de levure probablement, le gâteau toujours réussi ne l'est pas cette fois ! Les premières bouchées avalées, les réflexions (je l'accorde, toutes plus drôles les unes que les autres) fusent ! Fou rire général dans la salle, les stagiaires s'en donnent à cœur joie pour se moquer de mes talents de pâtissière et imaginer à quoi se gâteau pourrait servir : à reboucher un mur, à remplacer une brique etc. Quelle bande d'ingrats ! Le gâteau sera quand même terminé à ce qu'on me dit, par la pauvre famille de Vanessa qui en héritera !!
+                        Un jour de formation sur la première session de CIP avec ATIPIK RH me prend l'envie d'amener un gâteau à partager avec les stagiaires. Je prends donc le temps, la veille de mon intervention, de préparer un gâteau au yaourt (que je fais depuis ma plus tendre enfance) dont je double les doses pour que nous puissions tous en avoir un part. Sauf que c'est le flop... erreur de dosage de levure probablement, le gâteau toujours réussi ne l'est pas cette fois ! Les premières bouchées avalées, les réflexions (je l'accorde, toutes plus drôles les unes que les autres) fusent ! Fou rire général dans la salle, les stagiaires s'en donnent à cœur joie pour se moquer de mes talents de pâtissière et imaginer à quoi se gâteau pourrait servir : à reboucher un mur, à remplacer une brique etc. Quelle bande d'ingrats ! Le gâteau sera quand même terminé à ce qu'on me dit, par la famille de Vanessa qui en héritera !!
                       </p>
                     </div>
                   </div>
