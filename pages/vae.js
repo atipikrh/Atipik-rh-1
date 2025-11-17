@@ -35,7 +35,7 @@ export default function VAE() {
       id: 'cpf',
       logo: '/images/financements/cpf.jpg',
       titre: 'Compte Personnel de Formation (CPF)',
-      description: 'Code CPF : 200',
+      description: 'Pour tous les actifs',
       logoWidth: 60,
       logoHeight: 60
     },
