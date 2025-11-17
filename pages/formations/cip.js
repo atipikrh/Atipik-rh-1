@@ -778,10 +778,84 @@ export default function FormationCIP() {
                       )}
                     </button>
                     {openModules['evaluation'] && (
-                      <div className="p-3 border-t border-gray-100">
-                        <div className="space-y-3 text-[#013F63] text-sm">
-                          <p>• Des évaluations formatives sont réalisées tout au long de la formation</p>
-                          <p>• L'examen de certification du Titre professionnel de Conseiller en Insertion Professionnelle (CIP) est composé d'une mise en situation, d'une présentation orale, de deux dossiers (professionnel et annexe) et d'entretiens avec le jury</p>
+                      <div className="p-6 border-t border-gray-100">
+                        <div className="space-y-4 text-[#013F63] text-sm">
+                          <p className="leading-relaxed">
+                            Des évaluations formatives sont réalisées tout au long de la formation.
+                          </p>
+                          <p className="font-semibold leading-relaxed">
+                            Pour obtenir votre titre professionnel de Conseiller en insertion professionnelle, vous devrez réaliser :
+                          </p>
+                          
+                          <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
+                            <p className="font-bold text-orange-600 mb-3 text-center">
+                              La durée totale de l'épreuve est de 2h55 :
+                            </p>
+                            
+                            <div className="space-y-4">
+                              {/* Étape 1 */}
+                              <div className="bg-white rounded-lg p-3 border-l-4 border-orange-500">
+                                <div className="flex items-start gap-3">
+                                  <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                    1
+                                  </div>
+                                  <div className="flex-grow">
+                                    <h4 className="font-bold text-[#013F63] mb-2">Mise en situation pro – 45 min</h4>
+                                    <ul className="space-y-1 text-xs text-gray-700">
+                                      <li>• 15 min de préparation</li>
+                                      <li>• 30 min d'entretien avec un comédien (jury observe)</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Étape 2 */}
+                              <div className="bg-white rounded-lg p-3 border-l-4 border-orange-500">
+                                <div className="flex items-start gap-3">
+                                  <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                    2
+                                  </div>
+                                  <div className="flex-grow">
+                                    <h4 className="font-bold text-[#013F63] mb-2">Entretien technique – 40 min</h4>
+                                    <ul className="space-y-1 text-xs text-gray-700">
+                                      <li>• 20 min : synthèse écrite et analyse</li>
+                                      <li>• 10 min : présentation orale</li>
+                                      <li>• 10 min : questions du jury</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Étape 3 */}
+                              <div className="bg-white rounded-lg p-3 border-l-4 border-orange-500">
+                                <div className="flex items-start gap-3">
+                                  <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                    3
+                                  </div>
+                                  <div className="flex-grow">
+                                    <h4 className="font-bold text-[#013F63] mb-2">Questionnement sur productions – 1 h</h4>
+                                    <ul className="space-y-1 text-xs text-gray-700">
+                                      <li>• 20 min : présentation orale du dossier</li>
+                                      <li>• 40 min : échanges avec le jury</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Étape 4 */}
+                              <div className="bg-white rounded-lg p-3 border-l-4 border-orange-500">
+                                <div className="flex items-start gap-3">
+                                  <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                    4
+                                  </div>
+                                  <div className="flex-grow">
+                                    <h4 className="font-bold text-[#013F63] mb-2">Entretien final – 30 min</h4>
+                                    <p className="text-xs text-gray-700">Discussion globale + dossier professionnel</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     )}
