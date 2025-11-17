@@ -558,7 +558,9 @@ export default function FormationFPA() {
                     {openModules['prerequis'] && (
                       <div className="p-3 border-t border-gray-100">
                         <ul className="text-[#013F63] text-sm leading-relaxed space-y-2 list-disc list-inside">
-                          <li>Niveau terminal et/ou expérience professionnelle</li>
+                          <li>Une expertise technique dans un domaine spécifique est essentielle</li>
+                          <li>Un projet de formation validé par au minimum deux enquêtes métiers et/ou une immersion</li>
+                          <li>Une connaissance des outils informatiques et des techniques rédactionnelles</li>
                         </ul>
                       </div>
                     )}
