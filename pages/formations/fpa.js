@@ -470,11 +470,7 @@ export default function FormationFPA() {
                   </h2>
                 </div>
 
-              <div className={`flex flex-col lg:flex-row gap-8 justify-center ${
-                Object.values(openModules).some(isOpen => isOpen) 
-                  ? 'items-start' 
-                  : 'items-start lg:items-center'
-              }`}>
+              <div className="flex flex-col lg:flex-row gap-8 justify-center items-start">
                 
                 {/* Carte bleue à gauche */}
                 <div ref={carteBleueRef} className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white flex flex-col" style={{backgroundColor: '#013F63'}}>
