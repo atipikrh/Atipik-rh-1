@@ -576,37 +576,6 @@ export default function VAE() {
                 {/* Accordéons à droite */}
                 <div ref={accordeonsRef} className="w-full lg:w-96 flex-shrink-0 space-y-4">
                   
-                  {/* OBJECTIF */}
-                  <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                      <button
-                      onClick={() => toggleEtape('objectif')}
-                      className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
-                    >
-                      <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">OBJECTIFS ET RÉSULTAT ATTENDUS</h3>
-                  </div>
-                      {openEtapes['objectif'] ? (
-                        <ChevronUp className="w-5 h-5 text-gray-600" />
-                          ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-600" />
-                          )}
-                      </button>
-                    {openEtapes['objectif'] && (
-                      <div className="p-4 border-t border-gray-100">
-                        <div className="space-y-2">
-                          <div className="flex items-start gap-2">
-                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
-                            <span className="text-[#013F63] text-sm">L'obtention totale ou partielle d'un diplôme, d'un titre professionnel ou d'un certificat de qualification, sans avoir à suivre une formation.</span>
-                </div>
-                          <div className="flex items-start gap-2">
-                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
-                            <span className="text-[#013F63] text-sm">La sécurisation de votre parcours professionnel et le développement de votre employabilité.</span>
-              </div>
-            </div>
-                              </div>
-                            )}
-                </div>
-
                   {/* PUBLIC VISÉ */}
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
@@ -702,6 +671,37 @@ export default function VAE() {
                       </div>
                     )}
                   </div>
+
+                  {/* OBJECTIFS ET RÉSULTAT ATTENDUS */}
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                      <button
+                      onClick={() => toggleEtape('objectif')}
+                      className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">OBJECTIFS ET RÉSULTAT ATTENDUS</h3>
+                  </div>
+                      {openEtapes['objectif'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                          ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                          )}
+                      </button>
+                    {openEtapes['objectif'] && (
+                      <div className="p-4 border-t border-gray-100">
+                        <div className="space-y-2">
+                          <div className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-[#013F63] text-sm">L'obtention totale ou partielle d'un diplôme, d'un titre professionnel ou d'un certificat de qualification, sans avoir à suivre une formation.</span>
+                </div>
+                          <div className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-[#013F63] text-sm">La sécurisation de votre parcours professionnel et le développement de votre employabilité.</span>
+              </div>
+            </div>
+                              </div>
+                            )}
+                </div>
             </div>
                 </div>
 
