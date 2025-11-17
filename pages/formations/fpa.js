@@ -194,8 +194,27 @@ export default function FormationFPA() {
     }
     window.addEventListener('resize', handleResize)
 
+    // Observer les changements de taille des accordéons
+    let resizeObserver = null
+    if (isClient && accordeonsRef.current) {
+      resizeObserver = new ResizeObserver(() => {
+        setTimeout(updateHeight, 50)
+      })
+      
+      const accordeons = accordeonsRef.current.querySelectorAll('div.bg-white.rounded-xl')
+      accordeons.forEach((accordeon) => {
+        const button = accordeon.querySelector('button')
+        if (button) {
+          resizeObserver.observe(button)
+        }
+      })
+    }
+
     return () => {
       window.removeEventListener('resize', handleResize)
+      if (resizeObserver) {
+        resizeObserver.disconnect()
+      }
     }
   }, [isClient])
 
