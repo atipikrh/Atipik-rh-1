@@ -924,6 +924,24 @@ export default function FormationFPA() {
                     Format PDF - Toutes les informations détaillées sur la formation FPA
                   </p>
                 </div>
+
+                {/* Bouton Dossier de Candidature */}
+                <div className="text-center mt-6">
+                  <a 
+                    href="/documents/dossier-candidature/dossier-candidature-FPA.pdf" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-8 py-4 bg-orange-500 border-2 border-orange-500 text-white hover:bg-orange-600 hover:border-orange-600 font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
+                  >
+                    <svg className="w-5 h-5 mr-3 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Télécharger le dossier de candidature
+                  </a>
+                  <p className="text-sm text-gray-500 mt-2">
+                    Format PDF - Dossier de candidature pour la formation FPA
+                  </p>
+                </div>
               </div>
             </div>
           </section>
