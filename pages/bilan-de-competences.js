@@ -57,6 +57,10 @@ export default function BilanCompetences() {
     {
       question: "À quelle fréquence puis-je faire un bilan ?",
       answer: "Il n'y a pas de limite légale, mais nous recommandons d'attendre au moins 5 ans entre deux bilans pour que la démarche garde tout son sens. Vos droits CPF se rechargent chaque année jusqu'à un plafond."
+    },
+    {
+      question: "Combien de temps dure un bilan ?",
+      answer: "Un bilan de compétences peut durer jusqu'à 24 heures au total, réparties sur 3 à 4 mois. Le rythme est flexible : généralement 1 séance de 2 heures par semaine, adaptée à vos disponibilités professionnelles et personnelles."
     }
   ];
 
