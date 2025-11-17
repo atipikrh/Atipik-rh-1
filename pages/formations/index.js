@@ -67,7 +67,7 @@ export default function FormationsIndex() {
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Users className="w-4 h-4" />
-                          <span>10-15 personnes</span>
+                          <span>8-15 personnes</span>
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Award className="w-4 h-4" />
@@ -102,7 +102,7 @@ export default function FormationsIndex() {
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Users className="w-4 h-4" />
-                          <span>8-12 personnes</span>
+                          <span>8-15 personnes</span>
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Award className="w-4 h-4" />
