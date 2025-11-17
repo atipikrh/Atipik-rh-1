@@ -746,9 +746,13 @@ export default function FormationFPA() {
                     </button>
                     {openModules['deroulement'] && (
                       <div className="p-3 border-t border-gray-100">
-                        <div className="space-y-3 text-[#013F63] text-sm">
-                          <p>• <strong>Formation en cours de définition</strong></p>
-                          <p>Les modalités précises de durée et de répartition seront communiquées prochainement.</p>
+                        <div className="space-y-2 text-[#013F63] text-sm">
+                          <p>• <strong>Durée : 934 heures</strong></p>
+                          <ul className="list-none ml-4 space-y-1">
+                            <li>◦ 616 heures en centre</li>
+                            <li>◦ 315 heures en entreprise</li>
+                            <li>◦ 3 heures de session de certification</li>
+                          </ul>
                         </div>
                       </div>
                     )}
