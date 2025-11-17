@@ -593,18 +593,8 @@ export default function VAE() {
                       </button>
                     {openEtapes['public'] && (
                       <div className="p-4 border-t border-gray-100">
-                        <p className="text-[#013F63] text-sm leading-relaxed mb-3">
-                          Notre accompagnement VAE s'adresse à toute personne souhaitant valoriser son expérience professionnelle ou extra-professionnelle :
-                        </p>
-                        <ul className="text-[#013F63] text-sm leading-relaxed space-y-2 list-disc list-inside mb-3">
-                          <li>Salariés du secteur privé</li>
-                          <li>Demandeurs d'emploi</li>
-                          <li>Travailleurs indépendants</li>
-                          <li>Bénévoles et volontaires</li>
-                          <li>Proches aidants</li>
-                        </ul>
                         <p className="text-[#013F63] text-sm leading-relaxed">
-                          Quel que soit votre parcours, si vous avez acquis des compétences par l'expérience et souhaitez les faire reconnaître par un diplôme ou une certification, notre accompagnement est fait pour vous.
+                          Notre accompagnement VAE s'adresse à toute personne souhaitant faire reconnaître son expérience par un diplôme ou une certification : salariés du secteur privé, demandeurs d'emploi, travailleurs indépendants, bénévoles, volontaires et proches aidants.
                         </p>
                               </div>
                             )}
@@ -627,8 +617,11 @@ export default function VAE() {
                     </button>
                     {openEtapes['prerequis'] && (
                       <div className="p-4 border-t border-gray-100">
-                        <p className="text-[#013F63] text-sm">
+                        <p className="text-[#013F63] text-sm leading-relaxed mb-2">
                           Justifier d'au moins une expérience significative (salariée, non salariée, bénévole, volontaire ou extra-professionnelle) en lien direct avec la certification visée.
+                        </p>
+                        <p className="text-[#013F63] text-sm leading-relaxed">
+                          La VAE est accessible sans exigence de durée minimale d'expérience.
                         </p>
                               </div>
                             )}
