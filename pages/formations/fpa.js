@@ -557,9 +557,9 @@ export default function FormationFPA() {
                     </button>
                     {openModules['prerequis'] && (
                       <div className="p-3 border-t border-gray-100">
-                        <p className="text-[#013F63] text-sm leading-relaxed">
-                          Niveau terminal et/ou expérience professionnelle
-                        </p>
+                        <ul className="text-[#013F63] text-sm leading-relaxed space-y-2 list-disc list-inside">
+                          <li>Niveau terminal et/ou expérience professionnelle</li>
+                        </ul>
                       </div>
                     )}
                   </div>
