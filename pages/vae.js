@@ -908,6 +908,22 @@ export default function VAE() {
                         </Link>
                     </div>
                   </div>
+              
+              {/* Note importante sur les frais DAVA */}
+              <div className="mt-8 max-w-4xl mx-auto">
+                <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl p-6 shadow-lg border-l-4 border-[#013F63]">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#013F63] flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Award className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-[#013F63] text-sm leading-relaxed font-medium">
+                        <span className="font-semibold text-orange-600">Conformément à la réglementation,</span> pour les diplômes relevant de l'Éducation nationale, un forfait de <span className="font-bold text-[#013F63]">250 €</span> est demandé par le DAVA pour l'étude de la recevabilité et l'instruction du dossier jusqu'au jury VAE.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               </div>
             </div>
           </section>
