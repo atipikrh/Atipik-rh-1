@@ -326,8 +326,7 @@ export default function VAE() {
       duree: "Phase d'analyse",
       objectifs: [
         "Explorer les expériences du candidat (exploration du CV)",
-        "Croiser les expériences du candidat avec le référentiel de la certification visée et lui fournir un avis sur ce diagnostic",
-        "L'obtention en totalité ou en partie, un diplôme, un titre ou un certificat de qualification professionnelle inscrit au Répertoire national des certifications professionnelles (RNCP)"
+        "Croiser les expériences du candidat avec le référentiel de la certification visée et lui fournir un avis sur ce diagnostic"
       ],
       contenu: [
         "Analyse approfondie du parcours professionnel",
