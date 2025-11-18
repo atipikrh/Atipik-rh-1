@@ -553,7 +553,10 @@ export default function VAE() {
                         <p className="font-semibold mb-0.5 text-base">Durée :</p>
                         <div className="text-blue-100 text-sm space-y-1.5">
                           <p>
-                            <span className="font-semibold text-white">30 heures au total</span> (hors dossier de faisabilité et acte formatif type SST ou AFGSU)
+                            <span className="font-semibold text-white">30 heures au total</span>
+                          </p>
+                          <p className="text-blue-200/90 text-xs pt-0.5">
+                            (hors dossier de faisabilité et acte formatif type SST ou AFGSU)
                           </p>
                           <p>
                             Réparties sur <span className="font-semibold text-white">6 à 18 mois</span>
