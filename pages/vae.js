@@ -649,10 +649,10 @@ export default function VAE() {
                             <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500">
                               <div className="flex items-start gap-3">
                                 <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
-                                  <Image 
-                                    src="/images/financements/logo-francevae.jpg" 
-                                    alt="France VAE" 
-                                    width={40} 
+                                  <Image
+                                    src="/images/financements/logo-francevae.jpg"
+                                    alt="France VAE"
+                                    width={40}
                                     height={40}
                                     className="object-contain rounded"
                                   />
