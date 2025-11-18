@@ -928,7 +928,7 @@ export default function VAE() {
                           <div className="relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-xl opacity-0 group-hover:opacity-10 blur transition-opacity duration-300"></div>
                             <div className="relative bg-gradient-to-br from-blue-50/30 via-white to-orange-50/30 rounded-xl p-5 border-l-4 border-[#013F63]">
-                              <div className="flex items-start gap-4">
+                              <div className="flex items-center gap-4">
                                 <div className="relative flex-shrink-0">
                                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#013F63] to-[#012a4a] flex items-center justify-center shadow-lg">
                                     <Users className="w-6 h-6 text-white" />
@@ -937,7 +937,7 @@ export default function VAE() {
                                     <CheckCircle className="w-3 h-3 text-white" />
                                   </div>
                                 </div>
-                                <div className="flex-1 pt-1">
+                                <div className="flex-1">
                                   <p className="text-[#013F63] text-sm leading-relaxed font-medium">
                                     Entretien post jury
                                   </p>
