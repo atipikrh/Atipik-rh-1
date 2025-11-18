@@ -619,14 +619,14 @@ export default function VAE() {
                             )}
                           </div>
 
-                  {/* MODALITÉS D'ADMISSION */}
+                  {/* MODALITÉS ET DÉLAIS D'ACCÈS */}
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                     <button
                       onClick={() => toggleEtape('modalites')}
                       className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">MODALITÉS D'ADMISSION</h3>
+                        <h3 className="text-base font-bold text-[#013F63]">MODALITÉS ET DÉLAIS D'ACCÈS</h3>
                               </div>
                       {openEtapes['modalites'] ? (
                         <ChevronUp className="w-5 h-5 text-gray-600" />
@@ -639,34 +639,11 @@ export default function VAE() {
                         <div className="space-y-2 text-[#013F63] text-sm">
                           <p>• Entretien de positionnement et d'analyse des besoins</p>
                           <p>• Validation du projet de certification</p>
+                          <p className="mt-3">Le délai d'accès peut aller jusqu'à 11 jours calendaires.</p>
                           </div>
                         </div>
                       )}
                     </div>
-
-                  {/* DÉLAIS D'ACCÈS */}
-                  <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <button
-                      onClick={() => toggleEtape('delais')}
-                      className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
-                    >
-                      <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">DÉLAIS D'ACCÈS</h3>
-                      </div>
-                      {openEtapes['delais'] ? (
-                        <ChevronUp className="w-5 h-5 text-gray-600" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-600" />
-                      )}
-                    </button>
-                    {openEtapes['delais'] && (
-                      <div className="p-4 border-t border-gray-100">
-                        <p className="text-[#013F63] text-sm leading-relaxed">
-                          Le délai d'accès peut aller jusqu'à 11 jours calendaires.
-                        </p>
-                      </div>
-                    )}
-                  </div>
 
                   {/* OBJECTIFS ET RÉSULTAT ATTENDUS */}
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
