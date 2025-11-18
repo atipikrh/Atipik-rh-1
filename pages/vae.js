@@ -742,41 +742,71 @@ export default function VAE() {
                     )}
                   </div>
 
-                  {/* RÉSULTATS ATTENDUS */}
+                  {/* MODALITÉ DE VALIDATION */}
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                     <button
-                      onClick={() => toggleEtape('resultats')}
+                      onClick={() => toggleEtape('validation')}
                       className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">RÉSULTATS ATTENDUS</h3>
+                        <h3 className="text-base font-bold text-[#013F63]">MODALITÉ DE VALIDATION</h3>
                       </div>
-                      {openEtapes['resultats'] ? (
+                      {openEtapes['validation'] ? (
                         <ChevronUp className="w-5 h-5 text-gray-600" />
                       ) : (
                         <ChevronDown className="w-5 h-5 text-gray-600" />
                       )}
                     </button>
-                    {openEtapes['resultats'] && (
+                    {openEtapes['validation'] && (
                       <div className="p-4 border-t border-gray-100">
+                        <p className="text-sm leading-relaxed text-[#013F63] mb-4">
+                          Dans le cadre d'une démarche de Validation des Acquis de l'Expérience (VAE), l'obtention du titre, diplôme ou de la certification visée dépend de la validation des blocs de compétences qui la composent. À l'issue de votre passage devant le jury, trois décisions sont possibles :
+                        </p>
                         <div className="space-y-3">
+                          {/* Validation totale */}
                           <div className="flex items-start gap-3 p-3 border-l-2 border-[#013F63] bg-blue-50/30 rounded-r-lg">
                             <div className="w-5 h-5 rounded-full bg-[#013F63] flex items-center justify-center flex-shrink-0 mt-0.5">
                               <span className="text-white text-xs">✓</span>
                             </div>
                             <div>
-                              <p className="text-sm text-[#013F63] leading-relaxed">
-                                Il est possible de valider totalement les différents blocs de compétences qui composent le diplôme que vous passez en VAE.
+                              <h5 className="font-bold text-[#013F63] mb-1 text-sm">Validation totale</h5>
+                              <p className="text-xs text-[#013F63] leading-relaxed">
+                                Vous obtenez la certification complète lorsque l'ensemble des blocs de compétences est validé par le jury.
                               </p>
                             </div>
                           </div>
+
+                          {/* Validation partielle */}
                           <div className="flex items-start gap-3 p-3 border-l-2 border-orange-500 bg-orange-50/30 rounded-r-lg">
                             <div className="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-0.5">
                               <span className="text-white text-xs">!</span>
                             </div>
                             <div>
-                              <p className="text-sm text-[#013F63] leading-relaxed">
-                                Il est également possible de valider partiellement, un ou plusieurs Blocs de compétences.
+                              <h5 className="font-bold text-[#013F63] mb-1 text-sm">Validation partielle</h5>
+                              <p className="text-xs text-[#013F63] leading-relaxed mb-2">
+                                Le jury peut valider seulement certains blocs de compétences.
+                              </p>
+                              <p className="text-xs text-[#013F63] leading-relaxed mb-2">
+                                Les blocs validés sont acquis définitivement.
+                              </p>
+                              <p className="text-xs text-[#013F63] leading-relaxed">
+                                Vous pourrez compléter votre parcours ultérieurement : par une nouvelle expérience, un accompagnement ou une action de formation ciblée ; afin de représenter uniquement les blocs manquants pour obtenir la certification complète.
+                              </p>
+                            </div>
+                          </div>
+
+                          {/* Non-validation */}
+                          <div className="flex items-start gap-3 p-3 border-l-2 border-[#013F63] bg-blue-50/30 rounded-r-lg">
+                            <div className="w-5 h-5 rounded-full bg-[#013F63] flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <span className="text-white text-xs">×</span>
+                            </div>
+                            <div>
+                              <h5 className="font-bold text-[#013F63] mb-1 text-sm">Non-validation</h5>
+                              <p className="text-xs text-[#013F63] leading-relaxed">
+                                Si aucun bloc de compétences n'est validé, la VAE n'est pas accordée.
+                              </p>
+                              <p className="text-xs text-[#013F63] leading-relaxed mt-1">
+                                Vous devrez alors renforcer votre expérience ou suivre des actions complémentaires avant de pouvoir présenter une nouvelle demande de VAE.
                               </p>
                             </div>
                           </div>
