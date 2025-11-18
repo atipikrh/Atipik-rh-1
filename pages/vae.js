@@ -1641,6 +1641,31 @@ export default function VAE() {
             </div>
           </section>
 
+          {/* Cadre légal */}
+          <section className="py-4">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto">
+                
+                {/* Contenu principal - Version compacte */}
+                <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-xl shadow-md border border-gray-100 p-4">
+                  <div className="text-center">
+                    <p className="text-[#013F63] text-sm leading-relaxed">
+                      <strong>Cadre légal</strong> : La Validation des Acquis de l'Expérience (VAE) est régie par les dispositions du Code du travail et du Code de l'éducation. 
+                      <a 
+                        href="https://travail-emploi.gouv.fr/la-validation-des-acquis-de-lexperience-vae" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-orange-500 hover:text-orange-600 transition-colors font-medium underline ml-1"
+                      >
+                        Consulter le cadre légal complet
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Accessibilité Handicap */}
           <section className="py-8">
             <div className="container mx-auto px-4">
@@ -1703,31 +1728,6 @@ export default function VAE() {
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Cadre légal */}
-          <section className="py-4">
-            <div className="container mx-auto px-4">
-              <div className="max-w-3xl mx-auto">
-                
-                {/* Contenu principal - Version compacte */}
-                <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-xl shadow-md border border-gray-100 p-4">
-                  <div className="text-center">
-                    <p className="text-[#013F63] text-sm leading-relaxed">
-                      <strong>Cadre légal</strong> : La Validation des Acquis de l'Expérience (VAE) est régie par les dispositions du Code du travail et du Code de l'éducation. 
-                      <a 
-                        href="https://travail-emploi.gouv.fr/la-validation-des-acquis-de-lexperience-vae" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-orange-500 hover:text-orange-600 transition-colors font-medium underline ml-1"
-                      >
-                        Consulter le cadre légal complet
-                      </a>
-                    </p>
                   </div>
                 </div>
               </div>
