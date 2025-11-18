@@ -806,7 +806,49 @@ export default function VAE() {
                                 </div>
                                 <div className="flex-1 pt-1">
                                   <h4 className="font-bold text-xl text-[#013F63] mb-3 group-hover:text-orange-600 transition-colors">
-                                    Dossier de faisabilité, Dossier de validation et référentiel de certification
+                                    Dossier de faisabilité
+                                  </h4>
+                                  <div className="h-1 w-12 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-full mb-4"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Dossier de validation */}
+                          <div className="relative group">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
+                            <div className="relative bg-white rounded-2xl p-6 border-2 border-transparent group-hover:border-orange-200 transition-all duration-300">
+                              <div className="flex items-start gap-5">
+                                <div className="relative">
+                                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#013F63] via-[#013F63] to-[#012a4a] flex items-center justify-center shadow-lg transform group-hover:rotate-3 group-hover:scale-105 transition-all duration-300">
+                                    <BookOpen className="w-8 h-8 text-white" />
+                                  </div>
+                                  <div className="absolute -top-1 -right-1 w-5 h-5 bg-orange-500 rounded-full border-2 border-white"></div>
+                                </div>
+                                <div className="flex-1 pt-1">
+                                  <h4 className="font-bold text-xl text-[#013F63] mb-3 group-hover:text-orange-600 transition-colors">
+                                    Dossier de validation
+                                  </h4>
+                                  <div className="h-1 w-12 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-full mb-4"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Référentiel de certification */}
+                          <div className="relative group">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-2xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
+                            <div className="relative bg-white rounded-2xl p-6 border-2 border-transparent group-hover:border-[#013F63]/30 transition-all duration-300">
+                              <div className="flex items-start gap-5">
+                                <div className="relative">
+                                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 flex items-center justify-center shadow-lg transform group-hover:-rotate-3 group-hover:scale-105 transition-all duration-300">
+                                    <CheckCircle className="w-8 h-8 text-white" />
+                                  </div>
+                                  <div className="absolute -top-1 -right-1 w-5 h-5 bg-[#013F63] rounded-full border-2 border-white"></div>
+                                </div>
+                                <div className="flex-1 pt-1">
+                                  <h4 className="font-bold text-xl text-[#013F63] mb-3 group-hover:text-orange-600 transition-colors">
+                                    Référentiel de certification
                                   </h4>
                                   <div className="h-1 w-12 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-full mb-4"></div>
                                 </div>
