@@ -540,14 +540,6 @@ export default function VAE() {
                 </div>
 
                     <div className="flex items-start gap-2">
-                      <Target className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-semibold mb-0.5 text-base">Niveau de sortie :</p>
-                        <p className="text-blue-100 text-sm">Dossier VAE finalisé et préparation jury</p>
-              </div>
-            </div>
-
-                    <div className="flex items-start gap-2">
                       <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                     <div>
                         <p className="font-semibold mb-0.5 text-base">Lieu :</p>
@@ -594,7 +586,7 @@ export default function VAE() {
                     {openEtapes['public'] && (
                       <div className="p-4 border-t border-gray-100">
                         <p className="text-[#013F63] text-sm leading-relaxed">
-                          Notre accompagnement VAE s'adresse à toute personne souhaitant faire reconnaître son expérience par un diplôme ou une certification : salariés du secteur privé, demandeurs d'emploi, travailleurs indépendants, bénévoles, volontaires et proches aidants.
+                          Notre accompagnement VAE s'adresse à toute personne souhaitant faire reconnaître son expérience par un diplôme, un titre ou un certificat de qualification professionnelle : salariés du secteur privé, demandeurs d'emploi, travailleurs indépendants, bénévoles, volontaires et proches aidants.
                         </p>
                               </div>
                             )}
