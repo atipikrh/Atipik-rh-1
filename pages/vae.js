@@ -650,11 +650,11 @@ export default function VAE() {
                               <div className="flex items-start gap-3">
                                 <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
                                   <Image 
-                                    src="/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg" 
+                                    src="/images/financements/logo-francevae.jpg" 
                                     alt="France VAE" 
                                     width={40} 
-                                    height={24}
-                                    className="object-contain"
+                                    height={40}
+                                    className="object-contain rounded"
                                   />
                                 </div>
                                 <div className="flex-1">
