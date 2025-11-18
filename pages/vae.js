@@ -867,7 +867,7 @@ export default function VAE() {
                     
                   <div className="mb-4">
                     <div className="text-4xl font-bold text-orange-500 mb-2">2 300<span className="text-2xl">€</span></div>
-                    <p className="text-sm text-[#013F63]">(sans frais d'acte formatif et frais de jurys)</p>
+                    <p className="text-sm text-[#013F63]">(sans frais d'acte formatif, frais de certificateur et frais de jurys)</p>
                         </div>
                   
                   <div className="flex items-center justify-center gap-2 mb-4">
@@ -892,7 +892,7 @@ export default function VAE() {
                     
                                     <div className="mb-4">
                     <div className="text-4xl font-bold text-blue-600 mb-2">1 900<span className="text-2xl">€</span></div>
-                    <p className="text-sm text-[#013F63]">(sans frais d'acte formatif et frais de jurys)</p>
+                    <p className="text-sm text-[#013F63]">(sans frais d'acte formatif, frais de certificateur et frais de jurys)</p>
                         </div>
                   
                   <div className="flex items-center justify-center gap-2 mb-4">
