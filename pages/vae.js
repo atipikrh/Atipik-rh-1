@@ -636,12 +636,29 @@ export default function VAE() {
                     </button>
                     {openEtapes['modalites'] && (
                       <div className="p-4 border-t border-gray-100">
-                        <div className="space-y-2 text-[#013F63] text-sm">
-                          <p>• Entretien de positionnement et d'analyse des besoins</p>
-                          <p>• Validation du projet de certification</p>
-                          <p className="mt-3">Le délai d'accès peut aller jusqu'à 11 jours calendaires.</p>
+                        <div className="space-y-4 text-[#013F63] text-sm leading-relaxed">
+                          <p>Un premier entretien d'accueil et d'analyse de la demande.</p>
+                          <p>Selon le type de financement choisi, il y aura certaines durées d'accès à prendre en compte.</p>
+                          <div className="space-y-3 mt-4">
+                            <div className="flex items-start gap-2">
+                              <span className="text-orange-500 font-bold mt-0.5">–</span>
+                              <p><span className="font-semibold">Via France VAE,</span> il faudra prendre en compte le délai d'étude du dossier par le certificateur avant la recevabilité (même si déjà reçue).</p>
+                            </div>
+                            <div className="flex items-start gap-2">
+                              <span className="text-orange-500 font-bold mt-0.5">–</span>
+                              <p><span className="font-semibold">Via l'employeur ou sur fonds personnels,</span> le démarrage est possible dès la signature du devis.</p>
+                            </div>
+                            <div className="flex items-start gap-2">
+                              <span className="text-orange-500 font-bold mt-0.5">–</span>
+                              <p><span className="font-semibold">Via l'OPCO,</span> il faut prévoir un délai de traitement du dossier d'environ 2 mois.</p>
+                            </div>
+                            <div className="flex items-start gap-2">
+                              <span className="text-orange-500 font-bold mt-0.5">–</span>
+                              <p><span className="font-semibold">Via le CPF,</span> pensez à la période de rétractation de 11 jours calendaires.</p>
+                            </div>
                           </div>
                         </div>
+                      </div>
                       )}
                     </div>
 
