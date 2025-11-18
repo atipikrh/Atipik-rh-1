@@ -377,7 +377,7 @@ export default function VAE() {
       sousTitre: "Accompagnement après la décision",
       duree: "Suivi personnalisé",
       objectifs: [
-        "Aider à la compréhension du Procès-Verbal ou relevé de décisions et définition du parcours post-jury en cas de validation partielle (identification d'autres expériences professionnelles ou modules de formation)"
+        "Aider à la compréhension du Procès-Verbal ou relevé de décisions et définition du parcours post-jury en cas de validation partielle ou de non-validation (identification d'autres expériences professionnelles ou modules de formation)"
       ],
       contenu: [
         "Analyse des résultats du jury",
