@@ -326,14 +326,14 @@ export default function VAE() {
       duree: "Phase d'analyse",
       objectifs: [
         "Explorer les expériences du candidat (exploration du CV)",
-        "Croiser les expériences du candidat avec le référentiel de la certification visée et lui fournir un avis sur ce diagnostic"
+        "Croiser les expériences du candidat avec le référentiel de la certification visée et lui fournir un avis sur ce diagnostic",
+        "Le dossier de faisabilité est transmis au certificateur afin d'évaluer la pertinence du projet et de statuer sur la recevabilité de la demande de VAE"
       ],
       contenu: [
         "Analyse approfondie du parcours professionnel",
         "Cartographie des compétences acquises",
         "Mise en correspondance avec le référentiel",
-        "Sélection des expériences les plus pertinentes",
-        "Le dossier de faisabilité est transmis au certificateur afin d'évaluer la pertinence du projet et de statuer sur la recevabilité de la demande de VAE"
+        "Sélection des expériences les plus pertinentes"
       ]
     },
     {
@@ -1096,19 +1096,7 @@ export default function VAE() {
                             </div>
                           </div>
 
-                          {/* Contenu */}
-                          {etape.contenu && etape.contenu.length > 0 && (
-                            <div className="mb-6">
-                              <div className="space-y-2">
-                                {etape.contenu.map((item, i) => (
-                                  <div key={i} className="flex items-start gap-2 text-sm">
-                                    <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
-                                    <span className="text-[#013F63]">{item}</span>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          )}
+
 
                           {/* Note spéciale */}
                           {etape.note && etape.id !== 3 && (
