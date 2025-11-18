@@ -332,7 +332,8 @@ export default function VAE() {
         "Analyse approfondie du parcours professionnel",
         "Cartographie des compétences acquises",
         "Mise en correspondance avec le référentiel",
-        "Sélection des expériences les plus pertinentes"
+        "Sélection des expériences les plus pertinentes",
+        "Le dossier de faisabilité est transmis au certificateur afin d'évaluer la pertinence du projet et de statuer sur la recevabilité de la demande de VAE"
       ]
     },
     {
