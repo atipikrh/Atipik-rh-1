@@ -800,7 +800,7 @@ export default function VAE() {
                               <div className="flex items-start gap-3">
                                 <div className="relative">
                                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 flex items-center justify-center shadow-md transform group-hover:-rotate-3 group-hover:scale-105 transition-all duration-300">
-                                    <Award className="w-6 h-6 text-white" />
+                                    <CheckCircle className="w-6 h-6 text-white" />
                                   </div>
                                   <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#013F63] rounded-full border-2 border-white"></div>
                                 </div>
@@ -842,7 +842,7 @@ export default function VAE() {
                               <div className="flex items-start gap-3">
                                 <div className="relative">
                                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 flex items-center justify-center shadow-md transform group-hover:-rotate-3 group-hover:scale-105 transition-all duration-300">
-                                    <CheckCircle className="w-6 h-6 text-white" />
+                                    <Award className="w-6 h-6 text-white" />
                                   </div>
                                   <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#013F63] rounded-full border-2 border-white"></div>
                                 </div>
