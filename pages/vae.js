@@ -550,22 +550,15 @@ export default function VAE() {
                     <div className="flex items-start gap-2">
                       <Clock className="w-5 h-5 mt-0.5 flex-shrink-0" />
                     <div className="flex-1">
-                        <p className="font-semibold mb-2.5 text-base">Durée :</p>
-                        <div className="space-y-2.5">
-                          <div className="flex items-baseline gap-2 flex-wrap">
-                            <span className="text-blue-100 text-sm">Jusqu'à</span>
-                            <span className="text-white font-bold text-lg">30 heures</span>
-                            <span className="text-blue-200 text-xs">au total</span>
-                          </div>
-                          <p className="text-blue-200 text-xs leading-relaxed">
-                            (hors dossier de faisabilité et acte formatif type SST ou AFGSU)
+                        <p className="font-semibold mb-0.5 text-base">Durée :</p>
+                        <div className="text-blue-100 text-sm space-y-1.5">
+                          <p>
+                            <span className="font-semibold text-white">30 heures au total</span> (hors dossier de faisabilité et acte formatif type SST ou AFGSU)
                           </p>
-                          <div className="h-px bg-white/20 my-2"></div>
-                          <div className="flex items-baseline gap-2 flex-wrap">
-                            <span className="text-blue-100 text-sm">Réparties sur</span>
-                            <span className="text-white font-bold text-lg">6 à 18 mois</span>
-                          </div>
-                          <p className="text-blue-200/80 text-xs italic mt-1.5 leading-relaxed">
+                          <p>
+                            Réparties sur <span className="font-semibold text-white">6 à 18 mois</span>
+                          </p>
+                          <p className="text-blue-200/90 text-xs pt-0.5">
                             De l'inscription sur la plateforme France VAE jusqu'à l'entretien post jury
                           </p>
                         </div>
