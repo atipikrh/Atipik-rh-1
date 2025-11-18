@@ -1055,7 +1055,12 @@ export default function VAE() {
             </div>
             
             <div className="text-center mt-8 mb-8">
-              <a href="https://pro.cap-metiers.fr/info_juridique/vae-quels-financements-en-nouvelle-aquitaine-2/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
+              <a 
+                href="https://pro.cap-metiers.fr/info_juridique/vae-quels-financements-en-nouvelle-aquitaine-2/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105"
+              >
                 En savoir plus sur les financements
                 <ArrowRight className="w-4 h-4" />
               </a>
