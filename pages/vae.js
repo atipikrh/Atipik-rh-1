@@ -1096,7 +1096,19 @@ export default function VAE() {
                             </div>
                           </div>
 
-
+                          {/* Contenu */}
+                          {etape.contenu && etape.contenu.length > 0 && (
+                            <div className="mb-6">
+                              <div className="space-y-2">
+                                {etape.contenu.map((item, i) => (
+                                  <div key={i} className="flex items-start gap-2 text-sm">
+                                    <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                    <span className="text-[#013F63]">{item}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
 
                           {/* Note spéciale */}
                           {etape.note && etape.id !== 3 && (
