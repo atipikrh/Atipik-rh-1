@@ -855,6 +855,47 @@ export default function VAE() {
                       </div>
                     )}
                   </div>
+
+                  {/* MODALITÉS DE SUIVI */}
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <button
+                      onClick={() => toggleEtape('suivi')}
+                      className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">MODALITÉS DE SUIVI</h3>
+                      </div>
+                      {openEtapes['suivi'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openEtapes['suivi'] && (
+                      <div className="p-4 border-t border-gray-100">
+                        <div className="relative group">
+                          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-xl opacity-0 group-hover:opacity-10 blur transition-opacity duration-300"></div>
+                          <div className="relative bg-gradient-to-br from-blue-50/30 via-white to-orange-50/30 rounded-xl p-5 border-l-4 border-orange-500">
+                            <div className="flex items-start gap-4">
+                              <div className="relative flex-shrink-0">
+                                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-lg">
+                                  <CheckCircle className="w-6 h-6 text-white" />
+                                </div>
+                                <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-[#013F63] rounded-full border-2 border-white flex items-center justify-center">
+                                  <Clock className="w-3 h-3 text-white" />
+                                </div>
+                              </div>
+                              <div className="flex-1 pt-1">
+                                <p className="text-[#013F63] text-sm leading-relaxed font-medium">
+                                  Tout au long de l'accompagnement, l'architecte accompagnateur VAE transmet à chaque séance des activités validées et/ou à suivre par le candidat.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
             </div>
                 </div>
 
