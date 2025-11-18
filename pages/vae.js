@@ -862,7 +862,7 @@ export default function VAE() {
                 <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
                   <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
                     <h3 className="text-2xl font-bold mb-2 text-orange-500">Niveau 3 et 4</h3>
-                    <p className="text-orange-600">CAP - BEP - BAC</p>
+                    <p className="text-orange-600">CAP - BEP - BAC - TITRE PROFESSIONNEL</p>
                     </div>
                     
                   <div className="mb-4">
