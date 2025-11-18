@@ -752,43 +752,66 @@ export default function VAE() {
                 </div>
 
                   {/* MÉTHODES PÉDAGOGIQUES */}
-                  <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
                     <button
                       onClick={() => toggleEtape('methodes')}
-                      className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                      className="w-full p-5 text-left flex items-center justify-between bg-gradient-to-r from-[#013F63] to-[#013F63] hover:from-[#012a4a] hover:to-[#012a4a] transition-all duration-300"
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">MÉTHODES PÉDAGOGIQUES</h3>
+                        <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                          <BookOpen className="w-5 h-5 text-white" />
+                        </div>
+                        <h3 className="text-base font-bold text-white">MÉTHODES PÉDAGOGIQUES</h3>
                       </div>
                       {openEtapes['methodes'] ? (
-                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                        <ChevronUp className="w-5 h-5 text-white" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                        <ChevronDown className="w-5 h-5 text-white" />
                       )}
                     </button>
                     {openEtapes['methodes'] && (
-                      <div className="p-6 border-t border-gray-100 bg-gradient-to-br from-blue-50/50 to-orange-50/30">
-                        <div className="space-y-4">
-                          <div className="bg-white rounded-lg p-4 shadow-sm border-l-4 border-[#013F63]">
-                            <h4 className="font-semibold text-[#013F63] mb-2 flex items-center gap-2">
-                              <BookOpen className="w-4 h-4 text-orange-500" />
-                              Entretiens individuels
-                            </h4>
-                            <p className="text-[#013F63] text-sm leading-relaxed ml-6">
-                              Questions d'explicitation pour vous aider à détailler et clarifier vos pensées, émotions et expériences en répondant à des questions ouvertes
-                            </p>
+                      <div className="p-8 border-t border-gray-200 bg-gradient-to-br from-blue-50 via-white to-orange-50">
+                        <div className="space-y-5">
+                          <div className="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-[#013F63] hover:border-orange-500">
+                            <div className="flex items-start gap-4">
+                              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#013F63] to-[#012a4a] flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                <Users className="w-7 h-7 text-white" />
+                              </div>
+                              <div className="flex-1 pt-1">
+                                <h4 className="font-bold text-lg text-[#013F63] mb-3 group-hover:text-orange-600 transition-colors">
+                                  Entretiens individuels
+                                </h4>
+                                <p className="text-[#013F63] text-sm leading-relaxed">
+                                  Questions d'explicitation pour vous aider à détailler et clarifier vos pensées, émotions et expériences en répondant à des questions ouvertes
+                                </p>
+                              </div>
+                            </div>
                           </div>
-                          <div className="bg-white rounded-lg p-4 shadow-sm border-l-4 border-orange-500">
-                            <h4 className="font-semibold text-[#013F63] mb-2 flex items-center gap-2">
-                              <Award className="w-4 h-4 text-orange-500" />
-                              Dossier de faisabilité, Dossier de validation et référentiel de certification
-                            </h4>
+                          
+                          <div className="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-orange-500 hover:border-[#013F63]">
+                            <div className="flex items-start gap-4">
+                              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                <Award className="w-7 h-7 text-white" />
+                              </div>
+                              <div className="flex-1 pt-1">
+                                <h4 className="font-bold text-lg text-[#013F63] mb-3 group-hover:text-orange-600 transition-colors">
+                                  Dossier de faisabilité, Dossier de validation et référentiel de certification
+                                </h4>
+                              </div>
+                            </div>
                           </div>
-                          <div className="bg-white rounded-lg p-4 shadow-sm border-l-4 border-[#013F63]">
-                            <h4 className="font-semibold text-[#013F63] mb-2 flex items-center gap-2">
-                              <UserCheck className="w-4 h-4 text-orange-500" />
-                              Travail personnel du candidat
-                            </h4>
+                          
+                          <div className="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-[#013F63] hover:border-orange-500">
+                            <div className="flex items-start gap-4">
+                              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#013F63] to-[#012a4a] flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                <UserCheck className="w-7 h-7 text-white" />
+                              </div>
+                              <div className="flex-1 pt-1">
+                                <h4 className="font-bold text-lg text-[#013F63] mb-3 group-hover:text-orange-600 transition-colors">
+                                  Travail personnel du candidat
+                                </h4>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
