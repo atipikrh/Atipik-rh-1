@@ -767,25 +767,25 @@ export default function VAE() {
                       )}
                     </button>
                     {openEtapes['methodes'] && (
-                      <div className="p-6 border-t border-gray-100">
-                        <div className="space-y-6">
+                      <div className="p-4 border-t border-gray-100">
+                        <div className="space-y-3">
                           {/* Entretiens individuels */}
                           <div className="relative group">
-                            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
-                            <div className="relative bg-white rounded-2xl p-6 border-2 border-transparent group-hover:border-orange-200 transition-all duration-300">
-                              <div className="flex items-start gap-5">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
+                            <div className="relative bg-white rounded-xl p-4 border-2 border-transparent group-hover:border-orange-200 transition-all duration-300">
+                              <div className="flex items-start gap-3">
                                 <div className="relative">
-                                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#013F63] via-[#013F63] to-[#012a4a] flex items-center justify-center shadow-lg transform group-hover:rotate-3 group-hover:scale-105 transition-all duration-300">
-                                    <Users className="w-8 h-8 text-white" />
+                                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#013F63] via-[#013F63] to-[#012a4a] flex items-center justify-center shadow-md transform group-hover:rotate-3 group-hover:scale-105 transition-all duration-300">
+                                    <Users className="w-6 h-6 text-white" />
                                   </div>
-                                  <div className="absolute -top-1 -right-1 w-5 h-5 bg-orange-500 rounded-full border-2 border-white"></div>
+                                  <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-orange-500 rounded-full border-2 border-white"></div>
                                 </div>
-                                <div className="flex-1 pt-1">
-                                  <h4 className="font-bold text-xl text-[#013F63] mb-3 group-hover:text-orange-600 transition-colors">
+                                <div className="flex-1 pt-0.5">
+                                  <h4 className="font-bold text-base text-[#013F63] mb-2 group-hover:text-orange-600 transition-colors">
                                     Entretiens individuels
                                   </h4>
-                                  <div className="h-1 w-12 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-full mb-4"></div>
-                                  <p className="text-[#013F63] text-sm leading-relaxed">
+                                  <div className="h-0.5 w-10 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-full mb-2"></div>
+                                  <p className="text-[#013F63] text-xs leading-relaxed">
                                     Questions d'explicitation pour vous aider à détailler et clarifier vos pensées, émotions et expériences en répondant à des questions ouvertes
                                   </p>
                                 </div>
@@ -795,20 +795,20 @@ export default function VAE() {
 
                           {/* Dossier de faisabilité */}
                           <div className="relative group">
-                            <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-2xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
-                            <div className="relative bg-white rounded-2xl p-6 border-2 border-transparent group-hover:border-[#013F63]/30 transition-all duration-300">
-                              <div className="flex items-start gap-5">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
+                            <div className="relative bg-white rounded-xl p-4 border-2 border-transparent group-hover:border-[#013F63]/30 transition-all duration-300">
+                              <div className="flex items-start gap-3">
                                 <div className="relative">
-                                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 flex items-center justify-center shadow-lg transform group-hover:-rotate-3 group-hover:scale-105 transition-all duration-300">
-                                    <Award className="w-8 h-8 text-white" />
+                                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 flex items-center justify-center shadow-md transform group-hover:-rotate-3 group-hover:scale-105 transition-all duration-300">
+                                    <Award className="w-6 h-6 text-white" />
                                   </div>
-                                  <div className="absolute -top-1 -right-1 w-5 h-5 bg-[#013F63] rounded-full border-2 border-white"></div>
+                                  <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#013F63] rounded-full border-2 border-white"></div>
                                 </div>
-                                <div className="flex-1 pt-1">
-                                  <h4 className="font-bold text-xl text-[#013F63] mb-3 group-hover:text-orange-600 transition-colors">
+                                <div className="flex-1 pt-0.5">
+                                  <h4 className="font-bold text-base text-[#013F63] mb-2 group-hover:text-orange-600 transition-colors">
                                     Dossier de faisabilité
                                   </h4>
-                                  <div className="h-1 w-12 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-full mb-4"></div>
+                                  <div className="h-0.5 w-10 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-full mb-2"></div>
                                 </div>
                               </div>
                             </div>
@@ -816,20 +816,20 @@ export default function VAE() {
 
                           {/* Dossier de validation */}
                           <div className="relative group">
-                            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
-                            <div className="relative bg-white rounded-2xl p-6 border-2 border-transparent group-hover:border-orange-200 transition-all duration-300">
-                              <div className="flex items-start gap-5">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
+                            <div className="relative bg-white rounded-xl p-4 border-2 border-transparent group-hover:border-orange-200 transition-all duration-300">
+                              <div className="flex items-start gap-3">
                                 <div className="relative">
-                                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#013F63] via-[#013F63] to-[#012a4a] flex items-center justify-center shadow-lg transform group-hover:rotate-3 group-hover:scale-105 transition-all duration-300">
-                                    <BookOpen className="w-8 h-8 text-white" />
+                                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#013F63] via-[#013F63] to-[#012a4a] flex items-center justify-center shadow-md transform group-hover:rotate-3 group-hover:scale-105 transition-all duration-300">
+                                    <BookOpen className="w-6 h-6 text-white" />
                                   </div>
-                                  <div className="absolute -top-1 -right-1 w-5 h-5 bg-orange-500 rounded-full border-2 border-white"></div>
+                                  <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-orange-500 rounded-full border-2 border-white"></div>
                                 </div>
-                                <div className="flex-1 pt-1">
-                                  <h4 className="font-bold text-xl text-[#013F63] mb-3 group-hover:text-orange-600 transition-colors">
+                                <div className="flex-1 pt-0.5">
+                                  <h4 className="font-bold text-base text-[#013F63] mb-2 group-hover:text-orange-600 transition-colors">
                                     Dossier de validation
                                   </h4>
-                                  <div className="h-1 w-12 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-full mb-4"></div>
+                                  <div className="h-0.5 w-10 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-full mb-2"></div>
                                 </div>
                               </div>
                             </div>
@@ -837,20 +837,20 @@ export default function VAE() {
 
                           {/* Référentiel de certification */}
                           <div className="relative group">
-                            <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-2xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
-                            <div className="relative bg-white rounded-2xl p-6 border-2 border-transparent group-hover:border-[#013F63]/30 transition-all duration-300">
-                              <div className="flex items-start gap-5">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
+                            <div className="relative bg-white rounded-xl p-4 border-2 border-transparent group-hover:border-[#013F63]/30 transition-all duration-300">
+                              <div className="flex items-start gap-3">
                                 <div className="relative">
-                                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 flex items-center justify-center shadow-lg transform group-hover:-rotate-3 group-hover:scale-105 transition-all duration-300">
-                                    <CheckCircle className="w-8 h-8 text-white" />
+                                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 flex items-center justify-center shadow-md transform group-hover:-rotate-3 group-hover:scale-105 transition-all duration-300">
+                                    <CheckCircle className="w-6 h-6 text-white" />
                                   </div>
-                                  <div className="absolute -top-1 -right-1 w-5 h-5 bg-[#013F63] rounded-full border-2 border-white"></div>
+                                  <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#013F63] rounded-full border-2 border-white"></div>
                                 </div>
-                                <div className="flex-1 pt-1">
-                                  <h4 className="font-bold text-xl text-[#013F63] mb-3 group-hover:text-orange-600 transition-colors">
+                                <div className="flex-1 pt-0.5">
+                                  <h4 className="font-bold text-base text-[#013F63] mb-2 group-hover:text-orange-600 transition-colors">
                                     Référentiel de certification
                                   </h4>
-                                  <div className="h-1 w-12 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-full mb-4"></div>
+                                  <div className="h-0.5 w-10 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-full mb-2"></div>
                                 </div>
                               </div>
                             </div>
@@ -858,20 +858,20 @@ export default function VAE() {
 
                           {/* Travail personnel */}
                           <div className="relative group">
-                            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
-                            <div className="relative bg-white rounded-2xl p-6 border-2 border-transparent group-hover:border-orange-200 transition-all duration-300">
-                              <div className="flex items-start gap-5">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
+                            <div className="relative bg-white rounded-xl p-4 border-2 border-transparent group-hover:border-orange-200 transition-all duration-300">
+                              <div className="flex items-start gap-3">
                                 <div className="relative">
-                                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#013F63] via-[#013F63] to-[#012a4a] flex items-center justify-center shadow-lg transform group-hover:rotate-3 group-hover:scale-105 transition-all duration-300">
-                                    <UserCheck className="w-8 h-8 text-white" />
+                                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#013F63] via-[#013F63] to-[#012a4a] flex items-center justify-center shadow-md transform group-hover:rotate-3 group-hover:scale-105 transition-all duration-300">
+                                    <UserCheck className="w-6 h-6 text-white" />
                                   </div>
-                                  <div className="absolute -top-1 -right-1 w-5 h-5 bg-orange-500 rounded-full border-2 border-white"></div>
+                                  <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-orange-500 rounded-full border-2 border-white"></div>
                                 </div>
-                                <div className="flex-1 pt-1">
-                                  <h4 className="font-bold text-xl text-[#013F63] mb-3 group-hover:text-orange-600 transition-colors">
+                                <div className="flex-1 pt-0.5">
+                                  <h4 className="font-bold text-base text-[#013F63] mb-2 group-hover:text-orange-600 transition-colors">
                                     Travail personnel du candidat
                                   </h4>
-                                  <div className="h-1 w-12 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-full mb-4"></div>
+                                  <div className="h-0.5 w-10 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-full mb-2"></div>
                                 </div>
                               </div>
                             </div>
