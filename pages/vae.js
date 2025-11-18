@@ -635,26 +635,60 @@ export default function VAE() {
                       )}
                     </button>
                     {openEtapes['modalites'] && (
-                      <div className="p-4 border-t border-gray-100">
-                        <div className="space-y-4 text-[#013F63] text-sm leading-relaxed">
-                          <p>Un premier entretien d'accueil et d'analyse de la demande.</p>
-                          <p>Selon le type de financement choisi, il y aura certaines durées d'accès à prendre en compte.</p>
-                          <div className="space-y-3 mt-4">
-                            <div className="flex items-start gap-2">
-                              <span className="text-orange-500 font-bold mt-0.5">–</span>
-                              <p><span className="font-semibold">Via France VAE,</span> il faudra prendre en compte le délai d'étude du dossier par le certificateur avant la recevabilité (même si déjà reçue).</p>
+                      <div className="p-6 border-t border-gray-100 bg-gradient-to-br from-blue-50/50 to-orange-50/30">
+                        <div className="space-y-5">
+                          <div className="bg-white rounded-lg p-4 shadow-sm border-l-4 border-[#013F63]">
+                            <p className="text-[#013F63] text-sm leading-relaxed font-medium">
+                              Un premier entretien d'accueil et d'analyse de la demande.
+                            </p>
+                          </div>
+                          <p className="text-[#013F63] text-sm leading-relaxed font-medium">
+                            Selon le type de financement choisi, il y aura certaines durées d'accès à prendre en compte.
+                          </p>
+                          <div className="grid gap-3 mt-5">
+                            <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500">
+                              <div className="flex items-start gap-3">
+                                <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                  <Award className="w-4 h-4 text-orange-600" />
+                                </div>
+                                <div className="flex-1">
+                                  <p className="font-semibold text-[#013F63] mb-1">Via France VAE</p>
+                                  <p className="text-[#013F63] text-sm leading-relaxed">Il faudra prendre en compte le délai d'étude du dossier par le certificateur avant la recevabilité (même si déjà reçue).</p>
+                                </div>
+                              </div>
                             </div>
-                            <div className="flex items-start gap-2">
-                              <span className="text-orange-500 font-bold mt-0.5">–</span>
-                              <p><span className="font-semibold">Via l'employeur ou sur fonds personnels,</span> le démarrage est possible dès la signature du devis.</p>
+                            <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#013F63]">
+                              <div className="flex items-start gap-3">
+                                <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                  <Users className="w-4 h-4 text-[#013F63]" />
+                                </div>
+                                <div className="flex-1">
+                                  <p className="font-semibold text-[#013F63] mb-1">Via l'employeur ou sur fonds personnels</p>
+                                  <p className="text-[#013F63] text-sm leading-relaxed">Le démarrage est possible dès la signature du devis.</p>
+                                </div>
+                              </div>
                             </div>
-                            <div className="flex items-start gap-2">
-                              <span className="text-orange-500 font-bold mt-0.5">–</span>
-                              <p><span className="font-semibold">Via l'OPCO,</span> il faut prévoir un délai de traitement du dossier d'environ 2 mois.</p>
+                            <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-400">
+                              <div className="flex items-start gap-3">
+                                <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                  <Clock className="w-4 h-4 text-orange-600" />
+                                </div>
+                                <div className="flex-1">
+                                  <p className="font-semibold text-[#013F63] mb-1">Via l'OPCO</p>
+                                  <p className="text-[#013F63] text-sm leading-relaxed">Il faut prévoir un délai de traitement du dossier d'environ 2 mois.</p>
+                                </div>
+                              </div>
                             </div>
-                            <div className="flex items-start gap-2">
-                              <span className="text-orange-500 font-bold mt-0.5">–</span>
-                              <p><span className="font-semibold">Via le CPF,</span> pensez à la période de rétractation de 11 jours calendaires.</p>
+                            <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500">
+                              <div className="flex items-start gap-3">
+                                <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                  <CheckCircle className="w-4 h-4 text-orange-600" />
+                                </div>
+                                <div className="flex-1">
+                                  <p className="font-semibold text-[#013F63] mb-1">Via le CPF</p>
+                                  <p className="text-[#013F63] text-sm leading-relaxed">Pensez à la période de rétractation de 11 jours calendaires.</p>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
