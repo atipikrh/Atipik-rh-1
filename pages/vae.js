@@ -648,8 +648,14 @@ export default function VAE() {
                           <div className="grid gap-3 mt-5">
                             <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500">
                               <div className="flex items-start gap-3">
-                                <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                  <Award className="w-4 h-4 text-orange-600" />
+                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
+                                  <Image 
+                                    src="/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg" 
+                                    alt="France VAE" 
+                                    width={40} 
+                                    height={24}
+                                    className="object-contain"
+                                  />
                                 </div>
                                 <div className="flex-1">
                                   <p className="font-semibold text-[#013F63] mb-1">Via France VAE</p>
@@ -659,8 +665,14 @@ export default function VAE() {
                             </div>
                             <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#013F63]">
                               <div className="flex items-start gap-3">
-                                <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                  <Users className="w-4 h-4 text-[#013F63]" />
+                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
+                                  <Image 
+                                    src="/images/financements/logo entreprise.jpg" 
+                                    alt="Employeur" 
+                                    width={40} 
+                                    height={40}
+                                    className="object-contain rounded"
+                                  />
                                 </div>
                                 <div className="flex-1">
                                   <p className="font-semibold text-[#013F63] mb-1">Via l'employeur ou sur fonds personnels</p>
@@ -670,8 +682,14 @@ export default function VAE() {
                             </div>
                             <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-400">
                               <div className="flex items-start gap-3">
-                                <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                  <Clock className="w-4 h-4 text-orange-600" />
+                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
+                                  <Image 
+                                    src="/images/financements/logo-opco.webp" 
+                                    alt="OPCO" 
+                                    width={40} 
+                                    height={40}
+                                    className="object-contain rounded"
+                                  />
                                 </div>
                                 <div className="flex-1">
                                   <p className="font-semibold text-[#013F63] mb-1">Via l'OPCO</p>
@@ -681,8 +699,14 @@ export default function VAE() {
                             </div>
                             <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500">
                               <div className="flex items-start gap-3">
-                                <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                  <CheckCircle className="w-4 h-4 text-orange-600" />
+                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
+                                  <Image 
+                                    src="/images/financements/cpf.jpg" 
+                                    alt="CPF" 
+                                    width={40} 
+                                    height={40}
+                                    className="object-contain rounded"
+                                  />
                                 </div>
                                 <div className="flex-1">
                                   <p className="font-semibold text-[#013F63] mb-1">Via le CPF</p>
