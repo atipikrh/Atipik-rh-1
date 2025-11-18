@@ -1355,7 +1355,7 @@ export default function VAE() {
                   Les certifications que nous <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">proposons</span>
                   </h2>
                 <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
-                  Découvrez notre catalogue de certifications VAE organisées par domaines d'activité
+                  Nous proposons un accompagnement uniquement cette sélection de certifications :
                 </p>
               </div>
 
