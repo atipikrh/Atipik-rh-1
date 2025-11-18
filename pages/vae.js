@@ -649,34 +649,17 @@ export default function VAE() {
                             <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500">
                               <div className="flex items-start gap-3">
                                 <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
-                                  <Image
-                                    src="/images/financements/logo-francevae.jpg"
-                                    alt="France VAE"
-                                    width={40}
-                                    height={40}
-                                    className="object-contain rounded"
-                                  />
-                                </div>
-                                <div className="flex-1">
-                                  <p className="font-semibold text-[#013F63] mb-1">Via France VAE</p>
-                                  <p className="text-[#013F63] text-sm leading-relaxed">Il faudra prendre en compte le délai d'étude du dossier par le certificateur avant la recevabilité (même si déjà reçue).</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#013F63]">
-                              <div className="flex items-start gap-3">
-                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
                                   <Image 
-                                    src="/images/financements/logo entreprise.jpg" 
-                                    alt="Employeur" 
+                                    src="/images/financements/cpf.jpg" 
+                                    alt="CPF" 
                                     width={40} 
                                     height={40}
                                     className="object-contain rounded"
                                   />
                                 </div>
                                 <div className="flex-1">
-                                  <p className="font-semibold text-[#013F63] mb-1">Via l'employeur ou sur fonds personnels</p>
-                                  <p className="text-[#013F63] text-sm leading-relaxed">Le démarrage est possible dès la signature du devis.</p>
+                                  <p className="font-semibold text-[#013F63] mb-1">Via le CPF</p>
+                                  <p className="text-[#013F63] text-sm leading-relaxed">Pensez à la période de rétractation de 11 jours calendaires.</p>
                                 </div>
                               </div>
                             </div>
@@ -697,20 +680,20 @@ export default function VAE() {
                                 </div>
                               </div>
                             </div>
-                            <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500">
+                            <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#013F63]">
                               <div className="flex items-start gap-3">
                                 <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
                                   <Image 
-                                    src="/images/financements/cpf.jpg" 
-                                    alt="CPF" 
+                                    src="/images/financements/logo entreprise.jpg" 
+                                    alt="Employeur" 
                                     width={40} 
                                     height={40}
                                     className="object-contain rounded"
                                   />
                                 </div>
                                 <div className="flex-1">
-                                  <p className="font-semibold text-[#013F63] mb-1">Via le CPF</p>
-                                  <p className="text-[#013F63] text-sm leading-relaxed">Pensez à la période de rétractation de 11 jours calendaires.</p>
+                                  <p className="font-semibold text-[#013F63] mb-1">Via l'employeur ou sur fonds personnels</p>
+                                  <p className="text-[#013F63] text-sm leading-relaxed">Le démarrage est possible dès la signature du devis.</p>
                                 </div>
                               </div>
                             </div>
