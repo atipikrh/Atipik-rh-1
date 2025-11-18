@@ -750,6 +750,50 @@ export default function VAE() {
                               </div>
                             )}
                 </div>
+
+                  {/* MÉTHODES PÉDAGOGIQUES */}
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <button
+                      onClick={() => toggleEtape('methodes')}
+                      className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">MÉTHODES PÉDAGOGIQUES</h3>
+                      </div>
+                      {openEtapes['methodes'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openEtapes['methodes'] && (
+                      <div className="p-6 border-t border-gray-100 bg-gradient-to-br from-blue-50/50 to-orange-50/30">
+                        <div className="space-y-4">
+                          <div className="bg-white rounded-lg p-4 shadow-sm border-l-4 border-[#013F63]">
+                            <h4 className="font-semibold text-[#013F63] mb-2 flex items-center gap-2">
+                              <BookOpen className="w-4 h-4 text-orange-500" />
+                              Entretiens individuels
+                            </h4>
+                            <p className="text-[#013F63] text-sm leading-relaxed ml-6">
+                              Questions d'explicitation pour vous aider à détailler et clarifier vos pensées, émotions et expériences en répondant à des questions ouvertes
+                            </p>
+                          </div>
+                          <div className="bg-white rounded-lg p-4 shadow-sm border-l-4 border-orange-500">
+                            <h4 className="font-semibold text-[#013F63] mb-2 flex items-center gap-2">
+                              <Award className="w-4 h-4 text-orange-500" />
+                              Dossier de faisabilité, Dossier de validation et référentiel de certification
+                            </h4>
+                          </div>
+                          <div className="bg-white rounded-lg p-4 shadow-sm border-l-4 border-[#013F63]">
+                            <h4 className="font-semibold text-[#013F63] mb-2 flex items-center gap-2">
+                              <UserCheck className="w-4 h-4 text-orange-500" />
+                              Travail personnel du candidat
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
             </div>
                 </div>
 
