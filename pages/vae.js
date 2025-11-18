@@ -793,39 +793,64 @@ export default function VAE() {
                             </div>
                           </div>
 
-                          {/* Groupe des dossiers */}
+                          {/* Dossier de faisabilité */}
                           <div className="relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
+                            <div className="relative bg-white rounded-xl p-4 border-2 border-transparent group-hover:border-[#013F63]/30 transition-all duration-300">
+                              <div className="flex items-start gap-3">
+                                <div className="relative">
+                                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 flex items-center justify-center shadow-md transform group-hover:-rotate-3 group-hover:scale-105 transition-all duration-300">
+                                    <CheckCircle className="w-6 h-6 text-white" />
+                                  </div>
+                                  <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#013F63] rounded-full border-2 border-white"></div>
+                                </div>
+                                <div className="flex-1 pt-0.5">
+                                  <h4 className="font-bold text-base text-[#013F63] mb-2 group-hover:text-orange-600 transition-colors">
+                                    Dossier de faisabilité
+                                  </h4>
+                                  <div className="h-0.5 w-10 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-full mb-2"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Dossier de validation */}
+                          <div className="relative group">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
                             <div className="relative bg-white rounded-xl p-4 border-2 border-transparent group-hover:border-orange-200 transition-all duration-300">
-                              <div className="flex flex-wrap items-center gap-4 md:gap-6">
-                                <div className="flex items-center gap-3 flex-1 min-w-[200px]">
-                                  <div className="relative">
-                                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 flex items-center justify-center shadow-md">
-                                      <CheckCircle className="w-5 h-5 text-white" />
-                                    </div>
-                                    <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-[#013F63] rounded-full border-2 border-white"></div>
+                              <div className="flex items-start gap-3">
+                                <div className="relative">
+                                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#013F63] via-[#013F63] to-[#012a4a] flex items-center justify-center shadow-md transform group-hover:rotate-3 group-hover:scale-105 transition-all duration-300">
+                                    <BookOpen className="w-6 h-6 text-white" />
                                   </div>
-                                  <h4 className="font-bold text-sm text-[#013F63]">Dossier de faisabilité</h4>
+                                  <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-orange-500 rounded-full border-2 border-white"></div>
                                 </div>
-                                <div className="hidden md:block w-px h-8 bg-gradient-to-b from-transparent via-[#013F63]/30 to-transparent"></div>
-                                <div className="flex items-center gap-3 flex-1 min-w-[200px]">
-                                  <div className="relative">
-                                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#013F63] via-[#013F63] to-[#012a4a] flex items-center justify-center shadow-md">
-                                      <BookOpen className="w-5 h-5 text-white" />
-                                    </div>
-                                    <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-orange-500 rounded-full border-2 border-white"></div>
-                                  </div>
-                                  <h4 className="font-bold text-sm text-[#013F63]">Dossier de validation</h4>
+                                <div className="flex-1 pt-0.5">
+                                  <h4 className="font-bold text-base text-[#013F63] mb-2 group-hover:text-orange-600 transition-colors">
+                                    Dossier de validation
+                                  </h4>
+                                  <div className="h-0.5 w-10 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-full mb-2"></div>
                                 </div>
-                                <div className="hidden md:block w-px h-8 bg-gradient-to-b from-transparent via-[#013F63]/30 to-transparent"></div>
-                                <div className="flex items-center gap-3 flex-1 min-w-[200px]">
-                                  <div className="relative">
-                                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 flex items-center justify-center shadow-md">
-                                      <Award className="w-5 h-5 text-white" />
-                                    </div>
-                                    <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-[#013F63] rounded-full border-2 border-white"></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Référentiel de certification */}
+                          <div className="relative group">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
+                            <div className="relative bg-white rounded-xl p-4 border-2 border-transparent group-hover:border-[#013F63]/30 transition-all duration-300">
+                              <div className="flex items-start gap-3">
+                                <div className="relative">
+                                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 flex items-center justify-center shadow-md transform group-hover:-rotate-3 group-hover:scale-105 transition-all duration-300">
+                                    <Award className="w-6 h-6 text-white" />
                                   </div>
-                                  <h4 className="font-bold text-sm text-[#013F63]">Référentiel de certification</h4>
+                                  <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#013F63] rounded-full border-2 border-white"></div>
+                                </div>
+                                <div className="flex-1 pt-0.5">
+                                  <h4 className="font-bold text-base text-[#013F63] mb-2 group-hover:text-orange-600 transition-colors">
+                                    Référentiel de certification
+                                  </h4>
+                                  <div className="h-0.5 w-10 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-full mb-2"></div>
                                 </div>
                               </div>
                             </div>
