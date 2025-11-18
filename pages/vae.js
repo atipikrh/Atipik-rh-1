@@ -703,36 +703,87 @@ export default function VAE() {
                       )}
                     </div>
 
-                  {/* OBJECTIFS ET RÉSULTAT ATTENDUS */}
+                  {/* OBJECTIFS */}
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                      <button
-                      onClick={() => toggleEtape('objectif')}
+                    <button
+                      onClick={() => toggleEtape('objectifs')}
                       className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
                     >
                       <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">OBJECTIFS ET RÉSULTAT ATTENDUS</h3>
-                  </div>
-                      {openEtapes['objectif'] ? (
+                        <h3 className="text-base font-bold text-[#013F63]">OBJECTIFS</h3>
+                      </div>
+                      {openEtapes['objectifs'] ? (
                         <ChevronUp className="w-5 h-5 text-gray-600" />
-                          ) : (
+                      ) : (
                         <ChevronDown className="w-5 h-5 text-gray-600" />
-                          )}
-                      </button>
-                    {openEtapes['objectif'] && (
+                      )}
+                    </button>
+                    {openEtapes['objectifs'] && (
                       <div className="p-4 border-t border-gray-100">
-                        <div className="space-y-2">
-                          <div className="flex items-start gap-2">
-                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
-                            <span className="text-[#013F63] text-sm">L'obtention totale ou partielle d'un diplôme, d'un titre professionnel ou d'un certificat de qualification, sans avoir à suivre une formation.</span>
-                </div>
-                          <div className="flex items-start gap-2">
-                            <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
-                            <span className="text-[#013F63] text-sm">La sécurisation de votre parcours professionnel et le développement de votre employabilité.</span>
-              </div>
-            </div>
-                              </div>
-                            )}
-                </div>
+                        <div className="space-y-3">
+                          <div className="flex items-start gap-3 p-3 border-l-2 border-[#013F63] bg-blue-50/30 rounded-r-lg">
+                            <div className="w-5 h-5 rounded-full bg-[#013F63] flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <span className="text-white text-xs font-bold">1</span>
+                            </div>
+                            <p className="text-sm text-[#013F63] leading-relaxed">
+                              Apporter une aide méthodologique pour rédiger tout ou partie des livrables de preuves du diplôme visé.
+                            </p>
+                          </div>
+                          <div className="flex items-start gap-3 p-3 border-l-2 border-orange-500 bg-orange-50/30 rounded-r-lg">
+                            <div className="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <span className="text-white text-xs font-bold">2</span>
+                            </div>
+                            <p className="text-sm text-[#013F63] leading-relaxed">
+                              Préparer l'oral devant le jury pour valider le diplôme dans la spécialité visée.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* RÉSULTATS ATTENDUS */}
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <button
+                      onClick={() => toggleEtape('resultats')}
+                      className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">RÉSULTATS ATTENDUS</h3>
+                      </div>
+                      {openEtapes['resultats'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openEtapes['resultats'] && (
+                      <div className="p-4 border-t border-gray-100">
+                        <div className="space-y-3">
+                          <div className="flex items-start gap-3 p-3 border-l-2 border-[#013F63] bg-blue-50/30 rounded-r-lg">
+                            <div className="w-5 h-5 rounded-full bg-[#013F63] flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <span className="text-white text-xs">✓</span>
+                            </div>
+                            <div>
+                              <p className="text-sm text-[#013F63] leading-relaxed">
+                                Il est possible de valider totalement les différents blocs de compétences qui composent le diplôme que vous passez en VAE.
+                              </p>
+                            </div>
+                          </div>
+                          <div className="flex items-start gap-3 p-3 border-l-2 border-orange-500 bg-orange-50/30 rounded-r-lg">
+                            <div className="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <span className="text-white text-xs">!</span>
+                            </div>
+                            <div>
+                              <p className="text-sm text-[#013F63] leading-relaxed">
+                                Il est également possible de valider partiellement, un ou plusieurs Blocs de compétences.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
 
                   {/* MÉTHODES PÉDAGOGIQUES */}
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
