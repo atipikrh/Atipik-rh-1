@@ -549,9 +549,12 @@ export default function VAE() {
                   
                     <div className="flex items-start gap-2">
                       <Clock className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                    <div>
-                        <p className="font-semibold mb-0.5 text-base">Durée :</p>
-                        <p className="text-blue-100 text-sm">24h à 30h hors dossier de faisabilité</p>
+                    <div className="flex-1">
+                        <p className="font-semibold mb-1.5 text-base">Durée :</p>
+                        <div className="text-blue-100 text-sm space-y-2 leading-relaxed">
+                          <p>Un accompagnement VAE peut durer jusqu'à <span className="font-semibold text-white">30 heures au total</span> (hors dossier de faisabilité et acte formatif type SST ou AFGSU), réparties sur <span className="font-semibold text-white">6 à 18 mois</span>.</p>
+                          <p className="text-xs opacity-90">De l'inscription sur la plateforme France VAE jusqu'à l'entretien post jury.</p>
+                        </div>
                     </div>
                     </div>
                     
