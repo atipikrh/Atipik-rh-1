@@ -914,7 +914,7 @@ export default function VAE() {
                 <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl p-6 shadow-lg border-l-4 border-[#013F63]">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-full bg-[#013F63] flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Award className="w-5 h-5 text-white" />
+                      <span className="text-white text-xl font-bold">!</span>
                     </div>
                     <div className="flex-1">
                       <p className="text-[#013F63] text-sm leading-relaxed font-medium">
