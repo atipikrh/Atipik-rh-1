@@ -408,14 +408,24 @@ export default function VAE() {
     {
       id: 3,
       titre: "Ingénierie formation pédagogie",
-        niveau4: [
-          { code: "39794", nom: "TP Encadrant technique d'insertion" }
-        ],
-        niveau5: [
-          { code: "37274", nom: "TP Conseiller en insertion professionnelle – CIP" },
-          { code: "37275", nom: "TP Formateur professionnel d'adultes" },
-          { code: "40695", nom: "TP Médiateur numérique" }
-        ]
+      categories: [
+        {
+          nom: "Accompagnement formation",
+          niveau4: [
+            { code: "39794", nom: "TP Encadrant technique d'insertion" }
+          ],
+          niveau5: [
+            { code: "37274", nom: "TP Conseiller en insertion professionnelle – CIP" }
+          ]
+        },
+        {
+          nom: "Pédagogie",
+          niveau5: [
+            { code: "37275", nom: "TP Formateur professionnel d'adultes" },
+            { code: "40695", nom: "TP Médiateur numérique" }
+          ]
+        }
+      ]
     }
   ]
 
@@ -1027,116 +1037,241 @@ export default function VAE() {
                     </div>
 
                     <div className="p-4">
-                      
-                      {/* Niveau 3 */}
-                      {domaine.niveau3 && domaine.niveau3.length > 0 && (
-                        <div className="mb-4">
-                          <button
-                            onClick={() => toggleNiveau(domaine.id, 'niveau3')}
-                            className="w-full bg-orange-50 rounded-lg p-2 mb-2 hover:bg-orange-100 transition-colors flex items-center justify-between"
-                          >
-                            <h4 className="text-xs font-bold text-orange-600 uppercase tracking-wide">
-                              Niveau 3 (CAP & BEP)
-                            </h4>
-                            <div className="flex items-center gap-2">
-                              <span className="text-xs text-orange-600 font-medium">
-                                {domaine.niveau3.length} certification{domaine.niveau3.length > 1 ? 's' : ''}
-                              </span>
-                              {openNiveaux[`${domaine.id}-niveau3`] ? (
-                                <ChevronUp className="w-4 h-4 text-orange-600" />
-                              ) : (
-                                <ChevronDown className="w-4 h-4 text-orange-600" />
-                              )}
-                            </div>
-                          </button>
-                          {openNiveaux[`${domaine.id}-niveau3`] && (
-                            <div className="space-y-1">
-                              {domaine.niveau3.map((cert, i) => (
-                                <div key={i} className="flex items-start gap-2 p-1 rounded hover:bg-gray-50 transition-colors">
-                                  <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1.5 flex-shrink-0"></div>
-                                  <div>
-                                    <span className="text-[#013F63] font-semibold text-xs block">{cert.code}</span>
-                                    <span className="text-[#013F63] text-xs">{cert.nom}</span>
-                                  </div>
+                      {/* Affichage avec catégories */}
+                      {domaine.categories ? (
+                        <div className="space-y-4">
+                          {domaine.categories.map((categorie, catIndex) => (
+                            <div key={catIndex} className="mb-4">
+                              <h5 className="text-sm font-bold text-[#013F63] mb-3 pb-2 border-b border-gray-200">
+                                {categorie.nom} :
+                              </h5>
+                              
+                              {/* Niveau 3 */}
+                              {categorie.niveau3 && categorie.niveau3.length > 0 && (
+                                <div className="mb-3">
+                                  <button
+                                    onClick={() => toggleNiveau(`${domaine.id}-${catIndex}`, 'niveau3')}
+                                    className="w-full bg-orange-50 rounded-lg p-2 mb-2 hover:bg-orange-100 transition-colors flex items-center justify-between"
+                                  >
+                                    <h4 className="text-xs font-bold text-orange-600 uppercase tracking-wide">
+                                      Niveau 3 (CAP & BEP)
+                                    </h4>
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-xs text-orange-600 font-medium">
+                                        {categorie.niveau3.length} certification{categorie.niveau3.length > 1 ? 's' : ''}
+                                      </span>
+                                      {openNiveaux[`${domaine.id}-${catIndex}-niveau3`] ? (
+                                        <ChevronUp className="w-4 h-4 text-orange-600" />
+                                      ) : (
+                                        <ChevronDown className="w-4 h-4 text-orange-600" />
+                                      )}
+                                    </div>
+                                  </button>
+                                  {openNiveaux[`${domaine.id}-${catIndex}-niveau3`] && (
+                                    <div className="space-y-1">
+                                      {categorie.niveau3.map((cert, i) => (
+                                        <div key={i} className="flex items-start gap-2 p-1 rounded hover:bg-gray-50 transition-colors">
+                                          <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1.5 flex-shrink-0"></div>
+                                          <div>
+                                            <span className="text-[#013F63] font-semibold text-xs block">{cert.code}</span>
+                                            <span className="text-[#013F63] text-xs">{cert.nom}</span>
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  )}
                                 </div>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      )}
+                              )}
 
-                      {/* Niveau 4 */}
-                      {domaine.niveau4 && domaine.niveau4.length > 0 && (
-                        <div className="mb-4">
-                          <button
-                            onClick={() => toggleNiveau(domaine.id, 'niveau4')}
-                            className="w-full bg-blue-50 rounded-lg p-2 mb-2 hover:bg-blue-100 transition-colors flex items-center justify-between"
-                          >
-                            <h4 className="text-xs font-bold text-[#013F63] uppercase tracking-wide">
-                              Niveau 4 (BAC / BAC PRO)
-                            </h4>
-                            <div className="flex items-center gap-2">
-                              <span className="text-xs text-[#013F63] font-medium">
-                                {domaine.niveau4.length} certification{domaine.niveau4.length > 1 ? 's' : ''}
-                              </span>
-                              {openNiveaux[`${domaine.id}-niveau4`] ? (
-                                <ChevronUp className="w-4 h-4 text-[#013F63]" />
-                              ) : (
-                                <ChevronDown className="w-4 h-4 text-[#013F63]" />
-                              )}
-                            </div>
-                          </button>
-                          {openNiveaux[`${domaine.id}-niveau4`] && (
-                            <div className="space-y-1">
-                              {domaine.niveau4.map((cert, i) => (
-                                <div key={i} className="flex items-start gap-2 p-1 rounded hover:bg-gray-50 transition-colors">
-                                  <div className="w-1.5 h-1.5 bg-[#013F63] rounded-full mt-1.5 flex-shrink-0"></div>
-                                  <div>
-                                    <span className="text-[#013F63] font-semibold text-xs block">{cert.code}</span>
-                                    <span className="text-[#013F63] text-xs">{cert.nom}</span>
-                                  </div>
+                              {/* Niveau 4 */}
+                              {categorie.niveau4 && categorie.niveau4.length > 0 && (
+                                <div className="mb-3">
+                                  <button
+                                    onClick={() => toggleNiveau(`${domaine.id}-${catIndex}`, 'niveau4')}
+                                    className="w-full bg-blue-50 rounded-lg p-2 mb-2 hover:bg-blue-100 transition-colors flex items-center justify-between"
+                                  >
+                                    <h4 className="text-xs font-bold text-[#013F63] uppercase tracking-wide">
+                                      Niveau 4 (BAC / BAC PRO)
+                                    </h4>
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-xs text-[#013F63] font-medium">
+                                        {categorie.niveau4.length} certification{categorie.niveau4.length > 1 ? 's' : ''}
+                                      </span>
+                                      {openNiveaux[`${domaine.id}-${catIndex}-niveau4`] ? (
+                                        <ChevronUp className="w-4 h-4 text-[#013F63]" />
+                                      ) : (
+                                        <ChevronDown className="w-4 h-4 text-[#013F63]" />
+                                      )}
+                                    </div>
+                                  </button>
+                                  {openNiveaux[`${domaine.id}-${catIndex}-niveau4`] && (
+                                    <div className="space-y-1">
+                                      {categorie.niveau4.map((cert, i) => (
+                                        <div key={i} className="flex items-start gap-2 p-1 rounded hover:bg-gray-50 transition-colors">
+                                          <div className="w-1.5 h-1.5 bg-[#013F63] rounded-full mt-1.5 flex-shrink-0"></div>
+                                          <div>
+                                            <span className="text-[#013F63] font-semibold text-xs block">{cert.code}</span>
+                                            <span className="text-[#013F63] text-xs">{cert.nom}</span>
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  )}
                                 </div>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      )}
+                              )}
 
-                      {/* Niveau 5 */}
-                      {domaine.niveau5 && domaine.niveau5.length > 0 && (
-                        <div>
-                          <button
-                            onClick={() => toggleNiveau(domaine.id, 'niveau5')}
-                            className="w-full bg-[#013F63] text-white rounded-lg p-2 mb-2 hover:bg-[#012a4a] transition-colors flex items-center justify-between"
-                          >
-                            <h4 className="text-xs font-bold uppercase tracking-wide">
-                              Niveau 5 (BTS, DUT, Titre Pro...)
-                            </h4>
-                            <div className="flex items-center gap-2">
-                              <span className="text-xs font-medium">
-                                {domaine.niveau5.length} certification{domaine.niveau5.length > 1 ? 's' : ''}
-                              </span>
-                              {openNiveaux[`${domaine.id}-niveau5`] ? (
-                                <ChevronUp className="w-4 h-4 text-white" />
-                              ) : (
-                                <ChevronDown className="w-4 h-4 text-white" />
+                              {/* Niveau 5 */}
+                              {categorie.niveau5 && categorie.niveau5.length > 0 && (
+                                <div className="mb-3">
+                                  <button
+                                    onClick={() => toggleNiveau(`${domaine.id}-${catIndex}`, 'niveau5')}
+                                    className="w-full bg-[#013F63] text-white rounded-lg p-2 mb-2 hover:bg-[#012a4a] transition-colors flex items-center justify-between"
+                                  >
+                                    <h4 className="text-xs font-bold uppercase tracking-wide">
+                                      Niveau 5 (BTS, DUT, Titre Pro...)
+                                    </h4>
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-xs font-medium">
+                                        {categorie.niveau5.length} certification{categorie.niveau5.length > 1 ? 's' : ''}
+                                      </span>
+                                      {openNiveaux[`${domaine.id}-${catIndex}-niveau5`] ? (
+                                        <ChevronUp className="w-4 h-4 text-white" />
+                                      ) : (
+                                        <ChevronDown className="w-4 h-4 text-white" />
+                                      )}
+                                    </div>
+                                  </button>
+                                  {openNiveaux[`${domaine.id}-${catIndex}-niveau5`] && (
+                                    <div className="space-y-1">
+                                      {categorie.niveau5.map((cert, i) => (
+                                        <div key={i} className="flex items-start gap-2 p-1 rounded hover:bg-gray-50 transition-colors">
+                                          <div className="w-1.5 h-1.5 bg-[#013F63] rounded-full mt-1.5 flex-shrink-0"></div>
+                                          <div>
+                                            <span className="text-[#013F63] font-semibold text-xs block">{cert.code}</span>
+                                            <span className="text-[#013F63] text-xs">{cert.nom}</span>
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  )}
+                                </div>
                               )}
                             </div>
-                          </button>
-                          {openNiveaux[`${domaine.id}-niveau5`] && (
-                            <div className="space-y-1">
-                              {domaine.niveau5.map((cert, i) => (
-                                <div key={i} className="flex items-start gap-2 p-1 rounded hover:bg-gray-50 transition-colors">
-                                  <div className="w-1.5 h-1.5 bg-[#013F63] rounded-full mt-1.5 flex-shrink-0"></div>
-                                  <div>
-                                    <span className="text-[#013F63] font-semibold text-xs block">{cert.code}</span>
-                                    <span className="text-[#013F63] text-xs">{cert.nom}</span>
-                                  </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <>
+                          {/* Niveau 3 */}
+                          {domaine.niveau3 && domaine.niveau3.length > 0 && (
+                            <div className="mb-4">
+                              <button
+                                onClick={() => toggleNiveau(domaine.id, 'niveau3')}
+                                className="w-full bg-orange-50 rounded-lg p-2 mb-2 hover:bg-orange-100 transition-colors flex items-center justify-between"
+                              >
+                                <h4 className="text-xs font-bold text-orange-600 uppercase tracking-wide">
+                                  Niveau 3 (CAP & BEP)
+                                </h4>
+                                <div className="flex items-center gap-2">
+                                  <span className="text-xs text-orange-600 font-medium">
+                                    {domaine.niveau3.length} certification{domaine.niveau3.length > 1 ? 's' : ''}
+                                  </span>
+                                  {openNiveaux[`${domaine.id}-niveau3`] ? (
+                                    <ChevronUp className="w-4 h-4 text-orange-600" />
+                                  ) : (
+                                    <ChevronDown className="w-4 h-4 text-orange-600" />
+                                  )}
                                 </div>
-                              ))}
+                              </button>
+                              {openNiveaux[`${domaine.id}-niveau3`] && (
+                                <div className="space-y-1">
+                                  {domaine.niveau3.map((cert, i) => (
+                                    <div key={i} className="flex items-start gap-2 p-1 rounded hover:bg-gray-50 transition-colors">
+                                      <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1.5 flex-shrink-0"></div>
+                                      <div>
+                                        <span className="text-[#013F63] font-semibold text-xs block">{cert.code}</span>
+                                        <span className="text-[#013F63] text-xs">{cert.nom}</span>
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
                             </div>
                           )}
-                        </div>
+
+                          {/* Niveau 4 */}
+                          {domaine.niveau4 && domaine.niveau4.length > 0 && (
+                            <div className="mb-4">
+                              <button
+                                onClick={() => toggleNiveau(domaine.id, 'niveau4')}
+                                className="w-full bg-blue-50 rounded-lg p-2 mb-2 hover:bg-blue-100 transition-colors flex items-center justify-between"
+                              >
+                                <h4 className="text-xs font-bold text-[#013F63] uppercase tracking-wide">
+                                  Niveau 4 (BAC / BAC PRO)
+                                </h4>
+                                <div className="flex items-center gap-2">
+                                  <span className="text-xs text-[#013F63] font-medium">
+                                    {domaine.niveau4.length} certification{domaine.niveau4.length > 1 ? 's' : ''}
+                                  </span>
+                                  {openNiveaux[`${domaine.id}-niveau4`] ? (
+                                    <ChevronUp className="w-4 h-4 text-[#013F63]" />
+                                  ) : (
+                                    <ChevronDown className="w-4 h-4 text-[#013F63]" />
+                                  )}
+                                </div>
+                              </button>
+                              {openNiveaux[`${domaine.id}-niveau4`] && (
+                                <div className="space-y-1">
+                                  {domaine.niveau4.map((cert, i) => (
+                                    <div key={i} className="flex items-start gap-2 p-1 rounded hover:bg-gray-50 transition-colors">
+                                      <div className="w-1.5 h-1.5 bg-[#013F63] rounded-full mt-1.5 flex-shrink-0"></div>
+                                      <div>
+                                        <span className="text-[#013F63] font-semibold text-xs block">{cert.code}</span>
+                                        <span className="text-[#013F63] text-xs">{cert.nom}</span>
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          )}
+
+                          {/* Niveau 5 */}
+                          {domaine.niveau5 && domaine.niveau5.length > 0 && (
+                            <div>
+                              <button
+                                onClick={() => toggleNiveau(domaine.id, 'niveau5')}
+                                className="w-full bg-[#013F63] text-white rounded-lg p-2 mb-2 hover:bg-[#012a4a] transition-colors flex items-center justify-between"
+                              >
+                                <h4 className="text-xs font-bold uppercase tracking-wide">
+                                  Niveau 5 (BTS, DUT, Titre Pro...)
+                                </h4>
+                                <div className="flex items-center gap-2">
+                                  <span className="text-xs font-medium">
+                                    {domaine.niveau5.length} certification{domaine.niveau5.length > 1 ? 's' : ''}
+                                  </span>
+                                  {openNiveaux[`${domaine.id}-niveau5`] ? (
+                                    <ChevronUp className="w-4 h-4 text-white" />
+                                  ) : (
+                                    <ChevronDown className="w-4 h-4 text-white" />
+                                  )}
+                                </div>
+                              </button>
+                              {openNiveaux[`${domaine.id}-niveau5`] && (
+                                <div className="space-y-1">
+                                  {domaine.niveau5.map((cert, i) => (
+                                    <div key={i} className="flex items-start gap-2 p-1 rounded hover:bg-gray-50 transition-colors">
+                                      <div className="w-1.5 h-1.5 bg-[#013F63] rounded-full mt-1.5 flex-shrink-0"></div>
+                                      <div>
+                                        <span className="text-[#013F63] font-semibold text-xs block">{cert.code}</span>
+                                        <span className="text-[#013F63] text-xs">{cert.nom}</span>
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          )}
+                        </>
                       )}
                     </div>
 
@@ -1144,7 +1279,11 @@ export default function VAE() {
                     <div className="bg-gray-50 px-4 py-2 border-t border-gray-100 mt-auto">
                       <div className="flex items-center justify-between">
                         <span className="text-xs text-[#013F63]">
-                          {(domaine.niveau3?.length || 0) + (domaine.niveau4?.length || 0) + (domaine.niveau5?.length || 0)} certifications
+                          {domaine.categories 
+                            ? domaine.categories.reduce((total, cat) => 
+                                total + (cat.niveau3?.length || 0) + (cat.niveau4?.length || 0) + (cat.niveau5?.length || 0), 0)
+                            : (domaine.niveau3?.length || 0) + (domaine.niveau4?.length || 0) + (domaine.niveau5?.length || 0)
+                          } certifications
                         </span>
                         <div className="w-5 h-5 bg-gray-200 rounded-full flex items-center justify-center">
                           <span className="text-xs font-bold text-[#013F63]">{index + 1}</span>
