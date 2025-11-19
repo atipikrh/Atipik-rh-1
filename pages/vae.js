@@ -399,7 +399,7 @@ export default function VAE() {
     },
     {
       id: 2,
-      titre: "Action sociale",
+      titre: "Petite enfance",
         niveau3: [
           { code: "37424", nom: "Maître de maison en secteur social et médico-social" },
           { code: "36360", nom: "CQP Surveillant de nuit en secteur social, médico-social et sanitaire" },
