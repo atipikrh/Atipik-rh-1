@@ -391,7 +391,7 @@ export default function VAE() {
   const domainesCertification = [
     {
       id: 1,
-      titre: "Santé",
+      titre: "Personnel paramédical",
         niveau3: [
           { code: "35301", nom: "TP Auxiliaire en prothèse dentaire" }
         ],
