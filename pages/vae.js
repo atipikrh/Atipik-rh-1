@@ -401,28 +401,8 @@ export default function VAE() {
       id: 2,
       titre: "Petite enfance",
         niveau3: [
-          { code: "37424", nom: "Maître de maison en secteur social et médico-social" },
-          { code: "36360", nom: "CQP Surveillant de nuit en secteur social, médico-social et sanitaire" },
-          { code: "37722", nom: "TP Agent de médiation, information, services" },
-          { code: "36004", nom: "DE Accompagnant éducatif et social" },
           { code: "38565", nom: "CAP Accompagnant éducatif petite enfance" },
-          { code: "39387", nom: "Auxiliaire de vie" },
-        { code: "37568", nom: "C5 Aide à domicile" },
           { code: "37715", nom: "TP Assistant de vie aux familles – ADVF" }
-        ],
-        niveau4: [
-          { code: "36241", nom: "TP Médiateur social accès aux droits et services" },
-          { code: "37231", nom: "Bac Pro Accompagnement, soins et services à la personne" },
-          { code: "36788", nom: "Bac Pro Services aux personnes et territoires – SAPAT" },
-          { code: "39099", nom: "Moniteur d'atelier en milieu de travail protégé" },
-          { code: "39643", nom: "DE Moniteur éducateur" },
-          { code: "39794", nom: "TP Encadrant technique d'insertion" },
-          { code: "37511", nom: "Animateur en gérontologie" },
-          { code: "39680", nom: "Diplôme d'État Technicien de l'intervention sociale et familiale – DETISF" }
-        ],
-        niveau5: [
-          { code: "40695", nom: "TP Médiateur numérique" },
-        { code: "40695", nom: "BTS Économie sociale familiale" }
         ]
     },
     {
