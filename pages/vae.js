@@ -1042,8 +1042,9 @@ export default function VAE() {
                         <div className="space-y-5">
                           {domaine.categories.map((categorie, catIndex) => (
                             <div key={catIndex} className="mb-5">
-                              <div className="bg-gradient-to-r from-[#013F63] to-[#012a4a] rounded-lg px-4 py-2.5 mb-4 shadow-md">
-                                <h5 className="text-sm font-bold text-white uppercase tracking-wide">
+                              <div className="flex items-center gap-2 mb-4">
+                                <div className="h-1 w-8 bg-orange-500 rounded-full"></div>
+                                <h5 className="text-base font-bold text-[#013F63]">
                                   {categorie.nom}
                                 </h5>
                               </div>
