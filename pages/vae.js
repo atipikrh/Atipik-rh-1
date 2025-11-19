@@ -392,19 +392,9 @@ export default function VAE() {
     {
       id: 1,
       titre: "Personnel paramédical",
-        niveau3: [
-          { code: "35301", nom: "TP Auxiliaire en prothèse dentaire" }
-        ],
         niveau4: [
           { code: "35830", nom: "Diplôme d'État Aide-soignant (DEAS)" },
-          { code: "35832", nom: "Diplôme d'État Auxiliaire de puériculture (DEAP)" },
-          { code: "36805", nom: "TP Secrétaire assistant médico-social" },
-          { code: "36805", nom: "TP Technicien d'équipement d'aide à la personne" },
-          { code: "36805", nom: "TP Technicien en montage et vente d'optique-lunetterie" }
-        ],
-        niveau5: [
-          { code: "38360", nom: "BTS Opticien-lunetier" },
-          { code: "36939", nom: "BTS Services et prestations des secteurs sanitaire et social" }
+          { code: "35832", nom: "Diplôme d'État Auxiliaire de puériculture (DEAP)" }
         ]
     },
     {
@@ -432,8 +422,7 @@ export default function VAE() {
         ],
         niveau5: [
           { code: "40695", nom: "TP Médiateur numérique" },
-        { code: "40695", nom: "BTS Économie sociale familiale" },
-          { code: "36939", nom: "BTS Services et prestations des secteurs sanitaire et social" }
+        { code: "40695", nom: "BTS Économie sociale familiale" }
         ]
     },
     {
