@@ -1039,12 +1039,14 @@ export default function VAE() {
                     <div className="p-4">
                       {/* Affichage avec catégories */}
                       {domaine.categories ? (
-                        <div className="space-y-4">
+                        <div className="space-y-5">
                           {domaine.categories.map((categorie, catIndex) => (
-                            <div key={catIndex} className="mb-4">
-                              <h5 className="text-sm font-bold text-[#013F63] mb-3 pb-2 border-b border-gray-200">
-                                {categorie.nom} :
-                              </h5>
+                            <div key={catIndex} className="mb-5">
+                              <div className="bg-gradient-to-r from-[#013F63] to-[#012a4a] rounded-lg px-4 py-2.5 mb-4 shadow-md">
+                                <h5 className="text-sm font-bold text-white uppercase tracking-wide">
+                                  {categorie.nom}
+                                </h5>
+                              </div>
                               
                               {/* Niveau 3 */}
                               {categorie.niveau3 && categorie.niveau3.length > 0 && (
