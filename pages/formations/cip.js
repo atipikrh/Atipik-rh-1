@@ -999,7 +999,7 @@ export default function FormationCIP() {
                         {/* Section contenu avec fond blanc */}
                         <div className="bg-white px-6 py-1 flex-grow flex items-center">
                           <p className="text-[#013F63] text-sm leading-relaxed">
-                            Une équipe de formateurs issue du terrain du milieu de la formation et de la transmission, avec une expertise reconnue dans l'accompagnement professionnel et l'insertion.
+                            Une équipe de formateurs issue du terrain, avec une expertise reconnue dans l'accompagnement professionnel et l'insertion.
                           </p>
                         </div>
                         </div>
