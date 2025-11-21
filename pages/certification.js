@@ -93,15 +93,15 @@ export default function Certification() {
                   </div>
                 </div>
 
-                <div className="text-center mt-8">
-                  <a
+                <div className="mt-8 flex justify-start">
+                  <Link
                     href="/images/certifications/Atipikrh-fiche-complete-accessibilite.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     Consultez notre charte accessibilité
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
