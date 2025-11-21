@@ -12,10 +12,12 @@ import {
   Euro, 
   Clock, 
   CheckCircle, 
+  Mail,
   Award,
   BookOpen,
   ChevronDown, 
   ChevronUp, 
+  ExternalLink, 
   UserCheck,
   ArrowRight,
   ChevronLeft,
@@ -1017,58 +1019,57 @@ export default function VAE() {
               </div>
 
               <div className="grid lg:grid-cols-3 gap-6">
-                {domainesCertification.map((domaine, index) => {
-                  const totalCertifications = domaine.categories
-                    ? domaine.categories.reduce((total, cat) => 
-                        total + (cat.niveau3?.length || 0) + (cat.niveau4?.length || 0) + (cat.niveau5?.length || 0), 0)
-                    : (domaine.niveau3?.length || 0) + (domaine.niveau4?.length || 0) + (domaine.niveau5?.length || 0)
-
-                  return (
-                    <div key={domaine.id} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 flex flex-col justify-between hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                      <div className="flex items-center justify-between mb-6">
-                        <div>
-                          <h3 className="text-xl font-bold text-[#013F63]">{domaine.titre}</h3>
-                          <p className="text-sm text-[#013F63]/80 mt-1">
-                            {totalCertifications} certification{totalCertifications > 1 ? 's' : ''}
-                          </p>
-                        </div>
-                        <div className="w-10 h-10 bg-[#013F63] text-white rounded-full flex items-center justify-center font-bold">
-                          {index + 1}
-                        </div>
+                {domainesCertification.map((domaine, index) => (
+                  <div key={domaine.id} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 flex flex-col justify-between hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                    <div className="flex items-center justify-between mb-6">
+                      <h3 className="text-xl font-bold text-[#013F63]">{domaine.titre}</h3>
+                      <div className="w-10 h-10 bg-[#013F63] text-white rounded-full flex items-center justify-center font-bold">
+                        {index + 1}
                       </div>
-
-                      {domaine.categories && (
-                        <div className="space-y-2">
-                          {domaine.categories.map((categorie, catIndex) => (
-                            <div key={catIndex} className="flex items-center gap-2 text-[#013F63] text-sm">
-                              <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
-                              <span>{categorie.nom}</span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
                     </div>
-                  )
-                })}
+
+                    {domaine.categories && (
+                      <div className="space-y-2">
+                        {domaine.categories.map((categorie, catIndex) => (
+                          <div key={catIndex} className="flex items-center gap-2 text-[#013F63] text-sm">
+                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
+                            <span>{categorie.nom}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
 
               {/* Call to action */}
               <div className="text-center mt-12">
                 <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-2xl mx-auto">
                   <h3 className="text-xl font-bold text-[#013F63] mb-4">
-                    Votre certification n'apparaît pas dans cette liste ?
+                    En savoir +
                   </h3>
                   <p className="text-[#013F63] mb-6">
                     Contactez-nous pour étudier ensemble la faisabilité de votre projet VAE.<br/>
                     Nous vous orientons vers les solutions les plus adaptées.
                   </p>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 px-8 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-colors shadow-lg hover:shadow-xl"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                    En savoir +
-                  </Link>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-colors"
+                    >
+                      <Mail className="w-4 h-4" />
+                      Nous contacter
+                    </Link>
+                    <a
+                      href="https://vae.gouv.fr/espace-candidat/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold rounded-full transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Rechercher sur France VAE
+                    </a>
+                  </div>
                 </div>
               </div>
               </div>
