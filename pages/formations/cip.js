@@ -506,6 +506,10 @@ export default function FormationCIP() {
                       <div>
                         <p className="font-semibold mb-0.5 text-base">Niveau de sortie :</p>
                         <p className="text-blue-100 text-sm">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37274/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37274</a></p>
+                        <p className="text-blue-200 text-xs mt-1">
+                          Date d'enregistrement : 23-03-2023<br />
+                          Date d'échéance de l'enregistrement : 23-03-2028
+                        </p>
                     </div>
                 </div>
 
