@@ -598,6 +598,11 @@ export default function VAE() {
                         <p className="text-[#013F63] text-sm leading-relaxed">
                           La VAE est accessible sans exigence de durée minimale d'expérience.
                         </p>
+                        <div className="mt-4 bg-blue-50/80 border-l-4 border-orange-500 rounded-lg p-3">
+                          <p className="text-[#013F63] text-xs leading-relaxed italic">
+                            Le cas échéant, certains prérequis spécifiques peuvent être exigés en fonction des diplômes visés.
+                          </p>
+                        </div>
                               </div>
                             )}
                           </div>
