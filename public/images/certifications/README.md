@@ -4,7 +4,7 @@ Ce dossier contient les logos officiels des certifications d'Atipik RH.
 
 ## Logos à déposer :
 
-- **qualiopi.png** - Logo officiel Qualiopi
+- **Logo-qualiopi-2025.png** - Logo officiel Qualiopi (version 2025)
 - **datadock.png** - Logo officiel Datadock  
 - **cpf.png** - Logo officiel Mon Compte Formation (CPF)
 

@@ -122,7 +122,7 @@ export default function Certification() {
                         title="Voir le certificat Qualiopi (PDF)"
                       >
                         <Image 
-                          src="/images/certifications/qualiopi.png" 
+                          src="/images/certifications/Logo-qualiopi-2025.png" 
                           alt="Logo Qualiopi - Cliquez pour voir le certificat"
                           width={250}
                           height={250}
