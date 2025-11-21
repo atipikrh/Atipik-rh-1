@@ -812,7 +812,7 @@ export default function BilanCompetences() {
                 Données <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">ATIPIK RH</span>
               </h2>
               <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
-                Les chiffres clés de nos bilans reflètent l’engagement de nos équipes.
+                Les chiffres clés de nos bilans reflètent l’engagement de notre équipe.
               </p>
             </div>
 
