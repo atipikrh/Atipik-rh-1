@@ -803,6 +803,42 @@ export default function BilanCompetences() {
         </div>
       </section>
 
+      {/* Données ATIPIK RH */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
+                Données <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">ATIPIK RH</span>
+              </h2>
+              <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
+                Les chiffres clés de nos bilans reflètent l’engagement de nos équipes.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
+                <div className="text-4xl font-bold text-[#013F63] mb-3">
+                  95
+                </div>
+                <p className="text-sm text-[#013F63] font-semibold uppercase tracking-wide">
+                  Nombre de bilans réalisés
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
+                <div className="text-4xl font-bold text-[#013F63] mb-3">
+                  9,7/10
+                </div>
+                <p className="text-sm text-[#013F63] font-semibold uppercase tracking-wide">
+                  Taux de satisfaction
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
         <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
