@@ -66,8 +66,8 @@ export default function Footer() {
               
               {/* Logos certifications */}
               <div className="flex space-x-4 items-center">
-                <Image
-                  src="/images/certifications/logo-qualiopi.jpg"
+                <Image 
+                  src="/images/certifications/qualiopi.png" 
                   alt="Certification Qualiopi - Atipik RH" 
                   width={80} 
                   height={80}
