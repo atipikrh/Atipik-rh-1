@@ -1014,7 +1014,7 @@ export default function VAE() {
                   Nos <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">domaines d'expertise</span>
                   </h2>
                 <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
-                  Nous proposons un accompagnement uniquement sur cette sélection de certifications.
+                  Nous proposons un accompagnement uniquement sur cette sélection de domaines d'expertise.
                 </p>
               </div>
 
