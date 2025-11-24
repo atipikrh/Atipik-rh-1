@@ -30,7 +30,7 @@ export default function SInscrire() {
     { date: '2025-10-23', jour: 'Jeudi 23 Octobre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
     { date: '2025-11-06', jour: 'Jeudi 6 Novembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
     { date: '2025-11-22', jour: 'Samedi 22 Novembre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' },
-    { date: '2025-12-06', jour: 'Samedi 6 Décembre 2025', heure: '11h30 - 13h30', modalite: 'présentiel' },
+    { date: '2025-12-08', jour: 'Lundi 8 Décembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
     { date: '2026-01-08', jour: 'Jeudi 8 Janvier 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
     { date: '2026-01-17', jour: 'Samedi 17 Janvier 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
     { date: '2026-02-07', jour: 'Samedi 7 Février 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
