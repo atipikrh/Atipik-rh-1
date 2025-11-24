@@ -45,7 +45,9 @@ export default function SInscrire() {
     { date: '2025-10-25', jour: 'Samedi 25 Octobre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' },
     { date: '2025-11-08', jour: 'Samedi 8 Novembre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' },
     { date: '2025-11-20', jour: 'Jeudi 20 Novembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
-    { date: '2025-12-06', jour: 'Samedi 6 Décembre 2025', heure: '10h00 - 12h00', modalite: 'présentiel' }
+    { date: '2025-12-06', jour: 'Samedi 6 Décembre 2025', heure: '10h00 - 12h00', modalite: 'présentiel' },
+    { date: '2025-12-11', jour: 'Jeudi 11 Décembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-01-05', jour: 'Lundi 5 Janvier 2026', heure: '12h30 - 14h30', modalite: 'distanciel' }
   ]
 
   // Dates à afficher selon la formation sélectionnée (filtrées automatiquement)
