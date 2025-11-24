@@ -170,11 +170,8 @@ export default function SInscrire() {
                     </p>
                     
                     <div className="bg-blue-50 rounded-lg p-6 mb-6">
-                      <h3 className="font-semibold text-[#013F63] mb-2">Prochaines étapes :</h3>
                       <ul className="text-sm text-[#013F63] space-y-1">
                         <li>• Confirmation par email dans les 24h</li>
-                        <li>• Rappel 48h avant la réunion</li>
-                        <li>• Envoi du plan d'accès et informations pratiques</li>
                       </ul>
                     </div>
                     
