@@ -63,7 +63,7 @@ export default function ReunionInfoModal() {
           <div className="p-8">
             {/* En-tête avec police Brittany */}
             <div className="text-center mb-6">
-              <h3 className="font-brittany text-4xl text-[#013F63] mb-3 leading-tight">
+              <h3 className="font-brittany text-4xl text-[#013F63] mb-3 leading-tight whitespace-nowrap">
                 Découvrez notre formation
               </h3>
               <div className="w-24 h-1 bg-[#FE6400] mx-auto mb-3 rounded-full"></div>
