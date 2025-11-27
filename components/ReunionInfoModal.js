@@ -82,15 +82,15 @@ export default function ReunionInfoModal() {
               height: '320px',
             }}
           >
-            {/* Corps de l'enveloppe - rectangle principal avec coins arrondis subtils */}
+            {/* Corps de l'enveloppe - rectangle principal en haut */}
             <div 
-              className="absolute bottom-0 left-0 right-0 bg-[#FE6400] shadow-2xl"
+              className="absolute top-0 left-0 right-0 bg-[#FE6400] shadow-2xl"
               style={{ 
                 height: '280px',
-                borderRadius: '0 0 4px 4px',
-                boxShadow: '0 10px 40px rgba(254, 100, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -1px 0 rgba(0,0,0,0.1)',
+                borderRadius: '4px 4px 0 0',
+                boxShadow: '0 10px 40px rgba(254, 100, 0, 0.5), inset 0 -1px 0 rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.2)',
                 border: '2px solid rgba(0,0,0,0.2)',
-                borderTop: 'none',
+                borderBottom: 'none',
                 borderLeft: '2px solid rgba(0,0,0,0.15)',
                 borderRight: '2px solid rgba(0,0,0,0.15)'
               }}
@@ -98,49 +98,49 @@ export default function ReunionInfoModal() {
               {/* Lignes de pliage verticales pour effet réaliste */}
               <div className="absolute top-0 bottom-0 left-0 w-1 bg-black/8"></div>
               <div className="absolute top-0 bottom-0 right-0 w-1 bg-black/8"></div>
-              {/* Ligne de pliage horizontale en bas */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/12"></div>
+              {/* Ligne de pliage horizontale en haut */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-black/12"></div>
               {/* Ombres internes pour profondeur */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/5 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-transparent pointer-events-none"></div>
             </div>
 
-            {/* Rabat triangulaire de l'enveloppe - forme reconnaissable avec coins arrondis */}
+            {/* Rabat triangulaire de l'enveloppe en bas - forme reconnaissable */}
             <div 
-              className="absolute top-0 left-0 right-0 bg-[#FE6400] origin-top transition-all duration-1200 ease-out"
+              className="absolute bottom-0 left-0 right-0 bg-[#FE6400] origin-bottom transition-all duration-1200 ease-out"
               style={{ 
                 height: isClosing ? '260px' : (flapOpen ? '0px' : '260px'),
                 clipPath: isClosing 
-                  ? 'polygon(0% 0%, 100% 0%, 50% 100%, 0% 0%)'
+                  ? 'polygon(0% 100%, 100% 100%, 50% 0%, 0% 100%)'
                   : (flapOpen 
-                    ? 'polygon(0% 0%, 100% 0%, 50% 0%)' 
-                    : 'polygon(0% 0%, 100% 0%, 50% 100%, 0% 0%)'),
+                    ? 'polygon(0% 100%, 100% 100%, 50% 100%)' 
+                    : 'polygon(0% 100%, 100% 100%, 50% 0%, 0% 100%)'),
                 transform: isClosing 
                   ? 'rotateX(0deg) translateY(0px)' 
-                  : (flapOpen ? 'rotateX(180deg) translateY(-20px)' : 'rotateX(0deg)'),
+                  : (flapOpen ? 'rotateX(-180deg) translateY(20px)' : 'rotateX(0deg)'),
                 transformStyle: 'preserve-3d',
                 boxShadow: isClosing 
-                  ? '0 4px 12px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -1px 0 rgba(0,0,0,0.15)' 
+                  ? '0 -4px 12px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(255,255,255,0.2), inset 0 1px 0 rgba(0,0,0,0.15)' 
                   : (flapOpen 
                     ? 'none' 
-                    : '0 4px 12px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -1px 0 rgba(0,0,0,0.15)'),
+                    : '0 -4px 12px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(255,255,255,0.2), inset 0 1px 0 rgba(0,0,0,0.15)'),
                 zIndex: flapOpen ? 0 : 3,
                 border: '2px solid rgba(0,0,0,0.2)',
-                borderBottom: 'none',
+                borderTop: 'none',
                 borderLeft: '2px solid rgba(0,0,0,0.15)',
                 borderRight: '2px solid rgba(0,0,0,0.15)',
-                borderRadius: '4px 4px 0 0'
+                borderRadius: '0 0 4px 4px'
               }}
             >
               {/* Ligne de pliage au centre du rabat (point du triangle) */}
               <div 
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-full bg-black/12"
+                className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-full bg-black/12"
                 style={{ 
                   display: flapOpen ? 'none' : 'block',
-                  clipPath: 'polygon(0% 0%, 100% 0%, 50% 100%)'
+                  clipPath: 'polygon(0% 100%, 100% 100%, 50% 0%)'
                 }}
               />
               {/* Ombres pour effet 3D */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/8 pointer-events-none" style={{ display: flapOpen ? 'none' : 'block' }}></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-black/8 pointer-events-none" style={{ display: flapOpen ? 'none' : 'block' }}></div>
             </div>
           </div>
 
@@ -155,10 +155,10 @@ export default function ReunionInfoModal() {
               maxWidth: '380px',
               minHeight: '500px',
               top: isClosing 
-                ? '280px' 
+                ? '40px' 
                 : letterOut 
-                  ? `${-50 + (letterProgress / 100) * 330}px` 
-                  : '280px',
+                  ? `${-50 + (letterProgress / 100) * 90}px` 
+                  : '40px',
               zIndex: letterOut ? 10 : 1,
               borderRadius: '0',
               boxShadow: '0 4px 20px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.9)',
