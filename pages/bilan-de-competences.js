@@ -205,8 +205,10 @@ export default function BilanCompetences() {
                   </div>
                 </div>
 
-                {/* Section Public visé et prérequis en frise */}
-                <div className="w-full lg:w-96 flex-shrink-0">
+                {/* Accordéons à droite */}
+                <div className="w-full lg:w-96 flex-shrink-0 space-y-4">
+                  
+                  {/* Section Public visé et prérequis en frise */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6">
                     <h3 className="text-xl font-bold text-[#013F63] mb-6 text-center font-brittany">
                       Public visé et prérequis
@@ -254,7 +256,6 @@ export default function BilanCompetences() {
                       </div>
                     </div>
                   </div>
-                </div>
 
                   {/* Programme */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
