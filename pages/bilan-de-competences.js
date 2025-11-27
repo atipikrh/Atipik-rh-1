@@ -262,7 +262,15 @@ export default function BilanCompetences() {
                     </button>
                     {openModules['modalites'] && (
                       <div className="p-6 border-t border-gray-100">
-                        {/* Timeline verticale */}
+                        {/* Réglementaires - Format simple */}
+                        <div className="mb-6 pb-6 border-b border-gray-200">
+                          <h4 className="font-bold text-base mb-2 text-[#013F63]">Réglementaires :</h4>
+                          <p className="text-[#013F63] text-sm leading-relaxed">
+                            Le bilan de compétences est une démarche volontaire et individuelle
+                          </p>
+                        </div>
+
+                        {/* Timeline verticale pour les étapes */}
                         <div className="relative pl-6">
                           {/* Ligne verticale */}
                           <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gray-200">
@@ -272,21 +280,6 @@ export default function BilanCompetences() {
                           {/* Étapes */}
                           <div className="space-y-10 relative">
                             
-                            {/* Réglementaires */}
-                            <div className="flex items-start gap-5">
-                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
-                                <Shield className="w-6 h-6 text-white" />
-                              </div>
-                              <div className="flex-grow pt-0.5">
-                                <h4 className="text-orange-500 font-bold text-base mb-3 uppercase tracking-tight">
-                                  Réglementaires
-                                </h4>
-                                <p className="text-[#013F63] text-sm leading-relaxed">
-                                  Le bilan de compétences est une démarche volontaire et individuelle
-                                </p>
-                              </div>
-                            </div>
-
                             {/* Étape 1 : Rendez-vous initial */}
                             <div className="flex items-start gap-5">
                               <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
