@@ -119,6 +119,25 @@
     }
   }
   
+  /* Animation élégante pour le popup modal */
+  @keyframes modalEnter {
+    0% {
+      opacity: 0;
+      transform: scale(0.85) translateY(30px) rotate(-2deg);
+    }
+    50% {
+      transform: scale(1.02) translateY(-2px) rotate(0.5deg);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0) rotate(0deg);
+    }
+  }
+  
+  .animate-modal-enter {
+    animation: modalEnter 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  
   /* Gradient personnalisé pour les backgrounds */
   .bg-gradient-atipik {
     background: linear-gradient(135deg, var(--color-neutral-100) 0%, var(--color-white) 100%);
