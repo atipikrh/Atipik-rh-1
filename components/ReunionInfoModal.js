@@ -5,33 +5,10 @@ import { X, ArrowRight } from 'lucide-react'
 export default function ReunionInfoModal() {
   const [isVisible, setIsVisible] = useState(false)
   const [isClosing, setIsClosing] = useState(false)
-  const [letterOut, setLetterOut] = useState(false)
-  const [flapOpen, setFlapOpen] = useState(false)
-  const [letterProgress, setLetterProgress] = useState(0) // 0 à 100 pour la progression
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true)
-      // Ouvrir le rabat puis faire sortir la lettre progressivement
-      setTimeout(() => {
-        setFlapOpen(true)
-        // Animation progressive de la lettre qui sort petit à petit
-        setTimeout(() => {
-          setLetterOut(true)
-          // Animation progressive sur 2 secondes
-          const startTime = Date.now()
-          const duration = 2000
-          const animate = () => {
-            const elapsed = Date.now() - startTime
-            const progress = Math.min((elapsed / duration) * 100, 100)
-            setLetterProgress(progress)
-            if (progress < 100) {
-              requestAnimationFrame(animate)
-            }
-          }
-          requestAnimationFrame(animate)
-        }, 600)
-      }, 400)
     }, 2000)
 
     return () => clearTimeout(timer)
@@ -40,14 +17,11 @@ export default function ReunionInfoModal() {
   const handleClose = (e) => {
     e.preventDefault()
     e.stopPropagation()
-    setLetterOut(false)
-    setLetterProgress(0)
-    setFlapOpen(false)
     setIsClosing(true)
     setTimeout(() => {
       setIsVisible(false)
       setIsClosing(false)
-    }, 900)
+    }, 300)
   }
 
   if (!isVisible) return null
@@ -56,229 +30,112 @@ export default function ReunionInfoModal() {
     <>
       {/* Overlay */}
       <div 
-        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] transition-opacity duration-700 ${
+        className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-[9999] transition-opacity duration-300 ${
           isClosing ? 'opacity-0' : 'opacity-100'
         }`}
         onClick={handleClose}
       />
       
-      {/* Container principal */}
+      {/* Modal */}
       <div 
         className={`fixed inset-0 z-[10000] flex items-center justify-center p-4 ${
           isClosing ? 'pointer-events-none' : 'pointer-events-auto'
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative w-full max-w-md">
-          {/* Enveloppe orange - design réaliste et reconnaissable, format portrait */}
-          <div 
-            className={`
-              relative mx-auto
-              ${isClosing ? 'animate-envelope-close' : 'animate-envelope-enter'}
-            `}
-            style={{ 
-              width: '100%',
-              maxWidth: '400px',
-              height: '320px',
-            }}
+        <div 
+          className={`
+            relative bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden
+            transform transition-all duration-300
+            ${isClosing ? 'opacity-0 scale-95 translate-y-4' : 'opacity-100 scale-100 translate-y-0'}
+          `}
+        >
+          {/* Bouton fermer */}
+          <button
+            onClick={handleClose}
+            className="absolute top-4 right-4 p-2 bg-white/90 hover:bg-white text-gray-500 hover:text-[#013F63] rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:scale-110 z-10"
+            aria-label="Fermer"
           >
-            {/* Corps de l'enveloppe - rectangle principal en haut */}
-            <div 
-              className="absolute top-0 left-0 right-0 bg-[#FE6400] shadow-2xl"
-              style={{ 
-                height: '280px',
-                borderRadius: '4px 4px 0 0',
-                boxShadow: '0 10px 40px rgba(254, 100, 0, 0.5), inset 0 -1px 0 rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.2)',
-                border: '2px solid rgba(0,0,0,0.2)',
-                borderBottom: 'none',
-                borderLeft: '2px solid rgba(0,0,0,0.15)',
-                borderRight: '2px solid rgba(0,0,0,0.15)'
-              }}
-            >
-              {/* Lignes de pliage verticales pour effet réaliste */}
-              <div className="absolute top-0 bottom-0 left-0 w-1 bg-black/8"></div>
-              <div className="absolute top-0 bottom-0 right-0 w-1 bg-black/8"></div>
-              {/* Ligne de pliage horizontale en haut */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-black/12"></div>
-              {/* Ombres internes pour profondeur */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-transparent pointer-events-none"></div>
-            </div>
+            <X className="w-5 h-5" />
+          </button>
 
-            {/* Rabat triangulaire de l'enveloppe en bas - forme reconnaissable */}
-            <div 
-              className="absolute bottom-0 left-0 right-0 bg-[#FE6400] origin-bottom transition-all duration-1200 ease-out"
-              style={{ 
-                height: isClosing ? '260px' : (flapOpen ? '0px' : '260px'),
-                clipPath: isClosing 
-                  ? 'polygon(0% 100%, 100% 100%, 50% 0%, 0% 100%)'
-                  : (flapOpen 
-                    ? 'polygon(0% 100%, 100% 100%, 50% 100%)' 
-                    : 'polygon(0% 100%, 100% 100%, 50% 0%, 0% 100%)'),
-                transform: isClosing 
-                  ? 'rotateX(0deg) translateY(0px)' 
-                  : (flapOpen ? 'rotateX(-180deg) translateY(20px)' : 'rotateX(0deg)'),
-                transformStyle: 'preserve-3d',
-                boxShadow: isClosing 
-                  ? '0 -4px 12px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(255,255,255,0.2), inset 0 1px 0 rgba(0,0,0,0.15)' 
-                  : (flapOpen 
-                    ? 'none' 
-                    : '0 -4px 12px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(255,255,255,0.2), inset 0 1px 0 rgba(0,0,0,0.15)'),
-                zIndex: flapOpen ? 0 : 3,
-                border: '2px solid rgba(0,0,0,0.2)',
-                borderTop: 'none',
-                borderLeft: '2px solid rgba(0,0,0,0.15)',
-                borderRight: '2px solid rgba(0,0,0,0.15)',
-                borderRadius: '0 0 4px 4px'
-              }}
-            >
-              {/* Ligne de pliage au centre du rabat (point du triangle) */}
-              <div 
-                className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-full bg-black/12"
-                style={{ 
-                  display: flapOpen ? 'none' : 'block',
-                  clipPath: 'polygon(0% 100%, 100% 100%, 50% 0%)'
-                }}
-              />
-              {/* Ombres pour effet 3D */}
-              <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-black/8 pointer-events-none" style={{ display: flapOpen ? 'none' : 'block' }}></div>
-            </div>
-          </div>
-
-          {/* Lettre qui sort de l'enveloppe progressivement - effet feuille de papier réaliste */}
-          <div 
-            className={`
-              absolute left-1/2 bg-white shadow-2xl
-              ${isClosing ? 'animate-letter-close' : ''}
-            `}
-            style={{
-              width: 'calc(100% - 2rem)',
-              maxWidth: '380px',
-              minHeight: '500px',
-              top: isClosing 
-                ? '40px' 
-                : letterOut 
-                  ? `${-50 + (letterProgress / 100) * 90}px` 
-                  : '40px',
-              zIndex: letterOut ? 10 : 1,
-              borderRadius: '0',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.9)',
-              border: '1px solid rgba(0,0,0,0.08)',
-              background: 'linear-gradient(to bottom, #ffffff 0%, #fafafa 100%)',
-              transform: isClosing 
-                ? 'translateX(-50%) translateY(160px) scale(0.85) rotate(-1deg)'
-                : letterOut
-                  ? `translateX(-50%) translateY(${160 - (letterProgress / 100) * 160}px) scale(${0.88 + (letterProgress / 100) * 0.12}) rotate(${-1.5 + (letterProgress / 100) * 1.5}deg)`
-                  : 'translateX(-50%) translateY(160px) scale(0.88) rotate(-1.5deg)',
-              opacity: isClosing 
-                ? 0 
-                : letterOut 
-                  ? Math.min(letterProgress / 100, 1)
-                  : 0,
-              transition: isClosing ? 'all 0.8s ease-out' : 'none'
-            }}
-          >
-            {/* Bouton fermer - plus visible */}
-            <button
-              onClick={handleClose}
-              className="absolute top-2 right-2 p-2 bg-white/90 hover:bg-white text-gray-600 hover:text-[#013F63] rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 z-50 border border-gray-200"
-              aria-label="Fermer"
-              style={{ zIndex: 9999 }}
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            {/* Lignes de papier réalistes avec effet feuille */}
-            <div className="absolute top-16 left-6 right-6 bottom-6 pointer-events-none">
-              {/* Lignes horizontales */}
-              <div className="absolute top-0 left-0 right-0 h-px bg-gray-200/60"></div>
-              <div className="absolute top-6 left-0 right-0 h-px bg-gray-200/60"></div>
-              <div className="absolute top-12 left-0 right-0 h-px bg-gray-200/60"></div>
-              <div className="absolute top-18 left-0 right-0 h-px bg-gray-200/60"></div>
-              <div className="absolute top-24 left-0 right-0 h-px bg-gray-200/60"></div>
-              {/* Marge gauche */}
-              <div className="absolute top-0 bottom-0 left-0 w-px bg-red-200/40"></div>
-              {/* Ombres subtiles pour effet relief */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50/20 pointer-events-none"></div>
-            </div>
-
-            {/* Contenu de la lettre - format compact */}
-            <div className="p-5 pt-6 relative z-0">
-              {/* En-tête avec police Brittany */}
-              <div className="text-center mb-4">
-                <h3 className="font-brittany text-3xl text-[#013F63] mb-2 leading-tight">
-                  Invitation
-                </h3>
-                <div className="w-20 h-px bg-[#FE6400] mx-auto mb-2"></div>
-                <p className="text-xs text-gray-600 font-medium font-sans">
-                  Réunion d'information collective
-                </p>
-                <p className="text-xs text-[#FE6400] mt-1 font-medium font-sans">
-                  Gratuite • Sans engagement
-                </p>
-              </div>
-
-              {/* Introduction avec Montserrat - plus compact */}
-              <div className="mb-4">
-                <p className="text-xs text-gray-700 leading-relaxed text-center font-sans">
-                  <span className="font-semibold text-[#013F63]">Vanessa</span>, notre directrice, vous invite à découvrir notre formation lors d'une réunion où elle vous présentera :
-                </p>
-              </div>
-              
-              {/* Liste avec Montserrat - en 2 colonnes sur grand écran */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
-                <div className="flex items-start gap-2">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#FE6400]"></div>
-                  </div>
-                  <span className="text-xs text-gray-700 leading-relaxed font-sans">Notre équipe pédagogique</span>
-                </div>
-                
-                <div className="flex items-start gap-2">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#FE6400]"></div>
-                  </div>
-                  <span className="text-xs text-gray-700 leading-relaxed font-sans">Le contenu détaillé de la formation</span>
-                </div>
-                
-                <div className="flex items-start gap-2">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#FE6400]"></div>
-                  </div>
-                  <span className="text-xs text-gray-700 leading-relaxed font-sans">Notre approche pédagogique au plus près du réel</span>
-                </div>
-                
-                <div className="flex items-start gap-2">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#FE6400]"></div>
-                  </div>
-                  <span className="text-xs text-gray-700 leading-relaxed font-sans">Les débouchés professionnels</span>
-                </div>
-                
-                <div className="flex items-start gap-2 md:col-span-2">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#FE6400]"></div>
-                  </div>
-                  <span className="text-xs text-gray-700 leading-relaxed font-sans">Les différentes possibilités de financement</span>
-                </div>
-              </div>
-
-              {/* Bouton CTA - couleur unie */}
-              <Link
-                href="/s-inscrire"
-                onClick={handleClose}
-                className="group relative block w-full overflow-hidden rounded-lg bg-[#013F63] hover:bg-[#012a4a] text-white font-medium py-3 px-4 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.01] text-center text-sm font-sans"
-              >
-                <span className="relative flex items-center justify-center gap-2">
-                  <span>S'inscrire à une réunion</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
-              </Link>
-
-              {/* Footer */}
-              <p className="text-xs text-gray-400 text-center mt-3 font-sans">
-                Durée : 2h • Organisées régulièrement
+          {/* Contenu */}
+          <div className="p-8">
+            {/* En-tête avec police Brittany */}
+            <div className="text-center mb-6">
+              <h3 className="font-brittany text-4xl text-[#013F63] mb-3 leading-tight">
+                Découvrez notre formation
+              </h3>
+              <div className="w-24 h-1 bg-[#FE6400] mx-auto mb-3 rounded-full"></div>
+              <p className="text-sm text-gray-600 font-medium font-sans">
+                Réunion d'information collective
+              </p>
+              <p className="text-xs text-[#FE6400] mt-2 font-medium font-sans">
+                Gratuite • Sans engagement
               </p>
             </div>
+
+            {/* Introduction */}
+            <div className="mb-6">
+              <p className="text-sm text-gray-700 leading-relaxed text-center font-sans">
+                <span className="font-semibold text-[#013F63]">Vanessa</span>, notre directrice, vous invite à découvrir notre formation lors d'une réunion où elle vous présentera :
+              </p>
+            </div>
+            
+            {/* Liste */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-2 h-2 rounded-full bg-[#FE6400]"></div>
+                </div>
+                <span className="text-sm text-gray-700 leading-relaxed font-sans">Notre équipe pédagogique</span>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-2 h-2 rounded-full bg-[#FE6400]"></div>
+                </div>
+                <span className="text-sm text-gray-700 leading-relaxed font-sans">Le contenu détaillé de la formation</span>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-2 h-2 rounded-full bg-[#FE6400]"></div>
+                </div>
+                <span className="text-sm text-gray-700 leading-relaxed font-sans">Notre approche pédagogique au plus près du réel : avec des projets collaboratifs</span>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-2 h-2 rounded-full bg-[#FE6400]"></div>
+                </div>
+                <span className="text-sm text-gray-700 leading-relaxed font-sans">Les débouchés professionnels</span>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-2 h-2 rounded-full bg-[#FE6400]"></div>
+                </div>
+                <span className="text-sm text-gray-700 leading-relaxed font-sans">Les différentes possibilités de financement</span>
+              </div>
+            </div>
+
+            {/* Bouton CTA */}
+            <Link
+              href="/s-inscrire"
+              onClick={handleClose}
+              className="group relative block w-full overflow-hidden rounded-2xl bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold py-4 px-6 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] text-center text-sm font-sans"
+            >
+              <span className="relative flex items-center justify-center gap-2">
+                <span>S'inscrire à une réunion</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
+            </Link>
+
+            {/* Footer */}
+            <p className="text-xs text-gray-400 text-center mt-5 font-sans">
+              Durée : 2h • Organisées régulièrement
+            </p>
           </div>
         </div>
       </div>
