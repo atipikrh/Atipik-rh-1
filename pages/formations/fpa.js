@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import ReunionInfoModal from '../../components/ReunionInfoModal'
 
 import { 
   Award, 
@@ -1800,6 +1801,8 @@ export default function FormationFPA() {
         </div>
 
         <Footer />
+
+        <ReunionInfoModal />
 
       </div>
     </>

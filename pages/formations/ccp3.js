@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import ReunionInfoModal from '../../components/ReunionInfoModal'
 
 import { Clock, Users, MapPin, Calendar, GraduationCap, CheckCircle, ArrowRight, CreditCard, BookOpen, Target, Award, Phone, Mail, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, UserCheck } from 'lucide-react'
 import Image from 'next/image'
@@ -1912,6 +1913,8 @@ export default function FormationCCP3() {
 
 
         <Footer />
+
+        <ReunionInfoModal />
 
       </div>
     </>
