@@ -285,7 +285,7 @@ export default function BilanCompetences() {
                               <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">1</span>
                               </div>
-                              <div className="flex-grow pt-0.5">
+                              <div className="flex-grow">
                                 <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
                                   Rendez-vous initial
                                 </h4>
@@ -307,7 +307,7 @@ export default function BilanCompetences() {
                               <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">2</span>
                               </div>
-                              <div className="flex-grow pt-0.5">
+                              <div className="flex-grow">
                                 <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
                                   Financement et délais d'accès
                                 </h4>
@@ -375,7 +375,7 @@ export default function BilanCompetences() {
                               <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">3</span>
                               </div>
-                              <div className="flex-grow pt-0.5">
+                              <div className="flex-grow">
                                 <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
                                   Début du bilan
                                 </h4>
