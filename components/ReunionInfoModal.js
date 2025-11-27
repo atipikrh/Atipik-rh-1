@@ -62,14 +62,14 @@ export default function ReunionInfoModal() {
             style={{ 
               width: '100%',
               maxWidth: '600px',
-              height: '180px',
+              height: '240px',
             }}
           >
             {/* Corps de l'enveloppe (fond) - couleur unie orange */}
             <div 
               className="absolute bottom-0 left-0 right-0 bg-[#FE6400] rounded-lg shadow-2xl"
               style={{ 
-                height: '150px',
+                height: '200px',
                 borderRadius: '0.5rem 0.5rem 0 0',
                 boxShadow: '0 20px 60px rgba(254, 100, 0, 0.3)'
               }}
@@ -79,7 +79,7 @@ export default function ReunionInfoModal() {
             <div 
               className="absolute top-0 left-0 right-0 bg-[#FE6400] rounded-t-lg origin-top transition-all duration-1200 ease-out"
               style={{ 
-                height: isClosing ? '130px' : (flapOpen ? '0px' : '130px'),
+                height: isClosing ? '180px' : (flapOpen ? '0px' : '180px'),
                 clipPath: isClosing 
                   ? 'polygon(0% 0%, 100% 0%, 50% 100%, 0% 0%)'
                   : (flapOpen 
@@ -103,14 +103,14 @@ export default function ReunionInfoModal() {
                 ? 'animate-letter-close' 
                 : (letterOut 
                   ? 'animate-letter-out' 
-                  : 'translate-x-[-50%] translate-y-[100px] opacity-0 scale-0.88')
+                  : 'translate-x-[-50%] translate-y-[120px] opacity-0 scale-0.88')
               }
             `}
             style={{
               width: 'calc(100% - 2rem)',
               maxWidth: '580px',
               minHeight: '380px',
-              top: letterOut ? '-50px' : '80px',
+              top: letterOut ? '-50px' : '140px',
               zIndex: letterOut ? 10 : 1,
             }}
           >
@@ -200,7 +200,7 @@ export default function ReunionInfoModal() {
                 className="group relative block w-full overflow-hidden rounded-lg bg-[#013F63] hover:bg-[#012a4a] text-white font-medium py-3 px-4 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.01] text-center text-sm font-sans"
               >
                 <span className="relative flex items-center justify-center gap-2">
-                  <span>Répondre à l'invitation</span>
+                  <span>S'inscrire à une réunion</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </Link>
