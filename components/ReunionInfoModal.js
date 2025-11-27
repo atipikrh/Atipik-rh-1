@@ -53,7 +53,7 @@ export default function ReunionInfoModal() {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="relative w-full max-w-2xl">
-          {/* Enveloppe orange - visible dès le début, format large */}
+          {/* Enveloppe orange - visible dès le début, format large et réaliste */}
           <div 
             className={`
               relative mx-auto
@@ -65,19 +65,27 @@ export default function ReunionInfoModal() {
               height: '240px',
             }}
           >
-            {/* Corps de l'enveloppe (fond) - couleur unie orange */}
+            {/* Corps de l'enveloppe (fond) - couleur unie orange avec effet papier */}
             <div 
-              className="absolute bottom-0 left-0 right-0 bg-[#FE6400] rounded-lg shadow-2xl"
+              className="absolute bottom-0 left-0 right-0 bg-[#FE6400] shadow-2xl"
               style={{ 
                 height: '200px',
-                borderRadius: '0.5rem 0.5rem 0 0',
-                boxShadow: '0 20px 60px rgba(254, 100, 0, 0.3)'
+                borderRadius: '0',
+                boxShadow: '0 8px 32px rgba(254, 100, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.1)',
+                border: '1px solid rgba(254, 100, 0, 0.8)',
+                borderBottom: 'none'
               }}
-            />
+            >
+              {/* Ligne de pliage au centre */}
+              <div 
+                className="absolute bottom-0 left-0 right-0 h-px bg-black/10"
+                style={{ bottom: '0px' }}
+              />
+            </div>
 
-            {/* Rabat de l'enveloppe qui s'ouvre - animation plus prononcée */}
+            {/* Rabat de l'enveloppe qui s'ouvre - design réaliste */}
             <div 
-              className="absolute top-0 left-0 right-0 bg-[#FE6400] rounded-t-lg origin-top transition-all duration-1200 ease-out"
+              className="absolute top-0 left-0 right-0 bg-[#FE6400] origin-top transition-all duration-1200 ease-out"
               style={{ 
                 height: isClosing ? '180px' : (flapOpen ? '0px' : '180px'),
                 clipPath: isClosing 
@@ -89,16 +97,22 @@ export default function ReunionInfoModal() {
                   ? 'rotateX(0deg) translateY(0px)' 
                   : (flapOpen ? 'rotateX(180deg) translateY(-15px)' : 'rotateX(0deg)'),
                 transformStyle: 'preserve-3d',
-                boxShadow: isClosing ? '0 4px 20px rgba(0,0,0,0.2)' : (flapOpen ? 'none' : '0 4px 20px rgba(0,0,0,0.2)'),
-                zIndex: flapOpen ? 0 : 3
+                boxShadow: isClosing 
+                  ? '0 2px 8px rgba(0,0,0,0.15), inset 0 -1px 0 rgba(0,0,0,0.1)' 
+                  : (flapOpen 
+                    ? 'none' 
+                    : '0 2px 8px rgba(0,0,0,0.15), inset 0 -1px 0 rgba(0,0,0,0.1)'),
+                zIndex: flapOpen ? 0 : 3,
+                border: '1px solid rgba(254, 100, 0, 0.8)',
+                borderBottom: 'none'
               }}
             />
           </div>
 
-          {/* Lettre qui sort de l'enveloppe - format large et moins haut */}
+          {/* Lettre qui sort de l'enveloppe - effet feuille de papier réaliste */}
           <div 
             className={`
-              absolute left-1/2 bg-white rounded-lg shadow-2xl border border-gray-200
+              absolute left-1/2 bg-white shadow-2xl
               ${isClosing 
                 ? 'animate-letter-close' 
                 : (letterOut 
@@ -112,6 +126,10 @@ export default function ReunionInfoModal() {
               minHeight: '380px',
               top: letterOut ? '-50px' : '140px',
               zIndex: letterOut ? 10 : 1,
+              borderRadius: '0',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.9)',
+              border: '1px solid rgba(0,0,0,0.08)',
+              background: 'linear-gradient(to bottom, #ffffff 0%, #fafafa 100%)'
             }}
           >
             {/* Bouton fermer - plus visible */}
@@ -124,12 +142,18 @@ export default function ReunionInfoModal() {
               <X className="w-5 h-5" />
             </button>
 
-            {/* Lignes de papier réalistes */}
-            <div className="absolute top-16 left-6 right-6 bottom-6 pointer-events-none opacity-30">
-              <div className="absolute top-0 left-0 right-0 h-px bg-gray-300"></div>
-              <div className="absolute top-6 left-0 right-0 h-px bg-gray-300"></div>
-              <div className="absolute top-12 left-0 right-0 h-px bg-gray-300"></div>
-              <div className="absolute top-[72px] left-0 right-0 h-px bg-gray-300"></div>
+            {/* Lignes de papier réalistes avec effet feuille */}
+            <div className="absolute top-16 left-6 right-6 bottom-6 pointer-events-none">
+              {/* Lignes horizontales */}
+              <div className="absolute top-0 left-0 right-0 h-px bg-gray-200/60"></div>
+              <div className="absolute top-6 left-0 right-0 h-px bg-gray-200/60"></div>
+              <div className="absolute top-12 left-0 right-0 h-px bg-gray-200/60"></div>
+              <div className="absolute top-18 left-0 right-0 h-px bg-gray-200/60"></div>
+              <div className="absolute top-24 left-0 right-0 h-px bg-gray-200/60"></div>
+              {/* Marge gauche */}
+              <div className="absolute top-0 bottom-0 left-0 w-px bg-red-200/40"></div>
+              {/* Ombres subtiles pour effet relief */}
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50/20 pointer-events-none"></div>
             </div>
 
             {/* Contenu de la lettre - format compact */}
