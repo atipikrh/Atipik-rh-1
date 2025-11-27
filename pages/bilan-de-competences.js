@@ -208,6 +208,111 @@ export default function BilanCompetences() {
                 {/* Accordéons à droite */}
                 <div className="w-full lg:w-96 flex-shrink-0 space-y-4">
                   
+                  {/* Public visé et prérequis */}
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                    <button
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      onClick={() => toggleModule('public')}
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">PUBLIC VISÉ ET PRÉREQUIS</h3>
+                      </div>
+                      {openModules['public'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openModules['public'] && (
+                      <div className="p-6 border-t border-gray-100">
+                        {/* Timeline verticale */}
+                        <div className="relative pl-6">
+                          {/* Ligne verticale */}
+                          <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gray-200">
+                            <div className="w-full h-full bg-orange-500 timeline-scroll-line"></div>
+                          </div>
+                          
+                          {/* Public visé */}
+                          <div className="flex items-start gap-5 mb-6">
+                            <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                              <Users className="w-6 h-6 text-white" />
+                            </div>
+                            <div className="flex-grow pt-0.5">
+                              <h4 className="text-orange-500 font-bold text-base mb-3 uppercase tracking-tight">
+                                Public visé
+                              </h4>
+                              <ul className="text-[#013F63] text-sm space-y-1.5 leading-relaxed">
+                                <li>• Demandeur d'emploi</li>
+                                <li>• Jeune de moins de 26 ans</li>
+                                <li>• Personne handicapée</li>
+                                <li>• Salarié(e)</li>
+                                <li>• Actif(ve) non salarié(e)</li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          {/* Prérequis */}
+                          <div className="flex items-start gap-5">
+                            <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                              <CheckCircle className="w-6 h-6 text-white" />
+                            </div>
+                            <div className="flex-grow pt-0.5">
+                              <h4 className="text-orange-500 font-bold text-base mb-3 uppercase tracking-tight">
+                                Prérequis
+                              </h4>
+                              <p className="text-[#013F63] text-sm leading-relaxed">
+                                Aucun
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Modalités et délais d'accès */}
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                    <button
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      onClick={() => toggleModule('modalites')}
+                    >
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-base font-bold text-[#013F63]">MODALITÉS ET DÉLAIS D'ACCÈS</h3>
+                      </div>
+                      {openModules['modalites'] ? (
+                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                    {openModules['modalites'] && (
+                      <div className="p-6 border-t border-gray-100">
+                        {/* Timeline verticale */}
+                        <div className="relative pl-6">
+                          {/* Ligne verticale */}
+                          <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gray-200">
+                            <div className="w-full h-full bg-orange-500 timeline-scroll-line"></div>
+                          </div>
+                          
+                          {/* Réglementaires */}
+                          <div className="flex items-start gap-5">
+                            <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                              <Shield className="w-6 h-6 text-white" />
+                            </div>
+                            <div className="flex-grow pt-0.5">
+                              <h4 className="text-orange-500 font-bold text-base mb-3 uppercase tracking-tight">
+                                Réglementaires
+                              </h4>
+                              <p className="text-[#013F63] text-sm leading-relaxed">
+                                Le bilan de compétences est une démarche volontaire et individuelle
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
                   {/* Programme */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
@@ -309,97 +414,6 @@ export default function BilanCompetences() {
 
           {/* Espacement entre les sections */}
           <div className="py-8"></div>
-
-          {/* Section Public visé et prérequis en frise */}
-          <section className="pt-8 pb-12">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8">
-                  <h2 className="text-2xl font-bold text-[#013F63] mb-10 text-center font-brittany">
-                    Public visé et prérequis
-                  </h2>
-                  
-                  {/* Timeline verticale */}
-                  <div className="relative pl-6">
-                    {/* Ligne verticale */}
-                    <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gray-200">
-                      <div className="w-full h-full bg-orange-500 timeline-scroll-line"></div>
-                    </div>
-                    
-                    {/* Public visé */}
-                    <div className="flex items-start gap-5 mb-6">
-                      <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
-                        <Users className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="flex-grow pt-0.5">
-                        <h4 className="text-orange-500 font-bold text-base mb-3 uppercase tracking-tight">
-                          Public visé
-                        </h4>
-                        <ul className="text-[#013F63] text-sm space-y-1.5 leading-relaxed">
-                          <li>• Demandeur d'emploi</li>
-                          <li>• Jeune de moins de 26 ans</li>
-                          <li>• Personne handicapée</li>
-                          <li>• Salarié(e)</li>
-                          <li>• Actif(ve) non salarié(e)</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    {/* Prérequis */}
-                    <div className="flex items-start gap-5">
-                      <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
-                        <CheckCircle className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="flex-grow pt-0.5">
-                        <h4 className="text-orange-500 font-bold text-base mb-3 uppercase tracking-tight">
-                          Prérequis
-                        </h4>
-                        <p className="text-[#013F63] text-sm leading-relaxed">
-                          Aucun
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Section Modalités et délais d'accès en frise */}
-          <section className="pt-8 pb-12">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8">
-                  <h2 className="text-2xl font-bold text-[#013F63] mb-10 text-center font-brittany">
-                    Modalités et délais d'accès
-                  </h2>
-                  
-                  {/* Timeline verticale */}
-                  <div className="relative pl-6">
-                    {/* Ligne verticale */}
-                    <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gray-200">
-                      <div className="w-full h-full bg-orange-500 timeline-scroll-line"></div>
-                    </div>
-                    
-                    {/* Réglementaires */}
-                    <div className="flex items-start gap-5">
-                      <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
-                        <Shield className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="flex-grow pt-0.5">
-                        <h4 className="text-orange-500 font-bold text-base mb-3 uppercase tracking-tight">
-                          Réglementaires
-                        </h4>
-                        <p className="text-[#013F63] text-sm leading-relaxed">
-                          Le bilan de compétences est une démarche volontaire et individuelle
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
 
           {/* Section 3 étapes du processus */}
           <section className="pt-8 pb-12">
