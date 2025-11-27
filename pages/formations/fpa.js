@@ -501,7 +501,7 @@ export default function FormationFPA() {
                       <div>
                         <p className="font-semibold mb-0.5 text-base">Niveau de sortie :</p>
                         <p className="text-blue-100 text-sm mb-1">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37275/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37275</a></p>
-                        <p className="text-blue-100 text-xs">Date de début des parcours certifiants : 29-04-2023 • Date d'échéance de l'enregistrement : 29-04-2028</p>
+                        <p className="text-blue-100 text-xs">Date de début des parcours certifiants : 29-04-2023 Date d'échéance de l'enregistrement : 29-04-2028</p>
                     </div>
                 </div>
 
