@@ -1757,6 +1757,12 @@ export default function FormationCIP() {
                   </div>
                 </div>
 
+                {/* Note de mise à jour */}
+                <div className="text-center mt-8">
+                  <p className="text-gray-500 text-sm italic">
+                    Ces données ont été mises à jour en novembre 2025 et font l'objet d'une actualisation annuelle.
+                  </p>
+                </div>
 
               </div>
             </div>
