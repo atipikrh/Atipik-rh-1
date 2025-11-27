@@ -138,6 +138,26 @@
     animation: modalEnter 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
   
+  /* Animation de la lettre qui sort de l'enveloppe */
+  @keyframes letterSlideOut {
+    0% {
+      transform: translateX(-50%) translateY(60px) scale(0.9);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(-50%) translateY(-5px) scale(1.01);
+      opacity: 0.9;
+    }
+    100% {
+      transform: translateX(-50%) translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .animate-letter-out {
+    animation: letterSlideOut 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  
   /* Gradient personnalisé pour les backgrounds */
   .bg-gradient-atipik {
     background: linear-gradient(135deg, var(--color-neutral-100) 0%, var(--color-white) 100%);
