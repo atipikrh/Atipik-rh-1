@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+// Bilan de compétences - Modifications appliquées
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '../components/Header';
