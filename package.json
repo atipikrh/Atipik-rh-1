@@ -33,5 +33,6 @@
   },
   "engines": {
     "node": "18.x"
-  }
+  },
+  "//": "Build trigger - all modifications applied"
 }
