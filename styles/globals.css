@@ -189,6 +189,42 @@
     animation: envelopeEnter 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
   
+  /* Animation de fermeture de l'enveloppe */
+  @keyframes envelopeClose {
+    0% {
+      opacity: 1;
+      transform: scale(1) translateY(0) rotate(0deg);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.85) translateY(30px) rotate(2deg);
+    }
+  }
+  
+  .animate-envelope-close {
+    animation: envelopeClose 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
+  }
+  
+  /* Animation de fermeture de la lettre */
+  @keyframes letterClose {
+    0% {
+      transform: translateX(-50%) translateY(0) scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-50%) translateY(40px) scale(0.95) rotate(-0.5deg);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateX(-50%) translateY(100px) scale(0.85) rotate(-1deg);
+      opacity: 0;
+    }
+  }
+  
+  .animate-letter-close {
+    animation: letterClose 0.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
+  }
+  
   /* Gradient personnalisé pour les backgrounds */
   .bg-gradient-atipik {
     background: linear-gradient(135deg, var(--color-neutral-100) 0%, var(--color-white) 100%);

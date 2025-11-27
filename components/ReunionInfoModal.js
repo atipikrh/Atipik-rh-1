@@ -21,14 +21,16 @@ export default function ReunionInfoModal() {
     return () => clearTimeout(timer)
   }, [])
 
-  const handleClose = () => {
+  const handleClose = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
     setLetterOut(false)
     setFlapOpen(false)
     setIsClosing(true)
     setTimeout(() => {
       setIsVisible(false)
       setIsClosing(false)
-    }, 800)
+    }, 900)
   }
 
   if (!isVisible) return null
@@ -55,7 +57,7 @@ export default function ReunionInfoModal() {
           <div 
             className={`
               relative mx-auto
-              ${isClosing ? 'opacity-0 scale-90 transition-all duration-500' : 'animate-envelope-enter'}
+              ${isClosing ? 'animate-envelope-close' : 'animate-envelope-enter'}
             `}
             style={{ 
               width: '100%',
@@ -77,13 +79,17 @@ export default function ReunionInfoModal() {
             <div 
               className="absolute top-0 left-0 right-0 bg-[#FE6400] rounded-t-lg origin-top transition-all duration-1200 ease-out"
               style={{ 
-                height: flapOpen ? '0px' : '130px',
-                clipPath: flapOpen 
-                  ? 'polygon(0% 0%, 100% 0%, 50% 0%)' 
-                  : 'polygon(0% 0%, 100% 0%, 50% 100%, 0% 0%)',
-                transform: flapOpen ? 'rotateX(180deg) translateY(-15px)' : 'rotateX(0deg)',
+                height: isClosing ? '130px' : (flapOpen ? '0px' : '130px'),
+                clipPath: isClosing 
+                  ? 'polygon(0% 0%, 100% 0%, 50% 100%, 0% 0%)'
+                  : (flapOpen 
+                    ? 'polygon(0% 0%, 100% 0%, 50% 0%)' 
+                    : 'polygon(0% 0%, 100% 0%, 50% 100%, 0% 0%)'),
+                transform: isClosing 
+                  ? 'rotateX(0deg) translateY(0px)' 
+                  : (flapOpen ? 'rotateX(180deg) translateY(-15px)' : 'rotateX(0deg)'),
                 transformStyle: 'preserve-3d',
-                boxShadow: flapOpen ? 'none' : '0 4px 20px rgba(0,0,0,0.2)',
+                boxShadow: isClosing ? '0 4px 20px rgba(0,0,0,0.2)' : (flapOpen ? 'none' : '0 4px 20px rgba(0,0,0,0.2)'),
                 zIndex: flapOpen ? 0 : 3
               }}
             />
@@ -93,11 +99,12 @@ export default function ReunionInfoModal() {
           <div 
             className={`
               absolute left-1/2 bg-white rounded-lg shadow-2xl border border-gray-200
-              ${letterOut 
-                ? 'animate-letter-out' 
-                : 'translate-x-[-50%] translate-y-[100px] opacity-0 scale-0.88'
+              ${isClosing 
+                ? 'animate-letter-close' 
+                : (letterOut 
+                  ? 'animate-letter-out' 
+                  : 'translate-x-[-50%] translate-y-[100px] opacity-0 scale-0.88')
               }
-              ${isClosing ? 'translate-x-[-50%] translate-y-[100px] opacity-0 scale-0.88 transition-all duration-500' : ''}
             `}
             style={{
               width: 'calc(100% - 2rem)',
@@ -107,13 +114,14 @@ export default function ReunionInfoModal() {
               zIndex: letterOut ? 10 : 1,
             }}
           >
-            {/* Bouton fermer */}
+            {/* Bouton fermer - plus visible */}
             <button
               onClick={handleClose}
-              className="absolute top-3 right-3 p-1.5 text-gray-400 hover:text-[#013F63] hover:bg-[#FFDEC1]/30 rounded-full transition-all duration-300 z-10"
+              className="absolute top-2 right-2 p-2 bg-white/90 hover:bg-white text-gray-600 hover:text-[#013F63] rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 z-50 border border-gray-200"
               aria-label="Fermer"
+              style={{ zIndex: 9999 }}
             >
-              <X className="w-4 h-4" />
+              <X className="w-5 h-5" />
             </button>
 
             {/* Lignes de papier réalistes */}
@@ -125,7 +133,7 @@ export default function ReunionInfoModal() {
             </div>
 
             {/* Contenu de la lettre - format compact */}
-            <div className="p-5 pt-6 relative z-10">
+            <div className="p-5 pt-6 relative z-0">
               {/* En-tête avec police Brittany */}
               <div className="text-center mb-4">
                 <h3 className="font-brittany text-3xl text-[#013F63] mb-2 leading-tight">
