@@ -7,14 +7,30 @@ export default function ReunionInfoModal() {
   const [isClosing, setIsClosing] = useState(false)
   const [letterOut, setLetterOut] = useState(false)
   const [flapOpen, setFlapOpen] = useState(false)
+  const [letterProgress, setLetterProgress] = useState(0) // 0 à 100 pour la progression
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true)
-      // Ouvrir le rabat puis faire sortir la lettre - animations plus longues
+      // Ouvrir le rabat puis faire sortir la lettre progressivement
       setTimeout(() => {
         setFlapOpen(true)
-        setTimeout(() => setLetterOut(true), 800) // Plus de délai pour voir l'ouverture
+        // Animation progressive de la lettre qui sort petit à petit
+        setTimeout(() => {
+          setLetterOut(true)
+          // Animation progressive sur 2 secondes
+          const startTime = Date.now()
+          const duration = 2000
+          const animate = () => {
+            const elapsed = Date.now() - startTime
+            const progress = Math.min((elapsed / duration) * 100, 100)
+            setLetterProgress(progress)
+            if (progress < 100) {
+              requestAnimationFrame(animate)
+            }
+          }
+          requestAnimationFrame(animate)
+        }, 600)
       }, 400)
     }, 2000)
 
@@ -25,6 +41,7 @@ export default function ReunionInfoModal() {
     e.preventDefault()
     e.stopPropagation()
     setLetterOut(false)
+    setLetterProgress(0)
     setFlapOpen(false)
     setIsClosing(true)
     setTimeout(() => {
@@ -52,8 +69,8 @@ export default function ReunionInfoModal() {
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative w-full max-w-2xl">
-          {/* Enveloppe orange - design réaliste et reconnaissable */}
+        <div className="relative w-full max-w-md">
+          {/* Enveloppe orange - design réaliste et reconnaissable, format portrait */}
           <div 
             className={`
               relative mx-auto
@@ -61,15 +78,15 @@ export default function ReunionInfoModal() {
             `}
             style={{ 
               width: '100%',
-              maxWidth: '600px',
-              height: '240px',
+              maxWidth: '400px',
+              height: '320px',
             }}
           >
             {/* Corps de l'enveloppe - rectangle principal avec coins arrondis subtils */}
             <div 
               className="absolute bottom-0 left-0 right-0 bg-[#FE6400] shadow-2xl"
               style={{ 
-                height: '200px',
+                height: '280px',
                 borderRadius: '0 0 4px 4px',
                 boxShadow: '0 10px 40px rgba(254, 100, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -1px 0 rgba(0,0,0,0.1)',
                 border: '2px solid rgba(0,0,0,0.2)',
@@ -91,7 +108,7 @@ export default function ReunionInfoModal() {
             <div 
               className="absolute top-0 left-0 right-0 bg-[#FE6400] origin-top transition-all duration-1200 ease-out"
               style={{ 
-                height: isClosing ? '180px' : (flapOpen ? '0px' : '180px'),
+                height: isClosing ? '260px' : (flapOpen ? '0px' : '260px'),
                 clipPath: isClosing 
                   ? 'polygon(0% 0%, 100% 0%, 50% 100%, 0% 0%)'
                   : (flapOpen 
@@ -127,27 +144,37 @@ export default function ReunionInfoModal() {
             </div>
           </div>
 
-          {/* Lettre qui sort de l'enveloppe - effet feuille de papier réaliste */}
+          {/* Lettre qui sort de l'enveloppe progressivement - effet feuille de papier réaliste */}
           <div 
             className={`
               absolute left-1/2 bg-white shadow-2xl
-              ${isClosing 
-                ? 'animate-letter-close' 
-                : (letterOut 
-                  ? 'animate-letter-out' 
-                  : 'translate-x-[-50%] translate-y-[120px] opacity-0 scale-0.88')
-              }
+              ${isClosing ? 'animate-letter-close' : ''}
             `}
             style={{
               width: 'calc(100% - 2rem)',
-              maxWidth: '580px',
-              minHeight: '380px',
-              top: letterOut ? '-50px' : '140px',
+              maxWidth: '380px',
+              minHeight: '500px',
+              top: isClosing 
+                ? '280px' 
+                : letterOut 
+                  ? `${-50 + (letterProgress / 100) * 330}px` 
+                  : '280px',
               zIndex: letterOut ? 10 : 1,
               borderRadius: '0',
               boxShadow: '0 4px 20px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.9)',
               border: '1px solid rgba(0,0,0,0.08)',
-              background: 'linear-gradient(to bottom, #ffffff 0%, #fafafa 100%)'
+              background: 'linear-gradient(to bottom, #ffffff 0%, #fafafa 100%)',
+              transform: isClosing 
+                ? 'translateX(-50%) translateY(160px) scale(0.85) rotate(-1deg)'
+                : letterOut
+                  ? `translateX(-50%) translateY(${160 - (letterProgress / 100) * 160}px) scale(${0.88 + (letterProgress / 100) * 0.12}) rotate(${-1.5 + (letterProgress / 100) * 1.5}deg)`
+                  : 'translateX(-50%) translateY(160px) scale(0.88) rotate(-1.5deg)',
+              opacity: isClosing 
+                ? 0 
+                : letterOut 
+                  ? Math.min(letterProgress / 100, 1)
+                  : 0,
+              transition: isClosing ? 'all 0.8s ease-out' : 'none'
             }}
           >
             {/* Bouton fermer - plus visible */}
