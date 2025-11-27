@@ -598,6 +598,21 @@ export default function BilanCompetences() {
                     </div>
                   </div>
                 </div>
+
+                {/* Note importante */}
+                <div className="mt-6">
+                  <div className="bg-orange-100 border-l-4 border-orange-500 rounded-lg p-4 shadow-sm">
+                    <div className="flex items-start gap-3">
+                      <Lightbulb className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="text-orange-600 font-semibold text-sm mb-1">À noter :</p>
+                        <p className="text-[#013F63] text-sm leading-relaxed">
+                          Des objectifs complémentaires personnalisés peuvent être définis en fonction de votre profil et de vos besoins spécifiques.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 
               </div>
             </div>
