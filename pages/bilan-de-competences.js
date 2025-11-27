@@ -205,65 +205,56 @@ export default function BilanCompetences() {
                   </div>
                 </div>
 
-                {/* Accordéons à droite */}
-                <div className="w-full lg:w-96 flex-shrink-0 space-y-4">
-                  
-                  {/* Public visé */}
-                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
-                    <button
-                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
-                      onClick={() => toggleModule('public')}
-                    >
-                      <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">PUBLIC VISÉ</h3>
-                          </div>
-                      {openModules['public'] ? (
-                        <ChevronUp className="w-5 h-5 text-gray-600" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-600" />
-                      )}
-                    </button>
-                    {openModules['public'] && (
-                      <div className="p-3 border-t border-gray-100">
-                        <div className="space-y-2 text-[#013F63] text-sm">
-                          <p>• Demandeur d'emploi</p>
-                          <p>• Jeune de moins de 26 ans</p>
-                          <p>• Personne handicapée</p>
-                          <p>• Salarié(e)</p>
-                          <p>• Actif(ve) non salarié(e)</p>
+                {/* Section Public visé et prérequis en frise */}
+                <div className="w-full lg:w-96 flex-shrink-0">
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6">
+                    <h3 className="text-xl font-bold text-[#013F63] mb-6 text-center font-brittany">
+                      Public visé et prérequis
+                    </h3>
+                    
+                    {/* Timeline verticale */}
+                    <div className="relative pl-6">
+                      {/* Ligne verticale */}
+                      <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gray-200">
+                        <div className="w-full h-full bg-orange-500 timeline-scroll-line"></div>
+                      </div>
+                      
+                      {/* Public visé */}
+                      <div className="flex items-start gap-5 mb-6">
+                        <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                          <Users className="w-6 h-6 text-white" />
+                        </div>
+                        <div className="flex-grow pt-0.5">
+                          <h4 className="text-orange-500 font-bold text-base mb-3 uppercase tracking-tight">
+                            Public visé
+                          </h4>
+                          <ul className="text-[#013F63] text-sm space-y-1.5 leading-relaxed">
+                            <li>• Demandeur d'emploi</li>
+                            <li>• Jeune de moins de 26 ans</li>
+                            <li>• Personne handicapée</li>
+                            <li>• Salarié(e)</li>
+                            <li>• Actif(ve) non salarié(e)</li>
+                          </ul>
                         </div>
                       </div>
-                    )}
-                  </div>
 
-                  {/* Conditions d'accès */}
-                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
-                    <button
-                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
-                      onClick={() => toggleModule('conditions')}
-                    >
-                      <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">CONDITIONS D'ACCÈS</h3>
-                              </div>
-                      {openModules['conditions'] ? (
-                        <ChevronUp className="w-5 h-5 text-gray-600" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-600" />
-                      )}
-                    </button>
-                    {openModules['conditions'] && (
-                      <div className="p-3 border-t border-gray-100">
-                        <div className="space-y-2 text-[#013F63] text-sm">
-                          <p><strong>Réglementaires :</strong> Le bilan de compétences est une démarche volontaire et individuelle</p>
-                          <p><strong>Durée d'accès :</strong> Le délai d'accès peut aller jusqu'à 11 jours calendaires.</p>
-                          <p><strong>Prérequis pédagogiques :</strong> Aucun</p>
-                          <p><strong>Type de parcours :</strong> Individualisé</p>
-                          <p><strong>Parcours personnalisable :</strong> Oui</p>
-                          <p className="mt-2 text-orange-500 font-medium">L'ensemble des séances est réalisé de manière confidentielle et individuelle.</p>
+                      {/* Prérequis */}
+                      <div className="flex items-start gap-5">
+                        <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                          <CheckCircle className="w-6 h-6 text-white" />
+                        </div>
+                        <div className="flex-grow pt-0.5">
+                          <h4 className="text-orange-500 font-bold text-base mb-3 uppercase tracking-tight">
+                            Prérequis
+                          </h4>
+                          <p className="text-[#013F63] text-sm leading-relaxed">
+                            Aucun
+                          </p>
                         </div>
                       </div>
-                    )}
+                    </div>
                   </div>
+                </div>
 
                   {/* Programme */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
@@ -364,6 +355,163 @@ export default function BilanCompetences() {
             </div>
           </section>
 
+          {/* Espacement entre les sections */}
+          <div className="py-8"></div>
+
+          {/* Section Modalités et délais d'accès */}
+          <section className="pt-8 pb-12">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8">
+                  <h2 className="text-2xl font-bold text-[#013F63] mb-6 text-center font-brittany">
+                    Modalités et délais d'accès
+                  </h2>
+                  <div className="bg-blue-50/50 border-l-4 border-[#013F63] rounded-lg p-4">
+                    <p className="text-[#013F63] text-base leading-relaxed font-medium">
+                      <strong>Réglementaires :</strong> Le bilan de compétences est une démarche volontaire et individuelle
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 3 étapes du processus */}
+          <section className="pt-8 pb-12">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8">
+                  <h2 className="text-2xl font-bold text-[#013F63] mb-10 text-center font-brittany">
+                    Les étapes du processus :
+                  </h2>
+                  
+                  {/* Timeline verticale */}
+                  <div className="relative pl-6">
+                    {/* Ligne verticale */}
+                    <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gray-200">
+                      <div className="w-full h-full bg-orange-500 timeline-scroll-line"></div>
+                    </div>
+                    
+                    {/* Étapes */}
+                    <div className="space-y-10 relative">
+                      
+                      {/* Étape 1 : Rendez-vous initial */}
+                      <div className="flex items-start gap-5">
+                        <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                          <span className="text-white text-base font-bold">1</span>
+                        </div>
+                        <div className="flex-grow pt-0.5">
+                          <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
+                            Rendez-vous initial
+                          </h4>
+                          <p className="text-[#013F63] text-sm leading-relaxed mb-4">
+                            Nous vous proposons un rendez-vous gratuit et sans engagement pour échanger sur votre projet, vos objectifs et répondre à toutes vos questions sur le bilan de compétences.
+                          </p>
+                          <Link
+                            href="/contact"
+                            className="inline-flex items-center px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors text-sm"
+                          >
+                            Prendre rendez-vous
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Étape 2 : Financement et délais d'accès */}
+                      <div className="flex items-start gap-5">
+                        <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                          <span className="text-white text-base font-bold">2</span>
+                        </div>
+                        <div className="flex-grow pt-0.5">
+                          <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
+                            Financement et délais d'accès
+                          </h4>
+                          <p className="text-[#013F63] text-sm leading-relaxed mb-4">
+                            Selon le type de financement choisi, il y aura certaines durées d'accès à prendre en compte.
+                          </p>
+                          <div className="grid gap-3 mt-4">
+                            <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500">
+                              <div className="flex items-start gap-3">
+                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
+                                  <Image 
+                                    src="/images/financements/cpf.jpg" 
+                                    alt="CPF" 
+                                    width={40} 
+                                    height={40}
+                                    className="object-contain rounded"
+                                  />
+                                </div>
+                                <div className="flex-1">
+                                  <p className="font-semibold text-[#013F63] mb-1">Via le CPF</p>
+                                  <p className="text-[#013F63] text-sm leading-relaxed">Pensez à la période de rétractation de 11 jours calendaires.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-400">
+                              <div className="flex items-start gap-3">
+                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
+                                  <Image 
+                                    src="/images/financements/logo-opco.webp" 
+                                    alt="OPCO" 
+                                    width={40} 
+                                    height={40}
+                                    className="object-contain rounded"
+                                  />
+                                </div>
+                                <div className="flex-1">
+                                  <p className="font-semibold text-[#013F63] mb-1">Via l'OPCO</p>
+                                  <p className="text-[#013F63] text-sm leading-relaxed">Délai de traitement du dossier d'environ 2 mois.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#013F63]">
+                              <div className="flex items-start gap-3">
+                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
+                                  <Image 
+                                    src="/images/financements/logo entreprise.jpg" 
+                                    alt="Employeur" 
+                                    width={40} 
+                                    height={40}
+                                    className="object-contain rounded"
+                                  />
+                                </div>
+                                <div className="flex-1">
+                                  <p className="font-semibold text-[#013F63] mb-1">Via l'employeur ou fonds personnels</p>
+                                  <p className="text-[#013F63] text-sm leading-relaxed">Démarrage possible dès la signature du devis.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Étape 3 : Début du bilan */}
+                      <div className="flex items-start gap-5">
+                        <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                          <span className="text-white text-base font-bold">3</span>
+                        </div>
+                        <div className="flex-grow pt-0.5">
+                          <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
+                            Début du bilan
+                          </h4>
+                          <p className="text-[#013F63] text-sm leading-relaxed mb-4">
+                            Une fois le financement validé, nous planifions ensemble le démarrage de votre bilan de compétences personnalisé.
+                          </p>
+                          <div className="space-y-2 text-[#013F63] text-sm">
+                            <p><strong>Type de parcours :</strong> Individualisé</p>
+                            <p><strong>Parcours personnalisable :</strong> Oui</p>
+                            <p className="mt-3 text-orange-500 font-medium">L'ensemble des séances est réalisé de manière confidentielle et individuelle.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
           {/* Espacement entre les sections */}
           <div className="py-8"></div>
           
@@ -986,4 +1134,5 @@ export default function BilanCompetences() {
       <Footer />
     </>
   );
+} 
 } 
