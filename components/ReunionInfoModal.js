@@ -84,36 +84,36 @@ export default function ReunionInfoModal() {
             
             {/* Liste */}
             <div className="space-y-3 mb-6">
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 mt-1">
+              <div className="flex items-center gap-3">
+                <div className="flex-shrink-0">
                   <div className="w-2 h-2 rounded-full bg-[#FE6400]"></div>
                 </div>
                 <span className="text-sm text-gray-700 leading-relaxed font-sans">Notre équipe pédagogique</span>
               </div>
               
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 mt-1">
+              <div className="flex items-center gap-3">
+                <div className="flex-shrink-0">
                   <div className="w-2 h-2 rounded-full bg-[#FE6400]"></div>
                 </div>
                 <span className="text-sm text-gray-700 leading-relaxed font-sans">Le contenu détaillé de la formation</span>
               </div>
               
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 mt-1">
+              <div className="flex items-center gap-3">
+                <div className="flex-shrink-0">
                   <div className="w-2 h-2 rounded-full bg-[#FE6400]"></div>
                 </div>
                 <span className="text-sm text-gray-700 leading-relaxed font-sans">Notre approche pédagogique au plus près du réel : avec des projets collaboratifs</span>
               </div>
               
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 mt-1">
+              <div className="flex items-center gap-3">
+                <div className="flex-shrink-0">
                   <div className="w-2 h-2 rounded-full bg-[#FE6400]"></div>
                 </div>
                 <span className="text-sm text-gray-700 leading-relaxed font-sans">Les débouchés professionnels</span>
               </div>
               
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 mt-1">
+              <div className="flex items-center gap-3">
+                <div className="flex-shrink-0">
                   <div className="w-2 h-2 rounded-full bg-[#FE6400]"></div>
                 </div>
                 <span className="text-sm text-gray-700 leading-relaxed font-sans">Les différentes possibilités de financement</span>
