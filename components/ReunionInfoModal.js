@@ -15,13 +15,19 @@ export default function ReunionInfoModal() {
   }, [])
 
   const handleClose = (e) => {
-    e.preventDefault()
-    e.stopPropagation()
+    if (e) {
+      e.stopPropagation()
+    }
     setIsClosing(true)
     setTimeout(() => {
       setIsVisible(false)
       setIsClosing(false)
     }, 400)
+  }
+  
+  const handleLinkClick = (e) => {
+    // Ne pas empêcher la navigation, juste fermer le popup
+    handleClose()
   }
 
   if (!isVisible) return null
@@ -126,7 +132,7 @@ export default function ReunionInfoModal() {
             {/* Bouton CTA */}
             <Link
               href="/s-inscrire"
-              onClick={handleClose}
+              onClick={handleLinkClick}
               className="group relative block w-full overflow-hidden rounded-xl bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold py-4 md:py-3 px-6 md:px-5 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] text-center text-sm md:text-xs font-sans"
             >
               <span className="relative flex items-center justify-center gap-2">
