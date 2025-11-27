@@ -1135,4 +1135,3 @@ export default function BilanCompetences() {
     </>
   );
 } 
-} 
