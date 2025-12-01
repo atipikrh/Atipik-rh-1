@@ -166,11 +166,11 @@ export default function HomePage() {
                     {/* Texte à gauche */}
                     <div className="text-white space-y-3 max-w-xl">
                       {slide.isReunion ? (
-                        <h1 className="text-2xl lg:text-4xl font-bold leading-tight">
-                          <span className="font-brittany text-3xl lg:text-5xl text-orange-400 block mb-1">
+                        <h1 className="text-xl lg:text-3xl font-bold leading-tight text-white">
+                          <span className="font-brittany text-2xl lg:text-3xl mr-2">
                             Réunions d'information collective
                           </span>
-                          <span className="block">
+                          <span>
                             CIP &amp; FPA
                           </span>
                         </h1>
