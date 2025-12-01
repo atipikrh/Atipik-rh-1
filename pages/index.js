@@ -80,7 +80,7 @@ export default function HomePage() {
       id: 2,
       title: "Réunions d'information collective CIP & FPA",
       subtitle: "",
-      description: "Envie de devenir CIP ou FPA ? En 1h30, Vanessa, notre directrice, vous présente concrètement les formations et répond à toutes vos questions.",
+      description: "Vous envisagez une formation CIP ou FPA ? Vanessa, notre directrice, vous présente concrètement les parcours, le contenu des formations et répond à toutes vos questions.",
       buttonText: "",
       buttonLink: "",
       image: "/images/hero/reunion-info-2.jpeg",
