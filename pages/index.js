@@ -165,9 +165,20 @@ export default function HomePage() {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     {/* Texte à gauche */}
                     <div className="text-white space-y-3 max-w-xl">
-                      <h1 className="text-2xl lg:text-4xl font-bold leading-tight">
-                        {slide.title}
-                      </h1>
+                      {slide.isReunion ? (
+                        <h1 className="text-2xl lg:text-4xl font-bold leading-tight">
+                          <span className="font-brittany text-3xl lg:text-5xl text-orange-400 block mb-1">
+                            Réunions d'information collective
+                          </span>
+                          <span className="block">
+                            CIP &amp; FPA
+                          </span>
+                        </h1>
+                      ) : (
+                        <h1 className="text-2xl lg:text-4xl font-bold leading-tight">
+                          {slide.title}
+                        </h1>
+                      )}
                       {slide.subtitle && slide.subtitle.trim() !== "" && (
                         <p className="text-base lg:text-lg font-semibold opacity-95">
                           {slide.subtitle}
