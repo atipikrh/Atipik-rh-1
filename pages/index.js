@@ -170,7 +170,7 @@ export default function HomePage() {
                           <span className="font-brittany text-2xl lg:text-3xl block">
                             Réunions d'information collective
                           </span>
-                          <span className="block text-2xl lg:text-3xl tracking-wide mt-1">
+                          <span className="block text-3xl lg:text-4xl tracking-wide mt-1 text-orange-300">
                             CIP &amp; FPA
                           </span>
                         </h1>
