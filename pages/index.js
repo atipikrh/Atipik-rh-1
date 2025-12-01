@@ -78,9 +78,9 @@ export default function HomePage() {
     },
     {
       id: 2,
-      title: "Découvrez nos formations CIP et FPA lors de nos réunions d'information collective",
+      title: "Réunions d'information collective CIP & FPA",
       subtitle: "Gratuite • Sans engagement",
-      description: "Vanessa, notre directrice, vous présente :",
+      description: "Découvrez nos formations CIP et FPA lors d'un temps d'échange animé par Vanessa, notre directrice.",
       buttonText: "S'inscrire",
       buttonLink: "/s-inscrire",
       image: "/images/hero/reunion-info-2.jpeg",
@@ -138,7 +138,7 @@ export default function HomePage() {
           <Header isFixed={true} />
         
         {/* Bandeau déroulant (Carousel) - Style compact */}
-        <section className="relative h-[280px] lg:h-[320px] overflow-hidden rounded-lg mx-4 lg:mx-8 mt-24 shadow-2xl">
+        <section className="relative h-[360px] lg:h-[430px] overflow-hidden rounded-lg mx-4 lg:mx-8 mt-24 shadow-2xl">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
@@ -164,27 +164,27 @@ export default function HomePage() {
                 <div className="container mx-auto px-6 lg:px-12">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     {/* Texte à gauche */}
-                    <div className="text-white space-y-4">
+                    <div className="text-white space-y-3 max-w-xl">
                       <h1 className="text-2xl lg:text-4xl font-bold leading-tight">
                         {slide.title}
                       </h1>
                       {slide.subtitle && (
-                        <p className="text-lg lg:text-xl font-semibold opacity-95">
+                        <p className="text-base lg:text-lg font-semibold opacity-95">
                           {slide.subtitle}
                         </p>
                       )}
-                      <p className="text-base lg:text-lg opacity-90 leading-relaxed">
+                      <p className="text-sm lg:text-base opacity-90 leading-relaxed">
                         {slide.description}
                       </p>
                       {slide.isReunion && (
-                        <ul className="space-y-2 text-sm lg:text-base opacity-90 list-none pl-0">
+                        <ul className="space-y-1.5 text-sm lg:text-sm opacity-90 list-none pl-0">
                           <li className="flex items-start">
                             <span className="mr-2">•</span>
                             <span>Notre équipe pédagogique</span>
                           </li>
                           <li className="flex items-start">
                             <span className="mr-2">•</span>
-                            <span>Le contenu détaillé de la formation</span>
+                            <span>Le contenu détaillé des formations CIP et FPA</span>
                           </li>
                           <li className="flex items-start">
                             <span className="mr-2">•</span>
@@ -238,28 +238,20 @@ export default function HomePage() {
                         /* Fenêtre pour les réunions d'information collective */
                         <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-gray-800 max-w-sm shadow-xl">
                           <div className="text-center mb-4">
-                            <h3 className="text-xl font-bold mb-2 text-[#013F63]">Réunions d'information</h3>
-                            <p className="text-sm text-[#013F63] mb-4">
+                            <h3 className="text-xl font-bold mb-1 text-[#013F63]">Réunions d'information collective</h3>
+                            <p className="text-sm text-[#013F63]">
                               Formations CIP et FPA
                             </p>
+                            <p className="text-xs text-gray-600 mt-1">
+                              Gratuite • Sans engagement
+                            </p>
                           </div>
-                          <div className="space-y-3 mb-4">
-                            <Link
-                              href="/s-inscrire"
-                              className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg text-base"
-                            >
-                              S'inscrire
-                            </Link>
-                            <Link
-                              href="/s-inscrire"
-                              className="w-full inline-flex items-center justify-center px-6 py-3 bg-white border-2 border-orange-500 text-orange-500 font-semibold rounded-xl hover:bg-orange-50 transition-all duration-300 text-base"
-                            >
-                              Voir les dates
-                            </Link>
-                          </div>
-                          <p className="text-xs text-gray-600 text-center">
-                            Gratuite • Sans engagement
-                          </p>
+                          <Link
+                            href="/s-inscrire"
+                            className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg text-base"
+                          >
+                            S'inscrire
+                          </Link>
                         </div>
                       ) : null}
                     </div>
