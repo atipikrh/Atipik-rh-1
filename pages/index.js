@@ -79,10 +79,10 @@ export default function HomePage() {
     {
       id: 2,
       title: "Réunions d'information collective CIP & FPA",
-      subtitle: "Gratuite • Sans engagement",
+      subtitle: "",
       description: "Découvrez nos formations CIP et FPA lors d'un temps d'échange animé par Vanessa, notre directrice.",
-      buttonText: "S'inscrire",
-      buttonLink: "/s-inscrire",
+      buttonText: "",
+      buttonLink: "",
       image: "/images/hero/reunion-info-2.jpeg",
       isReunion: true
     },
@@ -168,7 +168,7 @@ export default function HomePage() {
                       <h1 className="text-2xl lg:text-4xl font-bold leading-tight">
                         {slide.title}
                       </h1>
-                      {slide.subtitle && (
+                      {slide.subtitle && slide.subtitle.trim() !== "" && (
                         <p className="text-base lg:text-lg font-semibold opacity-95">
                           {slide.subtitle}
                         </p>
@@ -200,7 +200,7 @@ export default function HomePage() {
                           </li>
                         </ul>
                       )}
-                      {!slide.isQuiz && (
+                      {!slide.isQuiz && !slide.isReunion && (
                         <a
                           href={slide.buttonLink}
                           className={`inline-flex items-center px-8 py-4 bg-white font-bold rounded-lg transition-all duration-300 shadow-xl text-base lg:text-lg mt-6 transform hover:scale-105 ${
@@ -238,10 +238,7 @@ export default function HomePage() {
                         /* Fenêtre pour les réunions d'information collective */
                         <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-gray-800 max-w-sm shadow-xl">
                           <div className="text-center mb-4">
-                            <h3 className="text-xl font-bold mb-1 text-[#013F63]">Réunions d'information collective</h3>
-                            <p className="text-sm text-[#013F63]">
-                              Formations CIP et FPA
-                            </p>
+                            <h3 className="text-xl font-bold mb-1 text-[#013F63]">Voir les prochaines dates de réunions</h3>
                             <p className="text-xs text-gray-600 mt-1">
                               Gratuite • Sans engagement
                             </p>
@@ -250,7 +247,7 @@ export default function HomePage() {
                             href="/s-inscrire"
                             className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg text-base"
                           >
-                            S'inscrire
+                            Voir les dates
                           </Link>
                         </div>
                       ) : null}
