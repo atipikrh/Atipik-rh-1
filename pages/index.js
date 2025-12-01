@@ -78,21 +78,13 @@ export default function HomePage() {
     },
     {
       id: 2,
-      title: "Réunions d'Information CIP",
-      subtitle: "Conseiller en Insertion Professionnelle (CIP)",
-      description: "Participez à nos réunions d'information pour découvrir la formation Conseiller en Insertion Professionnelle (CIP).",
-      buttonText: "Voir les dates",
-      buttonLink: "#reunions",
-      image: "/images/hero/reunion-info-2.jpeg"
-    },
-    {
-      id: 3,
-      title: "Réunions d'Information FPA",
-      subtitle: "Formateur Professionnel d'Adultes (FPA)",
-      description: "Découvrez la formation Formateur Professionnel d'Adultes (FPA) lors de nos réunions d'information dédiées.",
-      buttonText: "Voir les dates",
-      buttonLink: "#reunions",
-      image: "/images/hero/reunion-info.jpg"
+      title: "Découvrez nos formations CIP et FPA lors de nos réunions d'information collective",
+      subtitle: "Gratuite • Sans engagement",
+      description: "Vanessa, notre directrice, vous présente :",
+      buttonText: "S'inscrire",
+      buttonLink: "/s-inscrire",
+      image: "/images/hero/reunion-info-2.jpeg",
+      isReunion: true
     },
     {
       id: 4,
@@ -176,19 +168,50 @@ export default function HomePage() {
                       <h1 className="text-2xl lg:text-4xl font-bold leading-tight">
                         {slide.title}
                       </h1>
+                      {slide.subtitle && (
+                        <p className="text-lg lg:text-xl font-semibold opacity-95">
+                          {slide.subtitle}
+                        </p>
+                      )}
                       <p className="text-base lg:text-lg opacity-90 leading-relaxed">
                         {slide.description}
                       </p>
+                      {slide.isReunion && (
+                        <ul className="space-y-2 text-sm lg:text-base opacity-90 list-none pl-0">
+                          <li className="flex items-start">
+                            <span className="mr-2">•</span>
+                            <span>Notre équipe pédagogique</span>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="mr-2">•</span>
+                            <span>Le contenu détaillé de la formation</span>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="mr-2">•</span>
+                            <span>Notre approche pédagogique au plus près du réel</span>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="mr-2">•</span>
+                            <span>Les débouchés professionnels</span>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="mr-2">•</span>
+                            <span>Les possibilités de financement</span>
+                          </li>
+                        </ul>
+                      )}
                       {!slide.isQuiz && (
                         <a
-                          href={slide.id === 2 || slide.id === 3 ? '/s-inscrire' : slide.buttonLink}
-                          className={`inline-flex items-center px-6 py-3 bg-white font-semibold rounded-lg transition-all duration-300 shadow-lg text-sm lg:text-base mt-4 ${
-                            slide.id === 2 || slide.id === 4 
+                          href={slide.buttonLink}
+                          className={`inline-flex items-center px-8 py-4 bg-white font-bold rounded-lg transition-all duration-300 shadow-xl text-base lg:text-lg mt-6 transform hover:scale-105 ${
+                            slide.isReunion
+                              ? 'text-orange-500 hover:bg-orange-50' 
+                              : slide.id === 4
                               ? 'text-[#013F63] hover:bg-blue-50' 
                               : 'text-orange-500 hover:bg-orange-50'
                           }`}
                         >
-                          {slide.id === 2 || slide.id === 3 ? "S'inscrire" : slide.buttonText}
+                          {slide.buttonText}
                         </a>
                       )}
                     </div>
@@ -211,45 +234,32 @@ export default function HomePage() {
                             </Link>
                           </div>
                         </div>
-                      ) : slide.id === 2 ? (
-                        /* Fenêtre pour les réunions CIP */
-                        <div className="bg-white/90 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-gray-800 max-w-sm">
-                          <h3 className="text-lg font-bold mb-3 text-[#013F63]">Prochaines dates CIP</h3>
-                          <div className="space-y-2 text-sm">
-                            {prochainesDatesCIP.map((reunion, index) => (
-                              <div key={index} className="flex justify-between">
-                                <span className="text-[#013F63]">
-                                  {formatDateForDisplay(reunion.jour)}
-                                </span>
-                                <span className="font-medium text-[#013F63]">
-                                  {reunion.heure.split(' - ')[0]}
-                                </span>
-                              </div>
-                            ))}
+                      ) : slide.isReunion ? (
+                        /* Fenêtre pour les réunions d'information collective */
+                        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-gray-800 max-w-sm shadow-xl">
+                          <div className="text-center mb-4">
+                            <h3 className="text-xl font-bold mb-2 text-[#013F63]">Réunions d'information</h3>
+                            <p className="text-sm text-[#013F63] mb-4">
+                              Formations CIP et FPA
+                            </p>
                           </div>
-                          <div className="mt-4 text-xs text-[#013F63]">
-                            Atipik RH - Lormont
+                          <div className="space-y-3 mb-4">
+                            <Link
+                              href="/s-inscrire"
+                              className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg text-base"
+                            >
+                              S'inscrire
+                            </Link>
+                            <Link
+                              href="/s-inscrire"
+                              className="w-full inline-flex items-center justify-center px-6 py-3 bg-white border-2 border-orange-500 text-orange-500 font-semibold rounded-xl hover:bg-orange-50 transition-all duration-300 text-base"
+                            >
+                              Voir les dates
+                            </Link>
                           </div>
-                        </div>
-                      ) : slide.id === 3 ? (
-                        /* Fenêtre pour les réunions FPA */
-                        <div className="bg-white/90 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-gray-800 max-w-sm">
-                          <h3 className="text-lg font-bold mb-3 text-orange-500">Prochaines dates FPA</h3>
-                          <div className="space-y-2 text-sm">
-                            {prochainesDatesFPA.map((reunion, index) => (
-                              <div key={index} className="flex justify-between">
-                                <span className="text-[#013F63]">
-                                  {formatDateForDisplay(reunion.jour)}
-                                </span>
-                                <span className="font-medium text-[#013F63]">
-                                  {reunion.heure.split(' - ')[0]}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
-                          <div className="mt-4 text-xs text-[#013F63]">
-                            Atipik RH - Lormont
-                          </div>
+                          <p className="text-xs text-gray-600 text-center">
+                            Gratuite • Sans engagement
+                          </p>
                         </div>
                       ) : null}
                     </div>
