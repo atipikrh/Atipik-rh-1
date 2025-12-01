@@ -238,7 +238,7 @@ export default function HomePage() {
                         /* Fenêtre pour les réunions d'information collective */
                         <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-orange-200 text-gray-800 max-w-sm shadow-xl">
                           <div className="text-center mb-4">
-                            <h3 className="text-xl font-bold mb-1 text-[#013F63]">Voir les prochaines dates de réunions</h3>
+                            <h3 className="text-xl font-bold mb-1 text-[#013F63]">Ces réunions sont organisées régulièrement, en présentiel ou en distanciel.</h3>
                             <p className="text-xs text-gray-600 mt-1">
                               Gratuite • Sans engagement • Places limitées
                             </p>
