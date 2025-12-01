@@ -80,7 +80,7 @@ export default function HomePage() {
       id: 2,
       title: "Réunions d'information collective CIP & FPA",
       subtitle: "",
-      description: "Découvrez nos formations CIP et FPA lors d'un temps d'échange animé par Vanessa, notre directrice.",
+      description: "Envie de devenir CIP ou FPA ? En 1h30, Vanessa, notre directrice, vous présente concrètement les formations et répond à toutes vos questions.",
       buttonText: "",
       buttonLink: "",
       image: "/images/hero/reunion-info-2.jpeg",
@@ -236,18 +236,18 @@ export default function HomePage() {
                         </div>
                       ) : slide.isReunion ? (
                         /* Fenêtre pour les réunions d'information collective */
-                        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-gray-800 max-w-sm shadow-xl">
+                        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-orange-200 text-gray-800 max-w-sm shadow-xl">
                           <div className="text-center mb-4">
                             <h3 className="text-xl font-bold mb-1 text-[#013F63]">Voir les prochaines dates de réunions</h3>
                             <p className="text-xs text-gray-600 mt-1">
-                              Gratuite • Sans engagement
+                              Gratuite • Sans engagement • Places limitées
                             </p>
                           </div>
                           <Link
                             href="/s-inscrire"
-                            className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg text-base"
+                            className="w-full inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl transition-all duration-300 shadow-lg text-base"
                           >
-                            Voir les dates
+                            Voir les prochaines dates
                           </Link>
                         </div>
                       ) : null}
