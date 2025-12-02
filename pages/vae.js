@@ -998,19 +998,30 @@ export default function VAE() {
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                {domainesCertification.map((domaine, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-white rounded-lg border border-gray-200 p-3 hover:border-orange-400 hover:shadow-md transition-all duration-200"
-                  >
-                    <div className="flex items-start justify-between gap-2">
-                      <span className="text-xs font-semibold text-gray-500">{domaine.code}</span>
+                {domainesCertification.map((domaine, index) => {
+                  const isEven = index % 2 === 0
+                  return (
+                    <div 
+                      key={index} 
+                      className={`bg-white rounded-lg border-l-4 p-3 hover:shadow-md transition-all duration-200 ${
+                        isEven 
+                          ? 'border-l-[#013F63] border-t border-r border-b border-gray-200 hover:border-[#013F63]' 
+                          : 'border-l-orange-500 border-t border-r border-b border-gray-200 hover:border-orange-500'
+                      }`}
+                    >
+                      <div className="flex items-start justify-between gap-2">
+                        <span className={`text-xs font-semibold ${
+                          isEven ? 'text-[#013F63]' : 'text-orange-500'
+                        }`}>
+                          {domaine.code}
+                        </span>
+                      </div>
+                      <h3 className="text-sm font-medium text-[#013F63] mt-1">
+                        {domaine.titre}
+                      </h3>
                     </div>
-                    <h3 className="text-sm font-medium text-[#013F63] mt-1">
-                      {domaine.titre}
-                    </h3>
-                  </div>
-                ))}
+                  )
+                })}
               </div>
 
               {/* Call to action */}
