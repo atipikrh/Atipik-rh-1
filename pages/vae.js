@@ -380,18 +380,18 @@ export default function VAE() {
   ]
 
   const domainesCertification = [
-    { code: "15061", titre: "Accompagnement vers emploi" },
     { code: "15041", titre: "Mise à niveau" },
+    { code: "15061", titre: "Accompagnement vers emploi" },
     { code: "15066", titre: "Efficacité personnelle" },
     { code: "15081", titre: "Bilan professionnel" },
     { code: "15084", titre: "Préparation entrée formation" },
-    { code: "44542", titre: "Pédagogie" },
-    { code: "44590", titre: "Accompagnement formation" },
     { code: "32008", titre: "Responsabilité sociétale entreprise" },
     { code: "33072", titre: "Intégration salarié" },
     { code: "33091", titre: "GEPP" },
+    { code: "43437", titre: "Personnel paramédical" },
     { code: "44042", titre: "Enfance" },
-    { code: "43437", titre: "Personnel paramédical" }
+    { code: "44542", titre: "Pédagogie" },
+    { code: "44590", titre: "Accompagnement formation" }
   ]
 
   return (
