@@ -21,14 +21,7 @@ import {
   UserCheck,
   ArrowRight,
   ChevronLeft,
-  ChevronRight,
-  Briefcase,
-  TrendingUp,
-  GraduationCap,
-  Heart,
-  Building2,
-  UserPlus,
-  Sparkles
+  ChevronRight
 } from 'lucide-react'
 
 export default function VAE() {
@@ -387,102 +380,18 @@ export default function VAE() {
   ]
 
   const domainesCertification = [
-    {
-      id: 1,
-      code: "15061",
-      titre: "Accompagnement vers emploi",
-      description: "Valorisez votre expérience pour accéder à l'emploi qui vous correspond",
-      icon: Briefcase,
-      color: "from-blue-500 to-blue-600"
-    },
-    {
-      id: 2,
-      code: "15041",
-      titre: "Mise à niveau",
-      description: "Renforcez vos compétences pour évoluer professionnellement",
-      icon: TrendingUp,
-      color: "from-orange-500 to-orange-600"
-    },
-    {
-      id: 3,
-      code: "15066",
-      titre: "Efficacité personnelle",
-      description: "Développez votre potentiel et optimisez votre performance",
-      icon: Sparkles,
-      color: "from-purple-500 to-purple-600"
-    },
-    {
-      id: 4,
-      code: "15081",
-      titre: "Bilan professionnel",
-      description: "Faites le point sur vos compétences et définissez votre projet",
-      icon: Target,
-      color: "from-[#013F63] to-[#012a4a]"
-    },
-    {
-      id: 5,
-      code: "15084",
-      titre: "Préparation entrée formation",
-      description: "Préparez-vous efficacement pour intégrer une formation",
-      icon: GraduationCap,
-      color: "from-green-500 to-green-600"
-    },
-    {
-      id: 6,
-      code: "44542",
-      titre: "Pédagogie",
-      description: "Maîtrisez les techniques d'enseignement et de transmission",
-      icon: BookOpen,
-      color: "from-indigo-500 to-indigo-600"
-    },
-    {
-      id: 7,
-      code: "44590",
-      titre: "Accompagnement formation",
-      description: "Guidez et accompagnez les apprenants dans leur parcours",
-      icon: Users,
-      color: "from-teal-500 to-teal-600"
-    },
-    {
-      id: 8,
-      code: "32008",
-      titre: "Responsabilité sociétale entreprise",
-      description: "Intégrez les enjeux RSE dans votre pratique professionnelle",
-      icon: Building2,
-      color: "from-emerald-500 to-emerald-600"
-    },
-    {
-      id: 9,
-      code: "33072",
-      titre: "Intégration salarié",
-      description: "Facilitez l'intégration et l'adaptation des nouveaux collaborateurs",
-      icon: UserPlus,
-      color: "from-cyan-500 to-cyan-600"
-    },
-    {
-      id: 10,
-      code: "33091",
-      titre: "GEPP",
-      description: "Gestion et évolution des parcours professionnels",
-      icon: Award,
-      color: "from-rose-500 to-rose-600"
-    },
-    {
-      id: 11,
-      code: "44042",
-      titre: "Enfance",
-      description: "Spécialisez-vous dans l'accompagnement et l'éducation des enfants",
-      icon: Heart,
-      color: "from-pink-500 to-pink-600"
-    },
-    {
-      id: 12,
-      code: "43437",
-      titre: "Personnel paramédical",
-      description: "Validez vos compétences dans le secteur de la santé et du soin",
-      icon: UserCheck,
-      color: "from-red-500 to-red-600"
-    }
+    { code: "15061", titre: "Accompagnement vers emploi" },
+    { code: "15041", titre: "Mise à niveau" },
+    { code: "15066", titre: "Efficacité personnelle" },
+    { code: "15081", titre: "Bilan professionnel" },
+    { code: "15084", titre: "Préparation entrée formation" },
+    { code: "44542", titre: "Pédagogie" },
+    { code: "44590", titre: "Accompagnement formation" },
+    { code: "32008", titre: "Responsabilité sociétale entreprise" },
+    { code: "33072", titre: "Intégration salarié" },
+    { code: "33091", titre: "GEPP" },
+    { code: "44042", titre: "Enfance" },
+    { code: "43437", titre: "Personnel paramédical" }
   ]
 
   return (
@@ -1088,51 +997,20 @@ export default function VAE() {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {domainesCertification.map((domaine) => {
-                  const IconComponent = domaine.icon
-                  return (
-                    <div 
-                      key={domaine.id} 
-                      className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-6 flex flex-col hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
-                    >
-                      {/* Effet de fond dégradé au survol */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${domaine.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-                      
-                      <div className="relative z-10">
-                        {/* En-tête avec icône et code */}
-                        <div className="flex items-start justify-between mb-4">
-                          <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${domaine.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                            <IconComponent className="w-7 h-7 text-white" />
-                          </div>
-                          <div className="text-right">
-                            <span className="text-xs font-semibold text-gray-400 bg-gray-100 px-2 py-1 rounded-full">
-                              {domaine.code}
-                            </span>
-                          </div>
-                        </div>
-
-                        {/* Titre */}
-                        <h3 className="text-lg font-bold text-[#013F63] mb-3 group-hover:text-orange-600 transition-colors duration-300">
-                          {domaine.titre}
-                        </h3>
-
-                        {/* Description */}
-                        <p className="text-sm text-[#013F63]/80 leading-relaxed">
-                          {domaine.description}
-                        </p>
-
-                        {/* Indicateur visuel */}
-                        <div className="mt-4 pt-4 border-t border-gray-100">
-                          <div className="flex items-center gap-2 text-xs text-orange-500 font-medium">
-                            <CheckCircle className="w-4 h-4" />
-                            <span>Accompagnement VAE disponible</span>
-                          </div>
-                        </div>
-                      </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                {domainesCertification.map((domaine, index) => (
+                  <div 
+                    key={index} 
+                    className="bg-white rounded-lg border border-gray-200 p-3 hover:border-orange-400 hover:shadow-md transition-all duration-200"
+                  >
+                    <div className="flex items-start justify-between gap-2">
+                      <span className="text-xs font-semibold text-gray-500">{domaine.code}</span>
                     </div>
-                  )
-                })}
+                    <h3 className="text-sm font-medium text-[#013F63] mt-1">
+                      {domaine.titre}
+                    </h3>
+                  </div>
+                ))}
               </div>
 
               {/* Call to action */}
