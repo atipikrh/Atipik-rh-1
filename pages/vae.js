@@ -542,7 +542,7 @@ export default function VAE() {
                       <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                     <div>
                         <p className="font-semibold mb-0.5 text-base">Modalité :</p>
-                        <p className="text-blue-100 text-sm">Présentiel</p>
+                        <p className="text-blue-100 text-sm">Présentiel ou Distanciel</p>
                   </div>
                       </div>
                     </div>
