@@ -17,10 +17,14 @@
     "check:all": "npm run lint && npx tsc --noEmit && npm run test && npm run schema-test && npm run check:logos",
     "check:logos": "node scripts/verify-logos.mjs",
     "check:seo": "node scripts/validate-seo-indexing.mjs",
-    "check:seo:prod": "node scripts/validate-rich-results.mjs && node scripts/validate-seo-indexing.mjs"
+    "check:seo:prod": "node scripts/validate-rich-results.mjs && node scripts/validate-seo-indexing.mjs",
+    "vercel:login": "vercel login",
+    "vercel:whoami": "vercel whoami",
+    "vercel:ls": "vercel ls --yes"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
+    "@vercel/speed-insights": "^2.0.0",
     "browserslist": "^4.28.1",
     "clsx": "^2.0.0",
     "lucide-react": "^0.562.0",
