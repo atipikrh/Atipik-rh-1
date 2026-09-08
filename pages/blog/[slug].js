@@ -47,10 +47,71 @@ import {
   formationIaAccompagnementBordeaux2026InternalLinks,
   formationIaAccompagnementBordeaux2026SecondaryKeywords,
 } from '../../lib/blog/formationIaAccompagnementBordeaux2026Content';
+import {
+  formationIaEthiqueProfessionnelsAccompagnementContent,
+  formationIaEthiqueProfessionnelsAccompagnementFaqItems,
+  formationIaEthiqueProfessionnelsAccompagnementInternalLinks,
+  formationIaEthiqueProfessionnelsAccompagnementSecondaryKeywords,
+} from '../../lib/blog/formationIaEthiqueProfessionnelsAccompagnementContent';
+import {
+  dixUsagesIaCipAccompagnementContent,
+  dixUsagesIaCipAccompagnementFaqItems,
+  dixUsagesIaCipAccompagnementInternalLinks,
+  dixUsagesIaCipAccompagnementSecondaryKeywords,
+} from '../../lib/blog/dixUsagesIaCipAccompagnementContent';
 import { getAllArticles, getArticleBySlug } from '../../lib/blog/articleRepository';
 import { buildArticleSeo } from '../../lib/blog/articleSeoMapper';
 
 const BLOG_ARTICLES = [
+    {
+      id: 44,
+      slug: "10-usages-ia-cip-accompagnement",
+      title: "10 usages concrets de l'IA pour les Conseillers en Insertion Professionnelle",
+      excerpt: "Préparer un entretien, analyser un CV, créer un atelier : découvrez 10 usages concrets de l'IA pour les CIP et les professionnels de l'accompagnement.",
+      image: "/images/blog/10-usages-ia-cip-accompagnement.png",
+      imageAlt: "10 usages concrets de l'IA pour les CIP et l'insertion professionnelle — ATIPIK RH Lormont Bordeaux",
+      date: "10 septembre 2026",
+      readTime: "14 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Conseils",
+      keywords: "usages IA CIP, IA conseiller en insertion professionnelle, intelligence artificielle insertion, outils IA accompagnement, formation ChatGPT CIP, gagner du temps avec l'IA, IA recherche d'emploi",
+      seo: {
+        metaTitle: "10 usages concrets de l'IA pour les CIP et l'insertion | Atipik RH",
+        metaDescription:
+          "Préparer un entretien, analyser un CV, créer un atelier : découvrez 10 usages concrets de l'IA pour les CIP et les professionnels de l'accompagnement.",
+        canonicalPath: "/blog/10-usages-ia-cip-accompagnement",
+        secondaryKeywords: dixUsagesIaCipAccompagnementSecondaryKeywords,
+      },
+      faqItems: dixUsagesIaCipAccompagnementFaqItems,
+      internalLinks: dixUsagesIaCipAccompagnementInternalLinks,
+      content: dixUsagesIaCipAccompagnementContent,
+    },
+    {
+      id: 43,
+      slug: "formation-ia-ethique-professionnels-accompagnement",
+      title: "Formation IA : accompagner mieux, sans perdre l'humain",
+      excerpt:
+        "Comment intégrer l'IA dans l'accompagnement professionnel avec méthode, éthique et esprit critique ? Les conseils d'ATIPIK RH et sa formation à Lormont.",
+      image: "/images/blog/formation-ia-accompagnement-bordeaux-septembre-2026.png",
+      imageAlt:
+        "Formation IA éthique pour professionnels de l'accompagnement — ATIPIK RH Lormont Bordeaux",
+      date: "8 septembre 2026",
+      readTime: "11 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords:
+        "formation IA professionnels de l'accompagnement, IA accompagnement professionnel, intelligence artificielle CIP, formation IA Bordeaux, IA insertion professionnelle, utiliser ChatGPT au travail, IA éthique RGPD",
+      seo: {
+        metaTitle: "Formation IA : accompagner mieux, sans perdre l'humain | ATIPIK RH",
+        metaDescription:
+          "Comment intégrer l'IA dans l'accompagnement avec méthode, éthique et esprit critique ? Formation 14 h à Lormont par ATIPIK RH, organisme Qualiopi.",
+        canonicalPath: "/blog/formation-ia-ethique-professionnels-accompagnement",
+        secondaryKeywords: formationIaEthiqueProfessionnelsAccompagnementSecondaryKeywords,
+      },
+      faqItems: formationIaEthiqueProfessionnelsAccompagnementFaqItems,
+      internalLinks: formationIaEthiqueProfessionnelsAccompagnementInternalLinks,
+      content: formationIaEthiqueProfessionnelsAccompagnementContent,
+    },
     {
       id: 42,
       slug: "formation-ia-accompagnement-professionnels-bordeaux-2026",

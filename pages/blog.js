@@ -15,6 +15,117 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 44,
+      slug: "10-usages-ia-cip-accompagnement",
+      title: "10 usages concrets de l'IA pour les Conseillers en Insertion Professionnelle",
+      excerpt: "Préparer un entretien, analyser un CV, créer un atelier : découvrez 10 usages concrets de l'IA pour les CIP et les professionnels de l'accompagnement.",
+      image: "/images/blog/10-usages-ia-cip-accompagnement.png",
+      imageAlt: "10 usages concrets de l'IA pour les CIP et l'insertion professionnelle — ATIPIK RH Lormont Bordeaux",
+      date: "10 septembre 2026",
+      readTime: "14 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Conseils",
+      keywords: "usages IA CIP, IA conseiller en insertion professionnelle, intelligence artificielle insertion, outils IA accompagnement, formation ChatGPT CIP, gagner du temps avec l'IA, IA recherche d'emploi",
+      seo: {
+        metaTitle: "10 usages concrets de l'IA pour les CIP et l'insertion | Atipik RH",
+        metaDescription:
+          "Préparer un entretien, analyser un CV, créer un atelier : découvrez 10 usages concrets de l'IA pour les CIP et les professionnels de l'accompagnement.",
+        canonicalPath: "/blog/10-usages-ia-cip-accompagnement",
+        secondaryKeywords: [
+          "IA conseiller en insertion professionnelle",
+          "intelligence artificielle insertion",
+          "outils IA accompagnement",
+          "formation ChatGPT CIP",
+          "gagner du temps avec l'IA",
+          "IA recherche d'emploi",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Peut-on transmettre des données personnelles d'un bénéficiaire à une IA ?",
+          answer:
+            "Non, sans cadre autorisé. Il faut anonymiser les informations, ne transmettre que le nécessaire, et toujours faire relire la production par le professionnel avant usage.",
+        },
+        {
+          question: "Quelles sont les dates de la formation IA au service de l'Accompagnement en septembre 2026 ?",
+          answer:
+            "Deux sessions sont programmées à Lormont : les 21 et 22 septembre 2026, et les 28 et 29 septembre 2026.",
+        },
+        {
+          question: "Quel est le tarif de la formation IA pour les CIP ?",
+          answer:
+            "Le tarif inter-entreprises est de 1 090 € TTC par participant. Le tarif intra-entreprise est disponible sur devis.",
+        },
+      ],
+      internalLinks: [
+        { label: "Formation IA au service de l'Accompagnement", href: "/formations/professionnalisantes/intelligence-artificielle-accompagnement", type: "formation" },
+        { label: "Article — Formation IA Bordeaux septembre 2026", href: "/blog/formation-ia-accompagnement-professionnels-bordeaux-2026", type: "article" },
+        { label: "Formation IA éthique — accompagner sans perdre l'humain", href: "/blog/formation-ia-ethique-professionnels-accompagnement", type: "article" },
+        { label: "Financement 2026", href: "/financement", type: "financement" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+      ],
+    },
+    {
+      id: 43,
+      slug: "formation-ia-ethique-professionnels-accompagnement",
+      title: "Formation IA : accompagner mieux, sans perdre l'humain",
+      excerpt:
+        "Comment intégrer l'IA dans l'accompagnement professionnel avec méthode, éthique et esprit critique ? Les conseils d'ATIPIK RH et sa formation à Lormont.",
+      image: "/images/blog/formation-ia-accompagnement-bordeaux-septembre-2026.png",
+      imageAlt:
+        "Formation IA éthique pour professionnels de l'accompagnement — ATIPIK RH Lormont Bordeaux",
+      date: "8 septembre 2026",
+      readTime: "11 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords:
+        "formation IA professionnels de l'accompagnement, IA accompagnement professionnel, intelligence artificielle CIP, formation IA Bordeaux, IA insertion professionnelle, utiliser ChatGPT au travail, IA éthique RGPD",
+      seo: {
+        metaTitle: "Formation IA : accompagner mieux, sans perdre l'humain | ATIPIK RH",
+        metaDescription:
+          "Comment intégrer l'IA dans l'accompagnement avec méthode, éthique et esprit critique ? Formation 14 h à Lormont par ATIPIK RH, organisme Qualiopi.",
+        canonicalPath: "/blog/formation-ia-ethique-professionnels-accompagnement",
+        secondaryKeywords: [
+          "IA accompagnement professionnel",
+          "intelligence artificielle CIP",
+          "formation IA Bordeaux",
+          "IA insertion professionnelle",
+          "utiliser ChatGPT au travail",
+          "IA éthique RGPD",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Puis-je saisir des données personnelles d'un bénéficiaire dans un outil d'IA ?",
+          answer:
+            "En règle générale, non sans précaution. Vérifiez les règles de votre structure, anonymisez ou utilisez un profil fictif pédagogique.",
+        },
+        {
+          question: "L'IA peut-elle décider à la place du conseiller ?",
+          answer:
+            "Non. L'IA est un copilote : elle propose ou accélère. La décision reste du côté du professionnel.",
+        },
+        {
+          question: "Quel est le tarif de la formation IA d'ATIPIK RH ?",
+          answer: "Le tarif inter-entreprises est de 1 090 € TTC par stagiaire pour 14 heures en présentiel à Lormont.",
+        },
+      ],
+      internalLinks: [
+        {
+          label: "Formation L'intelligence artificielle au service de l'accompagnement",
+          href: "/formations/professionnalisantes/intelligence-artificielle-accompagnement",
+          type: "formation",
+        },
+        {
+          label: "Article campagne IA — sessions septembre 2026",
+          href: "/blog/formation-ia-accompagnement-professionnels-bordeaux-2026",
+          type: "article",
+        },
+        { label: "Financement", href: "/financement", type: "financement" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+      ],
+    },
+    {
       id: 42,
       slug: "formation-ia-accompagnement-professionnels-bordeaux-2026",
       title: "L'IA au service de l'Accompagnement : intégrer l'intelligence artificielle avec responsabilité — Sessions septembre 2026 à Bordeaux",
@@ -55,6 +166,7 @@ export default function Blog() {
       ],
       internalLinks: [
         { label: "Formation IA au service de l'Accompagnement", href: "/formations/professionnalisantes/intelligence-artificielle-accompagnement", type: "formation" },
+        { label: "Formation IA éthique — accompagner sans perdre l'humain", href: "/blog/formation-ia-ethique-professionnels-accompagnement", type: "article" },
         { label: "Formation Les Essentiels du Numérique", href: "/blog/formation-essentiels-numerique-professionnels-accompagnement-bordeaux-2026", type: "article" },
         { label: "Financement 2026", href: "/financement", type: "financement" },
         { label: "Page contact", href: "/contact", type: "contact" },
