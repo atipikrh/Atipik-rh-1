@@ -95,12 +95,13 @@ export default function VAE() {
       logoHeight: 60
     },
     {
-      id: 'franceTravail',
-      logo: '/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg',
-      titre: 'France Travail',
-      description: 'Demandeurs d\'emploi',
-      logoWidth: 60,
-      logoHeight: 40
+      id: 'droitCommun',
+      logo: null,
+      titre: 'Financement de droit commun',
+      description: 'Abondement éventuel selon profil',
+      bgColor: 'bg-blue-100',
+      textColor: 'text-[#013F63]',
+      text: 'Droit\ncommun'
     },
     {
       id: 'congeVae',
@@ -1185,7 +1186,7 @@ export default function VAE() {
                 Comment <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">financer</span> votre accompagnement VAE ?
               </h2>
               <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
-                Plusieurs solutions s'offrent à vous
+                CPF, congé VAE, financement de droit commun ou abondement éventuel, selon le profil, la certification et les règles en vigueur. Vérification préalable obligatoire.
               </p>
             </div>
 
