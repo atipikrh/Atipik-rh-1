@@ -119,7 +119,7 @@ export default function Financement() {
     },
     {
       question: "Comment obtenir l'AIF de France Travail ?",
-      answer: "Présentez votre projet de formation à votre conseiller France Travail. La formation doit être cohérente avec votre projet professionnel. Nous vous aidons à préparer le dossier."
+      answer: "Présentez votre projet de formation à votre conseiller France Travail. La formation doit être cohérente avec votre projet professionnel. Aucune prise en charge n'est garantie sans étude du dossier. Nous vous aidons à le préparer."
     },
     {
       question: "Comment connaître mon organisme de financement en étant indépendant ?",
@@ -215,7 +215,7 @@ export default function Financement() {
       logoAlt: "Logo France Travail",
       title: "AIF (Aide Individuelle à la Formation)",
       details: [
-        { label: "Financement", value: "Complète le CPF ou finance totalement" },
+        { label: "Financement", value: "Complément possible du CPF, sous réserve d'étude et de validation du dossier" },
         { label: "Conditions", value: "Formation en lien avec projet professionnel" },
         { label: "Démarches", value: "Via votre conseiller France Travail" },
         { label: "Délai", value: "15-30 jours après validation" }
@@ -232,7 +232,7 @@ export default function Financement() {
       details: [
         { label: "Vos droits", value: "Conservés pendant le chômage" },
         { label: "Utilisation", value: "Libre et immédiate" },
-        { label: "Complément", value: "Souvent complété par l'AIF" },
+        { label: "Complément", value: "Peut être complété par l'AIF, selon le projet et les règles en vigueur" },
         { label: "Avantage", value: "Démarches 100% en ligne" }
       ],
       buttonText: "Consulter mon CPF",
@@ -360,8 +360,8 @@ export default function Financement() {
     <>
       <Head>
         <title>Financement formations CPF, VAE, bilan de compétences | Atipik RH</title>
-        <meta name="description" content="Découvrez toutes les solutions de financement pour vos formations à Bordeaux : CPF, France Travail, employeur selon votre statut professionnel." />
-        <meta name="keywords" content="financement formation CPF, Mon Compte Formation, financement bilan compétences, financement VAE, France Travail AIF" />
+        <meta name="description" content="Solutions de financement selon votre statut : CPF, AIF France Travail pour les formations, employeur, OPCO. Accompagnement VAE : vérification préalable obligatoire." />
+        <meta name="keywords" content="financement formation CPF, Mon Compte Formation, AIF formation demandeur d'emploi, financement bilan compétences, financement accompagnement VAE" />
         <link rel="canonical" href="https://www.atipikrh.com/financement" />
       </Head>
 
@@ -477,6 +477,22 @@ export default function Financement() {
             </div>
           </div>
         </section>
+
+          {/* Note financement VAE — formulation prudente, hors promesse France Travail */}
+          <section className="pt-0 pb-8">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-100">
+                  <h2 className="text-xl sm:text-2xl font-bold text-[#013F63] mb-3 text-center">
+                    Financer un accompagnement <span className="text-orange-500 font-brittany text-2xl sm:text-3xl">VAE</span>
+                  </h2>
+                  <p className="text-sm sm:text-base text-[#013F63] leading-relaxed text-center">
+                    CPF, congé VAE, financement de droit commun ou abondement éventuel, selon le profil, la certification et les règles en vigueur. Vérification préalable obligatoire.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* Section Autofinancement - Investissez en vous-même */}
           <section className="pt-4 pb-8">

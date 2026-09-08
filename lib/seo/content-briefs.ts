@@ -816,7 +816,7 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'Comment financer la VAE ?',
-        answer: faqFinancement('CPF, employeur, France Travail selon situation.'),
+        answer: faqFinancement('CPF, congé VAE, financement de droit commun ou abondement éventuel, selon le profil, la certification et les règles en vigueur. Vérification préalable obligatoire.'),
       },
     ],
     internalLinks: [
