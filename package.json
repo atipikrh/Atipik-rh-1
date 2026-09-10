@@ -17,7 +17,8 @@
     "check:all": "npm run lint && npx tsc --noEmit && npm run test && npm run schema-test && npm run check:logos",
     "check:logos": "node scripts/verify-logos.mjs",
     "check:seo": "node scripts/validate-seo-indexing.mjs",
-    "check:seo:prod": "node scripts/validate-rich-results.mjs && node scripts/validate-seo-indexing.mjs"
+    "check:seo:prod": "node scripts/validate-rich-results.mjs && node scripts/validate-seo-indexing.mjs",
+    "check:digiforma": "node scripts/validate-digiforma-catalogue.mjs"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",

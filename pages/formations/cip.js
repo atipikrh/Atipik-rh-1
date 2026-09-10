@@ -481,17 +481,31 @@ export default function FormationCIP() {
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
 
-              <div className="mb-14">
-                <div className="max-w-2xl mx-auto rounded-3xl shadow-xl overflow-hidden bg-white border border-gray-100">
-                  <div className="bg-[#FCEFD9] text-center px-6 py-8">
-                    <p className="text-base md:text-xl font-bold text-[#F97316] mb-3">Prochaine session</p>
-                    <p className="text-sm md:text-base text-[#F97316]">Du 21 septembre 2026 au 23 avril 2027</p>
+              <div className="mb-14 grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  {
+                    dates: 'Du 21 septembre 2026 au 23 avril 2027',
+                    candidatures: '03 février 2026',
+                  },
+                  {
+                    dates: 'Du 22 mars 2027 au 22 octobre 2027',
+                    candidatures: '03 octobre 2026',
+                  },
+                ].map((session) => (
+                  <div
+                    key={session.dates}
+                    className="rounded-3xl shadow-xl overflow-hidden bg-white border border-gray-100"
+                  >
+                    <div className="bg-[#FCEFD9] text-center px-6 py-8">
+                      <p className="text-base md:text-xl font-bold text-[#F97316] mb-3">Prochaine session</p>
+                      <p className="text-sm md:text-base text-[#F97316]">{session.dates}</p>
+                    </div>
+                    <div className="text-center px-6 py-8">
+                      <p className="text-base md:text-xl font-bold text-[#013F63] mb-3">Ouverture des candidatures</p>
+                      <p className="text-xl md:text-2xl font-bold text-[#F97316]">{session.candidatures}</p>
+                    </div>
                   </div>
-                  <div className="text-center px-6 py-8">
-                    <p className="text-base md:text-xl font-bold text-[#013F63] mb-3">Ouverture des candidatures</p>
-                    <p className="text-xl md:text-2xl font-bold text-[#F97316]">03 février 2026</p>
-                  </div>
-                </div>
+                ))}
               </div>
               
               {/* Titre de section */}

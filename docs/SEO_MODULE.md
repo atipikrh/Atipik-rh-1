@@ -43,6 +43,10 @@ getSeoRecommendationFromProspectQuery('je veux devenir conseiller insertion')
 
 Voir aussi [SEO_MDX_LEGACY.md](./SEO_MDX_LEGACY.md) pour les fichiers MDX non servis.
 
+## Catalogue Digiforma
+
+Le mini-site [atipikrh.catalogueformpro.com](https://atipikrh.catalogueformpro.com/) n’est pas le site vitrine. Config GA4 / canonique : [DIGIFORMA_CATALOGUE.md](./DIGIFORMA_CATALOGUE.md). Contrôle : `npm run check:digiforma`.
+
 ## Sitemap & robots
 
 - Dynamiques : `app/sitemap.ts`, `app/robots.ts`
