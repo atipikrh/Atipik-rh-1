@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Script from 'next/script'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics'
 
 const SITE_URL = 'https://www.atipikrh.com'
@@ -68,6 +69,7 @@ export default function App({ Component, pageProps }) {
       {/* Google Analytics - Les scripts seront chargés dynamiquement après consentement via lib/analytics.js */}
 
       <Component {...pageProps} />
+      <SpeedInsights />
     </>
   )
 } // Force deployment Thu Oct 23 12:40:44 CEST 2025
