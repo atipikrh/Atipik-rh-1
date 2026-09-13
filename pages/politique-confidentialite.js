@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import CookieBanner from '../components/CookieBanner'
 import { Shield, Eye, Lock, Database, Settings } from 'lucide-react'
 
 export default function PolitiqueConfidentialite() {
@@ -238,9 +237,6 @@ export default function PolitiqueConfidentialite() {
         </section>
 
         <Footer />
-        
-        {/* Cookie Banner */}
-        <CookieBanner />
       </div>
     </>
   )

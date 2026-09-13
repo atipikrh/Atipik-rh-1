@@ -5,7 +5,6 @@ import { Clock } from 'lucide-react'
 import ServicePageSeoHead from '../components/ServicePageSeoHead'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import CookieBanner from '../components/CookieBanner'
 import EntityCitationBlock from '../components/EntityCitationBlock'
 import FormationFaqSection from '../components/FormationFaqSection'
 import { DATES_CIP, DATES_FPA, getUpcomingReunions } from '../lib/reunions/dates.js'
@@ -514,9 +513,6 @@ export default function HomePage() {
 
         <FormationFaqSection briefId="accueil" />
         <Footer />
-        
-        {/* Cookie Banner */}
-        <CookieBanner />
       </div>
     </>
   )

@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Header from './Header'
-import CookieBanner from './CookieBanner'
 import { Phone, Mail, MapPin } from 'lucide-react'
 
 export default function Layout({ children, title, description, canonical }) {
@@ -130,9 +129,6 @@ export default function Layout({ children, title, description, canonical }) {
             </div>
           </div>
         </footer>
-        
-        {/* Cookie Banner */}
-        <CookieBanner />
       </div>
     </>
   )

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { X, Cookie, Settings, Check } from 'lucide-react'
-import { initGA, trackPageView } from '../lib/analytics'
+import { initGA, trackPageView, updateGoogleConsent } from '../lib/analytics'
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(() => {
@@ -21,6 +21,7 @@ export default function CookieBanner() {
     // Charger GA si le consentement existe déjà et autorise les analytics
     try {
       const consent = JSON.parse(cookieConsent)
+      updateGoogleConsent(consent.analytics === true, consent.marketing === true)
       if (consent.analytics === true) {
         initGA()
       }
@@ -38,7 +39,7 @@ export default function CookieBanner() {
     setCookies(allCookies)
     localStorage.setItem('cookieConsent', JSON.stringify(allCookies))
     
-    // Initialiser Google Analytics après acceptation
+    updateGoogleConsent(true, true)
     initGA()
     // Suivre la page actuelle
     setTimeout(() => {
@@ -54,7 +55,7 @@ export default function CookieBanner() {
   const acceptSelected = () => {
     localStorage.setItem('cookieConsent', JSON.stringify(cookies))
     
-    // Initialiser Google Analytics si le consentement analytique est donné
+    updateGoogleConsent(cookies.analytics === true, cookies.marketing === true)
     if (cookies.analytics === true) {
       initGA()
       // Suivre la page actuelle
@@ -78,6 +79,8 @@ export default function CookieBanner() {
     }
     setCookies(onlyNecessary)
     localStorage.setItem('cookieConsent', JSON.stringify(onlyNecessary))
+    updateGoogleConsent(false, false)
+    window.dispatchEvent(new Event('cookieConsentChanged'))
     setShowBanner(false)
   }
 

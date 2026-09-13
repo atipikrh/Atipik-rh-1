@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import { buildOrganizationJsonLd } from '../lib/seo/schema'
+import { GTM_CONSENT_SCRIPT, GTM_ID, GTM_LOADER_SCRIPT } from '../lib/gtm'
 
 export default function Document() {
   const schemaData = buildOrganizationJsonLd()
@@ -7,6 +8,10 @@ export default function Document() {
   return (
     <Html lang="fr">
       <Head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <script dangerouslySetInnerHTML={{ __html: GTM_CONSENT_SCRIPT }} />
+        <script dangerouslySetInnerHTML={{ __html: GTM_LOADER_SCRIPT }} />
+
         {/* Preconnect pour optimiser le chargement des fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
@@ -35,7 +40,7 @@ export default function Document() {
       <body>
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-T45Z2XRQ"
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
