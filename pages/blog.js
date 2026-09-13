@@ -15,6 +15,65 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 50,
+      slug: "neurodiversite-inclusion-recrutement",
+      title: "Neurodiversité et inclusion : vos entretiens écartent-ils les compétences que vous cherchez ?",
+      excerpt: "Autisme, TDAH, troubles dys : le feeling et l'aisance orale filtrent souvent le style, pas la compétence. Objectiver les critères permet d'inclure la neurodiversité sans baisser l'exigence.",
+      image: "/images/blog/neurodiversite-inclusion-recrutement.png",
+      imageAlt: "Neurodiversité et inclusion au recrutement : entretien structuré et compétences observables — ATIPIK RH Lormont Bordeaux",
+      date: "1 octobre 2026",
+      isoDate: "2026-10-01",
+      readTime: "10 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "neurodiversité recrutement, inclusion professionnelle, autisme recrutement, TDAH travail, RQTH, recrutement inclusif, aménagement entretien",
+      seo: {
+        metaTitle: "Neurodiversité et inclusion : recruter sans écarter les compétences",
+        metaDescription:
+          "Autisme, TDAH, dys : vos critères implicites filtrent souvent le style, pas la compétence. Objectiver le recrutement pour inclure la neurodiversité.",
+        canonicalPath: "/blog/neurodiversite-inclusion-recrutement",
+        secondaryKeywords: [
+          "recrutement neurodiversité",
+          "inclusion professionnelle",
+          "autisme recrutement",
+          "TDAH travail",
+          "RQTH recrutement",
+          "aménagement raisonnable entretien",
+          "recrutement inclusif PME",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Faut-il demander à un candidat s'il est autiste ou TDAH ?",
+          answer:
+            "Non. Les questions doivent rester liées aux compétences et aux exigences du poste. Un candidat n'a pas à révéler un diagnostic. S'il choisit d'évoquer un handicap ou un besoin d'aménagement, vous pouvez convenir d'adaptations pour évaluer équitablement sa capacité à tenir le poste.",
+        },
+        {
+          question: "Neurodiversité et RQTH : est-ce la même chose ?",
+          answer:
+            "Non. La neurodiversité décrit une variété de fonctionnements cognitifs. La RQTH est une reconnaissance administrative, volontaire, qui peut ouvrir des droits (aménagements, aides, déclaration OETH). Une personne neurodivergente peut n'avoir aucune reconnaissance. Le recrutement inclusif ne dépend pas de cette déclaration.",
+        },
+        {
+          question: "Recruter des profils neurodivergents, est-ce baisser le niveau d'exigence ?",
+          answer:
+            "Non. C'est rendre l'exigence lisible. On évalue les compétences indispensables au poste avec la même grille. On cesse d'utiliser des filtres implicites (aisance orale, regard, « fit ») qui ne prédisent pas la performance.",
+        },
+        {
+          question: "Quelle formation ATIPIK RH pour outiller ces pratiques ?",
+          answer:
+            "La formation « Renforcer ses pratiques de recrutement, de la diversité à la performance RH » dure 11 heures en mixed learning, à Lormont. Tarif public : 715 € TTC par stagiaire. Tarif selon profil : se rapprocher d'ATIPIK RH pour une étude personnalisée.",
+        },
+      ],
+      internalLinks: [
+        { label: "Formation Renforcer ses pratiques de recrutement", href: "/formations/professionnalisantes/renforcer-pratique-recrutement-diversite", type: "formation" },
+        { label: "Formation Prévenir les discriminations dans le recrutement", href: "/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif", type: "formation" },
+        { label: "Recrutement inclusif : objectiver les critères", href: "/blog/recrutement-inclusif-objectiver-criteres", type: "article" },
+        { label: "Recrutement sans discrimination : 7 points de contrôle", href: "/blog/recrutement-sans-discrimination-points-controle", type: "article" },
+        { label: "Biais cognitifs dans le recrutement", href: "/blog/biais-cognitifs-recrutement-methode-bordeaux", type: "article" },
+        { label: "Page contact", href: "/contact?sujet=Demande%20formation%20—%20Renforcer%20ses%20pratiques%20de%20recrutement", type: "contact" },
+      ],
+    },
+    {
       id: 49,
       slug: "experience-professionnelle-non-reconnue-vae",
       title: "Votre expérience ne rentre pas dans un CV ? Transformez-la en certification avec la VAE",

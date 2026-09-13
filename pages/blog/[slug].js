@@ -89,10 +89,40 @@ import {
   experienceProfessionnelleNonReconnueVaeInternalLinks,
   experienceProfessionnelleNonReconnueVaeSecondaryKeywords,
 } from '../../lib/blog/experienceProfessionnelleNonReconnueVaeContent';
+import {
+  neurodiversiteInclusionRecrutementContent,
+  neurodiversiteInclusionRecrutementFaqItems,
+  neurodiversiteInclusionRecrutementInternalLinks,
+  neurodiversiteInclusionRecrutementSecondaryKeywords,
+} from '../../lib/blog/neurodiversiteInclusionRecrutementContent';
 import { getAllArticles, getArticleBySlug } from '../../lib/blog/articleRepository';
 import { buildArticleSeo } from '../../lib/blog/articleSeoMapper';
 
 const BLOG_ARTICLES = [
+    {
+      id: 50,
+      slug: "neurodiversite-inclusion-recrutement",
+      title: "Neurodiversité et inclusion : vos entretiens écartent-ils les compétences que vous cherchez ?",
+      excerpt: "Autisme, TDAH, troubles dys : le feeling et l'aisance orale filtrent souvent le style, pas la compétence. Objectiver les critères permet d'inclure la neurodiversité sans baisser l'exigence.",
+      image: "/images/blog/neurodiversite-inclusion-recrutement.png",
+      imageAlt: "Neurodiversité et inclusion au recrutement : entretien structuré et compétences observables — ATIPIK RH Lormont Bordeaux",
+      date: "1 octobre 2026",
+      isoDate: "2026-10-01",
+      readTime: "10 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "neurodiversité recrutement, inclusion professionnelle, autisme recrutement, TDAH travail, RQTH, recrutement inclusif, aménagement entretien",
+      seo: {
+        metaTitle: "Neurodiversité et inclusion : recruter sans écarter les compétences",
+        metaDescription:
+          "Autisme, TDAH, dys : vos critères implicites filtrent souvent le style, pas la compétence. Objectiver le recrutement pour inclure la neurodiversité.",
+        canonicalPath: "/blog/neurodiversite-inclusion-recrutement",
+        secondaryKeywords: neurodiversiteInclusionRecrutementSecondaryKeywords,
+      },
+      faqItems: neurodiversiteInclusionRecrutementFaqItems,
+      internalLinks: neurodiversiteInclusionRecrutementInternalLinks,
+      content: neurodiversiteInclusionRecrutementContent,
+    },
     {
       id: 49,
       slug: "experience-professionnelle-non-reconnue-vae",
@@ -388,7 +418,7 @@ const BLOG_ARTICLES = [
       category: "Formations",
       keywords: "recruter par les compétences, recrutement par les compétences, compétences transférables, recrutement sans CV, soft skills recrutement, pénurie de talents, méthode de recrutement, recrutement inclusif, évaluation des compétences",
       seo: {
-        metaTitle: "Recruter par les compétences : méthode RH 2026 | Atipik RH",
+        metaTitle: "Pénurie de talents : recruter par les compétences | Atipik RH",
         metaDescription:
           "Méthode RH concrète : recruter par les compétences, grille d'évaluation, entretiens structurés. Élargissez le vivier et réduisez le turnover.",
         canonicalPath: "/blog/recruter-par-les-competences-penurie-talents",
@@ -963,6 +993,12 @@ const BLOG_ARTICLES = [
       author: "Vanessa NOAH EWODO",
       category: "Formations",
       keywords: "discrimination recrutement loi, obligation formation non-discrimination, risque juridique recrutement",
+      seo: {
+        metaTitle: "Discrimination à l'embauche : 25 critères et sanctions | Atipik RH",
+        metaDescription:
+          "25 critères prohibés, sanctions pénales et solutions pour recruter en conformité. Distinct de l’obligation de formation des recruteurs (loi 2017-86).",
+        canonicalPath: "/blog/discrimination-embauche-obligations-legales-risques-solutions-entreprises",
+      },
       content: discriminationEmbaucheObligationsLegalesContent
     },
     {
@@ -976,6 +1012,12 @@ const BLOG_ARTICLES = [
       author: "Vanessa NOAH EWODO",
       category: "Formations",
       keywords: "réduire coût recrutement, optimisation recrutement RH, recrutement efficace, stratégie RH performance, formation recruteurs",
+      seo: {
+        metaTitle: "Réduire les coûts de recrutement par la formation RH | Atipik RH",
+        metaDescription:
+          "Méthode pour baisser le coût par embauche : évaluation structurée, formation des recruteurs et moins de turnover. Atipik RH, Lormont.",
+        canonicalPath: "/blog/reduire-couts-recrutement-formation-rh",
+      },
       content: reduireCoutsRecrutementFormationContent
     },
     {
@@ -989,6 +1031,12 @@ const BLOG_ARTICLES = [
       author: "Vanessa NOAH EWODO",
       category: "Formations",
       keywords: "réduire coût recrutement, cout par embauche, recrutement efficace, performance RH, ROI formation RH, recrutement par les compétences, réduire turnover recrutement, time-to-hire",
+      seo: {
+        metaTitle: "Réduire les coûts de recrutement : guide ROI formation RH",
+        metaDescription:
+          "Article complémentaire : ROI, turnover et time-to-hire. Le guide principal est « Réduire les coûts de recrutement par la formation RH ».",
+        canonicalPath: "/blog/reduire-couts-recrutement-formation-rh",
+      },
       content: reduireCoutRecrutementFormationRhContent
     },
     {
@@ -1002,6 +1050,12 @@ const BLOG_ARTICLES = [
       author: "Vanessa NOAH EWODO",
       category: "Formations",
       keywords: "recrutement sans discrimination, biais recrutement, recrutement inclusif, non-discrimination RH, entretien structure, grille de scoring, traçabilité recrutement",
+      seo: {
+        metaTitle: "Recrutement sans discrimination : méthode en 4 étapes | Atipik RH",
+        metaDescription:
+          "Pilier opérationnel : 4 étapes pour structurer les entretiens, réduire les biais et tracer les décisions RH. Distinct de la check-list 7 points de contrôle.",
+        canonicalPath: "/blog/recrutement-sans-discrimination",
+      },
       content: recrutementSansDiscriminationContent
     },
     {
@@ -1078,6 +1132,12 @@ const BLOG_ARTICLES = [
       author: "Vanessa NOAH EWODO",
       category: "Formations",
       keywords: "prévenir discriminations embauche, discrimination à l'embauche loi, obligations recruteur discrimination, conformité recrutement RH, risque juridique recrutement, traçabilité recrutement, biais inconscients recrutement, Atipik RH Bordeaux Lormont",
+      seo: {
+        metaTitle: "Prévenir les discriminations : cadre légal RH | Atipik RH",
+        metaDescription:
+          "Guide conformité : obligations légales, biais, traçabilité et outils pour sécuriser le recrutement. Complète le pilier méthode en 4 étapes.",
+        canonicalPath: "/blog/prevenir-discriminations-recrutement-methodes-obligations-outils-rh",
+      },
       content: prevenirDiscriminationsRecrutementContent
     },
     {
@@ -1091,6 +1151,12 @@ const BLOG_ARTICLES = [
       author: "Vanessa NOAH EWODO",
       category: "Formations",
       keywords: "recrutement par les compétences, méthode recrutement compétences, soft skills recrutement, recrutement sans CV, recrutement inclusif entreprise, KPI recrutement RH, optimiser recrutement, grille d'entretien compétences, référentiel compétences, formation recruteurs Bordeaux, Atipik RH",
+      seo: {
+        metaTitle: "Recrutement par les compétences : méthode 5 étapes | Atipik RH",
+        metaDescription:
+          "Méthode opérationnelle en 5 étapes, KPI et erreurs à éviter pour fiabiliser les décisions RH. Guide distinct de l’angle pénurie de talents.",
+        canonicalPath: "/blog/recrutement-competences-methode-complete-rh-2026",
+      },
       content: `
         <p>Le modèle classique centré sur le CV montre ses limites : tension sur les viviers, décisions parfois biaisées et coûts cachés liés au turnover ou à l'onboarding.</p>
         <p>Les organisations qui veulent gagner en performance font évoluer leur approche vers le <strong>recrutement par les compétences</strong> : évaluer ce que la personne sait réellement faire et comment elle peut réussir dans le poste, au-delà du seul parcours passé.</p>

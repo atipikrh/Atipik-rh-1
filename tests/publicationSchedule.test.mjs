@@ -63,5 +63,7 @@ describe('isScheduledBlogSlugLive', () => {
     assert.equal(isScheduledBlogSlugLive('recrutement-inclusif-objectiver-criteres', new Date('2026-09-16T21:59:00Z')), false)
     assert.equal(isScheduledBlogSlugLive('salarie-demotive-bilan-de-competences', new Date('2026-09-21T21:59:00Z')), false)
     assert.equal(isScheduledBlogSlugLive('formation-cip-ou-fpa-quelle-certification-choisir', new Date('2026-09-28T21:59:00Z')), false)
+    assert.equal(isScheduledBlogSlugLive('neurodiversite-inclusion-recrutement', new Date('2026-09-30T21:59:00Z')), false)
+    assert.equal(isScheduledBlogSlugLive('neurodiversite-inclusion-recrutement', new Date('2026-10-01T05:00:00Z')), true)
   })
 })

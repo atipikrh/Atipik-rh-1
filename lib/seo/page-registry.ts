@@ -4,6 +4,7 @@ import type { RegistryEntry } from './types'
 
 /** Slugs blog indexables (alignés sur pages/blog/[slug].js). */
 export const BLOG_SLUGS = [
+  'neurodiversite-inclusion-recrutement',
   'experience-professionnelle-non-reconnue-vae',
   'formation-cip-ou-fpa-quelle-certification-choisir',
   'recrutement-inclusif-objectiver-criteres',
