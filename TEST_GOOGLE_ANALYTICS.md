@@ -8,6 +8,15 @@
 - **ID de mesure** : `G-0T6JYZBLQN`
 - **ID de flux** : `3348763659`
 
+## Catalogue Digiforma
+
+Dans **Ma Marque → Catalogue en ligne** :
+
+- Google Analytics ID : `G-0T6JYZBLQN` (jamais `UA-223055534-1` ni le nom « ATIPIK RH »)
+- URL canonique : **vide** (aucun proxy inverse)
+
+Contrôle : `npm run check:digiforma` — détail dans [`docs/DIGIFORMA_CATALOGUE.md`](docs/DIGIFORMA_CATALOGUE.md).
+
 ---
 
 ## Test 1 : Vérification sans consentement
