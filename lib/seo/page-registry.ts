@@ -1,8 +1,13 @@
+import { isScheduledBlogSlugLive } from '../blog/publicationSchedule'
 import { PROFESSIONNALISANTES_SLUGS } from './professionnalisantesConfig'
 import type { RegistryEntry } from './types'
 
 /** Slugs blog indexables (alignés sur pages/blog/[slug].js). */
 export const BLOG_SLUGS = [
+  'formation-cip-ou-fpa-quelle-certification-choisir',
+  'recrutement-inclusif-objectiver-criteres',
+  'salarie-demotive-bilan-de-competences',
+  'recrutement-sans-discrimination-points-controle',
   '10-usages-ia-cip-accompagnement',
   'formation-ia-ethique-professionnels-accompagnement',
   'formation-ia-accompagnement-professionnels-bordeaux-2026',
@@ -134,6 +139,7 @@ export function getIndexableRegistry(): RegistryEntry[] {
   }
 
   for (const slug of BLOG_SLUGS) {
+    if (!isScheduledBlogSlugLive(slug)) continue
     entries.push(entry(`/blog/${slug}`, 'blog', 0.8, 'monthly', buildDate))
   }
 

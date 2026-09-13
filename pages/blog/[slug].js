@@ -59,10 +59,130 @@ import {
   dixUsagesIaCipAccompagnementInternalLinks,
   dixUsagesIaCipAccompagnementSecondaryKeywords,
 } from '../../lib/blog/dixUsagesIaCipAccompagnementContent';
+import {
+  recrutementSansDiscriminationPointsControleContent,
+  recrutementSansDiscriminationPointsControleFaqItems,
+  recrutementSansDiscriminationPointsControleInternalLinks,
+  recrutementSansDiscriminationPointsControleSecondaryKeywords,
+} from '../../lib/blog/recrutementSansDiscriminationPointsControleContent';
+import {
+  salarieDemotiveBilanDeCompetencesContent,
+  salarieDemotiveBilanDeCompetencesFaqItems,
+  salarieDemotiveBilanDeCompetencesInternalLinks,
+  salarieDemotiveBilanDeCompetencesSecondaryKeywords,
+} from '../../lib/blog/salarieDemotiveBilanDeCompetencesContent';
+import {
+  recrutementInclusifObjectiverCriteresContent,
+  recrutementInclusifObjectiverCriteresFaqItems,
+  recrutementInclusifObjectiverCriteresInternalLinks,
+  recrutementInclusifObjectiverCriteresSecondaryKeywords,
+} from '../../lib/blog/recrutementInclusifObjectiverCriteresContent';
+import {
+  formationCipOuFpaQuelleCertificationChoisirContent,
+  formationCipOuFpaQuelleCertificationChoisirFaqItems,
+  formationCipOuFpaQuelleCertificationChoisirInternalLinks,
+  formationCipOuFpaQuelleCertificationChoisirSecondaryKeywords,
+} from '../../lib/blog/formationCipOuFpaQuelleCertificationChoisirContent';
 import { getAllArticles, getArticleBySlug } from '../../lib/blog/articleRepository';
 import { buildArticleSeo } from '../../lib/blog/articleSeoMapper';
 
 const BLOG_ARTICLES = [
+    {
+      id: 48,
+      slug: "formation-cip-ou-fpa-quelle-certification-choisir",
+      title: "CIP ou FPA : quelle certification choisir pour professionnaliser ses équipes ?",
+      excerpt: "CIP et FPA sont deux métiers de l'accompagnement, mais ils ne répondent pas au même besoin. Le CIP accompagne principalement les personnes vers l'emploi et travaille avec les entreprises. Le FPA conçoit, anime et évalue des actions de formation pour adultes.",
+      image: "/images/blog/formation-cip-ou-fpa-quelle-certification-choisir.jpg",
+      imageAlt: "Formation CIP ou FPA : quelle certification choisir — ATIPIK RH Lormont Bordeaux",
+      date: "29 septembre 2026",
+      isoDate: "2026-09-29",
+      readTime: "10 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation CIP ou FPA, formation CIP Bordeaux, formation FPA Bordeaux, conseiller en insertion professionnelle, formateur professionnel d'adultes, certification niveau 5",
+      seo: {
+        metaTitle: "Formation CIP ou FPA : quelle certification choisir ?",
+        metaDescription:
+          "CIP ou FPA : comparez les missions, compétences et débouchés pour choisir le parcours professionnel adapté à votre projet.",
+        canonicalPath: "/blog/formation-cip-ou-fpa-quelle-certification-choisir",
+        secondaryKeywords: formationCipOuFpaQuelleCertificationChoisirSecondaryKeywords,
+      },
+      faqItems: formationCipOuFpaQuelleCertificationChoisirFaqItems,
+      internalLinks: formationCipOuFpaQuelleCertificationChoisirInternalLinks,
+      content: formationCipOuFpaQuelleCertificationChoisirContent,
+    },
+    {
+      id: 47,
+      slug: "recrutement-inclusif-objectiver-criteres",
+      title: "Pourquoi vos recrutements échouent encore ? Passez du « profil idéal » aux compétences observables",
+      excerpt: "Lorsque les recrutements échouent, le problème ne vient pas toujours du marché de l'emploi. Il peut venir d'un besoin mal défini, de critères trop vagues ou d'entretiens qui ne permettent pas de comparer les candidats.",
+      image: "/images/blog/recrutement-inclusif-objectiver-criteres.jpg",
+      imageAlt: "Recrutement inclusif : objectiver les critères et recruter par les compétences — ATIPIK RH Lormont Bordeaux",
+      date: "17 septembre 2026",
+      isoDate: "2026-09-17",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "recrutement inclusif, recruter par les compétences, objectiver les critères, grille d'entretien, recrutement diversité, profils adaptés, compétences observables",
+      seo: {
+        metaTitle: "Recrutement inclusif : comment objectiver vos critères ?",
+        metaDescription:
+          "Apprenez à recruter sur les compétences, à réduire les biais et à élargir vos viviers grâce à une méthode inclusive.",
+        canonicalPath: "/blog/recrutement-inclusif-objectiver-criteres",
+        secondaryKeywords: recrutementInclusifObjectiverCriteresSecondaryKeywords,
+      },
+      faqItems: recrutementInclusifObjectiverCriteresFaqItems,
+      internalLinks: recrutementInclusifObjectiverCriteresInternalLinks,
+      content: recrutementInclusifObjectiverCriteresContent,
+    },
+    {
+      id: 46,
+      slug: "salarie-demotive-bilan-de-competences",
+      title: "Salarié démotivé : faut-il changer de métier ou retrouver du sens au travail ?",
+      excerpt: "La perte de motivation ne signifie pas toujours qu'il faut démissionner. Elle peut révéler un décalage entre les missions exercées, les compétences mobilisées, les valeurs personnelles et les perspectives d'évolution.",
+      image: "/images/hero/bilan-competences.jpg",
+      imageAlt: "Salarié démotivé : bilan de compétences pour retrouver du sens au travail — ATIPIK RH Lormont Bordeaux",
+      date: "22 septembre 2026",
+      isoDate: "2026-09-22",
+      readTime: "10 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "bilan de compétences perte de motivation, salarié démotivé, retrouver du sens au travail, évolution professionnelle, reconversion, bilan de compétences Lormont",
+      seo: {
+        metaTitle: "Salarié démotivé : quand faire un bilan de compétences ?",
+        metaDescription:
+          "Perte de motivation, manque de sens ou envie de changer : découvrez comment le bilan de compétences peut aider à décider avec méthode.",
+        canonicalPath: "/blog/salarie-demotive-bilan-de-competences",
+        secondaryKeywords: salarieDemotiveBilanDeCompetencesSecondaryKeywords,
+      },
+      faqItems: salarieDemotiveBilanDeCompetencesFaqItems,
+      internalLinks: salarieDemotiveBilanDeCompetencesInternalLinks,
+      content: salarieDemotiveBilanDeCompetencesContent,
+    },
+    {
+      id: 45,
+      slug: "recrutement-sans-discrimination-points-controle",
+      title: "Recrutement sans discrimination : 7 points de contrôle pour sécuriser vos pratiques RH",
+      excerpt: "Un recrutement peut être animé par de bonnes intentions et rester juridiquement fragile. Une annonce imprécise, une question déplacée ou le « bon feeling » exposent l'entreprise.",
+      image: "/images/blog/recrutement-sans-discrimination-points-controle.jpg",
+      imageAlt: "Recrutement sans discrimination : 7 points de contrôle RH pour sécuriser l'embauche — ATIPIK RH Lormont",
+      date: "15 septembre 2026",
+      isoDate: "2026-09-15",
+      readTime: "11 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "recrutement sans discrimination, formation non-discrimination recrutement, discrimination à l'embauche, obligation recruteur, biais cognitifs recrutement, entretien structuré",
+      seo: {
+        metaTitle: "Recrutement sans discrimination : 7 contrôles RH essentiels",
+        metaDescription:
+          "Découvrez 7 points de contrôle pour prévenir les discriminations à l'embauche et sécuriser vos pratiques de recrutement.",
+        canonicalPath: "/blog/recrutement-sans-discrimination-points-controle",
+        secondaryKeywords: recrutementSansDiscriminationPointsControleSecondaryKeywords,
+      },
+      faqItems: recrutementSansDiscriminationPointsControleFaqItems,
+      internalLinks: recrutementSansDiscriminationPointsControleInternalLinks,
+      content: recrutementSansDiscriminationPointsControleContent,
+    },
     {
       id: 44,
       slug: "10-usages-ia-cip-accompagnement",

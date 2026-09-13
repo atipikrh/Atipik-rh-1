@@ -15,6 +15,234 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 48,
+      slug: "formation-cip-ou-fpa-quelle-certification-choisir",
+      title: "CIP ou FPA : quelle certification choisir pour professionnaliser ses équipes ?",
+      excerpt: "CIP et FPA sont deux métiers de l'accompagnement, mais ils ne répondent pas au même besoin. Le CIP accompagne principalement les personnes vers l'emploi et travaille avec les entreprises. Le FPA conçoit, anime et évalue des actions de formation pour adultes.",
+      image: "/images/blog/formation-cip-ou-fpa-quelle-certification-choisir.jpg",
+      imageAlt: "Formation CIP ou FPA : quelle certification choisir — ATIPIK RH Lormont Bordeaux",
+      date: "29 septembre 2026",
+      isoDate: "2026-09-29",
+      readTime: "10 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation CIP ou FPA, formation CIP Bordeaux, formation FPA Bordeaux, conseiller en insertion professionnelle, formateur professionnel d'adultes, certification niveau 5",
+      seo: {
+        metaTitle: "Formation CIP ou FPA : quelle certification choisir ?",
+        metaDescription:
+          "CIP ou FPA : comparez les missions, compétences et débouchés pour choisir le parcours professionnel adapté à votre projet.",
+        canonicalPath: "/blog/formation-cip-ou-fpa-quelle-certification-choisir",
+        secondaryKeywords: [
+          "formation CIP Bordeaux",
+          "formation FPA Bordeaux",
+          "conseiller en insertion professionnelle",
+          "formateur professionnel d'adultes",
+          "certification niveau 5",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Quelle différence entre un CIP et un FPA ?",
+          answer:
+            "Le CIP accompagne des personnes vers l'emploi et développe une relation forte avec les entreprises. Le FPA conçoit, anime et évalue des actions de formation pour adultes. Les deux métiers relèvent de l'accompagnement, mais pas du même besoin : insertion professionnelle d'un côté, ingénierie et animation pédagogique de l'autre.",
+        },
+        {
+          question: "Peut-on suivre les deux parcours ?",
+          answer:
+            "Oui, les deux titres sont complémentaires. Ils se suivent en général l'un après l'autre : ATIPIK RH ne propose pas un double cursus simultané. Un professionnel déjà certifié peut viser le second titre selon son projet. Si vous justifiez d'une expérience significative, une VAE peut aussi être étudiée. La réunion d'information permet d'arbitrer l'ordre, le calendrier et le financement.",
+        },
+        {
+          question: "Quels sont les débouchés après une formation CIP ou FPA ?",
+          answer:
+            "Après un CIP : conseiller en insertion professionnelle, conseiller emploi-formation, chargé de relation entreprise. Après un FPA : formateur, concepteur pédagogique, coordinateur ou responsable formation.",
+        },
+        {
+          question: "Comment financer une formation CIP ou FPA à Lormont ?",
+          answer:
+            "Selon votre situation, CPF, AIF France Travail, Transition Pro, OPCO ou plan de développement des compétences de l'employeur. L'obtention d'un financement public ou mutualisé pour une action de formation professionnelle répond à des règles et conditions spécifiques qui vous engagent. Pour plus d'informations, contactez ATIPIK RH.",
+        },
+        {
+          question: "Où se déroulent les formations CIP et FPA chez ATIPIK RH ?",
+          answer:
+            "Les deux formations se déroulent au centre ATIPIK RH, 8 rue du Courant, 33310 Lormont, sur la rive droite de Bordeaux Métropole, en présentiel. Les modalités précises de chaque session sont présentées en réunion d'information.",
+        },
+      ],
+      internalLinks: [
+        { label: "Formation CIP", href: "/formations/cip", type: "formation" },
+        { label: "Formation FPA", href: "/formations/fpa", type: "formation" },
+        { label: "Réunion d'information", href: "/s-inscrire", type: "contact" },
+        { label: "Financement", href: "/financement", type: "financement" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+        { label: "Formation CIP Bordeaux, session septembre 2026", href: "/blog/formation-cip-bordeaux-session-septembre-2026", type: "article" },
+        { label: "Devenir conseiller en insertion professionnelle à Bordeaux", href: "/blog/formation-cip-bordeaux-conseiller-insertion-professionnelle", type: "article" },
+        { label: "Devenir formateur professionnel d’adultes à Bordeaux", href: "/blog/formation-fpa-bordeaux-formateur-professionnel-adultes", type: "article" },
+      ],
+    },
+    {
+      id: 47,
+      slug: "recrutement-inclusif-objectiver-criteres",
+      title: "Pourquoi vos recrutements échouent encore ? Passez du « profil idéal » aux compétences observables",
+      excerpt: "Lorsque les recrutements échouent, le problème ne vient pas toujours du marché de l'emploi. Il peut venir d'un besoin mal défini, de critères trop vagues ou d'entretiens qui ne permettent pas de comparer les candidats.",
+      image: "/images/blog/recrutement-inclusif-objectiver-criteres.jpg",
+      imageAlt: "Recrutement inclusif : objectiver les critères et recruter par les compétences — ATIPIK RH Lormont Bordeaux",
+      date: "17 septembre 2026",
+      isoDate: "2026-09-17",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "recrutement inclusif, recruter par les compétences, objectiver les critères, grille d'entretien, recrutement diversité, profils adaptés, compétences observables",
+      seo: {
+        metaTitle: "Recrutement inclusif : comment objectiver vos critères ?",
+        metaDescription:
+          "Apprenez à recruter sur les compétences, à réduire les biais et à élargir vos viviers grâce à une méthode inclusive.",
+        canonicalPath: "/blog/recrutement-inclusif-objectiver-criteres",
+        secondaryKeywords: [
+          "recruter par les compétences",
+          "objectiver les critères",
+          "grille d'entretien",
+          "recrutement diversité",
+          "profils adaptés",
+          "compétences observables",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Comment définir un critère de recrutement objectif ?",
+          answer:
+            "Un critère est objectif s'il est lié aux exigences du poste, observable et vérifiable. Formulez-le comme un comportement ou un résultat, pas comme une qualité floue. Distinguez l'indispensable du souhaitable, puis évaluez tous les candidats comparables avec la même grille.",
+        },
+        {
+          question: "Quelle différence entre diversité, inclusion et non-discrimination ?",
+          answer:
+            "La diversité décrit la variété des profils. L'inclusion désigne la capacité de l'organisation à les faire réussir grâce à des processus lisibles. La non-discrimination est le cadre légal qui interdit de fonder une embauche sur des critères prohibés. Le recrutement inclusif articule les trois sans baisser l'exigence.",
+        },
+        {
+          question: "Comment utiliser une grille d'entretien en recrutement ?",
+          answer:
+            "Préparez la grille avant les entretiens à partir des compétences indispensables. Posez les mêmes questions principales, notez les preuves, attribuez un niveau sur une échelle partagée, puis décidez collectivement à partir de ces notes. Conservez la grille pour comparer et tracer la décision.",
+        },
+        {
+          question: "Combien dure la formation ATIPIK RH « Renforcer ses pratiques de recrutement » et comment la financer ?",
+          answer:
+            "La formation dure 11 heures en mixed learning, pour des groupes de 4 à 12 participants, à Lormont. Tarif public : 715 € TTC par stagiaire. Une prise en charge OPCO ou FAF peut être étudiée selon votre situation. Tarif selon profil : se rapprocher d'ATIPIK RH pour une étude personnalisée.",
+        },
+      ],
+      internalLinks: [
+        { label: "Formation Renforcer ses pratiques de recrutement", href: "/formations/professionnalisantes/renforcer-pratique-recrutement-diversite", type: "formation" },
+        { label: "Biais cognitifs dans le recrutement", href: "/blog/biais-cognitifs-recrutement-methode-bordeaux", type: "article" },
+        { label: "Recruter par les compétences : méthode RH", href: "/blog/recrutement-competences-methode-complete-rh-2026", type: "article" },
+        { label: "Recrutement sans discrimination", href: "/blog/recrutement-sans-discrimination", type: "article" },
+        { label: "Page contact", href: "/contact?sujet=Demande%20formation%20—%20Renforcer%20ses%20pratiques%20de%20recrutement", type: "contact" },
+      ],
+    },
+    {
+      id: 46,
+      slug: "salarie-demotive-bilan-de-competences",
+      title: "Salarié démotivé : faut-il changer de métier ou retrouver du sens au travail ?",
+      excerpt: "La perte de motivation ne signifie pas toujours qu'il faut démissionner. Elle peut révéler un décalage entre les missions exercées, les compétences mobilisées, les valeurs personnelles et les perspectives d'évolution.",
+      image: "/images/hero/bilan-competences.jpg",
+      imageAlt: "Salarié démotivé : bilan de compétences pour retrouver du sens au travail — ATIPIK RH Lormont Bordeaux",
+      date: "22 septembre 2026",
+      isoDate: "2026-09-22",
+      readTime: "10 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "bilan de compétences perte de motivation, salarié démotivé, retrouver du sens au travail, évolution professionnelle, reconversion, bilan de compétences Lormont",
+      seo: {
+        metaTitle: "Salarié démotivé : quand faire un bilan de compétences ?",
+        metaDescription:
+          "Perte de motivation, manque de sens ou envie de changer : découvrez comment le bilan de compétences peut aider à décider avec méthode.",
+        canonicalPath: "/blog/salarie-demotive-bilan-de-competences",
+        secondaryKeywords: [
+          "salarié démotivé",
+          "retrouver du sens au travail",
+          "évolution professionnelle",
+          "reconversion",
+          "bilan de compétences Lormont",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Un bilan de compétences est-il confidentiel ?",
+          answer:
+            "Oui. Le bilan de compétences est une démarche individuelle et confidentielle. La synthèse personnalisée vous est remise. Aucune information n'est transmise à un employeur ou à un tiers sans votre accord. Chez ATIPIK RH, cet engagement s'applique aux formules Essentiel et Horizon, en présentiel à Lormont comme en visioconférence.",
+        },
+        {
+          question: "Peut-on faire un bilan sans vouloir démissionner ?",
+          answer:
+            "Oui. Le bilan n'impose pas une reconversion et n'implique pas de quitter son poste. Il sert à comprendre ce qui ne convient plus, à identifier les compétences transférables et à choisir une prochaine étape cohérente : évolution interne, ajustement de missions, formation ou, le cas échéant, changement de métier.",
+        },
+        {
+          question: "Quelle différence entre un bilan de compétences et un coaching ?",
+          answer:
+            "Le bilan de compétences est un dispositif structuré, avec un temps dédié, une analyse des compétences, des motivations et des pistes professionnelles, et une synthèse écrite. Le coaching vise plutôt l'atteinte d'un objectif déjà identifié, souvent centré sur la posture, la performance ou un levier de changement. Les deux peuvent se succéder ; ils ne répondent pas au même besoin de départ.",
+        },
+      ],
+      internalLinks: [
+        { label: "Bilan de compétences", href: "/bilan-de-competences", type: "service" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+        { label: "Financement", href: "/financement", type: "financement" },
+        { label: "5 signes qu'il est temps de faire un bilan de compétences", href: "/blog/5-signes-temps-faire-bilan-competences", type: "article" },
+        { label: "Comment financer un bilan de compétences en 2026", href: "/blog/financer-bilan-competences-2026-cpf-france-travail-employeur", type: "article" },
+      ],
+    },
+    {
+      id: 45,
+      slug: "recrutement-sans-discrimination-points-controle",
+      title: "Recrutement sans discrimination : 7 points de contrôle pour sécuriser vos pratiques RH",
+      excerpt: "Un recrutement peut être animé par de bonnes intentions et rester juridiquement fragile. Une annonce imprécise, une question déplacée ou le « bon feeling » exposent l'entreprise.",
+      image: "/images/blog/recrutement-sans-discrimination-points-controle.jpg",
+      imageAlt: "Recrutement sans discrimination : 7 points de contrôle RH pour sécuriser l'embauche — ATIPIK RH Lormont",
+      date: "15 septembre 2026",
+      isoDate: "2026-09-15",
+      readTime: "11 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "recrutement sans discrimination, formation non-discrimination recrutement, discrimination à l'embauche, obligation recruteur, biais cognitifs recrutement, entretien structuré",
+      seo: {
+        metaTitle: "Recrutement sans discrimination : 7 contrôles RH essentiels",
+        metaDescription:
+          "Découvrez 7 points de contrôle pour prévenir les discriminations à l'embauche et sécuriser vos pratiques de recrutement.",
+        canonicalPath: "/blog/recrutement-sans-discrimination-points-controle",
+        secondaryKeywords: [
+          "formation non-discrimination recrutement",
+          "discrimination à l'embauche",
+          "obligation recruteur",
+          "biais cognitifs recrutement",
+          "entretien structuré",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Quelles entreprises doivent former leurs recruteurs à la non-discrimination ?",
+          answer:
+            "Les entreprises d'au moins 300 salariés et les entreprises spécialisées dans le recrutement doivent former les personnes chargées des missions de recrutement à la non-discrimination à l'embauche, au moins une fois tous les cinq ans, conformément à l'article L1131-2 du Code du travail.",
+        },
+        {
+          question: "Quels sont les critères interdits en entretien ?",
+          answer:
+            "Il est interdit de fonder une décision d'embauche sur des critères discriminatoires, notamment l'origine, le sexe, l'âge, le handicap, l'état de santé ou l'apparence. Les questions et les critères d'évaluation doivent rester liés aux compétences et aux exigences du poste.",
+        },
+        {
+          question: "Comment construire une grille d'entretien objective ?",
+          answer:
+            "Listez les compétences indispensables au poste, traduisez-les en comportements observables, posez les mêmes questions à tous les candidats comparables et attribuez un niveau sur une échelle partagée. Consignez ensuite le motif de sélection ou de refus à partir de cette grille, pas du ressenti.",
+        },
+        {
+          question: "Combien dure la formation ATIPIK RH « Prévenir les discriminations dans le recrutement » ?",
+          answer:
+            "La formation dure 11 heures, en mixed learning, pour des groupes de 4 à 12 participants, à Lormont. Tarif public : 990 € TTC par stagiaire. Une étude personnalisée est possible selon le profil (salariés, demandeurs d'emploi, indépendants, employeurs).",
+        },
+      ],
+      internalLinks: [
+        { label: "Formation Prévenir les discriminations dans le recrutement", href: "/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif", type: "formation" },
+        { label: "Recrutement sans discrimination — méthode en 4 étapes", href: "/blog/recrutement-sans-discrimination", type: "article" },
+        { label: "Discrimination à l'embauche : ce que la loi impose", href: "/blog/obligation-formation-non-discrimination-recrutement-entreprise", type: "article" },
+        { label: "Biais cognitifs dans le recrutement", href: "/blog/biais-cognitifs-recrutement-methode-bordeaux", type: "article" },
+        { label: "Page contact", href: "/contact?sujet=Demande%20formation%20—%20Prévenir%20les%20discriminations%20dans%20le%20recrutement", type: "contact" },
+      ],
+    },
+    {
       id: 44,
       slug: "10-usages-ia-cip-accompagnement",
       title: "10 usages concrets de l'IA pour les Conseillers en Insertion Professionnelle",
