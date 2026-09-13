@@ -1,0 +1,30 @@
+# Redéploiement production — article blog VAE / expérience non reconnue.
+# Publication cible : 24 septembre 2026 à 07:00 (Europe/Paris) = 05:00 UTC.
+name: Déploiement blog VAE expérience sept. 2026
+
+on:
+  schedule:
+    - cron: '0 5 24 9 *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  redeploy-production:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Déclencher le build Vercel (commit vide)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "chore: déploiement production programmé — article blog VAE expérience (24 sept. 2026)"
+          git push
+
+      - name: Vérification SEO post-déploiement
+        run: node scripts/post-deploy-seo.mjs
+        env:
+          SITE_URL: https://www.atipikrh.com

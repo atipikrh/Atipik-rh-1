@@ -15,6 +15,59 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 49,
+      slug: "experience-professionnelle-non-reconnue-vae",
+      title: "Votre expérience ne rentre pas dans un CV ? Transformez-la en certification avec la VAE",
+      excerpt: "Vous avez exercé pendant plusieurs années, développé des compétences et assumé des responsabilités, mais votre diplôme ne reflète pas votre niveau réel ? La Validation des Acquis de l'Expérience peut permettre de faire reconnaître officiellement votre parcours.",
+      image: "/images/blog/experience-professionnelle-non-reconnue-vae.png",
+      imageAlt: "VAE expérience professionnelle : transformer un parcours non reconnu en certification — ATIPIK RH Lormont Bordeaux",
+      date: "24 septembre 2026",
+      isoDate: "2026-09-24",
+      readTime: "9 min",
+      author: "Vanessa NOAH EWODO",
+      category: "VAE",
+      keywords: "VAE expérience professionnelle, validation des acquis de l'expérience, VAE FPA, VAE CIP, certification professionnelle, accompagnement VAE Bordeaux",
+      seo: {
+        metaTitle: "Expérience non reconnue : pourquoi choisir la VAE ?",
+        metaDescription:
+          "La VAE permet de transformer une expérience professionnelle en certification reconnue. Découvrez les étapes et l'accompagnement proposé par ATIPIK RH.",
+        canonicalPath: "/blog/experience-professionnelle-non-reconnue-vae",
+        secondaryKeywords: [
+          "validation des acquis de l'expérience",
+          "VAE FPA",
+          "VAE CIP",
+          "certification professionnelle",
+          "accompagnement VAE Bordeaux",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Faut-il avoir un diplôme pour commencer une VAE ?",
+          answer:
+            "Non. Aucun diplôme n'est requis pour engager une VAE. La démarche s'adresse aux personnes qui justifient d'une expérience significative en lien avec la certification visée, qu'elles soient salariées, demandeuses d'emploi, indépendantes ou bénévoles. Chez ATIPIK RH, aucune durée minimale d'expérience n'est exigée pour étudier un projet VAE FPA ou CIP. Certains certificateurs peuvent toutefois poser des prérequis spécifiques selon le titre visé.",
+        },
+        {
+          question: "Quelle différence entre VAE totale et validation partielle ?",
+          answer:
+            "La validation totale correspond à l'obtention de la certification complète, lorsque le jury valide l'ensemble des blocs de compétences. La validation partielle signifie que seuls certains blocs sont validés : ces blocs sont acquis définitivement. Vous pourrez ensuite compléter le parcours par une nouvelle expérience, un accompagnement ou une formation ciblée, puis représenter uniquement les blocs manquants.",
+        },
+        {
+          question: "Comment choisir entre une VAE CIP et une VAE FPA ?",
+          answer:
+            "Choisissez la VAE FPA si vous concevez, animez ou accompagnez des actions de formation pour adultes. Choisissez la VAE CIP si vous accompagnez des parcours d'insertion et développez la relation avec les employeurs. L'accueil ATIPIK RH croise votre expérience avec le référentiel pour confirmer la certification la plus cohérente. Si vous hésitez encore entre les deux métiers, l'article comparatif formation CIP ou FPA peut aider à clarifier le positionnement, sans remplacer l'étude de faisabilité VAE.",
+        },
+      ],
+      internalLinks: [
+        { label: "Accompagnement VAE", href: "/vae", type: "service" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+        { label: "VAE ou bilan de compétences", href: "/blog/vae-ou-bilan-competences-que-choisir-selon-parcours", type: "article" },
+        { label: "Salarié démotivé : bilan de compétences", href: "/blog/salarie-demotive-bilan-de-competences", type: "article" },
+        { label: "VAE : valoriser son expérience", href: "/blog/vae-valoriser-experience-obtenir-diplome", type: "article" },
+        { label: "Valoriser un parcours atypique dans un CV", href: "/blog/valoriser-competences-cv-parcours-atypique", type: "article" },
+        { label: "Formation CIP ou FPA", href: "/blog/formation-cip-ou-fpa-quelle-certification-choisir", type: "article" },
+      ],
+    },
+    {
       id: 48,
       slug: "formation-cip-ou-fpa-quelle-certification-choisir",
       title: "CIP ou FPA : quelle certification choisir pour professionnaliser ses équipes ?",
@@ -76,6 +129,7 @@ export default function Blog() {
         { label: "Formation CIP Bordeaux, session septembre 2026", href: "/blog/formation-cip-bordeaux-session-septembre-2026", type: "article" },
         { label: "Devenir conseiller en insertion professionnelle à Bordeaux", href: "/blog/formation-cip-bordeaux-conseiller-insertion-professionnelle", type: "article" },
         { label: "Devenir formateur professionnel d’adultes à Bordeaux", href: "/blog/formation-fpa-bordeaux-formateur-professionnel-adultes", type: "article" },
+        { label: "Expérience non reconnue : pourquoi choisir la VAE ?", href: "/blog/experience-professionnelle-non-reconnue-vae", type: "article" },
       ],
     },
     {
@@ -131,6 +185,7 @@ export default function Blog() {
         { label: "Formation Renforcer ses pratiques de recrutement", href: "/formations/professionnalisantes/renforcer-pratique-recrutement-diversite", type: "formation" },
         { label: "Biais cognitifs dans le recrutement", href: "/blog/biais-cognitifs-recrutement-methode-bordeaux", type: "article" },
         { label: "Recruter par les compétences : méthode RH", href: "/blog/recrutement-competences-methode-complete-rh-2026", type: "article" },
+        { label: "Recrutement sans discrimination : 7 points de contrôle", href: "/blog/recrutement-sans-discrimination-points-controle", type: "article" },
         { label: "Recrutement sans discrimination", href: "/blog/recrutement-sans-discrimination", type: "article" },
         { label: "Page contact", href: "/contact?sujet=Demande%20formation%20—%20Renforcer%20ses%20pratiques%20de%20recrutement", type: "contact" },
       ],
@@ -184,6 +239,7 @@ export default function Blog() {
         { label: "Financement", href: "/financement", type: "financement" },
         { label: "5 signes qu'il est temps de faire un bilan de compétences", href: "/blog/5-signes-temps-faire-bilan-competences", type: "article" },
         { label: "Comment financer un bilan de compétences en 2026", href: "/blog/financer-bilan-competences-2026-cpf-france-travail-employeur", type: "article" },
+        { label: "Expérience non reconnue : pourquoi choisir la VAE ?", href: "/blog/experience-professionnelle-non-reconnue-vae", type: "article" },
       ],
     },
     {
@@ -237,6 +293,7 @@ export default function Blog() {
       internalLinks: [
         { label: "Formation Prévenir les discriminations dans le recrutement", href: "/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif", type: "formation" },
         { label: "Recrutement sans discrimination — méthode en 4 étapes", href: "/blog/recrutement-sans-discrimination", type: "article" },
+        { label: "Recrutement inclusif : objectiver les critères", href: "/blog/recrutement-inclusif-objectiver-criteres", type: "article" },
         { label: "Discrimination à l'embauche : ce que la loi impose", href: "/blog/obligation-formation-non-discrimination-recrutement-entreprise", type: "article" },
         { label: "Biais cognitifs dans le recrutement", href: "/blog/biais-cognitifs-recrutement-methode-bordeaux", type: "article" },
         { label: "Page contact", href: "/contact?sujet=Demande%20formation%20—%20Prévenir%20les%20discriminations%20dans%20le%20recrutement", type: "contact" },

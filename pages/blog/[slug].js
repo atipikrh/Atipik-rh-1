@@ -83,10 +83,40 @@ import {
   formationCipOuFpaQuelleCertificationChoisirInternalLinks,
   formationCipOuFpaQuelleCertificationChoisirSecondaryKeywords,
 } from '../../lib/blog/formationCipOuFpaQuelleCertificationChoisirContent';
+import {
+  experienceProfessionnelleNonReconnueVaeContent,
+  experienceProfessionnelleNonReconnueVaeFaqItems,
+  experienceProfessionnelleNonReconnueVaeInternalLinks,
+  experienceProfessionnelleNonReconnueVaeSecondaryKeywords,
+} from '../../lib/blog/experienceProfessionnelleNonReconnueVaeContent';
 import { getAllArticles, getArticleBySlug } from '../../lib/blog/articleRepository';
 import { buildArticleSeo } from '../../lib/blog/articleSeoMapper';
 
 const BLOG_ARTICLES = [
+    {
+      id: 49,
+      slug: "experience-professionnelle-non-reconnue-vae",
+      title: "Votre expérience ne rentre pas dans un CV ? Transformez-la en certification avec la VAE",
+      excerpt: "Vous avez exercé pendant plusieurs années, développé des compétences et assumé des responsabilités, mais votre diplôme ne reflète pas votre niveau réel ? La Validation des Acquis de l'Expérience peut permettre de faire reconnaître officiellement votre parcours.",
+      image: "/images/blog/experience-professionnelle-non-reconnue-vae.png",
+      imageAlt: "VAE expérience professionnelle : transformer un parcours non reconnu en certification — ATIPIK RH Lormont Bordeaux",
+      date: "24 septembre 2026",
+      isoDate: "2026-09-24",
+      readTime: "9 min",
+      author: "Vanessa NOAH EWODO",
+      category: "VAE",
+      keywords: "VAE expérience professionnelle, validation des acquis de l'expérience, VAE FPA, VAE CIP, certification professionnelle, accompagnement VAE Bordeaux",
+      seo: {
+        metaTitle: "Expérience non reconnue : pourquoi choisir la VAE ?",
+        metaDescription:
+          "La VAE permet de transformer une expérience professionnelle en certification reconnue. Découvrez les étapes et l'accompagnement proposé par ATIPIK RH.",
+        canonicalPath: "/blog/experience-professionnelle-non-reconnue-vae",
+        secondaryKeywords: experienceProfessionnelleNonReconnueVaeSecondaryKeywords,
+      },
+      faqItems: experienceProfessionnelleNonReconnueVaeFaqItems,
+      internalLinks: experienceProfessionnelleNonReconnueVaeInternalLinks,
+      content: experienceProfessionnelleNonReconnueVaeContent,
+    },
     {
       id: 48,
       slug: "formation-cip-ou-fpa-quelle-certification-choisir",

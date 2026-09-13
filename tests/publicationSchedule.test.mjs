@@ -45,4 +45,23 @@ describe('isScheduledBlogSlugLive', () => {
       true
     )
   })
+
+  it('publie l’article VAE expérience le 24 septembre 2026', () => {
+    assert.equal(
+      isScheduledBlogSlugLive('experience-professionnelle-non-reconnue-vae', new Date('2026-09-23T21:59:00Z')),
+      false
+    )
+    assert.equal(
+      isScheduledBlogSlugLive('experience-professionnelle-non-reconnue-vae', new Date('2026-09-24T05:00:00Z')),
+      true
+    )
+  })
+
+  it('garde masqués les articles du parcours jusqu’à leur jour J', () => {
+    const beforeParisMidnight = new Date('2026-09-14T21:59:00Z')
+    assert.equal(isScheduledBlogSlugLive('recrutement-sans-discrimination-points-controle', beforeParisMidnight), false)
+    assert.equal(isScheduledBlogSlugLive('recrutement-inclusif-objectiver-criteres', new Date('2026-09-16T21:59:00Z')), false)
+    assert.equal(isScheduledBlogSlugLive('salarie-demotive-bilan-de-competences', new Date('2026-09-21T21:59:00Z')), false)
+    assert.equal(isScheduledBlogSlugLive('formation-cip-ou-fpa-quelle-certification-choisir', new Date('2026-09-28T21:59:00Z')), false)
+  })
 })
