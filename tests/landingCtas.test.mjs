@@ -1,15 +1,6 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import {
-  getCertifianteContactHref,
-  getCertifianteRappelHref,
-  getCertifianteReunionHref,
-  getCertifianteGeoByBrief,
-  PDF_CIP_PROGRAMME,
-  PDF_CIP_CANDIDATURE,
-  PDF_FPA_PROGRAMME,
-  PDF_FPA_CANDIDATURE,
-} from '../lib/seo/certifiantesConfig.js'
+import { buildContactHref, buildReunionHref } from '../lib/seo/landingHrefs.js'
 import {
   getFormationContactHref,
   getCourteRappelHref,
@@ -17,41 +8,32 @@ import {
   CONTACT_SUJET_COURTE,
 } from '../lib/seo/professionnalisantesConfig.js'
 
-describe('CTA landings certifiantes', () => {
+describe('CTA landings certifiantes (hrefs)', () => {
   it('préremplit le select contact (formation-cip / formation-fpa)', () => {
-    assert.match(getCertifianteContactHref('formation-cip'), /sujet=formation-cip/)
-    assert.match(getCertifianteContactHref('formation-fpa'), /sujet=formation-fpa/)
-    assert.match(getCertifianteContactHref('formation-ccp1'), /sujet=formation-cip/)
-    assert.match(getCertifianteContactHref('formation-fpa-ccp1'), /sujet=formation-fpa/)
+    const cip = buildContactHref({
+      sujetContact: 'formation-cip',
+      contactCampaign: 'formation_cip',
+    })
+    const fpa = buildContactHref({
+      sujetContact: 'formation-fpa',
+      contactCampaign: 'formation_fpa',
+    })
+    assert.match(cip, /sujet=formation-cip/)
+    assert.match(fpa, /sujet=formation-fpa/)
+    assert.doesNotMatch(cip, /Demande\+formation/)
   })
 
   it('préremplit le rappel et la réunion', () => {
-    const rappel = getCertifianteRappelHref('formation-cip')
+    const rappel = buildContactHref({
+      sujetContact: 'formation-cip',
+      contactCampaign: 'formation_cip',
+      message: 'Je souhaite être rappelé au sujet de la formation CIP.',
+    })
     assert.match(rappel, /sujet=formation-cip/)
     assert.match(decodeURIComponent(rappel), /Je souhaite être rappelé/)
-    assert.equal(getCertifianteReunionHref('formation-cip'), '/s-inscrire?formation=CIP')
-    assert.equal(getCertifianteReunionHref('formation-fpa'), '/s-inscrire?formation=FPA')
-    assert.equal(getCertifianteReunionHref('formation-ccp2'), '/s-inscrire?formation=CIP')
-    assert.equal(getCertifianteReunionHref('formation-fpa-ccp3'), '/s-inscrire?formation=FPA')
-  })
-
-  it('expose les PDF programme et candidature (famille CIP / FPA)', () => {
-    assert.equal(
-      getCertifianteGeoByBrief('formation-cip').landing.pdfProgramme,
-      PDF_CIP_PROGRAMME
-    )
-    assert.equal(
-      getCertifianteGeoByBrief('formation-ccp3').landing.pdfCandidature,
-      PDF_CIP_CANDIDATURE
-    )
-    assert.equal(
-      getCertifianteGeoByBrief('formation-fpa').landing.pdfProgramme,
-      PDF_FPA_PROGRAMME
-    )
-    assert.equal(
-      getCertifianteGeoByBrief('formation-fpa-ccp4').landing.pdfCandidature,
-      PDF_FPA_CANDIDATURE
-    )
+    assert.equal(buildReunionHref('CIP'), '/s-inscrire?formation=CIP')
+    assert.equal(buildReunionHref('FPA'), '/s-inscrire?formation=FPA')
+    assert.equal(buildReunionHref(''), '/s-inscrire')
   })
 })
 

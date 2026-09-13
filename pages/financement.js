@@ -1,9 +1,11 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import ServicePageSeoHead from '../components/ServicePageSeoHead'
+import EntityCitationBlock from '../components/EntityCitationBlock'
+import { getBriefById } from '../lib/seo/content-briefs'
 import { ChevronDown, Users, CreditCard, FileText, UserCheck } from 'lucide-react'
 
 const cardGridWrapperClass = 'overflow-x-auto lg:overflow-visible -mx-4 sm:mx-0 px-4 py-8 snap-x snap-mandatory lg:snap-none'
@@ -81,11 +83,6 @@ function FinancementCardGrid({ cards }) {
 
 export default function Financement() {
   const [activeTab, setActiveTab] = useState('salaries');
-  const [openFaq, setOpenFaq] = useState(null);
-
-  const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
 
   const financementAnswer = (
     <div className="space-y-4">
@@ -113,6 +110,7 @@ export default function Financement() {
   );
 
   const faqData = [
+    ...(getBriefById('financement')?.faq ?? []),
     {
       question: "Mon employeur sera-t-il informé si j'utilise mon CPF ?",
       answer: "Non, l'utilisation de votre CPF est strictement confidentielle. Votre employeur n'a aucune visibilité sur vos démarches de formation."
@@ -358,12 +356,7 @@ export default function Financement() {
 
   return (
     <>
-      <Head>
-        <title>Financement formations CPF, VAE, bilan de compétences | Atipik RH</title>
-        <meta name="description" content="Solutions de financement selon votre statut : CPF, AIF France Travail pour les formations, employeur, OPCO. Accompagnement VAE : vérification préalable obligatoire." />
-        <meta name="keywords" content="financement formation CPF, Mon Compte Formation, AIF formation demandeur d'emploi, financement bilan compétences, financement accompagnement VAE" />
-        <link rel="canonical" href="https://www.atipikrh.com/financement" />
-      </Head>
+      <ServicePageSeoHead briefId="financement" />
 
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 relative overflow-hidden">
         {/* Background animé global */}
@@ -391,6 +384,7 @@ export default function Financement() {
                 Chaque situation professionnelle offre des possibilités de financement spécifiques<br className="hidden lg:block"/>
                 <span className="text-orange-500 font-bold">Découvrez celles qui vous correspondent</span>
               </p>
+              <EntityCitationBlock pageId="financement" />
             </div>
           </div>
         </section>
@@ -526,32 +520,23 @@ export default function Financement() {
               </div>
 
               <div className="space-y-4">
-                {faqData.map((faq, index) => (
-                  <div key={index} className="relative group">
-                    <div className="absolute -inset-2 bg-gradient-to-r from-blue-200 to-blue-300 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                {faqData.map((faq) => (
+                  <details key={faq.question} className="group relative">
+                    <div className="absolute -inset-2 bg-gradient-to-r from-blue-200 to-blue-300 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none"></div>
                     <div className="relative bg-white rounded-2xl shadow-lg border border-gray-100">
-                      <button
-                        className="w-full p-4 sm:p-6 text-left flex justify-between items-start sm:items-center gap-3"
-                        onClick={() => toggleFaq(index)}
-                      >
+                      <summary className="flex cursor-pointer list-none items-start sm:items-center justify-between gap-3 p-4 sm:p-6 text-left [&::-webkit-details-marker]:hidden">
                         <span className="font-semibold text-base sm:text-lg text-[#013F63]">
                           {faq.question}
                         </span>
-                        <ChevronDown 
-                          className={`w-5 h-5 sm:w-6 sm:h-6 text-gray-600 transition-transform flex-shrink-0 mt-0.5 sm:mt-0 ${
-                            openFaq === index ? 'rotate-180' : ''
-                          }`}
-                        />
-                      </button>
-                      {openFaq === index && (
-                        <div className="px-4 sm:px-6 pb-4 sm:pb-6">
-                          <div className="text-sm sm:text-base text-[#013F63] leading-relaxed">
-                            {faq.answer}
-                          </div>
+                        <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 transition-transform flex-shrink-0 mt-0.5 sm:mt-0 group-open:rotate-180" />
+                      </summary>
+                      <div className="px-4 sm:px-6 pb-4 sm:pb-6">
+                        <div className="text-sm sm:text-base text-[#013F63] leading-relaxed">
+                          {faq.answer}
                         </div>
-                      )}
+                      </div>
                     </div>
-                  </div>
+                  </details>
                 ))}
               </div>
             </div>

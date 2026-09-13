@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 import HoneypotField from '../components/HoneypotField'
 import FormAlert from '../components/FormAlert'
 import RecaptchaV3Script from '../components/RecaptchaV3Script'
+import EntityCitationBlock from '../components/EntityCitationBlock'
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Facebook, Instagram, Linkedin } from 'lucide-react'
 import { getRecaptchaToken } from '../lib/recaptcha'
 
@@ -237,6 +238,9 @@ export default function Contact() {
                 Un premier échange pour clarifier vos objectifs<br className="hidden lg:block"/>
                 <span className="text-orange-500 font-medium">et découvrir les solutions qui vous correspondent.</span>
               </p>
+              <div className="mt-8">
+                <EntityCitationBlock pageId="contact" />
+              </div>
             </div>
 
             {/* Grille Contact */}

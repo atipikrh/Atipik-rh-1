@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ServicePageSeoHead from '../components/ServicePageSeoHead';
+import EntityCitationBlock from '../components/EntityCitationBlock';
 import { TARIF_SELON_PROFIL_COMPLET } from '../lib/tarifs/tarifsCopy';
 import { getBriefById } from '../lib/seo/content-briefs';
 
@@ -27,7 +28,6 @@ import {
 } from 'lucide-react';
 
 export default function BilanCompetences() {
-  const [openFaq, setOpenFaq] = useState(null);
   const [openModules, setOpenModules] = useState({});
 
   const toggleModule = (moduleId) => {
@@ -36,13 +36,6 @@ export default function BilanCompetences() {
       [moduleId]: !prev[moduleId]
     }))
   }
-
-
-
-
-  const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
 
   const briefFaq = getBriefById('bilan-competences-local')?.faq ?? [];
   const faqExtra = [
@@ -105,39 +98,9 @@ export default function BilanCompetences() {
             </p>
           </div>
           
-          {/* Texte de contexte - Présentation originale */}
+          {/* Définition citables */}
           <div className="max-w-4xl mx-auto mb-12">
-            <div className="relative">
-              {/* Éléments décoratifs en arrière-plan */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-accent-300 rounded-full opacity-60"></div>
-              <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-muted-blue-200 rounded-full opacity-60"></div>
-              
-              {/* Contenu principal */}
-              <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 rounded-3xl p-8 shadow-lg border-2 border-[#013F63] relative z-10">
-                <div className="space-y-4 text-center">
-                  <p className="text-lg text-[#013F63] leading-relaxed">
-                    À l'heure où les carrières linéaires n'existent plus ou de moins en moins...
-                  </p>
-                  <p className="text-lg text-[#013F63] leading-relaxed">
-                    À l'heure où la digitalisation amène la disparition et la transformation des métiers,
-                  </p>
-                  <p className="text-lg text-[#013F63] leading-relaxed">
-                    À l'heure où les questions de qualité de vie au travail, d'équilibre Vie professionnelle / Vie personnelle sont plus que jamais d'actualité.
-                  </p>
-                  
-                  {/* Ligne de séparation décorative */}
-                  <div className="flex items-center justify-center my-6">
-                    <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-orange-400 to-transparent"></div>
-                    <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-orange-400 to-transparent"></div>
-                  </div>
-                  
-                  <p className="text-xl text-[#013F63] font-bold leading-relaxed">
-                    <span className="text-accent-500">Le bilan de compétences constitue un outil de gestion de carrière,</span><br/>
-                    <span className="text-[#013F63]">qui renforce votre employabilité !</span>
-                  </p>
-                </div>
-              </div>
-            </div>
+            <EntityCitationBlock pageId="bilan-competences-local" />
           </div>
 
           {/* Section Programme de Formation */}
@@ -1021,37 +984,23 @@ export default function BilanCompetences() {
           </div>
           
           <div className="space-y-4">
-            {faqData.map((faq, index) => (
-              <div key={index} className="relative group">
-                <div className="absolute -inset-2 bg-gradient-to-r from-blue-200 to-blue-300 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+            {faqData.map((faq) => (
+              <details key={faq.question} className="group relative">
+                <div className="absolute -inset-2 bg-gradient-to-r from-blue-200 to-blue-300 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none"></div>
                 <div className="relative bg-white rounded-2xl shadow-lg border border-gray-100">
-                  <button
-                    className="w-full p-6 text-left flex justify-between items-center focus:outline-none"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      toggleFaq(index);
-                    }}
-                  >
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-6 text-left [&::-webkit-details-marker]:hidden">
                     <span className="font-semibold text-lg text-[#013F63] pr-4">
                       {faq.question}
                     </span>
-                    <ChevronDown 
-                      className={`w-6 h-6 text-gray-600 transition-transform flex-shrink-0 ${
-                        openFaq === index ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </button>
-                  <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                  }`}>
-                    <div className="px-6 pb-6">
-                      <p className="text-[#013F63] leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
+                    <ChevronDown className="w-6 h-6 text-gray-600 transition-transform flex-shrink-0 group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6">
+                    <p className="text-[#013F63] leading-relaxed">
+                      {faq.answer}
+                    </p>
                   </div>
                 </div>
-              </div>
+              </details>
             ))}
           </div>
         </div>

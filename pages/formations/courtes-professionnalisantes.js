@@ -4,6 +4,9 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import EntityCitationBlock from '../../components/EntityCitationBlock'
+import FormationFaqSection from '../../components/FormationFaqSection'
+import ServicePageSeoHead from '../../components/ServicePageSeoHead'
 import FormationQuickAnswers from '../../components/FormationQuickAnswers'
 import FormationLandingCtas from '../../components/FormationLandingCtas'
 import {
@@ -75,29 +78,15 @@ export default function FormationsCourtesProfessionnalisantes() {
 
   return (
     <>
+      <ServicePageSeoHead briefId="formations-professionnalisantes-hub" />
       <Head>
-        <title>{metaTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <meta name="keywords" content={hubKeywords} />
-        <link rel="canonical" href={canonicalUrl} />
-
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Atipik RH" />
-        <meta property="og:locale" content="fr_FR" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={twitterTitle} />
-        <meta name="twitter:description" content={metaDescription} />
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(jsonLdHub),
           }}
         />
+      </Head>
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -136,6 +125,9 @@ export default function FormationsCourtesProfessionnalisantes() {
                     FPA
                   </Link>
                 </p>
+                <div className="mt-8">
+                  <EntityCitationBlock pageId="formations-professionnalisantes-hub" />
+                </div>
               </div>
               <FormationQuickAnswers variant="hub" />
               <FormationLandingCtas variant="hub" />
@@ -415,6 +407,7 @@ export default function FormationsCourtesProfessionnalisantes() {
             </div>
           </section>
 
+          <FormationFaqSection briefId="formations-professionnalisantes-hub" />
           <Footer />
         </div>
       </div>

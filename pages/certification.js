@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import FinancementDisclaimer from '../components/FinancementDisclaimer'
+import EntityCitationBlock from '../components/EntityCitationBlock'
 import { CheckCircle } from 'lucide-react'
 
 export default function Certification() {
@@ -40,6 +41,9 @@ export default function Certification() {
                   La qualité et la reconnaissance officielle<br className="hidden lg:block"/>
                   <span className="text-orange-500 font-medium">au service de votre formation</span>
                 </p>
+                <div className="mt-8">
+                  <EntityCitationBlock pageId="certification" />
+                </div>
               </div>
             </div>
           </section>
