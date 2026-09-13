@@ -9,6 +9,7 @@ import CookieBanner from '../components/CookieBanner'
 import EntityCitationBlock from '../components/EntityCitationBlock'
 import FormationFaqSection from '../components/FormationFaqSection'
 import { DATES_CIP, DATES_FPA, getUpcomingReunions } from '../lib/reunions/dates.js'
+
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const prochainesDatesCIP = getUpcomingReunions(DATES_CIP, 3)

@@ -29,8 +29,9 @@ describe('CTA landings certifiantes (hrefs)', () => {
       contactCampaign: 'formation_cip',
       message: 'Je souhaite être rappelé au sujet de la formation CIP.',
     })
-    assert.match(rappel, /sujet=formation-cip/)
-    assert.match(decodeURIComponent(rappel), /Je souhaite être rappelé/)
+    const params = new URLSearchParams(rappel.split('?')[1])
+    assert.equal(params.get('sujet'), 'formation-cip')
+    assert.match(params.get('message') || '', /Je souhaite être rappelé/)
     assert.equal(buildReunionHref('CIP'), '/s-inscrire?formation=CIP')
     assert.equal(buildReunionHref('FPA'), '/s-inscrire?formation=FPA')
     assert.equal(buildReunionHref(''), '/s-inscrire')
@@ -46,6 +47,7 @@ describe('CTA landings formations courtes', () => {
     assert.match(rappel, new RegExp(`sujet=${CONTACT_SUJET_COURTE}`))
     assert.match(hub, new RegExp(`sujet=${CONTACT_SUJET_COURTE}`))
     assert.doesNotMatch(contact, /plaquette-fpa|Formation-CIP|dossier-candidature/)
-    assert.match(decodeURIComponent(rappel), /Je souhaite être rappelé/)
+    const rappelParams = new URLSearchParams(rappel.split('?')[1])
+    assert.match(rappelParams.get('message') || '', /Je souhaite être rappelé/)
   })
 })

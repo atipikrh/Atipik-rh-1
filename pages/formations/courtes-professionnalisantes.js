@@ -10,9 +10,7 @@ import ServicePageSeoHead from '../../components/ServicePageSeoHead'
 import FormationQuickAnswers from '../../components/FormationQuickAnswers'
 import FormationLandingCtas from '../../components/FormationLandingCtas'
 import {
-  BASE_URL,
   FORMATION_PRO_LIST,
-  buildFormationProHubKeywords,
   buildJsonLdFormationProHub,
 } from '../../lib/seo/professionnalisantesConfig'
 import { TARIF_INTRA_TEXTE, TARIF_INTER_LABEL } from '../../lib/tarifs/tarifsCopy'
@@ -68,9 +66,6 @@ export default function FormationsCourtesProfessionnalisantes() {
   const metaDescription =
     "Formations courtes professionnalisantes à Lormont (Bordeaux) : relation entreprise, insertion, recrutement, numérique, IA et prévention des discriminations. Durées 11 h à 21 h ; tarifs sur chaque fiche. Qualiopi."
   const metaTitle = 'Formations courtes professionnalisantes | Atipik RH'
-  const twitterTitle = 'Formations courtes professionnalisantes | Atipik RH'
-  const canonicalUrl = `${BASE_URL}/formations/courtes-professionnalisantes`
-  const hubKeywords = buildFormationProHubKeywords()
   const jsonLdHub = buildJsonLdFormationProHub({
     title: metaTitle,
     description: metaDescription,
@@ -86,7 +81,6 @@ export default function FormationsCourtesProfessionnalisantes() {
             __html: JSON.stringify(jsonLdHub),
           }}
         />
-      </Head>
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
