@@ -35,9 +35,8 @@ Requêtes visées : insertion professionnelle, accompagnement emploi, CIP, recon
 
 ## Sessions CARIF (synchronisation)
 
-| CARIF     | Dates (fiche au 03/06/2026) | Libellé recommandé |
+| CARIF     | Dates (fiche au 13/09/2026) | Libellé recommandé |
 |-----------|-------------------------------|--------------------|
-| 00567713  | 15/09/2025 → 16/06/2026       | Rentrée sept. 2025 — Lormont, éligible CPF |
 | 00620710  | 09/02/2026 → 23/10/2026       | Rentrée fév. 2026 — Lormont, éligible CPF |
 | 00671150  | 21/09/2026 → 23/04/2027       | Rentrée sept. 2026 — Lormont, éligible CPF |
 
@@ -73,3 +72,7 @@ Après modification d’une session dans Rafael, mettre à jour `sessions` dans 
 ## Lien site Atipik (UTM prescripteur)
 
 `https://www.atipikrh.com/formations/cip?utm_source=cmaformation&utm_medium=referral&utm_campaign=formation_cip`
+
+## Fiche FPA (à créer)
+
+Aucune fiche CMaFormation / Rafael Cap Métiers n’a été trouvée pour le titre FPA ATIPIK RH (contrôle public du 13/09/2026). Action organisme : créer la fiche, puis ajouter `rafaelCap` dans `lib/seo/certifiantesConfig.js` (brief `formation-fpa`) comme pour le CIP.

@@ -16,6 +16,50 @@ const SHARED_EEAT = [
 
 const BRIEFS: ContentBrief[] = [
   {
+    id: 'accueil',
+    clusterId: 'organisme-insertion',
+    serpSnapshotId: 'serp-organisme-insertion',
+    pageType: 'pilier',
+    h1: 'Atipik RH — organisme de formation à Lormont',
+    metaTitle: 'Atipik RH | Formation Qualiopi à Lormont',
+    metaDescription:
+      'Atipik RH, organisme de formation certifié Qualiopi à Lormont près de Bordeaux : CIP, FPA, bilans de compétences, VAE et formations courtes.',
+    recommendedSlug: '/',
+    primaryKeywords: ['Atipik RH', 'organisme formation Lormont', 'formation Bordeaux Qualiopi'],
+    longTailKeywords: [],
+    intent: 'commercial',
+    personas: ['demandeur-emploi', 'reconversion-40plus', 'rh-entreprise'],
+    faq: [
+      {
+        question: 'Qu’est-ce qu’Atipik RH ?',
+        answer:
+          'Atipik RH est un organisme de formation certifié Qualiopi situé à Lormont, près de Bordeaux. Il propose les titres CIP et FPA, des bilans de compétences, un accompagnement VAE et des formations courtes.',
+      },
+      {
+        question: 'Où se situe le centre de formation ?',
+        answer: '8 Rue du Courant, 33310 Lormont, Bordeaux Métropole (rive droite).',
+      },
+      {
+        question: 'Comment contacter Atipik RH ?',
+        answer: 'Par téléphone au 07 83 01 99 55 ou par e-mail à contact@atipikrh.com.',
+      },
+      {
+        question: 'Atipik RH est-il certifié Qualiopi ?',
+        answer:
+          'Oui — pour les actions de formation, les bilans de compétences et les actions de VAE.',
+      },
+    ],
+    internalLinks: [
+      { label: 'Formations', href: '/formations', anchorIntent: 'offre' },
+      { label: 'Bilan de compétences', href: '/bilan-de-competences', anchorIntent: 'bilan' },
+      { label: 'VAE', href: '/vae', anchorIntent: 'vae' },
+      { label: 'Contact', href: '/contact', anchorIntent: 'NAP' },
+    ],
+    schemaTypes: ['LocalBusiness', 'FAQPage'],
+    eeatSignals: SHARED_EEAT,
+    existingPagePath: '/',
+  },
+  {
     id: 'formation-cip',
     clusterId: 'formation-cip-bordeaux',
     serpSnapshotId: 'serp-formation-cip-bordeaux',
@@ -123,9 +167,9 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-fpa-na',
     pageType: 'cluster',
     h1: 'Formation FPA CCP1 — Concevoir et Préparer une Formation',
-    metaTitle: 'Formation FPA CCP1 — concevoir une formation | Atipik RH Lormont',
+    metaTitle: 'Formation FPA CCP1 — concevoir une formation | Atipik RH',
     metaDescription:
-      'Module certifiant CCP1 FPA (350 h : 245 h centre + 105 h stage) — concevoir et préparer une formation. Tarif 3 560 € TTC. Titre FPA niveau 5 (RNCP37275BC01). Atipik RH Lormont.',
+      'Module certifiant CCP1 FPA (350 h : 245 h centre + 105 h stage) — concevoir une formation. Titre FPA niveau 5. Atipik RH Lormont.',
     recommendedSlug: '/formations/fpa/ccp1',
     primaryKeywords: ['formation FPA CCP1', 'formateur adultes certifiant Nouvelle-Aquitaine'],
     longTailKeywords: [],
@@ -167,9 +211,9 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-fpa-na',
     pageType: 'cluster',
     h1: 'Formation FPA CCP2 — Animer une Formation et Évaluer les Acquis',
-    metaTitle: 'Formation FPA CCP2 — animer et évaluer | Atipik RH Lormont',
+    metaTitle: 'Formation FPA CCP2 — animer et évaluer | Atipik RH',
     metaDescription:
-      'Module certifiant CCP2 FPA (280 h : 175 h centre + 105 h stage) — animer une formation et évaluer les acquis. Tarif 2 545 € TTC. Titre FPA niveau 5 (RNCP37275BC02). Atipik RH Lormont.',
+      'Module certifiant CCP2 FPA (280 h : 175 h centre + 105 h stage) — animer et évaluer les acquis. Titre FPA niveau 5. Atipik RH Lormont.',
     recommendedSlug: '/formations/fpa/ccp2',
     primaryKeywords: ['formation FPA CCP2', 'formateur adultes certifiant Nouvelle-Aquitaine'],
     longTailKeywords: [],
@@ -211,9 +255,9 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-fpa-na',
     pageType: 'cluster',
     h1: 'Formation FPA CCP3 — Accompagner les Apprenants en Formation',
-    metaTitle: 'Formation FPA CCP3 — accompagner les apprenants | Atipik RH Lormont',
+    metaTitle: 'Formation FPA CCP3 — accompagner les apprenants | Atipik RH',
     metaDescription:
-      'Module certifiant CCP3 FPA (210 h : 105 h centre + 105 h stage) — accompagner les apprenants en formation. Tarif 2 228 € TTC. Titre FPA niveau 5 (RNCP37275BC03). Atipik RH Lormont.',
+      'Module certifiant CCP3 FPA (210 h : 105 h centre + 105 h stage) — accompagner les apprenants. Titre FPA niveau 5. Atipik RH Lormont.',
     recommendedSlug: '/formations/fpa/ccp3',
     primaryKeywords: ['formation FPA CCP3', 'formateur adultes certifiant Nouvelle-Aquitaine'],
     longTailKeywords: [],
@@ -255,9 +299,9 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-fpa-na',
     pageType: 'cluster',
     h1: 'Formation FPA CCP4 — Qualité, Réglementation et RSE en Formation',
-    metaTitle: 'Formation FPA CCP4 — qualité et RSE | Atipik RH Lormont',
+    metaTitle: 'Formation FPA CCP4 — qualité et RSE | Atipik RH',
     metaDescription:
-      'Module certifiant CCP4 FPA (161 h : 91 h centre + 70 h stage) — qualité, réglementation et RSE. Tarif 1 931 € TTC. Titre FPA niveau 5 (RNCP37275BC04). Atipik RH Lormont.',
+      'Module certifiant CCP4 FPA (161 h : 91 h centre + 70 h stage) — qualité, réglementation et RSE. Titre FPA niveau 5. Atipik RH Lormont.',
     recommendedSlug: '/formations/fpa/ccp4',
     primaryKeywords: ['formation FPA CCP4', 'formateur adultes certifiant Nouvelle-Aquitaine'],
     longTailKeywords: [],
@@ -342,7 +386,7 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-formation-cip-bordeaux',
     pageType: 'cluster',
     h1: 'Formation CCP2 — Conseiller en Insertion Professionnelle',
-    metaTitle: 'Formation CCP2 — accompagnement de parcours CIP | Atipik RH Lormont',
+    metaTitle: 'Formation CCP2 — accompagnement de parcours CIP | Atipik RH',
     metaDescription:
       'Module certifiant CCP2 (435 h) : accompagnement des parcours d’insertion, ateliers et analyse de pratique, titre CIP niveau 5. Atipik RH à Lormont.',
     recommendedSlug: '/formations/ccp2',
@@ -625,7 +669,7 @@ const BRIEFS: ContentBrief[] = [
     ],
     internalLinks: [
       { label: 'Formation CIP', href: '/formations/cip', anchorIntent: 'conversion' },
-      { label: 'Blog CIP Lormont', href: '/blog/formation-conseiller-insertion-professionnelle-lormont', anchorIntent: 'preuve' },
+      { label: 'Blog CIP Bordeaux', href: '/blog/formation-cip-bordeaux-conseiller-insertion-professionnelle', anchorIntent: 'preuve' },
     ],
     schemaTypes: ['FAQPage', 'Course'],
     eeatSignals: SHARED_EEAT,
@@ -755,9 +799,9 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-professionnalisantes',
     pageType: 'pilier',
     h1: 'Formations courtes professionnalisantes en insertion',
-    metaTitle: 'Formations professionnalisantes insertion | Atipik RH',
+    metaTitle: 'Formations courtes professionnalisantes | Atipik RH',
     metaDescription:
-      'Formations courtes (21h) pour professionnels de l’insertion et RH : relation entreprise, recrutement inclusif. Lormont, Bordeaux Métropole.',
+      'Formations courtes (11 h à 21 h) pour professionnels de l’insertion et RH : relation entreprise, recrutement inclusif. Lormont, Bordeaux Métropole.',
     recommendedSlug: '/formations/courtes-professionnalisantes',
     primaryKeywords: ['formation professionnalisante insertion', 'formation courte Bordeaux insertion'],
     longTailKeywords: [],
@@ -770,7 +814,7 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'Quelle durée pour chaque module ?',
-        answer: '21 heures par formation — voir le détail sur chaque fiche.',
+        answer: '11 à 21 heures selon le module — voir le détail sur chaque fiche.',
       },
       {
         question: 'Comment financer une formation professionnalisante ?',

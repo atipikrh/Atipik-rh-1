@@ -3,6 +3,8 @@ import {
   ADDRESS,
   BASE_URL,
   GEO,
+  GEO_ZONES,
+  OPENING_HOURS,
   ORGANIZATION,
   buildPostalAddressJsonLd,
 } from './site'
@@ -24,12 +26,15 @@ const localBusinessSchema = z.object({
   '@id': z.string().url(),
   name: z.string().min(1),
   url: z.string().url(),
+  telephone: z.string().min(8),
+  email: z.string().email(),
   address: postalAddressSchema,
   geo: z.object({
     '@type': z.literal('GeoCoordinates'),
     latitude: z.number(),
     longitude: z.number(),
   }),
+  openingHours: z.array(z.string().min(1)).min(1),
   sameAs: z.array(z.string().url()).min(1),
 })
 
@@ -63,7 +68,7 @@ const courseSchema = z.object({
   url: z.string().url(),
 })
 
-/** JSON-LD LocalBusiness — aligné sur _document.js */
+/** JSON-LD LocalBusiness — source unique pour _document.js et les briefs. */
 export function buildOrganizationJsonLd() {
   return {
     '@context': 'https://schema.org',
@@ -71,9 +76,22 @@ export function buildOrganizationJsonLd() {
     '@id': ORGANIZATION.id,
     name: ORGANIZATION.name,
     url: ORGANIZATION.url,
+    telephone: ORGANIZATION.telephone,
+    email: ORGANIZATION.email,
+    taxID: ORGANIZATION.taxID,
     address: buildPostalAddressJsonLd(),
     geo: GEO,
+    openingHours: [...OPENING_HOURS],
     sameAs: [...ORGANIZATION.sameAs],
+    areaServed: GEO_ZONES.map((name) => ({
+      '@type': 'AdministrativeArea',
+      name,
+    })),
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Qualiopi',
+      name: 'Certification Qualiopi — actions de formation, bilan de compétences, VAE',
+    },
   }
 }
 
@@ -122,6 +140,7 @@ export function buildCourseJsonLdFromBrief(briefId: string) {
       '@type': 'Organization',
       name: ORGANIZATION.name,
       url: ORGANIZATION.url,
+      telephone: ORGANIZATION.telephone,
       address: buildPostalAddressJsonLd(),
       geo: GEO,
     },

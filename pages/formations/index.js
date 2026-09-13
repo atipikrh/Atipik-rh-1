@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import ServicePageSeoHead from '../../components/ServicePageSeoHead'
 import FormationFaqSection from '../../components/FormationFaqSection'
+import EntityCitationBlock from '../../components/EntityCitationBlock'
 import Image from 'next/image'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
@@ -39,9 +40,10 @@ export default function FormationsIndex() {
                   <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Bordeaux</span>{' '}
                   et Lormont
                 </h1>
-                <p className="text-lg text-[#013F63] max-w-2xl mx-auto">
+                <p className="text-lg text-[#013F63] max-w-2xl mx-auto mb-8">
                   Titres certifiants CIP, FPA, modules CCP (CIP et FPA) et formations courtes professionnalisantes — centre Qualiopi à Lormont.
                 </p>
+                <EntityCitationBlock pageId="formations-hub" />
               </div>
             </div>
           </section>

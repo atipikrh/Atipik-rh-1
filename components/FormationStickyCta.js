@@ -7,7 +7,7 @@ import { Calendar } from 'lucide-react'
  */
 export default function FormationStickyCta({
   href = '/s-inscrire',
-  label = "Réunion d'information",
+  label = "Participer à une réunion d'information",
 }) {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-[9990] p-3 bg-white/95 border-t border-gray-200 shadow-lg md:hidden">

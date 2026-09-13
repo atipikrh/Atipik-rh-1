@@ -27,6 +27,8 @@ import Footer from '../../../components/Footer'
 import GuideLeadCapture from '../../../components/GuideLeadCapture'
 import FormationProfessionnelleSeoHead from '../../../components/FormationProfessionnelleSeoHead'
 import FormationTarifSection from '../../../components/FormationTarifSection'
+import FormationQuickAnswers from '../../../components/FormationQuickAnswers'
+import FormationLandingCtas from '../../../components/FormationLandingCtas'
 import {
   getFormationContactHref,
   getProfessionnelleConfigBySlug,
@@ -216,6 +218,8 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                   </Link>
                 </p>
               </div>
+              <FormationQuickAnswers variant="courte" slug={SEO_SLUG} />
+              <FormationLandingCtas variant="courte" slug={SEO_SLUG} />
             </div>
           </section>
 
@@ -579,7 +583,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
 
 
           {/* Programme détaillé */}
-          <section ref={programmeRef} className="py-16">
+          <section id="programme" ref={programmeRef} className="py-16 scroll-mt-24">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 

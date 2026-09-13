@@ -38,7 +38,13 @@ const SITEMAP_MUST_INCLUDE = [
   '/blog/formation-cip-bordeaux-conseiller-insertion-professionnelle',
 ]
 
-const SITEMAP_MUST_EXCLUDE = ['/equipe/martine-beaudon', '/bilan-de-competences/cpf']
+const SITEMAP_MUST_EXCLUDE = [
+  '/equipe/martine-beaudon',
+  '/bilan-de-competences/cpf',
+  '/blog/formation-conseiller-insertion-professionnelle-lormont',
+  '/blog/comment-reduire-couts-recrutement-30-pourcent-formation-rh',
+  '/formation-metiers-accompagnement-social',
+]
 
 function extractCanonical(html) {
   const m = html.match(/<link[^>]+rel=["']canonical["'][^>]*href=["']([^"']+)["']/i)
@@ -110,6 +116,7 @@ async function main() {
   const notFoundChecks = [
     '/location-salles/salle-inexistante',
     '/page-qui-nexiste-pas-test-seo',
+    '/formation-metiers-accompagnement-social',
   ]
   for (const path of notFoundChecks) {
     const res = await fetch(`${BASE}${path}`)
@@ -120,6 +127,25 @@ async function main() {
     console.log(`${ok ? '✅' : '❌'} ${path}: HTTP ${res.status}${hasNoindex ? ' + noindex' : ''}`)
     if (!ok) errors.push(`${path} doit retourner HTTP 404 (reçu ${res.status})`)
     if (ok && !hasNoindex) errors.push(`${path}: meta robots noindex manquant`)
+  }
+
+  console.log('\n--- Pages indexables (pas de noindex, viewport, canonique unique) ---')
+  const indexable = [
+    { path: '/', expected: `${CANONICAL_BASE}/` },
+    { path: '/formations/cip', expected: `${CANONICAL_BASE}/formations/cip` },
+  ]
+  for (const check of indexable) {
+    const res = await fetch(`${BASE}${check.path}`)
+    const html = await res.text()
+    const canonical = extractCanonical(html)
+    const robots = extractRobots(html)
+    const viewport = /width\s*=\s*device-width/i.test(html)
+    const noindex = robots?.includes('noindex')
+    const ok = res.ok && !noindex && viewport && canonical === check.expected
+    console.log(`${ok ? '✅' : '❌'} ${check.path}: robots=${robots || '—'} viewport=${viewport} canonical=${canonical || 'absent'}`)
+    if (noindex) errors.push(`${check.path} ne doit pas avoir noindex`)
+    if (!viewport) errors.push(`${check.path}: viewport mobile manquant`)
+    if (canonical !== check.expected) errors.push(`${check.path}: canonique ${canonical}`)
   }
 
   // Robots.txt

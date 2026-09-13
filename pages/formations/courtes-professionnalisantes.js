@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import FormationQuickAnswers from '../../components/FormationQuickAnswers'
+import FormationLandingCtas from '../../components/FormationLandingCtas'
 import {
   BASE_URL,
   FORMATION_PRO_LIST,
@@ -62,7 +64,7 @@ export default function FormationsCourtesProfessionnalisantes() {
 
   const metaDescription =
     "Formations courtes professionnalisantes à Lormont (Bordeaux) : relation entreprise, insertion, recrutement, numérique, IA et prévention des discriminations. Durées 11 h à 21 h ; tarifs sur chaque fiche. Qualiopi."
-  const metaTitle = 'Formations courtes professionnalisantes | Atipik RH — Lormont (33)'
+  const metaTitle = 'Formations courtes professionnalisantes | Atipik RH'
   const twitterTitle = 'Formations courtes professionnalisantes | Atipik RH'
   const canonicalUrl = `${BASE_URL}/formations/courtes-professionnalisantes`
   const hubKeywords = buildFormationProHubKeywords()
@@ -109,13 +111,15 @@ export default function FormationsCourtesProfessionnalisantes() {
 
           <div className="h-20"></div>
 
-          <section className="py-20">
+          <section className="pt-4 pb-6">
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
-                  Formations Courtes
+                  Formations courtes
                   <br />
-                  <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">Professionnalisantes</span>
+                  <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">professionnalisantes</span>
+                  <br />
+                  <span className="text-2xl lg:text-3xl font-semibold">en insertion</span>
                 </h1>
                 <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-light">
                   Des formations ancrées dans les <strong>réalités professionnelles</strong>
@@ -133,6 +137,8 @@ export default function FormationsCourtesProfessionnalisantes() {
                   </Link>
                 </p>
               </div>
+              <FormationQuickAnswers variant="hub" />
+              <FormationLandingCtas variant="hub" />
             </div>
           </section>
 
@@ -193,7 +199,7 @@ export default function FormationsCourtesProfessionnalisantes() {
             </div>
           </section>
 
-          <section className="py-16" id="formations">
+          <section className="py-16 scroll-mt-24" id="catalogue">
             <div className="container mx-auto px-4">
               <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12">

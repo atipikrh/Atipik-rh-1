@@ -97,6 +97,7 @@ export default function BilanCompetences() {
           <div className="text-center mb-8 max-w-5xl mx-auto">
             <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
               Bilan de <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">compétences</span>
+              {' '}à Lormont, proche de Bordeaux
             </h1>
             <p className="text-lg text-[#013F63] leading-relaxed font-light mb-8">
               Révélez votre potentiel et construisez votre avenir professionnel<br className="hidden lg:block"/>

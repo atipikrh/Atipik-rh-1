@@ -41,7 +41,7 @@ export default function Footer() {
               {/* Réseaux sociaux */}
               <div className="flex space-x-4">
                 <a 
-                  href="https://www.linkedin.com/company/atipik-rh33/posts/?feedView=all" 
+                  href="https://www.linkedin.com/company/atipik-rh33" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-neutral-100 hover:text-white transition-colors"
@@ -63,7 +63,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a 
-                  href="https://www.instagram.com/atipikrh33?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                  href="https://www.instagram.com/atipikrh33" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-neutral-100 hover:text-white transition-colors"

@@ -308,7 +308,7 @@ const SERP_SNAPSHOTS: SerpSnapshot[] = [
       },
       {
         name: 'Atipik RH — article CIP Lormont',
-        url: 'https://www.atipikrh.com/blog/formation-conseiller-insertion-professionnelle-lormont',
+        url: 'https://www.atipikrh.com/blog/formation-cip-bordeaux-conseiller-insertion-professionnelle',
         title: 'Formation conseiller insertion professionnelle à Lormont | Blog Atipik RH',
         metaDescription:
           'Contenu existant à lier depuis la future page métiers accompagnement.',
@@ -474,6 +474,7 @@ const BRIEF_SERP_MAP: Record<string, string> = {
   'formation-ccp1': 'serp-formation-cip-bordeaux',
   'formation-ccp2': 'serp-formation-cip-bordeaux',
   'formation-ccp3': 'serp-formation-cip-bordeaux',
+  accueil: 'serp-organisme-insertion',
   'formations-hub': 'serp-organisme-insertion',
   'bilan-competences-local': 'serp-bilan-lormont',
   'reconversion-bordeaux': 'serp-reconversion-bordeaux',

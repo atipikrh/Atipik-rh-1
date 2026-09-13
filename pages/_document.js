@@ -1,30 +1,8 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { buildOrganizationJsonLd } from '../lib/seo/schema'
 
 export default function Document() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://www.atipikrh.com/#organization",
-    "name": "Atipik RH",
-    "url": "https://www.atipikrh.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "8 Rue du Courant",
-      "addressLocality": "Lormont",
-      "postalCode": "33310",
-      "addressRegion": "Nouvelle-Aquitaine",
-      "addressCountry": "FR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 44.8764,
-      "longitude": -0.5212
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/atipik-rh",
-      "https://www.facebook.com/atipikrh"
-    ]
-  }
+  const schemaData = buildOrganizationJsonLd()
 
   return (
     <Html lang="fr">
@@ -68,4 +46,4 @@ export default function Document() {
       </body>
     </Html>
   )
-} 
+}

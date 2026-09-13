@@ -1,12 +1,15 @@
 import Link from 'next/link'
 import ServicePageSeoHead from '../../components/ServicePageSeoHead'
-import FormationGeoSummary from '../../components/FormationGeoSummary'
+import FormationQuickAnswers from '../../components/FormationQuickAnswers'
+import FormationLandingCtas from '../../components/FormationLandingCtas'
+import FormationAdequation from '../../components/FormationAdequation'
 import FormationFaqSection from '../../components/FormationFaqSection'
 import FormationStickyCta from '../../components/FormationStickyCta'
 import FormationTarifSection from '../../components/FormationTarifSection'
-import { getCertifianteContactHref } from '../../lib/seo/certifiantesConfig'
+import { getCertifianteContactHref, getCertifianteReunionHref } from '../../lib/seo/certifiantesConfig'
 
 const CONTACT_HREF = getCertifianteContactHref('formation-ccp2')
+const REUNION_HREF = getCertifianteReunionHref('formation-ccp2')
 import { useState, useEffect, useRef } from 'react'
 import { useIsClient, useIsMobile } from '../../hooks/useClientViewport'
 import Header from '../../components/Header'
@@ -390,7 +393,7 @@ export default function FormationCCP2() {
           <div className="h-20"></div>
 
           {/* Hero Section */}
-          <section className="pt-20 pb-8">
+          <section className="pt-4 pb-4">
             <div className="container mx-auto px-4">
               
               {/* Titre principal */}
@@ -402,7 +405,8 @@ export default function FormationCCP2() {
                   Devenez expert de l'<strong>accompagnement de parcours</strong>
                 </p>
               </div>
-              <FormationGeoSummary briefId="formation-ccp2" />
+              <FormationQuickAnswers briefId="formation-ccp2" />
+              <FormationLandingCtas briefId="formation-ccp2" />
               <p className="mt-4 text-center text-sm text-[#013F63]/80 max-w-2xl mx-auto">
                 Vous visez le titre CIP complet ?{' '}
                 <Link href="/formations/cip" className="font-semibold text-orange-500 hover:underline">
@@ -456,7 +460,7 @@ export default function FormationCCP2() {
               <div className="max-w-6xl mx-auto">
               
               {/* Titre de section */}
-              <div className="text-center mb-8">
+              <div id="programme" className="text-center mb-8 scroll-mt-24">
                 <h2 className="text-lg lg:text-xl font-bold text-[#013F63] mb-6">
                   LE PROGRAMME DE FORMATION
                   </h2>
@@ -650,7 +654,7 @@ export default function FormationCCP2() {
                           <p className="text-accent-500 font-bold text-sm mb-3">
                             Il est fortement recommandé de participer à une réunion d'information collective.
                           </p>
-                          <Link href="/s-inscrire">
+                          <Link href={REUNION_HREF}>
                             <button className="inline-flex items-center px-4 py-2 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-md transition-colors text-xs">
                               S'inscrire à une réunion d'information
                             </button>
@@ -1452,7 +1456,7 @@ export default function FormationCCP2() {
           </section>
 
           {/* Prochaines sessions */}
-          <section className="pt-2 pb-8">
+          <section id="dates" className="pt-2 pb-8 scroll-mt-24">
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto">
 
@@ -1467,6 +1471,8 @@ export default function FormationCCP2() {
                   />
                 </div>
 
+                <FormationAdequation briefId="formation-ccp2" />
+
                 {/* Réunions d'information */}
                 <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl p-8 shadow-lg border-2 border-gray-300">
                   <div className="text-center">
@@ -1479,7 +1485,7 @@ export default function FormationCCP2() {
                     
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Link
-                        href="/s-inscrire"
+                        href={REUNION_HREF}
                         className="inline-flex items-center gap-2 px-8 py-4 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-colors text-lg hover:scale-105 transform"
                       >
                         <Users className="w-5 h-5" />
@@ -1902,7 +1908,7 @@ export default function FormationCCP2() {
         </div>
 
         <FormationFaqSection briefId="formation-ccp2" />
-        <FormationStickyCta href="/s-inscrire" label="Réunion d'information" />
+        <FormationStickyCta href={REUNION_HREF} label="Participer à une réunion d'information" />
 
         <Footer />
 

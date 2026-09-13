@@ -3,7 +3,9 @@ import Header from './Header'
 import Footer from './Footer'
 import ServicePageSeoHead from './ServicePageSeoHead'
 import FormationFaqSection from './FormationFaqSection'
+import EntityCitationBlock from './EntityCitationBlock'
 import { getBriefById } from '../lib/seo/content-briefs'
+import { isInternalHrefLive } from '../lib/blog/liveInternalLinks.js'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 
 /**
@@ -37,13 +39,16 @@ export default function LocalLandingPage({ briefId, children }) {
                 ))}
               </ul>
             )}
+            <EntityCitationBlock pageId={briefId} className="mb-8" />
             {children}
             {brief.internalLinks?.length > 0 && (
               <nav
                 className="flex flex-wrap justify-center gap-3 mt-8"
                 aria-label="Liens utiles"
               >
-                {brief.internalLinks.map((link) => (
+                {brief.internalLinks
+                  .filter((link) => isInternalHrefLive(link.href))
+                  .map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}

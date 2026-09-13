@@ -2634,7 +2634,7 @@ const BLOG_ARTICLES = [
 
         <p>Chez ATIPIK RH, nos conseillers en insertion professionnelle accompagnent tous les publics (avec ou sans diplôme, jeunes ou seniors) en utilisant des méthodes éprouvées et une connaissance approfondie du marché de l'emploi en Gironde.</p>
 
-        <p>Le portefeuille de compétences s'intègre naturellement dans nos accompagnements : <a href="/bilan-de-competences">bilan de compétences</a>, <a href="/formation-conseiller-insertion-professionnelle">formation CIP</a>, accompagnement à la reconversion et valorisation de l'expérience.</p>
+        <p>Le portefeuille de compétences s'intègre naturellement dans nos accompagnements : <a href="/bilan-de-competences">bilan de compétences</a>, <a href="/formations/cip">formation CIP</a>, accompagnement à la reconversion et valorisation de l'expérience.</p>
 
         <p><strong>Prêt à valoriser vos compétences et à construire votre projet professionnel ?</strong> Contactez-nous pour découvrir comment nous pouvons vous accompagner dans cette démarche.</p>
 
@@ -3659,6 +3659,7 @@ export default function BlogArticle({ article: articleProp }) {
         <Head>
           <title>Article non trouvé | Blog Atipik RH</title>
           <meta name="description" content="L'article demandé n'existe pas ou a été déplacé." />
+          <meta key="robots" name="robots" content="noindex, follow" />
         </Head>
         <div className="min-h-screen bg-white">
           <Header isFixed={true} />

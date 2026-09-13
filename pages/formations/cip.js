@@ -1,10 +1,13 @@
 import Link from 'next/link'
 import ServicePageSeoHead from '../../components/ServicePageSeoHead'
-import FormationGeoSummary from '../../components/FormationGeoSummary'
+import FormationQuickAnswers from '../../components/FormationQuickAnswers'
+import FormationLandingCtas from '../../components/FormationLandingCtas'
+import FormationAdequation from '../../components/FormationAdequation'
 import FormationFaqSection from '../../components/FormationFaqSection'
+import EntityCitationBlock from '../../components/EntityCitationBlock'
 import FormationStickyCta from '../../components/FormationStickyCta'
 import FormationTarifSection from '../../components/FormationTarifSection'
-import { getCertifianteContactHref } from '../../lib/seo/certifiantesConfig'
+import { getCertifianteContactHref, getCertifianteReunionHref } from '../../lib/seo/certifiantesConfig'
 import { useState, useEffect, useRef } from 'react'
 import { useIsClient, useIsMobile } from '../../hooks/useClientViewport'
 import Header from '../../components/Header'
@@ -15,6 +18,7 @@ import { Clock, Users, MapPin, Calendar, GraduationCap, CheckCircle, ArrowRight,
 import Image from 'next/image'
 
 const CONTACT_HREF = getCertifianteContactHref('formation-cip')
+const REUNION_HREF = getCertifianteReunionHref('formation-cip')
 
 const STATS = [
   { label: "Nombre de stagiaires formés", value: "19" },
@@ -433,19 +437,22 @@ export default function FormationCIP() {
           <div className="h-20"></div>
 
           {/* Hero Section */}
-          <section className="pt-20 pb-8">
+          <section className="pt-4 pb-4">
             <div className="container mx-auto px-4">
               
               {/* Titre principal */}
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
-                  Conseiller en <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">Insertion Professionnelle</span>
+                  Formation CIP à Lormont — Conseiller en{' '}
+                  <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">Insertion Professionnelle</span>
                 </h1>
                 <p className="text-lg text-[#013F63] leading-relaxed font-light">
                   Devenez expert de l'<strong>accompagnement vers l'emploi</strong>
                 </p>
               </div>
-              <FormationGeoSummary briefId="formation-cip" />
+              <EntityCitationBlock pageId="formation-cip" />
+              <FormationQuickAnswers briefId="formation-cip" />
+              <FormationLandingCtas briefId="formation-cip" />
             </div>
           </section>
 
@@ -481,7 +488,7 @@ export default function FormationCIP() {
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
 
-              <div className="mb-14 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div id="dates" className="mb-14 grid grid-cols-1 md:grid-cols-2 gap-6 scroll-mt-24">
                 {[
                   {
                     dates: 'Du 21 septembre 2026 au 23 avril 2027',
@@ -509,7 +516,7 @@ export default function FormationCIP() {
               </div>
               
               {/* Titre de section */}
-              <div className="text-center mb-8">
+              <div id="programme" className="text-center mb-8 scroll-mt-24">
                 <h2 className="text-lg lg:text-xl font-bold text-[#013F63] mb-6">
                   LE PROGRAMME DE FORMATION
                   </h2>
@@ -720,7 +727,7 @@ export default function FormationCIP() {
                           <p className="text-accent-500 font-bold text-sm mb-3">
                             Il est fortement recommandé de participer à une réunion d'information collective.
                           </p>
-                          <Link href="/s-inscrire">
+                          <Link href={REUNION_HREF}>
                             <button className="inline-flex items-center px-4 py-2 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-md transition-colors text-xs">
                               S'inscrire à une réunion d'information
                             </button>
@@ -1597,6 +1604,8 @@ export default function FormationCIP() {
                   </a>
                 </div>
 
+                <FormationAdequation briefId="formation-cip" />
+
                 {/* Réunions d'information */}
                 <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl p-8 shadow-lg border-2 border-gray-300">
                   <div className="text-center">
@@ -1609,7 +1618,7 @@ export default function FormationCIP() {
                     
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Link
-                        href="/s-inscrire"
+                        href={REUNION_HREF}
                         className="inline-flex items-center gap-2 px-8 py-4 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-colors text-lg hover:scale-105 transform"
                       >
                         <Users className="w-5 h-5" />
@@ -2032,7 +2041,7 @@ export default function FormationCIP() {
         </div>
 
         <FormationFaqSection briefId="formation-cip" />
-        <FormationStickyCta />
+        <FormationStickyCta href={REUNION_HREF} label="Participer à une réunion d'information" />
 
         <Footer />
 

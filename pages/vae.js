@@ -1,10 +1,12 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { useIsClient, useIsMobile } from '../hooks/useClientViewport'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import ServicePageSeoHead from '../components/ServicePageSeoHead'
+import EntityCitationBlock from '../components/EntityCitationBlock'
+import FormationFaqSection from '../components/FormationFaqSection'
 import { TARIF_SELON_PROFIL_COMPLET } from '../lib/tarifs/tarifsCopy'
 import { 
   Users, 
@@ -397,12 +399,7 @@ export default function VAE() {
 
   return (
     <>
-      <Head>
-        <title>VAE - Validation des Acquis de l'Expérience | Atipik RH</title>
-        <meta name="description" content="Accompagnement VAE personnalisé pour valoriser votre expérience professionnelle et obtenir une certification reconnue." />
-        <meta name="keywords" content="VAE, validation acquis expérience, certification professionnelle, accompagnement VAE, Bordeaux" />
-        <link rel="canonical" href="https://www.atipikrh.com/vae" />
-      </Head>
+      <ServicePageSeoHead briefId="vae" />
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-orange-50">
         {/* Background animé global */}
@@ -423,11 +420,13 @@ export default function VAE() {
             <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight tracking-tight text-center">
-                Accompagnement <span className="font-brittany text-3xl lg:text-5xl text-accent-500">VAE</span>
+                <span className="font-brittany text-3xl lg:text-5xl text-accent-500">VAE</span>
+                {' '}— Valoriser son expérience professionnelle
                 </h1>
-              <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
+              <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto mb-8">
                 Valorisez votre expérience professionnelle et obtenez une certification reconnue
                 </p>
+              <EntityCitationBlock pageId="vae" />
               </div>
           </div>
         </section>
@@ -1531,6 +1530,7 @@ export default function VAE() {
             </div>
           </section>
 
+          <FormationFaqSection briefId="vae" />
           <Footer />
 
           {/* Information sur l'entretien gratuit - Bouton fixe */}

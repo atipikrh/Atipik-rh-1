@@ -1,5 +1,6 @@
-import { isScheduledBlogSlugLive } from '../blog/publicationSchedule'
-import { PROFESSIONNALISANTES_SLUGS } from './professionnalisantesConfig'
+import { isBlogSlugInSitemap } from '../blog/canonicalOverrides.js'
+import { isScheduledBlogSlugLive } from '../blog/publicationSchedule.js'
+import { PROFESSIONNALISANTES_SLUGS } from './professionnalisantesConfig.js'
 import type { RegistryEntry } from './types'
 
 /** Slugs blog indexables (alignés sur pages/blog/[slug].js). */
@@ -142,6 +143,7 @@ export function getIndexableRegistry(): RegistryEntry[] {
 
   for (const slug of BLOG_SLUGS) {
     if (!isScheduledBlogSlugLive(slug)) continue
+    if (!isBlogSlugInSitemap(slug)) continue
     entries.push(entry(`/blog/${slug}`, 'blog', 0.8, 'monthly', buildDate))
   }
 

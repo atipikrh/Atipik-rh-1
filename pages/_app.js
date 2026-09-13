@@ -45,7 +45,7 @@ export default function App({ Component, pageProps }) {
         <title>{DEFAULT_TITLE}</title>
         <meta name="description" content={DEFAULT_DESCRIPTION} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="index,follow,max-image-preview:large" />
+        <meta key="robots" name="robots" content="index,follow,max-image-preview:large" />
         <meta property="og:site_name" content="Atipik RH" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:type" content="website" />

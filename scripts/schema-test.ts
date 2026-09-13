@@ -7,6 +7,8 @@ import { getBriefIds, getBriefById } from '../lib/seo/content-briefs'
 import { mapProspectQuery } from '../lib/seo/serp-intent'
 import { expandLongTail, getKeywordClusters } from '../lib/seo/keywords'
 import { getIndexableRegistry } from '../lib/seo/page-registry'
+import { ORGANIZATION, SIRET } from '../lib/seo/site'
+import { ENTITY_CITATION, getCitationByPage } from '../lib/seo/citations'
 
 const PROSPECT_SAMPLES = [
   'je veux devenir conseiller insertion',
@@ -60,6 +62,37 @@ function main() {
   const registry = getIndexableRegistry()
   if (registry.length < 40) {
     errors.push(`Registre sitemap trop court: ${registry.length} URLs`)
+  }
+
+  const registryPaths = new Set(registry.map((e) => e.path))
+  const excludedFromSitemap = [
+    '/blog/formation-conseiller-insertion-professionnelle-lormont',
+    '/blog/comment-reduire-couts-recrutement-30-pourcent-formation-rh',
+  ]
+  for (const path of excludedFromSitemap) {
+    if (registryPaths.has(path)) {
+      errors.push(`URL non canonique encore dans le sitemap: ${path}`)
+    }
+  }
+
+  if (!ORGANIZATION.telephone.startsWith('+33') || ORGANIZATION.telephone.includes('000000')) {
+    errors.push(`Téléphone NAP invalide: ${ORGANIZATION.telephone}`)
+  }
+  if (!ORGANIZATION.sameAs.some((url) => url.includes('atipik-rh33'))) {
+    errors.push('sameAs LinkedIn/Facebook doit utiliser atipik-rh33')
+  }
+  if (ORGANIZATION.taxID !== SIRET) {
+    errors.push(`taxID organisation attendu ${SIRET}`)
+  }
+  if (!ENTITY_CITATION.includes('Qualiopi') || !ENTITY_CITATION.includes('Lormont')) {
+    errors.push('ENTITY_CITATION doit citer Qualiopi et Lormont')
+  }
+  const accueilCitation = getCitationByPage('accueil')
+  if (!accueilCitation?.definition) {
+    errors.push('Citation accueil manquante')
+  }
+  if (!getBriefById('accueil')) {
+    errors.push('Brief accueil manquant')
   }
 
   if (errors.length) {

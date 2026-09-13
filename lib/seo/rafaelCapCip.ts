@@ -131,13 +131,6 @@ Critères d'admission : dossier, tests, entretien.`,
 
   sessions: [
     {
-      carif: '00567713',
-      dateDebut: '2025-09-15',
-      dateFin: '2026-06-16',
-      libelleSession: 'Rentrée sept. 2025 — Lormont, éligible CPF',
-      adresse: '8 rue du Courant, 33310 Lormont',
-    },
-    {
       carif: '00620710',
       dateDebut: '2026-02-09',
       dateFin: '2026-10-23',

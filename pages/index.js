@@ -1,67 +1,18 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Clock } from 'lucide-react'
+import ServicePageSeoHead from '../components/ServicePageSeoHead'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import CookieBanner from '../components/CookieBanner'
+import EntityCitationBlock from '../components/EntityCitationBlock'
+import FormationFaqSection from '../components/FormationFaqSection'
+import { DATES_CIP, DATES_FPA, getUpcomingReunions } from '../lib/reunions/dates.js'
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
-
-  // Dates des réunions (synchronisées avec s-inscrire.js)
-  const datesFPA = [
-    { date: '2025-09-25', jour: 'Jeudi 25 Septembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
-    { date: '2025-10-11', jour: 'Samedi 11 Octobre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' },
-    { date: '2025-10-23', jour: 'Jeudi 23 Octobre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
-    { date: '2025-11-06', jour: 'Jeudi 6 Novembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
-    { date: '2025-11-22', jour: 'Samedi 22 Novembre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' }
-  ]
-
-  const datesCIP = [
-    { date: '2025-09-08', jour: 'Lundi 8 Septembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
-    { date: '2025-09-27', jour: 'Samedi 27 Septembre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' },
-    { date: '2025-10-09', jour: 'Jeudi 9 Octobre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
-    { date: '2025-10-25', jour: 'Samedi 25 Octobre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' },
-    { date: '2025-11-08', jour: 'Samedi 8 Novembre 2025', heure: '10h30 - 12h30', modalite: 'présentiel' },
-    { date: '2025-11-20', jour: 'Jeudi 20 Novembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
-    { date: '2025-12-06', jour: 'Samedi 6 Décembre 2025', heure: '10h00 - 12h00', modalite: 'présentiel' }
-  ]
-
-  // Fonction pour obtenir les prochaines dates (filtrées automatiquement)
-  const getProchainesDates = (dates) => {
-    const aujourdhui = new Date()
-    aujourdhui.setHours(0, 0, 0, 0)
-    
-    return dates.filter(reunion => {
-      const dateReunion = new Date(reunion.date)
-      return dateReunion >= aujourdhui
-    }).slice(0, 3) // Prendre les 3 premières dates futures
-  }
-
-  // Fonction pour convertir le mois en nombre
-  const getMonthNumber = (monthName) => {
-    const months = {
-      'Janvier': '01', 'Février': '02', 'Mars': '03', 'Avril': '04',
-      'Mai': '05', 'Juin': '06', 'Juillet': '07', 'Août': '08',
-      'Septembre': '09', 'Octobre': '10', 'Novembre': '11', 'Décembre': '12'
-    }
-    return months[monthName] || monthName
-  }
-
-  // Fonction pour formater la date avec mois en chiffres
-  const formatDateForDisplay = (jour) => {
-    const parts = jour.split(' ')
-    const jourSemaine = parts[0]
-    const jourNum = parts[1]
-    const mois = getMonthNumber(parts[2])
-    const annee = parts[3].slice(-2) // Prendre les 2 derniers chiffres de l'année
-    return `${jourSemaine} ${jourNum}/${mois}/${annee}`
-  }
-
-  // Obtenir les prochaines dates pour chaque formation
-  const prochainesDatesCIP = getProchainesDates(datesCIP)
-  const prochainesDatesFPA = getProchainesDates(datesFPA)
+  const prochainesDatesCIP = getUpcomingReunions(DATES_CIP, 3)
+  const prochainesDatesFPA = getUpcomingReunions(DATES_FPA, 3)
 
   // Données du carousel - annonces et réunions informatives
   const slides = [
@@ -154,12 +105,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Head>
-        <title>Atipik RH - Formation, Bilan de compétences & VAE à Lormont</title>
-        <meta name="description" content="Centre de formation à Lormont (33) : bilan de compétences, VAE, formations certifiantes CPF. Accompagnement personnalisé pour votre évolution professionnelle." />
-        <meta name="keywords" content="Atipik RH, formation Lormont, bilan de compétences, VAE, CPF, Gironde" />
-        <link rel="canonical" href="https://www.atipikrh.com/" />
-      </Head>
+      <ServicePageSeoHead briefId="accueil" />
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-neutral-100 via-white to-muted-blue-200">
         {/* Background animé global */}
@@ -214,17 +160,17 @@ export default function HomePage() {
                     {/* Texte à gauche */}
                     <div className="text-white space-y-1.5 max-[375px]:space-y-1 sm:space-y-3 max-w-xl">
                       {slide.isReunion ? (
-                        <h1 className="text-xl max-[375px]:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white">
+                        <p className="text-xl max-[375px]:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white">
                           Réunions d'information collective
-                        </h1>
+                        </p>
                       ) : slide.isPaiement ? (
-                        <h1 className="text-xl max-[375px]:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white">
+                        <p className="text-xl max-[375px]:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white">
                           {slide.title}
-                        </h1>
+                        </p>
                       ) : (
-                        <h1 className="text-xl max-[375px]:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                        <p className="text-xl max-[375px]:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                           {slide.title}
-                        </h1>
+                        </p>
                       )}
                       {slide.isReunion ? (
                         <p className="text-sm max-[375px]:text-xs sm:text-base lg:text-lg font-semibold text-white opacity-95">
@@ -288,6 +234,11 @@ export default function HomePage() {
                           <p className="text-[10px] sm:text-[11px] text-neutral-900 mb-2.5 sm:mb-3">
                             Gratuite • Sans engagement • Places limitées
                           </p>
+                          {prochainesDatesCIP[0] ? (
+                            <p className="text-[10px] sm:text-xs text-[#013F63] mb-2.5">
+                              Prochaine CIP : {prochainesDatesCIP[0].jour}
+                            </p>
+                          ) : null}
                           <Link
                             href="/s-inscrire"
                             className="w-full inline-flex items-center justify-center px-4 py-2 max-[375px]:py-1.5 sm:py-2.5 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-lg transition-all duration-300 text-xs sm:text-sm"
@@ -343,6 +294,16 @@ export default function HomePage() {
                             <p className="text-xs text-neutral-900 mt-1">
                               Gratuite • Sans engagement • Places limitées
                             </p>
+                            {(prochainesDatesCIP.length > 0 || prochainesDatesFPA.length > 0) && (
+                              <ul className="mt-3 text-left text-xs text-[#013F63] space-y-1">
+                                {prochainesDatesCIP[0] ? (
+                                  <li>CIP : {prochainesDatesCIP[0].jour} ({prochainesDatesCIP[0].modalite})</li>
+                                ) : null}
+                                {prochainesDatesFPA[0] ? (
+                                  <li>FPA : {prochainesDatesFPA[0].jour} ({prochainesDatesFPA[0].modalite})</li>
+                                ) : null}
+                              </ul>
+                            )}
                           </div>
                           <Link
                             href="/s-inscrire"
@@ -411,6 +372,15 @@ export default function HomePage() {
                 }`}
               />
             ))}
+          </div>
+        </section>
+
+        <section className="pt-12 pb-4">
+          <div className="container mx-auto px-4">
+            <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] text-center mb-6 leading-tight">
+              Atipik RH — organisme de formation à Lormont
+            </h1>
+            <EntityCitationBlock pageId="accueil" />
           </div>
         </section>
 
@@ -541,6 +511,7 @@ export default function HomePage() {
 
           </div>
 
+        <FormationFaqSection briefId="accueil" />
         <Footer />
         
         {/* Cookie Banner */}

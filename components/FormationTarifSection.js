@@ -144,7 +144,7 @@ export default function FormationTarifSection({
   )
 
   return (
-    <section className={sectionClassName}>
+    <section id="tarifs" className={`${sectionClassName} scroll-mt-24`}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {showHeading ? (

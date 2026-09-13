@@ -1,13 +1,15 @@
 import Link from 'next/link'
 import { CheckCircle, Clock, Phone, Users } from 'lucide-react'
 import ServicePageSeoHead from '../ServicePageSeoHead'
-import FormationGeoSummary from '../FormationGeoSummary'
+import FormationQuickAnswers from '../FormationQuickAnswers'
+import FormationLandingCtas from '../FormationLandingCtas'
+import FormationAdequation from '../FormationAdequation'
 import FormationFaqSection from '../FormationFaqSection'
 import FormationStickyCta from '../FormationStickyCta'
 import FormationTarifSection from '../FormationTarifSection'
 import Header from '../Header'
 import Footer from '../Footer'
-import { getCertifianteContactHref } from '../../lib/seo/certifiantesConfig'
+import { getCertifianteContactHref, getCertifianteReunionHref } from '../../lib/seo/certifiantesConfig'
 import { FPA_CCP_MODULES, getFpaCcpModule } from '../../lib/formations/fpaCcpModules'
 
 const RNCP_FPA_URL = 'https://www.francecompetences.fr/recherche/rncp/37275/'
@@ -49,6 +51,7 @@ export default function FpaCcpPage({ moduleId }) {
   }
 
   const contactHref = getCertifianteContactHref(module.briefId)
+  const reunionHref = getCertifianteReunionHref(module.briefId)
 
   return (
     <>
@@ -66,7 +69,7 @@ export default function FpaCcpPage({ moduleId }) {
           <div className="h-20" />
 
           {/* Hero */}
-          <section className="pt-20 pb-8">
+          <section className="pt-4 pb-4">
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
@@ -79,7 +82,8 @@ export default function FpaCcpPage({ moduleId }) {
                   {module.accroche}
                 </p>
               </div>
-              <FormationGeoSummary briefId={module.briefId} />
+              <FormationQuickAnswers briefId={module.briefId} />
+              <FormationLandingCtas briefId={module.briefId} />
               <FpaCcpCrossLinks currentId={module.id} />
             </div>
           </section>
@@ -133,7 +137,7 @@ export default function FpaCcpPage({ moduleId }) {
           </section>
 
           {/* Compétences certifiantes */}
-          <section className="py-8">
+          <section id="programme" className="py-8 scroll-mt-24">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-8">
@@ -191,8 +195,10 @@ export default function FpaCcpPage({ moduleId }) {
             contactHref={contactHref}
           />
 
+          <FormationAdequation briefId={module.briefId} />
+
           {/* CTA candidature */}
-          <section className="pt-2 pb-8">
+          <section id="dates" className="pt-2 pb-8 scroll-mt-24">
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto">
                 <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl p-8 shadow-lg border-2 border-gray-300">
@@ -208,7 +214,7 @@ export default function FpaCcpPage({ moduleId }) {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Link
-                        href="/s-inscrire"
+                        href={reunionHref}
                         className="inline-flex items-center gap-2 px-8 py-4 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-colors text-lg hover:scale-105 transform"
                       >
                         <Users className="w-5 h-5" />
@@ -240,7 +246,7 @@ export default function FpaCcpPage({ moduleId }) {
         </div>
 
         <FormationFaqSection briefId={module.briefId} />
-        <FormationStickyCta href="/s-inscrire" label="Réunion d'information" />
+        <FormationStickyCta href={reunionHref} label="Participer à une réunion d'information" />
 
         <Footer />
       </div>

@@ -1,12 +1,16 @@
 import Link from 'next/link'
 import ServicePageSeoHead from '../../../components/ServicePageSeoHead'
-import FormationGeoSummary from '../../../components/FormationGeoSummary'
+import FormationQuickAnswers from '../../../components/FormationQuickAnswers'
+import FormationLandingCtas from '../../../components/FormationLandingCtas'
+import FormationAdequation from '../../../components/FormationAdequation'
 import FormationFaqSection from '../../../components/FormationFaqSection'
+import EntityCitationBlock from '../../../components/EntityCitationBlock'
 import FormationStickyCta from '../../../components/FormationStickyCta'
 import FormationTarifSection from '../../../components/FormationTarifSection'
-import { getCertifianteContactHref } from '../../../lib/seo/certifiantesConfig'
+import { getCertifianteContactHref, getCertifianteReunionHref } from '../../../lib/seo/certifiantesConfig'
 
 const CONTACT_HREF = getCertifianteContactHref('formation-fpa')
+const REUNION_HREF = getCertifianteReunionHref('formation-fpa')
 import { useState, useEffect, useRef } from 'react'
 import { useIsClient, useIsMobile } from '../../../hooks/useClientViewport'
 import Header from '../../../components/Header'
@@ -431,20 +435,22 @@ export default function FormationFPA() {
           <div className="h-20"></div>
 
           {/* Hero Section */}
-          <section className="py-20">
+          <section className="pt-4 pb-4">
             <div className="container mx-auto px-4">
               
               {/* Titre principal */}
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
-                  Formation<br/>
+                  Formation FPA —{' '}
                   <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">Formateur Professionnel d'Adultes</span>
                 </h1>
                 <p className="text-lg lg:text-xl text-[#013F63] leading-relaxed font-light">
                   Devenez <strong>formateur certifié</strong> et accompagnez la montée en compétences
                 </p>
               </div>
-              <FormationGeoSummary briefId="formation-fpa" />
+              <EntityCitationBlock pageId="formation-fpa" />
+              <FormationQuickAnswers briefId="formation-fpa" />
+              <FormationLandingCtas briefId="formation-fpa" />
             </div>
           </section>
 
@@ -481,7 +487,7 @@ export default function FormationFPA() {
               <div className="max-w-6xl mx-auto">
               
               {/* Titre de section */}
-              <div className="text-center mb-8">
+              <div id="programme" className="text-center mb-8 scroll-mt-24">
                 <h2 className="text-lg lg:text-xl font-bold text-[#013F63] mb-6">
                   LE PROGRAMME DE FORMATION
                   </h2>
@@ -690,7 +696,7 @@ export default function FormationFPA() {
                           <p className="text-accent-500 font-bold text-sm mb-3">
                             Il est fortement recommandé de participer à une réunion d'information collective.
                           </p>
-                          <Link href="/s-inscrire">
+                          <Link href={REUNION_HREF}>
                             <button className="inline-flex items-center px-4 py-2 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-md transition-colors text-xs">
                               S'inscrire à une réunion d'information
                             </button>
@@ -1401,7 +1407,7 @@ export default function FormationFPA() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
 
-                <div className="max-w-md mx-auto mb-12">
+                <div id="dates" className="max-w-md mx-auto mb-12 scroll-mt-24">
                   {/* Prochaine session FPA */}
                   <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
                     <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
@@ -1416,6 +1422,8 @@ export default function FormationFPA() {
                   </div>
                 </div>
 
+                <FormationAdequation briefId="formation-fpa" />
+
                 {/* Réunions d'information */}
                 <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl p-8 shadow-lg border-2 border-gray-300">
                   <div className="text-center">
@@ -1428,7 +1436,7 @@ export default function FormationFPA() {
                     
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Link
-                        href="/s-inscrire"
+                        href={REUNION_HREF}
                         className="inline-flex items-center gap-2 px-8 py-4 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-colors text-lg hover:scale-105 transform"
                       >
                         <Users className="w-5 h-5" />
@@ -1769,7 +1777,7 @@ export default function FormationFPA() {
         </div>
 
         <FormationFaqSection briefId="formation-fpa" />
-        <FormationStickyCta />
+        <FormationStickyCta href={REUNION_HREF} label="Participer à une réunion d'information" />
 
         <Footer />
 

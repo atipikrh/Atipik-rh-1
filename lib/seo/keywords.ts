@@ -392,6 +392,7 @@ export const BRIEF_CLUSTER_MAP: Record<string, string> = {
   'formation-ccp1': 'formation-cip-bordeaux',
   'formation-ccp2': 'formation-cip-bordeaux',
   'formation-ccp3': 'formation-cip-bordeaux',
+  'accueil': 'organisme-insertion',
   'formations-hub': 'organisme-insertion',
   'bilan-competences-local': 'bilan-competences-lormont',
   'reconversion-bordeaux': 'reconversion-bordeaux',

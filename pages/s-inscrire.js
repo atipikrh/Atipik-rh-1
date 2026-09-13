@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useState, useEffect, useRef } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -9,6 +10,7 @@ import FinancementDisclaimer from '../components/FinancementDisclaimer'
 import RecaptchaV2Invisible from '../components/RecaptchaV2Invisible'
 
 export default function SInscrire() {
+  const router = useRouter()
   const [formData, setFormData] = useState({
     formation: '',
     nom: '',
@@ -35,6 +37,15 @@ export default function SInscrire() {
     // Enregistrer le timestamp de chargement du formulaire
     setFormTimestamp(Date.now())
   }, [])
+
+  useEffect(() => {
+    if (!router.isReady) return
+    const raw = router.query.formation
+    const value = Array.isArray(raw) ? raw[0] : raw
+    const formation = String(value || '').toUpperCase()
+    if (formation !== 'CIP' && formation !== 'FPA') return
+    setFormData((prev) => (prev.formation ? prev : { ...prev, formation }))
+  }, [router.isReady, router.query.formation])
 
   // Prochaines dates de réunions par formation
   const datesFPA = [

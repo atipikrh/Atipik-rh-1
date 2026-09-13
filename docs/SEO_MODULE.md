@@ -67,6 +67,9 @@ Briefs prêts, pages React non publiées :
 
 ```bash
 npm run schema-test
+npm run seo:audit-pages
+npm run seo:gsc-audit
+npm run seo:post-deploy
 npm run build
 ```
 

@@ -1,18 +1,14 @@
-import { useState } from 'react'
-import { ChevronDown, ChevronUp } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { getBriefById } from '../lib/seo/content-briefs'
 
 /**
- * FAQ visible (contenu aligné sur le JSON-LD du brief).
+ * FAQ visible et crawlable (réponses toujours dans le HTML, alignées sur le JSON-LD).
  * @param {{ briefId: string, title?: string }} props
  */
 export default function FormationFaqSection({ briefId, title = 'Questions fréquentes' }) {
   const brief = getBriefById(briefId)
-  const [openIndex, setOpenIndex] = useState(null)
 
   if (!brief?.faq?.length) return null
-
-  const toggle = (index) => setOpenIndex(openIndex === index ? null : index)
 
   return (
     <section className="py-12 bg-white/60" aria-labelledby={`faq-${briefId}`}>
@@ -22,30 +18,19 @@ export default function FormationFaqSection({ briefId, title = 'Questions fréqu
             {title}
           </h2>
           <div className="space-y-3">
-            {brief.faq.map((item, index) => (
-              <div
+            {brief.faq.map((item) => (
+              <details
                 key={item.question}
-                className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden"
+                className="group bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden"
               >
-                <button
-                  type="button"
-                  onClick={() => toggle(index)}
-                  className="w-full flex items-center justify-between gap-4 p-4 text-left text-[#013F63] font-semibold hover:bg-gray-50 transition-colors"
-                  aria-expanded={openIndex === index}
-                >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-4 text-left text-[#013F63] font-semibold hover:bg-gray-50 transition-colors [&::-webkit-details-marker]:hidden">
                   <span>{item.question}</span>
-                  {openIndex === index ? (
-                    <ChevronUp className="w-5 h-5 shrink-0 text-orange-500" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 shrink-0 text-orange-500" />
-                  )}
-                </button>
-                {openIndex === index && (
-                  <div className="px-4 pb-4 text-[#013F63]/90 text-sm leading-relaxed border-t border-gray-50">
-                    {item.answer}
-                  </div>
-                )}
-              </div>
+                  <ChevronDown className="w-5 h-5 shrink-0 text-orange-500 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="px-4 pb-4 text-[#013F63]/90 text-sm leading-relaxed border-t border-gray-50">
+                  {item.answer}
+                </div>
+              </details>
             ))}
           </div>
         </div>

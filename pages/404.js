@@ -12,7 +12,7 @@ export default function Custom404() {
           name="description"
           content="La page demandée n'existe pas ou a été déplacée. Retournez à l'accueil Atipik RH."
         />
-        <meta name="robots" content="noindex, follow" />
+        <meta key="robots" name="robots" content="noindex, follow" />
       </Head>
 
       <div className="min-h-screen flex flex-col bg-gradient-to-br from-purple-50 via-white to-blue-50">
