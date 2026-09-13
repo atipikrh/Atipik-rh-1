@@ -3,10 +3,7 @@ import { X, Cookie, Settings, Check } from 'lucide-react'
 import { initGA, trackPageView, updateGoogleConsent } from '../lib/analytics'
 
 export default function CookieBanner() {
-  const [showBanner, setShowBanner] = useState(() => {
-    if (typeof window === 'undefined') return false
-    return !localStorage.getItem('cookieConsent')
-  })
+  const [showBanner, setShowBanner] = useState(false)
   const [showSettings, setShowSettings] = useState(false)
   const [cookies, setCookies] = useState({
     necessary: true, // Toujours activé
@@ -16,9 +13,11 @@ export default function CookieBanner() {
 
   useEffect(() => {
     const cookieConsent = localStorage.getItem('cookieConsent')
-    if (!cookieConsent) return
+    if (!cookieConsent) {
+      setShowBanner(true)
+      return
+    }
 
-    // Charger GA si le consentement existe déjà et autorise les analytics
     try {
       const consent = JSON.parse(cookieConsent)
       updateGoogleConsent(consent.analytics === true, consent.marketing === true)
@@ -27,6 +26,7 @@ export default function CookieBanner() {
       }
     } catch (error) {
       console.error('[CookieBanner] Erreur lors de la lecture du consentement:', error)
+      setShowBanner(true)
     }
   }, [])
 
