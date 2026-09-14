@@ -11,6 +11,7 @@ import RecaptchaV3Script from '../components/RecaptchaV3Script'
 import EntityCitationBlock from '../components/EntityCitationBlock'
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Facebook, Instagram, Linkedin } from 'lucide-react'
 import { getRecaptchaToken } from '../lib/recaptcha'
+import { resolveContactSujet, withLeftoverMessage } from '../lib/seo/contactSujet'
 
 export default function Contact() {
   const router = useRouter()
@@ -36,23 +37,21 @@ export default function Contact() {
       const { sujet, formule, message } = router.query
 
       const sujetStr = Array.isArray(sujet) ? sujet[0] : sujet
-      if (sujetStr) {
-        setFormData((prev) => ({ ...prev, sujet: sujetStr }))
-      }
+      const { sujet: resolvedSujet, leftover } = resolveContactSujet(sujetStr)
 
       const formuleStr = Array.isArray(formule) ? formule[0] : formule
       const messageStr = Array.isArray(message) ? message[0] : message
+      let nextMessage = messageStr || ''
       if (formuleStr) {
-        const formuleMessage = `Formule : ${formuleStr}\n\n`
-        setFormData((prev) => ({
-          ...prev,
-          message: formuleMessage + (messageStr || ''),
-        }))
+        nextMessage = `Formule : ${formuleStr}\n\n${nextMessage}`
       }
+      nextMessage = withLeftoverMessage(nextMessage, leftover)
 
-      if (messageStr && !formuleStr) {
-        setFormData((prev) => ({ ...prev, message: messageStr }))
-      }
+      setFormData((prev) => ({
+        ...prev,
+        ...(resolvedSujet ? { sujet: resolvedSujet } : {}),
+        ...(nextMessage ? { message: nextMessage } : {}),
+      }))
     }
   }, [router.isReady, router.query])
 

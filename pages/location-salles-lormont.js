@@ -111,15 +111,14 @@ export default function LocationEspacesBordeaux() {
       demiJournee: 40,
       journee: 70,
       weekend: 85,
-      description: 'Bureau meublé (table, chaise, rangement) parfait pour le travail individuel',
+      description: 'Bureau compact 7 m², calme et fermé, pour rédiger, visio ou travail concentré',
       equipements: [
-        'Bureau meublé (table, chaise, rangement)',
+        'Poste solo (bureau, chaise, rangement fermé)',
         'Wi-Fi haut débit',
-        'Accès imprimante',
-        'Thé et café',
+        'Thé et café à l’accueil',
         'Parking privé gratuit'
       ],
-      amenagements: ['Espace de travail individuel'],
+      amenagements: ['Configuration bureau compact 7 m²'],
       note: 4.8,
       avis: 12
     },
@@ -135,15 +134,15 @@ export default function LocationEspacesBordeaux() {
       demiJournee: 40,
       journee: 70,
       weekend: 85,
-      description: 'Bureau meublé (table, chaise, rangement) parfait pour le travail individuel',
+      description: 'Bureau 8 m² avec vue dégagée, pour entretiens, coaching et préparation de formation',
       equipements: [
-        'Bureau meublé (table, chaise, rangement)',
+        'Bureau plus large (table, chaise, rangement)',
+        'Vue dégagée sur l’extérieur',
         'Wi-Fi haut débit',
-        'Accès imprimante',
-        'Thé et café',
+        'Accès imprimante du centre',
         'Parking privé gratuit'
       ],
-      amenagements: ['Espace de travail individuel'],
+      amenagements: ['Bureau 8 m² avec vue', 'Entretiens et coaching 1:1'],
       note: 4.8,
       avis: 12
     }

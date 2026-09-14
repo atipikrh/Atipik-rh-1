@@ -14,10 +14,7 @@ const REDIRECT_CHECKS = [
   ['/equipe/martine-beaudon', '/equipe/martine-baudon'],
   ['/sitemap_index.xml', '/sitemap.xml'],
   ['/?page_id=3328', '/'],
-  [
-    '/contact?utm_source=google&utm_medium=cpc',
-    '/contact',
-  ],
+  ['/mentions-legales/', '/mentions-legales'],
 ]
 
 const CANONICAL_CHECKS = [
@@ -98,6 +95,13 @@ async function main() {
     console.log(`${r.ok ? '✅' : '❌'} ${from} → ${r.status} ${r.location || '(pas de Location)'}`)
     if (!r.ok) errors.push(`Redirect ${from} → ${to} incorrect`)
   }
+
+  console.log('\n--- UTM conservés (pas de 301, canonique HTML) ---')
+  const utmPath = '/contact?utm_source=google&utm_medium=cpc'
+  const utmRes = await fetch(`${BASE}${utmPath}`, { redirect: 'manual' })
+  const utmOk = utmRes.status === 200 || utmRes.status === 304
+  console.log(`${utmOk ? '✅' : '❌'} ${utmPath}: HTTP ${utmRes.status} (pas de redirection)`)
+  if (!utmOk) errors.push(`UTM contact ne doit plus rediriger (reçu ${utmRes.status})`)
 
   // Canoniques
   console.log('\n--- Balises canoniques ---')

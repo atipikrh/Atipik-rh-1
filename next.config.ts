@@ -144,6 +144,15 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        source: '/documents/dossier-candidature/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, follow',
+          },
+        ],
+      },
     ]
   },
 

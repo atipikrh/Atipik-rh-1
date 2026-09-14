@@ -21,6 +21,8 @@ describe('CTA landings certifiantes (hrefs)', () => {
     assert.match(cip, /sujet=formation-cip/)
     assert.match(fpa, /sujet=formation-fpa/)
     assert.doesNotMatch(cip, /Demande\+formation/)
+    assert.doesNotMatch(cip, /utm_/)
+    assert.doesNotMatch(fpa, /utm_/)
   })
 
   it('préremplit le rappel et la réunion', () => {
@@ -47,7 +49,13 @@ describe('CTA landings formations courtes', () => {
     assert.match(rappel, new RegExp(`sujet=${CONTACT_SUJET_COURTE}`))
     assert.match(hub, new RegExp(`sujet=${CONTACT_SUJET_COURTE}`))
     assert.doesNotMatch(contact, /plaquette-fpa|Formation-CIP|dossier-candidature/)
+    assert.doesNotMatch(contact, /utm_/)
+    assert.doesNotMatch(rappel, /utm_/)
+    assert.doesNotMatch(hub, /utm_/)
     const rappelParams = new URLSearchParams(rappel.split('?')[1])
     assert.match(rappelParams.get('message') || '', /Je souhaite être rappelé/)
+    const contactParams = new URLSearchParams(contact.split('?')[1])
+    assert.equal(contactParams.get('sujet'), CONTACT_SUJET_COURTE)
+    assert.match(contactParams.get('message') || '', /Développer la relation entreprise/)
   })
 })
