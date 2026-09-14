@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Calendar, Clock, ArrowRight, User, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getAllArticles } from '../lib/blog/articleRepository';
+import { getFormationContactHref } from '../lib/seo/professionnalisantesConfig';
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("Tous");
@@ -70,7 +71,7 @@ export default function Blog() {
         { label: "Recrutement inclusif : objectiver les critères", href: "/blog/recrutement-inclusif-objectiver-criteres", type: "article" },
         { label: "Recrutement sans discrimination : 7 points de contrôle", href: "/blog/recrutement-sans-discrimination-points-controle", type: "article" },
         { label: "Biais cognitifs dans le recrutement", href: "/blog/biais-cognitifs-recrutement-methode-bordeaux", type: "article" },
-        { label: "Page contact", href: "/contact?sujet=Demande%20formation%20—%20Renforcer%20ses%20pratiques%20de%20recrutement", type: "contact" },
+        { label: "Page contact", href: getFormationContactHref('renforcer-pratique-recrutement-diversite'), type: "contact" },
       ],
     },
     {
@@ -246,7 +247,7 @@ export default function Blog() {
         { label: "Recruter par les compétences : méthode RH", href: "/blog/recrutement-competences-methode-complete-rh-2026", type: "article" },
         { label: "Recrutement sans discrimination : 7 points de contrôle", href: "/blog/recrutement-sans-discrimination-points-controle", type: "article" },
         { label: "Recrutement sans discrimination", href: "/blog/recrutement-sans-discrimination", type: "article" },
-        { label: "Page contact", href: "/contact?sujet=Demande%20formation%20—%20Renforcer%20ses%20pratiques%20de%20recrutement", type: "contact" },
+        { label: "Page contact", href: getFormationContactHref('renforcer-pratique-recrutement-diversite'), type: "contact" },
       ],
     },
     {
@@ -355,7 +356,7 @@ export default function Blog() {
         { label: "Recrutement inclusif : objectiver les critères", href: "/blog/recrutement-inclusif-objectiver-criteres", type: "article" },
         { label: "Discrimination à l'embauche : ce que la loi impose", href: "/blog/obligation-formation-non-discrimination-recrutement-entreprise", type: "article" },
         { label: "Biais cognitifs dans le recrutement", href: "/blog/biais-cognitifs-recrutement-methode-bordeaux", type: "article" },
-        { label: "Page contact", href: "/contact?sujet=Demande%20formation%20—%20Prévenir%20les%20discriminations%20dans%20le%20recrutement", type: "contact" },
+        { label: "Page contact", href: getFormationContactHref('renforcer-pratique-recrutement-inclusif'), type: "contact" },
       ],
     },
     {

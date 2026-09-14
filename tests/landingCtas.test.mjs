@@ -58,4 +58,25 @@ describe('CTA landings formations courtes', () => {
     assert.equal(contactParams.get('sujet'), CONTACT_SUJET_COURTE)
     assert.match(contactParams.get('message') || '', /Développer la relation entreprise/)
   })
+
+  it('mappe les fiches GSC vers formation-courte, sans UTM ni sujet texte libre', () => {
+    const cip = buildContactHref({ sujetContact: 'formation-cip' })
+    assert.match(cip, /sujet=formation-cip/)
+    assert.doesNotMatch(cip, /Demande\+formation/)
+    assert.doesNotMatch(cip, /utm_/)
+
+    const slugs = [
+      'recruter-insertion-entreprises',
+      'renforcer-relation-entreprise',
+      'renforcer-pratique-recrutement-inclusif',
+      'renforcer-pratique-recrutement-diversite',
+    ]
+    for (const slug of slugs) {
+      const href = getFormationContactHref(slug)
+      const params = new URLSearchParams(href.split('?')[1])
+      assert.equal(params.get('sujet'), CONTACT_SUJET_COURTE, slug)
+      assert.doesNotMatch(href, /Demande\+formation/)
+      assert.doesNotMatch(href, /utm_/)
+    }
+  })
 })

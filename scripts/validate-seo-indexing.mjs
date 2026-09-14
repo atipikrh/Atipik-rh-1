@@ -50,8 +50,10 @@ function extractCanonical(html) {
 }
 
 function extractRobots(html) {
-  const m = html.match(/<meta[^>]+name=["']robots["'][^>]*content=["']([^"']+)["']/i)
-  return m?.[1] || null
+  const values = [...html.matchAll(/<meta[^>]+name=["']robots["'][^>]*content=["']([^"']+)["']/gi)].map(
+    (m) => m[1]
+  )
+  return values.find((v) => /noindex/i.test(v)) || values[0] || null
 }
 
 async function checkRedirect(fromPath, expectedLocationPart) {
@@ -96,12 +98,100 @@ async function main() {
     if (!r.ok) errors.push(`Redirect ${from} → ${to} incorrect`)
   }
 
-  console.log('\n--- UTM conservés (pas de 301, canonique HTML) ---')
-  const utmPath = '/contact?utm_source=google&utm_medium=cpc'
-  const utmRes = await fetch(`${BASE}${utmPath}`, { redirect: 'manual' })
-  const utmOk = utmRes.status === 200 || utmRes.status === 304
-  console.log(`${utmOk ? '✅' : '❌'} ${utmPath}: HTTP ${utmRes.status} (pas de redirection)`)
-  if (!utmOk) errors.push(`UTM contact ne doit plus rediriger (reçu ${utmRes.status})`)
+  console.log('\n--- Contact query : 200, noindex, canonique /contact ---')
+  const contactQueryPaths = [
+    '/contact?utm_source=site',
+    '/contact?sujet=formation-cip',
+  ]
+  for (const path of contactQueryPaths) {
+    const res = await fetch(`${BASE}${path}`, { redirect: 'manual' })
+    const html = res.status === 200 || res.status === 304 ? await res.text() : ''
+    const robots = extractRobots(html) || ''
+    const xRobots = (res.headers.get('x-robots-tag') || '').toLowerCase()
+    const canonical = extractCanonical(html)
+    const noRedirect = res.status === 200 || res.status === 304
+    const hasNoindex = robots.includes('noindex') || xRobots.includes('noindex')
+    const canonOk = canonical === `${CANONICAL_BASE}/contact`
+    const ok = noRedirect && hasNoindex && canonOk
+    console.log(
+      `${ok ? '✅' : '❌'} ${path}: HTTP ${res.status} robots=${robots || xRobots || '—'} canonical=${canonical || 'absent'}`
+    )
+    if (!noRedirect) errors.push(`${path} ne doit pas rediriger (reçu ${res.status})`)
+    if (noRedirect && !hasNoindex) errors.push(`${path}: noindex manquant`)
+    if (noRedirect && !canonOk) errors.push(`${path}: canonique ${canonical}`)
+  }
+
+  console.log('\n--- Anciens sujets contact GSC (301) ---')
+  const gscContactRedirects = [
+    {
+      path: `/contact?sujet=${encodeURIComponent('Demande formation — CIP')}`,
+      expectedSujet: 'formation-cip',
+    },
+    {
+      path: `/contact?sujet=${encodeURIComponent('Demande formation — FPA')}&utm_source=site&utm_medium=formation_page&utm_campaign=formation_fpa`,
+      expectedSujet: 'formation-fpa',
+      expectedUtm: 'utm_source=site',
+    },
+    {
+      path: `/contact?sujet=${encodeURIComponent('Demande formation — Recruter en insertion avec les entreprises : méthodes et outils')}`,
+      expectedSujet: 'formation-courte',
+    },
+    {
+      path: `/contact?sujet=${encodeURIComponent('Demande formation — Renforcer le partenariat avec les entreprises')}`,
+      expectedSujet: 'formation-courte',
+    },
+    {
+      path: `/contact?sujet=${encodeURIComponent('Demande formation — Prévenir les discriminations dans le recrutement')}`,
+      expectedSujet: 'formation-courte',
+    },
+    {
+      path: `/contact?sujet=${encodeURIComponent('Demande formation — Renforcer ses pratiques de recrutement')}`,
+      expectedSujet: 'formation-courte',
+    },
+  ]
+  for (const check of gscContactRedirects) {
+    const res = await fetch(`${BASE}${check.path}`, { redirect: 'manual' })
+    const loc = res.headers.get('location') || ''
+    const locParams = loc.includes('?') ? new URLSearchParams(loc.split('?')[1]) : new URLSearchParams()
+    const redirected =
+      res.status === 301 || res.status === 308 || (res.status >= 300 && res.status < 400)
+    const sujetOk = locParams.get('sujet') === check.expectedSujet
+    const utmPreserved = !check.expectedUtm || loc.includes(check.expectedUtm)
+    const ok = redirected && sujetOk && utmPreserved
+    console.log(`${ok ? '✅' : '❌'} ${check.expectedSujet}: HTTP ${res.status} ${loc || '(pas de Location)'}`)
+    if (!ok) errors.push(`GSC contact ${check.expectedSujet}: attendu 301 sujet=${check.expectedSujet}`)
+  }
+
+  const gscFollow = await fetch(`${BASE}/contact?sujet=${encodeURIComponent('Demande formation — CIP')}`)
+  const gscHtml = await gscFollow.text()
+  const gscCanonical = extractCanonical(gscHtml)
+  const gscCanonOk = gscFollow.ok && gscCanonical === `${CANONICAL_BASE}/contact`
+  console.log(`${gscCanonOk ? '✅' : '❌'} Après 301 CIP, canonique ${gscCanonical || 'absent'}`)
+  if (!gscCanonOk) errors.push(`Canonique contact après GSC CIP: ${gscCanonical}`)
+
+  console.log('\n--- Apex + slash (1 saut) ---')
+  let baseHost = ''
+  try {
+    baseHost = new URL(BASE).hostname
+  } catch {
+    baseHost = ''
+  }
+  if (baseHost === 'www.atipikrh.com' || baseHost === 'atipikrh.com') {
+    const apexBlog = await fetch('https://atipikrh.com/blog/', { redirect: 'manual' })
+    const loc = apexBlog.headers.get('location') || ''
+    const hopOk =
+      (apexBlog.status === 301 || apexBlog.status === 308) && loc === 'https://www.atipikrh.com/blog'
+    console.log(
+      `${hopOk ? '✅' : '❌'} https://atipikrh.com/blog/ → ${apexBlog.status} ${loc || '(pas de Location)'}`
+    )
+    if (!hopOk) {
+      errors.push(
+        `Apex /blog/ doit rediriger en 1 saut vers https://www.atipikrh.com/blog (reçu ${apexBlog.status} ${loc})`
+      )
+    }
+  } else {
+    console.log(`⏭️  Apex /blog/ ignoré (base ${baseHost || BASE})`)
+  }
 
   // Canoniques
   console.log('\n--- Balises canoniques ---')

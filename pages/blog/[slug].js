@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { FINANCEMENT_DISCLAIMER } from '../../lib/tarifs/tarifsCopy';
+import { getFormationContactHref } from '../../lib/seo/professionnalisantesConfig';
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { prevenirDiscriminationsRecrutementContent } from '../../lib/blog/prevenirDiscriminationsRecrutementContent';
 import { recrutementSansDiscriminationContent } from '../../lib/blog/recrutementSansDiscriminationContent';
@@ -1105,7 +1106,7 @@ const BLOG_ARTICLES = [
         <ul>
           <li><a href="/contact?sujet=Demande%20grille%20d%27entretien%20structur%C3%A9e%20%E2%80%94%20blog%20Atipik%20RH"><strong>Télécharger la grille d’entretien structurée</strong></a> (nous vous recontactons avec le modèle et les précisions d’usage) ;</li>
           <li><a href="/contact?sujet=%C3%89valuation%20processus%20de%20recrutement%20%E2%80%94%20blog%20Atipik%20RH"><strong>Évaluer votre processus de recrutement</strong></a> avec l’équipe Atipik RH ;</li>
-          <li><a href="/contact?sujet=Demande%20formation%20%E2%80%94%20Renforcer%20ses%20pratiques%20de%20recrutement%20%28Atipik%20RH%29"><strong>Former vos managers recruteurs</strong></a> — ou consulter la <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite">page de la formation</a>.</li>
+          <li><a href="${getFormationContactHref('renforcer-pratique-recrutement-diversite')}"><strong>Former vos managers recruteurs</strong></a> — ou consulter la <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite">page de la formation</a>.</li>
         </ul>
         <p>Basée à <strong>Lormont</strong> (proche <strong>Bordeaux</strong>), Atipik RH accompagne les équipes RH et les directions sur le recrutement et la formation professionnelle.</p>
 
@@ -1247,7 +1248,7 @@ const BLOG_ARTICLES = [
         <h2>Passer à l'action avec Atipik RH</h2>
         <p>Vous souhaitez <strong>professionnaliser vos pratiques</strong> et ancrer le recrutement par les compétences dans vos équipes ?</p>
         <p>Notre formation <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite"><strong>Renforcer ses pratiques de recrutement : de la diversité à la performance RH</strong></a> propose une mise en œuvre concrète (méthodes, inclusion, performance). Pour sécuriser le cadre légal et les biais, complétez avec <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif">la formation sur la prévention des discriminations au recrutement</a>.</p>
-        <p>Pour un échange personnalisé : <a href="/contact?sujet=Demande%20formation%20%E2%80%94%20recrutement%20par%20les%20comp%C3%A9tences%20%28Atipik%20RH%29"><strong>contactez Atipik RH</strong></a> — nous répondons aux besoins des structures d'insertion, des équipes RH et des directions.</p>
+        <p>Pour un échange personnalisé : <a href="${getFormationContactHref('renforcer-pratique-recrutement-diversite')}"><strong>contactez Atipik RH</strong></a> — nous répondons aux besoins des structures d'insertion, des équipes RH et des directions.</p>
 
         <h3>Pour aller plus loin</h3>
         <ul>

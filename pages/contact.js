@@ -13,8 +13,9 @@ import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Facebook, In
 import { getRecaptchaToken } from '../lib/recaptcha'
 import { resolveContactSujet, withLeftoverMessage } from '../lib/seo/contactSujet'
 
-export default function Contact() {
+export default function Contact({ hasQuery: hasQueryFromServer = false }) {
   const router = useRouter()
+  const hasQuery = hasQueryFromServer || router.asPath.includes('?')
   const [formData, setFormData] = useState({
     prenom: '',
     nom: '',
@@ -137,6 +138,10 @@ export default function Contact() {
         <Head>
           <title>Message envoyé - Contact Atipik RH</title>
           <meta name="description" content="Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais." />
+          <link rel="canonical" href="https://www.atipikrh.com/contact" />
+          {hasQuery ? (
+            <meta key="robots" name="robots" content="noindex, follow" />
+          ) : null}
         </Head>
 
         <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -208,6 +213,9 @@ export default function Contact() {
         <meta name="description" content="Contactez Atipik RH pour vos projets de formation, bilan de compétences et VAE à Lormont. Échangeons sur vos objectifs professionnels." />
         <meta name="keywords" content="contact Atipik RH, formation Lormont, rendez-vous bilan compétences, contact VAE Bordeaux" />
         <link rel="canonical" href="https://www.atipikrh.com/contact" />
+        {hasQuery ? (
+          <meta key="robots" name="robots" content="noindex, follow" />
+        ) : null}
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -557,4 +565,11 @@ export default function Contact() {
       </div>
     </>
   )
-} 
+}
+
+/** SSR : la query n’est pas dans le HTML statique, Google doit voir noindex dès le premier octet. */
+export async function getServerSideProps(context) {
+  const hasQuery = (context.resolvedUrl || '').includes('?')
+  return { props: { hasQuery } }
+}
+ 

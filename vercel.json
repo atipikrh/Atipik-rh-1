@@ -1,6 +1,17 @@
 {
   "redirects": [
     {
+      "source": "/:path+/",
+      "has": [
+        {
+          "type": "host",
+          "value": "atipikrh.com"
+        }
+      ],
+      "destination": "https://www.atipikrh.com/:path+",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [
         {

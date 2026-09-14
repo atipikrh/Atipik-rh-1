@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { rewriteLegacyContactSujet } from './lib/seo/contactSujet'
 
 /** Paramètres WordPress legacy à retirer. */
 const LEGACY_QUERY_PARAMS = ['page_id', 'mailpoet_page', 's', 'trk']
@@ -47,8 +48,18 @@ export function proxy(request: NextRequest) {
     changed = true
   }
 
+  if (pathname.replace(/\/+$/, '') === '/contact' && rewriteLegacyContactSujet(url.searchParams)) {
+    changed = true
+  }
+
   if (changed) {
     return NextResponse.redirect(url, 301)
+  }
+
+  if (pathname === '/contact' && url.search) {
+    const res = NextResponse.next()
+    res.headers.set('X-Robots-Tag', 'noindex, follow')
+    return res
   }
 
   return NextResponse.next()
