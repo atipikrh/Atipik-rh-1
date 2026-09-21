@@ -343,18 +343,18 @@ const BLOG_ARTICLES = [
       id: 40,
       slug: "formation-cip-bordeaux-session-septembre-2026",
       title: "Devenir Conseiller en Insertion Professionnelle à Bordeaux : tout savoir sur la session CIP d'Atipik RH (septembre 2026)",
-      excerpt: "Rejoignez la formation CIP niveau 5 (RNCP37274) chez Atipik RH à Lormont. Session du 21 sept. 2026 au 23 avr. 2027 — 14 places disponibles. Finançable CPF, AIF, Transition Pro.",
+      excerpt: "Rejoignez la formation CIP niveau 5 (RNCP37274) chez Atipik RH à Lormont. Session du 22 mars 2027 au 22 oct. 2027 — 14 places disponibles. Finançable CPF, AIF, Transition Pro.",
       image: "/images/blog/formation-cip-bordeaux-session-septembre-2026.png",
       imageAlt: "Formation CIP Bordeaux session septembre 2026 — Conseiller en Insertion Professionnelle RNCP37274 — ATIPIK RH Lormont",
       date: "10 juillet 2026",
       readTime: "14 min",
       author: "Vanessa NOAH EWODO",
       category: "Formations",
-      keywords: "formation CIP Bordeaux, formation CIP Lormont, session CIP septembre 2026, conseiller insertion professionnelle Bordeaux, RNCP37274, formation CIP financement CPF, devenir CIP reconversion, formation CIP niveau 5 Gironde",
+      keywords: "formation CIP Bordeaux, formation CIP Lormont, session CIP mars 2027, conseiller insertion professionnelle Bordeaux, RNCP37274, formation CIP financement CPF, devenir CIP reconversion, formation CIP niveau 5 Gironde",
       seo: {
         metaTitle: "Devenir Conseiller en Insertion Professionnelle à Bordeaux — Formation CIP Atipik RH, session septembre 2026",
         metaDescription:
-          "Rejoignez la formation CIP niveau 5 (RNCP37274) chez Atipik RH à Lormont. Session du 21 sept. 2026 au 23 avr. 2027 — 14 places disponibles. Finançable CPF, AIF, Transition Pro.",
+          "Rejoignez la formation CIP niveau 5 (RNCP37274) chez Atipik RH à Lormont. Session du 22 mars 2027 au 22 oct. 2027 — 14 places disponibles. Finançable CPF, AIF, Transition Pro.",
         canonicalPath: "/blog/formation-cip-bordeaux-session-septembre-2026",
         secondaryKeywords: formationCipBordeauxSessionSeptembre2026SecondaryKeywords,
       },
@@ -838,7 +838,7 @@ const BLOG_ARTICLES = [
       id: 34,
       slug: "formation-cip-bordeaux-conseiller-insertion-professionnelle",
       title: "Devenir conseiller en insertion professionnelle à Bordeaux : formation CIP, débouchés et financement",
-      excerpt: "Devenez conseiller en insertion professionnelle à Bordeaux. Formation CIP niveau 5 en 8 mois chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
+      excerpt: "Devenez conseiller en insertion professionnelle à Bordeaux. Formation CIP niveau 5, 948 h chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
       image: "/images/hero/formations.jpg",
       date: "12 mai 2026",
       readTime: "12 min",
@@ -848,7 +848,7 @@ const BLOG_ARTICLES = [
       seo: {
         metaTitle: "Formation CIP à Bordeaux : parcours, débouchés & financement | Atipik RH",
         metaDescription:
-          "Devenez conseiller en insertion professionnelle à Bordeaux. Formation CIP niveau 5 en 8 mois chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
+          "Devenez conseiller en insertion professionnelle à Bordeaux. Formation CIP niveau 5, 948 h chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
         canonicalPath: "/blog/formation-cip-bordeaux-conseiller-insertion-professionnelle",
         secondaryKeywords: [
           "formation CIP Lormont",
@@ -865,7 +865,7 @@ const BLOG_ARTICLES = [
         },
         {
           question: "Combien de temps dure la formation CIP ?",
-          answer: "La formation CIP chez Atipik RH dure 8 mois, en format mixte présentiel et distanciel. Elle accueille des groupes de 8 à 15 personnes pour garantir un accompagnement de qualité.",
+          answer: "La formation CIP chez Atipik RH dure 948 heures (563 h en centre, 385 h de stage), en format mixte présentiel et distanciel. Elle accueille des groupes de 8 à 15 personnes pour garantir un accompagnement de qualité.",
         },
         {
           question: "La formation CIP est-elle finançable par le CPF ?",
@@ -884,7 +884,7 @@ const BLOG_ARTICLES = [
       ],
       content: `
         <p>Vous envisagez une reconversion professionnelle dans l'accompagnement à l'emploi ? Le métier de <strong>conseiller en insertion professionnelle (CIP)</strong> fait partie des profils les plus recherchés du secteur social en Nouvelle-Aquitaine. À Bordeaux et en Gironde, associations, missions locales et opérateurs de l'emploi recrutent régulièrement des professionnels formés.</p>
-        <p>Atipik RH, organisme certifié Qualiopi basé à Lormont, propose une formation CIP de <strong>8 mois</strong> menant à un <strong>titre professionnel niveau 5 (Bac+2)</strong>. Voici l'essentiel pour passer à l'action.</p>
+        <p>Atipik RH, organisme certifié Qualiopi basé à Lormont, propose une formation CIP de <strong>948 heures</strong> (563 h en centre, 385 h de stage) menant à un <strong>titre professionnel niveau 5 (Bac+2)</strong>. Voici l'essentiel pour passer à l'action.</p>
 
         <h2>Qu'est-ce qu'un conseiller en insertion professionnelle ?</h2>
         <p>Le CIP accompagne des publics en difficulté d'accès à l'emploi : demandeurs d'emploi, jeunes sans qualification, personnes en situation de handicap, ou encore publics éloignés du marché du travail. Son rôle combine diagnostic, accompagnement humain et activation de dispositifs adaptés.</p>
@@ -928,7 +928,7 @@ const BLOG_ARTICLES = [
         </ul>
         <p>La pédagogie alterne théorie, cas réels, mises en situation et supervision de pratiques pour une montée en compétences opérationnelle.</p>
         <h3>Format et durée</h3>
-        <p>La formation se déroule sur 8 mois, en format mixte présentiel/distanciel, avec des groupes de 8 à 15 participants.</p>
+        <p>La formation dure 948 heures (563 h en centre, 385 h de stage), en format mixte présentiel/distanciel, avec des groupes de 8 à 15 participants.</p>
         <h3>Public et prérequis</h3>
         <p>La formation est ouverte aux reconvertis, professionnels du social/RH/éducation, demandeurs d'emploi et salariés en transition. Aucun diplôme spécifique n'est exigé à l'entrée ; un entretien permet de valider la cohérence du projet.</p>
 
@@ -1269,6 +1269,12 @@ const BLOG_ARTICLES = [
       author: "Vanessa NOAH EWODO",
       category: "Bilan de compétences",
       keywords: "quand faire un bilan de compétences, bilan de compétences Lormont, signes reconversion professionnelle, évolution de carrière 2026, bilan de compétences CPF Gironde, comment savoir si je dois faire un bilan de compétences, signes qu'il faut changer de travail, bilan de compétences quand le faire, reconversion professionnelle quand se lancer",
+      seo: {
+        metaTitle: "5 signes pour un bilan de compétences | Atipik RH Lormont",
+        metaDescription:
+          "Motivation, stagnation, envie de changer sans passer à l’action : 5 signaux pour savoir quand faire un bilan à Lormont, finançable CPF.",
+        canonicalPath: "/blog/5-signes-temps-faire-bilan-competences",
+      },
       content: `
         <p>Vous ressentez un doute sur votre avenir professionnel, une perte de motivation ou l'impression de tourner en rond ? Ces signaux ne sont pas anodins.</p>
 
@@ -1899,6 +1905,12 @@ const BLOG_ARTICLES = [
       author: "Vanessa NOAH EWODO",
       category: "Conseils",
       keywords: "CV parcours atypique, valoriser compétences CV, CV par compétences, parcours professionnel atypique, CV reconversion, compétences transférables, rédaction CV, conseils CV, recherche emploi parcours atypique, bilan de compétences",
+      seo: {
+        metaTitle: "CV parcours atypique : valoriser ses compétences | Atipik RH",
+        metaDescription:
+          "Parcours non linéaire : passez au CV par compétences, racontez un fil conducteur et rassurez le recruteur. Conseils Atipik RH Lormont.",
+        canonicalPath: "/blog/valoriser-competences-cv-parcours-atypique",
+      },
       content: `
         <p>Vous avez changé plusieurs fois de métier, alterné salariat et indépendance, connu des pauses ou des virages professionnels&nbsp;? Vous n'êtes pas seul. Les parcours dits «&nbsp;atypiques&nbsp;» sont de plus en plus fréquents. Pourtant, beaucoup de candidats doutent&nbsp;: comment rassurer un recruteur quand son CV ne suit pas un chemin linéaire&nbsp;?</p>
 
@@ -2031,7 +2043,13 @@ const BLOG_ARTICLES = [
       readTime: "5 min",
       author: "Vanessa NOAH EWODO",
       category: "Bilan de compétences",
-      keywords: "bilan de compétences cadre, bilan compétences cadres 40 ans, reconversion cadres expérimentés, bilan compétences senior, accompagnement cadres Atipik RH, bilan de compétences Lyon, bilan de compétences à distance",
+      keywords: "bilan de compétences cadre, bilan compétences cadres 40 ans, reconversion cadres expérimentés, bilan compétences senior, accompagnement cadres Atipik RH, bilan de compétences Lormont, bilan de compétences à distance",
+      seo: {
+        metaTitle: "Bilan de compétences cadres 40+ | Atipik RH Lormont",
+        metaDescription:
+          "Cadre expérimenté : sécurisez une évolution ou une reconversion sans repartir de zéro. Bilan à Lormont, présentiel ou distanciel.",
+        canonicalPath: "/blog/bilan-competences-cadres-plus-40-ans-reconversion",
+      },
       content: `
         <p>Après 40 ans, la question n’est plus vraiment&nbsp;: <em>«&nbsp;Que puis-je faire&nbsp;?&nbsp;»</em> mais plutôt&nbsp;: <em>«&nbsp;Où ai-je envie d’aller… et comment y aller sans me tromper&nbsp;?&nbsp;»</em></p>
 
@@ -2209,7 +2227,13 @@ const BLOG_ARTICLES = [
       readTime: "15 min",
       author: "Vanessa NOAH EWODO",
       category: "Formations",
-      keywords: "formateur adultes, formation FPA, reconversion formateur, devenir formateur sans diplôme, formation courte formateur, pédagogie adultes, formateur professionnel adultes, reconversion professionnelle formateur",
+      keywords: "devenir formateur pour adultes, reconversion formateur, FPA sans diplôme long, titre professionnel FPA Lormont, pédagogie adultes",
+      seo: {
+        metaTitle: "Devenir formateur d'adultes sans longues études | Atipik RH",
+        metaDescription:
+          "Reconversion vers le métier de formateur : titre FPA, expérience valorisable, VAE possible. Centre Atipik RH à Lormont, près de Bordeaux.",
+        canonicalPath: "/blog/devenir-formateur-adultes-sans-etudes-longues-reconversion",
+      },
       content: `
         <p>Changer de métier sans repartir sur les bancs de l'université est aujourd'hui une aspiration forte. Parmi les reconversions qui attirent de plus en plus de professionnels expérimentés, le métier de <strong>formateur pour adultes</strong> occupe une place à part. Transmission, sens, autonomie… mais aussi beaucoup de questions.</p>
 
@@ -2683,6 +2707,12 @@ const BLOG_ARTICLES = [
       author: "Vanessa NOAH EWODO",
       category: "Bilan de compétences",
       keywords: "bilan compétences Lormont, reconversion professionnelle, 5 étapes, accompagnement carrière",
+      seo: {
+        metaTitle: "Bilan de compétences : 5 étapes à Lormont | Atipik RH",
+        metaDescription:
+          "Phase préliminaire, investigation, conclusion : comment se déroule un bilan de compétences à Lormont. Distinct du guide « quand le faire ».",
+        canonicalPath: "/blog/bilan-competences-lormont-5-etapes-reconversion",
+      },
       content: `
         <p>Vous ressentez le besoin de donner un nouveau souffle à votre carrière ? Vous habitez Lormont ou la région bordelaise et vous vous interrogez sur vos perspectives d'évolution professionnelle ? Le bilan de compétences représente un tremplin idéal pour construire sereinement votre projet de reconversion. Notre centre de formation à Lormont vous accompagne dans cette démarche structurée en 5 étapes clés.</p>
 
@@ -3257,6 +3287,12 @@ const BLOG_ARTICLES = [
       author: "Vanessa NOAH EWODO",
       category: "Reconversion",
       keywords: "reconversion professionnelle, changement carrière, bilan compétences, formation adulte, projet professionnel, transition professionnelle",
+      seo: {
+        metaTitle: "Réussir sa reconversion professionnelle | Atipik RH Lormont",
+        metaDescription:
+          "Étapes, pièges et accompagnement pour changer de métier : bilan, formation certifiante, financement. Guide Atipik RH à Lormont.",
+        canonicalPath: "/blog/reconversion-professionnelle-comment-reussir-changement-carriere",
+      },
       content: `
         <p>La reconversion professionnelle n'est plus l'exception, mais devient la règle. Selon une étude récente, près de 6 Français sur 10 envisagent ou ont déjà effectué une reconversion au cours de leur carrière. Loin d'être un échec, changer de voie professionnelle peut être l'opportunité de donner un nouveau souffle à sa vie professionnelle.</p>
 
@@ -3426,6 +3462,12 @@ const BLOG_ARTICLES = [
       author: "Vanessa NOAH EWODO",
       category: "Partenariat",
       keywords: "location de salle Lormont, espace professionnel Lormont, accompagnement emploi, insertion professionnelle, partenariat we.job, MEM Métier Emploi, centre formation Lormont, salles équipées formation, ateliers professionnels, événements professionnels Bordeaux",
+      seo: {
+        metaTitle: "Partenariat MEM we.job à Lormont | Atipik RH",
+        metaDescription:
+          "Atipik RH accueille le programme MEM – Métier et Emploi (we.job) dans ses locaux à Lormont : insertion, ateliers et location de salles.",
+        canonicalPath: "/blog/atipik-rh-espace-emploi-projets-partenariat-mem-wejob-lormont",
+      },
       content: `
         <p>Nous sommes fiers d'accueillir dans nos locaux à Lormont le programme <strong>MEM – Métier et Emploi</strong>, porté par <strong>we.job</strong>, dédié aux personnes en recherche d'emploi, en reconversion ou en réflexion professionnelle.</p>
 
@@ -3506,33 +3548,77 @@ const BLOG_ARTICLES = [
       id: 14,
       slug: "difficultes-recrutement-pratiques-marche",
       title: "Et si vos difficultés de recrutement venaient de vos pratiques, pas seulement du marché ?",
-      excerpt: "Les candidatures tardent à arriver, les profils ne correspondent pas et la pénurie de talents semble devenir la seule explication. Et si la solution se trouvait aussi dans vos pratiques de recrutement ?",
+      excerpt: "Pénurie de candidatures, profils trop éloignés, délais qui s’allongent : le marché n’explique pas tout. Voici comment objectiver vos pratiques de recrutement à Lormont et en Gironde.",
       image: "/images/hero/formations.jpg",
       date: "23 octobre 2025",
       readTime: "9 min",
       author: "Liliana ALMEIDA",
-      category: "Tous",
-      keywords: "recrutement inclusif, pratiques de recrutement, pénurie de talents, diversité, inclusion, vivier de candidats",
+      category: "Formations",
+      keywords: "difficultés de recrutement, pratiques de recrutement, pénurie de talents, recrutement inclusif, vivier de candidats, time-to-hire Gironde",
+      seo: {
+        metaTitle: "Difficultés de recrutement : vos pratiques en cause | Atipik RH",
+        metaDescription:
+          "Le marché tendu n’explique pas tout. Clarifiez les critères, raccourcissez le parcours candidat et ouvrez le vivier. Méthode Atipik RH à Lormont.",
+        canonicalPath: "/blog/difficultes-recrutement-pratiques-marche",
+        secondaryKeywords: [
+          "pénurie de candidatures",
+          "recrutement inclusif PME",
+          "processus de recrutement trop long",
+          "annonce d'emploi peu différenciante",
+        ],
+      },
+      faqItems: [
+        {
+          question: "La pénurie de talents explique-t-elle tous les recrutements bloqués ?",
+          answer:
+            "Non. Un marché tendu réduit le volume, mais des annonces génériques, des critères trop rigides et des délais de réponse trop longs écartent aussi des profils disponibles. Distinguer le marché des pratiques permet d’agir sur ce que l’entreprise contrôle.",
+        },
+        {
+          question: "Par où commencer pour débloquer un recrutement ?",
+          answer:
+            "Reformuler le besoin en compétences observables, raccourcir le parcours candidat et tracer les décisions. Ces trois leviers se mettent en place sans changer d’outils, souvent dès le prochain poste.",
+        },
+        {
+          question: "Quelle formation Atipik RH pour structurer ces pratiques ?",
+          answer:
+            "La formation « Recruter par les compétences » et les formations courtes sur le recrutement inclusif à Lormont outillent les managers recruteurs : grille d’entretien, critères liés au poste et vivier élargi.",
+        },
+      ],
+      internalLinks: [
+        { label: "Recruter par les compétences en pénurie", href: "/blog/recruter-par-les-competences-penurie-talents", type: "article" },
+        { label: "Méthode recrutement par les compétences", href: "/blog/recrutement-competences-methode-complete-rh-2026", type: "article" },
+        { label: "Formation pratiques de recrutement", href: "/formations/professionnalisantes/renforcer-pratique-recrutement-diversite", type: "formation" },
+        { label: "Page contact", href: "/contact?sujet=formation-courte", type: "contact" },
+      ],
       content: `
-        <p>Le marché de l'emploi est tendu, mais cela n'explique pas tout. Dans de nombreux cas, les difficultés de recrutement viennent aussi des pratiques internes : annonces trop génériques, processus trop longs, critères trop rigides ou expérience candidat insuffisante.</p>
+        <p>Les candidatures tardent, les profils « ne correspondent pas », le poste reste ouvert. La <strong>pénurie de talents</strong> est souvent la première explication. Elle n’est pas fausse. Elle est incomplète.</p>
+        <p>À Lormont comme ailleurs en Gironde, un marché tendu réduit le volume. Il n’explique pas à lui seul une annonce interchangeable, un tri sur des critères non indispensables ou un délai de réponse de trois semaines. Ces <strong>pratiques de recrutement</strong> sont sous le contrôle de l’employeur.</p>
+        <p>Cet article complète, sans le dupliquer, le guide <a href="/blog/recruter-par-les-competences-penurie-talents"><strong>recruter par les compétences en pénurie de talents</strong></a> : ici, on part du diagnostic « marché vs process », pas de la méthode complète en cinq étapes.</p>
 
-        <h2>Pourquoi les recrutements bloquent ?</h2>
+        <h2>Ce que le marché explique — et ce qu’il n’explique pas</h2>
+        <p>Un secteur en tension (sanitaire, industrie, insertion, numérique) limite le nombre de candidats disponibles. Dans ce cas, élargir le vivier et objectiver les compétences est nécessaire.</p>
+        <p>En revanche, le marché n’explique pas :</p>
         <ul>
-          <li>Offres d'emploi peu différenciantes</li>
-          <li>Tri des candidatures basé sur des critères non essentiels</li>
-          <li>Délais de réponse trop longs</li>
-          <li>Manque de visibilité sur la proposition de valeur employeur</li>
+          <li>une offre d’emploi copiée-collée, sans preuve de ce que le poste apporte ;</li>
+          <li>un tri sur le diplôme, l’âge implicite ou le « feeling » plutôt que sur le travail à faire ;</li>
+          <li>un parcours candidat trop long (plusieurs allers-retours, pas de date d’entretien) ;</li>
+          <li>l’absence de réponse aux personnes reçues, qui dégrade l’image employeur locale.</li>
         </ul>
+        <p>Quand ces signaux s’accumulent, les difficultés viennent aussi <strong>de l’intérieur</strong>.</p>
 
-        <h2>Les leviers d'amélioration immédiats</h2>
-        <ul>
-          <li>Clarifier les compétences réellement indispensables</li>
-          <li>Raccourcir le parcours candidat</li>
-          <li>Soigner la communication sur vos valeurs et votre culture</li>
-          <li>Ouvrir davantage vos recrutements aux parcours atypiques</li>
-        </ul>
+        <h2>Quatre leviers d’amélioration immédiats</h2>
+        <h3>1. Clarifier les compétences réellement indispensables</h3>
+        <p>Listez ce qui est non négociable pour tenir le poste en 90 jours. Le reste (souhaitable, « culture », présentation) se discute. Un critère trop élevé écarte des profils opérationnels, surtout en insertion et en reconversion.</p>
+        <h3>2. Raccourcir le parcours candidat</h3>
+        <p>Une étape de plus, c’est un candidat de moins. Fixez un délai de premier retour, une date d’entretien et un interlocuteur unique. Le time-to-hire se joue souvent ici, pas dans le sourcing.</p>
+        <h3>3. Rendre l’annonce différenciante</h3>
+        <p>Décrivez le travail, l’équipe, le lieu (Lormont, accès tram A, parking) et ce que le poste permet d’apprendre. Une annonce générique se noie dans les agrégateurs.</p>
+        <h3>4. Ouvrir le vivier aux parcours atypiques</h3>
+        <p>Les compétences transférables (relation, organisation, terrain) ne tiennent pas toujours dans un intitulé de diplôme. C’est le cœur du <a href="/blog/recrutement-competences-methode-complete-rh-2026">recrutement par les compétences</a>.</p>
 
-        <p>Chez Atipik RH, nous accompagnons les entreprises pour structurer des pratiques de recrutement plus efficaces, inclusives et adaptées au terrain local.</p>
+        <h2>Ce que nous voyons en accompagnement à Lormont</h2>
+        <p>Atipik RH forme des équipes RH, des structures d’insertion et des managers recruteurs. Le constat revient : on attribue au « marché » ce qui est un <strong>processus illisible</strong>. Objectiver les critères, former les personnes qui recrutent et tracer les décisions réduit à la fois le délai et le risque de discrimination.</p>
+        <p>Pour outiller vos équipes : <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite"><strong>Renforcer ses pratiques de recrutement</strong></a> (11 h, mixed learning) ou <a href="/contact?sujet=formation-courte">demander une information</a>.</p>
       `
     },
     {
@@ -3588,28 +3674,68 @@ const BLOG_ARTICLES = [
       id: 9,
       slug: "centre-formation-lormont-rive-droite-bordeaux",
       title: "Centre de formation professionnelle à Lormont : pourquoi choisir la rive droite de Bordeaux ?",
-      excerpt: "Découvrez pourquoi notre centre de formation à Lormont offre tous les avantages d'une proximité avec Bordeaux, tout en bénéficiant des atouts spécifiques de la rive droite.",
+      excerpt: "Atipik RH à Lormont (8 rue du Courant) : CIP, FPA, bilan de compétences et VAE, à 10 minutes de Bordeaux, tram A, parking. Un centre de la rive droite, pas un campus anonyme.",
       image: "/images/hero/formations.jpg",
       date: "10 janvier 2025",
       readTime: "10 min",
       author: "Vanessa NOAH EWODO",
       category: "Formations",
-      keywords: "centre formation Lormont, rive droite Bordeaux, formation professionnelle, avantages géographiques, accessibilité",
+      keywords: "centre formation Lormont, rive droite Bordeaux, formation professionnelle Gironde, organisme formation Lormont, accès tram A Lormont",
+      seo: {
+        metaTitle: "Centre de formation à Lormont, rive droite | Atipik RH",
+        metaDescription:
+          "Organisme Qualiopi à Lormont (8 rue du Courant) : CIP, FPA, bilan et VAE. Rive droite de Bordeaux, tram A, parking. Distinct de la fiche formations.",
+        canonicalPath: "/blog/centre-formation-lormont-rive-droite-bordeaux",
+        secondaryKeywords: [
+          "formation professionnelle Lormont",
+          "centre Qualiopi Gironde",
+          "rive droite Bordeaux formation",
+          "8 rue du Courant Lormont",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Où se trouve le centre Atipik RH ?",
+          answer:
+            "Au 8 rue du Courant, 33310 Lormont, rive droite de Bordeaux. Accès tram A et parking privé. Les formations CIP, FPA, le bilan de compétences et la VAE s’y déroulent en présentiel, avec des temps possibles en distanciel selon le parcours.",
+        },
+        {
+          question: "Pourquoi choisir Lormont plutôt que Bordeaux centre ?",
+          answer:
+            "Le cadre est plus calme, le stationnement plus simple, et le centre reste à une dizaine de minutes de Bordeaux. Les mises en relation avec les entreprises de la métropole (insertion, industrie, services) se font depuis ce territoire, pas depuis un campus déconnecté du terrain.",
+        },
+        {
+          question: "Quelles formations sont proposées sur place ?",
+          answer:
+            "Titres CIP et FPA, formations courtes professionnalisantes, bilan de compétences et accompagnement VAE. Le détail des sessions est sur les fiches formation ; cet article décrit le lieu et l’accès.",
+        },
+      ],
+      internalLinks: [
+        { label: "Fiche formation CIP", href: "/formations/cip", type: "formation" },
+        { label: "Fiche formation FPA", href: "/formations/fpa", type: "formation" },
+        { label: "Location de salles à Lormont", href: "/location-salles-lormont", type: "service" },
+        { label: "Organisme formation insertion", href: "/organisme-formation-insertion-professionnelle", type: "formation" },
+        { label: "Contact", href: "/contact?sujet=information", type: "contact" },
+      ],
       content: `
-        <p>Choisir un <strong>centre de formation à Lormont</strong>, c'est bénéficier d'un emplacement stratégique : proche de Bordeaux, accessible rapidement et intégré à un écosystème professionnel dynamique.</p>
+        <p>Choisir un <strong>centre de formation à Lormont</strong>, ce n’est pas « Bordeaux moins cher ». C’est un emplacement de la <strong>rive droite</strong> : accessible depuis la métropole, calme pour apprendre, branché sur les entreprises du territoire (insertion, logistique, services, industrie).</p>
+        <p>Atipik RH est installé au <strong>8 rue du Courant, 33310 Lormont</strong>. Cet article décrit le <strong>lieu et l’accès</strong>. Les programmes, durées et financements sont sur les fiches <a href="/formations/cip">CIP</a>, <a href="/formations/fpa">FPA</a>, <a href="/bilan-de-competences">bilan de compétences</a> et <a href="/vae">VAE</a>.</p>
 
-        <h2>Les atouts de la rive droite</h2>
+        <h2>Les atouts concrets de la rive droite</h2>
         <ul>
-          <li>Accès rapide depuis Bordeaux et la métropole</li>
-          <li>Cadre de travail calme et propice à l'apprentissage</li>
-          <li>Proximité avec les entreprises locales pour les mises en relation</li>
-          <li>Offre de formation adaptée aux besoins du territoire</li>
+          <li><strong>Temps de trajet :</strong> environ 10 minutes du centre de Bordeaux, tramway ligne A, axes routiers proches.</li>
+          <li><strong>Stationnement :</strong> parking privé, plus simple qu’en hypercentre pour une journée de formation.</li>
+          <li><strong>Cadre :</strong> salles dédiées (jusqu’à 20 personnes), Wi-Fi, vidéoprojecteur — voir aussi la <a href="/location-salles-lormont">location de salles</a> si vous organisez vos propres sessions.</li>
+          <li><strong>Terrain :</strong> partenariats insertion et entreprises de Bordeaux Métropole, pas uniquement un catalogue national.</li>
         </ul>
 
-        <h2>Pourquoi Atipik RH</h2>
-        <p>Notre approche combine accompagnement humain, expertise terrain et pédagogie orientée résultats. Nous aidons chaque apprenant à construire un parcours professionnel concret et durable.</p>
+        <h2>Ce que vous trouvez sur place</h2>
+        <p>Organisme certifié Qualiopi : titres professionnels CIP et FPA, formations courtes (relation entreprise, recrutement inclusif, numérique, IA), bilan de compétences, VAE. Les groupes restent volontairement de taille humaine (souvent 4 à 12 stagiaires selon le parcours).</p>
+        <p>Le centre accueille aussi des dispositifs d’accompagnement vers l’emploi (partenariats type MEM / we.job) : le lieu sert la formation <em>et</em> l’insertion, ce qui change le public rencontré dans les couloirs.</p>
 
-        <p><a href="/contact?sujet=Centre%20de%20formation%20Lormont"><strong>Demandez des informations</strong></a> sur nos prochaines formations à Lormont.</p>
+        <h2>Pour qui ce choix géographique compte</h2>
+        <p>Salariés et demandeurs d’emploi de Lormont, Cenon, Floirac, Bordeaux, Carbon-Blanc, Bassens. Structures d’insertion et RH d’entreprise qui veulent former sans bloquer une logistique « centre-ville ». Personnes en situation de handicap : référente handicap joignable pour adapter l’accès et le déroulé.</p>
+        <p>Pour une session ou un devis : <a href="/contact?sujet=information"><strong>contactez Atipik RH</strong></a> — 07 83 01 99 55 — ou inscrivez-vous à une <a href="/s-inscrire">réunion d’information</a>.</p>
       `
     }
   ];

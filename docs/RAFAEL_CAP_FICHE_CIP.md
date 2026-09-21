@@ -38,7 +38,7 @@ Requêtes visées : insertion professionnelle, accompagnement emploi, CIP, recon
 | CARIF     | Dates (fiche au 13/09/2026) | Libellé recommandé |
 |-----------|-------------------------------|--------------------|
 | 00620710  | 09/02/2026 → 23/10/2026       | Rentrée fév. 2026 — Lormont, éligible CPF |
-| 00671150  | 21/09/2026 → 23/04/2027       | Rentrée sept. 2026 — Lormont, éligible CPF |
+| 00671150  | 22/03/2027 → 22/10/2027       | Rentrée mars 2027 — Lormont, éligible CPF |
 
 Adresse commune : **8 rue du Courant, 33310 Lormont**. Logo CPF sur chaque session.
 
@@ -64,8 +64,7 @@ Après modification d’une session dans Rafael, mettre à jour `sessions` dans 
 
 | Élément | Valeur |
 |---------|--------|
-| Durée | 8 mois, 948 h centre |
-| Stages | 7 + 4 = 11 semaines |
+| Durée | 948 h (563 h centre, 385 h stage) |
 | RNCP | 37274, niveau 5 |
 | Financements | CPF, AIF, transition pro, OPCO — pas de tarifs inventés |
 

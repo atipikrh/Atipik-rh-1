@@ -75,7 +75,7 @@ export default function FormationsIndex() {
                       <div className="space-y-3 mb-8 text-sm text-[#013F63]">
                         <div className="flex items-center justify-center gap-2">
                           <Clock className="w-4 h-4" />
-                          <span>8 mois</span>
+                          <span>948 h</span>
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Users className="w-4 h-4" />

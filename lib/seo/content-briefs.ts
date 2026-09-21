@@ -67,7 +67,7 @@ const BRIEFS: ContentBrief[] = [
     h1: 'Formation CIP à Lormont — Conseiller en Insertion Professionnelle',
     metaTitle: 'Formation CIP Bordeaux & Lormont | Titre niveau 5 | Atipik RH',
     metaDescription:
-      'Devenez conseiller en insertion à Lormont (Bordeaux) : titre CIP RNCP 37274, 8 mois, 948 h. CPF, AIF France Travail, OPCO. Centre Qualiopi, Atipik RH.',
+      'Devenez conseiller en insertion à Lormont (Bordeaux) : titre CIP RNCP 37274, 948 h (563 h en centre, 385 h de stage). CPF, AIF France Travail, OPCO. Centre Qualiopi, Atipik RH.',
     recommendedSlug: '/formations/cip',
     primaryKeywords: ['formation CIP Bordeaux', 'formation CIP Lormont', 'conseiller insertion professionnelle'],
     longTailKeywords: [],
@@ -88,7 +88,7 @@ const BRIEFS: ContentBrief[] = [
       {
         question: 'Quelle durée pour devenir conseiller en insertion professionnelle ?',
         answer:
-          'Le parcours CIP chez Atipik RH dure 8 mois, soit 948 heures en centre, en présentiel et distanciel. Les détails du référentiel sont présentés en réunion d’information.',
+          'Le parcours CIP chez Atipik RH dure 948 heures (563 h en centre, 385 h de stage), en présentiel et distanciel. Les détails du référentiel sont présentés en réunion d’information.',
       },
       {
         question: 'Quels débouchés après le titre CIP ?',
@@ -355,7 +355,7 @@ const BRIEFS: ContentBrief[] = [
       {
         question: 'Quelle différence entre CCP1 et le parcours CIP complet ?',
         answer:
-          'Le CCP1 est un module de 220 h (150 h centre + 70 h stage) orienté accueil et diagnostic partagé. Le parcours CIP complet (948 h, 8 mois) couvre l’ensemble des blocs du titre. Notre équipe vous oriente selon votre profil en réunion d’information.',
+          'Le CCP1 est un module de 220 h (150 h centre + 70 h stage) orienté accueil et diagnostic partagé. Le parcours CIP complet (948 h : 563 h en centre, 385 h de stage) couvre l’ensemble des blocs du titre. Notre équipe vous oriente selon votre profil en réunion d’information.',
       },
       {
         question: 'La formation inclut-elle du temps en structure ?',
@@ -398,7 +398,7 @@ const BRIEFS: ContentBrief[] = [
       {
         question: 'Quelle différence entre CCP2 et le parcours CIP complet ?',
         answer:
-          'Le CCP2 est un module de 435 h (175 h centre + 260 h stage) orienté accompagnement de parcours. Le parcours CIP complet (948 h, 8 mois) couvre l’ensemble des blocs du titre. Notre équipe vous oriente selon votre profil en réunion d’information.',
+          'Le CCP2 est un module de 435 h (175 h centre + 260 h stage) orienté accompagnement de parcours. Le parcours CIP complet (948 h : 563 h en centre, 385 h de stage) couvre l’ensemble des blocs du titre. Notre équipe vous oriente selon votre profil en réunion d’information.',
       },
       {
         question: 'La formation inclut-elle du temps en structure ?',
@@ -441,7 +441,7 @@ const BRIEFS: ContentBrief[] = [
       {
         question: 'Quelle différence entre CCP3 et le parcours CIP complet ?',
         answer:
-          'Le CCP3 est un module de 371 h orienté relation entreprise et recrutement. Le parcours CIP complet (948 h, 8 mois) couvre l’ensemble des blocs du titre. Notre équipe vous oriente selon votre profil en réunion d’information.',
+          'Le CCP3 est un module de 371 h orienté relation entreprise et recrutement. Le parcours CIP complet (948 h : 563 h en centre, 385 h de stage) couvre l’ensemble des blocs du titre. Notre équipe vous oriente selon votre profil en réunion d’information.',
       },
       {
         question: 'La formation inclut-elle du temps en structure ?',

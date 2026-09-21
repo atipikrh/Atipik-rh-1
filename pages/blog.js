@@ -566,23 +566,23 @@ export default function Blog() {
       id: 40,
       slug: "formation-cip-bordeaux-session-septembre-2026",
       title: "Devenir Conseiller en Insertion Professionnelle à Bordeaux : tout savoir sur la session CIP d'Atipik RH (septembre 2026)",
-      excerpt: "Rejoignez la formation CIP niveau 5 (RNCP37274) chez Atipik RH à Lormont. Session du 21 sept. 2026 au 23 avr. 2027 — 14 places disponibles. Finançable CPF, AIF, Transition Pro.",
+      excerpt: "Rejoignez la formation CIP niveau 5 (RNCP37274) chez Atipik RH à Lormont. Session du 22 mars 2027 au 22 oct. 2027 — 14 places disponibles. Finançable CPF, AIF, Transition Pro.",
       image: "/images/blog/formation-cip-bordeaux-session-septembre-2026.png",
       imageAlt: "Formation CIP Bordeaux session septembre 2026 — Conseiller en Insertion Professionnelle RNCP37274 — ATIPIK RH Lormont",
       date: "10 juillet 2026",
       readTime: "14 min",
       author: "Vanessa NOAH EWODO",
       category: "Formations",
-      keywords: "formation CIP Bordeaux, formation CIP Lormont, session CIP septembre 2026, conseiller insertion professionnelle Bordeaux, RNCP37274, formation CIP financement CPF, devenir CIP reconversion, formation CIP niveau 5 Gironde",
+      keywords: "formation CIP Bordeaux, formation CIP Lormont, session CIP mars 2027, conseiller insertion professionnelle Bordeaux, RNCP37274, formation CIP financement CPF, devenir CIP reconversion, formation CIP niveau 5 Gironde",
       seo: {
         metaTitle: "Devenir Conseiller en Insertion Professionnelle à Bordeaux — Formation CIP Atipik RH, session septembre 2026",
         metaDescription:
-          "Rejoignez la formation CIP niveau 5 (RNCP37274) chez Atipik RH à Lormont. Session du 21 sept. 2026 au 23 avr. 2027 — 14 places disponibles. Finançable CPF, AIF, Transition Pro.",
+          "Rejoignez la formation CIP niveau 5 (RNCP37274) chez Atipik RH à Lormont. Session du 22 mars 2027 au 22 oct. 2027 — 14 places disponibles. Finançable CPF, AIF, Transition Pro.",
         canonicalPath: "/blog/formation-cip-bordeaux-session-septembre-2026",
         secondaryKeywords: [
           "formation CIP Bordeaux",
           "formation CIP Lormont",
-          "session CIP septembre 2026",
+          "session CIP mars 2027",
           "conseiller insertion professionnelle Bordeaux",
           "RNCP37274",
           "formation CIP financement CPF",
@@ -590,9 +590,9 @@ export default function Blog() {
       },
       faqItems: [
         {
-          question: "Quand démarre la session CIP septembre 2026 chez Atipik RH ?",
+          question: "Quand démarre la prochaine session CIP chez Atipik RH ?",
           answer:
-            "La session démarre le 21 septembre 2026 et se termine le 23 avril 2027, à Lormont (Bordeaux Métropole), en présentiel.",
+            "La session démarre le 22 mars 2027 et se termine le 22 octobre 2027, à Lormont (Bordeaux Métropole), en présentiel. Les candidatures ouvrent le 3 octobre 2026.",
         },
         {
           question: "Combien de places sont disponibles pour la formation CIP ?",
@@ -809,7 +809,7 @@ export default function Blog() {
       id: 34,
       slug: "formation-cip-bordeaux-conseiller-insertion-professionnelle",
       title: "Devenir conseiller en insertion professionnelle à Bordeaux : formation CIP, débouchés et financement",
-      excerpt: "Devenez conseiller en insertion professionnelle à Bordeaux. Formation CIP niveau 5 en 8 mois chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
+      excerpt: "Devenez conseiller en insertion professionnelle à Bordeaux. Formation CIP niveau 5, 948 h chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
       image: "/images/hero/formations.jpg",
       date: "12 mai 2026",
       readTime: "12 min",
@@ -819,7 +819,7 @@ export default function Blog() {
       seo: {
         metaTitle: "Formation CIP à Bordeaux : parcours, débouchés & financement | Atipik RH",
         metaDescription:
-          "Devenez conseiller en insertion professionnelle à Bordeaux. Formation CIP niveau 5 en 8 mois chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
+          "Devenez conseiller en insertion professionnelle à Bordeaux. Formation CIP niveau 5, 948 h chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
         canonicalPath: "/blog/formation-cip-bordeaux-conseiller-insertion-professionnelle",
         secondaryKeywords: [
           "formation CIP Lormont",

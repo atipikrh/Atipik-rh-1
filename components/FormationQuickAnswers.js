@@ -100,7 +100,7 @@ function buildItems({ briefId, variant, slug }) {
       { question: 'Quelle certification ?', answer: 'Attestation de formation (hors titre RNCP).' },
       { question: 'Quels débouchés ?', answer: 'Montée en compétences dans votre métier actuel.' },
       { question: 'Quel tarif public ?', answer: 'Indiqué sur chaque fiche (inter-entreprises).' },
-      { question: 'Quelles dates ?', answer: 'Sessions inter et intra sur demande.' },
+      { question: 'Quelles dates ?', answer: 'Sessions inter-entreprises' },
       { question: 'Comment candidater ?', answer: 'Contactez-nous — pas de dossier CIP/FPA.' },
       {
         question: 'Comment nous joindre ?',
@@ -129,7 +129,11 @@ function buildItems({ briefId, variant, slug }) {
         answer: `${display.amount} € TTC ${display.suffix}`.trim(),
         href: '#tarifs',
       },
-      { question: 'Quelles dates ?', answer: 'Sessions inter-entreprises et intra sur demande.' },
+      {
+        question: 'Quelles dates ?',
+        answer: c.datesFaq || 'Sessions inter-entreprises',
+        href: c.sessions?.length ? '#dates' : undefined,
+      },
       { question: 'Comment candidater ?', answer: 'Contactez-nous — pas de dossier titre CIP/FPA.' },
       {
         question: 'Comment nous joindre ?',

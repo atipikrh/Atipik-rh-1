@@ -104,7 +104,7 @@ Nous avons hâte de vous accueillir et de partager avec vous tout ce que la form
 ● Lieu : 8 rue du Courant, 33310 Lormont
 
 Lors de cette réunion, notre directrice Vanessa vous présentera :
-● Le programme de la formation en détail et notre approche pédagogique unique. Ici, vous ne vous contenterez pas des 11 semaines de stage obligatoires : vous participerez également à des projets collaboratifs avec nos structures partenaires, pour des mises en situation concrètes et proches du réel.
+● Le programme de la formation en détail et notre approche pédagogique unique. Ici, vous ne vous contenterez pas des 385 heures de stage obligatoires : vous participerez également à des projets collaboratifs avec nos structures partenaires, pour des mises en situation concrètes et proches du réel.
 
 ● Les débouchés possibles avec le titre de CIP : bien sûr le rôle de conseiller en insertion professionnelle, mais aussi chargé(e) de relations entreprises, accompagnateur(trice) en parcours professionnels, et bien d'autres opportunités. Bref, des perspectives qui vont bien au-delà du titre !
 
@@ -136,7 +136,7 @@ Merci pour votre inscription à notre réunion d'information à distance ! Nous 
 ● Lien de connexion : envoyé par mail le jour J. Petit conseil : vérifiez aussi vos spams ou indésirables, parfois nos mails aiment jouer à cache-cache 😉.
 
 Lors de cette réunion, notre directrice : Vanessa, vous présentera :
-● Le programme de la formation en détail et notre approche pédagogique unique. Ici, vous ne vous contenterez pas des 11 semaines de stage obligatoires : vous participerez également à des projets collaboratifs avec nos structures partenaires, pour des mises en situation concrètes et proches du réel.
+● Le programme de la formation en détail et notre approche pédagogique unique. Ici, vous ne vous contenterez pas des 385 heures de stage obligatoires : vous participerez également à des projets collaboratifs avec nos structures partenaires, pour des mises en situation concrètes et proches du réel.
 
 ● Les débouchés possibles avec le titre de CIP : bien sûr le rôle de conseiller en insertion professionnelle, mais aussi chargé(e) de relations entreprises, accompagnateur(trice) en parcours professionnels, et bien d'autres opportunités. Bref, des perspectives qui vont au-delà du titre !
 

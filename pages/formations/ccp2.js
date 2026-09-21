@@ -410,7 +410,7 @@ export default function FormationCCP2() {
               <p className="mt-4 text-center text-sm text-[#013F63]/80 max-w-2xl mx-auto">
                 Vous visez le titre CIP complet ?{' '}
                 <Link href="/formations/cip" className="font-semibold text-orange-500 hover:underline">
-                  Voir le parcours CIP (8 mois, 948 h)
+                  Voir le parcours CIP (948 h)
                 </Link>
                 {' · '}
                 <Link href="/formations/ccp1" className="font-semibold text-orange-500 hover:underline">

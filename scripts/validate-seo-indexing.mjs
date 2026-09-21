@@ -15,6 +15,10 @@ const REDIRECT_CHECKS = [
   ['/sitemap_index.xml', '/sitemap.xml'],
   ['/?page_id=3328', '/'],
   ['/mentions-legales/', '/mentions-legales'],
+  [
+    '/blog/comment-reduire-couts-recrutement-30-pourcent-formation-rh',
+    '/blog/reduire-couts-recrutement-formation-rh',
+  ],
 ]
 
 const CANONICAL_CHECKS = [

@@ -488,12 +488,8 @@ export default function FormationCIP() {
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
 
-              <div id="dates" className="mb-14 grid grid-cols-1 md:grid-cols-2 gap-6 scroll-mt-24">
+              <div id="dates" className="mb-14 max-w-xl mx-auto scroll-mt-24">
                 {[
-                  {
-                    dates: 'Du 21 septembre 2026 au 23 avril 2027',
-                    candidatures: '03 février 2026',
-                  },
                   {
                     dates: 'Du 22 mars 2027 au 22 octobre 2027',
                     candidatures: '03 octobre 2026',
@@ -784,9 +780,8 @@ export default function FormationCIP() {
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p>• <strong>Durée : 948 heures</strong></p>
                           <div className="ml-4 space-y-1">
-                            <p>◦ <strong>560 heures en centre</strong></p>
-                            <p>◦ <strong>385 heures en entreprise</strong></p>
-                            <p>◦ <strong>3 heures de session de certification</strong></p>
+                            <p>◦ <strong>563 heures en centre</strong></p>
+                            <p>◦ <strong>385 heures de stage</strong></p>
                           </div>
                         </div>
                       </div>

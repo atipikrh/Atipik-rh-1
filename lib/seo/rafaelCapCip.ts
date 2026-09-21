@@ -51,7 +51,7 @@ export const RAFAEL_CAP_CIP = {
   lePlus:
     "Méthodologie au plus près du réel : projets collaboratifs et mises en situation avec structures locales de l'insertion et de l'emploi ; intervenants spécialisés (insertion professionnelle, théâtre, droit des étrangers).",
 
-  resume: `ATIPIK RH forme aux métiers de l'accompagnement emploi et de l'insertion professionnelle à Lormont (33310), sur la rive droite de Bordeaux Métropole (Gironde, Nouvelle-Aquitaine). Le titre professionnel Conseiller en insertion professionnelle (CIP) — niveau 5 (BAC+2), RNCP 37274 — se prépare en temps plein sur 8 mois (948 heures), avec 11 semaines de stage en structure d'insertion ou d'emploi.
+  resume: `ATIPIK RH forme aux métiers de l'accompagnement emploi et de l'insertion professionnelle à Lormont (33310), sur la rive droite de Bordeaux Métropole (Gironde, Nouvelle-Aquitaine). Le titre professionnel Conseiller en insertion professionnelle (CIP) — niveau 5 (BAC+2), RNCP 37274 — se prépare en temps plein sur 948 heures (563 h en centre, 385 h de stage en structure d'insertion ou d'emploi).
 
 Parcours formation-action et accompagnement socioprofessionnel : accueil, diagnostic partagé, contractualisation de parcours, ateliers d'insertion, médiation emploi et relation entreprise (prospection, recrutement, maintien en poste). Mises en situation réelles avec partenaires locaux ; pédagogie active (projets territoriaux, ateliers, intervenants experts).
 
@@ -119,7 +119,7 @@ Poursuites chez ATIPIK RH : module CCP3, VAE, bilan de compétences (Qualiopi).`
 
   motsCles: RAFAEL_CAP_CIP_MOTS_CLES.join(', '),
 
-  modalitesEnseignement: `Présentiel — 8 rue du Courant, Lormont. Temps plein. Formation-action : apports théoriques, ateliers, projets réels avec partenaires insertion/emploi, outils de théâtre et thématiques d'actualité. Stages : 7 semaines après CCP 1–2, puis 4 semaines après CCP 3 (11 semaines au total).`,
+  modalitesEnseignement: `Présentiel — 8 rue du Courant, Lormont. Temps plein. Formation-action : apports théoriques, ateliers, projets réels avec partenaires insertion/emploi, outils de théâtre et thématiques d'actualité. Durée : 948 h (563 h en centre, 385 h de stage).`,
 
   conditionsAdmissionIntro: `Parcours d'orientation projet : réunion d'information collective fortement recommandée, dossier de candidature, entretien de motivation, test d'évaluation des connaissances rédactionnelles, enquêtes métiers (minimum 2 professionnels en poste — France Travail, Mission Locale, SIAE, organisme de formation…) et/ou immersion en entreprise. ATIPIK RH accompagne les candidats et les prescripteurs dans la constitution du dossier.`,
 
@@ -139,17 +139,17 @@ Critères d'admission : dossier, tests, entretien.`,
     },
     {
       carif: '00671150',
-      dateDebut: '2026-09-21',
-      dateFin: '2027-04-23',
-      libelleSession: 'Rentrée sept. 2026 — Lormont, éligible CPF',
+      dateDebut: '2027-03-22',
+      dateFin: '2027-10-22',
+      libelleSession: 'Rentrée mars 2027 — Lormont, éligible CPF',
       adresse: '8 rue du Courant, 33310 Lormont',
     },
   ],
 
   facts: {
-    duree: '8 mois',
-    heuresCentre: 948,
-    stagesSemaines: { apresCcp12: 7, apresCcp3: 4, total: 11 },
+    duree: '948 heures',
+    heuresCentre: 563,
+    heuresStage: 385,
     rncp: '37274',
     niveau: 5,
     lieu: '8 rue du Courant, 33310 Lormont',

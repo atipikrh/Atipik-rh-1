@@ -114,7 +114,7 @@ const PAGE_CITATIONS: Record<string, PageCitation> = {
   'formation-cip': {
     includeLead: true,
     definition:
-      'Le titre professionnel Conseiller en Insertion Professionnelle (CIP, niveau 5, RNCP 37274) se prépare chez Atipik RH à Lormont, près de Bordeaux. Le parcours dure 8 mois (948 h en centre, 11 semaines de stage). Tarif public : 9 100 € TTC. Prochaine session du 21 septembre 2026 au 23 avril 2027 (candidatures dès le 3 février 2026).',
+      'Le titre professionnel Conseiller en Insertion Professionnelle (CIP, niveau 5, RNCP 37274) se prépare chez Atipik RH à Lormont, près de Bordeaux. Le parcours dure 948 heures (563 h en centre, 385 h de stage). Tarif public : 9 100 € TTC. Prochaine session du 22 mars 2027 au 22 octobre 2027 (candidatures dès le 3 octobre 2026).',
     facts: geoFacts('formation-cip'),
     sources: [
       OFFICIAL_SOURCES.rncpCip,

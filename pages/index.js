@@ -18,9 +18,9 @@ export default function HomePage() {
   const slides = [
     {
       id: 5,
-      title: "Session septembre 2026 : les informations pratiques",
-      subtitle: "La prochaine session CIP chez Atipik RH est en cours d'ouverture. Les places sont limitées.",
-      description: "14 places disponibles — les candidatures sont ouvertes dès maintenant.",
+      title: "Session mars 2027 : les informations pratiques",
+      subtitle: "La prochaine session CIP chez Atipik RH ouvre ses candidatures le 3 octobre 2026. Les places sont limitées.",
+      description: "Du 22 mars 2027 au 22 octobre 2027 — 14 places disponibles.",
       buttonText: "Découvrir les facilités",
       buttonLink: "/s-inscrire",
       image: "/images/hero/reunion-info-2.jpeg",
@@ -84,7 +84,7 @@ export default function HomePage() {
       1: "Faites le point sur votre avenir professionnel avec notre quiz guidé en 3 minutes.",
       2: "Découvrez le parcours CIP/FPA, les débouchés et les financements lors de nos réunions d'information.",
       4: "Louez nos espaces modernes à Lormont pour vos formations, réunions et séminaires.",
-      5: "14 places disponibles — les candidatures sont ouvertes dès maintenant."
+      5: "Du 22 mars 2027 au 22 octobre 2027 — candidatures dès le 3 octobre 2026."
     }
 
     const shortText = mobileDescriptionsBySlideId[slide.id]
@@ -97,7 +97,7 @@ export default function HomePage() {
 
   const getMobileSubtitle = (slide) => {
     const mobileSubtitlesBySlideId = {
-      5: "Session CIP septembre 2026 — places limitées.",
+      5: "Session CIP mars 2027 — candidatures dès le 3 octobre 2026.",
     }
 
     return mobileSubtitlesBySlideId[slide.id] || slide.subtitle

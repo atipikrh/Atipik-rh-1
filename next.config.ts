@@ -122,6 +122,11 @@ const nextConfig: NextConfig = {
         destination: '/bilan-de-competences',
         permanent: true,
       },
+      {
+        source: '/blog/comment-reduire-couts-recrutement-30-pourcent-formation-rh',
+        destination: '/blog/reduire-couts-recrutement-formation-rh',
+        permanent: true,
+      },
     ]
   },
 
