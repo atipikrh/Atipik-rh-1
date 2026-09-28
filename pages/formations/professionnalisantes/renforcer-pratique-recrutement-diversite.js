@@ -693,10 +693,10 @@ export default function RenforcerPratiqueRecrutementDiversite() {
 
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                   
-                  {/* Session septembre 2026 */}
+                  {/* Session octobre 2026 */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
                     <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
-                      <h3 className="text-2xl font-bold mb-2 text-accent-500">Session de septembre</h3>
+                      <h3 className="text-2xl font-bold mb-2 text-accent-500">Session d'octobre</h3>
                     </div>
                     
                     <div className="mb-6">
@@ -704,13 +704,13 @@ export default function RenforcerPratiqueRecrutementDiversite() {
                         <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">18 septembre 2026</span>
+                        <span className="text-[#013F63] font-medium">1 octobre 2026</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">25 septembre 2026 matin</span>
+                        <span className="text-[#013F63] font-medium">8 octobre 2026 matin</span>
                       </div>
                     </div>
                   </div>
