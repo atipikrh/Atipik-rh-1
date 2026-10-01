@@ -134,7 +134,7 @@ export default function FormationsIndex() {
                           Formation complète FPA
                           <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                        <div className="grid grid-cols-4 gap-2">
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                           <Link href="/formations/fpa/ccp1" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
                             CCP1
                           </Link>
@@ -404,7 +404,7 @@ export default function FormationsIndex() {
                         </div>
                         <div className="flex-1">
                           <p className="font-bold text-[#013F63] text-sm">Vanessa NOAH EWODO - Fondatrice et Directrice</p>
-                          <div className="flex items-center gap-4 mt-1">
+                          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1">
                             <a 
                               href="mailto:contact@atipikrh.com" 
                               className="text-orange-500 hover:text-orange-600 transition-colors text-sm font-medium"

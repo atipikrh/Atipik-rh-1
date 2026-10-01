@@ -51,7 +51,7 @@ export default function NotreEquipe() {
                   {/* Brunilda - Chargée de Formation */}
                   <div className="text-center">
                     <Link href="/equipe/brunilda-rafael" className="inline-block mb-4">
-                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                      <div className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 max-w-full mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
@@ -85,7 +85,7 @@ export default function NotreEquipe() {
                   {/* Vanessa - Directrice */}
                   <div className="text-center">
                     <Link href="/equipe/vanessa-noah-ewodo" className="inline-block mb-4">
-                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                      <div className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 max-w-full mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
@@ -119,7 +119,7 @@ export default function NotreEquipe() {
                   {/* Mathilde - Administrative */}
                   <div className="text-center">
                     <Link href="/equipe/mathilde-bastian" className="inline-block mb-4">
-                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                      <div className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 max-w-full mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
@@ -157,11 +157,11 @@ export default function NotreEquipe() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-8 max-w-6xl mx-auto">
                   {/* Stéphanie */}
                   <div className="text-center">
                     <Link href="/equipe/stephanie-breton" className="inline-block mb-4">
-                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                      <div className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 max-w-full mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
@@ -194,7 +194,7 @@ export default function NotreEquipe() {
                   {/* Nathalie */}
                   <div className="text-center">
                     <Link href="/equipe/nathalie-biotti" className="inline-block mb-4">
-                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                      <div className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 max-w-full mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
@@ -227,7 +227,7 @@ export default function NotreEquipe() {
                   {/* Mouna */}
                   <div className="text-center">
                     <Link href="/equipe/mouna-mniai" className="inline-block mb-4">
-                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                      <div className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 max-w-full mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
@@ -254,7 +254,7 @@ export default function NotreEquipe() {
                   {/* Cécile */}
                   <div className="text-center">
                     <Link href="/equipe/cecile-bernat" className="inline-block mb-4">
-                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                      <div className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 max-w-full mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
@@ -287,7 +287,7 @@ export default function NotreEquipe() {
                   {/* Coraline */}
                   <div className="text-center">
                     <Link href="/equipe/coraline-abadie" className="inline-block mb-4">
-                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                      <div className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 max-w-full mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
@@ -320,7 +320,7 @@ export default function NotreEquipe() {
                   {/* Windy */}
                   <div className="text-center">
                     <Link href="/equipe/windy-telga" className="inline-block mb-4">
-                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                      <div className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 max-w-full mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
@@ -347,7 +347,7 @@ export default function NotreEquipe() {
                   {/* Anne-Lise */}
                   <div className="text-center">
                     <Link href="/equipe/anne-lise-coatrine" className="inline-block mb-4">
-                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                      <div className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 max-w-full mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
@@ -380,7 +380,7 @@ export default function NotreEquipe() {
                   {/* Corinne */}
                   <div className="text-center">
                     <Link href="/equipe/corinne-bienvenu" className="inline-block mb-4">
-                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                      <div className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 max-w-full mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
@@ -413,7 +413,7 @@ export default function NotreEquipe() {
                   {/* Martine */}
                   <div className="text-center">
                     <Link href="/equipe/martine-baudon" className="inline-block mb-4">
-                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                      <div className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 max-w-full mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">

@@ -399,7 +399,10 @@ export default function FormationCCP3() {
               {/* Titre principal */}
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
-                  Conseiller en <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">Insertion Professionnelle (C.C.P 3)</span>
+                  Conseiller en{' '}
+                  <span className="block mt-1 mb-2 text-accent-500 font-brittany text-3xl md:text-4xl lg:text-5xl">
+                    Insertion Professionnelle (C.C.P 3)
+                  </span>
                 </h1>
                 <p className="text-lg text-[#013F63] leading-relaxed font-light">
                   Devenez expert de l'<strong>accompagnement vers l'emploi</strong>
@@ -1365,7 +1368,7 @@ export default function FormationCCP3() {
                       </div>
                       
                       {/* Version Desktop - Trois cartes à la fois */}
-                      <div className="hidden md:grid md:grid-cols-3 gap-6 px-12">
+                      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 px-10 lg:px-12">
                         {getVisibleFinancements().map((financement) => (
                           <div key={financement.id} className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
                             <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
@@ -1431,7 +1434,7 @@ export default function FormationCCP3() {
                       <span className="text-orange-500 font-brittany text-3xl">Investissez</span> en vous-même
                     </h4>
                     <p className="text-base text-[#013F63] font-medium leading-relaxed">
-                      Paiement en <span className="text-4xl font-light text-orange-500 font-brittany leading-none mx-2">x3</span>, <span className="text-4xl font-light text-orange-500 font-brittany leading-none mx-2">x6</span> ou <span className="text-4xl font-light text-orange-500 font-brittany leading-none mx-2">x9</span> sans frais grâce à notre partenaire financier.
+                      Paiement en <span className="text-3xl sm:text-4xl inline-block font-light text-orange-500 font-brittany leading-none mx-1 sm:mx-2">x3</span>, <span className="text-3xl sm:text-4xl inline-block font-light text-orange-500 font-brittany leading-none mx-1 sm:mx-2">x6</span> ou <span className="text-3xl sm:text-4xl inline-block font-light text-orange-500 font-brittany leading-none mx-1 sm:mx-2">x9</span> sans frais grâce à notre partenaire financier.
                     </p>
                   </div>
                 </div>
@@ -1531,7 +1534,7 @@ export default function FormationCCP3() {
                       const newIndex = currentStatIndex > 0 ? currentStatIndex - 1 : maxIndex;
                       setCurrentStatIndex(newIndex);
                     }}
-                    className="absolute left-0 -translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+                    className="absolute left-2 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
                     style={{ top: 'calc(50% - 40px)' }}
                   >
                     <ChevronLeft className="w-6 h-6 text-[#013F63]" />
@@ -1546,7 +1549,7 @@ export default function FormationCCP3() {
                       const newIndex = currentStatIndex < maxIndex ? currentStatIndex + 1 : 0;
                       setCurrentStatIndex(newIndex);
                     }}
-                    className="absolute right-0 translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+                    className="absolute right-2 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
                     style={{ top: 'calc(50% - 40px)' }}
                   >
                     <ChevronRight className="w-6 h-6 text-[#013F63]" />
@@ -1623,7 +1626,7 @@ export default function FormationCCP3() {
                       const newIndex = currentFranceStatIndex > 0 ? currentFranceStatIndex - 1 : maxIndex;
                       setCurrentFranceStatIndex(newIndex);
                     }}
-                    className="absolute left-0 -translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+                    className="absolute left-2 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
                     style={{ top: 'calc(50% - 40px)' }}
                   >
                     <ChevronLeft className="w-6 h-6 text-[#013F63]" />
@@ -1638,7 +1641,7 @@ export default function FormationCCP3() {
                       const newIndex = currentFranceStatIndex < maxIndex ? currentFranceStatIndex + 1 : 0;
                       setCurrentFranceStatIndex(newIndex);
                     }}
-                    className="absolute right-0 translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+                    className="absolute right-2 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
                     style={{ top: 'calc(50% - 40px)' }}
                   >
                     <ChevronRight className="w-6 h-6 text-[#013F63]" />
@@ -1742,7 +1745,7 @@ export default function FormationCCP3() {
                       const newIndex = currentDocIndex > 0 ? currentDocIndex - 1 : Math.max(0, documentationItems.length - 2);
                       setCurrentDocIndex(newIndex);
                     }}
-                    className="absolute left-0 -translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+                    className="absolute left-2 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
                     style={{ top: 'calc(50% - 40px)' }}
                   >
                     <ChevronLeft className="w-6 h-6 text-[#013F63]" />
@@ -1754,7 +1757,7 @@ export default function FormationCCP3() {
                       const newIndex = currentDocIndex < documentationItems.length - 2 ? currentDocIndex + 1 : 0;
                       setCurrentDocIndex(newIndex);
                     }}
-                    className="absolute right-0 translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+                    className="absolute right-2 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
                     style={{ top: 'calc(50% - 40px)' }}
                   >
                     <ChevronRight className="w-6 h-6 text-[#013F63]" />
@@ -1881,7 +1884,7 @@ export default function FormationCCP3() {
                         </div>
                         <div className="flex-1">
                           <p className="font-bold text-[#013F63] text-sm">Vanessa NOAH EWODO - Fondatrice et Directrice</p>
-                          <div className="flex items-center gap-4 mt-1">
+                          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1">
                             <a 
                               href="mailto:contact@atipikrh.com" 
                               className="text-orange-500 hover:text-orange-600 transition-colors text-sm font-medium"

@@ -736,7 +736,7 @@ export default function RenforcerRelationEntreprise() {
                         </div>
                         <div className="flex-1">
                           <p className="font-bold text-[#013F63] text-sm">Vanessa NOAH EWODO - Fondatrice et Directrice</p>
-                          <div className="flex items-center gap-4 mt-1">
+                          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1">
                             <a 
                               href="mailto:contact@atipikrh.com" 
                               className="text-accent-500 hover:text-accent-600 transition-colors text-sm font-medium"

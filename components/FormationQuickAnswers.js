@@ -45,7 +45,7 @@ export default function FormationQuickAnswers({
       </p>
       <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-[#013F63]">
         {items.map(({ question, answer, href, external }) => (
-          <div key={question} className="text-xs md:text-sm leading-snug">
+          <div key={question} className="text-xs md:text-sm leading-snug min-w-0 break-words">
             <dt className="font-bold inline">{question} </dt>
             <dd className="inline font-light">
               {href ? (

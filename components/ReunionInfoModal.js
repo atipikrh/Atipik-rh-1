@@ -37,10 +37,9 @@ export default function ReunionInfoModal() {
       {/* Modal - centré sur mobile, bas gauche sur desktop */}
       <div 
         className={`
-          fixed z-[10000] w-full max-w-md
-          inset-x-0 bottom-20 md:bottom-6 md:left-6 md:inset-x-auto md:w-auto
-          flex items-center justify-center md:items-end md:justify-start
-          p-4 md:p-0
+          fixed z-[10000] w-[calc(100vw-1.5rem)] max-w-md
+          left-1/2 -translate-x-1/2 bottom-[calc(5.75rem+env(safe-area-inset-bottom,0px))] md:bottom-6 md:left-6 md:translate-x-0
+          max-h-[calc(100dvh-7rem)] overflow-y-auto
           ${isClosing ? 'pointer-events-none' : 'pointer-events-auto'}
         `}
         onClick={(e) => e.stopPropagation()}
@@ -62,7 +61,7 @@ export default function ReunionInfoModal() {
           {/* Bouton fermer */}
           <button
             onClick={handleClose}
-            className="absolute top-3 right-3 p-1.5 bg-white/90 hover:bg-white text-neutral-900 hover:text-[#013F63] rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:scale-110 z-10"
+            className="absolute top-2 right-2 min-h-11 min-w-11 inline-flex items-center justify-center bg-white/90 hover:bg-white text-neutral-900 hover:text-[#013F63] rounded-full transition-all duration-300 shadow-md hover:shadow-lg z-10"
             aria-label="Fermer"
           >
             <X className="w-4 h-4" />
@@ -72,7 +71,7 @@ export default function ReunionInfoModal() {
           <div className="p-6 md:p-6">
             {/* En-tête avec police Brittany */}
             <div className="text-center mb-6 md:mb-5">
-              <h3 className="font-brittany text-3xl md:text-2xl text-[#013F63] mb-3 md:mb-2 leading-tight text-balance">
+              <h3 className="font-brittany text-2xl md:text-2xl text-[#013F63] mb-3 md:mb-2 leading-tight text-balance px-10">
                 Découvrez notre formation
               </h3>
               <div className="w-24 md:w-20 h-1 bg-[#FE6400] mx-auto mb-3 md:mb-2 rounded-full"></div>

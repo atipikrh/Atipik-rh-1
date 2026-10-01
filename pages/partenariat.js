@@ -280,7 +280,8 @@ export default function Partenariat() {
               <div className="max-w-4xl mx-auto text-center">
                 
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
-                  Rejoignez notre <span className="text-orange-500 font-brittany text-4xl lg:text-5xl whitespace-nowrap">écosystème ?</span>
+                  Rejoignez notre{' '}
+                  <span className="text-orange-500 font-brittany text-3xl sm:text-4xl lg:text-5xl">écosystème ?</span>
                 </h2>
                 
                 <p className="text-lg text-[#013F63] leading-relaxed font-light mb-8 max-w-2xl mx-auto">

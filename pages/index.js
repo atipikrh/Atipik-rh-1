@@ -155,7 +155,7 @@ export default function HomePage() {
 
               {/* Contenu - Layout horizontal */}
               <div className="relative h-full flex items-center max-lg:items-start max-lg:py-4 sm:max-lg:py-6">
-                <div className="container mx-auto px-3 max-[375px]:px-2.5 sm:px-6 lg:px-12">
+                <div className="container mx-auto px-3 max-[375px]:px-2.5 sm:px-6 lg:pl-16 lg:pr-12">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 md:gap-5 lg:gap-8 items-center">
                     {/* Texte à gauche */}
                     <div className="text-white space-y-1.5 max-[375px]:space-y-1 sm:space-y-3 max-w-xl">
@@ -209,7 +209,7 @@ export default function HomePage() {
                     </div>
 
                     {/* Fenêtre d'information mobile */}
-                    <div className="lg:hidden">
+                    <div className="lg:hidden max-lg:pb-10">
                       {slide.isQuiz ? (
                         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 max-[375px]:p-2.5 sm:p-4 border border-white/20 text-neutral-900 shadow-xl max-w-xs w-full sm:w-auto">
                           <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
@@ -345,7 +345,7 @@ export default function HomePage() {
           {/* Boutons de navigation - Plus discrets */}
           <button
             onClick={prevSlide}
-            className="absolute left-2 max-[375px]:left-1.5 sm:left-3 top-1/2 transform -translate-y-1/2 bg-black/30 backdrop-blur-sm text-white p-1.5 max-[375px]:p-1 sm:p-2 rounded-full hover:bg-black/50 transition-colors duration-300 z-10"
+            className="absolute left-2 max-[375px]:left-1.5 sm:left-3 top-auto bottom-8 translate-y-0 lg:top-1/2 lg:bottom-auto lg:-translate-y-1/2 bg-black/30 backdrop-blur-sm text-white p-1.5 max-[375px]:p-1 sm:p-2 rounded-full hover:bg-black/50 transition-colors duration-300 z-10"
           >
             <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -354,7 +354,7 @@ export default function HomePage() {
           
           <button
             onClick={nextSlide}
-            className="absolute right-2 max-[375px]:right-1.5 sm:right-3 top-1/2 transform -translate-y-1/2 bg-black/30 backdrop-blur-sm text-white p-1.5 max-[375px]:p-1 sm:p-2 rounded-full hover:bg-black/50 transition-colors duration-300 z-10"
+            className="absolute right-2 max-[375px]:right-1.5 sm:right-3 top-auto bottom-8 translate-y-0 lg:top-1/2 lg:bottom-auto lg:-translate-y-1/2 bg-black/30 backdrop-blur-sm text-white p-1.5 max-[375px]:p-1 sm:p-2 rounded-full hover:bg-black/50 transition-colors duration-300 z-10"
           >
             <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

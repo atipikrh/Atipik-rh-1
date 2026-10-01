@@ -72,9 +72,9 @@ export default function FpaCcpPage({ moduleId }) {
           <section className="pt-4 pb-4">
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
-                <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
+                <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight text-balance">
                   Formateur Professionnel d&apos;Adultes —{' '}
-                  <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">
+                  <span className="block mt-1 mb-2 text-accent-500 font-brittany text-3xl md:text-4xl lg:text-5xl">
                     {module.heroAccent} (C.C.P {module.id})
                   </span>
                 </h1>

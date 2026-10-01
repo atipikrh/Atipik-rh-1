@@ -1231,7 +1231,7 @@ export default function VAE() {
                   </div>
                   
                   {/* Version Desktop - Trois cartes à la fois */}
-                  <div className="hidden md:grid md:grid-cols-3 gap-6 px-12">
+                  <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 px-10 lg:px-12">
                     {getVisibleFinancements().map((financement) => (
                       <div key={financement.id} className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
                         <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
@@ -1339,7 +1339,7 @@ export default function VAE() {
                 {/* Flèche gauche */}
                 <button
                   onClick={prevStat}
-                  className="absolute left-0 -translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+                  className="absolute left-2 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
                   style={{ top: 'calc(50% - 40px)' }}
                 >
                   <ChevronLeft className="w-6 h-6 text-[#013F63]" />
@@ -1348,7 +1348,7 @@ export default function VAE() {
                 {/* Flèche droite */}
                 <button
                   onClick={nextStat}
-                  className="absolute right-0 translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+                  className="absolute right-2 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
                   style={{ top: 'calc(50% - 40px)' }}
                 >
                   <ChevronRight className="w-6 h-6 text-[#013F63]" />
@@ -1417,8 +1417,9 @@ export default function VAE() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight whitespace-nowrap">
-                Intéressé(e) par un accompagnement <span className="inline-block text-orange-500 font-brittany text-4xl lg:text-5xl whitespace-nowrap">VAE ?</span>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight text-balance">
+                Intéressé(e) par un accompagnement{' '}
+                <span className="inline text-orange-500 font-brittany text-3xl sm:text-4xl lg:text-5xl">VAE ?</span>
               </h2>
               
               <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto mb-8">
@@ -1507,7 +1508,7 @@ export default function VAE() {
                         </div>
                         <div className="flex-1">
                           <p className="font-bold text-[#013F63] text-sm">Vanessa NOAH EWODO - Fondatrice et Directrice</p>
-                          <div className="flex items-center gap-4 mt-1">
+                          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1">
                             <a 
                               href="mailto:contact@atipikrh.com" 
                               className="text-orange-500 hover:text-orange-600 transition-colors text-sm font-medium"

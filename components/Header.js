@@ -43,7 +43,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
     }
   }, [isHomePage])
 
-  // Fermer le menu mobile quand on clique à l'extérieur
+  // Fermer le menu mobile quand on clique à l'extérieur, et empêcher le scroll de page
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (isMobileMenuOpen && !event.target.closest('.mobile-menu-container')) {
@@ -51,11 +51,14 @@ export default function Header({ isFixed = false, isHomePage = false }) {
       }
     }
 
-    if (isMobileMenuOpen) {
-      document.addEventListener('click', handleClickOutside)
-    }
+    if (!isMobileMenuOpen) return undefined
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    document.addEventListener('click', handleClickOutside)
 
     return () => {
+      document.body.style.overflow = previousOverflow
       document.removeEventListener('click', handleClickOutside)
     }
   }, [isMobileMenuOpen])
@@ -96,14 +99,14 @@ export default function Header({ isFixed = false, isHomePage = false }) {
           )}
 
           {/* Navigation centrale */}
-          <div className="hidden lg:flex items-center space-x-8 mt-1">
+          <div className="hidden lg:flex items-center gap-3 xl:gap-6 2xl:gap-8 mt-1 min-w-0">
             {/* Menu déroulant Formations */}
             <div 
               className="relative group"
               onMouseEnter={() => setIsFormationsOpen(true)}
               onMouseLeave={() => setIsFormationsOpen(false)}
             >
-              <Link href="/formations" className="text-[#013F63] hover:text-[#012a4a] font-medium text-base transition-colors flex items-center">
+              <Link href="/formations" className="text-[#013F63] hover:text-[#012a4a] font-medium text-sm xl:text-base transition-colors whitespace-nowrap flex items-center">
                 Formations
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -267,10 +270,10 @@ export default function Header({ isFixed = false, isHomePage = false }) {
               </div>
             </div>
             
-            <Link href="/bilan-de-competences" className="text-[#013F63] hover:text-[#012a4a] font-medium text-base transition-colors">
+            <Link href="/bilan-de-competences" className="text-[#013F63] hover:text-[#012a4a] font-medium text-sm xl:text-base transition-colors whitespace-nowrap">
               Bilan de compétences
             </Link>
-            <Link href="/vae" className="text-[#013F63] hover:text-[#012a4a] font-medium text-base transition-colors">
+            <Link href="/vae" className="text-[#013F63] hover:text-[#012a4a] font-medium text-sm xl:text-base transition-colors whitespace-nowrap">
               VAE
             </Link>
             
@@ -280,7 +283,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
               onMouseEnter={() => setIsQuiSommesNousOpen(true)}
               onMouseLeave={() => setIsQuiSommesNousOpen(false)}
             >
-              <button className="text-[#013F63] hover:text-[#012a4a] font-medium text-base transition-colors flex items-center">
+              <button className="text-[#013F63] hover:text-[#012a4a] font-medium text-sm xl:text-base transition-colors whitespace-nowrap flex items-center">
                 Qui sommes-nous
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -324,14 +327,14 @@ export default function Header({ isFixed = false, isHomePage = false }) {
               </div>
             </div>
             
-            <Link href="/financement" className="text-[#013F63] hover:text-[#012a4a] font-medium text-base transition-colors">
+            <Link href="/financement" className="text-[#013F63] hover:text-[#012a4a] font-medium text-sm xl:text-base transition-colors whitespace-nowrap">
               Financement
             </Link>
           </div>
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center">
-            <Link href="/contact" className="bg-[#013F63] hover:bg-[#012a4a] text-white px-6 py-2.5 rounded-full text-base font-medium transition-all duration-200 hover:scale-105">
+            <Link href="/contact" className="bg-[#013F63] hover:bg-[#012a4a] text-white px-4 xl:px-6 py-2.5 rounded-full text-sm xl:text-base font-medium transition-all duration-200 whitespace-nowrap">
               Contact
             </Link>
           </div>
@@ -360,7 +363,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div id="mobile-nav" className="lg:hidden mobile-menu-container z-[9999] relative">
-            <div className="bg-white border-t border-muted-blue-200 shadow-lg">
+            <div className="bg-white border-t border-muted-blue-200 shadow-lg max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain">
               <div className="px-4 py-6 space-y-4">
                 {/* Formations */}
                 <div>
@@ -399,28 +402,28 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                           <div className="ml-4 space-y-1">
                             <Link 
                               href="/formations/cip" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               Formation complète
                             </Link>
                             <Link 
                               href="/formations/ccp1" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               CCP1
                             </Link>
                             <Link 
                               href="/formations/ccp2" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               CCP2
                             </Link>
                             <Link 
                               href="/formations/ccp3" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               CCP3
@@ -448,35 +451,35 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                           <div className="ml-4 space-y-1">
                             <Link 
                               href="/formations/fpa" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               Formation complète
                             </Link>
                             <Link 
                               href="/formations/fpa/ccp1" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               CCP1
                             </Link>
                             <Link 
                               href="/formations/fpa/ccp2" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               CCP2
                             </Link>
                             <Link 
                               href="/formations/fpa/ccp3" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               CCP3
                             </Link>
                             <Link 
                               href="/formations/fpa/ccp4" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               CCP4
@@ -506,7 +509,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                               <Link
                                 key={f.slug}
                                 href={f.path}
-                                className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                                className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
                                 onClick={() => setIsMobileMenuOpen(false)}
                               >
                                 {f.titreMenu}

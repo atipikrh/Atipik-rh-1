@@ -95,7 +95,7 @@ export default function CookieBanner() {
   if (!showBanner) return null
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-end justify-center p-4 sm:items-center">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 pb-24 sm:pb-4">
       {/* Overlay */}
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={rejectAll}></div>
       
@@ -103,15 +103,15 @@ export default function CookieBanner() {
       <div className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-accent-300 rounded-full flex items-center justify-center">
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="w-10 h-10 shrink-0 bg-accent-300 rounded-full flex items-center justify-center">
               <Cookie className="w-5 h-5 text-accent-600" />
             </div>
-            <h2 className="text-xl font-bold text-[#013F63]">Gestion des cookies</h2>
+            <h2 className="text-lg sm:text-xl font-bold text-[#013F63] leading-tight">Gestion des cookies</h2>
           </div>
           <button
             onClick={rejectAll}
-            className="p-2 hover:bg-neutral-100 rounded-full transition-colors"
+            className="shrink-0 min-h-11 min-w-11 inline-flex items-center justify-center hover:bg-neutral-100 rounded-full transition-colors"
           >
             <X className="w-5 h-5 text-neutral-900" />
           </button>
@@ -165,25 +165,25 @@ export default function CookieBanner() {
               
               {/* Cookies nécessaires */}
               <div className="space-y-3">
-                <div className="flex items-center justify-between p-4 bg-neutral-100 rounded-lg">
-                  <div>
+                <div className="flex items-center justify-between gap-3 p-4 bg-neutral-100 rounded-lg">
+                  <div className="min-w-0">
                     <h4 className="font-semibold text-[#013F63]">Cookies nécessaires</h4>
                     <p className="text-sm text-neutral-900">Essentiels au fonctionnement du site</p>
                   </div>
-                  <div className="w-12 h-6 bg-[#013F63] rounded-full flex items-center justify-end px-1">
+                  <div className="shrink-0 w-12 h-6 bg-[#013F63] rounded-full flex items-center justify-end px-1">
                     <div className="w-4 h-4 bg-white rounded-full"></div>
                   </div>
                 </div>
 
                 {/* Cookies analytiques */}
-                <div className="flex items-center justify-between p-4 border border-muted-blue-200 rounded-lg">
-                  <div>
+                <div className="flex items-center justify-between gap-3 p-4 border border-muted-blue-200 rounded-lg">
+                  <div className="min-w-0">
                     <h4 className="font-semibold text-[#013F63]">Cookies analytiques</h4>
                     <p className="text-sm text-neutral-900">Nous aident à comprendre l'utilisation du site</p>
                   </div>
                   <button
                     onClick={() => toggleCookie('analytics')}
-                    className={`w-12 h-6 rounded-full flex items-center transition-colors ${
+                    className={`shrink-0 w-12 h-6 rounded-full flex items-center transition-colors ${
                       cookies.analytics ? 'bg-[#013F63] justify-end' : 'bg-muted-blue-200 justify-start'
                     }`}
                   >
@@ -192,14 +192,14 @@ export default function CookieBanner() {
                 </div>
 
                 {/* Cookies marketing */}
-                <div className="flex items-center justify-between p-4 border border-muted-blue-200 rounded-lg">
-                  <div>
+                <div className="flex items-center justify-between gap-3 p-4 border border-muted-blue-200 rounded-lg">
+                  <div className="min-w-0">
                     <h4 className="font-semibold text-[#013F63]">Cookies marketing</h4>
                     <p className="text-sm text-neutral-900">Pour personnaliser les publicités et le contenu</p>
                   </div>
                   <button
                     onClick={() => toggleCookie('marketing')}
-                    className={`w-12 h-6 rounded-full flex items-center transition-colors ${
+                    className={`shrink-0 w-12 h-6 rounded-full flex items-center transition-colors ${
                       cookies.marketing ? 'bg-[#013F63] justify-end' : 'bg-muted-blue-200 justify-start'
                     }`}
                   >

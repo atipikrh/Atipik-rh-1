@@ -819,7 +819,7 @@ export default function BilanCompetences() {
                   <span className="text-orange-500 font-brittany text-3xl">Investissez</span> en vous-même
                 </h4>
                 <p className="text-base text-[#013F63] font-medium leading-relaxed">
-                  Paiement en <span className="text-6xl font-light text-orange-500 font-brittany leading-none mx-4">x3</span> sans frais grâce à notre partenaire financier.
+                  Paiement en <span className="text-4xl sm:text-6xl inline-block font-light text-orange-500 font-brittany leading-none mx-1 sm:mx-4">x3</span> sans frais grâce à notre partenaire financier.
                 </p>
               </div>
             </div>
@@ -1076,7 +1076,7 @@ export default function BilanCompetences() {
                         </div>
                         <div className="flex-1">
                           <p className="font-bold text-[#013F63] text-sm">Vanessa NOAH EWODO - Fondatrice et Directrice</p>
-                          <div className="flex items-center gap-4 mt-1">
+                          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1">
                             <a 
                               href="mailto:contact@atipikrh.com" 
                               className="text-orange-500 hover:text-orange-600 transition-colors text-sm font-medium"

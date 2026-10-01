@@ -46,10 +46,24 @@
     max-width: 100%;
   }
 
+  /* Réserve la hauteur du CTA fixe des fiches formation */
+  @media (max-width: 767px) {
+    body.has-sticky-cta {
+      padding-bottom: calc(5.25rem + env(safe-area-inset-bottom, 0px));
+    }
+  }
+
   img,
   video {
     max-width: 100%;
     height: auto;
+  }
+
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: anywhere;
+    overflow-x: clip;
   }
 
   .prose table {
@@ -61,6 +75,39 @@
   /* Fallback pour Wonderful Branding */
   .font-brand {
     font-family: 'Dancing Script', cursive;
+  }
+}
+
+/* Police signature : glyphes trop larges sur petit écran */
+@media (max-width: 639px) {
+  h1 .font-brittany,
+  h2 .font-brittany,
+  h3 .font-brittany {
+    font-size: clamp(1.35rem, 7vw, 2.1rem) !important;
+    line-height: 1.15;
+    display: block;
+    max-width: 100%;
+    padding-inline: 0.15rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  h1 .font-brittany {
+    display: block;
+    line-height: 1.2;
+    margin-top: 0.35rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.15rem;
+  }
+}
+
+/* Flèches de carrousel : rester dans le viewport sur mobile */
+@media (max-width: 767px) {
+  button.translate-x-8 {
+    transform: translateX(0.25rem);
+  }
+  button.-translate-x-8 {
+    transform: translateX(-0.25rem);
   }
 }
 

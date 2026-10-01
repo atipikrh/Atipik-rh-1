@@ -12,7 +12,7 @@ import {
 } from '../lib/seo/professionnalisantesConfig'
 
 const BTN_BASE =
-  'inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-center transition-colors leading-tight min-h-[44px]'
+  'inline-flex items-center justify-center gap-1.5 px-2.5 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-center transition-colors leading-tight min-h-[44px] break-words'
 
 /**
  * CTA visibles dès le hero.
@@ -37,8 +37,8 @@ export default function FormationLandingCtas({
       <ul
         className={
           variant === 'certifiante'
-            ? 'grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-wrap lg:justify-center gap-2'
-            : 'grid grid-cols-1 sm:grid-cols-3 gap-2'
+            ? 'grid grid-cols-1 min-[420px]:grid-cols-2 md:grid-cols-3 lg:flex lg:flex-wrap lg:justify-center gap-2'
+            : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2'
         }
       >
         {actions.map((action, index) => (
@@ -46,7 +46,7 @@ export default function FormationLandingCtas({
             key={action.id}
             className={
               reunionFirst && index === 0
-                ? 'col-span-2 md:col-span-1 lg:flex-1 lg:min-w-[200px]'
+                ? 'min-[420px]:col-span-2 md:col-span-1 lg:flex-1 lg:min-w-[200px]'
                 : 'lg:flex-1 lg:min-w-[160px]'
             }
           >

@@ -242,7 +242,9 @@ export default function Contact({ hasQuery: hasQueryFromServer = false }) {
               <span className="text-[#013F63]">Parlons de votre</span> <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">projet</span>
             </h1>
               <p className="text-lg text-[#013F63] leading-normal font-light max-w-2xl mx-auto">
-                Un premier échange pour clarifier vos objectifs<br className="hidden lg:block"/>
+                Un premier échange pour clarifier vos objectifs
+                <br className="hidden lg:block" />
+                {' '}
                 <span className="text-orange-500 font-medium">et découvrir les solutions qui vous correspondent.</span>
               </p>
               <div className="mt-8">
@@ -400,15 +402,15 @@ export default function Contact({ hasQuery: hasQueryFromServer = false }) {
                   </div>
                   
                   <div className="space-y-3 text-[#013F63]">
-                    <div className="flex justify-between">
+                    <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-3">
                       <span>Lundi - Vendredi</span>
                       <span className="font-medium">9h00 - 18h00</span>
                     </div>
-                    <div className="flex justify-between">
+                    <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-3">
                       <span>Samedi</span>
                       <span className="font-medium">09h00 à 12h00 (sur rendez-vous)</span>
                     </div>
-                    <div className="flex justify-between">
+                    <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-3">
                       <span>Dimanche</span>
                       <span className="font-medium text-gray-400">Fermé</span>
                     </div>
