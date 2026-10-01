@@ -720,48 +720,63 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8 mb-12">
-                  
-                  {/* Session septembre 2026 */}
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
-                    <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
-                      <h3 className="text-2xl font-bold mb-2 text-accent-500">session de septembre</h3>
+                <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-12 items-stretch">
+                  <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-muted-blue-200 h-full">
+                    <div className="bg-accent-300 rounded-t-2xl -mx-6 sm:-mx-8 -mt-6 sm:-mt-8 p-4 mb-6 text-center">
+                      <h3 className="text-2xl font-bold text-accent-500">Session de septembre</h3>
                     </div>
-                    
-                    <div className="mb-6">
-                      <div className="flex flex-wrap items-center justify-start gap-2 mb-4">
-                        <div className="shrink-0 h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
+                    <div className="mx-auto max-w-sm space-y-3">
+                      <div className="grid grid-cols-[8.5rem_minmax(0,1fr)] items-center gap-x-3">
+                        <div className="h-8 w-full bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium text-left">10 septembre 2026</span>
+                        <span className="text-sm sm:text-base text-[#013F63] font-medium min-w-0 leading-snug">10 septembre 2026</span>
                       </div>
-                      <div className="flex flex-wrap items-center justify-start gap-2">
-                        <div className="shrink-0 h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
+                      <div className="grid grid-cols-[8.5rem_minmax(0,1fr)] items-center gap-x-3">
+                        <div className="h-8 w-full bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium text-left">17 septembre matin 2026</span>
+                        <span className="text-sm sm:text-base text-[#013F63] font-medium min-w-0 leading-snug">17 septembre 2026 matin</span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Session décembre 2026 */}
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
-                    <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
-                      <h3 className="text-2xl font-bold mb-2 text-accent-500">session de décembre</h3>
+                  <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-muted-blue-200 h-full">
+                    <div className="bg-accent-300 rounded-t-2xl -mx-6 sm:-mx-8 -mt-6 sm:-mt-8 p-4 mb-6 text-center">
+                      <h3 className="text-2xl font-bold text-accent-500">Session de novembre</h3>
                     </div>
-                    
-                    <div className="mb-6">
-                      <div className="flex flex-wrap items-center justify-start gap-2 mb-4">
-                        <div className="shrink-0 h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
+                    <div className="mx-auto max-w-sm space-y-3">
+                      <div className="grid grid-cols-[8.5rem_minmax(0,1fr)] items-center gap-x-3">
+                        <div className="h-8 w-full bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium text-left">3 décembre 2026</span>
+                        <span className="text-sm sm:text-base text-[#013F63] font-medium min-w-0 leading-snug">5 novembre 2026</span>
                       </div>
-                      <div className="flex flex-wrap items-center justify-start gap-2">
-                        <div className="shrink-0 h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
+                      <div className="grid grid-cols-[8.5rem_minmax(0,1fr)] items-center gap-x-3">
+                        <div className="h-8 w-full bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium text-left">10 décembre 2026 matin</span>
+                        <span className="text-sm sm:text-base text-[#013F63] font-medium min-w-0 leading-snug">26 novembre 2026 matin</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-muted-blue-200 h-full">
+                    <div className="bg-accent-300 rounded-t-2xl -mx-6 sm:-mx-8 -mt-6 sm:-mt-8 p-4 mb-6 text-center">
+                      <h3 className="text-2xl font-bold text-accent-500">Session de décembre</h3>
+                    </div>
+                    <div className="mx-auto max-w-sm space-y-3">
+                      <div className="grid grid-cols-[8.5rem_minmax(0,1fr)] items-center gap-x-3">
+                        <div className="h-8 w-full bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
+                          <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
+                        </div>
+                        <span className="text-sm sm:text-base text-[#013F63] font-medium min-w-0 leading-snug">3 décembre 2026</span>
+                      </div>
+                      <div className="grid grid-cols-[8.5rem_minmax(0,1fr)] items-center gap-x-3">
+                        <div className="h-8 w-full bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
+                          <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
+                        </div>
+                        <span className="text-sm sm:text-base text-[#013F63] font-medium min-w-0 leading-snug">10 décembre 2026 matin</span>
                       </div>
                     </div>
                   </div>
