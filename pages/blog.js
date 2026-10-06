@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import { Calendar, Clock, ArrowRight, User, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getAllArticles } from '../lib/blog/articleRepository';
 import { getFormationContactHref } from '../lib/seo/professionnalisantesConfig';
+import { articlesCaOctobreListing } from '../lib/seo/campagnesCaOctobre2026';
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("Tous");
@@ -15,6 +16,7 @@ export default function Blog() {
 
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
+    ...articlesCaOctobreListing,
     {
       id: 50,
       slug: "neurodiversite-inclusion-recrutement",

@@ -57,6 +57,22 @@ describe('isScheduledBlogSlugLive', () => {
     )
   })
 
+  it('publie le parcours insertion le 7 octobre 2026 à 8 h, pas avant', () => {
+    const slug = 'recruter-en-insertion-parcours-entreprise-candidat'
+    const article = { slug, isoDate: '2026-10-07' }
+    assert.equal(isScheduledBlogSlugLive(slug, new Date('2026-10-06T21:59:00Z')), false)
+    assert.equal(isBlogArticleLive(article, new Date('2026-10-07T05:59:00Z')), false)
+    assert.equal(isScheduledBlogSlugLive(slug, new Date('2026-10-07T05:59:00Z')), false)
+    assert.equal(isBlogArticleLive(article, new Date('2026-10-07T06:00:00Z')), true)
+    assert.equal(isScheduledBlogSlugLive(slug, new Date('2026-10-07T06:00:00Z')), true)
+  })
+
+  it('publie l’article intra le 29 octobre 2026 à 8 h (heure d’hiver)', () => {
+    const slug = 'quelle-formation-courte-choisir-equipe'
+    assert.equal(isScheduledBlogSlugLive(slug, new Date('2026-10-29T06:59:00Z')), false)
+    assert.equal(isScheduledBlogSlugLive(slug, new Date('2026-10-29T07:00:00Z')), true)
+  })
+
   it('garde masqués les articles du parcours jusqu’à leur jour J', () => {
     const beforeParisMidnight = new Date('2026-09-14T21:59:00Z')
     assert.equal(isScheduledBlogSlugLive('recrutement-sans-discrimination-points-controle', beforeParisMidnight), false)

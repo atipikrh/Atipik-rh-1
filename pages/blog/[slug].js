@@ -98,8 +98,12 @@ import {
 } from '../../lib/blog/neurodiversiteInclusionRecrutementContent';
 import { getAllArticles, getArticleBySlug } from '../../lib/blog/articleRepository';
 import { buildArticleSeo } from '../../lib/blog/articleSeoMapper';
+import { articlesCaOctobre2026 } from '../../lib/blog/articlesCaOctobre2026';
+import ArticleConversionHero, { ArticleConversionFooter } from '../../components/blog/ArticleConversionHero';
+import RecaptchaV3Script from '../../components/RecaptchaV3Script';
 
 const BLOG_ARTICLES = [
+    ...articlesCaOctobre2026,
     {
       id: 50,
       slug: "neurodiversite-inclusion-recrutement",
@@ -3807,6 +3811,7 @@ export default function BlogArticle({ article: articleProp }) {
 
   return (
     <>
+      {article.conversion ? <RecaptchaV3Script /> : null}
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={article.seo.metaDescription} />
@@ -3919,6 +3924,8 @@ export default function BlogArticle({ article: articleProp }) {
                     <span>{article.readTime}</span>
                   </div>
                 </div>
+
+                {article.conversion ? <ArticleConversionHero conversion={article.conversion} /> : null}
                 
                 {/* Image principale */}
                 <div className="relative h-64 lg:h-96 rounded-3xl overflow-hidden mb-8">
@@ -3938,7 +3945,9 @@ export default function BlogArticle({ article: articleProp }) {
                 dangerouslySetInnerHTML={{ __html: article.content }}
               />
 
-              {/* Call to action */}
+              {article.conversion ? (
+                <ArticleConversionFooter conversion={article.conversion} />
+              ) : (
               <div className="mt-16 bg-gradient-to-br from-orange-50 to-accent-100 rounded-3xl p-8 text-center">
                 <h3 className="text-2xl font-bold text-[#013F63] mb-4">
                   Intéressé par nos services ?
@@ -3961,6 +3970,7 @@ export default function BlogArticle({ article: articleProp }) {
                   </Link>
                 </div>
               </div>
+              )}
 
             </div>
           </div>

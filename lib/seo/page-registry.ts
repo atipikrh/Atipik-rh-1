@@ -1,10 +1,12 @@
 import { isBlogSlugInSitemap } from '../blog/canonicalOverrides.js'
 import { isScheduledBlogSlugLive } from '../blog/publicationSchedule.js'
 import { PROFESSIONNALISANTES_SLUGS } from './professionnalisantesConfig.js'
+import { SLUGS_CA_OCTOBRE_2026 } from './campagnesCaOctobre2026.js'
 import type { RegistryEntry } from './types'
 
 /** Slugs blog indexables (alignés sur pages/blog/[slug].js). */
 export const BLOG_SLUGS = [
+  ...SLUGS_CA_OCTOBRE_2026,
   'neurodiversite-inclusion-recrutement',
   'experience-professionnelle-non-reconnue-vae',
   'formation-cip-ou-fpa-quelle-certification-choisir',
