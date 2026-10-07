@@ -7,6 +7,8 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import EntityCitationBlock from '../components/EntityCitationBlock'
 import FormationFaqSection from '../components/FormationFaqSection'
+import ActualitesSite from '../components/ActualitesSite'
+import { VISITE_CENTRE_VIDEO } from '../lib/seo/visiteCentreVideo'
 import { DATES_CIP, DATES_FPA, getUpcomingReunions } from '../lib/reunions/dates.js'
 
 export default function HomePage() {
@@ -510,6 +512,27 @@ export default function HomePage() {
         </section>
 
           </div>
+
+        <ActualitesSite />
+
+        <section className="pb-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg border border-muted-blue-200 p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div>
+                <h2 className="text-2xl font-bold text-[#013F63] mb-2">Visite du centre à Lormont</h2>
+                <p className="text-[#013F63] leading-relaxed max-w-2xl">
+                  La Cité&apos;s Compagnie a filmé un tour du centre Atipik RH, au 8 rue du Courant.
+                </p>
+              </div>
+              <Link
+                href={VISITE_CENTRE_VIDEO.articlePath}
+                className="inline-flex shrink-0 items-center justify-center px-6 py-3 bg-[#013F63] text-white font-semibold rounded-lg hover:bg-[#012a4a] transition-colors duration-300"
+              >
+                Voir la visite
+              </Link>
+            </div>
+          </div>
+        </section>
 
         <FormationFaqSection briefId="accueil" />
         <Footer />

@@ -15,7 +15,7 @@ import {
 } from './site'
 
 export const ENTITY_LEAD =
-  'Atipik RH est un organisme de formation certifié Qualiopi situé à Lormont, près de Bordeaux.'
+  'Atipik RH est un organisme de formation certifié Qualiopi situé à Lormont, près de Bordeaux, en Aquitaine (Nouvelle-Aquitaine).'
 
 export const ENTITY_OFFER =
   'Il propose notamment les titres professionnels CIP et FPA, des bilans de compétences, un accompagnement VAE et des formations courtes pour les professionnels de l’insertion et des RH.'

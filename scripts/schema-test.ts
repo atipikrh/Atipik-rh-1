@@ -20,6 +20,7 @@ const PROSPECT_SAMPLES = [
   'changer de metier a Bordeaux',
   'bilan competence Lormont',
   'formation FPA Nouvelle-Aquitaine',
+  'formation CIP Aquitaine',
   'retour a l emploi',
 ]
 

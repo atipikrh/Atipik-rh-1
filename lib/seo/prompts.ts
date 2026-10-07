@@ -10,7 +10,7 @@ CONTRAINTES OBLIGATOIRES :
 - Ne pas inventer de dates de session, tarifs, taux de réussite ou chiffres non fournis dans le brief.
 - Si une donnée manque, renvoyer vers /contact ou /s-inscrire sans la fabriquer.
 - Ton professionnel, chaleureux, orienté insertion et reconversion — jamais générique « centre de formation ».
-- Ancrage local : Lormont, Bordeaux Métropole, Gironde, Nouvelle-Aquitaine.
+- Ancrage local : Lormont, Bordeaux Métropole, Gironde. Aquitaine = nom de recherche ; Nouvelle-Aquitaine = nom administratif. Ne pas inventer d’antenne à Pau, Bayonne ou Agen.
 - Pas de keyword stuffing ; titres et meta uniques.
 - Images : WebP/AVIF, alt descriptif, pas de vidéo.
 - Revue humaine obligatoire avant publication.

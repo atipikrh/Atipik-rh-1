@@ -7,7 +7,7 @@ const CLUSTERS: KeywordCluster[] = [
     primaryKeyword: 'formation CIP Bordeaux',
     intent: 'commercial',
     modifiers: {
-      geo: ['Bordeaux', 'Lormont', 'Gironde', 'Bordeaux Métropole', 'Nouvelle-Aquitaine'],
+      geo: ['Bordeaux', 'Lormont', 'Gironde', 'Aquitaine', 'Bordeaux Métropole', 'Nouvelle-Aquitaine'],
       financement: ['CPF', 'France Travail', 'OPCO', 'Pôle emploi'],
       public: ['reconversion', 'demandeur d’emploi'],
     },
@@ -24,6 +24,7 @@ const CLUSTERS: KeywordCluster[] = [
       'formation CIP financement France Travail Gironde',
       'où faire formation CIP près de Bordeaux',
       'formation CIP Qualiopi Nouvelle-Aquitaine',
+      'formation CIP Aquitaine',
     ],
     secondaryKeywords: [
       'conseiller insertion professionnelle',
@@ -38,7 +39,7 @@ const CLUSTERS: KeywordCluster[] = [
     primaryKeyword: 'formation FPA Nouvelle-Aquitaine',
     intent: 'commercial',
     modifiers: {
-      geo: ['Bordeaux', 'Lormont', 'Gironde', 'Nouvelle-Aquitaine'],
+      geo: ['Bordeaux', 'Lormont', 'Gironde', 'Aquitaine', 'Nouvelle-Aquitaine'],
       financement: ['CPF', 'France Travail'],
       public: ['reconversion', 'formateur adultes'],
     },
@@ -55,6 +56,7 @@ const CLUSTERS: KeywordCluster[] = [
       'formation FPA alternance Nouvelle-Aquitaine',
       'devenir formateur OF près de Bordeaux',
       'programme formation FPA adultes Lormont',
+      'formation FPA Aquitaine',
     ],
     secondaryKeywords: [
       'formateur professionnel adultes',
@@ -69,7 +71,7 @@ const CLUSTERS: KeywordCluster[] = [
     primaryKeyword: 'reconversion professionnelle Bordeaux',
     intent: 'informational',
     modifiers: {
-      geo: ['Bordeaux', 'Lormont', 'Gironde'],
+      geo: ['Bordeaux', 'Lormont', 'Gironde', 'Aquitaine'],
       financement: ['CPF', 'aides régionales', 'France Travail'],
       public: ['après 40 ans', 'cadre', 'salarié'],
     },
@@ -100,7 +102,7 @@ const CLUSTERS: KeywordCluster[] = [
     primaryKeyword: 'organisme de formation insertion professionnelle',
     intent: 'commercial',
     modifiers: {
-      geo: ['Bordeaux', 'Lormont', 'Nouvelle-Aquitaine'],
+      geo: ['Bordeaux', 'Lormont', 'Aquitaine', 'Nouvelle-Aquitaine'],
       financement: ['Qualiopi', 'CPF'],
       public: ['structures insertion', 'associations'],
     },
@@ -115,6 +117,7 @@ const CLUSTERS: KeywordCluster[] = [
       'formation continue insertion professionnelle rive droite',
       'organisme certifié Qualiopi insertion Lormont',
       'parcours insertion reconversion Atipik RH',
+      'organisme formation Qualiopi Aquitaine',
     ],
     secondaryKeywords: [
       'insertion professionnelle',
@@ -129,7 +132,7 @@ const CLUSTERS: KeywordCluster[] = [
     primaryKeyword: 'bilan de compétences Lormont',
     intent: 'transactional',
     modifiers: {
-      geo: ['Lormont', 'Bordeaux', 'Gironde'],
+      geo: ['Lormont', 'Bordeaux', 'Gironde', 'Aquitaine'],
       financement: ['CPF', 'employeur', 'France Travail'],
       public: ['cadre', 'reconversion', '+40 ans'],
     },
@@ -143,6 +146,7 @@ const CLUSTERS: KeywordCluster[] = [
       'externaliser bilan compétences Lormont',
       'bilan compétences vs VAE que choisir',
       'bilan compétences demandeur emploi Nouvelle-Aquitaine',
+      'bilan de compétences Aquitaine distanciel',
       'signes besoin bilan compétences reconversion',
       'bilan compétences Atipik RH Lormont avis',
       'durée bilan compétences Bordeaux métropole',

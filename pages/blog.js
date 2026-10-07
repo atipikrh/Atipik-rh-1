@@ -6,6 +6,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Calendar, Clock, ArrowRight, User, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getAllArticles } from '../lib/blog/articleRepository';
+import { instagramArticlesListing } from '../lib/blog/instagramArticles';
+import InstagramArticles from '../components/blog/InstagramArticles';
 import { getFormationContactHref } from '../lib/seo/professionnalisantesConfig';
 import { articlesCaOctobreListing } from '../lib/seo/campagnesCaOctobre2026';
 
@@ -16,6 +18,7 @@ export default function Blog() {
 
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
+    ...instagramArticlesListing,
     ...articlesCaOctobreListing,
     {
       id: 50,
@@ -1228,12 +1231,12 @@ export default function Blog() {
     (a, b) => parseDate(b.date) - parseDate(a.date)
   );
 
-  const categories = ["Tous", "Formations", "Reconversion", "Financement", "VAE", "Bilan de compétences", "Conseils", "Recherche d'emploi", "Partenariat"];
+  const categories = ["Tous", "Instagram", "Formations", "Reconversion", "Financement", "VAE", "Bilan de compétences", "Conseils", "Recherche d'emploi", "Partenariat"];
 
   // Filtrer les articles selon la catégorie sélectionnée
-  const filteredArticles = selectedCategory === "Tous" 
-    ? sortedArticles 
-    : sortedArticles.filter(article => article.category === selectedCategory);
+  const filteredArticles = selectedCategory === "Tous"
+    ? sortedArticles.filter((article) => !article.instagramUrl)
+    : sortedArticles.filter((article) => article.category === selectedCategory);
 
   // Calculs pour la pagination
   const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
@@ -1328,6 +1331,10 @@ export default function Blog() {
              </div>
            </div>
          </section>
+
+        {selectedCategory === 'Tous' ? (
+          <InstagramArticles articles={sortedArticles.filter((article) => article.instagramUrl)} />
+        ) : null}
 
         {/* Articles du blog */}
         <section className="py-16 bg-white">

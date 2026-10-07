@@ -27,7 +27,7 @@ const BRIEFS: ContentBrief[] = [
     h1: 'Atipik RH — organisme de formation à Lormont',
     metaTitle: 'Atipik RH | Formation Qualiopi à Lormont',
     metaDescription:
-      'Atipik RH, organisme de formation certifié Qualiopi à Lormont près de Bordeaux : CIP, FPA, bilans de compétences, VAE et formations courtes.',
+      'Atipik RH, organisme Qualiopi à Lormont (Bordeaux, Aquitaine) : CIP, FPA, bilans de compétences, VAE et formations courtes.',
     recommendedSlug: '/',
     primaryKeywords: ['Atipik RH', 'organisme formation Lormont', 'formation Bordeaux Qualiopi'],
     longTailKeywords: [],
@@ -41,7 +41,12 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'Où se situe le centre de formation ?',
-        answer: '8 Rue du Courant, 33310 Lormont, Bordeaux Métropole (rive droite).',
+        answer: '8 Rue du Courant, 33310 Lormont, Bordeaux Métropole (rive droite), en Gironde (Aquitaine).',
+      },
+      {
+        question: 'Atipik RH forme-t-il en Aquitaine ?',
+        answer:
+          'Le centre est à Lormont, en Gironde. Aquitaine est l’ancien nom de la région, aujourd’hui Nouvelle-Aquitaine. Les titres CIP et FPA se suivent en présentiel à Lormont, accessible depuis Bordeaux Métropole. Le bilan de compétences et certains modules peuvent se faire à distance pour les personnes en Aquitaine.',
       },
       {
         question: 'Comment contacter Atipik RH ?',
@@ -69,11 +74,16 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-formation-cip-bordeaux',
     pageType: 'pilier',
     h1: 'Formation CIP à Lormont — Conseiller en Insertion Professionnelle',
-    metaTitle: 'Formation CIP Bordeaux & Lormont | Titre niveau 5 | Atipik RH',
+    metaTitle: 'Formation CIP Bordeaux | mars 2027, 9 100 € | Atipik RH',
     metaDescription:
-      'Session CIP à Lormont du 22 mars au 22 octobre 2027, 9 100 € TTC. Candidatures ouvertes. Titre RNCP 37274, CPF. Atipik RH.',
+      'Devenez conseiller en insertion à Lormont. Session du 22 mars au 22 octobre 2027, titre RNCP 37274, 9 100 € TTC. Candidatures ouvertes.',
     recommendedSlug: '/formations/cip',
-    primaryKeywords: ['formation CIP Bordeaux', 'formation CIP Lormont', 'conseiller insertion professionnelle'],
+    primaryKeywords: [
+      'formation CIP Bordeaux',
+      'formation CIP Lormont',
+      'formation CIP Aquitaine',
+      'conseiller insertion professionnelle',
+    ],
     longTailKeywords: [],
     intent: 'commercial',
     personas: ['demandeur-emploi', 'reconversion-40plus', 'professionnel-insertion'],
@@ -81,7 +91,7 @@ const BRIEFS: ContentBrief[] = [
       {
         question: 'Où suivre une formation CIP près de Bordeaux ?',
         answer:
-          'Atipik RH propose la formation CIP à Lormont (33310), sur la rive droite de Bordeaux Métropole, en présentiel et distanciel selon les modules.',
+          'Atipik RH propose la formation CIP à Lormont (33310), sur la rive droite de Bordeaux Métropole, en Gironde (Aquitaine), en présentiel et distanciel selon les modules.',
       },
       {
         question: 'La formation CIP est-elle finançable avec le CPF ?',
@@ -97,7 +107,7 @@ const BRIEFS: ContentBrief[] = [
       {
         question: 'Quels débouchés après le titre CIP ?',
         answer:
-          'France Travail, Missions Locales, Cap Emploi, SIAE, associations, collectivités, organismes de formation — en Gironde et Nouvelle-Aquitaine.',
+          'France Travail, Missions Locales, Cap Emploi, SIAE, associations, collectivités, organismes de formation — en Gironde, en Aquitaine et en Nouvelle-Aquitaine.',
       },
       {
         question: 'La formation est-elle référencée sur Rafael Cap Métiers ?',
@@ -127,18 +137,23 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-fpa-na',
     pageType: 'pilier',
     h1: 'Formation FPA à Lormont — Formateur Professionnel pour Adultes',
-    metaTitle: 'Formation FPA Bordeaux et Lormont | Atipik RH',
+    metaTitle: 'Formation FPA Bordeaux | 8 950 €, titre niveau 5',
     metaDescription:
-      'Formation FPA à Lormont (Bordeaux) : 8 950 € TTC, 934 h. Date de session en cours. Titre RNCP 37275, CPF. Atipik RH.',
+      'Devenez formateur d’adultes à Lormont : 934 h, titre RNCP 37275, 8 950 € TTC. Candidatures ouvertes. CPF selon votre profil.',
     recommendedSlug: '/formations/fpa',
-    primaryKeywords: ['formation FPA Nouvelle-Aquitaine', 'formateur professionnel adultes Bordeaux'],
+    primaryKeywords: [
+      'formation FPA Aquitaine',
+      'formation FPA Nouvelle-Aquitaine',
+      'formateur professionnel adultes Bordeaux',
+    ],
     longTailKeywords: [],
     intent: 'commercial',
     personas: ['reconversion-40plus', 'professionnel-insertion'],
     faq: [
       {
-        question: 'Où faire une formation FPA en Nouvelle-Aquitaine ?',
-        answer: 'Atipik RH à Lormont, accessible depuis Bordeaux, Libourne et l’ensemble de la Gironde.',
+        question: 'Où faire une formation FPA en Aquitaine ?',
+        answer:
+          'Au centre Atipik RH, à Lormont (Gironde). Aquitaine est le nom encore utilisé dans les recherches ; le nom administratif est Nouvelle-Aquitaine. La formation se suit en présentiel, accessible depuis Bordeaux, Libourne et la Gironde.',
       },
       {
         question: 'Peut-on cumuler FPA et une autre certification ?',
@@ -476,9 +491,9 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-organisme-insertion',
     pageType: 'pilier',
     h1: 'Formations professionnelles à Bordeaux et Lormont',
-    metaTitle: 'Formations certifiantes & professionnalisantes | Atipik RH',
+    metaTitle: 'Formations CIP et FPA à Lormont | Qualiopi, CPF',
     metaDescription:
-      'CIP, FPA, CCP1, CCP2, CCP3 et formations professionnalisantes à Lormont, près de Bordeaux. Titres certifiants CPF ; cours selon financeur. Qualiopi.',
+      'Titres CIP et FPA, modules et formations courtes à Lormont, près de Bordeaux. Organisme Qualiopi. Tarif et financement selon votre profil.',
     recommendedSlug: '/formations',
     primaryKeywords: ['formations professionnelles Bordeaux', 'organisme formation Lormont'],
     longTailKeywords: [],
@@ -519,9 +534,9 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-bilan-lormont',
     pageType: 'local',
     h1: 'Bilan de compétences à Lormont, proche de Bordeaux',
-    metaTitle: 'Bilan de compétences à Lormont | 16 à 20 h, CPF',
+    metaTitle: 'Bilan de compétences Lormont | dès 1 600 €, CPF',
     metaDescription:
-      'Bilan de compétences à Lormont, 16 à 20 heures, en présentiel ou visio. Financement CPF selon votre profil. Atipik RH, près de Bordeaux.',
+      '16 h à 1 600 € ou 20 h à 1 900 € TTC, à Lormont, en présentiel ou en visio. CPF selon éligibilité. Atipik RH, près de Bordeaux.',
     recommendedSlug: '/bilan-de-competences',
     primaryKeywords: ['bilan de compétences Lormont', 'bilan compétences Bordeaux'],
     longTailKeywords: [],
@@ -844,9 +859,9 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-reconversion-bordeaux',
     pageType: 'cluster',
     h1: 'VAE des titres CIP et FPA à Lormont',
-    metaTitle: 'VAE titre CIP ou FPA à Lormont | Atipik RH',
+    metaTitle: 'VAE à Lormont | titres CIP et FPA, dès 2 650 €',
     metaDescription:
-      'VAE des titres CIP (2 750 €) et FPA (2 650 €) à Lormont, frais de certification inclus. Jusqu’à 30 h, de France VAE jusqu’au jury. Atipik RH.',
+      'Faites reconnaître votre expérience : VAE CIP 2 750 € ou FPA 2 650 € à Lormont, frais de certification inclus. De France VAE jusqu’au jury.',
     recommendedSlug: '/vae',
     primaryKeywords: ['VAE Lormont', 'validation acquis expérience Bordeaux'],
     longTailKeywords: [],

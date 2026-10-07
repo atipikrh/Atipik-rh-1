@@ -98,11 +98,15 @@ import {
 } from '../../lib/blog/neurodiversiteInclusionRecrutementContent';
 import { getAllArticles, getArticleBySlug } from '../../lib/blog/articleRepository';
 import { buildArticleSeo } from '../../lib/blog/articleSeoMapper';
+import FacebookVideoEmbed from '../../components/FacebookVideoEmbed';
+import { VISITE_CENTRE_VIDEO } from '../../lib/seo/visiteCentreVideo';
 import { articlesCaOctobre2026 } from '../../lib/blog/articlesCaOctobre2026';
+import { instagramArticles } from '../../lib/blog/instagramArticles';
 import ArticleConversionHero, { ArticleConversionFooter } from '../../components/blog/ArticleConversionHero';
 import RecaptchaV3Script from '../../components/RecaptchaV3Script';
 
 const BLOG_ARTICLES = [
+    ...instagramArticles,
     ...articlesCaOctobre2026,
     {
       id: 50,
@@ -3721,6 +3725,8 @@ const BLOG_ARTICLES = [
         { label: "Organisme formation insertion", href: "/organisme-formation-insertion-professionnelle", type: "formation" },
         { label: "Contact", href: "/contact?sujet=information", type: "contact" },
       ],
+      dateModified: "2026-10-08",
+      video: VISITE_CENTRE_VIDEO,
       content: `
         <p>Choisir un <strong>centre de formation à Lormont</strong>, ce n’est pas « Bordeaux moins cher ». C’est un emplacement de la <strong>rive droite</strong> : accessible depuis la métropole, calme pour apprendre, branché sur les entreprises du territoire (insertion, logistique, services, industrie).</p>
         <p>Atipik RH est installé au <strong>8 rue du Courant, 33310 Lormont</strong>. Cet article décrit le <strong>lieu et l’accès</strong>. Les programmes, durées et financements sont sur les fiches <a href="/formations/cip">CIP</a>, <a href="/formations/fpa">FPA</a>, <a href="/bilan-de-competences">bilan de compétences</a> et <a href="/vae">VAE</a>.</p>
@@ -3807,7 +3813,7 @@ export default function BlogArticle({ article: articleProp }) {
     );
   }
 
-  const { canonicalUrl, imageUrl, pageTitle, articleSchema, faqSchema } = buildArticleSeo(article);
+  const { canonicalUrl, imageUrl, pageTitle, articleSchema, faqSchema, videoSchema } = buildArticleSeo(article);
 
   return (
     <>
@@ -3842,6 +3848,14 @@ export default function BlogArticle({ article: articleProp }) {
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(faqSchema)
+            }}
+          />
+        )}
+        {videoSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(videoSchema)
             }}
           />
         )}
@@ -3910,6 +3924,20 @@ export default function BlogArticle({ article: articleProp }) {
                 />
                 
                 {/* Métadonnées */}
+                {article.instagramUrl ? (
+                  <p className="mb-4 text-sm text-[#013F63]">
+                    Repris de la publication{' '}
+                    <a
+                      href={article.instagramUrl}
+                      className="font-semibold underline underline-offset-2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Instagram @atipikrh33
+                    </a>
+                    .
+                  </p>
+                ) : null}
                 <div className="flex items-center gap-6 text-gray-500 mb-8">
                   <div className="flex items-center gap-2">
                     <User className="w-5 h-5" />
@@ -3938,6 +3966,8 @@ export default function BlogArticle({ article: articleProp }) {
                   />
                 </div>
               </header>
+
+              {article.video ? <FacebookVideoEmbed video={article.video} /> : null}
 
               {/* Contenu de l'article */}
               <div 

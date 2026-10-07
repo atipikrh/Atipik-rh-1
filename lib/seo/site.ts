@@ -54,11 +54,24 @@ export const GEO = {
   longitude: -0.514707,
 }
 
+/**
+ * Aquitaine = nom encore tapé dans Google (ancienne région).
+ * Le nom administratif est Nouvelle-Aquitaine.
+ * Le centre est à Lormont : le présentiel CIP/FPA reste dans un rayon de 40 km.
+ */
+export const AQUITAINE = {
+  nomUsage: 'Aquitaine',
+  nomAdministratif: 'Nouvelle-Aquitaine',
+  departements: ['Gironde', 'Dordogne', 'Landes', 'Lot-et-Garonne', 'Pyrénées-Atlantiques'],
+  bassinPresentiel: '40 km autour de Lormont (Bordeaux Métropole, Gironde)',
+} as const
+
 export const GEO_ZONES = [
   'Lormont',
   'Bordeaux',
   'Bordeaux Métropole',
   'Gironde',
+  'Aquitaine',
   'Nouvelle-Aquitaine',
 ] as const
 
