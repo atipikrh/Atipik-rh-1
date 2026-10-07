@@ -9,6 +9,7 @@ import { expandLongTail, getKeywordClusters } from '../lib/seo/keywords'
 import { BLOG_SLUGS, getIndexableRegistry, PLANNED_PATHS } from '../lib/seo/page-registry'
 import { isBlogSlugInSitemap } from '../lib/blog/canonicalOverrides.js'
 import { getBlogPublishIso, isScheduledBlogSlugLive } from '../lib/blog/publicationSchedule.js'
+import { getCertifianteGeoByBrief } from '../lib/seo/certifiantesConfig.js'
 import { RAFAEL_CAP_FPA } from '../lib/seo/rafaelCapFpa'
 import { ORGANIZATION, SIRET } from '../lib/seo/site'
 import { ENTITY_CITATION, getCitationByPage } from '../lib/seo/citations'
@@ -136,8 +137,17 @@ function main() {
   if (!ORGANIZATION.telephone.startsWith('+33') || ORGANIZATION.telephone.includes('000000')) {
     errors.push(`Téléphone NAP invalide: ${ORGANIZATION.telephone}`)
   }
-  if (RAFAEL_CAP_FPA.ficheUrl || RAFAEL_CAP_FPA.reference) {
-    errors.push('La fiche FPA Rafael ne doit pas inventer une URL ou une référence')
+  if (getCertifianteGeoByBrief('formation-fpa')?.rafaelCap) {
+    errors.push('Ne pas lier Rafael sur la page FPA tant que l’action n’est pas publiée')
+  }
+  if (RAFAEL_CAP_FPA.ficheUrl) {
+    errors.push('La fiche FPA Rafael ne doit pas être liée tant que la page publique est absente')
+  }
+  if (RAFAEL_CAP_FPA.reference !== '202609425794') {
+    errors.push('La référence FPA Rafael doit rester l’action 202609425794')
+  }
+  if (RAFAEL_CAP_FPA.resume.includes('6 500')) {
+    errors.push('La fiche FPA Rafael ne doit pas reprendre 6 500 €')
   }
   if (!RAFAEL_CAP_FPA.session.libelle.includes('en cours')) {
     errors.push('La session FPA Rafael doit indiquer que la date est en cours')

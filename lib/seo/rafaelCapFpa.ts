@@ -30,7 +30,8 @@ export const FPA_SESSION_LIBELLE =
   'Prochaine session : date en cours de finalisation. Candidatures ouvertes depuis septembre 2026. Ne pas saisir de date de début ni de fin tant que le calendrier n’est pas arrêté.'
 
 export const RAFAEL_CAP_FPA = {
-  reference: '',
+  /** Action back-office. La page publique n’existe pas encore : ne pas lier. */
+  reference: '202609425794',
   ficheUrl: '',
   organismeSiteUrl:
     'https://www.atipikrh.com/formations/fpa?utm_source=cmaformation&utm_medium=referral&utm_campaign=formation_fpa',

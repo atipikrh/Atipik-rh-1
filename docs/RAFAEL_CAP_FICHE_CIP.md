@@ -74,7 +74,7 @@ Après modification d’une session dans Rafael, mettre à jour `sessions` dans 
 
 ## Fiche FPA (textes prêts, pas encore en ligne)
 
-Les blocs à coller sont dans [`lib/seo/rafaelCapFpa.ts`](../lib/seo/rafaelCapFpa.ts).
+Les blocs à coller sont dans [`lib/seo/rafaelCapFpa.ts`](../lib/seo/rafaelCapFpa.ts). Action back-office : **202609425794**. Elle n’est pas publiée : ne pas ajouter `rafaelCap` sur la page FPA. Les autres corrections (doublons, frais de jury, « partenariat ») se lisent avec `npm run seo:rafael-corrections`. Ne pas recopier le tarif 6 500 € de l’action 202507335325.
 
 ```bash
 npm run seo:rafael-fpa

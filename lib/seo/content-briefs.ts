@@ -1,5 +1,9 @@
 import { expandLongTail, getClusterForBrief } from './keywords'
-import { FINANCEMENT_DISCLAIMER } from '../tarifs/tarifsCopy'
+import {
+  FINANCEMENT_DISCLAIMER,
+  MENTION_FRAIS_CERTIFICATION_INCLUS,
+  MENTION_FRAIS_CERTIFICATION_INCLUS_COURTE,
+} from '../tarifs/tarifsCopy'
 import type { ContentBrief } from './types'
 
 /** Ajoute la mention légale financement aux réponses FAQ concernées. */
@@ -842,7 +846,7 @@ const BRIEFS: ContentBrief[] = [
     h1: 'VAE des titres CIP et FPA à Lormont',
     metaTitle: 'VAE titre CIP ou FPA à Lormont | Atipik RH',
     metaDescription:
-      'VAE des titres CIP (2 750 €) et FPA (2 650 €) à Lormont. Jusqu’à 30 h, de France VAE jusqu’au jury. Atipik RH, Bordeaux.',
+      'VAE des titres CIP (2 750 €) et FPA (2 650 €) à Lormont, frais de certification inclus. Jusqu’à 30 h, de France VAE jusqu’au jury. Atipik RH.',
     recommendedSlug: '/vae',
     primaryKeywords: ['VAE Lormont', 'validation acquis expérience Bordeaux'],
     longTailKeywords: [],
@@ -864,6 +868,10 @@ const BRIEFS: ContentBrief[] = [
       {
         question: 'Comment financer la VAE ?',
         answer: faqFinancement('CPF, congé VAE, financement de droit commun ou abondement éventuel, selon le profil, la certification et les règles en vigueur. Vérification préalable obligatoire.'),
+      },
+      {
+        question: 'Les frais de certification sont-ils inclus ?',
+        answer: `Oui. ${MENTION_FRAIS_CERTIFICATION_INCLUS} Tarifs annoncés : 2 650 € TTC (titre FPA) et 2 750 € TTC (titre CIP).`,
       },
     ],
     internalLinks: [
@@ -1065,7 +1073,7 @@ const BRIEFS: ContentBrief[] = [
     h1: 'VAE du titre CIP à Lormont',
     metaTitle: 'VAE titre CIP à Lormont | 2 750 € | Atipik RH',
     metaDescription:
-      'Accompagnement VAE du titre CIP à Lormont : 2 750 € TTC, jusqu’à 30 h, de France VAE jusqu’au jury. Atipik RH.',
+      'Accompagnement VAE du titre CIP à Lormont : 2 750 € TTC, frais de certification inclus, jusqu’à 30 h. Atipik RH.',
     recommendedSlug: '/vae/titre-cip',
     primaryKeywords: ['VAE CIP', 'VAE conseiller insertion professionnelle Bordeaux'],
     longTailKeywords: ['VAE titre CIP Lormont', 'accompagnement VAE CIP'],
@@ -1078,7 +1086,7 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'Combien coûte l’accompagnement ?',
-        answer: '2 750 € TTC, jusqu’à 30 heures de face à face, hors frais de certificateur et de jury.',
+        answer: `2 750 € TTC, jusqu’à 30 heures de face à face, ${MENTION_FRAIS_CERTIFICATION_INCLUS_COURTE}.`,
       },
       {
         question: 'Et si je n’ai pas l’expérience du métier ?',
@@ -1102,7 +1110,7 @@ const BRIEFS: ContentBrief[] = [
     h1: 'VAE du titre FPA à Lormont',
     metaTitle: 'VAE titre FPA à Lormont | 2 650 € | Atipik RH',
     metaDescription:
-      'Accompagnement VAE du titre formateur d’adultes à Lormont : 2 650 € TTC, jusqu’à 30 h, de France VAE jusqu’au jury.',
+      'Accompagnement VAE du titre formateur d’adultes à Lormont : 2 650 € TTC, frais de certification inclus, jusqu’à 30 h.',
     recommendedSlug: '/vae/titre-fpa',
     primaryKeywords: ['VAE FPA', 'VAE formateur adultes Bordeaux'],
     longTailKeywords: ['VAE titre FPA Lormont', 'accompagnement VAE formateur adultes'],
@@ -1115,7 +1123,7 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'Combien coûte l’accompagnement ?',
-        answer: '2 650 € TTC, jusqu’à 30 heures de face à face, hors frais de certificateur et de jury.',
+        answer: `2 650 € TTC, jusqu’à 30 heures de face à face, ${MENTION_FRAIS_CERTIFICATION_INCLUS_COURTE}.`,
       },
       {
         question: 'Et si je n’ai pas encore exercé comme formateur ?',

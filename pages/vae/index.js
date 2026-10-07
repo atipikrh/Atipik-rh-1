@@ -8,7 +8,7 @@ import ServicePageSeoHead from '../../components/ServicePageSeoHead'
 import EntityCitationBlock from '../../components/EntityCitationBlock'
 import FormationFaqSection from '../../components/FormationFaqSection'
 import SatelliteNav from '../../components/SatelliteNav'
-import { TARIF_SELON_PROFIL_COMPLET } from '../../lib/tarifs/tarifsCopy'
+import { MENTION_FRAIS_CERTIFICATION_INCLUS_COURTE, TARIF_SELON_PROFIL_COMPLET } from '../../lib/tarifs/tarifsCopy'
 import { 
   Users, 
   Target, 
@@ -1006,9 +1006,7 @@ export default function VAE() {
                       <div className={`text-4xl font-bold mb-2 ${formule.priceClass}`}>
                         {formule.prix}<span className="text-2xl"> € TTC</span>
                       </div>
-                      <p className="text-sm text-[#013F63] mt-2">
-                        (sans frais d&apos;acte formatif, frais de certificateur et frais de jurys)
-                      </p>
+                      <p className="text-sm text-[#013F63] mt-2">({MENTION_FRAIS_CERTIFICATION_INCLUS_COURTE})</p>
                     </div>
 
                     <div className="flex items-center justify-center gap-2 mb-4">
