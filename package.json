@@ -23,6 +23,7 @@
     "seo:gsc-oauth-setup": "node scripts/gsc-oauth-setup.mjs",
     "seo:gsc-audit": "node scripts/gsc-audit.mjs",
     "seo:rafael-cip": "tsx scripts/print-rafael-cap-cip.ts",
+    "seo:rafael-fpa": "tsx scripts/print-rafael-cap-fpa.ts",
     "seo:post-deploy": "node scripts/post-deploy-seo.mjs",
     "seo:audit-pages": "node scripts/audit-seo-pages.mjs",
     "seo:audit-tech": "node scripts/audit-seo-tech.mjs",

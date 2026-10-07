@@ -1,6 +1,7 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
 import {
+  getBlogPublishIso,
   isBlogArticleLive,
   isScheduledBlogSlugLive,
   parisCalendarIso,
@@ -35,6 +36,11 @@ describe('isBlogArticleLive', () => {
 })
 
 describe('isScheduledBlogSlugLive', () => {
+  it('expose la date de publication pour le sitemap', () => {
+    assert.equal(getBlogPublishIso('neurodiversite-inclusion-recrutement'), '2026-10-01')
+    assert.equal(getBlogPublishIso('article-sans-calendrier'), null)
+  })
+
   it('filtre le sitemap avant la date ISO', () => {
     assert.equal(
       isScheduledBlogSlugLive('formation-cip-ou-fpa-quelle-certification-choisir', new Date('2026-09-28T12:00:00Z')),

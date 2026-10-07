@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
-import { useIsClient, useIsMobile } from '../hooks/useClientViewport'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import ServicePageSeoHead from '../components/ServicePageSeoHead'
-import EntityCitationBlock from '../components/EntityCitationBlock'
-import FormationFaqSection from '../components/FormationFaqSection'
-import { TARIF_SELON_PROFIL_COMPLET } from '../lib/tarifs/tarifsCopy'
+import { useIsClient, useIsMobile } from '../../hooks/useClientViewport'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+import ServicePageSeoHead from '../../components/ServicePageSeoHead'
+import EntityCitationBlock from '../../components/EntityCitationBlock'
+import FormationFaqSection from '../../components/FormationFaqSection'
+import SatelliteNav from '../../components/SatelliteNav'
+import { TARIF_SELON_PROFIL_COMPLET } from '../../lib/tarifs/tarifsCopy'
 import { 
   Users, 
   Target, 
@@ -48,21 +49,6 @@ const statistiques = [
     id: 4,
     valeur: "100%",
     description: "Taux de satisfaction"
-  },
-  {
-    id: 5,
-    valeur: "À venir",
-    description: "Taux d'insertion globale à 6 mois"
-  },
-  {
-    id: 6,
-    valeur: "À venir",
-    description: "Taux d'insertion dans le métier visé à 6 mois"
-  },
-  {
-    id: 7,
-    valeur: "À venir",
-    description: "Taux d'insertion dans le métier visé à 2 ans"
   }
 ]
 
@@ -421,12 +407,18 @@ export default function VAE() {
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight tracking-tight text-center">
                 <span className="font-brittany text-3xl lg:text-5xl text-accent-500">VAE</span>
-                {' '}— Valoriser son expérience professionnelle
+                {' '}— titres CIP et FPA à Lormont
                 </h1>
               <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto mb-8">
                 Valorisez votre expérience professionnelle et obtenez une certification reconnue
                 </p>
               <EntityCitationBlock pageId="vae" />
+              <SatelliteNav
+                links={[
+                  { href: '/vae/titre-cip', label: 'VAE du titre CIP' },
+                  { href: '/vae/titre-fpa', label: 'VAE du titre FPA' },
+                ]}
+              />
               </div>
           </div>
         </section>

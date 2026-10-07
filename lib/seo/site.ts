@@ -12,8 +12,9 @@ export const SOCIAL_URLS = {
   linkedin: 'https://www.linkedin.com/company/atipik-rh33',
   facebook: 'https://www.facebook.com/atipikrh33',
   instagram: 'https://www.instagram.com/atipikrh33',
+  /** Fiche Google vérifiée le 7 octobre 2026 (CID 18362370091856397133). */
   googleMaps:
-    'https://www.google.com/maps/search/?api=1&query=Atipik+RH+8+Rue+du+Courant+33310+Lormont',
+    'https://www.google.com/maps/place/ATIPIK+RH/@44.8806821,-0.514707,17z/data=!3m1!4b1!4m6!3m5!1s0xd552ffe682f1bfd:0xfed43e4f7f5b834d!8m2!3d44.8806821!4d-0.514707!16s%2Fg%2F11j07z3syz',
 } as const
 
 /** Horaires schema.org (samedi sur rendez-vous). */
@@ -49,8 +50,8 @@ export const ADDRESS = {
 
 export const GEO = {
   '@type': 'GeoCoordinates' as const,
-  latitude: 44.8764,
-  longitude: -0.5212,
+  latitude: 44.8806821,
+  longitude: -0.514707,
 }
 
 export const GEO_ZONES = [

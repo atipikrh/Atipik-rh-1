@@ -1,18 +1,19 @@
 import Link from 'next/link'
-import ServicePageSeoHead from '../../components/ServicePageSeoHead'
-import FormationQuickAnswers from '../../components/FormationQuickAnswers'
-import FormationLandingCtas from '../../components/FormationLandingCtas'
-import FormationAdequation from '../../components/FormationAdequation'
-import FormationFaqSection from '../../components/FormationFaqSection'
-import EntityCitationBlock from '../../components/EntityCitationBlock'
-import FormationStickyCta from '../../components/FormationStickyCta'
-import FormationTarifSection from '../../components/FormationTarifSection'
-import { getCertifianteContactHref, getCertifianteReunionHref } from '../../lib/seo/certifiantesConfig'
+import ServicePageSeoHead from '../../../components/ServicePageSeoHead'
+import FormationQuickAnswers from '../../../components/FormationQuickAnswers'
+import FormationLandingCtas from '../../../components/FormationLandingCtas'
+import FormationAdequation from '../../../components/FormationAdequation'
+import FormationFaqSection from '../../../components/FormationFaqSection'
+import EntityCitationBlock from '../../../components/EntityCitationBlock'
+import FormationStickyCta from '../../../components/FormationStickyCta'
+import FormationTarifSection from '../../../components/FormationTarifSection'
+import { getCertifianteContactHref, getCertifianteReunionHref } from '../../../lib/seo/certifiantesConfig'
 import { useState, useEffect, useRef } from 'react'
-import { useIsClient, useIsMobile } from '../../hooks/useClientViewport'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import ReunionInfoModal from '../../components/ReunionInfoModal'
+import { useIsClient, useIsMobile } from '../../../hooks/useClientViewport'
+import Header from '../../../components/Header'
+import Footer from '../../../components/Footer'
+import ReunionInfoModal from '../../../components/ReunionInfoModal'
+import SatelliteNav from '../../../components/SatelliteNav'
 
 import { Clock, Users, MapPin, Calendar, GraduationCap, CheckCircle, ArrowRight, CreditCard, BookOpen, Target, Award, Phone, Mail, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, UserCheck } from 'lucide-react'
 import Image from 'next/image'
@@ -455,6 +456,12 @@ export default function FormationCIP() {
               <EntityCitationBlock pageId="formation-cip" />
               <FormationQuickAnswers briefId="formation-cip" />
               <FormationLandingCtas briefId="formation-cip" />
+              <SatelliteNav
+                links={[
+                  { href: '/formations/cip/financement', label: 'Financer la formation CIP' },
+                  { href: '/formations/cip/conditions-inscription', label: 'Conditions d’entrée' },
+                ]}
+              />
             </div>
           </section>
 

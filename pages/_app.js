@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import CookieBanner from '../components/CookieBanner'
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics'
+import { rememberUtm } from '../lib/analytics'
 
 const SITE_URL = 'https://www.atipikrh.com'
 const DEFAULT_TITLE = 'Atipik RH - Formation, Bilan de compétences & VAE à Lormont'
@@ -25,6 +26,7 @@ export default function App({ Component, pageProps }) {
       event: 'page_context',
       page_path: router.asPath.split('?')[0],
     }
+    rememberUtm(q)
     let hasUtm = false
     utmKeys.forEach((k) => {
       const v = q[k]

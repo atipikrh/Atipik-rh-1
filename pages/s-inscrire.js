@@ -9,6 +9,7 @@ import FormAlert from '../components/FormAlert'
 import FinancementDisclaimer from '../components/FinancementDisclaimer'
 import RecaptchaV2Invisible from '../components/RecaptchaV2Invisible'
 import { DATES_CIP, DATES_FPA } from '../lib/reunions/dates.js'
+import { trackLead } from '../lib/analytics'
 
 export default function SInscrire() {
   const router = useRouter()
@@ -134,6 +135,7 @@ export default function SInscrire() {
       const data = await response.json()
 
       if (response.ok && data.success) {
+        trackLead({ formation: formData.formation || 'reunion', source: 'reunion' })
         recaptchaRef.current?.reset()
         setIsSubmitted(true)
       } else {

@@ -126,7 +126,7 @@ const PAGE_CITATIONS: Record<string, PageCitation> = {
   'formation-fpa': {
     includeLead: true,
     definition:
-      'Le titre professionnel Formateur Professionnel pour Adultes (FPA, niveau 5, RNCP 37275) se prépare chez Atipik RH à Lormont, près de Bordeaux. Le parcours dure 7 mois (934 h). Tarif public : 8 950 € TTC. Prochaine session : avril 2027 — ouverture des candidatures en septembre 2026.',
+      'Le titre professionnel Formateur Professionnel pour Adultes (FPA, niveau 5, RNCP 37275) se prépare chez Atipik RH à Lormont, près de Bordeaux. Le parcours dure 7 mois (934 h : 616 h en centre, 315 h en entreprise, 3 h de certification). Tarif public : 8 950 € TTC. La date de la prochaine session est en cours de finalisation. Candidatures ouvertes depuis septembre 2026.',
     facts: geoFacts('formation-fpa'),
     sources: [
       OFFICIAL_SOURCES.rncpFpa,

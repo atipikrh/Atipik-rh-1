@@ -72,6 +72,13 @@ Après modification d’une session dans Rafael, mettre à jour `sessions` dans 
 
 `https://www.atipikrh.com/formations/cip?utm_source=cmaformation&utm_medium=referral&utm_campaign=formation_cip`
 
-## Fiche FPA (à créer)
+## Fiche FPA (textes prêts, pas encore en ligne)
 
-Aucune fiche CMaFormation / Rafael Cap Métiers n’a été trouvée pour le titre FPA ATIPIK RH (contrôle public du 13/09/2026). Action organisme : créer la fiche, puis ajouter `rafaelCap` dans `lib/seo/certifiantesConfig.js` (brief `formation-fpa`) comme pour le CIP.
+Les blocs à coller sont dans [`lib/seo/rafaelCapFpa.ts`](../lib/seo/rafaelCapFpa.ts).
+
+```bash
+npm run seo:rafael-fpa
+npm run seo:rafael-fpa -- --copy resume
+```
+
+La date de la prochaine session est en cours de finalisation : ne pas saisir de début ni de fin. Les candidatures sont ouvertes depuis septembre 2026. Tarif public déjà publié : 8 950 € TTC, 934 h, RNCP 37275. Dès que CMaFormation donne l’URL de la fiche, l’ajouter dans `rafaelCap` du brief `formation-fpa` (`lib/seo/certifiantesConfig.js`), comme pour le CIP.

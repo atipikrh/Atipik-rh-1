@@ -12,6 +12,7 @@ import EntityCitationBlock from '../components/EntityCitationBlock'
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Facebook, Instagram, Linkedin } from 'lucide-react'
 import { getRecaptchaToken } from '../lib/recaptcha'
 import { resolveContactSujet, withLeftoverMessage } from '../lib/seo/contactSujet'
+import { trackLead } from '../lib/analytics'
 
 export default function Contact({ hasQuery: hasQueryFromServer = false }) {
   const router = useRouter()
@@ -117,6 +118,7 @@ export default function Contact({ hasQuery: hasQueryFromServer = false }) {
       const data = await response.json()
 
       if (response.ok && data.success) {
+        trackLead({ formation: formData.sujet, source: 'contact' })
         setIsSubmitted(true)
       } else {
         throw new Error(data.message || 'Erreur lors de l\'envoi du message')
@@ -491,7 +493,7 @@ export default function Contact({ hasQuery: hasQueryFromServer = false }) {
                       <h3 className="font-semibold text-[#013F63] mb-4">Localisation</h3>
                       <div className="rounded-2xl overflow-hidden shadow-lg">
                         <iframe 
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60000!2d-0.5165701713415016!3d44.84!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f9.5!3m3!1m2!1s0xd552f25b981e299%3A0xe468ed80c941266!2s8%20Rue%20du%20Courant%2C%2033310%20Lormont!5e0!3m2!1sfr!2sfr!4v1753190014734!5m2!1sfr!2sfr"
+                          src="https://www.google.com/maps/embed?origin=mfe&pb=!1m4!3m2!1m1!4s18362370091856397133!6i17!3m1!1sfr!5m1!1sfr"
                           width="100%" 
                           height="300" 
                           style={{border: 0}}

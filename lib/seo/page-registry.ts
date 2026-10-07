@@ -1,5 +1,5 @@
 import { isBlogSlugInSitemap } from '../blog/canonicalOverrides.js'
-import { isScheduledBlogSlugLive } from '../blog/publicationSchedule.js'
+import { getBlogPublishIso, isScheduledBlogSlugLive } from '../blog/publicationSchedule.js'
 import { PROFESSIONNALISANTES_SLUGS } from './professionnalisantesConfig.js'
 import { SLUGS_CA_OCTOBRE_2026 } from './campagnesCaOctobre2026.js'
 import type { RegistryEntry } from './types'
@@ -97,38 +97,44 @@ export const PLANNED_PATHS = [
 ] as const
 
 export function getIndexableRegistry(): RegistryEntry[] {
-  const buildDate = new Date().toISOString().split('T')[0]
   const entries: RegistryEntry[] = [
-    entry('/', 'home', 1.0, 'weekly', buildDate),
-    entry('/blog', 'blog', 0.9, 'weekly', buildDate),
-    entry('/formations', 'formations', 0.9, 'monthly', buildDate),
-    entry('/formations/cip', 'formations', 0.9, 'monthly', buildDate),
-    entry('/formations/fpa', 'formations', 0.9, 'monthly', buildDate),
-    entry('/formations/fpa/ccp1', 'formations', 0.85, 'monthly', buildDate),
-    entry('/formations/fpa/ccp2', 'formations', 0.85, 'monthly', buildDate),
-    entry('/formations/fpa/ccp3', 'formations', 0.85, 'monthly', buildDate),
-    entry('/formations/fpa/ccp4', 'formations', 0.85, 'monthly', buildDate),
-    entry('/formations/ccp1', 'formations', 0.85, 'monthly', buildDate),
-    entry('/formations/ccp2', 'formations', 0.85, 'monthly', buildDate),
-    entry('/formations/ccp3', 'formations', 0.85, 'monthly', buildDate),
+    entry('/', 'home', 1.0, 'weekly'),
+    entry('/blog', 'blog', 0.9, 'weekly'),
+    entry('/formations', 'formations', 0.9, 'monthly'),
+    entry('/formations/cip', 'formations', 0.9, 'monthly'),
+    entry('/formations/cip/financement', 'formations', 0.8, 'monthly'),
+    entry('/formations/cip/conditions-inscription', 'formations', 0.8, 'monthly'),
+    entry('/formations/fpa', 'formations', 0.9, 'monthly'),
+    entry('/formations/fpa/financement', 'formations', 0.8, 'monthly'),
+    entry('/formations/fpa/conditions-inscription', 'formations', 0.8, 'monthly'),
+    entry('/formations/fpa/ccp1', 'formations', 0.85, 'monthly'),
+    entry('/formations/fpa/ccp2', 'formations', 0.85, 'monthly'),
+    entry('/formations/fpa/ccp3', 'formations', 0.85, 'monthly'),
+    entry('/formations/fpa/ccp4', 'formations', 0.85, 'monthly'),
+    entry('/formations/ccp1', 'formations', 0.85, 'monthly'),
+    entry('/formations/ccp2', 'formations', 0.85, 'monthly'),
+    entry('/formations/ccp3', 'formations', 0.85, 'monthly'),
     entry('/formations/courtes-professionnalisantes', 'formations', 0.85, 'monthly', '2026-05-13'),
-    entry('/bilan-de-competences', 'services', 0.9, 'monthly', buildDate),
-    entry('/bilan-de-competences/quiz', 'services', 0.7, 'monthly', buildDate),
-    entry('/vae', 'services', 0.8, 'monthly', buildDate),
-    entry('/financement', 'services', 0.8, 'monthly', buildDate),
-    entry('/reconversion-professionnelle-bordeaux', 'services', 0.85, 'monthly', buildDate),
-    entry('/organisme-formation-insertion-professionnelle', 'formations', 0.85, 'monthly', buildDate),
-    entry('/certification', 'other', 0.6, 'yearly', buildDate),
-    entry('/contact', 'other', 0.8, 'monthly', buildDate),
-    entry('/s-inscrire', 'other', 0.85, 'weekly', buildDate),
-    entry('/notre-equipe', 'equipe', 0.7, 'monthly', buildDate),
-    entry('/notre-histoire', 'other', 0.6, 'yearly', buildDate),
-    entry('/partenariat', 'other', 0.6, 'yearly', buildDate),
-    entry('/location-salles-lormont', 'services', 0.75, 'monthly', buildDate),
-    entry('/mentions-legales', 'legal', 0.3, 'yearly', buildDate),
-    entry('/politique-confidentialite', 'legal', 0.3, 'yearly', buildDate),
-    entry('/cgv', 'legal', 0.3, 'yearly', buildDate),
-    entry('/rgpd', 'legal', 0.3, 'yearly', buildDate),
+    entry('/formations/courtes-professionnalisantes/financement', 'formations', 0.75, 'monthly'),
+    entry('/bilan-de-competences', 'services', 0.9, 'monthly'),
+    entry('/bilan-de-competences/quiz', 'services', 0.7, 'monthly'),
+    entry('/vae', 'services', 0.8, 'monthly'),
+    entry('/vae/titre-cip', 'services', 0.75, 'monthly'),
+    entry('/vae/titre-fpa', 'services', 0.75, 'monthly'),
+    entry('/financement', 'services', 0.8, 'monthly'),
+    entry('/reconversion-professionnelle-bordeaux', 'services', 0.85, 'monthly'),
+    entry('/organisme-formation-insertion-professionnelle', 'formations', 0.85, 'monthly'),
+    entry('/certification', 'other', 0.6, 'yearly'),
+    entry('/contact', 'other', 0.8, 'monthly'),
+    entry('/s-inscrire', 'other', 0.85, 'weekly'),
+    entry('/notre-equipe', 'equipe', 0.7, 'monthly'),
+    entry('/notre-histoire', 'other', 0.6, 'yearly'),
+    entry('/partenariat', 'other', 0.6, 'yearly'),
+    entry('/location-salles-lormont', 'services', 0.75, 'monthly'),
+    entry('/mentions-legales', 'legal', 0.3, 'yearly'),
+    entry('/politique-confidentialite', 'legal', 0.3, 'yearly'),
+    entry('/cgv', 'legal', 0.3, 'yearly'),
+    entry('/rgpd', 'legal', 0.3, 'yearly'),
   ]
 
   for (const slug of PROFESSIONNALISANTES_SLUGS) {
@@ -146,16 +152,22 @@ export function getIndexableRegistry(): RegistryEntry[] {
   for (const slug of BLOG_SLUGS) {
     if (!isScheduledBlogSlugLive(slug)) continue
     if (!isBlogSlugInSitemap(slug)) continue
-    entries.push(entry(`/blog/${slug}`, 'blog', 0.8, 'monthly', buildDate))
+    entries.push(entry(`/blog/${slug}`, 'blog', 0.8, 'monthly', getBlogPublishIso(slug) || undefined))
   }
 
   for (const slug of TEAM_SLUGS) {
-    entries.push(entry(`/equipe/${slug}`, 'equipe', 0.6, 'yearly', buildDate))
+    entries.push(entry(`/equipe/${slug}`, 'equipe', 0.6, 'yearly'))
   }
 
   for (const id of LOCATION_SALLES_IDS) {
-    entries.push(entry(`/location-salles/${id}`, 'services', 0.7, 'monthly', buildDate))
+    entries.push(entry(`/location-salles/${id}`, 'services', 0.7, 'monthly'))
   }
 
-  return entries
+  const planned = new Set<string>(PLANNED_PATHS)
+  const seen = new Set<string>()
+  return entries.filter((item) => {
+    if (planned.has(item.path) || item.path.includes('?') || seen.has(item.path)) return false
+    seen.add(item.path)
+    return true
+  })
 }

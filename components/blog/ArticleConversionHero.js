@@ -8,6 +8,7 @@ import Link from 'next/link'
 import HoneypotField from '../HoneypotField'
 import FormAlert from '../FormAlert'
 import { getRecaptchaToken } from '../../lib/recaptcha'
+import { trackLead } from '../../lib/analytics'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PHONE_RE = /^[0-9+().\s-]{8,20}$/
@@ -134,6 +135,7 @@ function ArticleLeadForm({ conversion }) {
       if (!response.ok || !data.success) {
         throw new Error(data.message || 'Erreur lors de l\'envoi')
       }
+      trackLead({ formation: conversion.formationLabel, source: 'article' })
       setIsSubmitted(true)
     } catch (error) {
       setSubmitError(error.message || 'Erreur lors de l\'envoi. Réessayez ou utilisez la page contact.')

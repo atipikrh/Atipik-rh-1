@@ -67,7 +67,7 @@ const BRIEFS: ContentBrief[] = [
     h1: 'Formation CIP à Lormont — Conseiller en Insertion Professionnelle',
     metaTitle: 'Formation CIP Bordeaux & Lormont | Titre niveau 5 | Atipik RH',
     metaDescription:
-      'Devenez conseiller en insertion à Lormont (Bordeaux) : titre CIP RNCP 37274, 948 h (563 h en centre, 385 h de stage). CPF, AIF France Travail, OPCO. Centre Qualiopi, Atipik RH.',
+      'Session CIP à Lormont du 22 mars au 22 octobre 2027, 9 100 € TTC. Candidatures ouvertes. Titre RNCP 37274, CPF. Atipik RH.',
     recommendedSlug: '/formations/cip',
     primaryKeywords: ['formation CIP Bordeaux', 'formation CIP Lormont', 'conseiller insertion professionnelle'],
     longTailKeywords: [],
@@ -122,10 +122,10 @@ const BRIEFS: ContentBrief[] = [
     clusterId: 'formation-fpa-nouvelle-aquitaine',
     serpSnapshotId: 'serp-fpa-na',
     pageType: 'pilier',
-    h1: 'Formation FPA — Formateur Professionnel pour Adultes',
-    metaTitle: 'Formation FPA Nouvelle-Aquitaine | Atipik RH Lormont',
+    h1: 'Formation FPA à Lormont — Formateur Professionnel pour Adultes',
+    metaTitle: 'Formation FPA Bordeaux et Lormont | Atipik RH',
     metaDescription:
-      'Formation FPA à Lormont, Nouvelle-Aquitaine : titre niveau 5, 7 mois (934 h). Formateur d’adultes, financement CPF. Atipik RH, Bordeaux Métropole.',
+      'Formation FPA à Lormont (Bordeaux) : 8 950 € TTC, 934 h. Date de session en cours. Titre RNCP 37275, CPF. Atipik RH.',
     recommendedSlug: '/formations/fpa',
     primaryKeywords: ['formation FPA Nouvelle-Aquitaine', 'formateur professionnel adultes Bordeaux'],
     longTailKeywords: [],
@@ -515,9 +515,9 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-bilan-lormont',
     pageType: 'local',
     h1: 'Bilan de compétences à Lormont, proche de Bordeaux',
-    metaTitle: 'Bilan de compétences Lormont & Bordeaux | Atipik RH',
+    metaTitle: 'Bilan de compétences à Lormont | 16 à 20 h, CPF',
     metaDescription:
-      'Réalisez votre bilan de compétences à Lormont avec Atipik RH. Accompagnement personnalisé, financement CPF, reconversion et évolution professionnelle.',
+      'Bilan de compétences à Lormont, 16 à 20 heures, en présentiel ou visio. Financement CPF selon votre profil. Atipik RH, près de Bordeaux.',
     recommendedSlug: '/bilan-de-competences',
     primaryKeywords: ['bilan de compétences Lormont', 'bilan compétences Bordeaux'],
     longTailKeywords: [],
@@ -526,7 +526,8 @@ const BRIEFS: ContentBrief[] = [
     faq: [
       {
         question: 'Combien de temps dure un bilan de compétences ?',
-        answer: 'Environ 24 heures d’accompagnement réparties sur plusieurs semaines — le rythme est adapté à votre disponibilité.',
+        answer:
+          '16 à 20 heures selon la formule (Essentiel, 16 h, ou Horizon, 20 h), réparties sur plusieurs semaines. Le rythme suit votre disponibilité.',
       },
       {
         question: 'Peut-on financer un bilan avec le CPF ?',
@@ -798,10 +799,10 @@ const BRIEFS: ContentBrief[] = [
     clusterId: 'formations-professionnalisantes',
     serpSnapshotId: 'serp-professionnalisantes',
     pageType: 'pilier',
-    h1: 'Formations courtes professionnalisantes en insertion',
-    metaTitle: 'Formations courtes professionnalisantes | Atipik RH',
+    h1: 'Formations courtes professionnalisantes à Bordeaux',
+    metaTitle: 'Formations courtes à Bordeaux | 715 à 1 365 €',
     metaDescription:
-      'Formations courtes (11 h à 21 h) pour professionnels de l’insertion et RH : relation entreprise, recrutement inclusif. Lormont, Bordeaux Métropole.',
+      'Sept formations courtes à Lormont, de 11 à 21 h, de 715 € à 1 365 € TTC. Insertion, recrutement, numérique et IA. Atipik RH.',
     recommendedSlug: '/formations/courtes-professionnalisantes',
     primaryKeywords: ['formation professionnalisante insertion', 'formation courte Bordeaux insertion'],
     longTailKeywords: [],
@@ -838,10 +839,10 @@ const BRIEFS: ContentBrief[] = [
     clusterId: 'reconversion-bordeaux',
     serpSnapshotId: 'serp-reconversion-bordeaux',
     pageType: 'cluster',
-    h1: 'VAE — Valoriser son expérience professionnelle',
-    metaTitle: 'VAE à Lormont & Bordeaux | Atipik RH',
+    h1: 'VAE des titres CIP et FPA à Lormont',
+    metaTitle: 'VAE titre CIP ou FPA à Lormont | Atipik RH',
     metaDescription:
-      'Accompagnement VAE à Lormont pour obtenir une certification à partir de votre expérience. Atipik RH, Bordeaux Métropole.',
+      'VAE des titres CIP (2 750 €) et FPA (2 650 €) à Lormont. Jusqu’à 30 h, de France VAE jusqu’au jury. Atipik RH, Bordeaux.',
     recommendedSlug: '/vae',
     primaryKeywords: ['VAE Lormont', 'validation acquis expérience Bordeaux'],
     longTailKeywords: [],
@@ -912,6 +913,259 @@ const BRIEFS: ContentBrief[] = [
     schemaTypes: ['FAQPage'],
     eeatSignals: SHARED_EEAT,
     existingPagePath: '/financement',
+  },
+  {
+    id: 'cip-financement',
+    clusterId: 'formation-cip-bordeaux',
+    serpSnapshotId: 'serp-formation-cip-bordeaux',
+    pageType: 'cluster',
+    h1: 'Financer la formation CIP à Bordeaux et Lormont',
+    metaTitle: 'Financement formation CIP Bordeaux | Atipik RH',
+    metaDescription:
+      'Formation CIP à Lormont : 9 100 € TTC. CPF, France Travail, OPCO ou Transitions Pro. Session du 22 mars au 22 octobre 2027.',
+    recommendedSlug: '/formations/cip/financement',
+    primaryKeywords: ['financement formation CIP Bordeaux', 'formation CIP CPF'],
+    longTailKeywords: ['prix formation CIP Lormont', 'financement France Travail formation CIP', 'OPCO formation CIP'],
+    intent: 'transactional',
+    personas: ['demandeur-emploi', 'reconversion-40plus'],
+    faq: [
+      {
+        question: 'Quel est le tarif public de la formation CIP ?',
+        answer: '9 100 € TTC pour le parcours complet à Lormont, session du 22 mars au 22 octobre 2027.',
+      },
+      {
+        question: 'La formation CIP est-elle finançable avec le CPF ?',
+        answer: faqFinancement('Oui, sous réserve d’éligibilité du titre et de votre solde CPF.'),
+      },
+      {
+        question: 'Quels autres financeurs sont possibles ?',
+        answer: faqFinancement('France Travail (AIF), OPCO, employeur ou Transitions Pro, selon votre statut.'),
+      },
+    ],
+    internalLinks: [
+      { label: 'Fiche formation CIP', href: '/formations/cip', anchorIntent: 'pilier' },
+      { label: 'Conditions d’entrée', href: '/formations/cip/conditions-inscription', anchorIntent: 'prérequis' },
+      { label: 'Réunion d’information', href: '/s-inscrire?formation=CIP', anchorIntent: 'conversion' },
+    ],
+    schemaTypes: ['FAQPage', 'Course'],
+    eeatSignals: SHARED_EEAT,
+    existingPagePath: '/formations/cip/financement',
+  },
+  {
+    id: 'cip-conditions',
+    clusterId: 'formation-cip-bordeaux',
+    serpSnapshotId: 'serp-formation-cip-bordeaux',
+    pageType: 'cluster',
+    h1: 'Conditions d’entrée en formation CIP à Lormont',
+    metaTitle: 'Conditions formation CIP Bordeaux | Atipik RH',
+    metaDescription:
+      'Pour entrer en CIP à Lormont : un projet validé par deux enquêtes ou une immersion, et des bases rédactionnelles. Réunion d’information.',
+    recommendedSlug: '/formations/cip/conditions-inscription',
+    primaryKeywords: ['conditions formation CIP', 'prérequis conseiller insertion professionnelle'],
+    longTailKeywords: ['entrer en formation CIP Bordeaux', 'prérequis titre CIP Lormont'],
+    intent: 'commercial',
+    personas: ['demandeur-emploi', 'reconversion-40plus'],
+    faq: [
+      {
+        question: 'Faut-il un diplôme pour entrer en CIP ?',
+        answer:
+          'Le prérequis demandé est un projet validé par au moins deux enquêtes métiers ou une immersion, plus des connaissances rédactionnelles.',
+      },
+      {
+        question: 'Comment vérifier que la formation me correspond ?',
+        answer: 'Lors de la réunion d’information CIP, avec l’équipe pédagogique, à Lormont.',
+      },
+      {
+        question: 'Quand commencent les candidatures ?',
+        answer: 'Les candidatures pour la session du 22 mars au 22 octobre 2027 sont ouvertes depuis le 3 octobre 2026.',
+      },
+    ],
+    internalLinks: [
+      { label: 'Fiche formation CIP', href: '/formations/cip', anchorIntent: 'pilier' },
+      { label: 'Financement CIP', href: '/formations/cip/financement', anchorIntent: 'financement' },
+      { label: 'Réunion d’information', href: '/s-inscrire?formation=CIP', anchorIntent: 'conversion' },
+    ],
+    schemaTypes: ['FAQPage'],
+    eeatSignals: SHARED_EEAT,
+    existingPagePath: '/formations/cip/conditions-inscription',
+  },
+  {
+    id: 'fpa-financement',
+    clusterId: 'formation-fpa-nouvelle-aquitaine',
+    serpSnapshotId: 'serp-fpa-na',
+    pageType: 'cluster',
+    h1: 'Financer la formation FPA à Bordeaux et Lormont',
+    metaTitle: 'Financement formation FPA Bordeaux | Atipik RH',
+    metaDescription:
+      'Formation FPA à Lormont : 8 950 € TTC, 934 h. CPF, employeur ou France Travail. Date de session en cours.',
+    recommendedSlug: '/formations/fpa/financement',
+    primaryKeywords: ['financement formation FPA Bordeaux', 'formation FPA CPF'],
+    longTailKeywords: ['prix formation FPA Lormont', 'financement France Travail formation FPA'],
+    intent: 'transactional',
+    personas: ['reconversion-40plus', 'professionnel-insertion'],
+    faq: [
+      {
+        question: 'Quel est le tarif public de la formation FPA ?',
+        answer:
+          '8 950 € TTC pour le parcours de 934 h. La date de la prochaine session est en cours de finalisation. Candidatures ouvertes depuis septembre 2026.',
+      },
+      {
+        question: 'Comment financer la formation FPA ?',
+        answer: faqFinancement('CPF, employeur ou France Travail, selon votre situation.'),
+      },
+    ],
+    internalLinks: [
+      { label: 'Fiche formation FPA', href: '/formations/fpa', anchorIntent: 'pilier' },
+      { label: 'Conditions d’entrée', href: '/formations/fpa/conditions-inscription', anchorIntent: 'prérequis' },
+      { label: 'Réunion d’information', href: '/s-inscrire?formation=FPA', anchorIntent: 'conversion' },
+    ],
+    schemaTypes: ['FAQPage', 'Course'],
+    eeatSignals: SHARED_EEAT,
+    existingPagePath: '/formations/fpa/financement',
+  },
+  {
+    id: 'fpa-conditions',
+    clusterId: 'formation-fpa-nouvelle-aquitaine',
+    serpSnapshotId: 'serp-fpa-na',
+    pageType: 'cluster',
+    h1: 'Conditions d’entrée en formation FPA à Lormont',
+    metaTitle: 'Conditions formation FPA Bordeaux | Atipik RH',
+    metaDescription:
+      'Entrer en FPA à Lormont : une expertise métier, un projet validé par deux enquêtes ou une immersion, et une aisance informatique.',
+    recommendedSlug: '/formations/fpa/conditions-inscription',
+    primaryKeywords: ['conditions formation FPA', 'prérequis formateur adultes'],
+    longTailKeywords: ['entrer en formation FPA Bordeaux', 'prérequis titre FPA Lormont'],
+    intent: 'commercial',
+    personas: ['reconversion-40plus', 'professionnel-insertion'],
+    faq: [
+      {
+        question: 'Quelle expérience faut-il pour la FPA ?',
+        answer:
+          'Une expertise technique dans un domaine, un projet validé par deux enquêtes métiers ou une immersion, et une connaissance des outils informatiques et de la rédaction.',
+      },
+      {
+        question: 'Où se déroule la formation ?',
+        answer: 'À Atipik RH, 8 rue du Courant, 33310 Lormont, rive droite de Bordeaux.',
+      },
+    ],
+    internalLinks: [
+      { label: 'Fiche formation FPA', href: '/formations/fpa', anchorIntent: 'pilier' },
+      { label: 'Financement FPA', href: '/formations/fpa/financement', anchorIntent: 'financement' },
+      { label: 'Réunion d’information', href: '/s-inscrire?formation=FPA', anchorIntent: 'conversion' },
+    ],
+    schemaTypes: ['FAQPage'],
+    eeatSignals: SHARED_EEAT,
+    existingPagePath: '/formations/fpa/conditions-inscription',
+  },
+  {
+    id: 'vae-titre-cip',
+    clusterId: 'reconversion-bordeaux',
+    serpSnapshotId: 'serp-reconversion-bordeaux',
+    pageType: 'cluster',
+    h1: 'VAE du titre CIP à Lormont',
+    metaTitle: 'VAE titre CIP à Lormont | 2 750 € | Atipik RH',
+    metaDescription:
+      'Accompagnement VAE du titre CIP à Lormont : 2 750 € TTC, jusqu’à 30 h, de France VAE jusqu’au jury. Atipik RH.',
+    recommendedSlug: '/vae/titre-cip',
+    primaryKeywords: ['VAE CIP', 'VAE conseiller insertion professionnelle Bordeaux'],
+    longTailKeywords: ['VAE titre CIP Lormont', 'accompagnement VAE CIP'],
+    intent: 'transactional',
+    personas: ['reconversion-40plus', 'salarie-evolution'],
+    faq: [
+      {
+        question: 'Quel diplôme est visé ?',
+        answer: 'Uniquement le titre professionnel Conseiller en insertion professionnelle (CIP, niveau 5).',
+      },
+      {
+        question: 'Combien coûte l’accompagnement ?',
+        answer: '2 750 € TTC, jusqu’à 30 heures de face à face, hors frais de certificateur et de jury.',
+      },
+      {
+        question: 'Et si je n’ai pas l’expérience du métier ?',
+        answer: 'La formation CIP complète (9 100 € TTC) est alors le parcours adapté, plutôt que la VAE.',
+      },
+    ],
+    internalLinks: [
+      { label: 'Toutes les VAE', href: '/vae', anchorIntent: 'pilier' },
+      { label: 'Formation CIP', href: '/formations/cip', anchorIntent: 'alternative formation' },
+      { label: 'VAE titre FPA', href: '/vae/titre-fpa', anchorIntent: 'autre titre' },
+    ],
+    schemaTypes: ['FAQPage'],
+    eeatSignals: SHARED_EEAT,
+    existingPagePath: '/vae/titre-cip',
+  },
+  {
+    id: 'vae-titre-fpa',
+    clusterId: 'reconversion-bordeaux',
+    serpSnapshotId: 'serp-reconversion-bordeaux',
+    pageType: 'cluster',
+    h1: 'VAE du titre FPA à Lormont',
+    metaTitle: 'VAE titre FPA à Lormont | 2 650 € | Atipik RH',
+    metaDescription:
+      'Accompagnement VAE du titre formateur d’adultes à Lormont : 2 650 € TTC, jusqu’à 30 h, de France VAE jusqu’au jury.',
+    recommendedSlug: '/vae/titre-fpa',
+    primaryKeywords: ['VAE FPA', 'VAE formateur adultes Bordeaux'],
+    longTailKeywords: ['VAE titre FPA Lormont', 'accompagnement VAE formateur adultes'],
+    intent: 'transactional',
+    personas: ['reconversion-40plus', 'professionnel-insertion'],
+    faq: [
+      {
+        question: 'Quel diplôme est visé ?',
+        answer: 'Uniquement le titre professionnel Formateur professionnel d’adultes (FPA, niveau 5).',
+      },
+      {
+        question: 'Combien coûte l’accompagnement ?',
+        answer: '2 650 € TTC, jusqu’à 30 heures de face à face, hors frais de certificateur et de jury.',
+      },
+      {
+        question: 'Et si je n’ai pas encore exercé comme formateur ?',
+        answer: 'La formation FPA complète (8 950 € TTC) prépare le titre sans passer par la VAE.',
+      },
+    ],
+    internalLinks: [
+      { label: 'Toutes les VAE', href: '/vae', anchorIntent: 'pilier' },
+      { label: 'Formation FPA', href: '/formations/fpa', anchorIntent: 'alternative formation' },
+      { label: 'VAE titre CIP', href: '/vae/titre-cip', anchorIntent: 'autre titre' },
+    ],
+    schemaTypes: ['FAQPage'],
+    eeatSignals: SHARED_EEAT,
+    existingPagePath: '/vae/titre-fpa',
+  },
+  {
+    id: 'courtes-financement',
+    clusterId: 'formations-professionnalisantes',
+    serpSnapshotId: 'serp-professionnalisantes',
+    pageType: 'cluster',
+    h1: 'Financer une formation courte à Lormont',
+    metaTitle: 'Financement formation courte Bordeaux | Atipik RH',
+    metaDescription:
+      'Formations courtes à Lormont, de 715 € à 1 365 € TTC. OPCO ou plan de développement des compétences, en inter ou en intra.',
+    recommendedSlug: '/formations/courtes-professionnalisantes/financement',
+    primaryKeywords: ['financement formation courte Bordeaux', 'formation intra OPCO'],
+    longTailKeywords: ['tarif formation courte Lormont', 'plan de développement des compétences formation'],
+    intent: 'transactional',
+    personas: ['rh-entreprise', 'professionnel-insertion'],
+    faq: [
+      {
+        question: 'Quelle est la fourchette de tarifs ?',
+        answer: 'De 715 € à 1 365 € TTC par stagiaire en inter-entreprises, selon le module (11 h à 21 h).',
+      },
+      {
+        question: 'Une session intra est-elle possible ?',
+        answer: faqFinancement('Oui. Le format et le devis se construisent avec votre équipe, sur vos situations réelles.'),
+      },
+      {
+        question: 'Qui finance ces modules ?',
+        answer: faqFinancement('L’OPCO ou le plan de développement des compétences de l’employeur, selon la structure.'),
+      },
+    ],
+    internalLinks: [
+      { label: 'Catalogue des formations courtes', href: '/formations/courtes-professionnalisantes', anchorIntent: 'pilier' },
+      { label: 'Demander un échange', href: '/contact?sujet=formation-courte', anchorIntent: 'conversion' },
+    ],
+    schemaTypes: ['FAQPage'],
+    eeatSignals: SHARED_EEAT,
+    existingPagePath: '/formations/courtes-professionnalisantes/financement',
   },
   {
     id: 'location-salles-lormont',

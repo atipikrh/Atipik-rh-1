@@ -7,6 +7,7 @@ export * from './prompts'
 export * from './schema'
 export * from './page-registry'
 export * from './rafaelCapCip'
+export * from './rafaelCapFpa'
 export * from './citations'
 
 import type { SeoContextForAI } from './types'

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import ServicePageSeoHead from '../../../components/ServicePageSeoHead'
 import FormationQuickAnswers from '../../../components/FormationQuickAnswers'
 import FormationLandingCtas from '../../../components/FormationLandingCtas'
+import SatelliteNav from '../../../components/SatelliteNav'
 import FormationAdequation from '../../../components/FormationAdequation'
 import FormationFaqSection from '../../../components/FormationFaqSection'
 import EntityCitationBlock from '../../../components/EntityCitationBlock'
@@ -441,7 +442,7 @@ export default function FormationFPA() {
               {/* Titre principal */}
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight text-balance">
-                  Formation FPA —{' '}
+                  Formation FPA à Lormont —{' '}
                   <span className="block mt-1 mb-2 text-accent-500 font-brittany text-3xl md:text-4xl lg:text-5xl">
                     Formateur Professionnel d&apos;Adultes
                   </span>
@@ -453,6 +454,12 @@ export default function FormationFPA() {
               <EntityCitationBlock pageId="formation-fpa" />
               <FormationQuickAnswers briefId="formation-fpa" />
               <FormationLandingCtas briefId="formation-fpa" />
+              <SatelliteNav
+                links={[
+                  { href: '/formations/fpa/financement', label: 'Financer la formation FPA' },
+                  { href: '/formations/fpa/conditions-inscription', label: 'Conditions d’entrée' },
+                ]}
+              />
             </div>
           </section>
 
@@ -1414,7 +1421,7 @@ export default function FormationFPA() {
                   <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
                     <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
                       <h3 className="text-2xl font-bold mb-2 text-orange-500">Prochaine session</h3>
-                      <p className="text-orange-600">avril 2027</p>
+                      <p className="text-orange-600">Date en cours de finalisation</p>
                     </div>
                     
                     <div className="mb-4">

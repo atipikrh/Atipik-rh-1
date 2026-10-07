@@ -6,7 +6,10 @@ import { validateSeoSchemas } from '../lib/seo/schema'
 import { getBriefIds, getBriefById } from '../lib/seo/content-briefs'
 import { mapProspectQuery } from '../lib/seo/serp-intent'
 import { expandLongTail, getKeywordClusters } from '../lib/seo/keywords'
-import { getIndexableRegistry } from '../lib/seo/page-registry'
+import { BLOG_SLUGS, getIndexableRegistry, PLANNED_PATHS } from '../lib/seo/page-registry'
+import { isBlogSlugInSitemap } from '../lib/blog/canonicalOverrides.js'
+import { getBlogPublishIso, isScheduledBlogSlugLive } from '../lib/blog/publicationSchedule.js'
+import { RAFAEL_CAP_FPA } from '../lib/seo/rafaelCapFpa'
 import { ORGANIZATION, SIRET } from '../lib/seo/site'
 import { ENTITY_CITATION, getCitationByPage } from '../lib/seo/citations'
 
@@ -60,23 +63,90 @@ function main() {
   }
 
   const registry = getIndexableRegistry()
-  if (registry.length < 40) {
+  if (registry.length < 60) {
     errors.push(`Registre sitemap trop court: ${registry.length} URLs`)
   }
 
   const registryPaths = new Set(registry.map((e) => e.path))
+  if (registryPaths.size !== registry.length) {
+    errors.push('Chemins sitemap en double')
+  }
+
   const excludedFromSitemap = [
     '/blog/formation-conseiller-insertion-professionnelle-lormont',
     '/blog/comment-reduire-couts-recrutement-30-pourcent-formation-rh',
+    ...PLANNED_PATHS,
   ]
   for (const path of excludedFromSitemap) {
     if (registryPaths.has(path)) {
-      errors.push(`URL non canonique encore dans le sitemap: ${path}`)
+      errors.push(`URL exclue encore dans le sitemap: ${path}`)
     }
+  }
+
+  if (registry.find((item) => item.path === '/')?.lastModified) {
+    errors.push('L’accueil ne doit pas avoir de lastmod du jour')
+  }
+  if (registry.find((item) => item.path === '/formations/courtes-professionnalisantes')?.lastModified !== '2026-05-13') {
+    errors.push('Les formations courtes doivent garder la date 2026-05-13')
+  }
+
+  const todayParis = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris' }).format(new Date())
+  for (const item of registry) {
+    if (!item.lastModified) continue
+    const isBlog = item.path.startsWith('/blog/')
+    const isCourteFiche =
+      item.path === '/formations/courtes-professionnalisantes' ||
+      item.path.startsWith('/formations/professionnalisantes/')
+    if (isBlog) {
+      const slug = item.path.slice('/blog/'.length)
+      if (item.lastModified !== getBlogPublishIso(slug)) {
+        errors.push(`lastmod blog incorrecte: ${item.path}`)
+      }
+    } else if (!isCourteFiche || item.lastModified !== '2026-05-13') {
+      errors.push(`lastmod inattendue: ${item.path} (${item.lastModified})`)
+    }
+    if (item.lastModified === todayParis) {
+      const slug = isBlog ? item.path.slice('/blog/'.length) : ''
+      if (getBlogPublishIso(slug) !== todayParis) {
+        errors.push(`lastmod du jour hors publication: ${item.path}`)
+      }
+    }
+  }
+
+  for (const slug of BLOG_SLUGS) {
+    const path = `/blog/${slug}`
+    const expected = isScheduledBlogSlugLive(slug) && isBlogSlugInSitemap(slug)
+    if (expected !== registryPaths.has(path)) {
+      errors.push(`Présence sitemap inattendue pour ${path}`)
+    }
+  }
+
+  for (const required of [
+    '/formations/cip/financement',
+    '/formations/cip/conditions-inscription',
+    '/formations/fpa/financement',
+    '/formations/fpa/conditions-inscription',
+    '/vae/titre-cip',
+    '/vae/titre-fpa',
+    '/formations/courtes-professionnalisantes/financement',
+  ]) {
+    if (!registryPaths.has(required)) errors.push(`Page satellite absente du sitemap: ${required}`)
   }
 
   if (!ORGANIZATION.telephone.startsWith('+33') || ORGANIZATION.telephone.includes('000000')) {
     errors.push(`Téléphone NAP invalide: ${ORGANIZATION.telephone}`)
+  }
+  if (RAFAEL_CAP_FPA.ficheUrl || RAFAEL_CAP_FPA.reference) {
+    errors.push('La fiche FPA Rafael ne doit pas inventer une URL ou une référence')
+  }
+  if (!RAFAEL_CAP_FPA.session.libelle.includes('en cours')) {
+    errors.push('La session FPA Rafael doit indiquer que la date est en cours')
+  }
+  if (RAFAEL_CAP_FPA.resume.includes('avril 2027')) {
+    errors.push('La fiche FPA Rafael ne doit pas figer avril 2027')
+  }
+  if (!ORGANIZATION.sameAs.some((url) => url.includes('0xd552ffe682f1bfd'))) {
+    errors.push('sameAs doit pointer vers la fiche Google ATIPIK RH')
   }
   if (!ORGANIZATION.sameAs.some((url) => url.includes('atipik-rh33'))) {
     errors.push('sameAs LinkedIn/Facebook doit utiliser atipik-rh33')

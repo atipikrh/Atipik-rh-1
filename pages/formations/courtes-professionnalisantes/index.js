@@ -2,18 +2,19 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import EntityCitationBlock from '../../components/EntityCitationBlock'
-import FormationFaqSection from '../../components/FormationFaqSection'
-import ServicePageSeoHead from '../../components/ServicePageSeoHead'
-import FormationQuickAnswers from '../../components/FormationQuickAnswers'
-import FormationLandingCtas from '../../components/FormationLandingCtas'
+import Header from '../../../components/Header'
+import Footer from '../../../components/Footer'
+import EntityCitationBlock from '../../../components/EntityCitationBlock'
+import FormationFaqSection from '../../../components/FormationFaqSection'
+import ServicePageSeoHead from '../../../components/ServicePageSeoHead'
+import FormationQuickAnswers from '../../../components/FormationQuickAnswers'
+import FormationLandingCtas from '../../../components/FormationLandingCtas'
+import SatelliteNav from '../../../components/SatelliteNav'
 import {
   FORMATION_PRO_LIST,
   buildJsonLdFormationProHub,
-} from '../../lib/seo/professionnalisantesConfig'
-import { TARIF_INTRA_TEXTE, TARIF_INTER_LABEL } from '../../lib/tarifs/tarifsCopy'
+} from '../../../lib/seo/professionnalisantesConfig'
+import { TARIF_INTRA_TEXTE, TARIF_INTER_LABEL } from '../../../lib/tarifs/tarifsCopy'
 import {
   MapPin,
   Euro,
@@ -102,7 +103,7 @@ export default function FormationsCourtesProfessionnalisantes() {
                   <br />
                   <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">professionnalisantes</span>
                   <br />
-                  <span className="text-2xl lg:text-3xl font-semibold">en insertion</span>
+                  <span className="text-2xl lg:text-3xl font-semibold">à Bordeaux</span>
                 </h1>
                 <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-light">
                   Des formations ancrées dans les <strong>réalités professionnelles</strong>
@@ -125,6 +126,11 @@ export default function FormationsCourtesProfessionnalisantes() {
               </div>
               <FormationQuickAnswers variant="hub" />
               <FormationLandingCtas variant="hub" />
+              <SatelliteNav
+                links={[
+                  { href: '/formations/courtes-professionnalisantes/financement', label: 'Financer une formation courte' },
+                ]}
+              />
             </div>
           </section>
 
