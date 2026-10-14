@@ -130,10 +130,10 @@ export default function HomePage() {
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-neutral-100 via-white to-muted-blue-200">
         {/* Background animé global */}
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-        <div className="absolute top-40 right-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-3000"></div>
+        <div className="hidden md:block absolute top-20 left-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="hidden md:block absolute top-40 right-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+        <div className="hidden md:block absolute bottom-20 left-1/3 w-80 h-80 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="hidden md:block absolute top-1/2 left-1/2 w-72 h-72 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-3000"></div>
         
         <div className="relative z-10">
           <Header isFixed={true} />
@@ -460,7 +460,7 @@ export default function HomePage() {
                   </p>
                   <div className="mt-auto">
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-sm text-accent-500 font-medium">Finançable CPF</span>
+                      <span className="text-sm font-semibold text-[#013F63]">Finançable CPF</span>
                     </div>
                     <Link
                       href="/formations"
@@ -496,7 +496,7 @@ export default function HomePage() {
                   </p>
                   <div className="mt-auto">
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-sm text-accent-500 font-medium">Finançable CPF</span>
+                      <span className="text-sm font-semibold text-[#013F63]">Finançable CPF</span>
                     </div>
                     <Link
                       href="/bilan-de-competences"
@@ -532,7 +532,7 @@ export default function HomePage() {
                   </p>
                   <div className="mt-auto">
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-sm text-accent-500 font-medium">Finançable CPF</span>
+                      <span className="text-sm font-semibold text-[#013F63]">Finançable CPF</span>
                     </div>
                     <Link
                       href="/vae"

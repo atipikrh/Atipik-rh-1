@@ -8,6 +8,7 @@ import FloatingPhoneButton from '../components/FloatingPhoneButton'
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics'
 import { rememberUtm } from '../lib/analytics'
 import { DEFAULT_OG_IMAGE } from '../lib/seo/site'
+import { fontVariables } from '../lib/fonts'
 
 const SITE_URL = 'https://www.atipikrh.com'
 const DEFAULT_TITLE = 'Atipik RH - Formation, Bilan de compétences & VAE à Lormont'
@@ -63,7 +64,9 @@ export default function App({ Component, pageProps }) {
         <meta key="twitter:image" name="twitter:image" content={DEFAULT_OG_IMAGE} />
       </Head>
       
-      <Component {...pageProps} />
+      <div className={fontVariables}>
+        <Component {...pageProps} />
+      </div>
       <FloatingPhoneButton />
       <CookieBanner />
       <SpeedInsights />

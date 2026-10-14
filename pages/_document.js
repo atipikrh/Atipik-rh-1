@@ -1,23 +1,18 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import { buildOrganizationJsonLd } from '../lib/seo/schema'
 import { GTM_CONSENT_SCRIPT, GTM_ID, GTM_LOADER_SCRIPT } from '../lib/gtm'
+import { fontVariables } from '../lib/fonts'
 
 export default function Document() {
   const schemaData = buildOrganizationJsonLd()
 
   return (
-    <Html lang="fr">
+    <Html lang="fr" className={fontVariables}>
       <Head>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <script dangerouslySetInnerHTML={{ __html: GTM_CONSENT_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: GTM_LOADER_SCRIPT }} />
 
-        {/* Preconnect pour optimiser le chargement des fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        
-        {/* Préchargement de la police Brittany */}
-        <link rel="preload" href="/Fonts/BrittanySignature.ttf" as="font" type="font/ttf" crossOrigin="" />
         
         {/* Meta tags génériques */}
         <meta charSet="utf-8" />

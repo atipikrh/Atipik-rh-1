@@ -28,10 +28,10 @@ module.exports = {
       fontFamily: {
         brand: ['Wonderful Branding', 'cursive'],
         brittany: ['Brittany', 'cursive'],
-        dancing: ['Dancing Script', 'cursive'],
+        dancing: ['var(--font-dancing)', 'cursive'],
         signatura: ['Signatura Monoline', 'cursive'],
-        sans: ['Montserrat', 'sans-serif'],
-        playfair: ['Playfair Display', 'serif'],
+        sans: ['var(--font-montserrat)', 'sans-serif'],
+        playfair: ['var(--font-playfair)', 'serif'],
       },
       spacing: {
         'section': '96px',
