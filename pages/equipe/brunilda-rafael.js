@@ -12,7 +12,7 @@ export default function BrunildaRafael() {
     <>
       <Head>
         <title>Brunilda RAFAEL | Chargée de Formation - Atipik RH</title>
-        <meta name="description" content="Découvrez le profil de Brunilda RAFAEL, Chargée de Formation chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
+        <meta key="description" name="description" content="Découvrez le profil de Brunilda RAFAEL, Chargée de Formation chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
         <meta name="keywords" content="Brunilda RAFAEL, chargée formation Atipik RH, formation professionnelle, Lormont" />
         <link rel="canonical" href="https://www.atipikrh.com/equipe/brunilda-rafael" />
       </Head>

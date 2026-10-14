@@ -12,7 +12,7 @@ export default function MathildeBastian() {
     <>
       <Head>
         <title>Mathilde BASTIAN | Assistante Administrative - Atipik RH</title>
-        <meta name="description" content="Découvrez le profil de Mathilde BASTIAN, Assistante Administrative chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
+        <meta key="description" name="description" content="Découvrez le profil de Mathilde BASTIAN, Assistante Administrative chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
         <meta name="keywords" content="Mathilde BASTIAN, assistante administrative Atipik RH, formation professionnelle, Lormont" />
         <link rel="canonical" href="https://www.atipikrh.com/equipe/mathilde-bastian" />
       </Head>

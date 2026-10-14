@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Clock } from 'lucide-react'
 import ServicePageSeoHead from '../components/ServicePageSeoHead'
@@ -9,6 +9,7 @@ import EntityCitationBlock from '../components/EntityCitationBlock'
 import FormationFaqSection from '../components/FormationFaqSection'
 import ActualitesSite from '../components/ActualitesSite'
 import { VISITE_CENTRE_VIDEO } from '../lib/seo/visiteCentreVideo'
+import { OFFICIAL_SOURCES } from '../lib/seo/citations'
 import { DATES_CIP, DATES_FPA, getUpcomingReunions } from '../lib/reunions/dates.js'
 
 export default function HomePage() {
@@ -81,6 +82,24 @@ export default function HomePage() {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
 
+  const touchStart = useRef(null)
+
+  const onTouchStart = (event) => {
+    const touch = event.changedTouches[0]
+    touchStart.current = { x: touch.clientX, y: touch.clientY }
+  }
+
+  const onTouchEnd = (event) => {
+    if (!touchStart.current) return
+    const touch = event.changedTouches[0]
+    const deltaX = touch.clientX - touchStart.current.x
+    const deltaY = touch.clientY - touchStart.current.y
+    touchStart.current = null
+    if (Math.abs(deltaX) < 48 || Math.abs(deltaX) < Math.abs(deltaY)) return
+    if (deltaX < 0) nextSlide()
+    else prevSlide()
+  }
+
   const getMobileDescription = (slide) => {
     const mobileDescriptionsBySlideId = {
       1: "Faites le point sur votre avenir professionnel avec notre quiz guidé en 3 minutes.",
@@ -120,7 +139,11 @@ export default function HomePage() {
           <Header isFixed={true} />
         
         {/* Bandeau déroulant (Carousel) - Style compact */}
-        <section className="relative min-h-[540px] sm:min-h-[500px] md:min-h-[480px] lg:h-[430px] overflow-hidden rounded-lg mx-2 max-[375px]:mx-1.5 sm:mx-4 lg:mx-8 mt-24 shadow-2xl">
+        <section
+          className="relative min-h-[540px] sm:min-h-[500px] md:min-h-[480px] lg:h-[430px] overflow-hidden rounded-lg mx-2 max-[375px]:mx-1.5 sm:mx-4 lg:mx-8 mt-24 shadow-2xl touch-pan-y"
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+        >
           {slides.map((slide, index) => (
             <div
               key={slide.id}
@@ -197,7 +220,7 @@ export default function HomePage() {
                       {!slide.isQuiz && !slide.isReunion && !slide.isPaiement && (
                         <a
                           href={slide.buttonLink}
-                          className={`inline-flex items-center px-4 max-[375px]:px-3 sm:px-8 py-2.5 max-[375px]:py-2 sm:py-4 bg-white font-bold rounded-lg transition-all duration-300 shadow-xl text-sm max-[375px]:text-xs sm:text-base lg:text-lg mt-3 sm:mt-6 transform hover:scale-105 ${
+                          className={`inline-flex items-center justify-center min-h-11 px-4 sm:px-8 py-2.5 sm:py-4 bg-white font-bold rounded-lg transition-all duration-300 shadow-xl text-sm sm:text-base lg:text-lg mt-3 sm:mt-6 transform hover:scale-105 ${
                             slide.isReunion
                               ? 'text-accent-500 hover:bg-accent-300' 
                               : slide.id === 4
@@ -220,7 +243,7 @@ export default function HomePage() {
                           </div>
                           <Link
                             href="/bilan-de-competences/quiz"
-                            className="w-full inline-flex items-center justify-center px-4 py-2 max-[375px]:py-1.5 sm:py-2.5 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-lg hover:from-accent-600 hover:to-accent-600 transition-all duration-300 text-xs sm:text-sm"
+                            className="w-full inline-flex items-center justify-center min-h-11 px-4 py-2.5 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-lg hover:from-accent-600 hover:to-accent-600 transition-all duration-300 text-sm"
                           >
                             Commencer le quiz
                           </Link>
@@ -243,7 +266,7 @@ export default function HomePage() {
                           ) : null}
                           <Link
                             href="/s-inscrire"
-                            className="w-full inline-flex items-center justify-center px-4 py-2 max-[375px]:py-1.5 sm:py-2.5 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-lg transition-all duration-300 text-xs sm:text-sm"
+                            className="w-full inline-flex items-center justify-center min-h-11 px-4 py-2.5 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-lg transition-all duration-300 text-sm"
                           >
                             Voir les prochaines dates
                           </Link>
@@ -257,7 +280,7 @@ export default function HomePage() {
                           )}
                           <Link
                             href="/s-inscrire"
-                            className="w-full inline-flex items-center justify-center px-4 py-2 max-[375px]:py-1.5 sm:py-2.5 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-lg hover:from-accent-600 hover:to-accent-600 transition-all duration-300 text-xs sm:text-sm"
+                            className="w-full inline-flex items-center justify-center min-h-11 px-4 py-2.5 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-lg hover:from-accent-600 hover:to-accent-600 transition-all duration-300 text-sm"
                           >
                             accédez ici
                           </Link>
@@ -344,44 +367,61 @@ export default function HomePage() {
             </div>
           ))}
 
-          {/* Boutons de navigation - Plus discrets */}
           <button
+            type="button"
             onClick={prevSlide}
-            className="absolute left-2 max-[375px]:left-1.5 sm:left-3 top-auto bottom-8 translate-y-0 lg:top-1/2 lg:bottom-auto lg:-translate-y-1/2 bg-black/30 backdrop-blur-sm text-white p-1.5 max-[375px]:p-1 sm:p-2 rounded-full hover:bg-black/50 transition-colors duration-300 z-10"
+            aria-label="Diapositive précédente"
+            className="absolute left-2 sm:left-3 top-auto bottom-6 translate-y-0 lg:top-1/2 lg:bottom-auto lg:-translate-y-1/2 inline-flex items-center justify-center min-h-11 min-w-11 bg-black/30 backdrop-blur-sm text-white rounded-full hover:bg-black/50 transition-colors duration-300 z-10"
           >
-            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          
+
           <button
+            type="button"
             onClick={nextSlide}
-            className="absolute right-2 max-[375px]:right-1.5 sm:right-3 top-auto bottom-8 translate-y-0 lg:top-1/2 lg:bottom-auto lg:-translate-y-1/2 bg-black/30 backdrop-blur-sm text-white p-1.5 max-[375px]:p-1 sm:p-2 rounded-full hover:bg-black/50 transition-colors duration-300 z-10"
+            aria-label="Diapositive suivante"
+            className="absolute right-2 sm:right-3 top-auto bottom-6 translate-y-0 lg:top-1/2 lg:bottom-auto lg:-translate-y-1/2 inline-flex items-center justify-center min-h-11 min-w-11 bg-black/30 backdrop-blur-sm text-white rounded-full hover:bg-black/50 transition-colors duration-300 z-10"
           >
-            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
-          {/* Indicateurs de slides - Style moderne */}
-          <div className="absolute bottom-2.5 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1.5 sm:space-x-2">
-            {slides.map((_, index) => (
+          <div className="absolute bottom-1 left-1/2 -translate-x-1/2 flex">
+            {slides.map((slide, index) => (
               <button
-                key={index}
+                key={slide.id}
+                type="button"
                 onClick={() => goToSlide(index)}
-                className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-white ring-2 ring-white/70' : 'bg-white/60'
-                }`}
-              />
+                aria-label={`Aller à la diapositive ${index + 1}`}
+                aria-current={index === currentSlide ? 'true' : undefined}
+                className="inline-flex items-center justify-center min-h-11 min-w-11"
+              >
+                <span
+                  className={`block w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? 'bg-white ring-2 ring-white/70' : 'bg-white/60'
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </section>
 
         <section className="pt-12 pb-4">
           <div className="container mx-auto px-4">
-            <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] text-center mb-6 leading-tight">
+            <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] text-center mb-3 leading-tight">
               Atipik RH — organisme de formation à Lormont
             </h1>
+            <p className="text-center mb-6">
+              <a
+                href={OFFICIAL_SOURCES.qualiopiPdf.href}
+                className="inline-flex items-center justify-center min-h-11 px-3 text-base font-semibold text-[#013F63] underline underline-offset-4 hover:text-[#012a4a]"
+              >
+                Organisme certifié Qualiopi
+              </a>
+            </p>
             <EntityCitationBlock pageId="accueil" />
           </div>
         </section>

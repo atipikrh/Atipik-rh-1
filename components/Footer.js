@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { Phone, Mail } from 'lucide-react'
 import FinancementDisclaimer from './FinancementDisclaimer'
 import { isFormationLegalDisclaimerPath } from '../lib/tarifs/formationLegalRoutes'
+import { SOCIAL_URLS } from '../lib/seo/site'
 
 export default function Footer() {
   const router = useRouter()
@@ -143,6 +144,16 @@ export default function Footer() {
                 <Phone className="w-4 h-4 mr-2" />
                 <a href="tel:+33783019955" className="hover:text-white transition-colors">
                   07 83 01 99 55
+                </a>
+              </p>
+              <p>
+                <a
+                  href={SOCIAL_URLS.googleReview}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center min-h-11 hover:text-white transition-colors underline underline-offset-4"
+                >
+                  Laisser un avis Google
                 </a>
               </p>
               <p className="flex items-center">

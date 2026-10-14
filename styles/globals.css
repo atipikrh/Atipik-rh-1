@@ -51,6 +51,14 @@
     body.has-sticky-cta {
       padding-bottom: calc(5.25rem + env(safe-area-inset-bottom, 0px));
     }
+
+    body.has-sticky-cta .floating-phone {
+      bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+    }
+  }
+
+  .floating-phone {
+    bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
   }
 
   img,

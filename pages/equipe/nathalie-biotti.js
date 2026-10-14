@@ -12,7 +12,7 @@ export default function NathalieBiotti() {
     <>
       <Head>
         <title>Nathalie BIOTTI | Formatrice et intervenante en analyse des pratiques professionnelles - Atipik RH</title>
-        <meta name="description" content="Découvrez le profil de Nathalie BIOTTI, Formatrice et intervenante en analyse des pratiques professionnelles chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
+        <meta key="description" name="description" content="Découvrez le profil de Nathalie BIOTTI, Formatrice et intervenante en analyse des pratiques professionnelles chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
         <meta name="keywords" content="Nathalie BIOTTI, formatrice Atipik RH, formation professionnelle, Lormont" />
         <link rel="canonical" href="https://www.atipikrh.com/equipe/nathalie-biotti" />
       </Head>

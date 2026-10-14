@@ -12,7 +12,7 @@ export default function VanessaNoahEwodo() {
     <>
       <Head>
         <title>Vanessa NOAH EWODO | Directrice - Atipik RH</title>
-        <meta name="description" content="Découvrez le profil de Vanessa NOAH EWODO, Directrice d'Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
+        <meta key="description" name="description" content="Découvrez le profil de Vanessa NOAH EWODO, Directrice d'Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
         <meta name="keywords" content="Vanessa NOAH EWODO, directrice Atipik RH, formation professionnelle, Lormont" />
         <link rel="canonical" href="https://www.atipikrh.com/equipe/vanessa-noah-ewodo" />
       </Head>

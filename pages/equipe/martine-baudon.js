@@ -12,7 +12,7 @@ export default function MartineBeaudon() {
     <>
       <Head>
         <title>Martine BAUDON | Formatrice - Atipik RH</title>
-        <meta name="description" content="Découvrez le profil de Martine BAUDON, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
+        <meta key="description" name="description" content="Découvrez le profil de Martine BAUDON, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
         <meta name="keywords" content="Martine BAUDON, formatrice Atipik RH, formation professionnelle, Lormont" />
         <link rel="canonical" href="https://www.atipikrh.com/equipe/martine-baudon" />
       </Head>

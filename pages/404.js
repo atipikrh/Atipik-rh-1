@@ -9,6 +9,7 @@ export default function Custom404() {
       <Head>
         <title>Page non trouvée | Atipik RH</title>
         <meta
+          key="description"
           name="description"
           content="La page demandée n'existe pas ou a été déplacée. Retournez à l'accueil Atipik RH."
         />

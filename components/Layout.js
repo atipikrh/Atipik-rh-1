@@ -10,7 +10,7 @@ export default function Layout({ children, title, description, canonical }) {
     <>
       <Head>
         <title>{title || "Atipik RH - Formation, Bilan de compétences & VAE à Lormont"}</title>
-        <meta name="description" content={description || "Centre de formation à Lormont (33) : bilan de compétences, VAE, formations certifiantes CPF. Accompagnement personnalisé pour votre évolution professionnelle."} />
+        <meta key="description" name="description" content={description || "Centre de formation à Lormont (33) : bilan de compétences, VAE, formations certifiantes CPF. Accompagnement personnalisé pour votre évolution professionnelle."} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         {canonical && <link rel="canonical" href={canonical} />}

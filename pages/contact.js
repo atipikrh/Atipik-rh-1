@@ -13,6 +13,7 @@ import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Facebook, In
 import { getRecaptchaToken } from '../lib/recaptcha'
 import { resolveContactSujet, withLeftoverMessage } from '../lib/seo/contactSujet'
 import { trackLead } from '../lib/analytics'
+import { SOCIAL_URLS } from '../lib/seo/site'
 
 export default function Contact({ hasQuery: hasQueryFromServer = false }) {
   const router = useRouter()
@@ -139,7 +140,7 @@ export default function Contact({ hasQuery: hasQueryFromServer = false }) {
       <>
         <Head>
           <title>Message envoyé - Contact Atipik RH</title>
-          <meta name="description" content="Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais." />
+          <meta key="description" name="description" content="Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais." />
           <link rel="canonical" href="https://www.atipikrh.com/contact" />
           {hasQuery ? (
             <meta key="robots" name="robots" content="noindex, follow" />
@@ -190,9 +191,17 @@ export default function Contact({ hasQuery: hasQueryFromServer = false }) {
                       </Link>
                       <a
                         href="tel:0783019955"
-                        className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#013F63] text-[#013F63] font-semibold rounded-lg hover:bg-[#013F63] hover:text-white transition-colors duration-300"
+                        className="inline-flex items-center justify-center min-h-11 px-6 py-3 border-2 border-[#013F63] text-[#013F63] font-semibold rounded-lg hover:bg-[#013F63] hover:text-white transition-colors duration-300"
                       >
                         Nous appeler
+                      </a>
+                      <a
+                        href={SOCIAL_URLS.googleReview}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center min-h-11 px-6 py-3 border-2 border-[#013F63] text-[#013F63] font-semibold rounded-lg hover:bg-[#013F63] hover:text-white transition-colors duration-300"
+                      >
+                        Laisser un avis Google
                       </a>
                     </div>
                   </div>
@@ -212,7 +221,7 @@ export default function Contact({ hasQuery: hasQueryFromServer = false }) {
       <RecaptchaV3Script />
       <Head>
         <title>Contact - Atipik RH | Centre de formation à Lormont</title>
-        <meta name="description" content="Contactez Atipik RH pour vos projets de formation, bilan de compétences et VAE à Lormont. Échangeons sur vos objectifs professionnels." />
+        <meta key="description" name="description" content="Contactez Atipik RH pour vos projets de formation, bilan de compétences et VAE à Lormont. Échangeons sur vos objectifs professionnels." />
         <meta name="keywords" content="contact Atipik RH, formation Lormont, rendez-vous bilan compétences, contact VAE Bordeaux" />
         <link rel="canonical" href="https://www.atipikrh.com/contact" />
         {hasQuery ? (

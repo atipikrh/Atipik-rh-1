@@ -3795,7 +3795,7 @@ export default function BlogArticle({ article: articleProp }) {
       <>
         <Head>
           <title>Article non trouvé | Blog Atipik RH</title>
-          <meta name="description" content="L'article demandé n'existe pas ou a été déplacé." />
+          <meta key="description" name="description" content="L'article demandé n'existe pas ou a été déplacé." />
           <meta key="robots" name="robots" content="noindex, follow" />
         </Head>
         <div className="min-h-screen bg-white">
@@ -3819,15 +3819,15 @@ export default function BlogArticle({ article: articleProp }) {
     <>
       {article.conversion ? <RecaptchaV3Script /> : null}
       <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={article.seo.metaDescription} />
+        <title key="title">{pageTitle}</title>
+        <meta key="description" name="description" content={article.seo.metaDescription} />
         <meta name="keywords" content={article.keywords} />
         <link rel="canonical" href={canonicalUrl} />
         
         {/* Open Graph pour les réseaux sociaux */}
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={article.seo.metaDescription} />
-        <meta property="og:image" content={imageUrl} />
+        <meta key="og:image" property="og:image" content={imageUrl} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="Atipik RH" />
@@ -3836,7 +3836,7 @@ export default function BlogArticle({ article: articleProp }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={article.seo.metaDescription} />
-        <meta name="twitter:image" content={imageUrl} />
+        <meta key="twitter:image" name="twitter:image" content={imageUrl} />
         
         {/* Schema.org JSON-LD */}
         <script 

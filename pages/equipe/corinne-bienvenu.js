@@ -12,7 +12,7 @@ export default function CorinneBienvenu() {
     <>
       <Head>
         <title>Corinne BIENVENU | Formatrice - Atipik RH</title>
-        <meta name="description" content="Découvrez le profil de Corinne BIENVENU, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
+        <meta key="description" name="description" content="Découvrez le profil de Corinne BIENVENU, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
         <meta name="keywords" content="Corinne BIENVENU, formatrice Atipik RH, formation professionnelle, Lormont" />
         <link rel="canonical" href="https://www.atipikrh.com/equipe/corinne-bienvenu" />
       </Head>

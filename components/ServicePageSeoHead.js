@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { BASE_URL } from '../lib/seo/site'
+import { BASE_URL, DEFAULT_OG_IMAGE } from '../lib/seo/site'
 import { getBriefById } from '../lib/seo/content-briefs'
 import { buildRecommendedSchema } from '../lib/seo/schema'
 
@@ -22,8 +22,8 @@ export default function ServicePageSeoHead({ briefId, keywords }) {
 
   return (
     <Head>
-      <title>{brief.metaTitle}</title>
-      <meta name="description" content={brief.metaDescription} />
+      <title key="title">{brief.metaTitle}</title>
+      <meta key="description" name="description" content={brief.metaDescription} />
       {keywordContent ? <meta name="keywords" content={keywordContent} /> : null}
       <link rel="canonical" href={canonical} />
 
@@ -33,10 +33,12 @@ export default function ServicePageSeoHead({ briefId, keywords }) {
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Atipik RH" />
       <meta property="og:locale" content="fr_FR" />
+      <meta key="og:image" property="og:image" content={DEFAULT_OG_IMAGE} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={brief.metaTitle} />
       <meta name="twitter:description" content={brief.metaDescription} />
+      <meta key="twitter:image" name="twitter:image" content={DEFAULT_OG_IMAGE} />
 
       {schemaScripts.map((ld, index) => (
         <script

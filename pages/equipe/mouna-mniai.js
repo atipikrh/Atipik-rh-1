@@ -12,7 +12,7 @@ export default function MounaMniai() {
     <>
       <Head>
         <title>Mouna MNIAI | Consultante en insertion socioprofessionnelle - Atipik RH</title>
-        <meta name="description" content="Découvrez le profil de Mouna MNIAI, Consultante en insertion socioprofessionnelle chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
+        <meta key="description" name="description" content="Découvrez le profil de Mouna MNIAI, Consultante en insertion socioprofessionnelle chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
         <meta name="keywords" content="Mouna MNIAI, formatrice Atipik RH, formation professionnelle, Lormont" />
         <link rel="canonical" href="https://www.atipikrh.com/equipe/mouna-mniai" />
       </Head>

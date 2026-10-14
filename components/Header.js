@@ -368,7 +368,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                 {/* Formations */}
                 <div>
                   <button 
-                    className="text-[#013F63] font-medium text-base mb-3 flex items-center justify-between w-full"
+                    className="text-[#013F63] font-medium text-base min-h-11 py-3 flex items-center justify-between w-full"
                     onClick={() => setIsMobileFormationsOpen(!isMobileFormationsOpen)}
                   >
                     Formations
@@ -385,7 +385,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                     <div className="space-y-2 ml-4">
                       <div>
                         <button
-                          className="text-sm text-[#013F63] hover:text-[#012a4a] font-medium py-2 flex items-center justify-between w-full"
+                          className="text-sm text-[#013F63] hover:text-[#012a4a] font-medium min-h-11 py-3 flex items-center justify-between w-full"
                           onClick={() => setIsMobileCIPOpen(!isMobileCIPOpen)}
                         >
                           Formation CIP
@@ -402,28 +402,28 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                           <div className="ml-4 space-y-1">
                             <Link 
                               href="/formations/cip" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
+                              className="flex items-center text-sm text-[#013F63] hover:text-[#012a4a] min-h-11 py-3"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               Formation complète
                             </Link>
                             <Link 
                               href="/formations/ccp1" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
+                              className="flex items-center text-sm text-[#013F63] hover:text-[#012a4a] min-h-11 py-3"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               CCP1
                             </Link>
                             <Link 
                               href="/formations/ccp2" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
+                              className="flex items-center text-sm text-[#013F63] hover:text-[#012a4a] min-h-11 py-3"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               CCP2
                             </Link>
                             <Link 
                               href="/formations/ccp3" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
+                              className="flex items-center text-sm text-[#013F63] hover:text-[#012a4a] min-h-11 py-3"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               CCP3
@@ -434,7 +434,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                       
                       <div>
                         <button
-                          className="text-sm text-[#013F63] hover:text-[#012a4a] font-medium py-2 flex items-center justify-between w-full"
+                          className="text-sm text-[#013F63] hover:text-[#012a4a] font-medium min-h-11 py-3 flex items-center justify-between w-full"
                           onClick={() => setIsMobileFPAOpen(!isMobileFPAOpen)}
                         >
                           Formation FPA
@@ -451,35 +451,35 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                           <div className="ml-4 space-y-1">
                             <Link 
                               href="/formations/fpa" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
+                              className="flex items-center text-sm text-[#013F63] hover:text-[#012a4a] min-h-11 py-3"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               Formation complète
                             </Link>
                             <Link 
                               href="/formations/fpa/ccp1" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
+                              className="flex items-center text-sm text-[#013F63] hover:text-[#012a4a] min-h-11 py-3"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               CCP1
                             </Link>
                             <Link 
                               href="/formations/fpa/ccp2" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
+                              className="flex items-center text-sm text-[#013F63] hover:text-[#012a4a] min-h-11 py-3"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               CCP2
                             </Link>
                             <Link 
                               href="/formations/fpa/ccp3" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
+                              className="flex items-center text-sm text-[#013F63] hover:text-[#012a4a] min-h-11 py-3"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               CCP3
                             </Link>
                             <Link 
                               href="/formations/fpa/ccp4" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
+                              className="flex items-center text-sm text-[#013F63] hover:text-[#012a4a] min-h-11 py-3"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               CCP4
@@ -490,7 +490,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                       
                       <div>
                         <button
-                          className="text-sm text-[#013F63] hover:text-[#012a4a] font-medium py-2 flex items-center justify-between w-full"
+                          className="text-sm text-[#013F63] hover:text-[#012a4a] font-medium min-h-11 py-3 flex items-center justify-between w-full"
                           onClick={() => setIsMobileCourtesOpen(!isMobileCourtesOpen)}
                         >
                           Formations courtes professionnalisantes
@@ -509,7 +509,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                               <Link
                                 key={f.slug}
                                 href={f.path}
-                                className="block text-xs text-[#013F63] hover:text-[#012a4a] py-2.5"
+                                className="flex items-center text-sm text-[#013F63] hover:text-[#012a4a] min-h-11 py-3"
                                 onClick={() => setIsMobileMenuOpen(false)}
                               >
                                 {f.titreMenu}
@@ -525,7 +525,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                 {/* Bilan de compétences */}
                 <Link 
                   href="/bilan-de-competences" 
-                  className="block text-[#013F63] hover:text-[#012a4a] font-medium text-base py-2"
+                  className="flex items-center text-[#013F63] hover:text-[#012a4a] font-medium text-base min-h-11 py-3"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Bilan de compétences
@@ -534,7 +534,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                 {/* VAE */}
                 <Link 
                   href="/vae" 
-                  className="block text-[#013F63] hover:text-[#012a4a] font-medium text-base py-2"
+                  className="flex items-center text-[#013F63] hover:text-[#012a4a] font-medium text-base min-h-11 py-3"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   VAE
@@ -543,7 +543,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                 {/* Qui sommes-nous */}
                 <div>
                   <button 
-                    className="text-[#013F63] font-medium text-base mb-3 flex items-center justify-between w-full"
+                    className="text-[#013F63] font-medium text-base min-h-11 py-3 flex items-center justify-between w-full"
                     onClick={() => setIsMobileQuiSommesNousOpen(!isMobileQuiSommesNousOpen)}
                   >
                     Qui sommes-nous
@@ -560,28 +560,28 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                     <div className="space-y-2 ml-4">
                       <Link 
                         href="/notre-histoire" 
-                        className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
+                        className="flex items-center text-sm text-[#013F63] hover:text-[#012a4a] min-h-11 py-3"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         Notre histoire
                       </Link>
                       <Link 
                         href="/notre-equipe" 
-                        className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
+                        className="flex items-center text-sm text-[#013F63] hover:text-[#012a4a] min-h-11 py-3"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         Notre équipe
                       </Link>
                       <Link 
                         href="/certification" 
-                        className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
+                        className="flex items-center text-sm text-[#013F63] hover:text-[#012a4a] min-h-11 py-3"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         Certification
                       </Link>
                       <Link 
                         href="/partenariat" 
-                        className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
+                        className="flex items-center text-sm text-[#013F63] hover:text-[#012a4a] min-h-11 py-3"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         Partenariat
@@ -593,7 +593,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                 {/* Financement */}
                 <Link 
                   href="/financement" 
-                  className="block text-[#013F63] hover:text-[#012a4a] font-medium text-base py-2"
+                  className="flex items-center text-[#013F63] hover:text-[#012a4a] font-medium text-base min-h-11 py-3"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Financement

@@ -12,7 +12,7 @@ export default function CoralineAbadie() {
     <>
       <Head>
         <title>Coraline ABADIE | Formatrice par le théâtre et l'impro - Atipik RH</title>
-        <meta name="description" content="Découvrez le profil de Coraline ABADIE, Formatrice par le théâtre et l'impro chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
+        <meta key="description" name="description" content="Découvrez le profil de Coraline ABADIE, Formatrice par le théâtre et l'impro chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
         <meta name="keywords" content="Coraline ABADIE, formatrice Atipik RH, formation professionnelle, Lormont" />
         <link rel="canonical" href="https://www.atipikrh.com/equipe/coraline-abadie" />
       </Head>

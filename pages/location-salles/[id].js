@@ -58,7 +58,7 @@ export default function SalleDetail({ id, salle }) {
     <>
       <Head>
         <title>{salle.metaTitle || `${salle.nom} - Location Salle Formation Lormont | Atipik RH`}</title>
-        <meta name="description" content={salle.metaDescription || `Louez ${salle.nom} à Lormont. ${salle.capacite}, ${salle.surface}. À partir de ${salle.demiJournee}€. Équipée, parking gratuit.`} />
+        <meta key="description" name="description" content={salle.metaDescription || `Louez ${salle.nom} à Lormont. ${salle.capacite}, ${salle.surface}. À partir de ${salle.demiJournee}€. Équipée, parking gratuit.`} />
         <link rel="canonical" href={`https://www.atipikrh.com/location-salles/${id}`} />
         <meta property="og:title" content={salle.metaTitle || `${salle.nom} - Location Salle Formation Lormont | Atipik RH`} />
         <meta property="og:description" content={salle.metaDescription || `Louez ${salle.nom} à Lormont. ${salle.capacite}, ${salle.surface}. À partir de ${salle.demiJournee}€. Équipée, parking gratuit.`} />

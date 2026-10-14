@@ -5,6 +5,9 @@
 
 export const BASE_URL = 'https://www.atipikrh.com'
 
+/** Image de partage par défaut (Open Graph / Twitter), URL absolue. */
+export const DEFAULT_OG_IMAGE = `${BASE_URL}/images/blog/instagram/presentation-atipik-rh.jpg`
+
 export const TELEPHONE_DISPLAY = '07 83 01 99 55'
 export const TELEPHONE_E164 = '+33783019955'
 
@@ -13,6 +16,7 @@ export const SOCIAL_URLS = {
   facebook: 'https://www.facebook.com/atipikrh33',
   instagram: 'https://www.instagram.com/atipikrh33',
   /** Fiche Google vérifiée le 7 octobre 2026 (CID 18362370091856397133). */
+  googleReview: 'https://www.google.com/maps?cid=18362370091856397133',
   googleMaps:
     'https://www.google.com/maps/place/ATIPIK+RH/@44.8806821,-0.514707,17z/data=!3m1!4b1!4m6!3m5!1s0xd552ffe682f1bfd:0xfed43e4f7f5b834d!8m2!3d44.8806821!4d-0.514707!16s%2Fg%2F11j07z3syz',
 } as const
@@ -37,6 +41,10 @@ export const ORGANIZATION = {
     SOCIAL_URLS.facebook,
     SOCIAL_URLS.instagram,
     SOCIAL_URLS.googleMaps,
+    /** Fiche publique Justacoté (Lormont), vérifiée le 14 octobre 2026. */
+    'https://www.justacote.com/lormont-33310/cours-et-formations/atipik-rh-3225089.htm',
+    /** Fiche publique Hoodspot / Petites Affiches (SIRET 84890745700024). */
+    'https://hoodspot.fr/centre-de-formation/atipik-rh-84890745700024/',
   ],
 } as const
 

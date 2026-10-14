@@ -4,8 +4,10 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import CookieBanner from '../components/CookieBanner'
+import FloatingPhoneButton from '../components/FloatingPhoneButton'
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics'
 import { rememberUtm } from '../lib/analytics'
+import { DEFAULT_OG_IMAGE } from '../lib/seo/site'
 
 const SITE_URL = 'https://www.atipikrh.com'
 const DEFAULT_TITLE = 'Atipik RH - Formation, Bilan de compétences & VAE à Lormont'
@@ -44,9 +46,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>{DEFAULT_TITLE}</title>
-        <meta name="description" content={DEFAULT_DESCRIPTION} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title key="title">{DEFAULT_TITLE}</title>
+        <meta key="description" name="description" content={DEFAULT_DESCRIPTION} />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta key="robots" name="robots" content="index,follow,max-image-preview:large" />
         <meta property="og:site_name" content="Atipik RH" />
         <meta property="og:locale" content="fr_FR" />
@@ -54,12 +56,15 @@ export default function App({ Component, pageProps }) {
         <meta property="og:title" content={DEFAULT_TITLE} />
         <meta property="og:description" content={DEFAULT_DESCRIPTION} />
         <meta property="og:url" content={canonicalUrl} />
+        <meta key="og:image" property="og:image" content={DEFAULT_OG_IMAGE} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={DEFAULT_TITLE} />
         <meta name="twitter:description" content={DEFAULT_DESCRIPTION} />
+        <meta key="twitter:image" name="twitter:image" content={DEFAULT_OG_IMAGE} />
       </Head>
       
       <Component {...pageProps} />
+      <FloatingPhoneButton />
       <CookieBanner />
       <SpeedInsights />
     </>

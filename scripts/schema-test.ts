@@ -162,6 +162,15 @@ function main() {
   if (!ORGANIZATION.sameAs.some((url) => url.includes('atipik-rh33'))) {
     errors.push('sameAs LinkedIn/Facebook doit utiliser atipik-rh33')
   }
+  if (!ORGANIZATION.sameAs.includes('https://www.justacote.com/lormont-33310/cours-et-formations/atipik-rh-3225089.htm')) {
+    errors.push('sameAs doit inclure la fiche publique Justacoté')
+  }
+  if (!ORGANIZATION.sameAs.includes('https://hoodspot.fr/centre-de-formation/atipik-rh-84890745700024/')) {
+    errors.push('sameAs doit inclure la fiche publique Hoodspot')
+  }
+  if (ORGANIZATION.sameAs.some((url) => /biz\.yelp|profil-espace-pro|\/membre\/ma-fiche/i.test(url))) {
+    errors.push('sameAs ne doit pas pointer vers un espace de gestion (Yelp Biz, Justacoté Pro, Petites Affiches)')
+  }
   if (ORGANIZATION.taxID !== SIRET) {
     errors.push(`taxID organisation attendu ${SIRET}`)
   }

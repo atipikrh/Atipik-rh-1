@@ -10,6 +10,7 @@ import FinancementDisclaimer from '../components/FinancementDisclaimer'
 import RecaptchaV2Invisible from '../components/RecaptchaV2Invisible'
 import { DATES_CIP, DATES_FPA } from '../lib/reunions/dates.js'
 import { trackLead } from '../lib/analytics'
+import { SOCIAL_URLS } from '../lib/seo/site'
 
 export default function SInscrire() {
   const router = useRouter()
@@ -158,7 +159,7 @@ export default function SInscrire() {
       <>
         <Head>
           <title>Inscription confirmée - Réunions d'information collective | Atipik RH</title>
-          <meta name="description" content="Votre inscription à nos réunions d'information a été confirmée. Nous vous contacterons prochainement." />
+          <meta key="description" name="description" content="Votre inscription à nos réunions d'information a été confirmée. Nous vous contacterons prochainement." />
         </Head>
 
         <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -205,10 +206,18 @@ export default function SInscrire() {
                       </Link>
                       <Link
                         href="/contact"
-                        className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#013F63] text-[#013F63] font-semibold rounded-lg hover:bg-[#013F63] hover:text-white transition-colors duration-300"
+                        className="inline-flex items-center justify-center min-h-11 px-6 py-3 border-2 border-[#013F63] text-[#013F63] font-semibold rounded-lg hover:bg-[#013F63] hover:text-white transition-colors duration-300"
                       >
                         Nous contacter
                       </Link>
+                      <a
+                        href={SOCIAL_URLS.googleReview}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center min-h-11 px-6 py-3 border-2 border-[#013F63] text-[#013F63] font-semibold rounded-lg hover:bg-[#013F63] hover:text-white transition-colors duration-300"
+                      >
+                        Laisser un avis Google
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -226,7 +235,7 @@ export default function SInscrire() {
     <>
       <Head>
         <title>S'inscrire aux réunions d'information collective | Atipik RH</title>
-        <meta name="description" content="Inscrivez-vous à nos réunions d'information pour découvrir nos formations. Réunions organisées 2 fois par mois, le samedi matin à Lormont." />
+        <meta key="description" name="description" content="Inscrivez-vous à nos réunions d'information pour découvrir nos formations. Réunions organisées 2 fois par mois, le samedi matin à Lormont." />
         <meta name="keywords" content="inscription, réunion information, formation, Atipik RH, Lormont, samedi" />
         <link rel="canonical" href="https://www.atipikrh.com/s-inscrire" />
       </Head>

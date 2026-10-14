@@ -9,7 +9,7 @@ export default function CGV() {
     <>
       <Head>
         <title>Conditions Générales de Vente | Atipik RH</title>
-        <meta name="description" content="Conditions générales de vente des formations professionnelles proposées par Atipik RH - Modalités d'inscription, tarifs et conditions d'annulation." />
+        <meta key="description" name="description" content="Conditions générales de vente des formations professionnelles proposées par Atipik RH - Modalités d'inscription, tarifs et conditions d'annulation." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.atipikrh.com/cgv" />
       </Head>
