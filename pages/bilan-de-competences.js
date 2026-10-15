@@ -292,7 +292,7 @@ export default function BilanCompetences() {
                                           src="/images/financements/cpf.jpg" 
                                           alt="CPF" 
                                           width={40} 
-                                          height={40}
+                                          height={27}
                                           className="object-contain rounded"
                                         />
                                       </div>
@@ -309,7 +309,7 @@ export default function BilanCompetences() {
                                           src="/images/financements/logo-opco.webp" 
                                           alt="OPCO" 
                                           width={40} 
-                                          height={40}
+                                          height={32}
                                           className="object-contain rounded"
                                         />
                                       </div>
@@ -326,7 +326,7 @@ export default function BilanCompetences() {
                                           src="/images/financements/logo entreprise.jpg" 
                                           alt="Employeur" 
                                           width={40} 
-                                          height={40}
+                                          height={32}
                                           className="object-contain rounded"
                                         />
                                       </div>
@@ -757,7 +757,7 @@ export default function BilanCompetences() {
                         src="/images/financements/cpf.jpg"
                         alt="Logo CPF"
                         width={56}
-                        height={56}
+                        height={37}
                         className="object-contain"
                       />
                     </div>
@@ -789,7 +789,7 @@ export default function BilanCompetences() {
                         src="/images/financements/logo entreprise.jpg"
                         alt="Logo Plan de développement des compétences"
                         width={56}
-                        height={56}
+                        height={45}
                         className="object-contain"
                       />
                     </div>
@@ -802,7 +802,7 @@ export default function BilanCompetences() {
                         src="/images/financements/logo-opco.webp"
                         alt="Logo OPCO"
                         width={56}
-                        height={56}
+                        height={45}
                         className="object-contain"
                       />
                     </div>
@@ -1047,7 +1047,7 @@ export default function BilanCompetences() {
                           src="/images/certifications/formation-handicap.png" 
                           alt="Formation & Handicap" 
                           width={50} 
-                          height={50}
+                          height={47}
                           className="object-contain"
                         />
                       </div>

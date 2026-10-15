@@ -7,7 +7,7 @@ export default function Document() {
   const schemaData = buildOrganizationJsonLd()
 
   return (
-    <Html lang="fr" className={fontVariables}>
+    <Html lang="fr" className={fontVariables} data-scroll-behavior="smooth">
       <Head>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <script dangerouslySetInnerHTML={{ __html: GTM_CONSENT_SCRIPT }} />

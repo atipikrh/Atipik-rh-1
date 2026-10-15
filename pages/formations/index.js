@@ -375,7 +375,7 @@ export default function FormationsIndex() {
                           src="/images/certifications/formation-handicap.png" 
                           alt="Formation & Handicap" 
                           width={50} 
-                          height={50}
+                          height={47}
                           className="object-contain"
                         />
                       </div>

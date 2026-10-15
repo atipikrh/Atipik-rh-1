@@ -409,7 +409,7 @@ export default function RecruterInsertionEntreprises() {
                                             src="/images/financements/logo-opco.webp" 
                                             alt="OPCO" 
                                             width={40} 
-                                            height={40}
+                                            height={32}
                                             className="object-contain rounded"
                                           />
                                         </div>
@@ -426,7 +426,7 @@ export default function RecruterInsertionEntreprises() {
                                             src="/images/financements/logo entreprise.jpg" 
                                             alt="Employeur" 
                                             width={40} 
-                                            height={40}
+                                            height={32}
                                             className="object-contain rounded"
                                           />
                                         </div>
@@ -686,7 +686,7 @@ export default function RecruterInsertionEntreprises() {
                         src="/images/financements/logo-faf.jpeg"
                         alt="Logo FAF"
                         width={60}
-                        height={60}
+                        height={30}
                         className="object-contain"
                       />
                     </div>
@@ -701,7 +701,7 @@ export default function RecruterInsertionEntreprises() {
                         src="/images/financements/logo-opco.webp"
                         alt="Logo OPCO"
                         width={60}
-                        height={60}
+                        height={48}
                         className="object-contain"
                       />
                     </div>
@@ -842,7 +842,7 @@ export default function RecruterInsertionEntreprises() {
                           src="/images/certifications/formation-handicap.png" 
                           alt="Formation & Handicap" 
                           width={50} 
-                          height={50}
+                          height={47}
                           className="object-contain"
                         />
                       </div>

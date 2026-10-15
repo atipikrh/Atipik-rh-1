@@ -550,7 +550,7 @@ export default function DevelopperRelationEntreprise() {
                         src="/images/financements/logo-faf.jpeg"
                         alt="Logo FAF"
                         width={60}
-                        height={60}
+                        height={30}
                         className="object-contain"
                       />
                     </div>
@@ -565,7 +565,7 @@ export default function DevelopperRelationEntreprise() {
                         src="/images/financements/logo-opco.webp"
                         alt="Logo OPCO"
                         width={60}
-                        height={60}
+                        height={48}
                         className="object-contain"
                       />
                     </div>
@@ -705,7 +705,7 @@ export default function DevelopperRelationEntreprise() {
                           src="/images/certifications/formation-handicap.png" 
                           alt="Formation & Handicap" 
                           width={50} 
-                          height={50}
+                          height={47}
                           className="object-contain"
                         />
                       </div>

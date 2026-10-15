@@ -64,7 +64,7 @@ export default function VAE() {
       titre: 'Compte Personnel de Formation (CPF)',
       description: 'Pour tous les actifs',
       logoWidth: 60,
-      logoHeight: 60
+      logoHeight: 40
     },
     {
       id: 'plan',
@@ -72,7 +72,7 @@ export default function VAE() {
       titre: 'Plan de développement des compétences',
       description: 'Entreprise',
       logoWidth: 60,
-      logoHeight: 60
+      logoHeight: 48
     },
     {
       id: 'opco',
@@ -80,7 +80,7 @@ export default function VAE() {
       titre: 'OPCO',
       description: 'Salariés',
       logoWidth: 60,
-      logoHeight: 60
+      logoHeight: 48
     },
     {
       id: 'droitCommun',
@@ -608,7 +608,7 @@ export default function VAE() {
                                     src="/images/financements/cpf.jpg" 
                                     alt="CPF" 
                                     width={40} 
-                                    height={40}
+                                    height={27}
                                     className="object-contain rounded"
                                   />
                                 </div>
@@ -625,7 +625,7 @@ export default function VAE() {
                                     src="/images/financements/logo-opco.webp" 
                                     alt="OPCO" 
                                     width={40} 
-                                    height={40}
+                                    height={32}
                                     className="object-contain rounded"
                                   />
                                 </div>
@@ -642,7 +642,7 @@ export default function VAE() {
                                     src="/images/financements/logo entreprise.jpg" 
                                     alt="Employeur" 
                                     width={40} 
-                                    height={40}
+                                    height={32}
                                     className="object-contain rounded"
                                   />
                                 </div>
@@ -1469,7 +1469,7 @@ export default function VAE() {
                           src="/images/certifications/formation-handicap.png" 
                           alt="Formation & Handicap" 
                           width={50} 
-                          height={50}
+                          height={47}
                           className="object-contain"
                         />
                       </div>

@@ -59,7 +59,7 @@ export default function FormationCCP2() {
       titre: 'Aide Individuelle à la Formation (AIF)',
       description: 'Demandeurs d\'emploi',
       logoWidth: 60,
-      logoHeight: 40
+      logoHeight: 31
     },
     {
       id: 'cpf',
@@ -67,7 +67,7 @@ export default function FormationCCP2() {
       titre: 'Compte Personnel de Formation (CPF)',
       description: 'Pour tous les actifs',
       logoWidth: 60,
-      logoHeight: 60
+      logoHeight: 40
     },
     {
       id: 'transitionPro',
@@ -75,7 +75,7 @@ export default function FormationCCP2() {
       titre: 'Transition Professionnelle',
       description: 'Salariés en reconversion',
       logoWidth: 60,
-      logoHeight: 60
+      logoHeight: 30
     },
     {
       id: 'csp',
@@ -91,7 +91,7 @@ export default function FormationCCP2() {
       titre: 'OPCO',
       description: 'Financement employeur',
       logoWidth: 60,
-      logoHeight: 60
+      logoHeight: 48
     },
     {
       id: 'plan',
@@ -108,7 +108,7 @@ export default function FormationCCP2() {
       titre: 'FAF',
       description: 'Indépendants',
       logoWidth: 60,
-      logoHeight: 60
+      logoHeight: 30
     }
   ]
 
@@ -1854,7 +1854,7 @@ export default function FormationCCP2() {
                           src="/images/certifications/formation-handicap.png" 
                           alt="Formation & Handicap" 
                           width={50} 
-                          height={50}
+                          height={47}
                           className="object-contain"
                         />
                       </div>
