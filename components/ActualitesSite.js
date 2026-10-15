@@ -44,9 +44,9 @@ export default function ActualitesSite() {
               <li key={item.id}>
                 <Link
                   href={item.href}
-                  className="block h-full rounded-xl border border-muted-blue-200 bg-white p-6 shadow-md hover:shadow-lg transition-shadow"
+                  className="block h-full rounded-xl border border-muted-blue-200 bg-white p-6 shadow-md hover:shadow-lg transition-shadow text-[#013F63]"
                 >
-                  <time dateTime={item.iso} className="text-sm font-semibold text-accent-500">
+                  <time dateTime={item.iso} className="text-sm font-semibold text-accent-700">
                     {item.dateLabel}
                   </time>
                   <h3 className="mt-2 text-xl font-bold text-[#013F63]">{item.title}</h3>

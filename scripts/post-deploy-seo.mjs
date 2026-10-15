@@ -57,7 +57,7 @@ async function main() {
     console.log(`   → ${count} URL(s) dans le sitemap`)
     if (count < EXPECTED_MIN_URLS) {
       console.warn(
-        `⚠️ Attendu ≥${EXPECTED_MIN_URLS} URLs après déploiement du module SEO (app/sitemap.ts).`
+        `⚠️ Attendu ≥${EXPECTED_MIN_URLS} URLs après déploiement du module SEO (app/sitemap.xml/route.ts).`
       )
       console.warn('   → Déployer la branche contenant lib/seo/page-registry.ts puis relancer ce script.\n')
     } else {

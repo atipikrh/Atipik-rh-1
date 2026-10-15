@@ -134,7 +134,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
-                      <div className="text-xs text-accent-500">Conseiller en Insertion Professionnelle</div>
+                      <div className="text-xs text-accent-700">Conseiller en Insertion Professionnelle</div>
                     </Link>
                     
                     {/* Sous-menu à droite */}
@@ -186,7 +186,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
-                      <div className="text-xs text-accent-500">Formateur Professionnel d'Adultes</div>
+                      <div className="text-xs text-accent-700">Formateur Professionnel d'Adultes</div>
                     </Link>
                     
                     {/* Sous-menu à droite */}
@@ -244,7 +244,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
-                      <div className="text-xs text-accent-500">Montée en compétences rapide</div>
+                      <div className="text-xs text-accent-700">Montée en compétences rapide</div>
                     </Link>
                     
                     {/* Sous-menu à droite */}
@@ -300,28 +300,28 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                     className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors"
                   >
                     <div className="font-medium">Notre histoire</div>
-                    <div className="text-xs text-accent-500">Depuis 2019, une aventure humaine</div>
+                    <div className="text-xs text-accent-700">Depuis 2019, une aventure humaine</div>
                   </Link>
                   <Link 
                     href="/notre-equipe" 
                     className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200"
                   >
                     <div className="font-medium">Notre équipe</div>
-                    <div className="text-xs text-accent-500">Les spécialistes qui vous accompagnent</div>
+                    <div className="text-xs text-accent-700">Les spécialistes qui vous accompagnent</div>
                   </Link>
                   <Link 
                     href="/certification" 
                     className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200"
                   >
                     <div className="font-medium">Certification</div>
-                    <div className="text-xs text-accent-500">Qualité et accessibilité</div>
+                    <div className="text-xs text-accent-700">Qualité et accessibilité</div>
                   </Link>
                   <Link 
                     href="/partenariat" 
                     className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200"
                   >
                     <div className="font-medium">Partenariat</div>
-                    <div className="text-xs text-accent-500">Réseau d'entreprises engagées</div>
+                    <div className="text-xs text-accent-700">Réseau d'entreprises engagées</div>
                   </Link>
                 </div>
               </div>

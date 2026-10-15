@@ -66,5 +66,8 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next|api|images|documents|fonts).*)'],
+  // sitemap.xml et robots.txt restent hors proxy : une réécriture ou une
+  // exception ici renvoyait 500 sur la route metadata, alors que le CDN
+  // servait encore l’ancien fichier.
+  matcher: ['/((?!_next|api|images|documents|fonts|sitemap\\.xml|robots\\.txt).*)'],
 }

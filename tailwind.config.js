@@ -16,6 +16,9 @@ module.exports = {
           300: '#FFBC82',
           500: '#FE6400',
           600: '#EAA93D',
+          // Orange assombri : blanc et texte courant ≥ 4,5:1 (WCAG AA).
+          700: '#C64E00',
+          800: '#9A3C00',
         },
         neutral: {
           100: '#FFDEC1',

@@ -266,7 +266,7 @@ export default function HomePage() {
                           ) : null}
                           <Link
                             href="/s-inscrire"
-                            className="w-full inline-flex items-center justify-center min-h-11 px-4 py-2.5 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-lg transition-all duration-300 text-sm"
+                            className="w-full inline-flex items-center justify-center min-h-11 px-4 py-2.5 bg-accent-700 hover:bg-accent-800 text-white font-bold rounded-lg transition-all duration-300 text-sm"
                           >
                             Voir les prochaines dates
                           </Link>
@@ -332,7 +332,7 @@ export default function HomePage() {
                           </div>
                           <Link
                             href="/s-inscrire"
-                            className="w-full inline-flex items-center justify-center px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-xl transition-all duration-300 shadow-lg text-base"
+                            className="w-full inline-flex items-center justify-center px-6 py-3 bg-accent-700 hover:bg-accent-800 text-white font-bold rounded-xl transition-all duration-300 shadow-lg text-base"
                           >
                             Voir les prochaines dates
                           </Link>

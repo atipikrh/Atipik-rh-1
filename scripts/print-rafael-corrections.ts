@@ -26,15 +26,15 @@ function main(): void {
   console.log('\nActions à garder, textes à coller')
   for (const action of actionsAGarder()) {
     const lignes = [`${action.offre}`]
-    if (action.titre) lignes.push(`Titre : ${action.titre}`)
-    if (action.tarif) lignes.push(`Tarif : ${action.tarif}`)
-    if (action.duree) lignes.push(`Durée : ${action.duree}`)
-    if (action.modalites) lignes.push(`Modalités : ${action.modalites}`)
-    if (action.prerequis) lignes.push(`Prérequis : ${action.prerequis}`)
-    if (action.consigne) lignes.push(`Consigne : ${action.consigne}`)
-    if (action.fraisJury) lignes.push(`Frais : ${action.fraisJury}`)
-    if (action.retirer) lignes.push(`Retirer : ${action.retirer}`)
-    if (action.sessions) {
+    if ('titre' in action && action.titre) lignes.push(`Titre : ${action.titre}`)
+    if ('tarif' in action && action.tarif) lignes.push(`Tarif : ${action.tarif}`)
+    if ('duree' in action && action.duree) lignes.push(`Durée : ${action.duree}`)
+    if ('modalites' in action && action.modalites) lignes.push(`Modalités : ${action.modalites}`)
+    if ('prerequis' in action && action.prerequis) lignes.push(`Prérequis : ${action.prerequis}`)
+    if ('consigne' in action && action.consigne) lignes.push(`Consigne : ${action.consigne}`)
+    if ('fraisJury' in action && action.fraisJury) lignes.push(`Frais : ${action.fraisJury}`)
+    if ('retirer' in action && action.retirer) lignes.push(`Retirer : ${action.retirer}`)
+    if ('sessions' in action && action.sessions) {
       const dates = Array.isArray(action.sessions) ? action.sessions.join(' ; ') : action.sessions
       lignes.push(`Sessions : ${dates}`)
     }
@@ -43,7 +43,7 @@ function main(): void {
 
   console.log('\nActions à clôturer')
   for (const action of actionsACloturer()) {
-    bloc(action.reference, [`${action.offre}`, action.motif || ''])
+    bloc(action.reference, [`${action.offre}`, 'motif' in action && action.motif ? action.motif : ''])
   }
 }
 
