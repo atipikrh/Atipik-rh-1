@@ -362,7 +362,7 @@ export default function VAE() {
     {
       id: 'fpa',
       titreCertif: 'Titre Professionnel FPA',
-      prix: '2 650',
+      prix: '2 850',
       headerWrapperClass: 'bg-accent-300 text-[#013F63]',
       niveauClass: 'text-accent-500',
       niveauLigneClass: 'text-[#013F63]',
@@ -373,7 +373,7 @@ export default function VAE() {
     {
       id: 'cip',
       titreCertif: 'Titre Professionnel CIP',
-      prix: '2 750',
+      prix: '2 950',
       headerWrapperClass: 'bg-[#013F63]',
       niveauClass: 'text-white',
       niveauLigneClass: 'text-accent-500',

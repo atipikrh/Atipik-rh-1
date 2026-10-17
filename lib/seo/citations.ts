@@ -148,10 +148,10 @@ const PAGE_CITATIONS: Record<string, PageCitation> = {
   vae: {
     includeLead: true,
     definition:
-      'La VAE (Validation des Acquis de l’Expérience) permet d’obtenir une certification reconnue à partir de son expérience professionnelle. Atipik RH accompagne les démarches VAE à Lormont, près de Bordeaux. Formules d’accompagnement : 2 650 € TTC et 2 750 € TTC, frais de certification inclus. Financement CPF, congé VAE ou employeur selon le profil — vérification préalable obligatoire.',
+      'La VAE (Validation des Acquis de l’Expérience) permet d’obtenir une certification reconnue à partir de son expérience professionnelle. Atipik RH accompagne les démarches VAE à Lormont, près de Bordeaux. Formules d’accompagnement : 2 850 € TTC et 2 950 € TTC, frais de certification inclus. Financement CPF, congé VAE ou employeur selon le profil — vérification préalable obligatoire.',
     facts: [
       ...napFacts(),
-      { label: 'Tarifs', value: `2 650 € TTC et 2 750 € TTC selon la formule, ${MENTION_FRAIS_CERTIFICATION_INCLUS_COURTE}` },
+      { label: 'Tarifs', value: `2 850 € TTC et 2 950 € TTC selon la formule, ${MENTION_FRAIS_CERTIFICATION_INCLUS_COURTE}` },
     ],
     sources: [
       OFFICIAL_SOURCES.franceVae,
