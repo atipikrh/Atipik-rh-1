@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import { LEGAL_KEY_POINTS } from '../lib/seo/brandMeasures.js'
+import BrandSignals from '../components/BrandSignals.js'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Scale, FileText, User, Lock, ExternalLink, Building2 } from 'lucide-react'
@@ -31,7 +33,9 @@ export default function MentionsLegales() {
               </div>
               <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
                 Mentions Légales
-              </h1>
+              <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
+</h1>
+<BrandSignals authorName="Vanessa NOAH EWODO" keyPoints={LEGAL_KEY_POINTS.mentions} />
               <p className="text-lg text-gray-600">
                 Informations légales et conditions d'utilisation du site
               </p>

@@ -4,7 +4,9 @@ import Footer from './Footer'
 import ServicePageSeoHead from './ServicePageSeoHead'
 import FormationFaqSection from './FormationFaqSection'
 import EntityCitationBlock from './EntityCitationBlock'
+import BrandSignals from './BrandSignals'
 import { getBriefById } from '../lib/seo/content-briefs'
+import { ensureBrand } from '../lib/seo/brandMeasures'
 import { isInternalHrefLive } from '../lib/blog/liveInternalLinks.js'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 
@@ -21,13 +23,15 @@ export default function LocalLandingPage({ briefId, children }) {
       <ServicePageSeoHead briefId={briefId} />
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
         <Header isFixed={true} />
+        <main>
         <div className="h-20" />
 
         <section className="py-12">
           <div className="container mx-auto px-4 max-w-4xl text-center">
             <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6 leading-tight">
-              {brief.h1}
+              {ensureBrand(brief.h1)}
             </h1>
+            <BrandSignals showLeadH2={false} />
             <p className="text-lg text-[#013F63]/90 leading-relaxed mb-8">{brief.metaDescription}</p>
             {brief.eeatSignals?.length > 0 && (
               <ul className="text-left max-w-2xl mx-auto space-y-2 mb-8">
@@ -72,6 +76,7 @@ export default function LocalLandingPage({ briefId, children }) {
         </section>
 
         <FormationFaqSection briefId={briefId} />
+        </main>
         <Footer />
       </div>
     </>

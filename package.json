@@ -26,7 +26,7 @@
     "seo:rafael-fpa": "tsx scripts/print-rafael-cap-fpa.ts",
     "seo:rafael-corrections": "tsx scripts/print-rafael-corrections.ts",
     "seo:post-deploy": "node scripts/post-deploy-seo.mjs",
-    "seo:audit-pages": "node scripts/audit-seo-pages.mjs",
+    "seo:audit-pages": "tsx scripts/audit-seo-pages.mjs",
     "seo:audit-tech": "node scripts/audit-seo-tech.mjs",
     "vercel:login": "vercel login",
     "vercel:whoami": "vercel whoami",

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import BrandSignals from '../../components/BrandSignals.js'
 import Head from 'next/head'
 import Link from 'next/link'
 import Header from '../../components/Header'
@@ -194,7 +195,9 @@ export default function QuizBilanCompetences() {
                   <div className="text-center mb-12">
                     <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
                       Avez-vous besoin d'un <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">bilan de compétences</span> ?
-                    </h1>
+                    <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
+</h1>
+<BrandSignals />
                     <p className="text-lg text-[#013F63] leading-relaxed font-light mb-8">
                       Découvrez en 8 questions si un bilan peut vous aider dans votre évolution professionnelle
                     </p>

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import BrandSignals from '../components/BrandSignals.js'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
@@ -251,7 +252,9 @@ export default function Contact({ hasQuery: hasQueryFromServer = false }) {
             <div className="text-center mb-8 max-w-4xl mx-auto">
                           <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight tracking-tight">
               <span className="text-[#013F63]">Parlons de votre</span> <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">projet</span>
-            </h1>
+            <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
+</h1>
+<BrandSignals showLeadH2={false} />
               <p className="text-lg text-[#013F63] leading-normal font-light max-w-2xl mx-auto">
                 Un premier échange pour clarifier vos objectifs
                 <br className="hidden lg:block" />

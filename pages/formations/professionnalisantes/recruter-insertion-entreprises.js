@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { ensureBrand } from '../../../lib/seo/brandMeasures.js'
+import BrandSignals from '../../../components/BrandSignals.js'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import {
@@ -183,8 +185,9 @@ export default function RecruterInsertionEntreprises() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight tracking-tight">
-                  {seoFormation?.titreAffichage}
+                  {ensureBrand(seoFormation?.titreAffichage)}
                 </h1>
+<BrandSignals published="2026-05-13" showLeadH2={false} />
                 <p className="text-lg lg:text-xl text-[#013F63] mb-4 font-medium">
                   {formation.sousTitre}
                 </p>

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BrandSignals from '../../components/BrandSignals.js'
 import ServicePageSeoHead from '../../components/ServicePageSeoHead'
 import FormationFaqSection from '../../components/FormationFaqSection'
 import EntityCitationBlock from '../../components/EntityCitationBlock'
@@ -39,7 +40,9 @@ export default function FormationsIndex() {
                   Formations professionnelles à{' '}
                   <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Bordeaux</span>{' '}
                   et Lormont
-                </h1>
+                <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
+</h1>
+<BrandSignals showLeadH2={false} />
                 <p className="text-lg text-[#013F63] max-w-2xl mx-auto mb-8">
                   Titres certifiants CIP, FPA, modules CCP (CIP et FPA) et formations courtes professionnalisantes — centre Qualiopi à Lormont.
                 </p>

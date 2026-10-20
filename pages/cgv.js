@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import { LEGAL_KEY_POINTS } from '../lib/seo/brandMeasures.js'
+import BrandSignals from '../components/BrandSignals.js'
 import Link from 'next/link'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -32,7 +34,9 @@ export default function CGV() {
               </div>
               <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
                 Conditions Générales de Vente
-              </h1>
+              <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
+</h1>
+<BrandSignals authorName="Vanessa NOAH EWODO" keyPoints={LEGAL_KEY_POINTS.cgv} />
               <p className="text-lg text-gray-600">
                 Modalités d'inscription et conditions applicables à nos formations
               </p>

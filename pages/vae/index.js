@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BrandSignals from '../../components/BrandSignals.js'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { useIsClient, useIsMobile } from '../../hooks/useClientViewport'
@@ -408,7 +409,9 @@ export default function VAE() {
               <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight tracking-tight text-center">
                 <span className="font-brittany text-3xl lg:text-5xl text-accent-500">VAE</span>
                 {' '}— titres CIP et FPA à Lormont
-                </h1>
+                <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
+</h1>
+<BrandSignals showLeadH2={false} />
               <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto mb-8">
                 Valorisez votre expérience professionnelle et obtenez une certification reconnue
                 </p>

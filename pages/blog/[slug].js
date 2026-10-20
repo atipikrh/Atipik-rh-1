@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { FINANCEMENT_DISCLAIMER } from '../../lib/tarifs/tarifsCopy';
 import { getFormationContactHref } from '../../lib/seo/professionnalisantesConfig';
-import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
+import { Clock, ArrowLeft } from 'lucide-react';
 import { prevenirDiscriminationsRecrutementContent } from '../../lib/blog/prevenirDiscriminationsRecrutementContent';
 import { recrutementSansDiscriminationContent } from '../../lib/blog/recrutementSansDiscriminationContent';
 import { reduireCoutRecrutementFormationRhContent } from '../../lib/blog/reduireCoutRecrutementFormationRhContent';
@@ -104,6 +104,13 @@ import { articlesCaOctobre2026 } from '../../lib/blog/articlesCaOctobre2026';
 import { instagramArticles } from '../../lib/blog/instagramArticles';
 import ArticleConversionHero, { ArticleConversionFooter } from '../../components/blog/ArticleConversionHero';
 import RecaptchaV3Script from '../../components/RecaptchaV3Script';
+import BrandSignals from '../../components/BrandSignals';
+import {
+  contentHasBrandHeading,
+  ensureBrand,
+  hasExtractableSection,
+  keyPointsFromExcerpt,
+} from '../../lib/seo/brandMeasures';
 
 const BLOG_ARTICLES = [
     ...instagramArticles,
@@ -468,7 +475,7 @@ const BLOG_ARTICLES = [
         { label: "Page contact", href: "/contact", type: "contact" },
       ],
       content: `
-        <h1>Pénurie de talents : pourquoi les entreprises qui recrutent par les compétences prennent une longueur d'avance</h1>
+        <h2>Pénurie de talents : pourquoi les entreprises qui recrutent par les compétences prennent une longueur d'avance</h2>
         <p>En 2026, le marché de l'emploi reste sous tension. Selon France Travail (BMO 2026), 43,8 % des projets de recrutement sont encore jugés difficiles. Le volume d'embauches ralentit, mais la tension sur les compétences clés reste forte. Pour les DRH, responsables recrutement, chargés RH, dirigeants de PME et managers recruteurs, le vrai sujet n'est plus seulement de publier des offres : il faut mieux qualifier la capacité réelle à réussir dans le poste.</p>
         <p>C'est précisément l'objectif de <strong>recruter par les compétences</strong>. Cette approche remplace une logique centrée sur le CV par une évaluation concrète des savoir-faire, savoir-être et compétences transférables. Dans un contexte de pénurie de talents, les entreprises qui adoptent cette méthode prennent un avantage compétitif clair : elles recrutent plus juste, plus vite et avec un meilleur niveau de sécurisation.</p>
 
@@ -3915,12 +3922,28 @@ export default function BlogArticle({ article: articleProp }) {
                 <h1 
                   className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6 leading-tight"
                   dangerouslySetInnerHTML={{
-                    __html: article.slug === "atipik-rh-espace-emploi-projets-partenariat-mem-wejob-lormont"
-                      ? article.title
-                          .replace(/ATIPIK RH/g, '<span style="color: #f97316;">ATIPIK RH</span>')
-                          .replace(/Partenariat MEM we\.job/g, '<span style="color: #f97316;">Partenariat MEM we.job</span>')
-                      : article.title
+                    __html: ensureBrand(
+                      article.slug === "atipik-rh-espace-emploi-projets-partenariat-mem-wejob-lormont"
+                        ? article.title
+                            .replace(/ATIPIK RH/g, '<span style="color: #f97316;">ATIPIK RH</span>')
+                            .replace(/Partenariat MEM we\.job/g, '<span style="color: #f97316;">Partenariat MEM we.job</span>')
+                        : article.title
+                    )
                   }}
+                />
+                <BrandSignals
+                  authorName={article.author}
+                  published={article.isoDate || article.date}
+                  updated={article.dateModified || article.isoDate || article.date}
+                  showLeadH2={
+                    !contentHasBrandHeading(article.content) &&
+                    !hasExtractableSection(article.content, article.faqItems)
+                  }
+                  keyPoints={
+                    hasExtractableSection(article.content, article.faqItems)
+                      ? undefined
+                      : keyPointsFromExcerpt(article.excerpt)
+                  }
                 />
                 
                 {/* Métadonnées */}
@@ -3939,14 +3962,6 @@ export default function BlogArticle({ article: articleProp }) {
                   </p>
                 ) : null}
                 <div className="flex items-center gap-6 text-gray-500 mb-8">
-                  <div className="flex items-center gap-2">
-                    <User className="w-5 h-5" />
-                    <span>{article.author}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-5 h-5" />
-                    <span>{article.date}</span>
-                  </div>
                   <div className="flex items-center gap-2">
                     <Clock className="w-5 h-5" />
                     <span>{article.readTime}</span>
@@ -3974,6 +3989,22 @@ export default function BlogArticle({ article: articleProp }) {
                 className="prose prose-lg max-w-none"
                 dangerouslySetInnerHTML={{ __html: article.content }}
               />
+
+              {article.faqItems?.length > 0 && !hasExtractableSection(article.content) ? (
+                <section className="mt-12" aria-labelledby="faq-article">
+                  <h2 id="faq-article" className="text-2xl font-bold text-[#013F63] mb-6">
+                    Questions fréquentes
+                  </h2>
+                  <div className="space-y-6">
+                    {article.faqItems.map((item) => (
+                      <div key={item.question}>
+                        <h3 className="text-lg font-bold text-[#013F63] mb-2">{item.question}</h3>
+                        <p className="text-[#013F63] leading-relaxed">{item.answer}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
 
               {article.conversion ? (
                 <ArticleConversionFooter conversion={article.conversion} />

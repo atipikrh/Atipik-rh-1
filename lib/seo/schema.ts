@@ -10,6 +10,7 @@ import {
 } from './site'
 import type { FaqItem, SchemaType } from './types'
 import { getBriefById } from './content-briefs'
+import { getAuthorProfile } from './brandMeasures'
 
 const postalAddressSchema = z.object({
   '@type': z.literal('PostalAddress'),
@@ -158,15 +159,22 @@ export function buildArticleJsonLd(params: {
   description: string
   path: string
   datePublished: string
+  dateModified?: string
   authorName: string
+  authorUrl?: string
 }) {
   const canonical = `${BASE_URL}${params.path}`
+  const author = getAuthorProfile(params.authorName)
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: params.headline,
     description: params.description,
-    author: { '@type': 'Person', name: params.authorName },
+    author: {
+      '@type': 'Person',
+      name: author.name,
+      url: params.authorUrl || author.absoluteUrl,
+    },
     publisher: {
       '@type': 'Organization',
       name: ORGANIZATION.name,
@@ -176,7 +184,7 @@ export function buildArticleJsonLd(params: {
       },
     },
     datePublished: params.datePublished,
-    dateModified: params.datePublished,
+    dateModified: params.dateModified || params.datePublished,
     mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
   }
 }

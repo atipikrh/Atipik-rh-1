@@ -3,7 +3,9 @@ import Header from './Header'
 import Footer from './Footer'
 import ServicePageSeoHead from './ServicePageSeoHead'
 import FormationFaqSection from './FormationFaqSection'
+import BrandSignals from './BrandSignals'
 import { getBriefById } from '../lib/seo/content-briefs'
+import { ensureBrand } from '../lib/seo/brandMeasures'
 import { getIntentFacts } from '../lib/seo/intentLandings'
 
 function FactList({ facts }) {
@@ -37,7 +39,8 @@ export default function IntentLanding({ briefId }) {
         <Header isFixed={true} />
         <div className="h-20" />
         <main className="container mx-auto px-4 py-10 max-w-3xl">
-          <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">{brief.h1}</h1>
+          <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">{ensureBrand(brief.h1)}</h1>
+          <BrandSignals showLeadH2={false} />
           <p className="text-lg text-[#013F63] mb-8">{brief.metaDescription}</p>
           <FactList facts={getIntentFacts(briefId)} />
           <div className="mt-8 flex flex-wrap gap-3">

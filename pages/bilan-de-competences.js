@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import BrandSignals from '../components/BrandSignals.js';
 // Bilan de compétences - Modifications appliquées
 import Image from 'next/image';
 import Link from 'next/link';
@@ -91,7 +92,9 @@ export default function BilanCompetences() {
             <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
               Bilan de <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">compétences</span>
               {' '}à Lormont, proche de Bordeaux
-            </h1>
+            <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
+</h1>
+<BrandSignals showLeadH2={false} />
             <p className="text-lg text-[#013F63] leading-relaxed font-light mb-8">
               Révélez votre potentiel et construisez votre avenir professionnel<br className="hidden lg:block"/>
               <span className="text-accent-500 font-medium">avec un accompagnement personnalisé</span>

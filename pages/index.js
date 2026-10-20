@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BrandSignals from '../components/BrandSignals.js'
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Clock } from 'lucide-react'
@@ -137,8 +138,7 @@ export default function HomePage() {
         
         <div className="relative z-10">
           <Header isFixed={true} />
-        
-        {/* Bandeau déroulant (Carousel) - Style compact */}
+          <main>
         <section
           className="relative min-h-[540px] sm:min-h-[500px] md:min-h-[480px] lg:h-[430px] overflow-hidden rounded-lg mx-2 max-[375px]:mx-1.5 sm:mx-4 lg:mx-8 mt-24 shadow-2xl touch-pan-y"
           onTouchStart={onTouchStart}
@@ -414,6 +414,7 @@ export default function HomePage() {
             <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] text-center mb-3 leading-tight">
               Atipik RH — organisme de formation à Lormont
             </h1>
+<BrandSignals showLeadH2={false} />
             <p className="text-center mb-6">
               <a
                 href={OFFICIAL_SOURCES.qualiopiPdf.href}
@@ -551,8 +552,6 @@ export default function HomePage() {
           </div>
         </section>
 
-          </div>
-
         <ActualitesSite />
 
         <section className="pb-16">
@@ -575,6 +574,8 @@ export default function HomePage() {
         </section>
 
         <FormationFaqSection briefId="accueil" />
+        </main>
+        </div>
         <Footer />
       </div>
     </>

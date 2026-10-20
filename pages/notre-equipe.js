@@ -1,5 +1,6 @@
 
 import Image from 'next/image';
+import BrandSignals from '../components/BrandSignals.js';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import Link from 'next/link'
@@ -41,7 +42,13 @@ export default function NotreEquipe() {
                 <div className="text-center mb-16">
                   <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
                     Au coeur du <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">projet</span>
-                  </h1>
+                  <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
+</h1>
+<BrandSignals keyPoints={[
+                  'Formatrices, consultantes et fonctions support d’Atipik RH.',
+                  'Le centre est à Lormont, près de Bordeaux.',
+                  { text: 'Voir les formations', href: '/formations' },
+                ]} />
                   <p className="text-xl text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
                     L'équipe qui pilote et organise vos parcours de formation
                   </p>

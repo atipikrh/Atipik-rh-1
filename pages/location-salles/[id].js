@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import BrandSignals from '../../components/BrandSignals'
 import { SALLES_DATA } from '../../lib/location-salles/sallesData'
 import { 
   Users, 
@@ -168,9 +169,16 @@ export default function SalleDetail({ id, salle }) {
                   <div>
                     <div className="mb-4">
                       <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63]">
-                        {salle.nom}
+                        {salle.nom} — location Atipik RH à Lormont
                       </h1>
                     </div>
+                    <BrandSignals
+                      keyPoints={[
+                        `Capacité : ${salle.capacite}.`,
+                        'Adresse : Atipik RH, 8 Rue du Courant, 33310 Lormont.',
+                        'Réservation par téléphone au 07 83 01 99 55 ou par devis.',
+                      ]}
+                    />
 
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm border border-gray-200">
@@ -195,10 +203,10 @@ export default function SalleDetail({ id, salle }) {
 
                     {/* Tarifs */}
                     <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200 mb-6">
-                      <h3 className="text-xl font-bold text-[#013F63] mb-4 flex items-center gap-2">
+                      <h2 className="text-xl font-bold text-[#013F63] mb-4 flex items-center gap-2">
                         <Euro className="w-5 h-5" />
                         Tarifs
-                      </h3>
+                      </h2>
                       <div className="space-y-3">
                         <div className="flex justify-between items-center p-3 bg-white/60 backdrop-blur-sm rounded-lg border border-gray-200">
                           <span className="text-[#013F63] font-medium">Demi-journée (4h)</span>

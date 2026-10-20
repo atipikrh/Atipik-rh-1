@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import BrandSignals from '../../../components/BrandSignals.js'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -104,7 +105,9 @@ export default function FormationsCourtesProfessionnalisantes() {
                   <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">professionnalisantes</span>
                   <br />
                   <span className="text-2xl lg:text-3xl font-semibold">à Bordeaux</span>
-                </h1>
+                <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
+</h1>
+<BrandSignals published="2026-05-13" showLeadH2={false} />
                 <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-light">
                   Des formations ancrées dans les <strong>réalités professionnelles</strong>
                   <br className="hidden lg:block" />

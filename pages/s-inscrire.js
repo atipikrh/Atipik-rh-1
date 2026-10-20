@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import BrandSignals from '../components/BrandSignals.js'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState, useEffect, useRef } from 'react'
@@ -258,7 +259,9 @@ export default function SInscrire() {
                 <div className="text-center mb-12">
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4">
                     S'inscrire aux <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Réunions d'Information Collective</span>
-                  </h1>
+                  <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
+</h1>
+<BrandSignals />
                   <p className="text-lg text-[#013F63] max-w-2xl mx-auto">
                     Participez à nos réunions d'information pour découvrir nos formations <strong>FPA</strong> et <strong>CIP</strong> et rencontrer notre équipe pédagogique.
                   </p>

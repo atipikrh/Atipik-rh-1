@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '../../components/Header';
+import BrandSignals from '../../components/BrandSignals';
+import { teamKeyPoints } from '../../lib/seo/brandMeasures';
 import Footer from '../../components/Footer';
 import { ArrowLeft } from 'lucide-react';
 import { useState } from 'react';
@@ -82,10 +84,12 @@ export default function AnneLiseCoatrine() {
                 <div className="lg:col-span-8 space-y-4">
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] leading-tight">
                     <span className="font-brittany text-3xl lg:text-4xl">Anne-Lise</span> <span className="font-semibold">COATRINÉ</span>
+                  <span className="block text-lg lg:text-xl font-semibold mt-1">Formatrice chez Atipik RH</span>
                   </h1>
                   <div className="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">
                     Formatrice
                   </div>
+                  <BrandSignals authorName="Anne-Lise COATRINÉ" keyPoints={teamKeyPoints('anne-lise-coatrine')} />
                 </div>
               </div>
 

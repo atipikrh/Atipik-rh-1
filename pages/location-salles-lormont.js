@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import BrandSignals from '../components/BrandSignals'
 import { 
   Users, 
   Wifi, 
@@ -177,6 +178,16 @@ export default function LocationEspacesBordeaux() {
               <div className="max-w-7xl mx-auto">
                 
                 <div className="text-center mb-12">
+                  <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
+                    Location de salles de formation à Lormont chez Atipik RH
+                  </h1>
+                  <BrandSignals
+                    keyPoints={[
+                      'Salles équipées à Lormont, près de Bordeaux.',
+                      'Parking gratuit et Wi-Fi sur place.',
+                      'Réservation au 07 83 01 99 55 ou par devis.',
+                    ]}
+                  />
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
                     Nos <span className="text-orange-500 font-brittany font-normal text-4xl lg:text-5xl">Espaces</span>
                   </h2>

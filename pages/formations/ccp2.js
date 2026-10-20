@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BrandSignals from '../../components/BrandSignals.js'
 import ServicePageSeoHead from '../../components/ServicePageSeoHead'
 import FormationQuickAnswers from '../../components/FormationQuickAnswers'
 import FormationLandingCtas from '../../components/FormationLandingCtas'
@@ -403,7 +404,9 @@ export default function FormationCCP2() {
                   <span className="block mt-1 mb-2 text-accent-500 font-brittany text-3xl md:text-4xl lg:text-5xl">
                     Insertion Professionnelle (C.C.P 2)
                   </span>
-                </h1>
+                <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
+</h1>
+<BrandSignals showLeadH2={false} />
                 <p className="text-lg text-[#013F63] leading-relaxed font-light">
                   Devenez expert de l'<strong>accompagnement de parcours</strong>
                 </p>

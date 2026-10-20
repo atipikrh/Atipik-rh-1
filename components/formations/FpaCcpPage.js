@@ -5,6 +5,7 @@ import FormationQuickAnswers from '../FormationQuickAnswers'
 import FormationLandingCtas from '../FormationLandingCtas'
 import FormationAdequation from '../FormationAdequation'
 import FormationFaqSection from '../FormationFaqSection'
+import BrandSignals from '../BrandSignals'
 import FormationStickyCta from '../FormationStickyCta'
 import FormationTarifSection from '../FormationTarifSection'
 import Header from '../Header'
@@ -77,7 +78,9 @@ export default function FpaCcpPage({ moduleId }) {
                   <span className="block mt-1 mb-2 text-accent-500 font-brittany text-3xl md:text-4xl lg:text-5xl">
                     {module.heroAccent} (C.C.P {module.id})
                   </span>
+                  <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
                 </h1>
+                <BrandSignals showLeadH2={false} />
                 <p className="text-lg text-[#013F63] leading-relaxed font-light">
                   {module.accroche}
                 </p>

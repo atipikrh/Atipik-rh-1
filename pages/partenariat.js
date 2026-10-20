@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import BrandSignals from '../components/BrandSignals.js'
 import Link from 'next/link'
 import Image from 'next/image'
 import Header from '../components/Header'
@@ -34,7 +35,13 @@ export default function Partenariat() {
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
                   Nos <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Partenariats</span>
-                </h1>
+                <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
+</h1>
+<BrandSignals keyPoints={[
+                  'Atipik RH est adhérent de l’organisme Les Entreprises s’Engagent.',
+                  'Le centre participe au club d’entreprise de Bassens.',
+                  { text: 'Proposer un partenariat', href: '/contact' },
+                ]} />
                 <p className="text-lg text-[#013F63] leading-relaxed font-light">
                   Un écosystème d'entreprises engagées<br className="hidden lg:block"/>
                   <span className="text-orange-500 font-medium">pour votre réussite professionnelle</span>

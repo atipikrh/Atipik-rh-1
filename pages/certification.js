@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import BrandSignals from '../components/BrandSignals.js'
 import Link from 'next/link'
 import Image from 'next/image'
 import Header from '../components/Header'
@@ -36,7 +37,9 @@ export default function Certification() {
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
                   Nos <span className="text-orange-500 font-brittany font-black">Certifications</span>
-                </h1>
+                <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
+</h1>
+<BrandSignals showLeadH2={false} />
                 <p className="text-lg lg:text-xl text-[#013F63] leading-relaxed font-light">
                   La qualité et la reconnaissance officielle<br className="hidden lg:block"/>
                   <span className="text-orange-500 font-medium">au service de votre formation</span>

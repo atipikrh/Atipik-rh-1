@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BrandSignals from '../components/BrandSignals.js'
 import Image from 'next/image'
 import { useState } from 'react'
 import Header from '../components/Header'
@@ -379,7 +380,9 @@ export default function Financement() {
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
                 Solutions de <span className="text-orange-500 font-brittany text-3xl sm:text-4xl lg:text-5xl">financement</span><br/>
                 selon votre <span className="text-orange-500 font-brittany text-3xl sm:text-4xl lg:text-5xl">statut</span>
-              </h1>
+              <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
+</h1>
+<BrandSignals showLeadH2={false} />
               <p className="text-base sm:text-lg text-[#013F63] leading-relaxed font-light mb-6 px-2 sm:px-0">
                 Chaque situation professionnelle offre des possibilités de financement spécifiques<br className="hidden lg:block"/>
                 <span className="text-orange-500 font-bold">Découvrez celles qui vous correspondent</span>

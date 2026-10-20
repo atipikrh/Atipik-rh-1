@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import BrandSignals from '../components/BrandSignals.js';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -1291,6 +1292,7 @@ export default function Blog() {
               <div className="relative inline-block mb-6">
                 <h1 className="text-5xl lg:text-7xl font-black text-[#013F63] drop-shadow-sm tracking-tighter">
                   BLOG
+                  <span className="block text-xl lg:text-2xl font-semibold mt-1">chez Atipik RH</span>
                 </h1>
                 <Image 
                   src="/images/decorations/3 lignes orange.svg" 
@@ -1300,6 +1302,11 @@ export default function Blog() {
                   className="absolute top-1/2 -translate-y-1/2 -right-12 lg:-right-16"
                 />
               </div>
+              <BrandSignals keyPoints={[
+                'Articles sur la formation, le recrutement et l’insertion.',
+                'Textes rédigés par l’équipe Atipik RH à Lormont.',
+                { text: 'Découvrir les formations', href: '/formations' },
+              ]} />
               <p className="text-xl text-[#013F63] font-medium">
                 Conseils, actualités et témoignages pour réussir votre parcours professionnel
               </p>
