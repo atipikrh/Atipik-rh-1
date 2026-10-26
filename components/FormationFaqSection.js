@@ -3,12 +3,19 @@ import { getBriefById } from '../lib/seo/content-briefs'
 
 /**
  * FAQ visible et crawlable (réponses toujours dans le HTML, alignées sur le JSON-LD).
- * @param {{ briefId: string, title?: string }} props
+ * `extraItems` complète le brief sans dupliquer une question déjà présente.
+ * @param {{ briefId: string, title?: string, extraItems?: { question: string, answer: string }[] }} props
  */
-export default function FormationFaqSection({ briefId, title = 'Questions fréquentes' }) {
+export default function FormationFaqSection({ briefId, title = 'Questions fréquentes', extraItems = [] }) {
   const brief = getBriefById(briefId)
+  const briefFaq = brief?.faq ?? []
+  const seen = new Set(briefFaq.map((item) => item.question))
+  const faq = [
+    ...briefFaq,
+    ...extraItems.filter((item) => item?.question && !seen.has(item.question)),
+  ]
 
-  if (!brief?.faq?.length) return null
+  if (!faq.length) return null
 
   return (
     <section className="py-12 bg-white/60" aria-labelledby={`faq-${briefId}`}>
@@ -18,7 +25,7 @@ export default function FormationFaqSection({ briefId, title = 'Questions fréqu
             {title}
           </h2>
           <div className="space-y-3">
-            {brief.faq.map((item) => (
+            {faq.map((item) => (
               <details
                 key={item.question}
                 className="group bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden"

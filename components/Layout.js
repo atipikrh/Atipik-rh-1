@@ -125,7 +125,7 @@ export default function Layout({ children, title, description, canonical }) {
             </div>
 
             <div className="border-t border-muted-blue-200 mt-12 pt-8 text-center text-neutral-100">
-              <p>&copy; 2025 Atipik RH. Tous droits réservés.</p>
+              <p>&copy; 2026 Atipik RH. Tous droits réservés.</p>
             </div>
           </div>
         </footer>

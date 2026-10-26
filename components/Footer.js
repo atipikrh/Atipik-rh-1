@@ -190,7 +190,7 @@ export default function Footer() {
               Politique de confidentialité
             </Link>
             <span>•</span>
-            <span>&copy; 2025 Atipik RH. Tous droits réservés.</span>
+            <span>&copy; 2026 Atipik RH. Tous droits réservés.</span>
           </div>
         </div>
       </div>

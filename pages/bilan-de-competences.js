@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import ServicePageSeoHead from '../components/ServicePageSeoHead';
 import EntityCitationBlock from '../components/EntityCitationBlock';
 import { TARIF_SELON_PROFIL_COMPLET } from '../lib/tarifs/tarifsCopy';
-import { getBriefById } from '../lib/seo/content-briefs';
+import FormationFaqSection from '../components/FormationFaqSection';
 
 import { 
   Award, 
@@ -38,7 +38,6 @@ export default function BilanCompetences() {
     }))
   }
 
-  const briefFaq = getBriefById('bilan-competences-local')?.faq ?? [];
   const faqExtra = [
     {
       question: "Est-ce que mon employeur sera au courant ?",
@@ -56,11 +55,6 @@ export default function BilanCompetences() {
       question: "À quelle fréquence puis-je faire un bilan ?",
       answer: "Il n'y a pas de limite légale, mais nous recommandons d'attendre au moins 5 ans entre deux bilans pour que la démarche garde tout son sens. Vos droits CPF se rechargent chaque année jusqu'à un plafond."
     },
-  ];
-  const seenFaq = new Set(briefFaq.map((f) => f.question));
-  const faqData = [
-    ...briefFaq,
-    ...faqExtra.filter((f) => !seenFaq.has(f.question)),
   ];
 
   return (
@@ -977,37 +971,7 @@ export default function BilanCompetences() {
         </div>
       </section>
 
-      {/* FAQ */}
-        <section className="py-16">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
-              Questions <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">fréquentes</span>
-            </h2>
-          </div>
-          
-          <div className="space-y-4">
-            {faqData.map((faq) => (
-              <details key={faq.question} className="group relative">
-                <div className="absolute -inset-2 bg-gradient-to-r from-blue-200 to-blue-300 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none"></div>
-                <div className="relative bg-white rounded-2xl shadow-lg border border-gray-100">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-6 text-left [&::-webkit-details-marker]:hidden">
-                    <span className="font-semibold text-lg text-[#013F63] pr-4">
-                      {faq.question}
-                    </span>
-                    <ChevronDown className="w-6 h-6 text-gray-600 transition-transform flex-shrink-0 group-open:rotate-180" />
-                  </summary>
-                  <div className="px-6 pb-6">
-                    <p className="text-[#013F63] leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FormationFaqSection briefId="bilan-competences-local" extraItems={faqExtra} />
 
           {/* Cadre réglementaire */}
           <section className="py-4">
