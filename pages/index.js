@@ -27,6 +27,20 @@ export default function HomePage() {
       description: "Du 22 mars 2027 au 22 octobre 2027 — 14 places disponibles.",
       buttonText: "Découvrir les facilités",
       buttonLink: "/s-inscrire",
+      cardScript: "Vos questions ?",
+      cardText: "Participez à notre réunion d'info !",
+      image: "/images/hero/reunion-info-2.jpeg",
+      isPaiement: true
+    },
+    {
+      id: 6,
+      title: "VAE CIP ou VAE FPA : passez à l'action !",
+      subtitle: "Votre expérience mérite d'être reconnue.",
+      description: "Faites reconnaître votre expérience avec ATIPIK RH",
+      buttonText: "accédez ici",
+      buttonLink: "/vae",
+      cardScript: "Échangeons",
+      cardText: "sur votre projet dès maintenant.",
       image: "/images/hero/reunion-info-2.jpeg",
       isPaiement: true
     },
@@ -52,7 +66,8 @@ export default function HomePage() {
     },
     {
       id: 4,
-      title: "Découvrez nos salles en location",
+      title: "Découvrez nos salles en ",
+      scriptWord: "location",
       subtitle: "Espaces modernes à Lormont",
       description: "Louez nos salles équipées pour vos formations, réunions et séminaires. 5 espaces disponibles allant du bureau individuel jusqu'aux salles d'une capacité de 20 personnes.",
       buttonText: "Voir nos salles",
@@ -195,6 +210,9 @@ export default function HomePage() {
                       ) : (
                         <p className="text-xl max-[375px]:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                           {slide.title}
+                          {slide.scriptWord ? (
+                            <span className="font-brittany font-normal text-white text-[1.35em] leading-none">{slide.scriptWord}</span>
+                          ) : null}
                         </p>
                       )}
                       {slide.isReunion ? (
@@ -273,13 +291,18 @@ export default function HomePage() {
                         </div>
                       ) : slide.isPaiement ? (
                         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 max-[375px]:p-2.5 sm:p-4 border border-white/20 text-neutral-900 shadow-xl max-w-xs w-full sm:w-auto">
-                          {slide.id === 5 && (
-                            <p className="text-[11px] sm:text-xs text-[#013F63] font-bold leading-relaxed mb-2.5 sm:mb-3">
-                              Vous avez des questions ? Participez à notre réunion d'info !
+                          {slide.cardScript ? (
+                            <p className="font-brittany text-accent-500 text-2xl leading-none mb-1 pb-2">
+                              {slide.cardScript}
                             </p>
-                          )}
+                          ) : null}
+                          {slide.cardText ? (
+                            <p className="text-[11px] sm:text-xs text-[#013F63] font-bold leading-relaxed mb-2.5 sm:mb-3">
+                              {slide.cardText}
+                            </p>
+                          ) : null}
                           <Link
-                            href="/s-inscrire"
+                            href={slide.buttonLink}
                             className="w-full inline-flex items-center justify-center min-h-11 px-4 py-2.5 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-lg hover:from-accent-600 hover:to-accent-600 transition-all duration-300 text-sm"
                           >
                             accédez ici
@@ -341,9 +364,14 @@ export default function HomePage() {
                         /* Fenêtre style quiz pour les slides paiement */
                         <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-neutral-900 max-w-sm shadow-xl">
                           <div className="text-center">
-                            {slide.id === 5 ? (
+                            {slide.cardScript ? (
+                              <p className="font-brittany text-accent-500 text-3xl lg:text-4xl leading-none mb-2 pb-3">
+                                {slide.cardScript}
+                              </p>
+                            ) : null}
+                            {slide.cardText ? (
                               <p className="text-sm text-[#013F63] font-bold leading-relaxed mb-4">
-                                Vous avez des questions ? Participez à notre réunion d'info !
+                                {slide.cardText}
                               </p>
                             ) : (
                               <div className="flex items-center justify-center gap-2 mb-6">
@@ -352,7 +380,7 @@ export default function HomePage() {
                               </div>
                             )}
                             <Link
-                              href="/s-inscrire"
+                              href={slide.buttonLink}
                               className="inline-flex mx-auto w-full max-w-full items-center justify-center px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold hover:from-accent-600 hover:to-accent-600 transition-all duration-300 shadow-lg rounded-2xl"
                             >
                               accédez ici
