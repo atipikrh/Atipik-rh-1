@@ -83,8 +83,8 @@ export default function IntelligenceArtificielleAccompagnement() {
 
   const formation = {
     titre: seoFormation?.titreAffichage ?? "L'intelligence artificielle au service de l'accompagnement",
-    sousTitre: 'Formation courte – Transformation numérique des pratiques professionnelles',
-    presentation: "L'intelligence artificielle transforme les pratiques d'accompagnement professionnel : préparation d'entretiens, synthèse de parcours, veille métier, personnalisation des parcours. Cette formation vous permet de comprendre les enjeux, d'expérimenter des outils concrets et d'intégrer l'IA de manière responsable et éthique dans votre quotidien professionnel, au service de vos publics.",
+    sousTitre: "S'en servir dans l'accompagnement, sans remplacer le jugement humain.",
+    presentation: "Vous accompagnez des personnes vers l'emploi. Cette formation vous apprend à utiliser l'intelligence artificielle sans qu'elle décide à votre place. 14 heures en salle, à Lormont.",
     public: "Pour les professionnel·les de l'accompagnement (CIP, conseillers emploi, formateurs, chargés de mission) souhaitant intégrer l'IA dans leur pratique",
     objectifs: [
       "Structurer un environnement numérique professionnel adapté à l'accompagnement.",
@@ -230,7 +230,7 @@ export default function IntelligenceArtificielleAccompagnement() {
                         </p>
                         <div className="w-20 h-0.5 bg-gradient-to-r from-orange-300 to-orange-500 mb-3 mx-auto"></div>
                         <p className="text-accent-500 font-bold">
-                          Intégrer l&apos;IA de manière responsable, c&apos;est renforcer la qualité et l&apos;efficacité de l&apos;accompagnement professionnel.
+                          À la fin, vous savez vous en servir sans laisser l&apos;outil décider à votre place.
                         </p>
                       </div>
                     </div>

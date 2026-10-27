@@ -24,6 +24,10 @@ export const ENTITY_CITATION = `${ENTITY_LEAD} ${ENTITY_OFFER}`
 
 export const NAP_LINE = `${ADDRESS.streetAddress}, ${ADDRESS.postalCode} ${ADDRESS.addressLocality} — ${TELEPHONE_DISPLAY} — ${ORGANIZATION.email} — SIRET ${SIRET}`
 
+/** Visio régionale : une phrase sur la page bilan existante, pas une nouvelle URL. */
+export const BILAN_ACCES_REGION =
+  'Le bilan se fait en présentiel ou en visio à Lormont, accessible depuis Bordeaux, Libourne et Saint-Médard-en-Jalles.'
+
 export const QUALIOPI_CATEGORIES = [
   'Actions de formation',
   'Bilans de compétences',
@@ -141,6 +145,7 @@ const PAGE_CITATIONS: Record<string, PageCitation> = {
       'Le bilan de compétences est un accompagnement personnalisé pour faire le point sur son parcours, ses compétences et son projet professionnel. Atipik RH, organisme certifié Qualiopi, le propose à Lormont (Bordeaux Métropole). Formule Essentiel : 1 600 € TTC (16 h) ; formule Horizon : 1 900 € TTC (20 h). Finançable via le CPF selon éligibilité.',
     facts: [
       ...napFacts(),
+      { label: 'Accès', value: BILAN_ACCES_REGION },
       { label: 'Tarifs', value: 'Essentiel 1 600 € TTC (16 h) · Horizon 1 900 € TTC (20 h)' },
     ],
     sources: [OFFICIAL_SOURCES.monCompteFormation, OFFICIAL_SOURCES.qualiopiPdf],
@@ -169,7 +174,7 @@ const PAGE_CITATIONS: Record<string, PageCitation> = {
   'formations-professionnalisantes-hub': {
     includeLead: true,
     definition:
-      'Les formations courtes professionnalisantes d’Atipik RH s’adressent aux professionnels de l’insertion et des RH. Modules de 11 h à 21 h à Lormont (Bordeaux Métropole) : relation entreprise, recrutement inclusif, numérique et IA.',
+      'Ces formations courtes d’Atipik RH sont pour les personnes qui accompagnent vers l’emploi et pour les équipes qui recrutent. Elles durent de 11 à 21 heures, à Lormont, près de Bordeaux : relation avec les entreprises, recrutement, numérique et intelligence artificielle.',
     facts: napFacts(),
     sources: [OFFICIAL_SOURCES.qualiopiPdf],
   },

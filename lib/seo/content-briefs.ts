@@ -5,6 +5,7 @@ import {
   MENTION_FRAIS_CERTIFICATION_INCLUS_COURTE,
 } from '../tarifs/tarifsCopy'
 import type { ContentBrief } from './types'
+import { BILAN_ACCES_REGION } from './citations'
 
 /** Ajoute la mention légale financement aux réponses FAQ concernées. */
 function faqFinancement(answer: string): string {
@@ -27,7 +28,7 @@ const BRIEFS: ContentBrief[] = [
     h1: 'Atipik RH — organisme de formation à Lormont',
     metaTitle: 'Atipik RH | Centre de formation à Lormont',
     metaDescription:
-      'Atipik RH, organisme Qualiopi à Lormont (Bordeaux, Aquitaine) : CIP, FPA, bilans de compétences, VAE et formations courtes.',
+      'Atipik RH, centre de formation à Lormont, certifié Qualiopi : CIP, FPA, bilan de compétences, VAE et formations courtes.',
     recommendedSlug: '/',
     primaryKeywords: ['Atipik RH', 'organisme formation Lormont', 'formation Bordeaux Qualiopi'],
     longTailKeywords: [],
@@ -76,7 +77,7 @@ const BRIEFS: ContentBrief[] = [
     h1: 'Formation CIP à Lormont — Conseiller en Insertion Professionnelle',
     metaTitle: 'Formation CIP Bordeaux | session mars 2027 | Atipik RH',
     metaDescription:
-      'Devenez conseiller en insertion à Lormont. Session du 22 mars au 22 octobre 2027, titre RNCP 37274, 9 100 € TTC. Candidatures ouvertes.',
+      'Formation CIP Bordeaux, session mars 2027 à Lormont, du 22 mars au 22 octobre. Titre RNCP, 9 100 € TTC. Candidatures ouvertes.',
     recommendedSlug: '/formations/cip',
     primaryKeywords: [
       'formation CIP Bordeaux',
@@ -536,7 +537,7 @@ const BRIEFS: ContentBrief[] = [
     h1: 'Bilan de compétences à Lormont, proche de Bordeaux',
     metaTitle: 'Bilan de compétences Bordeaux | Lormont, dès 1 600 €',
     metaDescription:
-      '16 h à 1 600 € ou 20 h à 1 900 € TTC, à Lormont, en présentiel ou en visio. CPF selon éligibilité. Atipik RH, près de Bordeaux.',
+      'Bordeaux : bilan de compétences à Lormont, dès 1 600 €. Présentiel ou visio, CPF selon éligibilité.',
     recommendedSlug: '/bilan-de-competences',
     primaryKeywords: ['bilan de compétences Lormont', 'bilan compétences Bordeaux'],
     longTailKeywords: [],
@@ -558,7 +559,7 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'Où se déroulent les entretiens ?',
-        answer: 'À Lormont ou en visio selon votre choix et le dispositif retenu.',
+        answer: BILAN_ACCES_REGION,
       },
     ],
     internalLinks: [
@@ -821,7 +822,7 @@ const BRIEFS: ContentBrief[] = [
     h1: 'Formations courtes professionnalisantes à Bordeaux',
     metaTitle: 'Formations courtes à Bordeaux | 715 à 1 365 €',
     metaDescription:
-      'Sept formations courtes à Lormont, de 11 à 21 h, de 715 € à 1 365 € TTC. Insertion, recrutement, numérique et IA. Atipik RH.',
+      'Sept formations courtes à Lormont, de 11 à 21 h, de 715 € à 1 365 €. Pour accompagner vers l’emploi ou recruter. Atipik RH.',
     recommendedSlug: '/formations/courtes-professionnalisantes',
     primaryKeywords: ['formation professionnalisante insertion', 'formation courte Bordeaux insertion'],
     longTailKeywords: [],
@@ -829,20 +830,24 @@ const BRIEFS: ContentBrief[] = [
     personas: ['professionnel-insertion', 'rh-entreprise'],
     faq: [
       {
-        question: 'À qui s’adressent les formations professionnalisantes ?',
-        answer: 'Aux conseillers en insertion, travailleurs sociaux, chargés de relation entreprise et RH en poste.',
+        question: 'À qui s’adressent ces formations courtes ?',
+        answer:
+          'Aux personnes qui accompagnent vers l’emploi, et aux équipes qui recrutent.',
       },
       {
-        question: 'Quelle durée pour chaque module ?',
-        answer: '11 à 21 heures selon le module — voir le détail sur chaque fiche.',
+        question: 'Combien de temps dure une formation ?',
+        answer: 'De 11 à 21 heures selon la formation. Le détail est sur chaque fiche.',
       },
       {
-        question: 'Comment financer une formation professionnalisante ?',
-        answer: faqFinancement('OPCO, employeur ou fonds propres — renseignez-vous auprès de votre structure.'),
+        question: 'Comment la payer ?',
+        answer: faqFinancement(
+          'Par l’employeur, un OPCO, ou vous-même. On vérifie avec vous ce qui est possible.'
+        ),
       },
       {
         question: 'Où ont lieu les sessions ?',
-        answer: 'À Lormont ou selon modalités précisées sur la fiche formation.',
+        answer:
+          'Au centre Atipik RH, à Lormont, près de Bordeaux. Certaines formations se font en partie à distance : c’est indiqué sur la fiche.',
       },
     ],
     internalLinks: [

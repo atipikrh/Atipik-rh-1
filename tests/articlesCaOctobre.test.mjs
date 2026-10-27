@@ -2,7 +2,13 @@ import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
 import { articlesCaOctobre2026 } from '../lib/blog/articlesCaOctobre2026.js'
 import { CAMPAGNES_SEA_OCTOBRE_2026 } from '../lib/seo/campagnesCaOctobre2026.js'
-import { CAMPAGNE_SEA_CIP, CAMPAGNES_SEA_SUIVANTES, REGLAGES_SEA } from '../lib/seo/reglagesSea.js'
+import {
+  CAMPAGNE_SEA_CIP,
+  CAMPAGNES_SEA_SUIVANTES,
+  REGLAGES_SEA,
+  peutActiverCampagneCip,
+  peutActiverCampagneSuivante,
+} from '../lib/seo/reglagesSea.js'
 
 describe('articles formations courtes octobre 2026', () => {
   it('compte huit pages de conversion avec le maillage minimum', () => {
@@ -52,6 +58,33 @@ describe('articles formations courtes octobre 2026', () => {
     for (const campagne of CAMPAGNES_SEA_SUIVANTES) {
       assert.equal(campagne.actifAuLancement, false)
       assert.equal(campagne.urlFinale.includes('/blog/'), false)
+    }
+  })
+
+  it('réserve la campagne CIP au Search, 40 km, après les titres, hors Search Console', () => {
+    assert.equal(REGLAGES_SEA.reseau, 'search')
+    assert.equal(REGLAGES_SEA.display, false)
+    assert.equal(REGLAGES_SEA.rayonKmAutourLormont, 40)
+    assert.equal(REGLAGES_SEA.aquitaineZoneEnchere, false)
+    assert.equal(REGLAGES_SEA.clicsComptentSearchConsole, false)
+    assert.equal(REGLAGES_SEA.diffusionPayante, false)
+    assert.equal(CAMPAGNE_SEA_CIP.horsObjectifOrganique, true)
+    assert.equal(new URL(CAMPAGNE_SEA_CIP.urlFinale).pathname, '/formations/cip')
+    assert.deepEqual(CAMPAGNE_SEA_CIP.titresRequis, [
+      '/',
+      '/bilan-de-competences',
+      '/formations/cip',
+    ])
+    assert.equal(peutActiverCampagneCip(undefined), false)
+    assert.equal(peutActiverCampagneCip(['/']), false)
+    assert.equal(peutActiverCampagneCip(CAMPAGNE_SEA_CIP.titresRequis), true)
+    assert.equal(peutActiverCampagneSuivante(CAMPAGNE_SEA_CIP, true), false)
+    for (const campagne of CAMPAGNES_SEA_SUIVANTES) {
+      assert.equal(campagne.conditionActivation, 'lead-cip')
+      assert.equal(peutActiverCampagneSuivante(campagne, false), false)
+      assert.equal(peutActiverCampagneSuivante(campagne, true), true)
+      const pathname = new URL(campagne.urlFinale).pathname
+      assert.equal(['/formations/fpa', '/vae'].includes(pathname), true)
     }
   })
 })

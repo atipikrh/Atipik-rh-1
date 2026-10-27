@@ -82,12 +82,12 @@ export default function RenforcerPratiqueRecrutementInclusif() {
 
   const formation = {
     titre: seoFormation?.titreAffichage ?? "Prévenir les discriminations dans le recrutement",
-    sousTitre: "Formation obligatoire",
-    sousTitre2: "À destination des recruteurs, managers et professionnels RH",
+    sousTitre: "Ce qui est interdit à l'embauche, et comment recruter sans écarter des candidats.",
+    sousTitre2: "Pour les personnes qui recrutent. Formation obligatoire, 11 heures.",
     presentation: {
-      texte: "Dans un contexte où le recrutement responsable et conforme au cadre légal devient un enjeu stratégique pour les entreprises, prévenir les discriminations dans le processus de recrutement est une obligation réglementaire et un levier de performance.",
-      texte2: "Cette formation donne les clés pour sécuriser les pratiques de recrutement, comprendre les exigences légales et adopter des méthodes objectives et équitables.",
-      slogan: "Un recrutement sans discrimination, c'est la clé d'une performance durable et d'une responsabilité sociale affirmée."
+      texte: "Certaines questions et certains critères sont interdits au moment d'embaucher. Cette formation de 11 heures montre lesquels, et comment recruter sans écarter des candidats.",
+      texte2: "La loi demande cette formation aux entreprises de 300 salariés et plus, et aux personnes dont le métier est de recruter.",
+      slogan: "À la fin, vous savez ce qui est interdit, et comment choisir sur les compétences."
     },
     objectifs: [
       "Comprendre le cadre légal et les obligations relatives à la non-discrimination à l'embauche.",
@@ -103,11 +103,11 @@ export default function RenforcerPratiqueRecrutementInclusif() {
     ],
     duree: "11 heures",
     dureeDetails: [
-      "7 heures en présentiel – Jour 1 (J1)",
-      "1h30 en distanciel asynchrone",
-      "4 heures en distanciel synchrone – Jour 2 (J2)"
+      "7 heures en salle – Jour 1",
+      "1 h 30 à votre rythme",
+      "4 heures en visio, en direct – Jour 2"
     ],
-    modalite: "Mixed learning",
+    modalite: "En salle et à distance",
     lieu: "8 rue du Courant, 33310 Lormont",
     horaires: "Du lundi au vendredi : 9h00–12h30 / 13h30–17h00",
     tailleGroupe: "4 à 12 participants",
@@ -115,9 +115,9 @@ export default function RenforcerPratiqueRecrutementInclusif() {
     accessibilite: "Formation accessible aux personnes en situation de handicap (nous consulter)",
     typeAction: "Action de formation / sensibilisation – Formation continue",
     deroulement: [
-      "11h en mixed learning dont :",
+      "11 heures en salle et à distance, dont :",
       "7h présentiel sur 1 journée - J1",
-      "4h en distanciel synchrone - J2 à J+7 ou J+15"
+      "4 h en visio, en direct — jour 2, dans les 7 à 15 jours"
     ],
     programme: [
       {
@@ -136,7 +136,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
           "Renfort de pratique au delà du cadre légal",
           "Élaboration d'un plan d'action transférable"
         ],
-        modalite: "Distanciel synchrone"
+        modalite: "En visio, en direct"
       }
     ],
     methodesPedagogiques: [
@@ -212,10 +212,10 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                   {formation.sousTitre}
                 </p>
                 <p className="text-sm lg:text-base text-[#013F63] font-normal max-w-3xl mx-auto">
-                  Conformément à la loi n° 2017-86 du 27 janvier 2017, les entreprises de 300 salariés et plus, ainsi que les acteurs du recrutement, ont l'obligation de former les professionnels en charge du recrutement à la non-discrimination à l'embauche.
+                  La loi du 27 janvier 2017 demande aux entreprises de 300 salariés et plus, et aux personnes qui recrutent, de se former pour ne pas discriminer à l&apos;embauche.
                 </p>
                 <p className="mt-4 text-sm text-[#013F63]/80 max-w-2xl mx-auto">
-                  Formation obligatoire (11 h). Pour renforcer vos pratiques RH au-delà du cadre légal :{' '}
+                  Formation obligatoire, 11 heures. Pour aller plus loin sur la façon de recruter :{' '}
                   <Link href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" className="font-semibold text-orange-500 hover:underline">
                     Renforcer ses pratiques de recrutement
                   </Link>

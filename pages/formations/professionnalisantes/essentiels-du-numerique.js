@@ -83,8 +83,8 @@ export default function EssentielsDuNumerique() {
 
   const formation = {
     titre: seoFormation?.titreAffichage ?? 'Les essentiels du numérique',
-    sousTitre: 'Formation courte – Transformation numérique des pratiques professionnelles',
-    presentation: "Dans un contexte où les outils numériques structurent l'ensemble des démarches d'accompagnement, maîtriser son environnement numérique professionnel devient un levier de productivité, de sécurité et de qualité de service. Cette formation vous donne les repères pour organiser vos outils, sécuriser vos données et gagner en efficacité au quotidien, en cohérence avec les exigences de votre structure et de vos publics.",
+    sousTitre: 'Mails, fichiers et outils du quotidien, en salle.',
+    presentation: "Vous accompagnez des personnes vers l'emploi. Cette formation vous aide à ranger vos mails, vos fichiers et les outils que vous utilisez chaque jour. 14 heures en salle, à Lormont.",
     public: "Pour les professionnel·les de l'accompagnement (CIP, conseillers emploi, formateurs, chargés de mission) souhaitant structurer leur pratique numérique",
     objectifs: [
       "Structurer un environnement numérique professionnel adapté à l'accompagnement.",
@@ -204,7 +204,7 @@ export default function EssentielsDuNumerique() {
                   {seoFormation?.sousTitreCarte}
                 </p>
                 <p className="mt-4 text-sm text-[#013F63]/80 max-w-2xl mx-auto">
-                  Complétez votre montée en compétences numériques avec{' '}
+                  Vous pouvez aussi suivre{' '}
                   <Link href="/formations/professionnalisantes/intelligence-artificielle-accompagnement" className="font-semibold text-orange-500 hover:underline">
                     L&apos;intelligence artificielle au service de l&apos;accompagnement
                   </Link>
@@ -231,7 +231,7 @@ export default function EssentielsDuNumerique() {
                         </p>
                         <div className="w-20 h-0.5 bg-gradient-to-r from-orange-300 to-orange-500 mb-3 mx-auto"></div>
                         <p className="text-accent-500 font-bold">
-                          Un environnement numérique structuré, c&apos;est la clé d&apos;une pratique d&apos;accompagnement efficace et sécurisée.
+                          À la fin, vos mails, vos fichiers et vos outils du quotidien sont plus clairs.
                         </p>
                       </div>
                     </div>

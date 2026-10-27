@@ -36,7 +36,7 @@ export default function HomePage() {
       id: 6,
       title: "VAE CIP ou VAE FPA : passez à l'action !",
       subtitle: "Votre expérience mérite d'être reconnue.",
-      description: "Faites reconnaître votre expérience avec ATIPIK RH",
+      description: "Faites reconnaître votre expérience avec ATIPIK RH\nConseiller en insertion professionnelle (CIP)\nFormateur professionnel d'adultes (FPA)\n\nFaites reconnaître votre expérience avec ATIPIK RH",
       buttonText: "accédez ici",
       buttonLink: "/vae",
       cardScript: "Échangeons",
@@ -155,7 +155,7 @@ export default function HomePage() {
           <Header isFixed={true} />
           <main>
         <section
-          className="relative min-h-[540px] sm:min-h-[500px] md:min-h-[480px] lg:h-[430px] overflow-hidden rounded-lg mx-2 max-[375px]:mx-1.5 sm:mx-4 lg:mx-8 mt-24 shadow-2xl touch-pan-y"
+          className="relative min-h-[620px] sm:min-h-[560px] md:min-h-[520px] lg:h-[500px] overflow-hidden rounded-lg mx-2 max-[375px]:mx-1.5 sm:mx-4 lg:mx-8 mt-24 shadow-2xl touch-pan-y"
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
         >
@@ -196,6 +196,11 @@ export default function HomePage() {
               {/* Contenu - Layout horizontal */}
               <div className="relative h-full flex items-center max-lg:items-start max-lg:py-4 sm:max-lg:py-6">
                 <div className="container mx-auto px-3 max-[375px]:px-2.5 sm:px-6 lg:pl-16 lg:pr-12">
+                  {slide.id === 6 ? (
+                    <p className="whitespace-nowrap font-bold leading-none text-white tracking-tight text-[clamp(0.68rem,2.45vw,1.85rem)] mb-3">
+                      {slide.title}
+                    </p>
+                  ) : null}
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 md:gap-5 lg:gap-8 items-center">
                     {/* Texte à gauche */}
                     <div className="text-white space-y-1.5 max-[375px]:space-y-1 sm:space-y-3 max-w-xl">
@@ -203,11 +208,11 @@ export default function HomePage() {
                         <p className="text-xl max-[375px]:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white">
                           Réunions d'information collective
                         </p>
-                      ) : slide.isPaiement ? (
+                      ) : slide.isPaiement && slide.id !== 6 ? (
                         <p className="text-xl max-[375px]:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white">
                           {slide.title}
                         </p>
-                      ) : (
+                      ) : slide.isPaiement ? null : (
                         <p className="text-xl max-[375px]:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                           {slide.title}
                           {slide.scriptWord ? (
@@ -231,9 +236,15 @@ export default function HomePage() {
                           </p>
                         )
                       )}
-                      <p className={`text-xs max-[375px]:text-[11px] sm:text-sm lg:text-base opacity-90 leading-relaxed whitespace-pre-line ${slide.isPaiement ? 'hidden lg:block' : ''}`}>
-                        <span className="sm:hidden">{getMobileDescription(slide)}</span>
-                        <span className="hidden sm:inline">{slide.description}</span>
+                      <p className={`text-xs max-[375px]:text-[11px] sm:text-sm lg:text-base opacity-90 leading-relaxed whitespace-pre-line ${slide.isPaiement && slide.id !== 6 ? 'hidden lg:block' : ''}`}>
+                        {slide.id === 6 ? (
+                          slide.description
+                        ) : (
+                          <>
+                            <span className="sm:hidden">{getMobileDescription(slide)}</span>
+                            <span className="hidden sm:inline">{slide.description}</span>
+                          </>
+                        )}
                       </p>
                       {!slide.isQuiz && !slide.isReunion && !slide.isPaiement && (
                         <a

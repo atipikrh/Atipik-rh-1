@@ -81,7 +81,7 @@ export default function RenforcerRelationEntreprise() {
 
   const formation = {
     titre: seoFormation?.titreAffichage ?? "Renforcer la relation avec l'entreprise",
-    sousTitre: "De la prospection à la valorisation de votre offre",
+    sousTitre: 'Garder le lien avec les entreprises et présenter clairement ce que vous proposez.',
     public: "Professionnels ayant une première expérience en tant que chargés de relation entreprise",
     objectifs: [
       "Structurer une offre de service lisible",
@@ -183,7 +183,7 @@ export default function RenforcerRelationEntreprise() {
                     <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#013F63]">
                       <div className="space-y-4 text-[#013F63] text-lg leading-relaxed text-center">
                         <p>
-                          Vous avez déjà une première expérience en relation entreprise ? Cette formation s&apos;adresse aux professionnels qui souhaitent structurer leur offre, professionnaliser leur prospection et valoriser l&apos;impact de leur action auprès des employeurs. L&apos;objectif : transformer des contacts ponctuels en partenariats durables et mesurables pour l&apos;insertion.
+                          Vous travaillez déjà avec des entreprises. Cette formation vous apprend à garder le contact et à présenter clairement ce que vous proposez.
                         </p>
                       </div>
                       
@@ -194,7 +194,7 @@ export default function RenforcerRelationEntreprise() {
                       
                       <div className="text-accent-500 font-bold text-xl leading-relaxed text-center">
                         <p>
-                          Une relation entreprise renforcée, c'est la clé du succès pour l'insertion professionnelle !
+                          À la fin, vous savez entretenir le lien et expliquer votre offre sans jargon.
                         </p>
                       </div>
                     </div>

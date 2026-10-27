@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import ServicePageSeoHead from '../components/ServicePageSeoHead';
 import EntityCitationBlock from '../components/EntityCitationBlock';
 import { TARIF_SELON_PROFIL_COMPLET } from '../lib/tarifs/tarifsCopy';
+import { BILAN_ACCES_REGION } from '../lib/seo/citations';
 import FormationFaqSection from '../components/FormationFaqSection';
 
 import { 
@@ -45,7 +46,7 @@ export default function BilanCompetences() {
     },
     {
       question: "Puis-je faire mon bilan en ligne ?",
-      answer: "Oui ! Nous proposons des bilans 100% à distance via visioconférence. L'efficacité est la même qu'en présentiel, avec plus de flexibilité. Idéal si vous habitez loin de Bordeaux ou avez des contraintes horaires."
+      answer: `Oui. ${BILAN_ACCES_REGION}`
     },
     {
       question: "Quelle est la différence avec un coaching ?",
@@ -92,6 +93,9 @@ export default function BilanCompetences() {
             <p className="text-lg text-[#013F63] leading-relaxed font-light mb-8">
               Révélez votre potentiel et construisez votre avenir professionnel<br className="hidden lg:block"/>
               <span className="text-accent-500 font-medium">avec un accompagnement personnalisé</span>
+              <span className="block mt-4 text-base font-normal">
+                {BILAN_ACCES_REGION}
+              </span>
             </p>
           </div>
           

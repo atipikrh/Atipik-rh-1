@@ -32,9 +32,9 @@ function libelleDureeDepuisTimeRequired(timeRequired) {
   const m = /^PT(\d+)H$/i.exec(timeRequired || '')
   if (!m) return ''
   const h = parseInt(m[1], 10)
-  if (h === 11) return '11 heures (mixed learning)'
-  if (h === 14) return '14 heures (présentiel)'
-  if (h === 21) return '21 heures (mixed learning)'
+  if (h === 11) return '11 heures (en salle et à distance)'
+  if (h === 14) return '14 heures (en salle)'
+  if (h === 21) return '21 heures (en salle et à distance)'
   return `${h} heures`
 }
 
@@ -66,7 +66,7 @@ export default function FormationsCourtesProfessionnalisantes() {
   }))
 
   const metaDescription =
-    "Formations courtes professionnalisantes à Lormont (Bordeaux) : relation entreprise, insertion, recrutement, numérique, IA et prévention des discriminations. Durées 11 h à 21 h ; tarifs sur chaque fiche. Qualiopi."
+    'Sept formations courtes à Lormont, de 11 à 21 h. Pour accompagner vers l’emploi ou recruter. Atipik RH, près de Bordeaux.'
   const metaTitle = 'Formations courtes professionnalisantes | Atipik RH'
   const jsonLdHub = buildJsonLdFormationProHub({
     title: metaTitle,
@@ -109,19 +109,20 @@ export default function FormationsCourtesProfessionnalisantes() {
 </h1>
 <BrandSignals published="2026-05-13" showLeadH2={false} />
                 <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-light">
-                  Des formations ancrées dans les <strong>réalités professionnelles</strong>
-                  <br className="hidden lg:block" />
-                  <span className="text-orange-500 font-medium">pour les acteurs de l&apos;accompagnement et de l&apos;insertion</span>
+                  Ces formations sont pour les personnes qui accompagnent vers l&apos;emploi,
+                  et pour les équipes qui recrutent.
+                  Elles durent de 11 à 21 heures, à Lormont.
                 </p>
                 <p className="mt-6 text-sm text-[#013F63]">
-                  Montée en compétences pour les professionnels — découvrir la formation certifiante{' '}
+                  Pour un diplôme plus long :{' '}
                   <Link href="/formations/cip" className="font-semibold text-orange-500 hover:underline">
-                    CIP
+                    conseiller en insertion (CIP)
                   </Link>
-                  {', '}
+                  {' ou '}
                   <Link href="/formations/fpa" className="font-semibold text-orange-500 hover:underline">
-                    FPA
+                    formateur d&apos;adultes (FPA)
                   </Link>
+                  .
                 </p>
                 <div className="mt-8">
                   <EntityCitationBlock pageId="formations-professionnalisantes-hub" />
@@ -148,9 +149,9 @@ export default function FormationsCourtesProfessionnalisantes() {
                   </div>
                   <div>
                     <p className="text-lg text-gray-700 leading-relaxed">
-                      Dans un contexte de mutation du marché du travail, les acteurs de l&apos;accompagnement social et professionnel
-                      ainsi que les entreprises de secteurs en tension doivent adapter leurs pratiques pour favoriser
-                      l&apos;employabilité, la coopération interprofessionnelle et la sécurisation des parcours.
+                      Vous accompagnez des personnes vers l&apos;emploi, ou vous recrutez dans votre équipe.
+                      Ces formations courtes montrent quoi faire concrètement : parler aux entreprises,
+                      recruter sans écarter des candidats, et utiliser les outils du quotidien.
                     </p>
                   </div>
                 </div>
@@ -168,19 +169,19 @@ export default function FormationsCourtesProfessionnalisantes() {
                         <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                           <CheckCircle className="w-4 h-4 text-white" />
                         </div>
-                        <p className="text-gray-800 font-semibold text-lg">Structurer la relation employeur</p>
+                        <p className="text-gray-800 font-semibold text-lg">Parler aux entreprises</p>
                       </div>
                       <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-orange-500">
                         <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                           <CheckCircle className="w-4 h-4 text-white" />
                         </div>
-                        <p className="text-gray-800 font-semibold text-lg">Valoriser les compétences</p>
+                        <p className="text-gray-800 font-semibold text-lg">Montrer ce que les personnes savent faire</p>
                       </div>
                       <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-orange-500">
                         <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                           <CheckCircle className="w-4 h-4 text-white" />
                         </div>
-                        <p className="text-gray-800 font-semibold text-lg">Améliorer la posture professionnelle</p>
+                        <p className="text-gray-800 font-semibold text-lg">Recruter sans écarter des candidats</p>
                       </div>
                     </div>
                   </div>
@@ -305,7 +306,7 @@ export default function FormationsCourtesProfessionnalisantes() {
                     <Clock className="w-12 h-12 text-[#013F63] mx-auto mb-4" />
                     <h3 className="font-bold text-gray-800 mb-2">Durées</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">
-                      11 h ou 21 h selon l&apos;action ; présentiel et distanciel (mixed learning selon le programme).
+                      De 11 à 21 heures. En salle, ou en salle et à distance selon la formation.
                     </p>
                   </div>
 
@@ -328,8 +329,8 @@ export default function FormationsCourtesProfessionnalisantes() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">
-                  Intéressé(e) par nos formations{' '}
-                  <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">professionnalisantes ?</span>
+                  Ces formations{' '}
+                  <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">vous intéressent ?</span>
                 </h2>
 
                 <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">

@@ -81,10 +81,10 @@ export default function RecruterInsertionEntreprises() {
 
   const formation = {
     titre: seoFormation?.titreAffichage ?? "Recruter en insertion avec les entreprises",
-    sousTitre: "De la co-construction à l'accompagnement stratégique RH",
+    sousTitre: "Aider une entreprise à embaucher une personne en parcours d'insertion.",
     presentation: {
-      texte: "Dans un contexte où le recrutement en insertion devient un enjeu stratégique pour les entreprises, développer ses compétences en recrutement inclusif permet de créer des équipes diversifiées et performantes. Cette formation vous donne les clés pour identifier et valoriser les talents issus de l'insertion.",
-      slogan: "Un recrutement inclusif, c'est la clé du succès pour des équipes performantes !"
+      texte: "Cette formation montre comment une entreprise peut embaucher une personne accompagnée vers l'emploi, et comment vous l'aidez à le faire.",
+      slogan: "À la fin, vous savez préparer une embauche avec une entreprise."
     },
     public: "Professionnels de l'accompagnement socio-professionels , Conseiller.e en Insertion Professionnelle expérimenté.e et/ou ayant suivi modules 1 et 2",
     prerequis: "Justifier d'une première expérience professionnelle en lien avec l'accompagnement de publics , la relation entreprise, le recrutement ou l'intégration professionnelle.",
@@ -102,13 +102,13 @@ export default function RecruterInsertionEntreprises() {
     },
     informationsCles: {
       dureeTotale: "21 heures",
-      modalite: "Mixed learning",
+      modalite: "En salle et à distance",
       horaires: "Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00",
       lieu: "8 rue du Courant, 33310 Lormont",
       tailleGroupe: "4 à 12 participants",
       niveauSortie: "Attestation de formation"
     },
-    deroulement: "21h en mixed learning dont :\n14h présentiel sur 2 journées consécutives .\n7h en distanciel synchrone.",
+    deroulement: "21 heures en salle et à distance, dont :\n14 heures en salle sur 2 journées consécutives.\n7 heures en visio, en direct.",
     lePlusProgramme: "À l'issue de la formation, le/la stagiaire bénéficie d'invitations exclusives aux événements organisés par Collectif Professionnel de l'Insertion et des RH : Les rencontres Atipik de la Richesse Humaine",
     methodesPedagogiques: [
       "Alternance d'apports théoriques, d'ateliers pratiques, d'études de cas et de jeux de rôle",
@@ -142,7 +142,7 @@ export default function RecruterInsertionEntreprises() {
           "Retour terrain et outils d'évaluation",
           "Bilan final et valorisation des acquis"
         ],
-        modalite: "Distanciel synchrone"
+        modalite: "En visio, en direct"
       }
     ],
     modalitesAdmission: "Nous sommes à votre disposition, par téléphone ou par mail, afin d'analyser et d'évaluer vos besoins. Dans le cadre de nos actions de formation INTRA, un programme est construit, personnalisé et élaboré, en cohérence avec vos objectifs et les spécificités de votre structure."

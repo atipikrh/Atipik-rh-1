@@ -82,8 +82,8 @@ export default function RenforcerPratiqueRecrutementDiversite() {
 
   const formation = {
     titre: seoFormation?.titreAffichage ?? "Renforcer ses pratiques de recrutement sur les compétences : de la diversité à la performance RH",
-    sousTitre: "Formation courte – Professionnalisation des pratiques RH",
-    presentation: "Dans un contexte où les enjeux de recrutement, d'attractivité et de fidélisation des talents deviennent stratégiques, structurer des recrutements fondés sur les compétences permet de sécuriser les décisions, d'élargir les viviers et de renforcer durablement la performance RH. Cette formation vous donne les clés pour déployer une démarche de recrutement inclusive, outillée et orientée résultats, au service de votre stratégie RH et de votre marque employeur.",
+    sousTitre: "Recruter sur ce que la personne sait faire, pas sur le diplôme ou l'impression.",
+    presentation: "Vous recrutez. Cette formation vous apprend à choisir sur ce que la personne sait faire, pas sur le diplôme ou la première impression. 11 heures, en salle et à distance, à Lormont.",
     public: "Pour les professionnel·les des RH, recruteurs et managers d'entreprises amenés à recruter",
     objectifs: [
       "Comprendre et maîtriser les fondamentaux du recrutement inclusif",
@@ -94,12 +94,12 @@ export default function RenforcerPratiqueRecrutementDiversite() {
       "Avoir une première expérience du recrutement",
       "Être amené à recruter de façon ponctuelle ou permanente"
     ],
-    duree: "11 heures en mixed learning",
+    duree: "11 heures en salle et à distance",
     dureeDetails: [
       "7h présentiel sur 1 journée - J1",
-      "4h en distanciel synchrone - J3 à J+7 ou J+15"
+      "4 h en visio, en direct — jour 3, dans les 7 à 15 jours"
     ],
-    modalite: "Mixed learning (présentiel + distanciel synchrone et asynchrone)",
+    modalite: "En salle, en visio et à votre rythme",
     lieu: "8 rue du Courant, 33310 Lormont",
     horaires: "Du lundi au vendredi : 9h00–12h30 / 13h30–17h00",
     effectif: "4 à 12 participants",
@@ -140,7 +140,7 @@ export default function RenforcerPratiqueRecrutementDiversite() {
           "Co Construction d'une Charte des bonnes pratiques",
           "Élaboration d'un plan d'action transférable"
         ],
-        modalite: "Distanciel synchrone",
+        modalite: "En visio, en direct",
         note: "Organisé à J+7 ou J+15"
       }
     ]
@@ -466,10 +466,10 @@ export default function RenforcerPratiqueRecrutementDiversite() {
                       </button>
                       {openSections.deroulement && (
                         <div className="p-4 border-t border-muted-blue-200">
-                          <p className="text-[#013F63] text-sm mb-2">11h en mixed learning dont :</p>
+                          <p className="text-[#013F63] text-sm mb-2">11 heures en salle et à distance, dont :</p>
                           <ul className="space-y-1 text-[#013F63] text-sm">
                             <li>7h présentiel sur 1 journée - J1</li>
-                            <li>4h en distanciel synchrone - J3 à J+7 ou J+15</li>
+                            <li>4 h en visio, en direct — jour 3, dans les 7 à 15 jours</li>
                           </ul>
                         </div>
                       )}

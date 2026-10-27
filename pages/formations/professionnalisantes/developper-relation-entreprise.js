@@ -80,7 +80,7 @@ export default function DevelopperRelationEntreprise() {
   }, [cardsVisible])
   const formation = {
     titre: seoFormation?.titreAffichage ?? "Développer la relation entreprise",
-    sousTitre: "De l'accompagnement à la relation entreprise",
+    sousTitre: 'Apprendre à contacter les entreprises pour proposer des candidats.',
     public: "Professionnels sans expérience en relation entreprises (CIP débutants, travailleurs sociaux…)",
     objectifs: [
       "Comprendre le fonctionnement des entreprises",
@@ -182,7 +182,7 @@ export default function DevelopperRelationEntreprise() {
                     <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#013F63]">
                       <div className="space-y-4 text-[#013F63] text-lg leading-relaxed text-center">
                         <p>
-                          Dans un contexte où la relation entreprise devient un enjeu stratégique pour l'insertion professionnelle, développer ses compétences en relation entreprise permet de créer des partenariats durables et efficaces. Cette formation vous donne les clés pour comprendre les attentes des employeurs et construire une collaboration mutuellement bénéfique.
+                          Vous accompagnez des personnes vers l&apos;emploi. Cette formation vous apprend à contacter les entreprises et à leur proposer des candidats.
                         </p>
                       </div>
                       
@@ -193,7 +193,7 @@ export default function DevelopperRelationEntreprise() {
                       
                       <div className="text-accent-500 font-bold text-xl leading-relaxed text-center">
                         <p>
-                          Une relation entreprise solide, c'est la clé du succès pour l'insertion professionnelle !
+                          À la fin, vous savez prendre contact avec une entreprise et lui présenter un candidat.
                         </p>
                       </div>
                     </div>
