@@ -25,7 +25,7 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-organisme-insertion',
     pageType: 'pilier',
     h1: 'Atipik RH — organisme de formation à Lormont',
-    metaTitle: 'Atipik RH | Formation Qualiopi à Lormont',
+    metaTitle: 'Atipik RH | Centre de formation à Lormont',
     metaDescription:
       'Atipik RH, organisme Qualiopi à Lormont (Bordeaux, Aquitaine) : CIP, FPA, bilans de compétences, VAE et formations courtes.',
     recommendedSlug: '/',
@@ -74,7 +74,7 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-formation-cip-bordeaux',
     pageType: 'pilier',
     h1: 'Formation CIP à Lormont — Conseiller en Insertion Professionnelle',
-    metaTitle: 'Formation CIP Bordeaux | mars 2027, 9 100 € | Atipik RH',
+    metaTitle: 'Formation CIP Bordeaux | session mars 2027 | Atipik RH',
     metaDescription:
       'Devenez conseiller en insertion à Lormont. Session du 22 mars au 22 octobre 2027, titre RNCP 37274, 9 100 € TTC. Candidatures ouvertes.',
     recommendedSlug: '/formations/cip',
@@ -534,7 +534,7 @@ const BRIEFS: ContentBrief[] = [
     serpSnapshotId: 'serp-bilan-lormont',
     pageType: 'local',
     h1: 'Bilan de compétences à Lormont, proche de Bordeaux',
-    metaTitle: 'Bilan de compétences Lormont | dès 1 600 €, CPF',
+    metaTitle: 'Bilan de compétences Bordeaux | Lormont, dès 1 600 €',
     metaDescription:
       '16 h à 1 600 € ou 20 h à 1 900 € TTC, à Lormont, en présentiel ou en visio. CPF selon éligibilité. Atipik RH, près de Bordeaux.',
     recommendedSlug: '/bilan-de-competences',
