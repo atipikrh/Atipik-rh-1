@@ -1314,7 +1314,7 @@ export default function FormationCCP3() {
           </section>
 
           <FormationTarifSection
-            publicPrice="3075"
+            publicPrice="2950.20"
             variant="certifiante"
             contactHref={CONTACT_HREF}
           />

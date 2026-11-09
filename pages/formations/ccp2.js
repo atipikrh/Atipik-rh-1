@@ -1313,7 +1313,7 @@ export default function FormationCCP2() {
           </section>
 
           <FormationTarifSection
-            publicPrice={null}
+            publicPrice="2449.56"
             variant="certifiante"
             contactHref={CONTACT_HREF}
           />
