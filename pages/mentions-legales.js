@@ -303,7 +303,7 @@ export default function MentionsLegales() {
                   <div className="bg-gray-50 rounded-lg p-6">
                     <h3 className="text-lg font-semibold text-[#013F63] mb-4 flex items-center gap-2">
                       <ExternalLink className="w-5 h-5" />
-                      MÉDIATION CONSOMMATION DÉVELOPPEMENT (MED CONSO DEV)
+                      SAS MÉDIATION CONSOMMATION DÉVELOPPEMENT (MED CONSO DEV)
                     </h3>
                     <div className="space-y-2 text-gray-700">
                       <p>Centre d'Affaires Stéphanois – Immeuble l'Horizon</p>

@@ -210,7 +210,7 @@ export default function CGV() {
                   </p>
                   
                   <div className="bg-gray-50 rounded-lg p-6 mb-6">
-                    <p className="text-gray-700 font-semibold mb-2">MÉDIATION CONSOMMATION DÉVELOPPEMENT (MED CONSO DEV)</p>
+                    <p className="text-gray-700 font-semibold mb-2">SAS MÉDIATION CONSOMMATION DÉVELOPPEMENT (MED CONSO DEV)</p>
                     <p className="text-gray-700">
                       Centre d'Affaires Stéphanois – Immeuble l'Horizon<br />
                       Esplanade de France – 3 rue J. Constant Milleret<br />
