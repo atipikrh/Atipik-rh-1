@@ -70,7 +70,7 @@ export function ArticleConversionFooter({ conversion }) {
         </li>
         <li>
           <Link href={conversion.reunionHref} className="font-semibold underline hover:text-[#FE6400]">
-            Réunion d&apos;information
+            {conversion.reunionLabel || 'Réunion d’information'}
           </Link>
         </li>
         <li>

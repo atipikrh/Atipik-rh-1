@@ -3,11 +3,13 @@ import { INSTAGRAM_ARTICLE_SLUGS } from '../blog/instagramArticles.js'
 import { getBlogPublishIso, isScheduledBlogSlugLive } from '../blog/publicationSchedule.js'
 import { PROFESSIONNALISANTES_SLUGS } from './professionnalisantesConfig.js'
 import { SLUGS_CA_OCTOBRE_2026 } from './campagnesCaOctobre2026.js'
+import { SLUGS_CIP_COURTES_NOV } from './articlesCipCourtesNov2026.js'
 import type { RegistryEntry } from './types'
 
 /** Slugs blog indexables (alignés sur pages/blog/[slug].js). */
 export const BLOG_SLUGS = [
   ...INSTAGRAM_ARTICLE_SLUGS,
+  ...SLUGS_CIP_COURTES_NOV,
   ...SLUGS_CA_OCTOBRE_2026,
   'neurodiversite-inclusion-recrutement',
   'experience-professionnelle-non-reconnue-vae',

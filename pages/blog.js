@@ -11,6 +11,7 @@ import { instagramArticlesListing } from '../lib/blog/instagramArticles';
 import InstagramArticles from '../components/blog/InstagramArticles';
 import { getFormationContactHref } from '../lib/seo/professionnalisantesConfig';
 import { articlesCaOctobreListing } from '../lib/seo/campagnesCaOctobre2026';
+import { articlesCipCourtesNovListing } from '../lib/seo/articlesCipCourtesNov2026';
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("Tous");
@@ -20,6 +21,7 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     ...instagramArticlesListing,
+    ...articlesCipCourtesNovListing,
     ...articlesCaOctobreListing,
     {
       id: 50,
@@ -192,7 +194,7 @@ export default function Blog() {
         { label: "Réunion d'information", href: "/s-inscrire", type: "contact" },
         { label: "Financement", href: "/financement", type: "financement" },
         { label: "Page contact", href: "/contact", type: "contact" },
-        { label: "Formation CIP Bordeaux, session septembre 2026", href: "/blog/formation-cip-bordeaux-session-septembre-2026", type: "article" },
+        { label: "Formation CIP Bordeaux, session mars 2027", href: "/blog/formation-cip-bordeaux-session-septembre-2026", type: "article" },
         { label: "Devenir conseiller en insertion professionnelle à Bordeaux", href: "/blog/formation-cip-bordeaux-conseiller-insertion-professionnelle", type: "article" },
         { label: "Devenir formateur professionnel d’adultes à Bordeaux", href: "/blog/formation-fpa-bordeaux-formateur-professionnel-adultes", type: "article" },
         { label: "Expérience non reconnue : pourquoi choisir la VAE ?", href: "/blog/experience-professionnelle-non-reconnue-vae", type: "article" },
@@ -571,19 +573,19 @@ export default function Blog() {
     {
       id: 40,
       slug: "formation-cip-bordeaux-session-septembre-2026",
-      title: "Devenir Conseiller en Insertion Professionnelle à Bordeaux : tout savoir sur la session CIP d'Atipik RH (septembre 2026)",
-      excerpt: "Rejoignez la formation CIP niveau 5 (RNCP37274) chez Atipik RH à Lormont. Session du 22 mars 2027 au 22 oct. 2027 — 14 places disponibles. Finançable CPF, AIF, Transition Pro.",
-      image: "/images/blog/formation-cip-bordeaux-session-septembre-2026.png",
-      imageAlt: "Formation CIP Bordeaux session septembre 2026 — Conseiller en Insertion Professionnelle RNCP37274 — ATIPIK RH Lormont",
+      title: "Formation CIP à Bordeaux : la session du 22 mars 2027 ouvre ses candidatures à Lormont",
+      excerpt: "Session du 22 mars au 22 octobre 2027 à Lormont. Titre RNCP37274, 14 places annoncées, candidatures ouvertes depuis le 3 octobre 2026. Réunion d'information et devis.",
+      image: "/images/blog/formation-cip-bordeaux-session-mars-2027.jpg",
+      imageAlt: "Formation CIP à Bordeaux, session du 22 mars au 22 octobre 2027 à Lormont — ATIPIK RH",
       date: "10 juillet 2026",
       readTime: "14 min",
       author: "Vanessa NOAH EWODO",
       category: "Formations",
       keywords: "formation CIP Bordeaux, formation CIP Lormont, session CIP mars 2027, conseiller insertion professionnelle Bordeaux, RNCP37274, formation CIP financement CPF, devenir CIP reconversion, formation CIP niveau 5 Gironde",
       seo: {
-        metaTitle: "Devenir Conseiller en Insertion Professionnelle à Bordeaux — Formation CIP Atipik RH, session septembre 2026",
+        metaTitle: "Formation CIP à Bordeaux : session mars 2027 à Lormont | ATIPIK RH",
         metaDescription:
-          "Rejoignez la formation CIP niveau 5 (RNCP37274) chez Atipik RH à Lormont. Session du 22 mars 2027 au 22 oct. 2027 — 14 places disponibles. Finançable CPF, AIF, Transition Pro.",
+          "Formation CIP à Bordeaux : session du 22 mars au 22 octobre 2027 à Lormont, titre RNCP37274, candidatures ouvertes et réunion d'information.",
         canonicalPath: "/blog/formation-cip-bordeaux-session-septembre-2026",
         secondaryKeywords: [
           "formation CIP Bordeaux",
@@ -608,12 +610,12 @@ export default function Blog() {
         {
           question: "Quel est le tarif de la formation CIP chez Atipik RH ?",
           answer:
-            "Le tarif public est de 9 100 € TTC. Le tarif demandeur d'emploi est de 6 500 € TTC.",
+            "Le tarif public affiché est de 9 100 € TTC. Le tarif selon le profil et le financement doit être étudié avec ATIPIK RH.",
         },
       ],
       internalLinks: [
         { label: "Formation CIP", href: "/formations/cip", type: "formation" },
-        { label: "Réunion d'information", href: "/s-inscrire", type: "contact" },
+        { label: "Réunion d'information", href: "/s-inscrire?formation=CIP", type: "contact" },
         { label: "Financement 2026", href: "/financement", type: "financement" },
         { label: "Page contact", href: "/contact", type: "contact" },
         {

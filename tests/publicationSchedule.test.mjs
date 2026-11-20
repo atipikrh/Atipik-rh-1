@@ -73,6 +73,18 @@ describe('isScheduledBlogSlugLive', () => {
     assert.equal(isScheduledBlogSlugLive(slug, new Date('2026-10-07T06:00:00Z')), true)
   })
 
+  it('publie le hub formations courtes le 24 novembre 2026 à 6 h, pas avant', () => {
+    const slug = 'formations-courtes-professionnalisantes-bordeaux-lormont'
+    assert.equal(isScheduledBlogSlugLive(slug, new Date('2026-11-24T04:59:00Z')), false)
+    assert.equal(isScheduledBlogSlugLive(slug, new Date('2026-11-24T05:00:00Z')), true)
+  })
+
+  it('publie les réunions CIP le 26 novembre 2026 à 6 h Paris', () => {
+    const slug = 'reunion-information-formation-cip-lormont'
+    assert.equal(isScheduledBlogSlugLive(slug, new Date('2026-11-26T04:59:00Z')), false)
+    assert.equal(isScheduledBlogSlugLive(slug, new Date('2026-11-26T05:00:00Z')), true)
+  })
+
   it('publie l’article intra le 29 octobre 2026 à 8 h (heure d’hiver)', () => {
     const slug = 'quelle-formation-courte-choisir-equipe'
     assert.equal(isScheduledBlogSlugLive(slug, new Date('2026-10-29T06:59:00Z')), false)
